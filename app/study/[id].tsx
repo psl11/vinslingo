@@ -116,6 +116,7 @@ export default function StudyScreen() {
       console.log('💾 Saving progress for:', currentCard.word, '(ID:', currentCard.id, ')');
       
       const { updateUserVocabularyAfterReview } = await import('../../lib/database/queries');
+      const { syncVocabularyProgress } = await import('../../lib/services/progressService');
       const { calculateSM2 } = await import('../../lib/srs/sm2');
       
       // Convert SimpleQuality to number for SM2
@@ -133,22 +134,22 @@ export default function StudyScreen() {
         repetitions: currentCard.repetitions ?? 0,
       }, qualityNum as 0 | 1 | 2 | 3 | 4 | 5);
       
-      console.log('📊 SM2 Result:', {
-        easeFactor: sm2Result.easeFactor,
-        interval: sm2Result.interval,
-        repetitions: sm2Result.repetitions,
-        nextReview: sm2Result.nextReviewAt.toISOString(),
-      });
-      
-      await updateUserVocabularyAfterReview(currentCard.id, {
+      const progressData = {
         easeFactor: sm2Result.easeFactor,
         interval: sm2Result.interval,
         repetitions: sm2Result.repetitions,
         nextReviewAt: sm2Result.nextReviewAt.getTime(),
         isCorrect: qualityNum >= 3,
-      });
+      };
       
-      console.log('✅ Progress saved successfully for:', currentCard.word);
+      // Save to local SQLite
+      await updateUserVocabularyAfterReview(currentCard.id, progressData);
+      console.log('✅ Saved to local DB');
+      
+      // Sync to Supabase
+      await syncVocabularyProgress(currentCard.id, progressData);
+      console.log('✅ Synced to Supabase');
+      
     } catch (error) {
       console.error('❌ Error saving progress:', error);
     }
@@ -177,7 +178,25 @@ export default function StudyScreen() {
     );
   };
 
-  const handleFinish = () => {
+  const handleFinish = async () => {
+    // Save study session to Supabase
+    try {
+      const { saveStudySession } = await import('../../lib/services/progressService');
+      const sessionDuration = Math.round((Date.now() - (currentSession?.startedAt || Date.now())) / 1000);
+      const xpEarned = stats.correct * 10;
+      
+      await saveStudySession(
+        currentSession?.type || 'lesson',
+        stats.completed,
+        stats.correct,
+        sessionDuration,
+        xpEarned
+      );
+      console.log('✅ Session saved to Supabase');
+    } catch (error) {
+      console.error('❌ Error saving session:', error);
+    }
+    
     setShowSummary(false);
     endSession();
     router.back();

@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, Alert } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, ScrollView, Pressable, Alert, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useUserStore } from '../../stores/useUserStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
@@ -7,9 +7,20 @@ import { useAuth } from '../../hooks/useAuth';
 import { Card } from '../../components/ui/Card';
 import { ProgressBar } from '../../components/ui/ProgressBar';
 
+interface UserProgress {
+  totalXp: number;
+  wordsStudied: number;
+  wordsLearning: number;
+  wordsMastered: number;
+  currentStreak: number;
+  longestStreak: number;
+  accuracy: number;
+  todayCards: number;
+}
+
 export default function ProfileScreen() {
   const router = useRouter();
-  const { profile, getCurrentLevel } = useUserStore();
+  const { profile, getCurrentLevel, setProfile } = useUserStore();
   const { user, signOut } = useAuth();
   const { 
     dailyGoalMinutes, 
@@ -21,6 +32,38 @@ export default function ProfileScreen() {
     toggleSound,
     toggleHaptics,
   } = useSettingsStore();
+
+  const [progress, setProgress] = useState<UserProgress | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    loadProgress();
+  }, []);
+
+  const loadProgress = async () => {
+    try {
+      setIsLoading(true);
+      const { getUserProgress } = await import('../../lib/services/progressService');
+      const data = await getUserProgress();
+      
+      if (data) {
+        setProgress(data);
+        // Update local store with Supabase data
+        if (profile) {
+          setProfile({
+            ...profile,
+            totalXp: data.totalXp,
+            currentStreak: data.currentStreak,
+            longestStreak: data.longestStreak,
+          });
+        }
+      }
+    } catch (error) {
+      console.error('Error loading progress:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const levelInfo = getCurrentLevel();
 
@@ -61,7 +104,7 @@ export default function ProfileScreen() {
           <Text style={styles.levelTitle}>{levelInfo.title}</Text>
         </View>
         <View style={styles.xpContainer}>
-          <Text style={styles.xpText}>{profile?.totalXp ?? 0} XP total</Text>
+          <Text style={styles.xpText}>{progress?.totalXp ?? profile?.totalXp ?? 0} XP total</Text>
           <ProgressBar 
             current={levelInfo.progress} 
             total={100} 
@@ -74,16 +117,36 @@ export default function ProfileScreen() {
       {/* Stats */}
       <Card style={styles.statsCard}>
         <Text style={styles.sectionTitle}>Estadísticas</Text>
-        <View style={styles.statsRow}>
-          <View style={styles.stat}>
-            <Text style={styles.statValue}>{profile?.currentStreak ?? 0}</Text>
-            <Text style={styles.statLabel}>🔥 Racha</Text>
-          </View>
-          <View style={styles.stat}>
-            <Text style={styles.statValue}>{profile?.longestStreak ?? 0}</Text>
-            <Text style={styles.statLabel}>🏆 Mejor racha</Text>
-          </View>
-        </View>
+        {isLoading ? (
+          <ActivityIndicator size="small" color="#4F46E5" style={{ marginVertical: 20 }} />
+        ) : (
+          <>
+            <View style={styles.statsRow}>
+              <View style={styles.stat}>
+                <Text style={styles.statValue}>{progress?.currentStreak ?? 0}</Text>
+                <Text style={styles.statLabel}>🔥 Racha</Text>
+              </View>
+              <View style={styles.stat}>
+                <Text style={styles.statValue}>{progress?.longestStreak ?? 0}</Text>
+                <Text style={styles.statLabel}>🏆 Mejor</Text>
+              </View>
+            </View>
+            <View style={[styles.statsRow, { marginTop: 16 }]}>
+              <View style={styles.stat}>
+                <Text style={styles.statValue}>{progress?.wordsStudied ?? 0}</Text>
+                <Text style={styles.statLabel}>📚 Palabras</Text>
+              </View>
+              <View style={styles.stat}>
+                <Text style={styles.statValue}>{progress?.wordsMastered ?? 0}</Text>
+                <Text style={styles.statLabel}>⭐ Dominadas</Text>
+              </View>
+              <View style={styles.stat}>
+                <Text style={styles.statValue}>{progress?.accuracy ?? 0}%</Text>
+                <Text style={styles.statLabel}>🎯 Precisión</Text>
+              </View>
+            </View>
+          </>
+        )}
       </Card>
 
       {/* Settings */}
