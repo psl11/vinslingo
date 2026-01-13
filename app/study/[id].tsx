@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, Pressable, SafeAreaView, Alert, Modal } from 'react-native';
+import { View, Text, StyleSheet, Pressable, SafeAreaView, Alert } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FlashCard } from '../../components/cards/FlashCard';
 import { AnswerButtons } from '../../components/cards/AnswerButtons';
@@ -107,16 +107,22 @@ export default function StudyScreen() {
   };
 
   const saveCardProgress = async (quality: SimpleQuality) => {
-    if (!currentCard) return;
+    if (!currentCard) {
+      console.log('⚠️ No current card to save');
+      return;
+    }
+    
     try {
-      const { updateUserVocabularyAfterReview, createUserVocabulary, getUserVocabulary } = await import('../../lib/database/queries');
+      console.log('💾 Saving progress for:', currentCard.word, '(ID:', currentCard.id, ')');
+      
+      const { updateUserVocabularyAfterReview } = await import('../../lib/database/queries');
       const { calculateSM2 } = await import('../../lib/srs/sm2');
       
       // Convert SimpleQuality to number for SM2
       const qualityMap: Record<SimpleQuality, number> = {
-        'again': 0,
-        'hard': 2,
-        'good': 3,
+        'again': 1,
+        'hard': 3,
+        'good': 4,
         'easy': 5,
       };
       const qualityNum = qualityMap[quality];
@@ -127,11 +133,12 @@ export default function StudyScreen() {
         repetitions: currentCard.repetitions ?? 0,
       }, qualityNum as 0 | 1 | 2 | 3 | 4 | 5);
       
-      // Check if user_vocabulary exists, create if not
-      const existing = await getUserVocabulary(currentCard.id);
-      if (!existing) {
-        await createUserVocabulary(currentCard.id);
-      }
+      console.log('📊 SM2 Result:', {
+        easeFactor: sm2Result.easeFactor,
+        interval: sm2Result.interval,
+        repetitions: sm2Result.repetitions,
+        nextReview: sm2Result.nextReviewAt.toISOString(),
+      });
       
       await updateUserVocabularyAfterReview(currentCard.id, {
         easeFactor: sm2Result.easeFactor,
@@ -141,9 +148,9 @@ export default function StudyScreen() {
         isCorrect: qualityNum >= 3,
       });
       
-      console.log('💾 Saved progress for:', currentCard.word, '- Quality:', quality);
+      console.log('✅ Progress saved successfully for:', currentCard.word);
     } catch (error) {
-      console.error('Error saving progress:', error);
+      console.error('❌ Error saving progress:', error);
     }
   };
 
@@ -207,6 +214,44 @@ export default function StudyScreen() {
     );
   }
 
+  // Show summary modal when session is complete
+  if (showSummary && currentSession) {
+    const totalCards = currentSession.cards.length;
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalEmoji}>🎉</Text>
+            <Text style={styles.modalTitle}>¡Sesión Completada!</Text>
+            
+            <View style={styles.summaryStats}>
+              <View style={styles.summaryRow}>
+                <Text style={styles.summaryLabel}>Total de tarjetas:</Text>
+                <Text style={styles.summaryValue}>{totalCards}</Text>
+              </View>
+              <View style={styles.summaryRow}>
+                <Text style={styles.summaryLabel}>✅ Correctas:</Text>
+                <Text style={[styles.summaryValue, styles.correctValue]}>{stats.correct}</Text>
+              </View>
+              <View style={styles.summaryRow}>
+                <Text style={styles.summaryLabel}>❌ Incorrectas:</Text>
+                <Text style={[styles.summaryValue, styles.incorrectValue]}>{stats.incorrect}</Text>
+              </View>
+              <View style={styles.summaryRow}>
+                <Text style={styles.summaryLabel}>⭐ XP ganado:</Text>
+                <Text style={[styles.summaryValue, styles.xpValue]}>{stats.correct * 10}</Text>
+              </View>
+            </View>
+
+            <Pressable style={styles.finishButton} onPress={handleFinish}>
+              <Text style={styles.finishButtonText}>Continuar</Text>
+            </Pressable>
+          </View>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
   if (!currentSession || !currentCard) {
     return (
       <SafeAreaView style={styles.container}>
@@ -252,43 +297,6 @@ export default function StudyScreen() {
           onFlip={handleFlip}
         />
       </View>
-
-      {/* Summary Modal */}
-      <Modal
-        visible={showSummary}
-        animationType="slide"
-        transparent={true}
-      >
-        <View style={styles.modalOverlay}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalEmoji}>🎉</Text>
-            <Text style={styles.modalTitle}>¡Sesión Completada!</Text>
-            
-            <View style={styles.summaryStats}>
-              <View style={styles.summaryRow}>
-                <Text style={styles.summaryLabel}>Total de tarjetas:</Text>
-                <Text style={styles.summaryValue}>{totalCards}</Text>
-              </View>
-              <View style={styles.summaryRow}>
-                <Text style={styles.summaryLabel}>✅ Correctas:</Text>
-                <Text style={[styles.summaryValue, styles.correctValue]}>{stats.correct}</Text>
-              </View>
-              <View style={styles.summaryRow}>
-                <Text style={styles.summaryLabel}>❌ Incorrectas:</Text>
-                <Text style={[styles.summaryValue, styles.incorrectValue]}>{stats.incorrect}</Text>
-              </View>
-              <View style={styles.summaryRow}>
-                <Text style={styles.summaryLabel}>⭐ XP ganado:</Text>
-                <Text style={[styles.summaryValue, styles.xpValue]}>{stats.correct * 10}</Text>
-              </View>
-            </View>
-
-            <Pressable style={styles.finishButton} onPress={handleFinish}>
-              <Text style={styles.finishButtonText}>Continuar</Text>
-            </Pressable>
-          </View>
-        </View>
-      </Modal>
 
       {/* Answer Buttons - Only show when flipped */}
       <View style={styles.answersContainer}>
