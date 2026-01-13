@@ -1,26 +1,28 @@
-import { Stack } from 'expo-router';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
 import { getDatabase } from '../lib/database/client';
 import { syncVocabularyFromSupabase, getLocalVocabularyCount } from '../lib/services/vocabularyService';
+import { useAuth } from '../hooks/useAuth';
 
 export default function RootLayout() {
   const [isInitializing, setIsInitializing] = useState(true);
   const [initStatus, setInitStatus] = useState('Iniciando...');
+  const { isAuthenticated, isLoading: authLoading } = useAuth();
+  const segments = useSegments();
+  const router = useRouter();
 
+  // Initialize database and sync vocabulary
   useEffect(() => {
     async function initialize() {
       try {
-        // Inicializar base de datos
         setInitStatus('Preparando base de datos...');
         await getDatabase();
         
-        // Verificar si hay vocabulario local
         const localCount = await getLocalVocabularyCount();
         
         if (localCount === 0) {
-          // Primera vez: sincronizar vocabulario
           setInitStatus('Descargando vocabulario...');
           await syncVocabularyFromSupabase();
         }
@@ -29,7 +31,6 @@ export default function RootLayout() {
       } catch (error) {
         console.error('Initialization error:', error);
         setInitStatus('Error al inicializar');
-        // Continuar de todos modos después de un delay
         setTimeout(() => setIsInitializing(false), 2000);
       }
     }
@@ -37,7 +38,22 @@ export default function RootLayout() {
     initialize();
   }, []);
 
-  if (isInitializing) {
+  // Handle auth navigation
+  useEffect(() => {
+    if (isInitializing || authLoading) return;
+
+    const inAuthGroup = segments[0] === '(auth)';
+
+    if (!isAuthenticated && !inAuthGroup) {
+      // Redirect to sign-in if not authenticated
+      router.replace('/(auth)/sign-in');
+    } else if (isAuthenticated && inAuthGroup) {
+      // Redirect to home if authenticated but on auth screen
+      router.replace('/(tabs)');
+    }
+  }, [isAuthenticated, segments, isInitializing, authLoading]);
+
+  if (isInitializing || authLoading) {
     return (
       <View style={styles.loadingContainer}>
         <Text style={styles.logo}>📚</Text>
@@ -52,6 +68,7 @@ export default function RootLayout() {
     <>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen 
           name="study/[id]" 

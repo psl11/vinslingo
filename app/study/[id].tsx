@@ -12,6 +12,8 @@ export default function StudyScreen() {
   const router = useRouter();
   const [isFlipped, setIsFlipped] = useState(false);
   const [responseStart, setResponseStart] = useState(Date.now());
+  const [isLoading, setIsLoading] = useState(true);
+  const [noCards, setNoCards] = useState(false);
 
   const {
     currentSession,
@@ -45,21 +47,28 @@ export default function StudyScreen() {
   useEffect(() => {
     async function loadCards() {
       try {
+        setIsLoading(true);
+        setNoCards(false);
+        
         const { getVocabularyForLesson, getDueVocabulary } = await import('../../lib/services/vocabularyService');
         
         let cards;
         if (id === 'review') {
           cards = await getDueVocabulary(20);
         } else {
-          // Usar la categoría como id de lección
           cards = await getVocabularyForLesson(id || 'ngsl', 20);
         }
         
         if (cards.length > 0) {
           startSession(id === 'review' ? 'review' : 'lesson', cards);
+        } else {
+          setNoCards(true);
         }
       } catch (error) {
         console.error('Error loading cards:', error);
+        setNoCards(true);
+      } finally {
+        setIsLoading(false);
       }
     }
     
@@ -94,11 +103,42 @@ export default function StudyScreen() {
     router.back();
   };
 
+  if (isLoading) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.loading}>
+          <Text style={styles.loadingText}>Cargando tarjetas...</Text>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
+  if (noCards) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.loading}>
+          <Text style={styles.emptyEmoji}>🎉</Text>
+          <Text style={styles.emptyTitle}>
+            {id === 'review' ? '¡Sin repasos pendientes!' : '¡Felicidades!'}
+          </Text>
+          <Text style={styles.emptyText}>
+            {id === 'review' 
+              ? 'No tienes tarjetas para repasar ahora. Estudia nuevas palabras para generar repasos.'
+              : 'Has completado todas las tarjetas de esta categoría.'}
+          </Text>
+          <Pressable onPress={() => router.back()} style={styles.backButton}>
+            <Text style={styles.backButtonText}>Volver</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
   if (!currentSession || !currentCard) {
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.loading}>
-          <Text style={styles.loadingText}>Cargando...</Text>
+          <Text style={styles.loadingText}>Preparando sesión...</Text>
         </View>
       </SafeAreaView>
     );
@@ -185,6 +225,35 @@ const styles = StyleSheet.create({
   loadingText: {
     fontSize: 18,
     color: '#6B7280',
+  },
+  emptyEmoji: {
+    fontSize: 64,
+    marginBottom: 16,
+  },
+  emptyTitle: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#1F2937',
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  emptyText: {
+    fontSize: 16,
+    color: '#6B7280',
+    textAlign: 'center',
+    paddingHorizontal: 32,
+    marginBottom: 24,
+  },
+  backButton: {
+    backgroundColor: '#4F46E5',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 8,
+  },
+  backButtonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '600',
   },
   header: {
     flexDirection: 'row',
