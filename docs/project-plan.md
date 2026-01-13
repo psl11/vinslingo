@@ -1,37 +1,70 @@
 # VinsLingo - Plan del Proyecto
 
-App de aprendizaje de inglés con React Native + Expo, Supabase como backend.
+**Versión**: 2.0  
+**Fecha**: Enero 2026  
+**Estado**: En desarrollo
+
+App de aprendizaje de inglés con React Native + Expo, Supabase como backend, arquitectura offline-first.
 
 ---
 
 ## 1. Visión General
 
-**Objetivo:** Aplicación móvil para aprender inglés desde español, usando vocabulario basado en corpus (NGSL + PHaVE) y repetición espaciada (SRS).
+### 1.1 Objetivo
+Aplicación móvil para aprender inglés desde español, usando vocabulario basado en corpus (NGSL + PHaVE) y repetición espaciada (SRS).
 
-**Características principales:**
+### 1.2 Problema a Resolver
+- Los hispanohablantes necesitan dominar ~2800 palabras (NGSL) para entender el 92% del inglés general
+- Los phrasal verbs son particularmente difíciles (150 phrasal verbs = 51% de uso real)
+- Las apps existentes son genéricas y no permiten estudio enfocado y offline
+
+### 1.3 Propuesta de Valor
+- **Contenido curado**: 2800 palabras NGSL + 150 phrasal verbs PHaVE basados en corpus lingüístico
+- **Offline-first**: Funciona sin internet, sincroniza cuando hay conexión
+- **SRS científico**: Algoritmo SM-2 para optimizar memorización
+- **Ejercicios variados**: Traducción, cloze, multiple choice, audio
+
+### 1.4 Características Principales
 - Interfaz en español, contenido para aprender inglés
 - Sistema SRS con algoritmo SM-2
 - Ejercicios variados: traducción, cloze, multiple choice, audio
 - Base de datos local con sincronización a remoto cuando hay conexión
 - Onboarding: primera lección antes de signup
+- Gamificación: streaks, XP, niveles, logros
 
 ---
 
 ## 2. Stack Técnico
 
-| Componente | Tecnología |
-|------------|------------|
-| **Framework** | React Native + Expo SDK |
-| **Lenguaje** | TypeScript |
-| **Backend** | Supabase (PostgreSQL + Auth + Storage) |
-| **Estado local** | React Context + AsyncStorage |
-| **Base de datos local** | SQLite (expo-sqlite) |
-| **Sincronización** | Custom sync logic (local-first) |
-| **Navegación** | Expo Router |
-| **UI** | React Native + NativeWind (TailwindCSS) |
-| **Audio** | expo-av |
-| **Notificaciones** | expo-notifications |
-| **Haptics** | expo-haptics |
+| Componente | Tecnología | Justificación |
+|------------|------------|---------------|
+| **Framework** | React Native + Expo SDK | Cross-platform, ecosistema maduro |
+| **Lenguaje** | TypeScript | Type-safety, mejor DX |
+| **Backend** | Supabase (PostgreSQL + Auth + Storage) | BaaS completo, RLS, realtime |
+| **Estado Global** | Zustand | Selectores, persistencia, sin re-renders innecesarios |
+| **Estado Persistente** | AsyncStorage | Simple, sin native modules extra |
+| **Base de datos local** | SQLite (expo-sqlite) | Nativo, performante, offline |
+| **Sincronización** | Custom sync logic (local-first) | Control total, gratis, patrón simple |
+| **Navegación** | Expo Router | File-based routing, deep linking |
+| **UI** | NativeWind (TailwindCSS) | Utilidad-first, consistencia |
+| **Animaciones** | react-native-reanimated | 60 FPS, gestos nativos |
+| **Audio** | expo-av | Pronunciación TTS |
+| **Notificaciones** | expo-notifications | Recordatorios de repaso |
+| **Haptics** | expo-haptics | Feedback táctil |
+
+### 2.1 Justificación de Decisiones
+
+#### ¿Por qué Zustand en vez de React Context?
+- **Selectores**: Solo re-renderiza componentes que usan el slice de estado que cambió
+- **Persistencia**: Middleware `persist` guarda estado automáticamente en AsyncStorage
+- **Sin Provider**: No necesita wrappear la app
+- **DevTools**: Debugging más fácil
+
+#### ¿Por qué Custom Sync en vez de PowerSync?
+- **Costo**: PowerSync cobra por volumen ($20+/mes), custom es gratis
+- **Simplicidad**: Solo sincronizamos progreso del usuario (patrón simple)
+- **Control**: Debugging más fácil, sin caja negra
+- **Sin vendor lock-in**: No dependemos de terceros
 
 ---
 
@@ -39,37 +72,73 @@ App de aprendizaje de inglés con React Native + Expo, Supabase como backend.
 
 ```
 vinslingo/
-├── app/                    # Expo Router (pantallas)
-│   ├── (auth)/            # Pantallas de autenticación
+├── app/                      # Expo Router (file-based routing)
+│   ├── (auth)/              # Pantallas de autenticación
 │   │   ├── login.tsx
 │   │   ├── register.tsx
 │   │   └── onboarding.tsx
-│   ├── (tabs)/            # Navegación principal
-│   │   ├── home.tsx       # Dashboard
-│   │   ├── learn.tsx      # Sesión de aprendizaje
-│   │   ├── review.tsx     # Repaso SRS
-│   │   └── profile.tsx    # Perfil usuario
-│   ├── lesson/[id].tsx    # Lección individual
-│   └── _layout.tsx
-├── components/            # Componentes reutilizables
-│   ├── ui/               # Componentes UI base
-│   ├── cards/            # Tarjetas de ejercicio
-│   └── exercises/        # Tipos de ejercicios
-├── lib/                   # Lógica de negocio
-│   ├── supabase.ts       # Cliente Supabase
-│   ├── database/         # SQLite local
-│   │   ├── schema.ts
-│   │   ├── sync.ts       # Lógica de sincronización
-│   │   └── queries.ts
-│   ├── srs/              # Algoritmo SM-2
-│   │   └── sm2.ts
+│   ├── (tabs)/              # Tab navigator principal
+│   │   ├── index.tsx        # Home/Dashboard
+│   │   ├── learn.tsx        # Sesión de aprendizaje
+│   │   ├── review.tsx       # Repaso SRS
+│   │   └── profile.tsx      # Perfil usuario
+│   ├── lesson/[id].tsx      # Lección individual
+│   ├── settings.tsx         # Configuración
+│   └── _layout.tsx          # Root layout
+├── components/
+│   ├── cards/               # Componentes de tarjetas
+│   │   ├── FlashCard.tsx
+│   │   ├── TranslationCard.tsx
+│   │   ├── ClozeCard.tsx
+│   │   └── MultipleChoiceCard.tsx
+│   ├── ui/                  # Componentes genéricos
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   └── ProgressBar.tsx
+│   └── progress/            # Indicadores de progreso
+├── stores/                  # Zustand stores
+│   ├── useStudyStore.ts     # Estado de sesión de estudio
+│   ├── useUserStore.ts      # Datos del usuario
+│   ├── useSettingsStore.ts  # Configuración
+│   └── useSyncStore.ts      # Estado de sincronización
+├── lib/
+│   ├── supabase.ts          # Cliente Supabase
+│   ├── database/
+│   │   ├── schema.ts        # Schema SQLite
+│   │   ├── client.ts        # Cliente SQLite
+│   │   ├── sync.ts          # Lógica de sincronización
+│   │   └── queries.ts       # Queries comunes
+│   ├── srs/
+│   │   └── sm2.ts           # Algoritmo SM-2
 │   └── utils/
-├── hooks/                 # Custom hooks
-├── contexts/              # React Context providers
-├── constants/             # Constantes y config
-├── assets/               # Imágenes, fuentes, audio
-├── docs/                 # Documentación
-└── types/                # TypeScript types
+├── hooks/                   # Custom hooks
+├── constants/               # Constantes y config
+├── assets/                  # Imágenes, fuentes, audio
+├── docs/                    # Documentación
+└── types/                   # TypeScript types
+```
+
+### 3.1 Flujo de Datos
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    React Native App                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐    ┌───────────┐    ┌───────────────────┐ │
+│  │   Zustand   │←──→│  Queries  │←──→│   expo-sqlite     │ │
+│  │   Stores    │    │           │    │   (Local DB)      │ │
+│  └─────────────┘    └───────────┘    └─────────┬─────────┘ │
+└───────────────────────────────────────────────────┼─────────┘
+                                                    │
+                                         ┌──────────▼──────────┐
+                                         │    Custom Sync      │
+                                         │    (sync.ts)        │
+                                         └──────────┬──────────┘
+                                                    │
+                                         ┌──────────▼──────────┐
+                                         │     Supabase        │
+                                         │    PostgreSQL       │
+                                         └─────────────────────┘
 ```
 
 ---
@@ -392,53 +461,284 @@ export function calculateSM2(card: SM2Card, quality: Quality): SM2Card {
 
 ---
 
-## 8. Roadmap de Desarrollo
+## 8. Diseño UI/UX
 
-### Fase 1: MVP (2-3 semanas)
-- [ ] Setup proyecto Expo + TypeScript
-- [ ] Configurar Supabase (auth, database)
-- [ ] Implementar SQLite local
-- [ ] Crear tablas en Supabase
-- [ ] Importar vocabulario NGSL + PHaVE
-- [ ] UI básica: Home, Learn, Profile
-- [ ] Ejercicios: traducción simple
-- [ ] Algoritmo SM-2 funcional
-- [ ] Autenticación básica
+### 8.1 Principios de Diseño
 
-### Fase 2: Core Features (2-3 semanas)
-- [ ] Sincronización local-remoto
-- [ ] Sistema de lecciones estructuradas
-- [ ] Ejercicios: cloze, multiple choice
-- [ ] Progreso visual por lección
-- [ ] Onboarding flow
-- [ ] Manejo offline completo
+1. **Simplicidad**: Interfaz limpia, sin distracciones
+2. **Feedback inmediato**: Animaciones y haptics en cada interacción
+3. **Accesibilidad**: Texto grande, contraste alto
+4. **Consistencia**: Patrones repetidos, aprendizaje rápido
 
-### Fase 3: Polish (1-2 semanas)
-- [ ] UI/UX refinado
-- [ ] Animaciones y transiciones
-- [ ] Haptics feedback
-- [ ] Dark mode
-- [ ] Estadísticas detalladas
-- [ ] Notificaciones de repaso
+### 8.2 Mockups de Pantallas
 
-### Fase 4: Extras (futuro)
-- [ ] Audio pronunciación
-- [ ] Ejercicios de audio
-- [ ] Gamificación (streaks, XP, levels)
-- [ ] Logros y badges
-- [ ] Social features
+#### Home (Dashboard)
+```
+┌─────────────────────────────────┐
+│  VinsLingo              ⚙️     │
+├─────────────────────────────────┤
+│  ┌───────────────────────────┐ │
+│  │  🔥 Racha: 7 días         │ │
+│  │  📚 Palabras: 234/2950    │ │
+│  │  ⭐ XP Total: 1,250       │ │
+│  └───────────────────────────┘ │
+│                                 │
+│  ┌───────────────────────────┐ │
+│  │  📖 Por revisar hoy: 15   │ │
+│  │  ⭐ Nuevas disponibles: 10│ │
+│  │                           │ │
+│  │    [  COMENZAR SESIÓN  ]  │ │
+│  └───────────────────────────┘ │
+│                                 │
+│  Actividad reciente             │
+│  ░░░░███░░███████░░░░░░░░      │
+│  L  M  X  J  V  S  D           │
+└─────────────────────────────────┘
+│  🏠    📚    🔄    👤          │
+└─────────────────────────────────┘
+```
+
+#### Sesión de Estudio
+```
+┌─────────────────────────────────┐
+│  ←  Sesión        12/25  ━━━━░░│
+├─────────────────────────────────┤
+│                                 │
+│         ┌─────────────┐         │
+│         │             │         │
+│         │    PICK     │         │
+│         │     UP      │         │
+│         │             │         │
+│         │   [🔊]      │         │
+│         └─────────────┘         │
+│                                 │
+│  ¿Cuál es la traducción?        │
+│                                 │
+│  ┌─────────┐  ┌─────────┐      │
+│  │ Recoger │  │ Levantar│      │
+│  └─────────┘  └─────────┘      │
+│  ┌─────────┐  ┌─────────┐      │
+│  │ Dejar   │  │ Tirar   │      │
+│  └─────────┘  └─────────┘      │
+│                                 │
+└─────────────────────────────────┘
+```
+
+#### Feedback de Respuesta Correcta
+```
+┌─────────────────────────────────┐
+│  ←  Sesión        12/25  ━━━━░░│
+├─────────────────────────────────┤
+│                                 │
+│         ┌─────────────┐         │
+│         │    ✓        │  Verde  │
+│         │  PICK UP    │ + pulse │
+│         │             │         │
+│         │  Recoger    │         │
+│         └─────────────┘         │
+│                                 │
+│  "I'll pick you up at 7."      │
+│  "Te recogeré a las 7."        │
+│                                 │
+│  ┌──────┐┌──────┐┌──────┐┌────┐│
+│  │Again ││ Hard ││ Good ││Easy││
+│  │  1d  ││  3d  ││  7d  ││14d ││
+│  └──────┘└──────┘└──────┘└────┘│
+└─────────────────────────────────┘
+```
+
+#### Perfil y Estadísticas
+```
+┌─────────────────────────────────┐
+│  👤 Mi Perfil                   │
+├─────────────────────────────────┤
+│                                 │
+│  ┌─────────────────────────┐   │
+│  │  Nivel: Intermedio (B1) │   │
+│  │  ████████████░░░░ 67%   │   │
+│  └─────────────────────────┘   │
+│                                 │
+│  📊 Estadísticas                │
+│  ├─ Palabras dominadas: 234    │
+│  ├─ Phrasal verbs: 45          │
+│  ├─ Precisión: 87%             │
+│  └─ Tiempo total: 12h 30m      │
+│                                 │
+│  🏆 Logros (5/20)               │
+│  [🔥7] [📚100] [⭐500] ...     │
+│                                 │
+└─────────────────────────────────┘
+```
+
+### 8.3 Sistema de Colores
+
+```css
+/* Light Theme */
+--background: #FFFFFF;
+--surface: #F5F5F5;
+--text-primary: #1A1A1A;
+--text-secondary: #666666;
+--accent: #4F46E5;     /* Indigo 600 */
+--success: #22C55E;    /* Green 500 */
+--error: #EF4444;      /* Red 500 */
+--warning: #F59E0B;    /* Amber 500 */
+
+/* Dark Theme */
+--background: #121212;
+--surface: #1E1E1E;
+--text-primary: #FFFFFF;
+--text-secondary: #A3A3A3;
+--accent: #818CF8;     /* Indigo 400 */
+```
+
+### 8.4 Animaciones
+
+| Elemento | Animación | Duración |
+|----------|-----------|----------|
+| Flip de tarjeta | rotateY 180° | 300ms |
+| Respuesta correcta | scale + green pulse | 400ms |
+| Respuesta incorrecta | shake horizontal | 300ms |
+| Transición tarjetas | slide left | 250ms |
+| Progress bar | width transition | 200ms |
 
 ---
 
-## 9. Configuración Inicial Necesaria
+## 9. Sistema de Gamificación
 
-### 9.1 Variables de Entorno
+### 9.1 Mecánicas Core
+
+#### Streaks (Rachas)
+- **Definición**: Días consecutivos con al menos 1 sesión completada
+- **Recompensa**: XP bonus por mantener racha (+10% por cada 7 días)
+- **Protección**: 1 "freeze" gratuito por semana
+
+#### XP (Puntos de Experiencia)
+| Acción | XP Base |
+|--------|---------|
+| Tarjeta correcta (nueva) | 10 XP |
+| Tarjeta correcta (repaso) | 5 XP |
+| Lección completada | 50 XP |
+| Racha de 7 días | 100 XP bonus |
+| Palabra dominada | 25 XP |
+
+#### Niveles de Usuario
+| Nivel | XP Requerido | Título |
+|-------|--------------|--------|
+| 1 | 0 | Principiante |
+| 2 | 500 | Aprendiz |
+| 3 | 1,500 | Estudiante |
+| 4 | 3,500 | Intermedio |
+| 5 | 7,000 | Avanzado |
+| 6 | 12,000 | Experto |
+| 7 | 20,000 | Maestro |
+
+### 9.2 Logros (Achievements)
+
+| Logro | Condición | XP Bonus |
+|-------|-----------|----------|
+| 🔥 Primera Llama | 1 día de racha | 10 |
+| 🔥 Semana en Fuego | 7 días de racha | 100 |
+| 🔥 Mes Imparable | 30 días de racha | 500 |
+| 📚 Primeros Pasos | 10 palabras aprendidas | 25 |
+| 📚 Vocabulario Sólido | 100 palabras | 100 |
+| 📚 Diccionario Andante | 500 palabras | 500 |
+| 🎯 Precisión Perfecta | 100% en una sesión | 50 |
+| ⏱️ Maratonista | 1 hora en un día | 100 |
+| 🔗 Phrasal Master | 50 phrasal verbs | 200 |
+
+### 9.3 Decks y Progresión
+
+```
+📚 NGSL Nivel A1 (Palabras 1-500)
+├── Lección 1: Palabras 1-25 ✅
+├── Lección 2: Palabras 26-50 ✅
+├── Lección 3: Palabras 51-75 🔓
+├── Lección 4: Palabras 76-100 🔒
+└── ...
+
+🔗 Phrasal Verbs
+├── Básicos (1-50) 🔓
+├── Intermedios (51-100) 🔒
+└── Avanzados (101-150) 🔒
+```
+
+---
+
+## 10. Plan de Monetización (Futuro)
+
+### 10.1 Modelo Freemium
+
+| Feature | Free | Premium |
+|---------|------|---------|
+| NGSL 2800 palabras | ✓ | ✓ |
+| Phrasal Verbs 150 | ✓ | ✓ |
+| SRS básico | ✓ | ✓ |
+| Sync entre dispositivos | ✓ | ✓ |
+| Límite tarjetas/día | 50 | ∞ |
+| Estadísticas avanzadas | - | ✓ |
+| Audio pronunciación | - | ✓ |
+| Sin anuncios | - | ✓ |
+| Decks personalizados | - | ✓ |
+
+### 10.2 Pricing (Referencia)
+- **Mensual**: $4.99/mes
+- **Anual**: $29.99/año (50% descuento)
+- **Lifetime**: $79.99 (una vez)
+
+---
+
+## 11. Roadmap de Desarrollo
+
+### Fase 1: Setup y Core (Semana 1-2)
+- [x] Configurar proyecto Expo con TypeScript
+- [x] Setup Supabase (proyecto, auth, database)
+- [x] Crear tablas en Supabase
+- [x] Documentación vocabulario (NGSL + PHaVE)
+- [ ] Implementar SQLite local
+- [ ] Importar vocabulario a Supabase
+- [ ] Cliente Supabase en app
+- [ ] UI básica de tarjetas
+
+### Fase 2: SRS y Estudio (Semana 3-4)
+- [ ] Implementar algoritmo SM-2
+- [ ] Zustand stores (study, user, settings)
+- [ ] Lógica de sesión de estudio
+- [ ] Sistema de selección de respuestas
+- [ ] Tracking de progreso
+- [ ] Animaciones (flip, feedback)
+- [ ] Haptics
+
+### Fase 3: Sync y Persistencia (Semana 5)
+- [ ] Lógica de sincronización custom
+- [ ] Manejo estado online/offline
+- [ ] Indicadores de sync en UI
+- [ ] Queue de cambios pendientes
+- [ ] Resolución de conflictos
+
+### Fase 4: Gamificación (Semana 6)
+- [ ] Sistema de XP
+- [ ] Streaks y rachas
+- [ ] Logros/achievements
+- [ ] Niveles de usuario
+- [ ] UI de progreso y stats
+
+### Fase 5: Polish (Semana 7)
+- [ ] Dark mode
+- [ ] Settings completos
+- [ ] Notificaciones
+- [ ] Onboarding flow
+- [ ] Testing y bug fixes
+- [ ] Preparar para producción
+
+## 12. Configuración Inicial Necesaria
+
+### 12.1 Variables de Entorno
 ```env
 EXPO_PUBLIC_SUPABASE_URL=https://qsdzoelgqyymtwublxoq.supabase.co
 EXPO_PUBLIC_SUPABASE_ANON_KEY=<anon_key>
 ```
 
-### 9.2 Dependencias Principales
+### 12.2 Dependencias Principales
 ```json
 {
   "dependencies": {
