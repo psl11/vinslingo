@@ -48,8 +48,9 @@ export function FlashCard({
   return (
     <Pressable onPress={handleFlip} style={styles.container}>
       {!isFlipped ? (
-        /* Front of card */
+        /* Front of card - ENGLISH word */
         <View style={[styles.card, styles.cardFront]}>
+          <Text style={styles.languageLabel}>🇬🇧 INGLÉS</Text>
           <Text style={styles.wordText}>{word}</Text>
           {pronunciation && (
             <Text style={styles.pronunciationText}>{pronunciation}</Text>
@@ -57,14 +58,16 @@ export function FlashCard({
           <Pressable onPress={handlePlayAudio} style={styles.audioButton}>
             <Text style={styles.audioIcon}>🔊</Text>
           </Pressable>
-          <Text style={styles.tapHint}>Toca para ver traducción</Text>
+          <Text style={styles.tapHint}>¿Sabes qué significa? Toca para ver</Text>
         </View>
       ) : (
-        /* Back of card */
+        /* Back of card - SPANISH translation */
         <View style={[styles.card, styles.cardBack]}>
+          <Text style={styles.languageLabel}>🇪🇸 ESPAÑOL</Text>
           <Text style={styles.translationText}>{translation}</Text>
           {example && (
             <View style={styles.exampleContainer}>
+              <Text style={styles.exampleLabel}>Ejemplo:</Text>
               <Text style={styles.exampleText}>"{example}"</Text>
               {exampleTranslation && (
                 <Text style={styles.exampleTranslation}>"{exampleTranslation}"</Text>
@@ -101,6 +104,20 @@ const styles = StyleSheet.create({
   },
   cardBack: {
     backgroundColor: '#F0F9FF',
+  },
+  languageLabel: {
+    position: 'absolute',
+    top: 16,
+    left: 16,
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#6B7280',
+  },
+  exampleLabel: {
+    fontSize: 12,
+    color: '#9CA3AF',
+    marginBottom: 4,
+    textAlign: 'center',
   },
   wordText: {
     fontSize: 32,

@@ -27,6 +27,21 @@ export default function StudyScreen() {
   const stats = getSessionStats();
   const currentIndex = currentSession?.currentIndex ?? 0;
 
+  // Reset flip state when card changes
+  useEffect(() => {
+    setIsFlipped(false);
+  }, [currentIndex]);
+
+  // Debug: log current card data
+  useEffect(() => {
+    if (currentCard) {
+      console.log('📇 Current card:', { 
+        word: currentCard.word, 
+        translation: currentCard.translation 
+      });
+    }
+  }, [currentCard]);
+
   useEffect(() => {
     async function loadCards() {
       try {

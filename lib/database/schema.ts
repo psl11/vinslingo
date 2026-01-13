@@ -15,6 +15,7 @@ export const LOCAL_SCHEMA = `
     frequency_rank INTEGER,
     example_sentence TEXT,
     example_translation TEXT,
+    updated_at INTEGER,
     synced_at INTEGER
   );
 
