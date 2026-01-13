@@ -1,14 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, Alert } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useUserStore } from '../../stores/useUserStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { useAuth } from '../../hooks/useAuth';
 import { Card } from '../../components/ui/Card';
 import { ProgressBar } from '../../components/ui/ProgressBar';
 
 export default function ProfileScreen() {
   const router = useRouter();
   const { profile, getCurrentLevel } = useUserStore();
+  const { user, signOut } = useAuth();
   const { 
     dailyGoalMinutes, 
     notificationsEnabled, 
@@ -22,6 +24,21 @@ export default function ProfileScreen() {
 
   const levelInfo = getCurrentLevel();
 
+  const handleSignOut = () => {
+    Alert.alert(
+      'Cerrar Sesión',
+      '¿Estás seguro de que quieres cerrar sesión?',
+      [
+        { text: 'Cancelar', style: 'cancel' },
+        { 
+          text: 'Cerrar Sesión', 
+          style: 'destructive',
+          onPress: signOut,
+        },
+      ]
+    );
+  };
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.header}>
@@ -34,8 +51,11 @@ export default function ProfileScreen() {
           <Text style={styles.avatarText}>👤</Text>
         </View>
         <Text style={styles.userName}>
-          {profile?.displayName || 'Usuario'}
+          {profile?.displayName || user?.email?.split('@')[0] || 'Usuario'}
         </Text>
+        {user?.email && (
+          <Text style={styles.userEmail}>{user.email}</Text>
+        )}
         <View style={styles.levelContainer}>
           <Text style={styles.levelBadge}>Nivel {levelInfo.level}</Text>
           <Text style={styles.levelTitle}>{levelInfo.title}</Text>
@@ -105,6 +125,11 @@ export default function ProfileScreen() {
         </View>
       </Card>
 
+      {/* Sign Out */}
+      <Pressable style={styles.signOutButton} onPress={handleSignOut}>
+        <Text style={styles.signOutText}>🚪 Cerrar Sesión</Text>
+      </Pressable>
+
       {/* App Info */}
       <View style={styles.appInfo}>
         <Text style={styles.appVersion}>VinsLingo v1.0.0</Text>
@@ -152,7 +177,12 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: '600',
     color: '#1F2937',
-    marginBottom: 8,
+    marginBottom: 4,
+  },
+  userEmail: {
+    fontSize: 14,
+    color: '#6B7280',
+    marginBottom: 12,
   },
   levelContainer: {
     flexDirection: 'row',
@@ -233,6 +263,18 @@ const styles = StyleSheet.create({
   },
   settingToggle: {
     fontSize: 20,
+  },
+  signOutButton: {
+    backgroundColor: '#FEE2E2',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginBottom: 24,
+  },
+  signOutText: {
+    color: '#DC2626',
+    fontSize: 16,
+    fontWeight: '600',
   },
   appInfo: {
     alignItems: 'center',
