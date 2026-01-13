@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withTiming,
-  interpolate,
-  Extrapolation,
-} from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
@@ -31,9 +24,8 @@ export function FlashCard({
   onFlip,
 }: FlashCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const rotation = useSharedValue(0);
   const { hapticsEnabled } = useSettingsStore();
-  const { playWord, playUrl, autoPlayAudio } = useAudio();
+  const { playWord, playUrl } = useAudio();
 
   const handlePlayAudio = async () => {
     if (audioUrl) {
@@ -50,62 +42,37 @@ export function FlashCard({
     
     const newFlipped = !isFlipped;
     setIsFlipped(newFlipped);
-    rotation.value = withTiming(newFlipped ? 180 : 0, { duration: 300 });
     onFlip?.(newFlipped);
   };
 
-  const frontAnimatedStyle = useAnimatedStyle(() => {
-    const rotateY = interpolate(
-      rotation.value,
-      [0, 180],
-      [0, 180],
-      Extrapolation.CLAMP
-    );
-    return {
-      transform: [{ rotateY: `${rotateY}deg` }],
-      backfaceVisibility: 'hidden',
-    };
-  });
-
-  const backAnimatedStyle = useAnimatedStyle(() => {
-    const rotateY = interpolate(
-      rotation.value,
-      [0, 180],
-      [180, 360],
-      Extrapolation.CLAMP
-    );
-    return {
-      transform: [{ rotateY: `${rotateY}deg` }],
-      backfaceVisibility: 'hidden',
-    };
-  });
-
   return (
     <Pressable onPress={handleFlip} style={styles.container}>
-      {/* Front of card */}
-      <Animated.View style={[styles.card, styles.cardFront, frontAnimatedStyle]}>
-        <Text style={styles.wordText}>{word}</Text>
-        {pronunciation && (
-          <Text style={styles.pronunciationText}>{pronunciation}</Text>
-        )}
-        <Pressable onPress={handlePlayAudio} style={styles.audioButton}>
-          <Text style={styles.audioIcon}>🔊</Text>
-        </Pressable>
-        <Text style={styles.tapHint}>Toca para ver traducción</Text>
-      </Animated.View>
-
-      {/* Back of card */}
-      <Animated.View style={[styles.card, styles.cardBack, backAnimatedStyle]}>
-        <Text style={styles.translationText}>{translation}</Text>
-        {example && (
-          <View style={styles.exampleContainer}>
-            <Text style={styles.exampleText}>"{example}"</Text>
-            {exampleTranslation && (
-              <Text style={styles.exampleTranslation}>"{exampleTranslation}"</Text>
-            )}
-          </View>
-        )}
-      </Animated.View>
+      {!isFlipped ? (
+        /* Front of card */
+        <View style={[styles.card, styles.cardFront]}>
+          <Text style={styles.wordText}>{word}</Text>
+          {pronunciation && (
+            <Text style={styles.pronunciationText}>{pronunciation}</Text>
+          )}
+          <Pressable onPress={handlePlayAudio} style={styles.audioButton}>
+            <Text style={styles.audioIcon}>🔊</Text>
+          </Pressable>
+          <Text style={styles.tapHint}>Toca para ver traducción</Text>
+        </View>
+      ) : (
+        /* Back of card */
+        <View style={[styles.card, styles.cardBack]}>
+          <Text style={styles.translationText}>{translation}</Text>
+          {example && (
+            <View style={styles.exampleContainer}>
+              <Text style={styles.exampleText}>"{example}"</Text>
+              {exampleTranslation && (
+                <Text style={styles.exampleTranslation}>"{exampleTranslation}"</Text>
+              )}
+            </View>
+          )}
+        </View>
+      )}
     </Pressable>
   );
 }

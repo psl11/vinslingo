@@ -1,9 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Animated, {
-  useAnimatedStyle,
-  withTiming,
-} from 'react-native-reanimated';
 
 interface ProgressBarProps {
   current: number;
@@ -24,10 +20,6 @@ export function ProgressBar({
 }: ProgressBarProps) {
   const progress = total > 0 ? (current / total) * 100 : 0;
 
-  const animatedStyle = useAnimatedStyle(() => ({
-    width: withTiming(`${progress}%`, { duration: 300 }),
-  }));
-
   return (
     <View style={styles.container}>
       {showLabel && (
@@ -36,11 +28,10 @@ export function ProgressBar({
         </Text>
       )}
       <View style={[styles.track, { backgroundColor, height }]}>
-        <Animated.View
+        <View
           style={[
             styles.fill,
-            { backgroundColor: color, height },
-            animatedStyle,
+            { backgroundColor: color, height, width: `${progress}%` },
           ]}
         />
       </View>
