@@ -1,18 +1,41 @@
-import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 
+interface ReviewStats {
+  dueToday: number;
+  overdue: number;
+  newToday: number;
+  learned: number;
+}
+
 export default function ReviewScreen() {
   const router = useRouter();
+  const [reviewStats, setReviewStats] = useState<ReviewStats>({
+    dueToday: 0,
+    overdue: 0,
+    newToday: 0,
+    learned: 0,
+  });
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Placeholder data - will be replaced with actual data from store/database
-  const reviewStats = {
-    dueToday: 25,
-    overdue: 5,
-    newToday: 10,
-    learned: 150,
+  useEffect(() => {
+    loadReviewStats();
+  }, []);
+
+  const loadReviewStats = async () => {
+    try {
+      setIsLoading(true);
+      const { getReviewStats } = await import('../../lib/services/progressService');
+      const stats = await getReviewStats();
+      setReviewStats(stats);
+    } catch (error) {
+      console.error('Error loading review stats:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleStartReview = () => {
@@ -28,23 +51,29 @@ export default function ReviewScreen() {
 
       {/* Due Cards Summary */}
       <Card style={styles.summaryCard}>
-        <View style={styles.dueContainer}>
-          <View style={styles.dueMain}>
-            <Text style={styles.dueNumber}>{reviewStats.dueToday}</Text>
-            <Text style={styles.dueLabel}>tarjetas para hoy</Text>
-          </View>
-          {reviewStats.overdue > 0 && (
-            <View style={styles.overdueTag}>
-              <Text style={styles.overdueText}>
-                +{reviewStats.overdue} atrasadas
-              </Text>
+        {isLoading ? (
+          <ActivityIndicator size="large" color="#4F46E5" style={{ marginVertical: 40 }} />
+        ) : (
+          <>
+            <View style={styles.dueContainer}>
+              <View style={styles.dueMain}>
+                <Text style={styles.dueNumber}>{reviewStats.dueToday}</Text>
+                <Text style={styles.dueLabel}>tarjetas para hoy</Text>
+              </View>
+              {reviewStats.overdue > 0 && (
+                <View style={styles.overdueTag}>
+                  <Text style={styles.overdueText}>
+                    +{reviewStats.overdue} atrasadas
+                  </Text>
+                </View>
+              )}
             </View>
-          )}
-        </View>
 
-        <Button onPress={handleStartReview} fullWidth size="lg">
-          🔄  Comenzar Repaso
-        </Button>
+            <Button onPress={handleStartReview} fullWidth size="lg">
+              🔄  Comenzar Repaso
+            </Button>
+          </>
+        )}
       </Card>
 
       {/* Stats Grid */}
