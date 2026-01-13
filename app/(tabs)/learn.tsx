@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Card } from '../../components/ui/Card';
+import { useVocabularyStats } from '../../hooks/useVocabulary';
 
 interface LessonCategory {
   id: string;
@@ -13,61 +14,55 @@ interface LessonCategory {
   cefrLevel: string;
 }
 
-const LESSON_CATEGORIES: LessonCategory[] = [
-  {
-    id: 'ngsl-a1',
-    title: 'Vocabulario Básico',
-    emoji: '🌱',
-    description: 'Las 500 palabras más comunes',
-    totalWords: 500,
-    completedWords: 0,
-    cefrLevel: 'A1',
-  },
-  {
-    id: 'ngsl-a2',
-    title: 'Vocabulario Elemental',
-    emoji: '🌿',
-    description: 'Palabras 501-1000',
-    totalWords: 500,
-    completedWords: 0,
-    cefrLevel: 'A2',
-  },
-  {
-    id: 'ngsl-b1',
-    title: 'Vocabulario Intermedio',
-    emoji: '🌳',
-    description: 'Palabras 1001-2000',
-    totalWords: 1000,
-    completedWords: 0,
-    cefrLevel: 'B1',
-  },
-  {
-    id: 'phave',
-    title: 'Phrasal Verbs',
-    emoji: '🚀',
-    description: '150 verbos compuestos esenciales',
-    totalWords: 150,
-    completedWords: 0,
-    cefrLevel: 'B1-B2',
-  },
-];
-
 export default function LearnScreen() {
   const router = useRouter();
+  const { stats, isLoading } = useVocabularyStats();
+  
+  const categories: LessonCategory[] = [
+    {
+      id: 'ngsl',
+      title: 'Vocabulario NGSL',
+      emoji: '📖',
+      description: 'Palabras más frecuentes del inglés',
+      totalWords: stats?.byCategory.find(c => c.category === 'ngsl')?.count ?? 0,
+      completedWords: 0,
+      cefrLevel: 'A1-B2',
+    },
+    {
+      id: 'phave',
+      title: 'Phrasal Verbs',
+      emoji: '🚀',
+      description: 'Verbos compuestos esenciales',
+      totalWords: stats?.byCategory.find(c => c.category === 'phave')?.count ?? 0,
+      completedWords: 0,
+      cefrLevel: 'B1-B2',
+    },
+  ];
 
   const handleStartLesson = (categoryId: string) => {
     router.push(`/study/${categoryId}`);
   };
 
+  if (isLoading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#4F46E5" />
+        <Text style={styles.loadingText}>Cargando categorías...</Text>
+      </View>
+    );
+  }
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.header}>
         <Text style={styles.title}>Aprender</Text>
-        <Text style={styles.subtitle}>Elige una categoría para estudiar</Text>
+        <Text style={styles.subtitle}>
+          {stats?.total ?? 0} palabras disponibles
+        </Text>
       </View>
 
       <View style={styles.categories}>
-        {LESSON_CATEGORIES.map((category) => {
+        {categories.map((category) => {
           const progress = category.totalWords > 0 
             ? Math.round((category.completedWords / category.totalWords) * 100) 
             : 0;
@@ -111,6 +106,17 @@ export default function LearnScreen() {
 }
 
 const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F9FAFB',
+  },
+  loadingText: {
+    marginTop: 12,
+    fontSize: 16,
+    color: '#6B7280',
+  },
   container: {
     flex: 1,
     backgroundColor: '#F9FAFB',

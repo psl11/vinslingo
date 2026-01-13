@@ -9,11 +9,13 @@ import Animated, {
 } from 'react-native-reanimated';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { useAudio } from '../../hooks/useAudio';
 
 interface FlashCardProps {
   word: string;
   translation: string;
   pronunciation?: string;
+  audioUrl?: string;
   example?: string;
   exampleTranslation?: string;
   onFlip?: (isFlipped: boolean) => void;
@@ -23,6 +25,7 @@ export function FlashCard({
   word,
   translation,
   pronunciation,
+  audioUrl,
   example,
   exampleTranslation,
   onFlip,
@@ -30,6 +33,15 @@ export function FlashCard({
   const [isFlipped, setIsFlipped] = useState(false);
   const rotation = useSharedValue(0);
   const { hapticsEnabled } = useSettingsStore();
+  const { playWord, playUrl, autoPlayAudio } = useAudio();
+
+  const handlePlayAudio = async () => {
+    if (audioUrl) {
+      await playUrl(audioUrl);
+    } else {
+      await playWord(word);
+    }
+  };
 
   const handleFlip = () => {
     if (hapticsEnabled) {
@@ -76,6 +88,9 @@ export function FlashCard({
         {pronunciation && (
           <Text style={styles.pronunciationText}>{pronunciation}</Text>
         )}
+        <Pressable onPress={handlePlayAudio} style={styles.audioButton}>
+          <Text style={styles.audioIcon}>🔊</Text>
+        </Pressable>
         <Text style={styles.tapHint}>Toca para ver traducción</Text>
       </Animated.View>
 
@@ -130,6 +145,20 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#666666',
     marginTop: 8,
+  },
+  audioButton: {
+    position: 'absolute',
+    top: 16,
+    right: 16,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#EEF2FF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  audioIcon: {
+    fontSize: 24,
   },
   tapHint: {
     position: 'absolute',

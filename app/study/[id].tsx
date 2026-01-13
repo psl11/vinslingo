@@ -28,16 +28,27 @@ export default function StudyScreen() {
   const currentIndex = currentSession?.currentIndex ?? 0;
 
   useEffect(() => {
-    // Start a new session with mock data for now
-    const mockCards = [
-      { id: '1', word: 'hello', translation: 'hola', cefr_level: 'A1', example_sentence: 'Hello, how are you?', example_translation: 'Hola, ¿cómo estás?' },
-      { id: '2', word: 'world', translation: 'mundo', cefr_level: 'A1', example_sentence: 'The world is beautiful.', example_translation: 'El mundo es hermoso.' },
-      { id: '3', word: 'learn', translation: 'aprender', cefr_level: 'A1', example_sentence: 'I want to learn English.', example_translation: 'Quiero aprender inglés.' },
-      { id: '4', word: 'study', translation: 'estudiar', cefr_level: 'A1', example_sentence: 'I study every day.', example_translation: 'Estudio todos los días.' },
-      { id: '5', word: 'practice', translation: 'practicar', cefr_level: 'A2', example_sentence: 'Practice makes perfect.', example_translation: 'La práctica hace al maestro.' },
-    ];
+    async function loadCards() {
+      try {
+        const { getVocabularyForLesson, getDueVocabulary } = await import('../../lib/services/vocabularyService');
+        
+        let cards;
+        if (id === 'review') {
+          cards = await getDueVocabulary(20);
+        } else {
+          // Usar la categoría como id de lección
+          cards = await getVocabularyForLesson(id || 'ngsl', 20);
+        }
+        
+        if (cards.length > 0) {
+          startSession(id === 'review' ? 'review' : 'lesson', cards);
+        }
+      } catch (error) {
+        console.error('Error loading cards:', error);
+      }
+    }
     
-    startSession(id === 'review' ? 'review' : 'lesson', mockCards);
+    loadCards();
     
     return () => {
       endSession();
