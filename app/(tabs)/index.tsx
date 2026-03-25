@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useFocusEffect } from 'expo-router';
 import { useUserStore } from '../../stores/useUserStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { Card } from '../../components/ui/Card';
@@ -9,10 +10,16 @@ import { Button } from '../../components/ui/Button';
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { todayXp, todayMinutes, todayCardsStudied, profile } = useUserStore();
+  const { todayXp, todayMinutes, todayCardsStudied, profile, resetIfNewDay } = useUserStore();
   const { dailyGoalMinutes } = useSettingsStore();
   const { getCurrentLevel } = useUserStore();
   const levelInfo = getCurrentLevel();
+
+  useFocusEffect(
+    useCallback(() => {
+      resetIfNewDay();
+    }, [resetIfNewDay])
+  );
 
   const streak = profile?.currentStreak ?? 0;
   const goalProgress = Math.min(100, Math.round((todayMinutes / dailyGoalMinutes) * 100));

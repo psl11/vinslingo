@@ -15,6 +15,12 @@ export interface VocabularyItem {
   frequency_rank?: number;
   example_sentence?: string;
   example_translation?: string;
+  example_sentence_2?: string;
+  example_translation_2?: string;
+  song_lyric?: string;
+  song_lyric_translation?: string;
+  song_title?: string;
+  song_artist?: string;
 }
 
 export interface StudyCard extends VocabularyItem {
@@ -49,6 +55,7 @@ interface StudyState {
   
   // Acciones de tarjeta
   getCurrentCard: () => StudyCard | null;
+  isCurrentCardRetry: () => boolean;
   answerCard: (quality: SimpleQuality, responseTimeMs: number) => SM2Result | null;
   nextCard: () => boolean; // returns true if there are more cards
   
@@ -94,6 +101,14 @@ export const useStudyStore = create<StudyState>()(
         return session.cards[session.currentIndex];
       },
 
+      isCurrentCardRetry: () => {
+        const session = get().currentSession;
+        if (!session) return false;
+        const card = session.cards[session.currentIndex];
+        if (!card) return false;
+        return session.results.some(r => r.cardId === card.id);
+      },
+
       answerCard: (quality, responseTimeMs) => {
         const session = get().currentSession;
         if (!session) return null;
@@ -117,9 +132,21 @@ export const useStudyStore = create<StudyState>()(
           responseTimeMs,
         };
 
+        // Re-queue failed cards at the end with updated SM2 values
+        const updatedCards = [...session.cards];
+        if (quality === 'again') {
+          updatedCards.push({
+            ...card,
+            easeFactor: sm2Result.easeFactor,
+            interval: sm2Result.interval,
+            repetitions: sm2Result.repetitions,
+          });
+        }
+
         set({
           currentSession: {
             ...session,
+            cards: updatedCards,
             results: [...session.results, result],
           },
         });
@@ -151,15 +178,20 @@ export const useStudyStore = create<StudyState>()(
         }
 
         const completed = session.results.length;
-        const correct = session.results.filter(
-          (r) => r.quality !== 'again'
-        ).length;
+        
+        // Count by unique card: use the LAST result per cardId
+        const lastResultByCard = new Map<string, SimpleQuality>();
+        for (const r of session.results) {
+          lastResultByCard.set(r.cardId, r.quality);
+        }
+        const uniqueCorrect = [...lastResultByCard.values()].filter(q => q !== 'again').length;
+        const uniqueIncorrect = [...lastResultByCard.values()].filter(q => q === 'again').length;
 
         return {
           total: session.cards.length,
           completed,
-          correct,
-          incorrect: completed - correct,
+          correct: uniqueCorrect,
+          incorrect: uniqueIncorrect,
         };
       },
     }),

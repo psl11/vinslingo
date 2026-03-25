@@ -16,6 +16,12 @@ export async function syncUserProgress(): Promise<SyncResult> {
   };
 
   try {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      result.errors.push('No authenticated user');
+      return result;
+    }
+
     // 1. Upload local changes to Supabase
     const pendingItems = await getPendingSyncItems();
     
@@ -23,18 +29,38 @@ export async function syncUserProgress(): Promise<SyncResult> {
       try {
         const payload = item.payload ? JSON.parse(item.payload) : {};
         
-        if (item.action === 'INSERT' || item.action === 'UPDATE') {
+        if (item.table_name === 'user_vocabulary') {
+          // Handle vocabulary progress with delta-based correct/incorrect counts
+          await syncQueuedVocabularyProgress(user.id, payload);
+        } else if (item.table_name === 'study_sessions' && item.action === 'INSERT') {
+          // Handle queued study sessions
+          const { error } = await supabase
+            .from('study_sessions')
+            .insert({ ...payload, user_id: user.id });
+          if (error) throw error;
+        } else if (item.table_name === 'profiles' && payload.xp_delta) {
+          // Handle queued XP updates
+          const { data: profile } = await supabase
+            .from('profiles')
+            .select('total_xp')
+            .eq('id', user.id)
+            .single();
+          const currentXp = profile?.total_xp || 0;
+          const { error } = await supabase
+            .from('profiles')
+            .update({ total_xp: currentXp + payload.xp_delta, updated_at: new Date().toISOString() })
+            .eq('id', user.id);
+          if (error) throw error;
+        } else if (item.action === 'INSERT' || item.action === 'UPDATE') {
           const { error } = await supabase
             .from(item.table_name)
-            .upsert(payload);
-          
+            .upsert({ ...payload, user_id: user.id });
           if (error) throw error;
         } else if (item.action === 'DELETE') {
           const { error } = await supabase
             .from(item.table_name)
             .delete()
             .eq('id', item.record_id);
-          
           if (error) throw error;
         }
         
@@ -48,12 +74,15 @@ export async function syncUserProgress(): Promise<SyncResult> {
       } catch (err) {
         const message = err instanceof Error ? err.message : 'Unknown error';
         result.errors.push(`Failed to sync ${item.table_name}: ${message}`);
+        // Increment retry count
+        await runStatement(
+          'UPDATE sync_queue SET retry_count = retry_count + 1, last_error = ? WHERE id = ?',
+          [message, item.id]
+        );
       }
     }
 
-    // 2. Download user progress from Supabase (if authenticated)
-    const { data: { user } } = await supabase.auth.getUser();
-    
+    // 2. Download user progress from Supabase
     if (user) {
       // Fetch user's vocabulary progress
       const { data: userVocab, error } = await supabase
@@ -103,6 +132,57 @@ export async function syncUserProgress(): Promise<SyncResult> {
   }
 
   return result;
+}
+
+// Handle queued vocabulary progress with delta-based counts
+async function syncQueuedVocabularyProgress(
+  userId: string,
+  payload: any
+): Promise<void> {
+  const vocabId = payload.vocabulary_id;
+  const now = new Date().toISOString();
+
+  // Check if record exists in Supabase
+  const { data: existing } = await supabase
+    .from('user_vocabulary')
+    .select('id, times_correct, times_incorrect')
+    .eq('user_id', userId)
+    .eq('vocabulary_id', vocabId)
+    .single();
+
+  if (existing) {
+    const { error } = await supabase
+      .from('user_vocabulary')
+      .update({
+        ease_factor: payload.ease_factor,
+        interval_days: payload.interval_days,
+        repetitions: payload.repetitions,
+        next_review_at: payload.next_review_at,
+        last_reviewed_at: payload.last_reviewed_at || now,
+        times_correct: existing.times_correct + (payload.times_correct_delta || 0),
+        times_incorrect: existing.times_incorrect + (payload.times_incorrect_delta || 0),
+        mastery_level: payload.mastery_level,
+        updated_at: now,
+      })
+      .eq('id', existing.id);
+    if (error) throw error;
+  } else {
+    const { error } = await supabase
+      .from('user_vocabulary')
+      .insert({
+        user_id: userId,
+        vocabulary_id: vocabId,
+        ease_factor: payload.ease_factor,
+        interval_days: payload.interval_days,
+        repetitions: payload.repetitions,
+        next_review_at: payload.next_review_at,
+        last_reviewed_at: payload.last_reviewed_at || now,
+        times_correct: payload.times_correct_delta || 0,
+        times_incorrect: payload.times_incorrect_delta || 0,
+        mastery_level: payload.mastery_level,
+      });
+    if (error) throw error;
+  }
 }
 
 export async function getLastSyncTime(): Promise<number | null> {

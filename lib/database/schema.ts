@@ -15,6 +15,12 @@ export const LOCAL_SCHEMA = `
     frequency_rank INTEGER,
     example_sentence TEXT,
     example_translation TEXT,
+    example_sentence_2 TEXT,
+    example_translation_2 TEXT,
+    song_lyric TEXT,
+    song_lyric_translation TEXT,
+    song_title TEXT,
+    song_artist TEXT,
     updated_at INTEGER,
     synced_at INTEGER
   );
@@ -91,6 +97,37 @@ export const LOCAL_SCHEMA = `
     lesson_id TEXT,
     needs_sync INTEGER DEFAULT 0,
     FOREIGN KEY (lesson_id) REFERENCES lessons(id)
+  );
+
+  -- Ejercicios de rellenar huecos (local, no synced)
+  CREATE TABLE IF NOT EXISTS gap_fill_exercises (
+    id TEXT PRIMARY KEY,
+    sentence TEXT NOT NULL,
+    answer TEXT NOT NULL,
+    options TEXT,
+    explanation TEXT,
+    explanation_es TEXT,
+    cefr_level TEXT NOT NULL,
+    category TEXT NOT NULL DEFAULT 'connector',
+    difficulty INTEGER DEFAULT 1,
+    source TEXT DEFAULT 'cambridge',
+    base_word TEXT,
+    context_sentence TEXT,
+    is_official INTEGER DEFAULT 0,
+    answer_es TEXT
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_gap_fill_category ON gap_fill_exercises(category);
+  CREATE INDEX IF NOT EXISTS idx_gap_fill_level ON gap_fill_exercises(cefr_level);
+
+  -- Progreso del usuario en ejercicios gap-fill
+  CREATE TABLE IF NOT EXISTS user_gap_fill (
+    id TEXT PRIMARY KEY,
+    exercise_id TEXT NOT NULL,
+    times_correct INTEGER DEFAULT 0,
+    times_incorrect INTEGER DEFAULT 0,
+    last_attempted_at INTEGER,
+    FOREIGN KEY (exercise_id) REFERENCES gap_fill_exercises(id)
   );
 
   -- Cola de sincronización

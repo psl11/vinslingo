@@ -3,11 +3,15 @@ import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type ThemeMode = 'light' | 'dark' | 'system';
+export type CEFRLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 
 interface SettingsState {
   // Preferencias de estudio
   dailyGoalMinutes: number;
   cardsPerSession: number;
+  
+  // Filtro de niveles CEFR
+  selectedCEFRLevels: CEFRLevel[];
   
   // Notificaciones
   notificationsEnabled: boolean;
@@ -30,6 +34,8 @@ interface SettingsState {
   toggleHaptics: () => void;
   toggleAutoPlayAudio: () => void;
   setThemeMode: (mode: ThemeMode) => void;
+  toggleCEFRLevel: (level: CEFRLevel) => void;
+  setSelectedCEFRLevels: (levels: CEFRLevel[]) => void;
   resetToDefaults: () => void;
 }
 
@@ -42,6 +48,7 @@ const DEFAULT_SETTINGS = {
   hapticsEnabled: true,
   autoPlayAudio: true,
   themeMode: 'system' as ThemeMode,
+  selectedCEFRLevels: ['A1', 'A2', 'B1', 'B2', 'C1'] as CEFRLevel[],
 };
 
 export const useSettingsStore = create<SettingsState>()(
@@ -72,6 +79,21 @@ export const useSettingsStore = create<SettingsState>()(
       })),
       
       setThemeMode: (mode) => set({ themeMode: mode }),
+      
+      toggleCEFRLevel: (level) => set((state) => {
+        const currentLevels = state.selectedCEFRLevels;
+        if (currentLevels.includes(level)) {
+          // No permitir deseleccionar todos los niveles
+          if (currentLevels.length === 1) return state;
+          return { selectedCEFRLevels: currentLevels.filter(l => l !== level) };
+        } else {
+          return { selectedCEFRLevels: [...currentLevels, level].sort() };
+        }
+      }),
+      
+      setSelectedCEFRLevels: (levels) => set({ 
+        selectedCEFRLevels: levels.length > 0 ? levels : ['A1', 'A2', 'B1', 'B2', 'C1'] 
+      }),
       
       resetToDefaults: () => set(DEFAULT_SETTINGS),
     }),

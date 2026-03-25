@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, Alert, ActivityIndicator } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
 import { useUserStore } from '../../stores/useUserStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAuth } from '../../hooks/useAuth';
@@ -28,17 +28,21 @@ export default function ProfileScreen() {
     soundEnabled, 
     hapticsEnabled,
     themeMode,
+    selectedCEFRLevels,
     toggleNotifications,
     toggleSound,
     toggleHaptics,
+    toggleCEFRLevel,
   } = useSettingsStore();
 
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    loadProgress();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      loadProgress();
+    }, [])
+  );
 
   const loadProgress = async () => {
     try {
@@ -179,11 +183,37 @@ export default function ProfileScreen() {
           </Text>
         </Pressable>
 
-        <View style={[styles.settingRow, styles.lastRow]}>
+        <View style={styles.settingRow}>
           <Text style={styles.settingLabel}>Tema</Text>
           <Text style={styles.settingValue}>
             {themeMode === 'light' ? '☀️ Claro' : 
              themeMode === 'dark' ? '🌙 Oscuro' : '⚙️ Sistema'}
+          </Text>
+        </View>
+
+        <View style={[styles.settingRow, styles.lastRow, { flexDirection: 'column', alignItems: 'flex-start' }]}>
+          <Text style={[styles.settingLabel, { marginBottom: 12 }]}>📊 Niveles de vocabulario</Text>
+          <View style={styles.cefrContainer}>
+            {(['A1', 'A2', 'B1', 'B2', 'C1'] as const).map((level) => (
+              <Pressable
+                key={level}
+                style={[
+                  styles.cefrButton,
+                  selectedCEFRLevels.includes(level) && styles.cefrButtonSelected,
+                ]}
+                onPress={() => toggleCEFRLevel(level)}
+              >
+                <Text style={[
+                  styles.cefrButtonText,
+                  selectedCEFRLevels.includes(level) && styles.cefrButtonTextSelected,
+                ]}>
+                  {level}
+                </Text>
+              </Pressable>
+            ))}
+          </View>
+          <Text style={styles.cefrHint}>
+            Solo verás palabras de los niveles seleccionados
           </Text>
         </View>
       </Card>
@@ -350,5 +380,35 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#D1D5DB',
     marginTop: 4,
+  },
+  cefrContainer: {
+    flexDirection: 'row',
+    gap: 10,
+    marginBottom: 8,
+  },
+  cefrButton: {
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 8,
+    borderWidth: 2,
+    borderColor: '#E5E7EB',
+    backgroundColor: '#FFFFFF',
+  },
+  cefrButtonSelected: {
+    borderColor: '#4F46E5',
+    backgroundColor: '#EEF2FF',
+  },
+  cefrButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#6B7280',
+  },
+  cefrButtonTextSelected: {
+    color: '#4F46E5',
+  },
+  cefrHint: {
+    fontSize: 12,
+    color: '#9CA3AF',
+    fontStyle: 'italic',
   },
 });

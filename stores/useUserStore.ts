@@ -38,6 +38,7 @@ interface UserState {
   addStudyTime: (minutes: number) => void;
   addCardsStudied: (count: number) => void;
   checkAndUpdateStreak: () => void;
+  resetIfNewDay: () => void;
   
   // Getters
   getCurrentLevel: () => { level: number; title: string; progress: number };
@@ -130,6 +131,32 @@ export const useUserStore = create<UserState>()(
         });
       },
 
+      resetIfNewDay: () => {
+        const state = get();
+        const today = getTodayDateString();
+        
+        if (state.lastStudyDate === today) return;
+        
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yesterdayStr = yesterday.toISOString().split('T')[0];
+        
+        const updates: Partial<UserState> = {
+          todayXp: 0,
+          todayMinutes: 0,
+          todayCardsStudied: 0,
+        };
+        
+        if (state.profile && state.lastStudyDate !== yesterdayStr) {
+          updates.profile = {
+            ...state.profile,
+            currentStreak: 0,
+          };
+        }
+        
+        set(updates as any);
+      },
+
       checkAndUpdateStreak: () => {
         const state = get();
         if (!state.profile) return;
@@ -146,8 +173,8 @@ export const useUserStore = create<UserState>()(
         } else if (state.lastStudyDate === yesterdayStr) {
           // Estudió ayer, incrementar streak
           newStreak = state.profile.currentStreak + 1;
-        } else if (state.lastStudyDate !== today) {
-          // No estudió ayer, resetear streak a 1 si estudia hoy
+        } else {
+          // No estudió ayer, resetear streak a 1 (está estudiando ahora)
           newStreak = 1;
         }
         

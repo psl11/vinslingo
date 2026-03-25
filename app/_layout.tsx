@@ -1,10 +1,14 @@
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
-import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
+import { useEffect, useState, useRef } from 'react';
+import { View, Text, ActivityIndicator, StyleSheet, AppState } from 'react-native';
+import * as Network from 'expo-network';
 import { getDatabase } from '../lib/database/client';
 import { syncVocabularyFromSupabase, getLocalVocabularyCount } from '../lib/services/vocabularyService';
+import { syncUserProgress } from '../lib/services/syncService';
+import { getPendingSyncItems } from '../lib/database/queries';
 import { useAuth } from '../hooks/useAuth';
+import { useSyncStore } from '../stores/useSyncStore';
 
 export default function RootLayout() {
   const [isInitializing, setIsInitializing] = useState(true);
@@ -12,6 +16,9 @@ export default function RootLayout() {
   const { isAuthenticated, isLoading: authLoading } = useAuth();
   const segments = useSegments();
   const router = useRouter();
+
+  const { setOnlineStatus } = useSyncStore();
+  const appState = useRef(AppState.currentState);
 
   // Initialize database and sync vocabulary
   useEffect(() => {
@@ -22,9 +29,27 @@ export default function RootLayout() {
         
         const localCount = await getLocalVocabularyCount();
         
-        if (localCount === 0) {
-          setInitStatus('Descargando vocabulario...');
+        // Verificar conexión a internet
+        const networkState = await Network.getNetworkStateAsync();
+        const isConnected = !!(networkState.isConnected && networkState.isInternetReachable);
+        setOnlineStatus(isConnected);
+        
+        if (isConnected) {
+          // Siempre sincronizar cuando hay conexión
+          setInitStatus(localCount === 0 ? 'Descargando vocabulario...' : 'Actualizando vocabulario...');
           await syncVocabularyFromSupabase();
+          
+          // Also sync any pending offline changes
+          const pendingItems = await getPendingSyncItems();
+          if (pendingItems.length > 0) {
+            setInitStatus('Sincronizando cambios pendientes...');
+            await syncUserProgress();
+            console.log(`📤 Synced ${pendingItems.length} pending offline changes`);
+          }
+        } else if (localCount === 0) {
+          // Sin conexión y sin datos locales
+          setInitStatus('Sin conexión. Necesitas internet para la primera descarga.');
+          await new Promise(resolve => setTimeout(resolve, 2000));
         }
         
         setIsInitializing(false);
@@ -36,6 +61,33 @@ export default function RootLayout() {
     }
     
     initialize();
+  }, []);
+
+  // Sync pending changes when app comes to foreground
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', async (nextAppState) => {
+      if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
+        // App came to foreground — check network and sync pending
+        try {
+          const networkState = await Network.getNetworkStateAsync();
+          const isConnected = !!(networkState.isConnected && networkState.isInternetReachable);
+          setOnlineStatus(isConnected);
+          
+          if (isConnected) {
+            const pendingItems = await getPendingSyncItems();
+            if (pendingItems.length > 0) {
+              console.log(`📤 App foregrounded with ${pendingItems.length} pending changes, syncing...`);
+              await syncUserProgress();
+            }
+          }
+        } catch (error) {
+          console.error('Foreground sync error:', error);
+        }
+      }
+      appState.current = nextAppState;
+    });
+
+    return () => subscription.remove();
   }, []);
 
   // Handle auth navigation
@@ -75,6 +127,13 @@ export default function RootLayout() {
           options={{ 
             headerShown: false,
             presentation: 'fullScreenModal',
+          }} 
+        />
+        <Stack.Screen 
+          name="search" 
+          options={{ 
+            headerShown: false,
+            presentation: 'modal',
           }} 
         />
       </Stack>

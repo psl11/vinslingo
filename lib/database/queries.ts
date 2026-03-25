@@ -17,6 +17,12 @@ export interface VocabularyItem {
   frequency_rank?: number;
   example_sentence?: string;
   example_translation?: string;
+  example_sentence_2?: string;
+  example_translation_2?: string;
+  song_lyric?: string;
+  song_lyric_translation?: string;
+  song_title?: string;
+  song_artist?: string;
 }
 
 export async function getVocabularyByLevel(cefrLevel: string): Promise<VocabularyItem[]> {
@@ -26,15 +32,34 @@ export async function getVocabularyByLevel(cefrLevel: string): Promise<Vocabular
   );
 }
 
-export async function getVocabularyByCategory(category: string): Promise<VocabularyItem[]> {
+export async function getVocabularyByCategory(category: string, cefrLevels?: string[]): Promise<VocabularyItem[]> {
+  if (cefrLevels && cefrLevels.length > 0) {
+    const placeholders = cefrLevels.map(() => '?').join(', ');
+    return runQuery<VocabularyItem>(
+      `SELECT * FROM vocabulary WHERE category = ? AND cefr_level IN (${placeholders}) ORDER BY frequency_rank`,
+      [category, ...cefrLevels]
+    );
+  }
   return runQuery<VocabularyItem>(
     'SELECT * FROM vocabulary WHERE category = ? ORDER BY frequency_rank',
     [category]
   );
 }
 
-export async function getVocabularyForReview(limit: number = 20): Promise<VocabularyItem[]> {
+export async function getVocabularyForReview(limit: number = 20, cefrLevels?: string[]): Promise<VocabularyItem[]> {
   const now = Date.now();
+  if (cefrLevels && cefrLevels.length > 0) {
+    const placeholders = cefrLevels.map(() => '?').join(', ');
+    return runQuery<VocabularyItem>(
+      `SELECT v.* FROM vocabulary v
+       INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
+       WHERE (uv.next_review_at <= ? OR uv.next_review_at IS NULL)
+       AND v.cefr_level IN (${placeholders})
+       ORDER BY uv.next_review_at ASC
+       LIMIT ?`,
+      [now, ...cefrLevels, limit]
+    );
+  }
   return runQuery<VocabularyItem>(
     `SELECT v.* FROM vocabulary v
      INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
@@ -45,7 +70,18 @@ export async function getVocabularyForReview(limit: number = 20): Promise<Vocabu
   );
 }
 
-export async function getNewVocabulary(limit: number = 10): Promise<VocabularyItem[]> {
+export async function getNewVocabulary(limit: number = 10, cefrLevels?: string[]): Promise<VocabularyItem[]> {
+  if (cefrLevels && cefrLevels.length > 0) {
+    const placeholders = cefrLevels.map(() => '?').join(', ');
+    return runQuery<VocabularyItem>(
+      `SELECT v.* FROM vocabulary v
+       WHERE v.id NOT IN (SELECT vocabulary_id FROM user_vocabulary)
+       AND v.cefr_level IN (${placeholders})
+       ORDER BY v.frequency_rank ASC
+       LIMIT ?`,
+      [...cefrLevels, limit]
+    );
+  }
   return runQuery<VocabularyItem>(
     `SELECT v.* FROM vocabulary v
      WHERE v.id NOT IN (SELECT vocabulary_id FROM user_vocabulary)
@@ -160,6 +196,16 @@ export interface StudyStats {
   accuracy: number;
 }
 
+export async function getLearnedCountByCategory(): Promise<{ category: string; count: number }[]> {
+  return runQuery<{ category: string; count: number }>(`
+    SELECT v.category, COUNT(*) as count
+    FROM user_vocabulary uv
+    INNER JOIN vocabulary v ON uv.vocabulary_id = v.id
+    WHERE uv.mastery_level >= 1
+    GROUP BY v.category
+  `, []);
+}
+
 export async function getStudyStats(): Promise<StudyStats> {
   const [counts] = await runQuery<{
     total: number;
@@ -229,6 +275,135 @@ export async function addToSyncQueue(
     `INSERT INTO sync_queue (table_name, record_id, action, payload) VALUES (?, ?, ?, ?)`,
     [tableName, recordId, action, payload ? JSON.stringify(payload) : null]
   );
+}
+
+// ============================================
+// GAP-FILL EXERCISE QUERIES
+// ============================================
+
+export interface GapFillExercise {
+  id: string;
+  sentence: string;
+  answer: string;
+  options: string; // JSON array
+  explanation: string;
+  explanation_es: string;
+  cefr_level: string;
+  category: string;
+  difficulty: number;
+  source: string;
+  base_word?: string;
+  context_sentence?: string;
+  is_official?: number;
+  answer_es?: string;
+}
+
+export async function getGapFillExercises(
+  category: string,
+  limit: number = 15,
+  cefrLevels?: string[],
+  sourceFilter: 'all' | 'official' | 'custom' = 'all'
+): Promise<GapFillExercise[]> {
+  // Build source condition
+  const sourceCondition =
+    sourceFilter === 'official' ? ' AND g.is_official = 1' :
+    sourceFilter === 'custom'   ? ' AND (g.is_official = 0 OR g.is_official IS NULL)' :
+    '';
+
+  if (cefrLevels && cefrLevels.length > 0) {
+    const placeholders = cefrLevels.map(() => '?').join(', ');
+    return runQuery<GapFillExercise>(
+      `SELECT g.* FROM gap_fill_exercises g
+       LEFT JOIN user_gap_fill ug ON g.id = ug.exercise_id
+       WHERE g.category = ? AND g.cefr_level IN (${placeholders})${sourceCondition}
+       ORDER BY COALESCE(ug.times_correct, 0) ASC, RANDOM()
+       LIMIT ?`,
+      [category, ...cefrLevels, limit]
+    );
+  }
+  return runQuery<GapFillExercise>(
+    `SELECT g.* FROM gap_fill_exercises g
+     LEFT JOIN user_gap_fill ug ON g.id = ug.exercise_id
+     WHERE g.category = ?${sourceCondition}
+     ORDER BY COALESCE(ug.times_correct, 0) ASC, RANDOM()
+     LIMIT ?`,
+    [category, limit]
+  );
+}
+
+export async function updateGapFillProgress(
+  exerciseId: string,
+  isCorrect: boolean
+): Promise<void> {
+  const now = Date.now();
+  const existing = await getOne<{ id: string }>(
+    'SELECT id FROM user_gap_fill WHERE exercise_id = ?',
+    [exerciseId]
+  );
+  if (existing) {
+    const field = isCorrect ? 'times_correct' : 'times_incorrect';
+    await runStatement(
+      `UPDATE user_gap_fill SET ${field} = ${field} + 1, last_attempted_at = ? WHERE exercise_id = ?`,
+      [now, exerciseId]
+    );
+  } else {
+    const id = generateUUID();
+    await runStatement(
+      `INSERT INTO user_gap_fill (id, exercise_id, times_correct, times_incorrect, last_attempted_at)
+       VALUES (?, ?, ?, ?, ?)`,
+      [id, exerciseId, isCorrect ? 1 : 0, isCorrect ? 0 : 1, now]
+    );
+  }
+}
+
+export async function getGapFillStats(category: string): Promise<{ total: number; attempted: number; mastered: number }> {
+  const total = await getOne<{ count: number }>(
+    'SELECT COUNT(*) as count FROM gap_fill_exercises WHERE category = ?',
+    [category]
+  );
+  const attempted = await getOne<{ count: number }>(
+    `SELECT COUNT(DISTINCT ug.exercise_id) as count
+     FROM user_gap_fill ug
+     INNER JOIN gap_fill_exercises g ON g.id = ug.exercise_id
+     WHERE g.category = ?`,
+    [category]
+  );
+  const mastered = await getOne<{ count: number }>(
+    `SELECT COUNT(DISTINCT ug.exercise_id) as count
+     FROM user_gap_fill ug
+     INNER JOIN gap_fill_exercises g ON g.id = ug.exercise_id
+     WHERE g.category = ? AND ug.times_correct >= 2`,
+    [category]
+  );
+  return {
+    total: total?.count ?? 0,
+    attempted: attempted?.count ?? 0,
+    mastered: mastered?.count ?? 0,
+  };
+}
+
+export async function getGapFillMistakes(
+  limit: number = 20
+): Promise<GapFillExercise[]> {
+  return runQuery<GapFillExercise>(
+    `SELECT g.* FROM gap_fill_exercises g
+     INNER JOIN user_gap_fill ug ON g.id = ug.exercise_id
+     WHERE ug.times_incorrect > 0
+     ORDER BY (ug.times_incorrect - ug.times_correct) DESC, ug.last_attempted_at DESC
+     LIMIT ?`,
+    [limit]
+  );
+}
+
+export async function getGapFillMistakeCount(): Promise<number> {
+  const result = await getOne<{ count: number }>(
+    `SELECT COUNT(DISTINCT ug.exercise_id) as count
+     FROM user_gap_fill ug
+     INNER JOIN gap_fill_exercises g ON g.id = ug.exercise_id
+     WHERE ug.times_incorrect > 0`,
+    []
+  );
+  return result?.count ?? 0;
 }
 
 export async function getPendingSyncItems(): Promise<any[]> {

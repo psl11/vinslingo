@@ -3,12 +3,19 @@ import { View, Text, StyleSheet, Pressable, SafeAreaView, Alert } from 'react-na
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FlashCard } from '../../components/cards/FlashCard';
 import { AnswerButtons } from '../../components/cards/AnswerButtons';
+import { TypingCard } from '../../components/cards/TypingCard';
+import type { MatchResult } from '../../lib/utils/fuzzyMatch';
 import { ProgressBar } from '../../components/ui/ProgressBar';
 import { useStudyStore } from '../../stores/useStudyStore';
+import { useSettingsStore } from '../../stores/useSettingsStore';
+import { useUserStore } from '../../stores/useUserStore';
 import { SimpleQuality, getEstimatedIntervals } from '../../lib/srs/sm2';
 
 export default function StudyScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, categories, mode, limit } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string }>();
+  const selectedReviewCategories = categories ? categories.split(',') : undefined;
+  const isTypingMode = mode === 'typing';
+  const cardLimit = limit ? parseInt(limit, 10) : 20;
   const router = useRouter();
   const [isFlipped, setIsFlipped] = useState(false);
   const [responseStart, setResponseStart] = useState(Date.now());
@@ -25,11 +32,16 @@ export default function StudyScreen() {
     endSession,
     getCurrentCard,
     getSessionStats,
+    isCurrentCardRetry,
   } = useStudyStore();
+  
+  const { selectedCEFRLevels } = useSettingsStore();
+  const { addXp, addStudyTime, addCardsStudied, checkAndUpdateStreak } = useUserStore();
 
   const currentCard = getCurrentCard();
   const stats = getSessionStats();
   const currentIndex = currentSession?.currentIndex ?? 0;
+  const isRetry = isCurrentCardRetry();
 
   // Reset flip state and force FlashCard remount when card changes
   useEffect(() => {
@@ -57,9 +69,9 @@ export default function StudyScreen() {
         
         let cards;
         if (id === 'review') {
-          cards = await getDueVocabulary(20);
+          cards = await getDueVocabulary(cardLimit, selectedCEFRLevels, selectedReviewCategories);
         } else {
-          cards = await getVocabularyForLesson(id || 'ngsl', 20);
+          cards = await getVocabularyForLesson(id || 'ngsl', cardLimit, selectedCEFRLevels);
         }
         
         if (cards.length > 0) {
@@ -80,7 +92,7 @@ export default function StudyScreen() {
     return () => {
       endSession();
     };
-  }, [id]);
+  }, [id, selectedCEFRLevels, selectedReviewCategories]);
 
   const handleFlip = (flipped: boolean) => {
     setIsFlipped(flipped);
@@ -89,14 +101,39 @@ export default function StudyScreen() {
     }
   };
 
+  // Handler for typing mode results — hints degrade SM2 quality
+  const handleTypingResult = async (result: MatchResult, _userInput: string, hintsUsed: number) => {
+    if (result === 'wrong') {
+      await handleAnswer('again');
+      return;
+    }
+    // Base quality for correct/close answers, then degrade by hints
+    // exact + 0 hints = easy, exact + 1 hint = good, exact + 2+ hints = hard
+    // close + 0 hints = good, close + 1+ hints = hard
+    const baseMap: Record<string, SimpleQuality> = {
+      'exact': 'easy',
+      'close': 'good',
+    };
+    let quality = baseMap[result] ?? 'good';
+    if (hintsUsed >= 2) {
+      quality = 'hard';
+    } else if (hintsUsed === 1) {
+      quality = quality === 'easy' ? 'good' : 'hard';
+    }
+    await handleAnswer(quality);
+  };
+
   const handleAnswer = async (quality: SimpleQuality) => {
     const responseTimeMs = Date.now() - responseStart;
     
+    // Penalize retried cards: cap at 'good' and downgrade 'good' to 'hard' for SM2
+    const effectiveQuality: SimpleQuality = isRetry && quality === 'good' ? 'hard' : quality;
+    
     // Save progress for this card to database
-    await saveCardProgress(quality);
+    await saveCardProgress(effectiveQuality);
     
     // Update session state
-    answerCard(quality, responseTimeMs);
+    answerCard(effectiveQuality, responseTimeMs);
     setIsFlipped(false);
     
     // Check if session is complete
@@ -179,11 +216,19 @@ export default function StudyScreen() {
   };
 
   const handleFinish = async () => {
+    const sessionDuration = Math.round((Date.now() - (currentSession?.startedAt || Date.now())) / 1000);
+    const xpEarned = stats.correct * 10;
+    const studyMinutes = Math.max(1, Math.round(sessionDuration / 60));
+
+    // Update streak BEFORE addXp (which sets lastStudyDate = today)
+    checkAndUpdateStreak();
+    addXp(xpEarned);
+    addStudyTime(studyMinutes);
+    addCardsStudied(stats.completed);
+
     // Save study session to Supabase
     try {
       const { saveStudySession } = await import('../../lib/services/progressService');
-      const sessionDuration = Math.round((Date.now() - (currentSession?.startedAt || Date.now())) / 1000);
-      const xpEarned = stats.correct * 10;
       
       await saveStudySession(
         currentSession?.type || 'lesson',
@@ -235,7 +280,10 @@ export default function StudyScreen() {
 
   // Show summary modal when session is complete
   if (showSummary && currentSession) {
-    const totalCards = currentSession.cards.length;
+    const uniqueCardIds = new Set(currentSession.results.map(r => r.cardId));
+    const uniqueCards = uniqueCardIds.size;
+    const totalAnswers = currentSession.results.length;
+    const retriedCards = totalAnswers - uniqueCards;
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.modalOverlay}>
@@ -245,17 +293,25 @@ export default function StudyScreen() {
             
             <View style={styles.summaryStats}>
               <View style={styles.summaryRow}>
-                <Text style={styles.summaryLabel}>Total de tarjetas:</Text>
-                <Text style={styles.summaryValue}>{totalCards}</Text>
+                <Text style={styles.summaryLabel}>Tarjetas estudiadas:</Text>
+                <Text style={styles.summaryValue}>{uniqueCards}</Text>
               </View>
               <View style={styles.summaryRow}>
                 <Text style={styles.summaryLabel}>✅ Correctas:</Text>
                 <Text style={[styles.summaryValue, styles.correctValue]}>{stats.correct}</Text>
               </View>
-              <View style={styles.summaryRow}>
-                <Text style={styles.summaryLabel}>❌ Incorrectas:</Text>
-                <Text style={[styles.summaryValue, styles.incorrectValue]}>{stats.incorrect}</Text>
-              </View>
+              {stats.incorrect > 0 && (
+                <View style={styles.summaryRow}>
+                  <Text style={styles.summaryLabel}>❌ Aún difíciles:</Text>
+                  <Text style={[styles.summaryValue, styles.incorrectValue]}>{stats.incorrect}</Text>
+                </View>
+              )}
+              {retriedCards > 0 && (
+                <View style={styles.summaryRow}>
+                  <Text style={styles.summaryLabel}>🔁 Repetidas:</Text>
+                  <Text style={styles.summaryValue}>{retriedCards}</Text>
+                </View>
+              )}
               <View style={styles.summaryRow}>
                 <Text style={styles.summaryLabel}>⭐ XP ganado:</Text>
                 <Text style={[styles.summaryValue, styles.xpValue]}>{stats.correct * 10}</Text>
@@ -306,30 +362,53 @@ export default function StudyScreen() {
 
       {/* Card Area */}
       <View style={styles.cardContainer}>
-        <FlashCard
-          key={cardKey}
-          word={currentCard.word}
-          translation={currentCard.translation}
-          pronunciation={currentCard.pronunciation}
-          example={currentCard.example_sentence}
-          exampleTranslation={currentCard.example_translation}
-          onFlip={handleFlip}
-        />
-      </View>
-
-      {/* Answer Buttons - Only show when flipped */}
-      <View style={styles.answersContainer}>
-        {isFlipped ? (
-          <AnswerButtons
-            intervals={intervals}
-            onAnswer={handleAnswer}
+        {isTypingMode ? (
+          <TypingCard
+            key={cardKey}
+            word={currentCard.word}
+            translation={currentCard.translation}
+            pronunciation={currentCard.pronunciation}
+            category={currentCard.category}
+            partOfSpeech={currentCard.part_of_speech}
+            cefrLevel={currentCard.cefr_level}
+            onResult={handleTypingResult}
           />
         ) : (
-          <Text style={styles.flipHint}>
-            Toca la tarjeta para ver la respuesta
-          </Text>
+          <FlashCard
+            key={cardKey}
+            word={currentCard.word}
+            translation={currentCard.translation}
+            pronunciation={currentCard.pronunciation}
+            example={currentCard.example_sentence}
+            exampleTranslation={currentCard.example_translation}
+            example2={currentCard.example_sentence_2}
+            exampleTranslation2={currentCard.example_translation_2}
+            songLyric={currentCard.song_lyric}
+            songLyricTranslation={currentCard.song_lyric_translation}
+            songTitle={currentCard.song_title}
+            songArtist={currentCard.song_artist}
+            cefrLevel={currentCard.cefr_level}
+            onFlip={handleFlip}
+          />
         )}
       </View>
+
+      {/* Answer Buttons - Only show for flashcard mode when flipped */}
+      {!isTypingMode && (
+        <View style={styles.answersContainer}>
+          {isFlipped ? (
+            <AnswerButtons
+              intervals={intervals}
+              onAnswer={handleAnswer}
+              isRetry={isRetry}
+            />
+          ) : (
+            <Text style={styles.flipHint}>
+              Toca la tarjeta para ver la respuesta
+            </Text>
+          )}
+        </View>
+      )}
 
       {/* Session Stats */}
       <View style={styles.statsBar}>

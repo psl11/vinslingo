@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useFocusEffect } from 'expo-router';
 import { Card } from '../../components/ui/Card';
 import { useVocabularyStats } from '../../hooks/useVocabulary';
 
@@ -14,9 +15,26 @@ interface LessonCategory {
   cefrLevel: string;
 }
 
+const CARD_COUNT_OPTIONS = [5, 10, 15, 20];
+
+type SourceFilter = 'all' | 'official' | 'custom';
+const SOURCE_FILTERS: { key: SourceFilter; label: string }[] = [
+  { key: 'all', label: 'Todos' },
+  { key: 'official', label: 'Cambridge' },
+  { key: 'custom', label: 'Inventados' },
+];
+
 export default function LearnScreen() {
   const router = useRouter();
-  const { stats, isLoading } = useVocabularyStats();
+  const { stats, isLoading, refresh } = useVocabularyStats();
+  const [cardsPerRound, setCardsPerRound] = useState(10);
+  const [sourceFilter, setSourceFilter] = useState<SourceFilter>('all');
+
+  useFocusEffect(
+    useCallback(() => {
+      refresh();
+    }, [refresh])
+  );
   
   const categories: LessonCategory[] = [
     {
@@ -25,7 +43,7 @@ export default function LearnScreen() {
       emoji: '📖',
       description: 'Palabras más frecuentes del inglés',
       totalWords: stats?.byCategory.find(c => c.category === 'ngsl')?.count ?? 0,
-      completedWords: 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'ngsl')?.count ?? 0,
       cefrLevel: 'A1-B2',
     },
     {
@@ -34,13 +52,72 @@ export default function LearnScreen() {
       emoji: '🚀',
       description: 'Verbos compuestos esenciales',
       totalWords: stats?.byCategory.find(c => c.category === 'phave')?.count ?? 0,
-      completedWords: 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'phave')?.count ?? 0,
       cefrLevel: 'B1-B2',
+    },
+    {
+      id: 'idiom',
+      title: 'Idioms',
+      emoji: '💬',
+      description: 'Expresiones idiomáticas más usadas',
+      totalWords: stats?.byCategory.find(c => c.category === 'idiom')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'idiom')?.count ?? 0,
+      cefrLevel: 'B1-C1',
+    },
+    {
+      id: 'connector',
+      title: 'Connectors',
+      emoji: '🔗',
+      description: 'Conectores y palabras de enlace',
+      totalWords: stats?.byCategory.find(c => c.category === 'connector')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'connector')?.count ?? 0,
+      cefrLevel: 'A1-B2',
+    },
+    {
+      id: 'false_friend',
+      title: 'False Friends',
+      emoji: '🚨',
+      description: 'Falsos amigos español-inglés',
+      totalWords: stats?.byCategory.find(c => c.category === 'false_friend')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'false_friend')?.count ?? 0,
+      cefrLevel: 'A1-B2',
+    },
+    {
+      id: 'expression',
+      title: 'Everyday Expressions',
+      emoji: '💬',
+      description: 'Frases cotidianas imprescindibles',
+      totalWords: stats?.byCategory.find(c => c.category === 'expression')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'expression')?.count ?? 0,
+      cefrLevel: 'A1-B2',
+    },
+    {
+      id: 'confusing_pair',
+      title: 'Confusing Pairs',
+      emoji: '🔀',
+      description: 'Pares de palabras que se confunden',
+      totalWords: stats?.byCategory.find(c => c.category === 'confusing_pair')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'confusing_pair')?.count ?? 0,
+      cefrLevel: 'A1-B2',
+    },
+    {
+      id: 'collocation',
+      title: 'Collocations',
+      emoji: '🧩',
+      description: 'Combinaciones naturales de palabras',
+      totalWords: stats?.byCategory.find(c => c.category === 'collocation')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'collocation')?.count ?? 0,
+      cefrLevel: 'A1-B2',
     },
   ];
 
-  const handleStartLesson = (categoryId: string) => {
-    router.push(`/study/${categoryId}`);
+  const handleStartLesson = (categoryId: string, typingMode = false) => {
+    const params: Record<string, string> = { limit: String(cardsPerRound) };
+    if (typingMode) params.mode = 'typing';
+    router.push({
+      pathname: `/study/${categoryId}`,
+      params,
+    });
   };
 
   if (isLoading) {
@@ -55,10 +132,44 @@ export default function LearnScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <View style={styles.header}>
-        <Text style={styles.title}>Aprender</Text>
-        <Text style={styles.subtitle}>
-          {stats?.total ?? 0} palabras disponibles
-        </Text>
+        <View style={styles.headerRow}>
+          <View>
+            <Text style={styles.title}>Aprender</Text>
+            <Text style={styles.subtitle}>
+              {stats?.total ?? 0} palabras disponibles
+            </Text>
+          </View>
+          <Pressable 
+            onPress={() => router.push('/search')} 
+            style={styles.searchButton}
+          >
+            <Text style={styles.searchButtonText}>🔍</Text>
+          </Pressable>
+        </View>
+      </View>
+
+      {/* Card count selector */}
+      <View style={styles.cardCountSection}>
+        <Text style={styles.cardCountLabel}>Tarjetas por ronda</Text>
+        <View style={styles.cardCountRow}>
+          {CARD_COUNT_OPTIONS.map((count) => (
+            <Pressable
+              key={count}
+              style={[
+                styles.cardCountChip,
+                cardsPerRound === count && styles.cardCountChipSelected,
+              ]}
+              onPress={() => setCardsPerRound(count)}
+            >
+              <Text style={[
+                styles.cardCountText,
+                cardsPerRound === count && styles.cardCountTextSelected,
+              ]}>
+                {count}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
       </View>
 
       <View style={styles.categories}>
@@ -68,38 +179,205 @@ export default function LearnScreen() {
             : 0;
 
           return (
-            <Pressable
-              key={category.id}
-              onPress={() => handleStartLesson(category.id)}
-            >
-              <Card style={styles.categoryCard}>
-                <View style={styles.categoryHeader}>
-                  <Text style={styles.categoryEmoji}>{category.emoji}</Text>
-                  <View style={styles.categoryInfo}>
-                    <Text style={styles.categoryTitle}>{category.title}</Text>
-                    <Text style={styles.categoryDescription}>
-                      {category.description}
-                    </Text>
-                  </View>
-                  <View style={styles.levelBadge}>
-                    <Text style={styles.levelText}>{category.cefrLevel}</Text>
-                  </View>
-                </View>
-
-                <View style={styles.progressContainer}>
-                  <View style={styles.progressBar}>
-                    <View 
-                      style={[styles.progressFill, { width: `${progress}%` }]} 
-                    />
-                  </View>
-                  <Text style={styles.progressText}>
-                    {category.completedWords}/{category.totalWords}
+            <Card key={category.id} style={styles.categoryCard}>
+              <View style={styles.categoryHeader}>
+                <Text style={styles.categoryEmoji}>{category.emoji}</Text>
+                <View style={styles.categoryInfo}>
+                  <Text style={styles.categoryTitle}>{category.title}</Text>
+                  <Text style={styles.categoryDescription}>
+                    {category.description}
                   </Text>
                 </View>
-              </Card>
-            </Pressable>
+                <View style={styles.levelBadge}>
+                  <Text style={styles.levelText}>{category.cefrLevel}</Text>
+                </View>
+              </View>
+
+              <View style={styles.progressContainer}>
+                <View style={styles.progressBar}>
+                  <View 
+                    style={[styles.progressFill, { width: `${progress}%` }]} 
+                  />
+                </View>
+                <Text style={styles.progressText}>
+                  {category.completedWords}/{category.totalWords}
+                </Text>
+              </View>
+
+              <View style={styles.modeButtons}>
+                <Pressable
+                  style={styles.modeButton}
+                  onPress={() => handleStartLesson(category.id)}
+                >
+                  <Text style={styles.modeButtonText}>Tarjetas</Text>
+                </Pressable>
+                <Pressable
+                  style={[styles.modeButton, styles.modeButtonTyping]}
+                  onPress={() => handleStartLesson(category.id, true)}
+                >
+                  <Text style={styles.modeButtonText}>Escribir</Text>
+                </Pressable>
+              </View>
+            </Card>
           );
         })}
+      </View>
+
+      {/* Gap-fill section */}
+      <View style={styles.gapFillSection}>
+        <Text style={styles.gapFillTitle}>🧩 Rellenar Huecos</Text>
+        <Text style={styles.gapFillSubtitle}>Ejercicios estilo Cambridge</Text>
+
+        {/* Source filter */}
+        <View style={styles.sourceFilterRow}>
+          {SOURCE_FILTERS.map((f) => (
+            <Pressable
+              key={f.key}
+              style={[
+                styles.sourceFilterChip,
+                sourceFilter === f.key && styles.sourceFilterChipSelected,
+              ]}
+              onPress={() => setSourceFilter(f.key)}
+            >
+              <Text style={[
+                styles.sourceFilterText,
+                sourceFilter === f.key && styles.sourceFilterTextSelected,
+              ]}>
+                {f.key === 'official' ? '🎓 ' : f.key === 'custom' ? '✏️ ' : ''}{f.label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+
+        <Card style={styles.categoryCard}>
+          <View style={styles.categoryHeader}>
+            <Text style={styles.categoryEmoji}>🔗</Text>
+            <View style={styles.categoryInfo}>
+              <Text style={styles.categoryTitle}>Connectors</Text>
+              <Text style={styles.categoryDescription}>
+                Completa frases con el conector correcto
+              </Text>
+            </View>
+            <View style={styles.levelBadge}>
+              <Text style={styles.levelText}>B1-C1</Text>
+            </View>
+          </View>
+          <View style={styles.modeButtons}>
+            <Pressable
+              style={[styles.modeButton, styles.modeButtonGapFill]}
+              onPress={() => router.push({
+                pathname: '/study/gap-fill',
+                params: { category: 'connector', limit: String(cardsPerRound), source: sourceFilter },
+              })}
+            >
+              <Text style={styles.modeButtonText}>Practicar</Text>
+            </Pressable>
+          </View>
+        </Card>
+
+        <Card style={styles.categoryCard}>
+          <View style={styles.categoryHeader}>
+            <Text style={styles.categoryEmoji}>🔤</Text>
+            <View style={styles.categoryInfo}>
+              <Text style={styles.categoryTitle}>Word Formation</Text>
+              <Text style={styles.categoryDescription}>
+                Transforma la palabra base (Part 3)
+              </Text>
+            </View>
+            <View style={styles.levelBadge}>
+              <Text style={styles.levelText}>B1-C1</Text>
+            </View>
+          </View>
+          <View style={styles.modeButtons}>
+            <Pressable
+              style={[styles.modeButton, styles.modeButtonGapFill]}
+              onPress={() => router.push({
+                pathname: '/study/gap-fill',
+                params: { category: 'word_formation', limit: String(cardsPerRound), source: sourceFilter },
+              })}
+            >
+              <Text style={styles.modeButtonText}>Practicar</Text>
+            </Pressable>
+          </View>
+        </Card>
+
+        <Card style={styles.categoryCard}>
+          <View style={styles.categoryHeader}>
+            <Text style={styles.categoryEmoji}>🔑</Text>
+            <View style={styles.categoryInfo}>
+              <Text style={styles.categoryTitle}>Key Word Transformation</Text>
+              <Text style={styles.categoryDescription}>
+                Reescribe usando una palabra clave (Part 4)
+              </Text>
+            </View>
+            <View style={styles.levelBadge}>
+              <Text style={styles.levelText}>B1-C1</Text>
+            </View>
+          </View>
+          <View style={styles.modeButtons}>
+            <Pressable
+              style={[styles.modeButton, styles.modeButtonGapFill]}
+              onPress={() => router.push({
+                pathname: '/study/gap-fill',
+                params: { category: 'key_word_transformation', limit: String(cardsPerRound), source: sourceFilter },
+              })}
+            >
+              <Text style={styles.modeButtonText}>Practicar</Text>
+            </Pressable>
+          </View>
+        </Card>
+
+        <Card style={styles.categoryCard}>
+          <View style={styles.categoryHeader}>
+            <Text style={styles.categoryEmoji}>🔍</Text>
+            <View style={styles.categoryInfo}>
+              <Text style={styles.categoryTitle}>Error Correction</Text>
+              <Text style={styles.categoryDescription}>
+                Encuentra y corrige el error
+              </Text>
+            </View>
+            <View style={styles.levelBadge}>
+              <Text style={styles.levelText}>B1-C1</Text>
+            </View>
+          </View>
+          <View style={styles.modeButtons}>
+            <Pressable
+              style={[styles.modeButton, styles.modeButtonGapFill]}
+              onPress={() => router.push({
+                pathname: '/study/gap-fill',
+                params: { category: 'error_correction', limit: String(cardsPerRound), source: sourceFilter },
+              })}
+            >
+              <Text style={styles.modeButtonText}>Practicar</Text>
+            </Pressable>
+          </View>
+        </Card>
+
+        <Card style={styles.categoryCard}>
+          <View style={styles.categoryHeader}>
+            <Text style={styles.categoryEmoji}>📝</Text>
+            <View style={styles.categoryInfo}>
+              <Text style={styles.categoryTitle}>Open Cloze</Text>
+              <Text style={styles.categoryDescription}>
+                Escribe la palabra que falta (Part 2)
+              </Text>
+            </View>
+            <View style={styles.levelBadge}>
+              <Text style={styles.levelText}>B1-C1</Text>
+            </View>
+          </View>
+          <View style={styles.modeButtons}>
+            <Pressable
+              style={[styles.modeButton, styles.modeButtonGapFill]}
+              onPress={() => router.push({
+                pathname: '/study/gap-fill',
+                params: { category: 'open_cloze', limit: String(cardsPerRound), source: sourceFilter },
+              })}
+            >
+              <Text style={styles.modeButtonText}>Practicar</Text>
+            </Pressable>
+          </View>
+        </Card>
       </View>
     </ScrollView>
   );
@@ -128,6 +406,22 @@ const styles = StyleSheet.create({
   header: {
     marginBottom: 24,
   },
+  headerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  searchButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#EEF2FF',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  searchButtonText: {
+    fontSize: 22,
+  },
   title: {
     fontSize: 28,
     fontWeight: '700',
@@ -143,6 +437,7 @@ const styles = StyleSheet.create({
   },
   categoryCard: {
     padding: 16,
+    marginBottom: 12,
   },
   categoryHeader: {
     flexDirection: 'row',
@@ -199,5 +494,105 @@ const styles = StyleSheet.create({
     color: '#6B7280',
     minWidth: 70,
     textAlign: 'right',
+  },
+  cardCountSection: {
+    marginBottom: 20,
+  },
+  cardCountLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#6B7280',
+    marginBottom: 10,
+  },
+  cardCountRow: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+  cardCountChip: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: 10,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1.5,
+    borderColor: '#E5E7EB',
+    alignItems: 'center',
+  },
+  cardCountChipSelected: {
+    backgroundColor: '#4F46E5',
+    borderColor: '#4F46E5',
+  },
+  cardCountText: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#6B7280',
+  },
+  cardCountTextSelected: {
+    color: '#FFFFFF',
+  },
+  modeButtons: {
+    flexDirection: 'row',
+    gap: 10,
+    marginTop: 14,
+  },
+  modeButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 10,
+    borderRadius: 10,
+    backgroundColor: '#EEF2FF',
+  },
+  modeButtonTyping: {
+    backgroundColor: '#FEF3C7',
+  },
+  modeButtonGapFill: {
+    backgroundColor: '#DBEAFE',
+  },
+  sourceFilterRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 14,
+  },
+  sourceFilterChip: {
+    flex: 1,
+    paddingVertical: 8,
+    borderRadius: 10,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1.5,
+    borderColor: '#E5E7EB',
+    alignItems: 'center',
+  },
+  sourceFilterChipSelected: {
+    backgroundColor: '#4F46E5',
+    borderColor: '#4F46E5',
+  },
+  sourceFilterText: {
+    fontSize: 13,
+    fontWeight: '600',
+    color: '#6B7280',
+  },
+  sourceFilterTextSelected: {
+    color: '#FFFFFF',
+  },
+  gapFillSection: {
+    marginTop: 24,
+    marginBottom: 16,
+  },
+  gapFillTitle: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: '#1F2937',
+    marginBottom: 2,
+  },
+  gapFillSubtitle: {
+    fontSize: 14,
+    color: '#6B7280',
+    marginBottom: 14,
+  },
+  modeButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1F2937',
   },
 });

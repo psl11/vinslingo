@@ -8,6 +8,7 @@ interface AnswerButtonsProps {
   intervals: Record<SimpleQuality, number>;
   onAnswer: (quality: SimpleQuality) => void;
   disabled?: boolean;
+  isRetry?: boolean;
 }
 
 const BUTTON_CONFIG: { quality: SimpleQuality; label: string; color: string }[] = [
@@ -17,7 +18,7 @@ const BUTTON_CONFIG: { quality: SimpleQuality; label: string; color: string }[] 
   { quality: 'easy', label: 'Fácil', color: '#3B82F6' },
 ];
 
-export function AnswerButtons({ intervals, onAnswer, disabled }: AnswerButtonsProps) {
+export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: AnswerButtonsProps) {
   const { hapticsEnabled } = useSettingsStore();
 
   const handlePress = (quality: SimpleQuality) => {
@@ -36,7 +37,9 @@ export function AnswerButtons({ intervals, onAnswer, disabled }: AnswerButtonsPr
 
   return (
     <View style={styles.container}>
-      {BUTTON_CONFIG.map(({ quality, label, color }) => (
+      {BUTTON_CONFIG
+        .filter(({ quality }) => !(isRetry && (quality === 'easy' || quality === 'hard')))
+        .map(({ quality, label, color }) => (
         <Pressable
           key={quality}
           style={({ pressed }) => [

@@ -14,24 +14,21 @@ export interface SupabaseVocabulary {
   frequency_rank?: number;
   example_sentence?: string;
   example_translation?: string;
+  example_sentence_2?: string;
+  example_translation_2?: string;
+  song_lyric?: string;
+  song_lyric_translation?: string;
+  song_title?: string;
+  song_artist?: string;
 }
 
 export async function syncVocabularyFromSupabase(): Promise<number> {
   try {
-    // Obtener última sincronización
-    const lastSync = await getLastVocabularySyncTime();
-    
-    // Fetch vocabulario de Supabase
-    let query = supabase
+    // Fetch todo el vocabulario de Supabase (sin filtro incremental)
+    const { data, error } = await supabase
       .from('vocabulary')
       .select('*')
       .order('frequency_rank', { ascending: true });
-    
-    if (lastSync) {
-      query = query.gt('updated_at', new Date(lastSync).toISOString());
-    }
-    
-    const { data, error } = await query;
     
     if (error) {
       console.error('Error fetching vocabulary:', error);
@@ -51,8 +48,11 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
         `INSERT OR REPLACE INTO vocabulary (
           id, word, translation, pronunciation, audio_url,
           part_of_speech, cefr_level, category, frequency_rank,
-          example_sentence, example_translation, updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          example_sentence, example_translation,
+          example_sentence_2, example_translation_2,
+          song_lyric, song_lyric_translation, song_title, song_artist,
+          updated_at
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           item.id,
           item.word,
@@ -65,14 +65,17 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
           item.frequency_rank || null,
           item.example_sentence || null,
           item.example_translation || null,
+          item.example_sentence_2 || null,
+          item.example_translation_2 || null,
+          item.song_lyric || null,
+          item.song_lyric_translation || null,
+          item.song_title || null,
+          item.song_artist || null,
           Date.now(),
         ]
       );
       insertedCount++;
     }
-    
-    // Actualizar tiempo de sincronización
-    await updateLastVocabularySyncTime();
     
     console.log(`✅ Synced ${insertedCount} vocabulary items`);
     return insertedCount;
@@ -80,25 +83,6 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
     console.error('Failed to sync vocabulary:', error);
     throw error;
   }
-}
-
-async function getLastVocabularySyncTime(): Promise<number | null> {
-  try {
-    const result = await runQuery<{ value: string }>(
-      "SELECT value FROM sync_metadata WHERE key = 'vocabulary_last_sync'"
-    );
-    return result[0] ? parseInt(result[0].value, 10) : null;
-  } catch {
-    return null;
-  }
-}
-
-async function updateLastVocabularySyncTime(): Promise<void> {
-  await runStatement(
-    `INSERT OR REPLACE INTO sync_metadata (key, value, updated_at) 
-     VALUES ('vocabulary_last_sync', ?, ?)`,
-    [Date.now().toString(), Date.now()]
-  );
 }
 
 export async function getLocalVocabularyCount(): Promise<number> {
@@ -122,9 +106,22 @@ export async function getVocabularyByFrequencyRange(
 
 export async function getVocabularyForLesson(
   category: string,
-  limit: number = 20
+  limit: number = 20,
+  cefrLevels?: string[]
 ): Promise<VocabularyItem[]> {
   // Obtener palabras que el usuario aún no ha estudiado
+  if (cefrLevels && cefrLevels.length > 0) {
+    const placeholders = cefrLevels.map(() => '?').join(', ');
+    return runQuery<VocabularyItem>(
+      `SELECT v.* FROM vocabulary v
+       LEFT JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
+       WHERE v.category = ? AND uv.id IS NULL
+       AND v.cefr_level IN (${placeholders})
+       ORDER BY v.frequency_rank ASC
+       LIMIT ?`,
+      [category, ...cefrLevels, limit]
+    );
+  }
   return runQuery<VocabularyItem>(
     `SELECT v.* FROM vocabulary v
      LEFT JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
@@ -135,16 +132,80 @@ export async function getVocabularyForLesson(
   );
 }
 
-export async function getDueVocabulary(limit: number = 20): Promise<VocabularyItem[]> {
+export async function getDueVocabulary(
+  limit: number = 20, 
+  cefrLevels?: string[],
+  categories?: string[]
+): Promise<VocabularyItem[]> {
   const now = Date.now();
-  return runQuery<VocabularyItem>(
-    `SELECT v.*, uv.ease_factor, uv.interval_days as interval, uv.repetitions
+  
+  let query = `SELECT v.*, uv.ease_factor, uv.interval_days as interval, uv.repetitions
      FROM vocabulary v
      INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
-     WHERE uv.next_review_at <= ?
-     ORDER BY uv.next_review_at ASC
+     WHERE uv.next_review_at <= ?`;
+  const params: any[] = [now];
+
+  if (cefrLevels && cefrLevels.length > 0) {
+    const placeholders = cefrLevels.map(() => '?').join(', ');
+    query += ` AND v.cefr_level IN (${placeholders})`;
+    params.push(...cefrLevels);
+  }
+
+  if (categories && categories.length > 0) {
+    const placeholders = categories.map(() => '?').join(', ');
+    query += ` AND v.category IN (${placeholders})`;
+    params.push(...categories);
+  }
+
+  query += ` ORDER BY uv.next_review_at ASC LIMIT ?`;
+  params.push(limit);
+
+  return runQuery<VocabularyItem>(query, params);
+}
+
+export interface SearchResult {
+  id: string;
+  word: string;
+  translation: string;
+  category: string;
+  cefr_level: string;
+  part_of_speech?: string;
+  example_sentence?: string;
+  example_translation?: string;
+  example_sentence_2?: string;
+  example_translation_2?: string;
+  song_lyric?: string;
+  song_lyric_translation?: string;
+  song_title?: string;
+  song_artist?: string;
+  mastery_level?: number;
+  times_correct?: number;
+  times_incorrect?: number;
+}
+
+export async function searchVocabulary(query: string, limit: number = 50): Promise<SearchResult[]> {
+  const searchTerm = `%${query}%`;
+  return runQuery<SearchResult>(
+    `SELECT v.*, uv.mastery_level, uv.times_correct, uv.times_incorrect
+     FROM vocabulary v
+     LEFT JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
+     WHERE v.word LIKE ? OR v.translation LIKE ?
+     ORDER BY 
+       CASE WHEN v.word LIKE ? THEN 0 ELSE 1 END,
+       v.frequency_rank ASC
      LIMIT ?`,
-    [now, limit]
+    [searchTerm, searchTerm, searchTerm, limit]
+  );
+}
+
+export async function getAllLearnedVocabulary(limit: number = 100, offset: number = 0): Promise<SearchResult[]> {
+  return runQuery<SearchResult>(
+    `SELECT v.*, uv.mastery_level, uv.times_correct, uv.times_incorrect
+     FROM vocabulary v
+     INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
+     ORDER BY uv.last_reviewed_at DESC
+     LIMIT ? OFFSET ?`,
+    [limit, offset]
   );
 }
 
@@ -152,6 +213,7 @@ export async function getVocabularyStats(): Promise<{
   total: number;
   byCategory: { category: string; count: number }[];
   byLevel: { level: string; count: number }[];
+  learnedByCategory: { category: string; count: number }[];
 }> {
   const [totalResult] = await runQuery<{ count: number }>(
     'SELECT COUNT(*) as count FROM vocabulary'
@@ -165,9 +227,18 @@ export async function getVocabularyStats(): Promise<{
     'SELECT cefr_level as level, COUNT(*) as count FROM vocabulary GROUP BY cefr_level ORDER BY cefr_level'
   );
   
+  const learnedByCategory = await runQuery<{ category: string; count: number }>(
+    `SELECT v.category, COUNT(*) as count
+     FROM user_vocabulary uv
+     INNER JOIN vocabulary v ON uv.vocabulary_id = v.id
+     WHERE uv.mastery_level >= 1
+     GROUP BY v.category`
+  );
+  
   return {
     total: totalResult?.count ?? 0,
     byCategory,
     byLevel,
+    learnedByCategory,
   };
 }

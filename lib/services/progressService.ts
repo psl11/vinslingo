@@ -1,6 +1,16 @@
 import { supabase } from '../supabase';
 import { runQuery, runStatement } from '../database/client';
-import { getStudyStats, StudyStats } from '../database/queries';
+import { getStudyStats, StudyStats, addToSyncQueue } from '../database/queries';
+import * as Network from 'expo-network';
+
+async function isOnline(): Promise<boolean> {
+  try {
+    const state = await Network.getNetworkStateAsync();
+    return !!(state.isConnected && state.isInternetReachable);
+  } catch {
+    return false;
+  }
+}
 
 export interface UserProgress {
   totalXp: number;
@@ -82,7 +92,24 @@ export async function syncVocabularyProgress(
       console.log('☁️ Inserted vocabulary progress in Supabase');
     }
   } catch (error) {
-    console.error('❌ Error syncing to Supabase:', error);
+    console.error('❌ Error syncing to Supabase, queuing for later:', error);
+    // Queue for later sync
+    try {
+      await addToSyncQueue('user_vocabulary', vocabularyId, 'UPDATE', {
+        vocabulary_id: vocabularyId,
+        ease_factor: data.easeFactor,
+        interval_days: data.interval,
+        repetitions: data.repetitions,
+        next_review_at: new Date(data.nextReviewAt).toISOString(),
+        last_reviewed_at: new Date().toISOString(),
+        times_correct_delta: data.isCorrect ? 1 : 0,
+        times_incorrect_delta: data.isCorrect ? 0 : 1,
+        mastery_level: calculateMasteryLevel(data.repetitions, data.interval),
+      });
+      console.log('📥 Queued vocabulary progress for later sync');
+    } catch (queueError) {
+      console.error('❌ Failed to queue sync:', queueError);
+    }
   }
 }
 
@@ -118,78 +145,112 @@ export async function addUserXp(xpAmount: number): Promise<void> {
   }
 }
 
-// Get complete user progress from Supabase
+// Get complete user progress (offline-first: tries Supabase, falls back to local SQLite)
 export async function getUserProgress(): Promise<UserProgress | null> {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
-      console.log('📊 getUserProgress: No authenticated user');
-      return null;
+    const online = await isOnline();
+
+    if (online) {
+      try {
+        return await getUserProgressFromSupabase();
+      } catch (err) {
+        console.log('📊 Supabase failed, falling back to local:', err);
+      }
     }
-    
-    console.log('📊 Loading progress for user:', user.id);
 
-    // Get profile data
-    const { data: profile, error: profileError } = await supabase
-      .from('profiles')
-      .select('total_xp, current_streak, longest_streak')
-      .eq('id', user.id)
-      .single();
-
-    if (profileError) {
-      console.log('📊 Profile error:', profileError.message);
-    }
-    console.log('📊 Profile data:', profile);
-
-    // Get vocabulary stats from Supabase
-    const { data: vocabStats, error: vocabError } = await supabase
-      .from('user_vocabulary')
-      .select('mastery_level, times_correct, times_incorrect')
-      .eq('user_id', user.id);
-
-    if (vocabError) {
-      console.log('📊 Vocab error:', vocabError.message);
-    }
-    
-    const stats = vocabStats || [];
-    console.log('📊 Vocab stats count:', stats.length);
-    
-    const totalWords = stats.length;
-    const wordsLearning = stats.filter(v => v.mastery_level === 1).length;
-    const wordsMastered = stats.filter(v => v.mastery_level >= 3).length;
-    
-    const totalCorrect = stats.reduce((sum, v) => sum + (v.times_correct || 0), 0);
-    const totalAttempts = stats.reduce((sum, v) => sum + (v.times_correct || 0) + (v.times_incorrect || 0), 0);
-    const accuracy = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
-
-    // Get today's stats
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    
-    const { data: todayStats } = await supabase
-      .from('user_vocabulary')
-      .select('id')
-      .eq('user_id', user.id)
-      .gte('last_reviewed_at', today.toISOString());
-
-    const result = {
-      totalXp: profile?.total_xp || 0,
-      wordsStudied: totalWords,
-      wordsLearning,
-      wordsMastered,
-      currentStreak: profile?.current_streak || 0,
-      longestStreak: profile?.longest_streak || 0,
-      accuracy,
-      todayXp: 0,
-      todayCards: todayStats?.length || 0,
-    };
-    
-    console.log('📊 User progress result:', result);
-    return result;
+    // Offline or Supabase failed — read from local SQLite
+    return await getUserProgressFromLocal();
   } catch (error) {
     console.error('❌ Error getting user progress:', error);
     return null;
   }
+}
+
+async function getUserProgressFromSupabase(): Promise<UserProgress | null> {
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return null;
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('total_xp, current_streak, longest_streak')
+    .eq('id', user.id)
+    .single();
+
+  const { data: vocabStats } = await supabase
+    .from('user_vocabulary')
+    .select('mastery_level, times_correct, times_incorrect')
+    .eq('user_id', user.id);
+
+  const stats = vocabStats || [];
+  const totalWords = stats.length;
+  const wordsLearning = stats.filter(v => v.mastery_level === 1).length;
+  const wordsMastered = stats.filter(v => v.mastery_level >= 3).length;
+
+  const totalCorrect = stats.reduce((sum, v) => sum + (v.times_correct || 0), 0);
+  const totalAttempts = stats.reduce((sum, v) => sum + (v.times_correct || 0) + (v.times_incorrect || 0), 0);
+  const accuracy = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const { data: todayStats } = await supabase
+    .from('user_vocabulary')
+    .select('id')
+    .eq('user_id', user.id)
+    .gte('last_reviewed_at', today.toISOString());
+
+  return {
+    totalXp: profile?.total_xp || 0,
+    wordsStudied: totalWords,
+    wordsLearning,
+    wordsMastered,
+    currentStreak: profile?.current_streak || 0,
+    longestStreak: profile?.longest_streak || 0,
+    accuracy,
+    todayXp: 0,
+    todayCards: todayStats?.length || 0,
+  };
+}
+
+async function getUserProgressFromLocal(): Promise<UserProgress> {
+  const [totalResult] = await runQuery<{ count: number }>(
+    'SELECT COUNT(*) as count FROM user_vocabulary'
+  );
+  const [learningResult] = await runQuery<{ count: number }>(
+    'SELECT COUNT(*) as count FROM user_vocabulary WHERE mastery_level = 1'
+  );
+  const [masteredResult] = await runQuery<{ count: number }>(
+    'SELECT COUNT(*) as count FROM user_vocabulary WHERE mastery_level >= 3'
+  );
+  const [accuracyResult] = await runQuery<{ total_correct: number; total_attempts: number }>(
+    `SELECT 
+      COALESCE(SUM(times_correct), 0) as total_correct, 
+      COALESCE(SUM(times_correct + times_incorrect), 0) as total_attempts 
+     FROM user_vocabulary`
+  );
+
+  const todayStart = new Date();
+  todayStart.setHours(0, 0, 0, 0);
+
+  const [todayResult] = await runQuery<{ count: number }>(
+    'SELECT COUNT(*) as count FROM user_vocabulary WHERE last_reviewed_at >= ?',
+    [todayStart.getTime()]
+  );
+
+  const totalAttempts = accuracyResult?.total_attempts ?? 0;
+  const totalCorrect = accuracyResult?.total_correct ?? 0;
+
+  return {
+    totalXp: 0,
+    wordsStudied: totalResult?.count ?? 0,
+    wordsLearning: learningResult?.count ?? 0,
+    wordsMastered: masteredResult?.count ?? 0,
+    currentStreak: 0,
+    longestStreak: 0,
+    accuracy: totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0,
+    todayXp: 0,
+    todayCards: todayResult?.count ?? 0,
+  };
 }
 
 // Update user streak when they study
@@ -283,11 +344,30 @@ export async function saveStudySession(
     // Update streak
     await updateStreak();
   } catch (error) {
-    console.error('❌ Error saving study session:', error);
+    console.error('❌ Error saving study session, queuing for later:', error);
+    // Queue for later sync
+    try {
+      const sessionId = `offline_${Date.now()}`;
+      await addToSyncQueue('study_sessions', sessionId, 'INSERT', {
+        session_type: sessionType,
+        cards_studied: cardsStudied,
+        cards_correct: cardsCorrect,
+        duration_seconds: durationSeconds,
+        xp_earned: xpEarned,
+        ended_at: new Date().toISOString(),
+      });
+      // Also queue XP update
+      await addToSyncQueue('profiles', 'xp_update', 'UPDATE', {
+        xp_delta: xpEarned,
+      });
+      console.log('📥 Queued study session for later sync');
+    } catch (queueError) {
+      console.error('❌ Failed to queue session sync:', queueError);
+    }
   }
 }
 
-// Get review stats for Review screen
+// Get review stats for Review screen (offline-first: reads from local SQLite)
 export async function getReviewStats(): Promise<{
   dueToday: number;
   overdue: number;
@@ -295,48 +375,38 @@ export async function getReviewStats(): Promise<{
   learned: number;
 }> {
   try {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) {
-      return { dueToday: 0, overdue: 0, newToday: 0, learned: 0 };
-    }
-
-    const now = new Date();
-    const todayStart = new Date(now);
+    const now = Date.now();
+    const todayStart = new Date();
     todayStart.setHours(0, 0, 0, 0);
-    const todayEnd = new Date(now);
+    const todayEnd = new Date();
     todayEnd.setHours(23, 59, 59, 999);
 
-    // Get all user vocabulary
-    const { data: allVocab } = await supabase
-      .from('user_vocabulary')
-      .select('id, next_review_at, last_reviewed_at, mastery_level')
-      .eq('user_id', user.id);
+    // Read from local SQLite (works offline)
+    const [learnedResult] = await runQuery<{ count: number }>(
+      'SELECT COUNT(*) as count FROM user_vocabulary'
+    );
 
-    const vocab = allVocab || [];
-    
-    // Calculate stats
-    const learned = vocab.length;
-    
-    const dueToday = vocab.filter(v => {
-      if (!v.next_review_at) return false;
-      const reviewDate = new Date(v.next_review_at);
-      return reviewDate <= todayEnd;
-    }).length;
-    
-    const overdue = vocab.filter(v => {
-      if (!v.next_review_at) return false;
-      const reviewDate = new Date(v.next_review_at);
-      return reviewDate < todayStart;
-    }).length;
+    const [dueTodayResult] = await runQuery<{ count: number }>(
+      'SELECT COUNT(*) as count FROM user_vocabulary WHERE next_review_at IS NOT NULL AND next_review_at <= ?',
+      [todayEnd.getTime()]
+    );
 
-    // New today = studied for first time today
-    const newToday = vocab.filter(v => {
-      if (!v.last_reviewed_at) return false;
-      const reviewDate = new Date(v.last_reviewed_at);
-      return reviewDate >= todayStart && v.mastery_level <= 1;
-    }).length;
+    const [overdueResult] = await runQuery<{ count: number }>(
+      'SELECT COUNT(*) as count FROM user_vocabulary WHERE next_review_at IS NOT NULL AND next_review_at < ?',
+      [todayStart.getTime()]
+    );
 
-    return { dueToday, overdue, newToday, learned };
+    const [newTodayResult] = await runQuery<{ count: number }>(
+      'SELECT COUNT(*) as count FROM user_vocabulary WHERE last_reviewed_at IS NOT NULL AND last_reviewed_at >= ? AND mastery_level <= 1',
+      [todayStart.getTime()]
+    );
+
+    return {
+      dueToday: dueTodayResult?.count ?? 0,
+      overdue: overdueResult?.count ?? 0,
+      newToday: newTodayResult?.count ?? 0,
+      learned: learnedResult?.count ?? 0,
+    };
   } catch (error) {
     console.error('Error getting review stats:', error);
     return { dueToday: 0, overdue: 0, newToday: 0, learned: 0 };
