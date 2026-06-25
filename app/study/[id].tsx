@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { View, Text, StyleSheet, Pressable, SafeAreaView, Alert } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FlashCard } from '../../components/cards/FlashCard';
@@ -13,7 +13,13 @@ import { SimpleQuality, getEstimatedIntervals } from '../../lib/srs/sm2';
 
 export default function StudyScreen() {
   const { id, categories, mode, limit } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string }>();
-  const selectedReviewCategories = categories ? categories.split(',') : undefined;
+  // Memoize so the array reference is stable across renders; otherwise the
+  // load effect (which depends on it) would re-run on every render and
+  // restart the study session in a loop.
+  const selectedReviewCategories = useMemo(
+    () => (categories ? categories.split(',') : undefined),
+    [categories]
+  );
   const isTypingMode = mode === 'typing';
   const cardLimit = limit ? parseInt(limit, 10) : 20;
   const router = useRouter();

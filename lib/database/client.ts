@@ -143,23 +143,26 @@ async function seedGapFillExercises(): Promise<void> {
       'SELECT COUNT(*) as count FROM gap_fill_exercises'
     );
     if (count && count.count >= allExercises.length) return;
-    
-    for (const item of allExercises) {
-      await db.runAsync(
-        `INSERT OR IGNORE INTO gap_fill_exercises 
-         (id, sentence, answer, options, explanation, explanation_es, cefr_level, category, difficulty, source, base_word, context_sentence, is_official, answer_es)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'cambridge', ?, ?, ?, ?)`,
-        [
-          item.id, item.sentence, item.answer, item.options || null,
-          item.explanation, item.explanation_es, item.cefr_level,
-          item.category, item.difficulty,
-          (item as any).base_word || null,
-          (item as any).context_sentence || null,
-          (item as any).is_official ? 1 : 0,
-          (item as any).answer_es || null,
-        ]
-      );
-    }
+
+    // Insertar en una sola transacción: mucho más rápido que un commit por fila.
+    await db.withTransactionAsync(async () => {
+      for (const item of allExercises) {
+        await db!.runAsync(
+          `INSERT OR IGNORE INTO gap_fill_exercises
+           (id, sentence, answer, options, explanation, explanation_es, cefr_level, category, difficulty, source, base_word, context_sentence, is_official, answer_es)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'cambridge', ?, ?, ?, ?)`,
+          [
+            item.id, item.sentence, item.answer, item.options || null,
+            item.explanation, item.explanation_es, item.cefr_level,
+            item.category, item.difficulty,
+            (item as any).base_word || null,
+            (item as any).context_sentence || null,
+            (item as any).is_official ? 1 : 0,
+            (item as any).answer_es || null,
+          ]
+        );
+      }
+    });
     console.log(`✅ Seeded ${allExercises.length} exercises`);
   } catch (error) {
     console.log('Gap-fill seed error:', error);

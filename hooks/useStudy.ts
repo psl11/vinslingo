@@ -41,10 +41,12 @@ export function useStudySession() {
       profile?.currentStreak ?? 0
     );
     
-    // Actualizar XP y estadísticas del usuario
+    // Actualizar racha ANTES de addXp/addCardsStudied (que fijan lastStudyDate = hoy).
+    // Si se llamara después, checkAndUpdateStreak vería lastStudyDate === hoy y nunca
+    // incrementaría la racha.
+    checkAndUpdateStreak();
     addXp(result.xpEarned + result.streakBonus);
     addCardsStudied(stats.total);
-    checkAndUpdateStreak();
     
     return result;
   }, [endSession, getSessionStats, profile, addXp, addCardsStudied, checkAndUpdateStreak]);

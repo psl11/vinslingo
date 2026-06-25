@@ -39,44 +39,48 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
       return 0;
     }
     
-    // Insertar/actualizar en SQLite
+    // Insertar/actualizar en SQLite dentro de una transacción.
+    // Sin transacción, cada INSERT es un commit independiente y sincronizar
+    // cientos de palabras en cada arranque resulta muy lento.
     const db = await getDatabase();
     let insertedCount = 0;
-    
-    for (const item of data) {
-      await db.runAsync(
-        `INSERT OR REPLACE INTO vocabulary (
-          id, word, translation, pronunciation, audio_url,
-          part_of_speech, cefr_level, category, frequency_rank,
-          example_sentence, example_translation,
-          example_sentence_2, example_translation_2,
-          song_lyric, song_lyric_translation, song_title, song_artist,
-          updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        [
-          item.id,
-          item.word,
-          item.translation,
-          item.pronunciation || null,
-          item.audio_url || null,
-          item.part_of_speech || null,
-          item.cefr_level,
-          item.category || null,
-          item.frequency_rank || null,
-          item.example_sentence || null,
-          item.example_translation || null,
-          item.example_sentence_2 || null,
-          item.example_translation_2 || null,
-          item.song_lyric || null,
-          item.song_lyric_translation || null,
-          item.song_title || null,
-          item.song_artist || null,
-          Date.now(),
-        ]
-      );
-      insertedCount++;
-    }
-    
+
+    await db.withTransactionAsync(async () => {
+      for (const item of data) {
+        await db.runAsync(
+          `INSERT OR REPLACE INTO vocabulary (
+            id, word, translation, pronunciation, audio_url,
+            part_of_speech, cefr_level, category, frequency_rank,
+            example_sentence, example_translation,
+            example_sentence_2, example_translation_2,
+            song_lyric, song_lyric_translation, song_title, song_artist,
+            updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          [
+            item.id,
+            item.word,
+            item.translation,
+            item.pronunciation || null,
+            item.audio_url || null,
+            item.part_of_speech || null,
+            item.cefr_level,
+            item.category || null,
+            item.frequency_rank || null,
+            item.example_sentence || null,
+            item.example_translation || null,
+            item.example_sentence_2 || null,
+            item.example_translation_2 || null,
+            item.song_lyric || null,
+            item.song_lyric_translation || null,
+            item.song_title || null,
+            item.song_artist || null,
+            Date.now(),
+          ]
+        );
+        insertedCount++;
+      }
+    });
+
     console.log(`✅ Synced ${insertedCount} vocabulary items`);
     return insertedCount;
   } catch (error) {

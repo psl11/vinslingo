@@ -66,6 +66,12 @@ export default function SearchScreen() {
   // Load recently studied words on mount
   React.useEffect(() => {
     loadRecentWords();
+    // Clear any pending debounced search when the screen unmounts
+    return () => {
+      if (searchTimeout.current) {
+        clearTimeout(searchTimeout.current);
+      }
+    };
   }, []);
 
   const loadRecentWords = async () => {
