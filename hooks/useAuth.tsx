@@ -1,4 +1,10 @@
-import { useEffect, useState, useCallback } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+} from 'react';
 import { supabase } from '../lib/supabase';
 import { useUserStore } from '../stores/useUserStore';
 import { Session, User } from '@supabase/supabase-js';
@@ -17,47 +23,22 @@ interface AuthActions {
   resetPassword: (email: string) => Promise<{ error: Error | null }>;
 }
 
-export function useAuth(): AuthState & AuthActions {
+type AuthContextValue = AuthState & AuthActions;
+
+const AuthContext = createContext<AuthContextValue | undefined>(undefined);
+
+// Single source of truth for auth state. Previously every component that called
+// useAuth() opened its own getSession() + onAuthStateChange subscription and
+// re-fetched the profile; centralizing it in one provider removes that
+// duplication and the redundant Supabase calls.
+export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const { setProfile, clearProfile } = useUserStore();
 
-  useEffect(() => {
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      
-      if (session?.user) {
-        loadUserProfile(session.user.id);
-      } else {
-        setIsLoading(false);
-      }
-    });
-
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        console.log('🔐 Auth event:', event);
-        setSession(session);
-        setUser(session?.user ?? null);
-        
-        if (event === 'SIGNED_IN' && session?.user) {
-          await loadUserProfile(session.user.id);
-        } else if (event === 'SIGNED_OUT') {
-          clearProfile();
-        }
-        
-        setIsLoading(false);
-      }
-    );
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  const loadUserProfile = async (userId: string) => {
+  const loadUserProfile = useCallback(async (userId: string) => {
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -85,7 +66,7 @@ export function useAuth(): AuthState & AuthActions {
         });
       } else {
         // Create default profile for new user
-        const newProfile = {
+        setProfile({
           id: userId,
           nativeLanguage: 'es',
           targetLanguage: 'en',
@@ -95,23 +76,52 @@ export function useAuth(): AuthState & AuthActions {
           totalXp: 0,
           cefrLevel: 'A1',
           createdAt: new Date().toISOString(),
-        };
-        setProfile(newProfile);
+        });
       }
     } catch (error) {
       console.error('Error in loadUserProfile:', error);
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [setProfile]);
+
+  useEffect(() => {
+    // Get initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+
+      if (session?.user) {
+        loadUserProfile(session.user.id);
+      } else {
+        setIsLoading(false);
+      }
+    });
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        console.log('🔐 Auth event:', event);
+        setSession(session);
+        setUser(session?.user ?? null);
+
+        if (event === 'SIGNED_IN' && session?.user) {
+          await loadUserProfile(session.user.id);
+        } else if (event === 'SIGNED_OUT') {
+          clearProfile();
+        }
+
+        setIsLoading(false);
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, [loadUserProfile, clearProfile]);
 
   const signIn = useCallback(async (email: string, password: string) => {
     setIsLoading(true);
     try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
       return { error: error as Error | null };
     } catch (error) {
       return { error: error as Error };
@@ -172,7 +182,7 @@ export function useAuth(): AuthState & AuthActions {
     }
   }, []);
 
-  return {
+  const value: AuthContextValue = {
     user,
     session,
     isLoading,
@@ -182,4 +192,14 @@ export function useAuth(): AuthState & AuthActions {
     signOut,
     resetPassword,
   };
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+export function useAuth(): AuthContextValue {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
 }

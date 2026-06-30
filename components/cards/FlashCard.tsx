@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
@@ -39,7 +39,21 @@ export function FlashCard({
 }: FlashCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
   const { hapticsEnabled } = useSettingsStore();
-  const { playWord, playUrl } = useAudio();
+  const { playWord, playUrl, autoPlayAudio } = useAudio();
+
+  // Auto-play the pronunciation when a new card's front appears, if the user
+  // has the setting enabled. The card is remounted per word (key={cardKey}),
+  // so this mount effect fires once per card. Hearing the word while seeing
+  // it reinforces recall.
+  useEffect(() => {
+    if (!autoPlayAudio) return;
+    if (audioUrl) {
+      playUrl(audioUrl);
+    } else {
+      playWord(word);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handlePlayAudio = async () => {
     if (audioUrl) {
