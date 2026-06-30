@@ -21,6 +21,8 @@ export default function StudyScreen() {
     [categories]
   );
   const isTypingMode = mode === 'typing';
+  // Both 'review' (SRS-due) and 'difficult' (leeches) are review-style sessions.
+  const isReviewLike = id === 'review' || id === 'difficult';
   const cardLimit = limit ? parseInt(limit, 10) : 20;
   const router = useRouter();
   const [isFlipped, setIsFlipped] = useState(false);
@@ -71,17 +73,19 @@ export default function StudyScreen() {
         setIsLoading(true);
         setNoCards(false);
         
-        const { getVocabularyForLesson, getDueVocabulary } = await import('../../lib/services/vocabularyService');
-        
+        const { getVocabularyForLesson, getDueVocabulary, getDifficultVocabulary } = await import('../../lib/services/vocabularyService');
+
         let cards;
         if (id === 'review') {
           cards = await getDueVocabulary(cardLimit, selectedCEFRLevels, selectedReviewCategories);
+        } else if (id === 'difficult') {
+          cards = await getDifficultVocabulary(cardLimit, selectedCEFRLevels);
         } else {
           cards = await getVocabularyForLesson(id || 'ngsl', cardLimit, selectedCEFRLevels);
         }
-        
+
         if (cards.length > 0) {
-          startSession(id === 'review' ? 'review' : 'lesson', cards);
+          startSession(isReviewLike ? 'review' : 'lesson', cards);
         } else {
           setNoCards(true);
         }
@@ -269,10 +273,14 @@ export default function StudyScreen() {
         <View style={styles.loading}>
           <Text style={styles.emptyEmoji}>🎉</Text>
           <Text style={styles.emptyTitle}>
-            {id === 'review' ? '¡Sin repasos pendientes!' : '¡Felicidades!'}
+            {id === 'difficult'
+              ? '¡Sin palabras difíciles!'
+              : id === 'review' ? '¡Sin repasos pendientes!' : '¡Felicidades!'}
           </Text>
           <Text style={styles.emptyText}>
-            {id === 'review' 
+            {id === 'difficult'
+              ? 'No tienes palabras que se te resistan ahora mismo. ¡Buen trabajo!'
+              : id === 'review'
               ? 'No tienes tarjetas para repasar ahora. Estudia nuevas palabras para generar repasos.'
               : 'Has completado todas las tarjetas de esta categoría.'}
           </Text>

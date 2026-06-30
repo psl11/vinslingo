@@ -38,11 +38,13 @@ export default function ReviewScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategories, setSelectedCategories] = useState<string[]>(['all']);
   const [mistakeCount, setMistakeCount] = useState(0);
+  const [difficultCount, setDifficultCount] = useState(0);
 
   useFocusEffect(
     useCallback(() => {
       loadReviewStats();
       loadMistakeCount();
+      loadDifficultCount();
     }, [])
   );
 
@@ -69,11 +71,27 @@ export default function ReviewScreen() {
     }
   };
 
+  const loadDifficultCount = async () => {
+    try {
+      const { getDifficultVocabularyCount } = await import('../../lib/services/vocabularyService');
+      const count = await getDifficultVocabularyCount();
+      setDifficultCount(count);
+    } catch (error) {
+      console.error('Error loading difficult count:', error);
+    }
+  };
+
   const handleReviewMistakes = () => {
     router.push({
       pathname: '/study/gap-fill',
       params: { reviewMistakes: '1', limit: '20' },
     });
+  };
+
+  const handleReviewDifficult = (typingMode = false) => {
+    const params: Record<string, string> = { limit: '20' };
+    if (typingMode) params.mode = 'typing';
+    router.push({ pathname: '/study/difficult', params });
   };
 
   const toggleCategory = (categoryId: string) => {
@@ -203,6 +221,45 @@ export default function ReviewScreen() {
           <Text style={styles.statLabel}>Pendientes</Text>
         </Card>
       </View>
+
+      {/* Difficult words (leeches) */}
+      <Card style={styles.difficultCard}>
+        <View style={styles.mistakesHeader}>
+          <Text style={styles.difficultTitle}>🎯 Palabras difíciles</Text>
+          {difficultCount > 0 && (
+            <View style={styles.difficultBadge}>
+              <Text style={styles.mistakesBadgeText}>{difficultCount}</Text>
+            </View>
+          )}
+        </View>
+        <Text style={styles.difficultDescription}>
+          Las palabras que más se te resisten (fallas más de lo que aciertas). Practicarlas a fondo dispara tu retención.
+        </Text>
+        {difficultCount > 0 ? (
+          <View style={styles.reviewModeButtons}>
+            <Pressable
+              style={[styles.reviewModeButton, styles.difficultButton]}
+              onPress={() => handleReviewDifficult(false)}
+            >
+              <Text style={styles.reviewModeEmoji}>🃏</Text>
+              <Text style={styles.reviewModeText}>Tarjetas</Text>
+            </Pressable>
+            <Pressable
+              style={[styles.reviewModeButton, styles.reviewModeButtonTyping]}
+              onPress={() => handleReviewDifficult(true)}
+            >
+              <Text style={styles.reviewModeEmoji}>✏️</Text>
+              <Text style={styles.reviewModeText}>Escribir</Text>
+            </Pressable>
+          </View>
+        ) : (
+          <View style={[styles.mistakesButton, styles.mistakesButtonDisabled]}>
+            <Text style={[styles.mistakesButtonText, styles.mistakesButtonTextDisabled]}>
+              Sin palabras difíciles
+            </Text>
+          </View>
+        )}
+      </Card>
 
       {/* Cambridge Mistakes */}
       <Card style={styles.mistakesCard}>
@@ -407,6 +464,31 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: '600',
+  },
+  difficultCard: {
+    marginBottom: 24,
+    backgroundColor: '#FFF7ED',
+  },
+  difficultTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#9A3412',
+  },
+  difficultBadge: {
+    backgroundColor: '#EA580C',
+    borderRadius: 12,
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    marginLeft: 8,
+  },
+  difficultDescription: {
+    fontSize: 13,
+    color: '#7C2D12',
+    lineHeight: 18,
+    marginBottom: 14,
+  },
+  difficultButton: {
+    backgroundColor: '#EA580C',
   },
   mistakesCard: {
     marginBottom: 24,

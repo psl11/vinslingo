@@ -167,6 +167,39 @@ export async function getDueVocabulary(
   return runQuery<VocabularyItem>(query, params);
 }
 
+// "Difficult words" (leeches): words the user gets wrong more often than right.
+// Drilling these has an outsized effect on retention, so they get a dedicated
+// review separate from the SRS schedule.
+export async function getDifficultVocabulary(
+  limit: number = 20,
+  cefrLevels?: string[]
+): Promise<VocabularyItem[]> {
+  let query = `SELECT v.*, uv.ease_factor, uv.interval_days as interval, uv.repetitions
+     FROM vocabulary v
+     INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
+     WHERE uv.times_incorrect > uv.times_correct`;
+  const params: any[] = [];
+
+  if (cefrLevels && cefrLevels.length > 0) {
+    const placeholders = cefrLevels.map(() => '?').join(', ');
+    query += ` AND v.cefr_level IN (${placeholders})`;
+    params.push(...cefrLevels);
+  }
+
+  // Most-failed first (largest net incorrect margin).
+  query += ` ORDER BY (uv.times_incorrect - uv.times_correct) DESC, uv.times_incorrect DESC LIMIT ?`;
+  params.push(limit);
+
+  return runQuery<VocabularyItem>(query, params);
+}
+
+export async function getDifficultVocabularyCount(): Promise<number> {
+  const result = await runQuery<{ count: number }>(
+    'SELECT COUNT(*) as count FROM user_vocabulary WHERE times_incorrect > times_correct'
+  );
+  return result[0]?.count ?? 0;
+}
+
 export interface SearchResult {
   id: string;
   word: string;
