@@ -18,7 +18,7 @@ export function ProgressBar({
   backgroundColor = '#E5E7EB',
   height = 8,
 }: ProgressBarProps) {
-  const progress = total > 0 ? (current / total) * 100 : 0;
+  const progress = total > 0 ? Math.min(100, Math.max(0, (current / total) * 100)) : 0;
 
   return (
     <View style={styles.container}>

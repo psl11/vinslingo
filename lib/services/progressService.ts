@@ -1,6 +1,7 @@
 import { supabase } from '../supabase';
 import { runQuery, runStatement } from '../database/client';
 import { getStudyStats, StudyStats, addToSyncQueue } from '../database/queries';
+import { useUserStore } from '../../stores/useUserStore';
 import * as Network from 'expo-network';
 
 async function isOnline(): Promise<boolean> {
@@ -240,13 +241,19 @@ async function getUserProgressFromLocal(): Promise<UserProgress> {
   const totalAttempts = accuracyResult?.total_attempts ?? 0;
   const totalCorrect = accuracyResult?.total_correct ?? 0;
 
+  // XP y racha no viven en SQLite: la fuente de verdad local es el store
+  // persistido del usuario. Tomarlos de ahí evita que el modo offline
+  // sobrescriba con ceros la racha/XP reales cuando estos datos se vuelven
+  // a guardar en el store desde la pantalla de perfil.
+  const persisted = useUserStore.getState().profile;
+
   return {
-    totalXp: 0,
+    totalXp: persisted?.totalXp ?? 0,
     wordsStudied: totalResult?.count ?? 0,
     wordsLearning: learningResult?.count ?? 0,
     wordsMastered: masteredResult?.count ?? 0,
-    currentStreak: 0,
-    longestStreak: 0,
+    currentStreak: persisted?.currentStreak ?? 0,
+    longestStreak: persisted?.longestStreak ?? 0,
     accuracy: totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0,
     todayXp: 0,
     todayCards: todayResult?.count ?? 0,
