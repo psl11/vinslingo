@@ -25835,7 +25835,7 @@
     "example_sentence_2": "A true friend is hard to find.",
     "example_translation_2": "Un verdadero amigo es difícil de encontrar.",
     "song_lyric": "You've Got a Friend",
-    "song_lyric_translation": "Tienes un amigo en mí",
+    "song_lyric_translation": "Cuentas con un amigo",
     "song_title": "You've Got a Friend",
     "song_artist": "Carole King"
   },
@@ -31994,10 +31994,10 @@
     "created_at": "2026-01-13T15:24:19.7533+00:00",
     "example_sentence_2": "Temperatures will go up this weekend.",
     "example_translation_2": "Las temperaturas subirán este fin de semana.",
-    "song_lyric": "Go up where we belong",
-    "song_lyric_translation": "Vamos hacia donde pertenecemos",
-    "song_title": "Up Where We Belong",
-    "song_artist": "Joe Cocker"
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null
   },
   {
     "id": "7bd06b4a-dc85-4c41-bd04-d8758e5610d8",
@@ -63315,7 +63315,7 @@
     "example_sentence_2": "I'll believe it when pigs fly.",
     "example_translation_2": "Me lo creeré cuando las ranas críen pelo.",
     "song_lyric": "The time has come when pigs fly, yeah it's a beautiful thing",
-    "song_lyric_translation": "Ha llegado el momento en que las ranas criaron pelo, sí, es algo hermoso",
+    "song_lyric_translation": "Ha llegado el día en que voló el cerdo, sí, es algo hermoso",
     "song_title": "When Pigs Fly",
     "song_artist": "Ryan Adams"
   },
