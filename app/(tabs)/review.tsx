@@ -110,13 +110,13 @@ export default function ReviewScreen() {
     }
   };
 
-  const handleStartReview = (typingMode = false) => {
-    const cats = selectedCategories.includes('all') 
-      ? undefined 
+  const handleStartReview = (studyMode?: 'typing' | 'listening' | 'cloze') => {
+    const cats = selectedCategories.includes('all')
+      ? undefined
       : selectedCategories;
     const params: Record<string, string> = {};
     if (cats) params.categories = cats.join(',');
-    if (typingMode) params.mode = 'typing';
+    if (studyMode) params.mode = studyMode;
     router.push({
       pathname: '/study/review',
       params,
@@ -178,17 +178,33 @@ export default function ReviewScreen() {
             <View style={styles.reviewModeButtons}>
               <Pressable
                 style={styles.reviewModeButton}
-                onPress={() => handleStartReview(false)}
+                onPress={() => handleStartReview()}
               >
                 <Text style={styles.reviewModeEmoji}>🃏</Text>
                 <Text style={styles.reviewModeText}>Tarjetas</Text>
               </Pressable>
               <Pressable
                 style={[styles.reviewModeButton, styles.reviewModeButtonTyping]}
-                onPress={() => handleStartReview(true)}
+                onPress={() => handleStartReview('typing')}
               >
                 <Text style={styles.reviewModeEmoji}>✏️</Text>
                 <Text style={styles.reviewModeText}>Escribir</Text>
+              </Pressable>
+            </View>
+            <View style={[styles.reviewModeButtons, styles.reviewModeButtonsSecondRow]}>
+              <Pressable
+                style={[styles.reviewModeButton, styles.reviewModeButtonListening]}
+                onPress={() => handleStartReview('listening')}
+              >
+                <Text style={styles.reviewModeEmoji}>🎧</Text>
+                <Text style={styles.reviewModeText}>Escuchar</Text>
+              </Pressable>
+              <Pressable
+                style={[styles.reviewModeButton, styles.reviewModeButtonCloze]}
+                onPress={() => handleStartReview('cloze')}
+              >
+                <Text style={styles.reviewModeEmoji}>📄</Text>
+                <Text style={styles.reviewModeText}>Contexto</Text>
               </Pressable>
             </View>
           </>
@@ -456,6 +472,15 @@ const styles = StyleSheet.create({
   },
   reviewModeButtonTyping: {
     backgroundColor: '#F59E0B',
+  },
+  reviewModeButtonsSecondRow: {
+    marginTop: 12,
+  },
+  reviewModeButtonListening: {
+    backgroundColor: '#0EA5E9',
+  },
+  reviewModeButtonCloze: {
+    backgroundColor: '#10B981',
   },
   reviewModeEmoji: {
     fontSize: 18,

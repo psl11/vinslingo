@@ -116,15 +116,6 @@ export async function getUserVocabulary(vocabularyId: string): Promise<UserVocab
   );
 }
 
-export async function createUserVocabulary(vocabularyId: string): Promise<string> {
-  const id = generateUUID();
-  await runStatement(
-    `INSERT INTO user_vocabulary (id, vocabulary_id, needs_sync) VALUES (?, ?, 1)`,
-    [id, vocabularyId]
-  );
-  return id;
-}
-
 export async function updateUserVocabularyAfterReview(
   vocabularyId: string,
   data: {
@@ -250,20 +241,6 @@ export async function getStudyStats(): Promise<StudyStats> {
 // ============================================
 // SYNC QUERIES
 // ============================================
-
-export async function getUnsyncedRecords(tableName: string): Promise<any[]> {
-  return runQuery(
-    `SELECT * FROM ${tableName} WHERE needs_sync = 1`,
-    []
-  );
-}
-
-export async function markAsSynced(tableName: string, id: string): Promise<void> {
-  await runStatement(
-    `UPDATE ${tableName} SET needs_sync = 0 WHERE id = ?`,
-    [id]
-  );
-}
 
 export async function addToSyncQueue(
   tableName: string,

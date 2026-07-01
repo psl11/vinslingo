@@ -11,7 +11,7 @@ import { Button } from '../../components/ui/Button';
 export default function HomeScreen() {
   const router = useRouter();
   const { todayXp, todayMinutes, todayCardsStudied, profile, resetIfNewDay } = useUserStore();
-  const { dailyGoalMinutes } = useSettingsStore();
+  const { dailyGoalMinutes, cardsPerSession } = useSettingsStore();
   const { getCurrentLevel } = useUserStore();
   const levelInfo = getCurrentLevel();
 
@@ -86,7 +86,14 @@ export default function HomeScreen() {
 
       {/* Action Buttons */}
       <View style={styles.actions}>
-        <Button onPress={() => router.push('/learn')} fullWidth size="lg">
+        <Button
+          onPress={() => router.push({ pathname: '/study/smart', params: { limit: String(cardsPerSession) } })}
+          fullWidth
+          size="lg"
+        >
+          ⚡  Sesión Inteligente
+        </Button>
+        <Button onPress={() => router.push('/learn')} variant="secondary" fullWidth size="lg">
           📚  Empezar Lección
         </Button>
         <Button 

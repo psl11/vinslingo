@@ -4,6 +4,8 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FlashCard } from '../../components/cards/FlashCard';
 import { AnswerButtons } from '../../components/cards/AnswerButtons';
 import { TypingCard } from '../../components/cards/TypingCard';
+import { ListeningCard } from '../../components/cards/ListeningCard';
+import { ClozeCard } from '../../components/cards/ClozeCard';
 import type { MatchResult } from '../../lib/utils/fuzzyMatch';
 import { ProgressBar } from '../../components/ui/ProgressBar';
 import { useStudyStore } from '../../stores/useStudyStore';
@@ -21,8 +23,11 @@ export default function StudyScreen() {
     [categories]
   );
   const isTypingMode = mode === 'typing';
-  // Both 'review' (SRS-due) and 'difficult' (leeches) are review-style sessions.
-  const isReviewLike = id === 'review' || id === 'difficult';
+  const isListeningMode = mode === 'listening';
+  const isClozeMode = mode === 'cloze';
+  // 'review' (SRS-due), 'difficult' (leeches) and 'smart' (mixed) are all
+  // review-style sessions (they update SRS and count as review for XP/streak).
+  const isReviewLike = id === 'review' || id === 'difficult' || id === 'smart';
   const cardLimit = limit ? parseInt(limit, 10) : 20;
   const router = useRouter();
   const [isFlipped, setIsFlipped] = useState(false);
@@ -73,13 +78,15 @@ export default function StudyScreen() {
         setIsLoading(true);
         setNoCards(false);
         
-        const { getVocabularyForLesson, getDueVocabulary, getDifficultVocabulary } = await import('../../lib/services/vocabularyService');
+        const { getVocabularyForLesson, getDueVocabulary, getDifficultVocabulary, getSmartSession } = await import('../../lib/services/vocabularyService');
 
         let cards;
         if (id === 'review') {
           cards = await getDueVocabulary(cardLimit, selectedCEFRLevels, selectedReviewCategories);
         } else if (id === 'difficult') {
           cards = await getDifficultVocabulary(cardLimit, selectedCEFRLevels);
+        } else if (id === 'smart') {
+          cards = await getSmartSession(cardLimit, selectedCEFRLevels);
         } else {
           cards = await getVocabularyForLesson(id || 'ngsl', cardLimit, selectedCEFRLevels);
         }
@@ -275,11 +282,13 @@ export default function StudyScreen() {
           <Text style={styles.emptyTitle}>
             {id === 'difficult'
               ? '¡Sin palabras difíciles!'
-              : id === 'review' ? '¡Sin repasos pendientes!' : '¡Felicidades!'}
+              : id === 'review' || id === 'smart' ? '¡Todo al día!' : '¡Felicidades!'}
           </Text>
           <Text style={styles.emptyText}>
             {id === 'difficult'
               ? 'No tienes palabras que se te resistan ahora mismo. ¡Buen trabajo!'
+              : id === 'smart'
+              ? 'No hay repasos pendientes ni palabras nuevas disponibles ahora mismo.'
               : id === 'review'
               ? 'No tienes tarjetas para repasar ahora. Estudia nuevas palabras para generar repasos.'
               : 'Has completado todas las tarjetas de esta categoría.'}
@@ -376,7 +385,27 @@ export default function StudyScreen() {
 
       {/* Card Area */}
       <View style={styles.cardContainer}>
-        {isTypingMode ? (
+        {isListeningMode ? (
+          <ListeningCard
+            key={cardKey}
+            word={currentCard.word}
+            translation={currentCard.translation}
+            example={currentCard.example_sentence}
+            exampleTranslation={currentCard.example_translation}
+            cefrLevel={currentCard.cefr_level}
+            onResult={handleTypingResult}
+          />
+        ) : isClozeMode && currentCard.example_sentence ? (
+          <ClozeCard
+            key={cardKey}
+            word={currentCard.word}
+            translation={currentCard.translation}
+            sentence={currentCard.example_sentence}
+            sentenceTranslation={currentCard.example_translation}
+            cefrLevel={currentCard.cefr_level}
+            onResult={handleTypingResult}
+          />
+        ) : isTypingMode || isClozeMode ? (
           <TypingCard
             key={cardKey}
             word={currentCard.word}
@@ -408,7 +437,7 @@ export default function StudyScreen() {
       </View>
 
       {/* Answer Buttons - Only show for flashcard mode when flipped */}
-      {!isTypingMode && (
+      {!isTypingMode && !isListeningMode && !isClozeMode && (
         <View style={styles.answersContainer}>
           {isFlipped ? (
             <AnswerButtons

@@ -8,18 +8,13 @@ import { OPEN_CLOZE_EXERCISES } from './openClozeSeed';
 import { OFFICIAL_CAMBRIDGE_EXERCISES } from './officialCambridgeSeed';
 
 let db: SQLite.SQLiteDatabase | null = null;
-let needsResync = false;
 
 export async function getDatabase(): Promise<SQLite.SQLiteDatabase> {
   if (db) return db;
-  
+
   db = await SQLite.openDatabaseAsync('vinslingo.db');
   await initializeDatabase();
   return db;
-}
-
-export function checkNeedsResync(): boolean {
-  return needsResync;
 }
 
 async function initializeDatabase(): Promise<void> {
@@ -84,7 +79,6 @@ async function runMigrations(): Promise<void> {
       await db.runAsync(
         "DELETE FROM sync_metadata WHERE key = 'vocabulary_last_sync'"
       );
-      needsResync = true;
       console.log('✅ Migrations completed - resync needed');
     } else {
       // Verificar si las columnas existen pero los datos están vacíos
@@ -96,7 +90,6 @@ async function runMigrations(): Promise<void> {
         await db.runAsync(
           "DELETE FROM sync_metadata WHERE key = 'vocabulary_last_sync'"
         );
-        needsResync = true;
         console.log('✅ New columns empty - resync needed');
       }
     }

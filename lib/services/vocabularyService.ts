@@ -1,6 +1,6 @@
 import { supabase } from '../supabase';
 import { runQuery, runStatement, getDatabase } from '../database/client';
-import { VocabularyItem } from '../database/queries';
+import { VocabularyItem, getNewVocabulary } from '../database/queries';
 
 export interface SupabaseVocabulary {
   id: string;
@@ -209,6 +209,30 @@ export async function getDifficultVocabularyCount(): Promise<number> {
     'SELECT COUNT(*) as count FROM user_vocabulary WHERE times_incorrect > times_correct'
   );
   return result[0]?.count ?? 0;
+}
+
+// "Smart session": interleaves due reviews with a few new words, shuffled.
+// Mixed spaced practice (review-heavy, ~70/30) is more effective than studying
+// pure blocks of either. Falls back to whatever is available on each side.
+export async function getSmartSession(
+  limit: number = 20,
+  cefrLevels?: string[]
+): Promise<VocabularyItem[]> {
+  const reviewTarget = Math.ceil(limit * 0.7);
+  const due = await getDueVocabulary(reviewTarget, cefrLevels);
+
+  const remaining = limit - due.length;
+  const fresh = remaining > 0 ? await getNewVocabulary(remaining, cefrLevels) : [];
+
+  const combined = [...due, ...fresh];
+
+  // Fisher-Yates shuffle so new and review cards are interleaved.
+  for (let i = combined.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [combined[i], combined[j]] = [combined[j], combined[i]];
+  }
+
+  return combined;
 }
 
 export interface SearchResult {
