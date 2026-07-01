@@ -34,6 +34,13 @@ yarn-error.*
 .env*.local
 .env
 
+# MCP / editor configs that may contain access tokens (keep them local)
+.mcp.json
+**/mcp.json
+**/mcp_config.json
+.windsurf/
+.codeium/
+
 # typescript
 *.tsbuildinfo
 
