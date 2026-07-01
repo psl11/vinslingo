@@ -24,21 +24,32 @@ export interface SupabaseVocabulary {
 
 export async function syncVocabularyFromSupabase(): Promise<number> {
   try {
-    // Fetch todo el vocabulario de Supabase (sin filtro incremental)
-    const { data, error } = await supabase
-      .from('vocabulary')
-      .select('*')
-      .order('frequency_rank', { ascending: true });
-    
-    if (error) {
-      console.error('Error fetching vocabulary:', error);
-      throw error;
+    // Fetch todo el vocabulario de Supabase paginando: PostgREST limita cada
+    // petición a ~1000 filas por defecto, así que sin paginar solo llegarían
+    // las primeras 1000 palabras (el dataset NGSL supera las 2800).
+    const PAGE_SIZE = 1000;
+    const data: SupabaseVocabulary[] = [];
+    for (let from = 0; ; from += PAGE_SIZE) {
+      const { data: page, error } = await supabase
+        .from('vocabulary')
+        .select('*')
+        .order('frequency_rank', { ascending: true })
+        .range(from, from + PAGE_SIZE - 1);
+
+      if (error) {
+        console.error('Error fetching vocabulary:', error);
+        throw error;
+      }
+
+      if (!page || page.length === 0) break;
+      data.push(...page);
+      if (page.length < PAGE_SIZE) break;
     }
-    
-    if (!data || data.length === 0) {
+
+    if (data.length === 0) {
       return 0;
     }
-    
+
     // Insertar/actualizar en SQLite dentro de una transacción.
     // Sin transacción, cada INSERT es un commit independiente y sincronizar
     // cientos de palabras en cada arranque resulta muy lento.

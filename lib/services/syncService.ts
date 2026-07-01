@@ -1,6 +1,6 @@
 import { supabase } from '../supabase';
 import { runQuery, runStatement } from '../database/client';
-import { getPendingSyncItems, markAsSynced } from '../database/queries';
+import { getPendingSyncItems } from '../database/queries';
 
 export interface SyncResult {
   uploaded: number;
@@ -82,15 +82,20 @@ export async function syncUserProgress(): Promise<SyncResult> {
       }
     }
 
-    // 2. Download user progress from Supabase
+    // 2. Download user progress from Supabase (paginated: PostgREST caps each
+    // request at ~1000 rows). INSERT OR REPLACE collapses any duplicate onto
+    // the UNIQUE(vocabulary_id) index, keeping one row per word.
     if (user) {
-      // Fetch user's vocabulary progress
-      const { data: userVocab, error } = await supabase
-        .from('user_vocabulary')
-        .select('*')
-        .eq('user_id', user.id);
-      
-      if (!error && userVocab) {
+      const PAGE_SIZE = 1000;
+      for (let from = 0; ; from += PAGE_SIZE) {
+        const { data: userVocab, error } = await supabase
+          .from('user_vocabulary')
+          .select('*')
+          .eq('user_id', user.id)
+          .range(from, from + PAGE_SIZE - 1);
+
+        if (error || !userVocab || userVocab.length === 0) break;
+
         for (const item of userVocab) {
           await runStatement(
             `INSERT OR REPLACE INTO user_vocabulary (
@@ -114,15 +119,20 @@ export async function syncUserProgress(): Promise<SyncResult> {
           );
           result.downloaded++;
         }
+
+        if (userVocab.length < PAGE_SIZE) break;
       }
     }
 
     // Update last sync time
     await runStatement(
-      `INSERT OR REPLACE INTO sync_metadata (key, value, updated_at) 
+      `INSERT OR REPLACE INTO sync_metadata (key, value, updated_at)
        VALUES ('last_full_sync', ?, ?)`,
       [Date.now().toString(), Date.now()]
     );
+
+    // Prune already-synced queue entries so sync_queue doesn't grow unbounded.
+    await runStatement('DELETE FROM sync_queue WHERE synced_at IS NOT NULL');
 
     console.log(`✅ Sync complete: ${result.uploaded} up, ${result.downloaded} down`);
   } catch (err) {

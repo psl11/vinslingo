@@ -125,6 +125,29 @@ async function runMigrations(): Promise<void> {
   } catch (error) {
     console.log('Gap-fill migration check:', error);
   }
+
+  // Enforce one user_vocabulary row per vocabulary_id.
+  // Historically the table keyed only on `id` (a UUID), so a word studied
+  // offline (local UUID) and later downloaded from Supabase (server UUID)
+  // could produce two rows for the same vocabulary_id, double-counting stats.
+  // Deduplicate keeping the most recently updated row, then add a UNIQUE index
+  // so INSERT OR REPLACE collapses future duplicates by vocabulary_id.
+  try {
+    await db.execAsync(`
+      DELETE FROM user_vocabulary
+      WHERE id NOT IN (
+        SELECT id FROM (
+          SELECT id, MAX(updated_at) AS keep FROM user_vocabulary
+          GROUP BY vocabulary_id
+        )
+      );
+    `);
+    await db.execAsync(
+      'CREATE UNIQUE INDEX IF NOT EXISTS idx_user_vocab_vocab_unique ON user_vocabulary(vocabulary_id)'
+    );
+  } catch (error) {
+    console.log('user_vocabulary dedup/unique migration:', error);
+  }
 }
 
 async function seedGapFillExercises(): Promise<void> {

@@ -49,6 +49,8 @@ export const LOCAL_SCHEMA = `
   );
 
   -- Índices para user_vocabulary
+  -- NOTA: el índice UNIQUE(vocabulary_id) se crea en runMigrations (client.ts)
+  -- tras deduplicar, para no fallar en BBDD existentes con filas duplicadas.
   CREATE INDEX IF NOT EXISTS idx_user_vocab_review ON user_vocabulary(next_review_at);
   CREATE INDEX IF NOT EXISTS idx_user_vocab_mastery ON user_vocabulary(mastery_level);
   CREATE INDEX IF NOT EXISTS idx_user_vocab_sync ON user_vocabulary(needs_sync);
