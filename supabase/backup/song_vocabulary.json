@@ -1,0 +1,308 @@
+[
+  {
+    "id": "0f0f1a7b-5549-4a6a-85d3-181020726bca",
+    "song_id": "50000001-0000-0000-0000-000000000013",
+    "vocabulary_id": "eab5f5ed-816d-477a-b042-63dafc5efa80",
+    "line_text": "But in the end it doesn't even matter",
+    "highlighted_word": "matter",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "12ac7201-f2c3-4047-94b6-a33a0fb44419",
+    "song_id": "50000001-0000-0000-0000-000000000017",
+    "vocabulary_id": "2362f4f1-ab18-4867-acbe-8faeea8f74e5",
+    "line_text": "Don't you know you might find",
+    "highlighted_word": "find out",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "234f7780-9c34-4453-be9b-dc5827f6d252",
+    "song_id": "50000001-0000-0000-0000-000000000008",
+    "vocabulary_id": "c66707ae-fbea-4e74-b432-87083c00d2b8",
+    "line_text": "Say your prayers little one",
+    "highlighted_word": "prayer",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "2e480afd-ea5d-4515-adaa-a35b2473cd15",
+    "song_id": "50000001-0000-0000-0000-000000000007",
+    "vocabulary_id": "eab5f5ed-816d-477a-b042-63dafc5efa80",
+    "line_text": "And nothing else matters",
+    "highlighted_word": "matter",
+    "line_index": 3,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "34faca8b-b1a9-43d9-9ce9-a9bdf8a32832",
+    "song_id": "50000001-0000-0000-0000-000000000026",
+    "vocabulary_id": "b87b6aac-aee3-425c-b0cc-1a886bd7e8af",
+    "line_text": "And I'm on my knees looking for the answer",
+    "highlighted_word": "look for",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "37185aa1-d85b-4b42-82cf-9d17730bf49d",
+    "song_id": "50000001-0000-0000-0000-000000000004",
+    "vocabulary_id": "7ca7c8ba-1be4-4ed4-98c4-bf5dab70d5e5",
+    "line_text": "It's fun to lose and to pretend",
+    "highlighted_word": "pretend",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "3c3b9773-da19-418d-8587-bd8e68cfc5a7",
+    "song_id": "50000001-0000-0000-0000-000000000023",
+    "vocabulary_id": "150eb92b-756f-42aa-b0f0-59446c3c6b22",
+    "line_text": "Oh I never knew you were the someone waiting for me",
+    "highlighted_word": "waiting",
+    "line_index": 3,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "40f33af0-e323-458b-b571-0409f3834edf",
+    "song_id": "50000001-0000-0000-0000-000000000005",
+    "vocabulary_id": "16d45d3e-1e92-429e-9440-1563ad85ab88",
+    "line_text": "As an old enemy",
+    "highlighted_word": "enemy",
+    "line_index": 3,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "45c248bf-2b4e-49ff-bd67-7a369d46e76d",
+    "song_id": "50000001-0000-0000-0000-000000000016",
+    "vocabulary_id": "e95a0ec9-007b-4f7c-ae20-c159d6d18c67",
+    "line_text": "That they're gonna throw it back to you",
+    "highlighted_word": "throw",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "52704f4b-d4d7-4dfc-aa58-9160d23abeff",
+    "song_id": "50000001-0000-0000-0000-000000000027",
+    "vocabulary_id": "7ee63f40-fed2-445e-964b-28960aa728c6",
+    "line_text": "But heaven ain't close in a place like this",
+    "highlighted_word": "heaven",
+    "line_index": 3,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "5753cd60-7165-422a-89b4-3b5578ad875f",
+    "song_id": "50000001-0000-0000-0000-000000000001",
+    "vocabulary_id": "5e1ce42d-bba6-4751-9a6d-c977c8bf0ca9",
+    "line_text": "Speaking words of wisdom",
+    "highlighted_word": "wisdom",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "5f5719ac-1f74-44aa-ad53-84e67cd77db5",
+    "song_id": "50000001-0000-0000-0000-000000000016",
+    "vocabulary_id": "39555b05-7130-4282-bff3-55028b2d193b",
+    "line_text": "Realized what you gotta do",
+    "highlighted_word": "realize",
+    "line_index": 3,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "62956d6b-1281-4494-b0d9-3dea893fa632",
+    "song_id": "50000001-0000-0000-0000-000000000012",
+    "vocabulary_id": "cceda803-5520-4774-a4a3-8148b5bc5101",
+    "line_text": "I used to rule the world",
+    "highlighted_word": "rule",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "62e41952-0a2e-46c8-b508-0f4d9e5fde95",
+    "song_id": "50000001-0000-0000-0000-000000000002",
+    "vocabulary_id": "328680d3-0c24-4b4b-a114-a48bcee6c5a9",
+    "line_text": "Here come old flat top",
+    "highlighted_word": "come",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "692dbf3f-62a8-419f-8900-0bd1292105c8",
+    "song_id": "50000001-0000-0000-0000-000000000013",
+    "vocabulary_id": "293868f1-fb10-417a-8bb5-21cd040fcf6e",
+    "line_text": "I had to fall to lose it all",
+    "highlighted_word": "fall",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "79877bce-d6a3-46df-a29d-00d66227310f",
+    "song_id": "50000001-0000-0000-0000-000000000004",
+    "vocabulary_id": "1dd055a3-ac25-48b4-b019-a82501c77e96",
+    "line_text": "Load up on guns, bring your friends",
+    "highlighted_word": "bring",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "8b54e371-81b9-4e55-a37e-5d6bed5ed720",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "vocabulary_id": "a9d9f6c9-63ed-4eb7-be49-c2a243cb34c9",
+    "line_text": "Come up to meet you, tell you I'm sorry",
+    "highlighted_word": "come up",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "91b3703d-0031-4c17-b238-f31d7dc34400",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "12b0321d-1c7a-4bae-a250-1dbe787d13fd",
+    "line_text": "Oh I believe in yesterday",
+    "highlighted_word": "believe",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "991ba487-f7a1-4a5d-9d82-20ee38c94b0f",
+    "song_id": "50000001-0000-0000-0000-000000000014",
+    "vocabulary_id": "3f2d2230-8f4d-4d36-8c2d-8e16c763f99e",
+    "line_text": "Become so tired so much more aware",
+    "highlighted_word": "aware",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "9cdc0fef-e78c-4eee-a7cb-0dd02f491b24",
+    "song_id": "50000001-0000-0000-0000-000000000018",
+    "vocabulary_id": "bc5239ab-9979-4f44-8b01-742c9547d826",
+    "line_text": "Lately did you ever feel the pain",
+    "highlighted_word": "pain",
+    "line_index": 3,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "a734b94b-e561-40c0-bfec-99439bbc8b33",
+    "song_id": "50000001-0000-0000-0000-000000000022",
+    "vocabulary_id": "bb50abcf-42d3-4ca6-b585-e254d7e495de",
+    "line_text": "We push and pull like a magnet do",
+    "highlighted_word": "pull",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "b4df5a7c-8bb8-4b80-9b52-6b7b3fc89cb3",
+    "song_id": "50000001-0000-0000-0000-000000000026",
+    "vocabulary_id": "869b5ee9-8a1d-4b37-8018-5472d6c91306",
+    "line_text": "My sign is vital, my hands are cold",
+    "highlighted_word": "vital",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "b578cc3c-ee47-4c87-a447-e36b829b37d2",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "vocabulary_id": "a87f937f-f984-4321-9bc3-197384ee0cc3",
+    "line_text": "I had to find you, tell you I need you",
+    "highlighted_word": "find",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "bb26e905-6b24-47a5-8c97-87bb8a2ffe36",
+    "song_id": "50000001-0000-0000-0000-000000000022",
+    "vocabulary_id": "142e8507-7520-46b3-ac27-d5c2a282459f",
+    "line_text": "We push and pull like a magnet do",
+    "highlighted_word": "push",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "bcb0e290-6267-4dd6-a814-7820067819d4",
+    "song_id": "50000001-0000-0000-0000-000000000023",
+    "vocabulary_id": "2859128b-7b17-4546-83f0-23adc77b34ee",
+    "line_text": "Darling just dive right in and follow my lead",
+    "highlighted_word": "follow",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "c422d1c7-5a58-4d80-8f8c-9c01af1bd6e6",
+    "song_id": "50000001-0000-0000-0000-000000000017",
+    "vocabulary_id": "781d47c0-00c6-421c-a681-ae63b8faac52",
+    "line_text": "Slip inside the eye of your mind",
+    "highlighted_word": "slip",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "d413b0e0-8a21-44b1-a5bc-8db764f7dde5",
+    "song_id": "50000001-0000-0000-0000-000000000025",
+    "vocabulary_id": "5ff6d8b9-1243-4d30-83eb-391e4a599b77",
+    "line_text": "Coming out of my cage and I've been doing just fine",
+    "highlighted_word": "come out",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "e1e7d855-e093-445a-8c0e-3e1ba02ec247",
+    "song_id": "50000001-0000-0000-0000-000000000025",
+    "vocabulary_id": "33609a8d-4253-4101-b876-7dbe66970aa7",
+    "line_text": "It started out with a kiss how did it end up like this",
+    "highlighted_word": "end up",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "e63a5674-da6d-445e-8007-04df97bac871",
+    "song_id": "50000001-0000-0000-0000-000000000001",
+    "vocabulary_id": "a87f937f-f984-4321-9bc3-197384ee0cc3",
+    "line_text": "When I find myself in times of trouble",
+    "highlighted_word": "find",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "e8908d6a-6444-44ec-b2c5-13ba2a6ba844",
+    "song_id": "50000001-0000-0000-0000-000000000024",
+    "vocabulary_id": "31e033b1-c845-4551-870d-6d68977775a2",
+    "line_text": "Will your mouth still remember the taste of my love",
+    "highlighted_word": "taste",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "f0934e33-8cc0-445e-ab6f-defb8bf8be85",
+    "song_id": "50000001-0000-0000-0000-000000000007",
+    "vocabulary_id": "04909ab6-e4c3-4896-ac9b-1613d9572d21",
+    "line_text": "Forever trusting who we are",
+    "highlighted_word": "trust",
+    "line_index": 2,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "f60fe78b-c45f-4fdc-9c5b-6eb970b76052",
+    "song_id": "50000001-0000-0000-0000-000000000027",
+    "vocabulary_id": "424307dd-024c-4d02-a8ce-7f911f4d150b",
+    "line_text": "Breaking my back just to know your name",
+    "highlighted_word": "break down",
+    "line_index": 0,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "f6165d78-60c7-467a-8f7a-afedfce14f17",
+    "song_id": "50000001-0000-0000-0000-000000000008",
+    "vocabulary_id": "9b334258-c24e-4553-ac46-ca8198dee725",
+    "line_text": "Don't forget my son",
+    "highlighted_word": "forget",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "fa5a9b5d-9cd2-416b-be06-8a94d05ce67f",
+    "song_id": "50000001-0000-0000-0000-000000000019",
+    "vocabulary_id": "75e3349c-b3db-4618-a937-981808817683",
+    "line_text": "Sometimes I feel like my only friend",
+    "highlighted_word": "feel",
+    "line_index": 1,
+    "created_at": "2026-03-23T16:41:49.946907+00:00"
+  }
+]

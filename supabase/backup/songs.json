@@ -1,0 +1,272 @@
+[
+  {
+    "id": "50000001-0000-0000-0000-000000000001",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "Let It Be",
+    "album": "Let It Be",
+    "year": 1970,
+    "lyrics_excerpt": "When I find myself in times of trouble\nMother Mary comes to me\nSpeaking words of wisdom\nLet it be",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000002",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "Come Together",
+    "album": "Abbey Road",
+    "year": 1969,
+    "lyrics_excerpt": "Here come old flat top\nHe come grooving up slowly\nHe got joo joo eyeball\nHe one holy roller",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000003",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "Yesterday",
+    "album": "Help!",
+    "year": 1965,
+    "lyrics_excerpt": "Yesterday all my troubles seemed so far away\nNow it looks as though they're here to stay\nOh I believe in yesterday",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000004",
+    "artist_id": "aa000001-0000-0000-0000-000000000002",
+    "title": "Smells Like Teen Spirit",
+    "album": "Nevermind",
+    "year": 1991,
+    "lyrics_excerpt": "Load up on guns, bring your friends\nIt's fun to lose and to pretend\nShe's over-bored and self-assured\nOh no, I know a dirty word",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000005",
+    "artist_id": "aa000001-0000-0000-0000-000000000002",
+    "title": "Come As You Are",
+    "album": "Nevermind",
+    "year": 1991,
+    "lyrics_excerpt": "Come as you are, as you were\nAs I want you to be\nAs a friend, as a friend\nAs an old enemy",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000006",
+    "artist_id": "aa000001-0000-0000-0000-000000000002",
+    "title": "In Bloom",
+    "album": "Nevermind",
+    "year": 1991,
+    "lyrics_excerpt": "Sell the kids for food\nWeather changes moods\nSpring is here again\nReproductive glands",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000007",
+    "artist_id": "aa000001-0000-0000-0000-000000000003",
+    "title": "Nothing Else Matters",
+    "album": "Metallica",
+    "year": 1991,
+    "lyrics_excerpt": "So close no matter how far\nCouldn't be much more from the heart\nForever trusting who we are\nAnd nothing else matters",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000008",
+    "artist_id": "aa000001-0000-0000-0000-000000000003",
+    "title": "Enter Sandman",
+    "album": "Metallica",
+    "year": 1991,
+    "lyrics_excerpt": "Say your prayers little one\nDon't forget my son\nTo include everyone\nI tuck you in, warm within",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000009",
+    "artist_id": "aa000001-0000-0000-0000-000000000003",
+    "title": "The Unforgiven",
+    "album": "Metallica",
+    "year": 1991,
+    "lyrics_excerpt": "New blood joins this earth\nAnd quickly he's subdued\nThrough constant pained disgrace\nThe young boy learns their rules",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000010",
+    "artist_id": "aa000001-0000-0000-0000-000000000004",
+    "title": "The Scientist",
+    "album": "A Rush of Blood to the Head",
+    "year": 2002,
+    "lyrics_excerpt": "Come up to meet you, tell you I'm sorry\nYou don't know how lovely you are\nI had to find you, tell you I need you\nTell you I set you apart",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000011",
+    "artist_id": "aa000001-0000-0000-0000-000000000004",
+    "title": "Fix You",
+    "album": "X&Y",
+    "year": 2005,
+    "lyrics_excerpt": "When you try your best but you don't succeed\nWhen you get what you want but not what you need\nWhen you feel so tired but you can't sleep\nStuck in reverse",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000012",
+    "artist_id": "aa000001-0000-0000-0000-000000000004",
+    "title": "Viva la Vida",
+    "album": "Viva la Vida",
+    "year": 2008,
+    "lyrics_excerpt": "I used to rule the world\nSeas would rise when I gave the word\nNow in the morning I sleep alone\nSweep the streets I used to own",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000013",
+    "artist_id": "aa000001-0000-0000-0000-000000000005",
+    "title": "In the End",
+    "album": "Hybrid Theory",
+    "year": 2000,
+    "lyrics_excerpt": "I tried so hard and got so far\nBut in the end it doesn't even matter\nI had to fall to lose it all\nBut in the end it doesn't even matter",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000014",
+    "artist_id": "aa000001-0000-0000-0000-000000000005",
+    "title": "Numb",
+    "album": "Meteora",
+    "year": 2003,
+    "lyrics_excerpt": "I've become so numb I can't feel you there\nBecome so tired so much more aware\nI'm becoming this all I want to do\nIs be more like me and be less like you",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000015",
+    "artist_id": "aa000001-0000-0000-0000-000000000005",
+    "title": "Crawling",
+    "album": "Hybrid Theory",
+    "year": 2000,
+    "lyrics_excerpt": "Crawling in my skin\nThese wounds they will not heal\nFear is how I fall\nConfusing what is real",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000016",
+    "artist_id": "aa000001-0000-0000-0000-000000000006",
+    "title": "Wonderwall",
+    "album": "(What's the Story) Morning Glory?",
+    "year": 1995,
+    "lyrics_excerpt": "Today is gonna be the day\nThat they're gonna throw it back to you\nBy now you should've somehow\nRealized what you gotta do",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000017",
+    "artist_id": "aa000001-0000-0000-0000-000000000006",
+    "title": "Don't Look Back in Anger",
+    "album": "(What's the Story) Morning Glory?",
+    "year": 1995,
+    "lyrics_excerpt": "Slip inside the eye of your mind\nDon't you know you might find\nA better place to play\nYou said that you'd never been",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000018",
+    "artist_id": "aa000001-0000-0000-0000-000000000006",
+    "title": "Live Forever",
+    "album": "Definitely Maybe",
+    "year": 1994,
+    "lyrics_excerpt": "Maybe I don't really want to know\nHow your garden grows\nI just want to fly\nLately did you ever feel the pain",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000019",
+    "artist_id": "aa000001-0000-0000-0000-000000000007",
+    "title": "Under the Bridge",
+    "album": "Blood Sugar Sex Magik",
+    "year": 1991,
+    "lyrics_excerpt": "Sometimes I feel like I don't have a partner\nSometimes I feel like my only friend\nIs the city I live in, the city of angels\nLonely as I am, together we cry",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000020",
+    "artist_id": "aa000001-0000-0000-0000-000000000007",
+    "title": "Californication",
+    "album": "Californication",
+    "year": 1999,
+    "lyrics_excerpt": "Dream of Californication\nDream of Californication\nSpace may be the final frontier\nBut it's made in a Hollywood basement",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000021",
+    "artist_id": "aa000001-0000-0000-0000-000000000007",
+    "title": "Can't Stop",
+    "album": "By the Way",
+    "year": 2002,
+    "lyrics_excerpt": "Can't stop addicted to the shindig\nChop top he says I'm gonna win big\nChoose not a life of imitation\nDistant cousin to the reservation",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000022",
+    "artist_id": "aa000001-0000-0000-0000-000000000008",
+    "title": "Shape of You",
+    "album": "÷ (Divide)",
+    "year": 2017,
+    "lyrics_excerpt": "I'm in love with the shape of you\nWe push and pull like a magnet do\nAlthough my heart is falling too\nI'm in love with your body",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000023",
+    "artist_id": "aa000001-0000-0000-0000-000000000008",
+    "title": "Perfect",
+    "album": "÷ (Divide)",
+    "year": 2017,
+    "lyrics_excerpt": "I found a love for me\nDarling just dive right in and follow my lead\nWell I found a girl beautiful and sweet\nOh I never knew you were the someone waiting for me",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000024",
+    "artist_id": "aa000001-0000-0000-0000-000000000008",
+    "title": "Thinking Out Loud",
+    "album": "x (Multiply)",
+    "year": 2014,
+    "lyrics_excerpt": "When your legs don't work like they used to before\nAnd I can't sweep you off of your feet\nWill your mouth still remember the taste of my love\nWill your eyes still smile from your cheeks",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000025",
+    "artist_id": "aa000001-0000-0000-0000-000000000009",
+    "title": "Mr. Brightside",
+    "album": "Hot Fuss",
+    "year": 2004,
+    "lyrics_excerpt": "Coming out of my cage and I've been doing just fine\nGotta gotta be down because I want it all\nIt started out with a kiss how did it end up like this\nIt was only a kiss, it was only a kiss",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000026",
+    "artist_id": "aa000001-0000-0000-0000-000000000009",
+    "title": "Human",
+    "album": "Day & Age",
+    "year": 2008,
+    "lyrics_excerpt": "Are we human or are we dancer\nMy sign is vital, my hands are cold\nAnd I'm on my knees looking for the answer\nAre we human or are we dancer",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "50000001-0000-0000-0000-000000000027",
+    "artist_id": "aa000001-0000-0000-0000-000000000009",
+    "title": "Somebody Told Me",
+    "album": "Hot Fuss",
+    "year": 2004,
+    "lyrics_excerpt": "Breaking my back just to know your name\nSeventeen tracks and I've had it with this game\nI'm breaking my back just to know your name\nBut heaven ain't close in a place like this",
+    "created_at": "2026-03-23T16:41:49.946907+00:00",
+    "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  }
+]
