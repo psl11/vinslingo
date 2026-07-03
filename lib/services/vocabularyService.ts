@@ -24,18 +24,32 @@ export interface SupabaseVocabulary {
 
 export async function syncVocabularyFromSupabase(): Promise<number> {
   try {
-    // Fetch todo el vocabulario de Supabase (sin filtro incremental)
-    const { data, error } = await supabase
-      .from('vocabulary')
-      .select('*')
-      .order('frequency_rank', { ascending: true });
-    
-    if (error) {
-      console.error('Error fetching vocabulary:', error);
-      throw error;
+    // Fetch todo el vocabulario de Supabase (sin filtro incremental).
+    // PostgREST limita cada respuesta a 1000 filas, así que hay que paginar
+    // con .range() o solo llegarían las primeras 1000 palabras de ~3250.
+    const PAGE_SIZE = 1000;
+    const data: SupabaseVocabulary[] = [];
+    let from = 0;
+
+    while (true) {
+      const { data: page, error } = await supabase
+        .from('vocabulary')
+        .select('*')
+        .order('id', { ascending: true })
+        .range(from, from + PAGE_SIZE - 1);
+
+      if (error) {
+        console.error('Error fetching vocabulary:', error);
+        throw error;
+      }
+      if (!page || page.length === 0) break;
+
+      data.push(...page);
+      if (page.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
     }
-    
-    if (!data || data.length === 0) {
+
+    if (data.length === 0) {
       return 0;
     }
     

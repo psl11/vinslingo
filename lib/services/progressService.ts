@@ -338,11 +338,14 @@ export async function saveStudySession(
     if (error) throw error;
     console.log('☁️ Study session saved to Supabase');
 
+    // Update streak BEFORE addUserXp: updateStreak usa profiles.updated_at como
+    // proxy de "último día de estudio", y addUserXp también escribe updated_at.
+    // Si addUserXp corre primero, updateStreak siempre ve "ya estudió hoy" y la
+    // racha nunca incrementa (mismo bug que se arregló en useUserStore local).
+    await updateStreak();
+
     // Update user's total XP
     await addUserXp(xpEarned);
-    
-    // Update streak
-    await updateStreak();
   } catch (error) {
     console.error('❌ Error saving study session, queuing for later:', error);
     // Queue for later sync

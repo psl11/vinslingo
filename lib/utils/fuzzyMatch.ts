@@ -37,8 +37,8 @@ function normalize(text: string): string {
     .replace(/['']/g, "'"); // normalize quotes
 }
 
-// Compare user input against the correct answer
-// For multi-word answers (e.g. "make a decision"), also accepts without articles
+// Compare user input against the correct answer using Levenshtein distance,
+// accepting alternatives separated by "/" and ignoring parenthetical notes.
 export function matchAnswer(input: string, correctAnswer: string): MatchInfo {
   const normalizedInput = normalize(input);
   

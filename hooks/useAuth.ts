@@ -134,8 +134,10 @@ export function useAuth(): AuthState & AuthActions {
       });
 
       if (!error && data.user) {
-        // Create profile in profiles table
-        await supabase.from('profiles').insert({
+        // Create profile in profiles table. Si esto falla (p.ej. RLS con
+        // confirmación de email pendiente), el usuario queda sin fila en
+        // profiles y las actualizaciones de XP/racha fallarían en silencio.
+        const { error: profileError } = await supabase.from('profiles').insert({
           id: data.user.id,
           display_name: displayName,
           native_language: 'es',
@@ -146,6 +148,9 @@ export function useAuth(): AuthState & AuthActions {
           total_xp: 0,
           cefr_level: 'A1',
         });
+        if (profileError) {
+          console.error('❌ Error creating profile on sign-up:', profileError);
+        }
       }
 
       return { error: error as Error | null };

@@ -1,6 +1,6 @@
 import { supabase } from '../supabase';
 import { runQuery, runStatement } from '../database/client';
-import { getPendingSyncItems, markAsSynced } from '../database/queries';
+import { getPendingSyncItems } from '../database/queries';
 
 export interface SyncResult {
   uploaded: number;
@@ -83,37 +83,35 @@ export async function syncUserProgress(): Promise<SyncResult> {
     }
 
     // 2. Download user progress from Supabase
-    if (user) {
-      // Fetch user's vocabulary progress
-      const { data: userVocab, error } = await supabase
-        .from('user_vocabulary')
-        .select('*')
-        .eq('user_id', user.id);
-      
-      if (!error && userVocab) {
-        for (const item of userVocab) {
-          await runStatement(
-            `INSERT OR REPLACE INTO user_vocabulary (
-              id, vocabulary_id, ease_factor, interval_days, repetitions,
-              next_review_at, last_reviewed_at, times_correct, times_incorrect,
-              mastery_level, updated_at, needs_sync
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`,
-            [
-              item.id,
-              item.vocabulary_id,
-              item.ease_factor,
-              item.interval_days,
-              item.repetitions,
-              item.next_review_at ? new Date(item.next_review_at).getTime() : null,
-              item.last_reviewed_at ? new Date(item.last_reviewed_at).getTime() : null,
-              item.times_correct,
-              item.times_incorrect,
-              item.mastery_level,
-              Date.now(),
-            ]
-          );
-          result.downloaded++;
-        }
+    // Fetch user's vocabulary progress
+    const { data: userVocab, error } = await supabase
+      .from('user_vocabulary')
+      .select('*')
+      .eq('user_id', user.id);
+
+    if (!error && userVocab) {
+      for (const item of userVocab) {
+        await runStatement(
+          `INSERT OR REPLACE INTO user_vocabulary (
+            id, vocabulary_id, ease_factor, interval_days, repetitions,
+            next_review_at, last_reviewed_at, times_correct, times_incorrect,
+            mastery_level, updated_at, needs_sync
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`,
+          [
+            item.id,
+            item.vocabulary_id,
+            item.ease_factor,
+            item.interval_days,
+            item.repetitions,
+            item.next_review_at ? new Date(item.next_review_at).getTime() : null,
+            item.last_reviewed_at ? new Date(item.last_reviewed_at).getTime() : null,
+            item.times_correct,
+            item.times_incorrect,
+            item.mastery_level,
+            Date.now(),
+          ]
+        );
+        result.downloaded++;
       }
     }
 
