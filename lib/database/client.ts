@@ -127,6 +127,12 @@ async function runMigrations(): Promise<void> {
   }
 }
 
+// Incrementar cada vez que se corrija o añada contenido en los ficheros
+// *Seed.ts para que los dispositivos ya instalados re-siembren los ejercicios.
+// (Con el mecanismo anterior de INSERT OR IGNORE + check de recuento, las
+// correcciones de contenido nunca llegaban a instalaciones existentes.)
+const SEED_VERSION = 2;
+
 async function seedGapFillExercises(): Promise<void> {
   if (!db) return;
   try {
@@ -139,14 +145,23 @@ async function seedGapFillExercises(): Promise<void> {
       ...OFFICIAL_CAMBRIDGE_EXERCISES,
     ];
 
+    const versionRow = await db.getFirstAsync<{ value: string }>(
+      "SELECT value FROM sync_metadata WHERE key = 'gap_fill_seed_version'"
+    );
+    const currentVersion = versionRow ? parseInt(versionRow.value, 10) : 0;
+
     const count = await db.getFirstAsync<{ count: number }>(
       'SELECT COUNT(*) as count FROM gap_fill_exercises'
     );
-    if (count && count.count >= allExercises.length) return;
-    
+    const upToDate =
+      currentVersion >= SEED_VERSION && count && count.count >= allExercises.length;
+    if (upToDate) return;
+
+    // INSERT OR REPLACE: refresca el contenido de ejercicios existentes
+    // (el progreso del usuario vive en user_gap_fill, no se toca).
     for (const item of allExercises) {
       await db.runAsync(
-        `INSERT OR IGNORE INTO gap_fill_exercises 
+        `INSERT OR REPLACE INTO gap_fill_exercises
          (id, sentence, answer, options, explanation, explanation_es, cefr_level, category, difficulty, source, base_word, context_sentence, is_official, answer_es)
          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'cambridge', ?, ?, ?, ?)`,
         [
@@ -160,7 +175,12 @@ async function seedGapFillExercises(): Promise<void> {
         ]
       );
     }
-    console.log(`✅ Seeded ${allExercises.length} exercises`);
+
+    await db.runAsync(
+      `INSERT OR REPLACE INTO sync_metadata (key, value, updated_at) VALUES ('gap_fill_seed_version', ?, ?)`,
+      [String(SEED_VERSION), Date.now()]
+    );
+    console.log(`✅ Seeded ${allExercises.length} exercises (seed v${SEED_VERSION})`);
   } catch (error) {
     console.log('Gap-fill seed error:', error);
   }

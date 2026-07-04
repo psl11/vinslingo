@@ -39,18 +39,22 @@ export async function syncUserProgress(): Promise<SyncResult> {
             .insert({ ...payload, user_id: user.id });
           if (error) throw error;
         } else if (item.table_name === 'profiles' && payload.xp_delta) {
-          // Handle queued XP updates
-          const { data: profile } = await supabase
-            .from('profiles')
-            .select('total_xp')
-            .eq('id', user.id)
-            .single();
-          const currentXp = profile?.total_xp || 0;
-          const { error } = await supabase
-            .from('profiles')
-            .update({ total_xp: currentXp + payload.xp_delta, updated_at: new Date().toISOString() })
-            .eq('id', user.id);
-          if (error) throw error;
+          // Handle queued XP updates: RPC atómico con fallback leer-luego-escribir
+          // (ver supabase/migrations/001_increment_xp.sql)
+          const { error: rpcError } = await supabase.rpc('increment_xp', { amount: payload.xp_delta });
+          if (rpcError) {
+            const { data: profile } = await supabase
+              .from('profiles')
+              .select('total_xp')
+              .eq('id', user.id)
+              .single();
+            const currentXp = profile?.total_xp || 0;
+            const { error } = await supabase
+              .from('profiles')
+              .update({ total_xp: currentXp + payload.xp_delta, updated_at: new Date().toISOString() })
+              .eq('id', user.id);
+            if (error) throw error;
+          }
         } else if (item.action === 'INSERT' || item.action === 'UPDATE') {
           const { error } = await supabase
             .from(item.table_name)

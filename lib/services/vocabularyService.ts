@@ -55,8 +55,9 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
     
     // Insertar/actualizar en SQLite
     const db = await getDatabase();
+    const syncStartedAt = Date.now();
     let insertedCount = 0;
-    
+
     for (const item of data) {
       await db.runAsync(
         `INSERT OR REPLACE INTO vocabulary (
@@ -90,7 +91,19 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
       );
       insertedCount++;
     }
-    
+
+    // Purgar filas que ya no existen en el servidor (p.ej. duplicados
+    // eliminados): todo lo recién sincronizado tiene updated_at >= inicio
+    // del sync, así que lo anterior es contenido obsoleto. También se
+    // limpia el progreso huérfano que apunte a vocabulario borrado.
+    await db.runAsync(
+      'DELETE FROM vocabulary WHERE updated_at IS NULL OR updated_at < ?',
+      [syncStartedAt]
+    );
+    await db.runAsync(
+      'DELETE FROM user_vocabulary WHERE vocabulary_id NOT IN (SELECT id FROM vocabulary)'
+    );
+
     console.log(`✅ Synced ${insertedCount} vocabulary items`);
     return insertedCount;
   } catch (error) {

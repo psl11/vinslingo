@@ -119,7 +119,15 @@ export async function addUserXp(xpAmount: number): Promise<void> {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
 
-    // Get current XP
+    // Intento 1: RPC atómico (ver supabase/migrations/001_increment_xp.sql).
+    // Evita la carrera del patrón leer-luego-escribir si hay dos sesiones a la vez.
+    const { error: rpcError } = await supabase.rpc('increment_xp', { amount: xpAmount });
+    if (!rpcError) {
+      console.log(`☁️ Updated XP atomically (+${xpAmount})`);
+      return;
+    }
+
+    // Fallback si el RPC no está desplegado aún: leer-luego-escribir.
     const { data: profile } = await supabase
       .from('profiles')
       .select('total_xp')
@@ -132,7 +140,7 @@ export async function addUserXp(xpAmount: number): Promise<void> {
     // Update XP
     const { error } = await supabase
       .from('profiles')
-      .update({ 
+      .update({
         total_xp: newXp,
         updated_at: new Date().toISOString(),
       })
@@ -253,7 +261,10 @@ async function getUserProgressFromLocal(): Promise<UserProgress> {
   };
 }
 
-// Update user streak when they study
+// Update user streak when they study.
+// El último día de estudio se deriva de study_sessions (fuente fiable) en vez
+// de profiles.updated_at, que cualquier otra actualización del perfil pisa.
+// Debe llamarse DESPUÉS de insertar la sesión de estudio actual.
 export async function updateStreak(): Promise<void> {
   try {
     const { data: { user } } = await supabase.auth.getUser();
@@ -262,35 +273,44 @@ export async function updateStreak(): Promise<void> {
     // Get current profile
     const { data: profile } = await supabase
       .from('profiles')
-      .select('current_streak, longest_streak, updated_at')
+      .select('current_streak, longest_streak')
       .eq('id', user.id)
       .single();
 
     if (!profile) return;
 
-    const now = new Date();
-    const today = new Date(now);
+    const today = new Date();
     today.setHours(0, 0, 0, 0);
-    
+
     const yesterday = new Date(today);
     yesterday.setDate(yesterday.getDate() - 1);
-    
-    const lastUpdate = profile.updated_at ? new Date(profile.updated_at) : null;
-    const lastUpdateDay = lastUpdate ? new Date(lastUpdate) : null;
-    if (lastUpdateDay) lastUpdateDay.setHours(0, 0, 0, 0);
 
-    let newStreak = profile.current_streak;
-    
-    if (!lastUpdateDay || lastUpdateDay < yesterday) {
-      // More than 1 day since last study - reset streak
-      newStreak = 1;
-    } else if (lastUpdateDay.getTime() === yesterday.getTime()) {
-      // Studied yesterday - increment streak
-      newStreak = profile.current_streak + 1;
-    } else if (lastUpdateDay.getTime() === today.getTime()) {
-      // Already studied today - keep streak
+    // ¿Cuántas sesiones lleva hoy? (la actual ya está insertada)
+    const { count: sessionsToday } = await supabase
+      .from('study_sessions')
+      .select('*', { count: 'exact', head: true })
+      .eq('user_id', user.id)
+      .gte('ended_at', today.toISOString());
+
+    // Última sesión ANTES de hoy
+    const { data: lastBefore } = await supabase
+      .from('study_sessions')
+      .select('ended_at')
+      .eq('user_id', user.id)
+      .lt('ended_at', today.toISOString())
+      .order('ended_at', { ascending: false })
+      .limit(1);
+
+    let newStreak: number;
+
+    if ((sessionsToday ?? 0) > 1) {
+      // Ya había estudiado hoy - mantener racha
       newStreak = Math.max(1, profile.current_streak);
+    } else if (lastBefore?.[0] && new Date(lastBefore[0].ended_at) >= yesterday) {
+      // Estudió ayer - incrementar racha
+      newStreak = profile.current_streak + 1;
     } else {
+      // Primera sesión, o más de un día sin estudiar - racha empieza en 1
       newStreak = 1;
     }
 
@@ -301,7 +321,7 @@ export async function updateStreak(): Promise<void> {
       .update({
         current_streak: newStreak,
         longest_streak: newLongest,
-        updated_at: now.toISOString(),
+        updated_at: new Date().toISOString(),
       })
       .eq('id', user.id);
 
@@ -338,10 +358,8 @@ export async function saveStudySession(
     if (error) throw error;
     console.log('☁️ Study session saved to Supabase');
 
-    // Update streak BEFORE addUserXp: updateStreak usa profiles.updated_at como
-    // proxy de "último día de estudio", y addUserXp también escribe updated_at.
-    // Si addUserXp corre primero, updateStreak siempre ve "ya estudió hoy" y la
-    // racha nunca incrementa (mismo bug que se arregló en useUserStore local).
+    // updateStreak debe correr después del insert de la sesión (cuenta las
+    // sesiones de hoy, incluida la actual, para decidir si incrementa).
     await updateStreak();
 
     // Update user's total XP

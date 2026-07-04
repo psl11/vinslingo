@@ -37,20 +37,28 @@ export function useAuth(): AuthState & AuthActions {
       }
     });
 
-    // Listen for auth changes
+    // Listen for auth changes.
+    // OJO: no hacer llamadas a supabase con await directamente dentro del
+    // callback — el cliente mantiene un lock interno mientras se ejecuta y
+    // puede provocar deadlock (limitación documentada de supabase-js v2).
+    // Por eso el trabajo async se difiere con setTimeout(0).
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
+      (event, session) => {
         console.log('🔐 Auth event:', event);
         setSession(session);
         setUser(session?.user ?? null);
-        
+
         if (event === 'SIGNED_IN' && session?.user) {
-          await loadUserProfile(session.user.id);
+          const userId = session.user.id;
+          setTimeout(() => {
+            loadUserProfile(userId);
+          }, 0);
         } else if (event === 'SIGNED_OUT') {
           clearProfile();
+          setIsLoading(false);
+        } else {
+          setIsLoading(false);
         }
-        
-        setIsLoading(false);
       }
     );
 
