@@ -49,7 +49,10 @@ export function calculateSM2(
   } else {
     // Respuesta correcta
     if (repetitions === 0) {
-      interval = 1;
+      // "Fácil" en tarjeta nueva salta a 4 días (variante estilo Anki);
+      // sin esto, los 4 botones de respuesta muestran el mismo "1d" y la
+      // elección parece no tener efecto.
+      interval = quality === 5 ? 4 : 1;
     } else if (repetitions === 1) {
       interval = 6;
     } else {

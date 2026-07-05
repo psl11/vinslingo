@@ -22,18 +22,22 @@ export default function ProfileScreen() {
   const router = useRouter();
   const { profile, getCurrentLevel, setProfile } = useUserStore();
   const { user, signOut } = useAuth();
-  const { 
-    dailyGoalMinutes, 
-    notificationsEnabled, 
-    soundEnabled, 
+  const {
+    dailyGoalMinutes,
+    soundEnabled,
     hapticsEnabled,
-    themeMode,
     selectedCEFRLevels,
-    toggleNotifications,
+    setDailyGoal,
     toggleSound,
     toggleHaptics,
     toggleCEFRLevel,
   } = useSettingsStore();
+
+  const DAILY_GOAL_OPTIONS = [5, 10, 15, 20, 30];
+  const cycleDailyGoal = () => {
+    const idx = DAILY_GOAL_OPTIONS.indexOf(dailyGoalMinutes);
+    setDailyGoal(DAILY_GOAL_OPTIONS[(idx + 1) % DAILY_GOAL_OPTIONS.length]);
+  };
 
   const [progress, setProgress] = useState<UserProgress | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -157,16 +161,9 @@ export default function ProfileScreen() {
       <Card style={styles.settingsCard}>
         <Text style={styles.sectionTitle}>Configuración</Text>
         
-        <View style={styles.settingRow}>
+        <Pressable style={styles.settingRow} onPress={cycleDailyGoal}>
           <Text style={styles.settingLabel}>Meta diaria</Text>
-          <Text style={styles.settingValue}>{dailyGoalMinutes} min</Text>
-        </View>
-
-        <Pressable style={styles.settingRow} onPress={toggleNotifications}>
-          <Text style={styles.settingLabel}>Notificaciones</Text>
-          <Text style={styles.settingToggle}>
-            {notificationsEnabled ? '✅' : '❌'}
-          </Text>
+          <Text style={styles.settingValue}>{dailyGoalMinutes} min ›</Text>
         </Pressable>
 
         <Pressable style={styles.settingRow} onPress={toggleSound}>
@@ -182,14 +179,6 @@ export default function ProfileScreen() {
             {hapticsEnabled ? '📳' : '📴'}
           </Text>
         </Pressable>
-
-        <View style={styles.settingRow}>
-          <Text style={styles.settingLabel}>Tema</Text>
-          <Text style={styles.settingValue}>
-            {themeMode === 'light' ? '☀️ Claro' : 
-             themeMode === 'dark' ? '🌙 Oscuro' : '⚙️ Sistema'}
-          </Text>
-        </View>
 
         <View style={[styles.settingRow, styles.lastRow, { flexDirection: 'column', alignItems: 'flex-start' }]}>
           <Text style={[styles.settingLabel, { marginBottom: 12 }]}>📊 Niveles de vocabulario</Text>
@@ -213,7 +202,8 @@ export default function ProfileScreen() {
             ))}
           </View>
           <Text style={styles.cefrHint}>
-            Solo verás palabras de los niveles seleccionados
+            Solo verás palabras y ejercicios de los niveles seleccionados
+            (el vocabulario llega hasta B2; C1 aplica a ejercicios Cambridge)
           </Text>
         </View>
       </Card>

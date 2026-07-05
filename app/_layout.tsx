@@ -34,18 +34,26 @@ export default function RootLayout() {
         const isConnected = !!(networkState.isConnected && networkState.isInternetReachable);
         setOnlineStatus(isConnected);
         
-        if (isConnected) {
-          // Siempre sincronizar cuando hay conexión
-          setInitStatus(localCount === 0 ? 'Descargando vocabulario...' : 'Actualizando vocabulario...');
+        if (isConnected && localCount === 0) {
+          // Primera descarga: sin datos locales no hay app, hay que esperar
+          setInitStatus('Descargando vocabulario...');
           await syncVocabularyFromSupabase();
-          
-          // Also sync any pending offline changes
-          const pendingItems = await getPendingSyncItems();
-          if (pendingItems.length > 0) {
-            setInitStatus('Sincronizando cambios pendientes...');
-            await syncUserProgress();
-            console.log(`📤 Synced ${pendingItems.length} pending offline changes`);
-          }
+        } else if (isConnected) {
+          // Ya hay datos locales: arrancar al instante y sincronizar en
+          // segundo plano (antes se bloqueaba la UI en cada arranque en
+          // frío re-descargando todo el vocabulario).
+          (async () => {
+            try {
+              await syncVocabularyFromSupabase();
+              const pendingItems = await getPendingSyncItems();
+              if (pendingItems.length > 0) {
+                await syncUserProgress();
+                console.log(`📤 Synced ${pendingItems.length} pending offline changes`);
+              }
+            } catch (err) {
+              console.error('Background sync error:', err);
+            }
+          })();
         } else if (localCount === 0) {
           // Sin conexión y sin datos locales
           setInitStatus('Sin conexión. Necesitas internet para la primera descarga.');

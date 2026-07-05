@@ -44,7 +44,7 @@ export default function LearnScreen() {
       description: 'Palabras más frecuentes del inglés',
       totalWords: stats?.byCategory.find(c => c.category === 'ngsl')?.count ?? 0,
       completedWords: stats?.learnedByCategory?.find(c => c.category === 'ngsl')?.count ?? 0,
-      cefrLevel: 'A1-B2',
+      cefrLevel: 'A1-B1',
     },
     {
       id: 'phave',
@@ -53,7 +53,7 @@ export default function LearnScreen() {
       description: 'Verbos compuestos esenciales',
       totalWords: stats?.byCategory.find(c => c.category === 'phave')?.count ?? 0,
       completedWords: stats?.learnedByCategory?.find(c => c.category === 'phave')?.count ?? 0,
-      cefrLevel: 'B1-B2',
+      cefrLevel: 'A1-B2',
     },
     {
       id: 'idiom',
@@ -62,7 +62,7 @@ export default function LearnScreen() {
       description: 'Expresiones idiomáticas más usadas',
       totalWords: stats?.byCategory.find(c => c.category === 'idiom')?.count ?? 0,
       completedWords: stats?.learnedByCategory?.find(c => c.category === 'idiom')?.count ?? 0,
-      cefrLevel: 'B1-C1',
+      cefrLevel: 'B1-B2',
     },
     {
       id: 'connector',
@@ -89,7 +89,7 @@ export default function LearnScreen() {
       description: 'Frases cotidianas imprescindibles',
       totalWords: stats?.byCategory.find(c => c.category === 'expression')?.count ?? 0,
       completedWords: stats?.learnedByCategory?.find(c => c.category === 'expression')?.count ?? 0,
-      cefrLevel: 'A1-B2',
+      cefrLevel: 'A1-B1',
     },
     {
       id: 'confusing_pair',
@@ -98,7 +98,7 @@ export default function LearnScreen() {
       description: 'Pares de palabras que se confunden',
       totalWords: stats?.byCategory.find(c => c.category === 'confusing_pair')?.count ?? 0,
       completedWords: stats?.learnedByCategory?.find(c => c.category === 'confusing_pair')?.count ?? 0,
-      cefrLevel: 'A1-B2',
+      cefrLevel: 'A1-B1',
     },
     {
       id: 'collocation',
@@ -253,9 +253,9 @@ export default function LearnScreen() {
           <View style={styles.categoryHeader}>
             <Text style={styles.categoryEmoji}>🔗</Text>
             <View style={styles.categoryInfo}>
-              <Text style={styles.categoryTitle}>Connectors</Text>
+              <Text style={styles.categoryTitle}>Multiple Choice</Text>
               <Text style={styles.categoryDescription}>
-                Completa frases con el conector correcto
+                Conectores y vocabulario (Part 1)
               </Text>
             </View>
             <View style={styles.levelBadge}>
