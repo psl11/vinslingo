@@ -24,7 +24,10 @@ const supabase = createClient(url, key);
 
 // Tablas de contenido público (curado editorialmente). NO incluir aquí
 // ninguna tabla con datos de usuario (profiles, study_sessions, user_*).
-const CONTENT_TABLES = ['vocabulary', 'songs', 'song_vocabulary', 'artists'] as const;
+const CONTENT_TABLES = [
+  'vocabulary', 'songs', 'song_vocabulary', 'artists',
+  'authors', 'quotes', 'quote_vocabulary',
+] as const;
 
 const OUTPUT_DIR = path.join(__dirname, '..', 'supabase', 'backup');
 const PAGE_SIZE = 1000;

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "8ec330f6-5243-4346-8df6-89103cb4604a",
+    "name": "Anónimo (proverbio tradicional)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T19:33:17.791184+00:00"
+  },
+  {
+    "id": "ec94c906-8ec1-45ca-aeed-f19c8af10ffe",
+    "name": "Geoffrey Chaucer",
+    "birth_year": null,
+    "death_year": 1400,
+    "created_at": "2026-07-05T19:33:17.537426+00:00"
+  }
+]

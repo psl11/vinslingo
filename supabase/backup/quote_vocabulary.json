@@ -1,0 +1,30 @@
+[
+  {
+    "id": "6f2afc4b-3dc0-4da1-a079-48ef23cde171",
+    "quote_id": "ee08be7e-856b-4564-b0ed-7a88ed7da246",
+    "vocabulary_id": "c1b27946-4af4-434f-a18f-09db7f13c70a",
+    "highlighted_word": "kill two birds with one stone",
+    "created_at": "2026-07-05T19:33:18.844372+00:00"
+  },
+  {
+    "id": "7bfce280-9faa-4715-85b7-1bb44f59613e",
+    "quote_id": "84eaca88-2ec8-46d3-b1bd-d0261286c2f5",
+    "vocabulary_id": "eddf0bb0-78e6-4b94-be08-82525e5e915b",
+    "highlighted_word": "better late than never",
+    "created_at": "2026-07-05T19:33:19.161826+00:00"
+  },
+  {
+    "id": "de1a4d8d-fb6b-4390-a173-89cb90eac3bf",
+    "quote_id": "42f52f69-5722-420d-8968-4f569b2c0d25",
+    "vocabulary_id": "f703577c-fe87-4e0f-8efc-de2865bc7ba3",
+    "highlighted_word": "speak of the devil",
+    "created_at": "2026-07-05T19:33:19.462708+00:00"
+  },
+  {
+    "id": "f8382ebc-f148-49a5-8d89-fc079153db66",
+    "quote_id": "30d42029-1312-43bc-9b58-e3019d9e613a",
+    "vocabulary_id": "31cab399-db59-4f54-8cc1-64f3bb057c58",
+    "highlighted_word": "let sleeping dogs lie",
+    "created_at": "2026-07-05T19:33:18.322123+00:00"
+  }
+]
