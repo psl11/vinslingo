@@ -1,5 +1,6 @@
 import { Tabs } from 'expo-router';
 import { View, Text, StyleSheet } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 function TabIcon({ name, focused }: { name: string; focused: boolean }) {
   const icons: Record<string, string> = {
@@ -19,11 +20,16 @@ function TabIcon({ name, focused }: { name: string; focused: boolean }) {
 }
 
 export default function TabLayout() {
+  const insets = useSafeAreaInsets();
+
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarStyle: styles.tabBar,
+        // Altura fija + inset real del dispositivo: con los valores
+        // hardcodeados (85/28) las etiquetas se recortaban en dispositivos
+        // sin home indicator (Android, web).
+        tabBarStyle: [styles.tabBar, { height: 57 + insets.bottom, paddingBottom: insets.bottom }],
         tabBarActiveTintColor: '#4F46E5',
         tabBarInactiveTintColor: '#9CA3AF',
         tabBarLabelStyle: styles.tabLabel,
@@ -66,9 +72,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderTopWidth: 1,
     borderTopColor: '#F3F4F6',
-    height: 85,
     paddingTop: 8,
-    paddingBottom: 28,
   },
   tabLabel: {
     fontSize: 12,
