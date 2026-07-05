@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T19:34:03.314Z",
+  "generated_at": "2026-07-05T19:44:13.139Z",
   "supabase_url": "https://qsdzoelgqyymtwublxoq.supabase.co",
   "tables": {
     "vocabulary": 2684,
@@ -7,7 +7,7 @@
     "song_vocabulary": 322,
     "artists": 244,
     "authors": 2,
-    "quotes": 4,
-    "quote_vocabulary": 4
+    "quotes": 6,
+    "quote_vocabulary": 6
   }
 }
