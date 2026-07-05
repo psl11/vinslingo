@@ -34,7 +34,7 @@ function normalize(text: string): string {
     .toLowerCase()
     .trim()
     .replace(/\s+/g, ' ')
-    .replace(/['']/g, "'"); // normalize quotes
+    .replace(/[‘’ʼ]/g, "'"); // normaliza comillas curvas (p.ej. iOS autocorrige ' -> ’) al apóstrofo recto
 }
 
 // Compare user input against the correct answer using Levenshtein distance,

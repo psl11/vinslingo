@@ -1,5 +1,8 @@
 import { runQuery, runStatement, getOne, withTransaction } from './client';
 import { generateUUID } from '../utils/uuid';
+import { calculateMasteryLevel } from '../services/progressLogic';
+
+export { calculateMasteryLevel };
 
 // ============================================
 // VOCABULARY QUERIES
@@ -173,14 +176,6 @@ export async function updateUserVocabularyAfterReview(
       ]
     );
   }
-}
-
-function calculateMasteryLevel(repetitions: number, interval: number): number {
-  // 0 = new, 1 = learning, 2 = reviewing, 3 = mastered
-  if (repetitions === 0) return 0;
-  if (interval < 7) return 1;
-  if (interval < 30) return 2;
-  return 3;
 }
 
 // ============================================

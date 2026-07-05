@@ -2,6 +2,10 @@ import { supabase } from '../supabase';
 import { runQuery, runStatement } from '../database/client';
 import { getStudyStats, StudyStats, addToSyncQueue } from '../database/queries';
 import * as Network from 'expo-network';
+import { computeStreakUpdate, calculateMasteryLevel } from './progressLogic';
+
+export { computeStreakUpdate, calculateMasteryLevel };
+export type { StreakUpdateInput, StreakUpdateResult } from './progressLogic';
 
 async function isOnline(): Promise<boolean> {
   try {
@@ -279,11 +283,9 @@ export async function updateStreak(): Promise<void> {
 
     if (!profile) return;
 
-    const today = new Date();
+    const now = new Date();
+    const today = new Date(now);
     today.setHours(0, 0, 0, 0);
-
-    const yesterday = new Date(today);
-    yesterday.setDate(yesterday.getDate() - 1);
 
     // ¿Cuántas sesiones lleva hoy? (la actual ya está insertada)
     const { count: sessionsToday } = await supabase
@@ -301,20 +303,13 @@ export async function updateStreak(): Promise<void> {
       .order('ended_at', { ascending: false })
       .limit(1);
 
-    let newStreak: number;
-
-    if ((sessionsToday ?? 0) > 1) {
-      // Ya había estudiado hoy - mantener racha
-      newStreak = Math.max(1, profile.current_streak);
-    } else if (lastBefore?.[0] && new Date(lastBefore[0].ended_at) >= yesterday) {
-      // Estudió ayer - incrementar racha
-      newStreak = profile.current_streak + 1;
-    } else {
-      // Primera sesión, o más de un día sin estudiar - racha empieza en 1
-      newStreak = 1;
-    }
-
-    const newLongest = Math.max(newStreak, profile.longest_streak);
+    const { newStreak, newLongest } = computeStreakUpdate({
+      sessionsToday: sessionsToday ?? 0,
+      lastSessionBeforeToday: lastBefore?.[0] ? new Date(lastBefore[0].ended_at) : null,
+      currentStreak: profile.current_streak,
+      longestStreak: profile.longest_streak,
+      now,
+    });
 
     await supabase
       .from('profiles')
@@ -434,10 +429,3 @@ export async function getReviewStats(): Promise<{
   }
 }
 
-// Helper function
-function calculateMasteryLevel(repetitions: number, interval: number): number {
-  if (repetitions === 0) return 0;
-  if (interval < 7) return 1;
-  if (interval < 30) return 2;
-  return 3;
-}
