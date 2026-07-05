@@ -1,10 +1,38 @@
 [
   {
+    "id": "30472c4e-e565-49c6-9ae9-83d32c8d7439",
+    "name": "Winston Churchill",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:20:07.06252+00:00"
+  },
+  {
+    "id": "52d3d992-5a58-4c5b-a6c9-80def2748098",
+    "name": "Anónimo (nursery rhyme tradicional)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:20:06.278387+00:00"
+  },
+  {
     "id": "8ec330f6-5243-4346-8df6-89103cb4604a",
     "name": "Anónimo (proverbio tradicional)",
     "birth_year": null,
     "death_year": null,
     "created_at": "2026-07-05T19:33:17.791184+00:00"
+  },
+  {
+    "id": "949029df-f0ba-499c-ada8-cceeae616a3b",
+    "name": "Timothy Leary",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:20:06.629795+00:00"
+  },
+  {
+    "id": "9ac4595e-6587-4161-b1df-054169ec1cae",
+    "name": "Shel Silverstein",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:20:07.410713+00:00"
   },
   {
     "id": "ec94c906-8ec1-45ca-aeed-f19c8af10ffe",

@@ -6435,9 +6435,9 @@
     "song_lyric_translation": "Caer",
     "song_title": "Fall Down",
     "song_artist": "will.i.am",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "London Bridge is falling down",
+    "quote_translation": "El puente de Londres se está cayendo",
+    "quote_author": "Anónimo (nursery rhyme tradicional)"
   },
   {
     "id": "17beff50-24d5-45cc-a077-b3a1748c5935",
@@ -10184,9 +10184,9 @@
     "song_lyric_translation": "Enciende las luces",
     "song_title": "Turn On the Lights",
     "song_artist": "Future",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Turn on, tune in, drop out",
+    "quote_translation": "Enciende, sintoniza, abandona",
+    "quote_author": "Timothy Leary"
   },
   {
     "id": "27dae4e3-cc34-4601-a4ac-ba767abf75a6",
@@ -11422,10 +11422,10 @@
     "created_at": "2026-02-16T11:21:55.996055+00:00",
     "example_sentence_2": "You're welcome to join us anytime.",
     "example_translation_2": "Eres bienvenido a unirte cuando quieras.",
-    "song_lyric": null,
-    "song_lyric_translation": null,
-    "song_title": null,
-    "song_artist": null,
+    "song_lyric": "You're welcome, you're welcome",
+    "song_lyric_translation": "De nada, de nada",
+    "song_title": "You're Welcome",
+    "song_artist": "Lin-Manuel Miranda",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -27246,10 +27246,10 @@
     "created_at": "2026-02-16T11:21:26.464406+00:00",
     "example_sentence_2": "Long story short, they broke up last month.",
     "example_translation_2": "Para abreviar, rompieron el mes pasado.",
-    "song_lyric": null,
-    "song_lyric_translation": null,
-    "song_title": null,
-    "song_artist": null,
+    "song_lyric": "Long story short, it was the wrong guy",
+    "song_lyric_translation": "En resumen, era el chico equivocado",
+    "song_title": "long story short",
+    "song_artist": "Taylor Swift",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -27319,9 +27319,9 @@
     "song_lyric_translation": "Ríndete a mí",
     "song_title": "Give In to Me",
     "song_artist": "Michael Jackson",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Never give in, never give in, never, never, never, never",
+    "quote_translation": "Nunca cedas, nunca cedas, nunca, nunca, nunca, nunca",
+    "quote_author": "Winston Churchill"
   },
   {
     "id": "6ebe71da-7c22-4151-840a-0e148503fae5",
@@ -33276,9 +33276,9 @@
     "song_lyric_translation": "Entra del frío",
     "song_title": "Come In from the Cold",
     "song_artist": "Joni Mitchell",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "If you are a dreamer, come in",
+    "quote_translation": "Si eres un soñador, entra",
+    "quote_author": "Shel Silverstein"
   },
   {
     "id": "8815548e-e436-4442-a1f9-4c83f5e9ae0d",

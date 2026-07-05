@@ -390,6 +390,16 @@
     "updated_at": "2026-07-05T16:57:10.273709+00:00"
   },
   {
+    "id": "1fac879c-df5a-4cfc-b006-4baedc7e9d58",
+    "artist_id": "3a986513-7df8-4056-9d83-70fbc24edab3",
+    "title": "long story short",
+    "album": null,
+    "year": 2020,
+    "lyrics_excerpt": "Long story short, it was the wrong guy",
+    "created_at": "2026-07-05T20:20:05.754589+00:00",
+    "updated_at": "2026-07-05T20:20:05.754589+00:00"
+  },
+  {
     "id": "20097bde-ebea-463d-952f-aac4e6f8cdf6",
     "artist_id": "1e44f3c0-7eea-4873-97ef-b76c4d7fc99f",
     "title": "Speak Of The Devil",
@@ -1290,6 +1300,16 @@
     "updated_at": "2026-07-05T16:57:10.273709+00:00"
   },
   {
+    "id": "56e5b07c-0a35-461b-97ce-b78a50866fe0",
+    "artist_id": "45148e48-0a8e-481e-8064-f8debc6e7f25",
+    "title": "You're Welcome",
+    "album": null,
+    "year": 2016,
+    "lyrics_excerpt": "You're welcome, you're welcome",
+    "created_at": "2026-07-05T20:20:05.279335+00:00",
+    "updated_at": "2026-07-05T20:20:05.279335+00:00"
+  },
+  {
     "id": "5851afe8-cf93-4edb-b1e5-f0a8dc8a10bb",
     "artist_id": "3a986513-7df8-4056-9d83-70fbc24edab3",
     "title": "Speak Now",
@@ -1538,6 +1558,16 @@
     "lyrics_excerpt": "Hand over your heart",
     "created_at": "2026-07-05T16:57:09.917132+00:00",
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "6df919dd-bf7d-43b6-bebe-8ec405aca72c",
+    "artist_id": "6379bbdc-fdf2-433a-9492-b93aea49d57f",
+    "title": "Keep Your Chin Up",
+    "album": null,
+    "year": 2011,
+    "lyrics_excerpt": "Keep your chin up, keep your chin up",
+    "created_at": "2026-07-05T20:16:28.059436+00:00",
+    "updated_at": "2026-07-05T20:16:28.059436+00:00"
   },
   {
     "id": "6f0f4913-40bd-4804-bef1-1a1c093bb8cc",

@@ -1,10 +1,31 @@
 [
   {
+    "id": "50eba0b9-1db3-4035-96ad-aa2525b53e29",
+    "quote_id": "672bd52d-d8ee-4ec1-918f-7bc7769f7cfc",
+    "vocabulary_id": "17b961bd-b04a-4434-a640-9f3221d74cde",
+    "highlighted_word": "fall down",
+    "created_at": "2026-07-05T20:20:06.449798+00:00"
+  },
+  {
     "id": "5d97fdb8-6999-4181-8196-056a1e419991",
     "quote_id": "d38aa95d-e799-4a70-9728-d1e924aa1248",
     "vocabulary_id": "08d83754-22e3-4566-b464-d4b3053a43f1",
     "highlighted_word": "actions speak louder than words",
     "created_at": "2026-07-05T19:43:56.048321+00:00"
+  },
+  {
+    "id": "5eb72b69-7e7f-42c4-b3be-de402282464f",
+    "quote_id": "195f984c-a8dc-4d98-ac89-a1b1c44bc1da",
+    "vocabulary_id": "279c5eee-adfd-41e1-9f71-783f7d44b52a",
+    "highlighted_word": "turn on",
+    "created_at": "2026-07-05T20:20:06.885315+00:00"
+  },
+  {
+    "id": "63b09203-3c23-4350-9d19-8fb67bf8c40e",
+    "quote_id": "a95d2713-9343-4c56-9a04-c057c9376b22",
+    "vocabulary_id": "87ee9a27-cdc9-4fd7-8ddd-ae2e792b1659",
+    "highlighted_word": "come in",
+    "created_at": "2026-07-05T20:20:07.605545+00:00"
   },
   {
     "id": "6f2afc4b-3dc0-4da1-a079-48ef23cde171",
@@ -19,6 +40,13 @@
     "vocabulary_id": "eddf0bb0-78e6-4b94-be08-82525e5e915b",
     "highlighted_word": "better late than never",
     "created_at": "2026-07-05T19:33:19.161826+00:00"
+  },
+  {
+    "id": "abf53a02-2656-4795-9de5-011af930bcb3",
+    "quote_id": "02cf69b3-87ea-485a-9143-9a48854eee0c",
+    "vocabulary_id": "6eb01d8c-828f-4015-9920-d7aaa6c700da",
+    "highlighted_word": "give in",
+    "created_at": "2026-07-05T20:20:07.226896+00:00"
   },
   {
     "id": "ade97da9-45ce-4b53-a4a1-d8fb1ce7d507",

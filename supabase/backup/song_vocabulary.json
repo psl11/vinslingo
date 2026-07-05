@@ -432,6 +432,15 @@
     "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
+    "id": "27d642ee-da2e-46d0-9af0-75a2b5189d77",
+    "song_id": "1fac879c-df5a-4cfc-b006-4baedc7e9d58",
+    "vocabulary_id": "6e9a170d-f9ff-4d32-b9ce-153607e987ee",
+    "line_text": "Long story short, it was the wrong guy",
+    "highlighted_word": "long story short",
+    "line_index": 0,
+    "created_at": "2026-07-05T20:20:05.849011+00:00"
+  },
+  {
     "id": "27dc1760-f360-4a2b-ad12-d361968c99f2",
     "song_id": "7ed6b518-1cdf-4536-b083-55a8e030c283",
     "vocabulary_id": "06cc2816-d59d-476f-9d5f-8ac191f49365",
@@ -1717,6 +1726,15 @@
     "highlighted_word": "since",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a0f846f1-8acf-4d70-a7fa-0f31c5d2d9de",
+    "song_id": "56e5b07c-0a35-461b-97ce-b78a50866fe0",
+    "vocabulary_id": "2c7ecb0b-74a8-4d83-b437-029636b360a7",
+    "line_text": "You're welcome, you're welcome",
+    "highlighted_word": "you're welcome",
+    "line_index": 0,
+    "created_at": "2026-07-05T20:20:05.481027+00:00"
   },
   {
     "id": "a2bc683d-4c01-4295-aaae-6a62599f42aa",

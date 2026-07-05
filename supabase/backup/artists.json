@@ -354,6 +354,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "45148e48-0a8e-481e-8064-f8debc6e7f25",
+    "name": "Lin-Manuel Miranda",
+    "image_url": null,
+    "created_at": "2026-07-05T20:20:05.033498+00:00"
+  },
+  {
     "id": "473fbec2-b3f8-4de0-b34d-b029234926ab",
     "name": "A Goofy Movie",
     "image_url": null,
@@ -532,6 +538,12 @@
     "name": "High School Musical",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "6379bbdc-fdf2-433a-9492-b93aea49d57f",
+    "name": "Frank Turner",
+    "image_url": null,
+    "created_at": "2026-07-05T20:16:27.64822+00:00"
   },
   {
     "id": "63bcac19-b3b3-4dc7-b320-fb4694690151",
