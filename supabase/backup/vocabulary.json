@@ -2602,7 +2602,7 @@
   {
     "id": "0c016669-9515-4a0e-b10c-d23452d803b7",
     "word": "weather",
-    "translation": "clima",
+    "translation": "tiempo (atmosférico)",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -4022,7 +4022,7 @@
   {
     "id": "10ddd979-a429-4347-b16d-ee39119d28be",
     "word": "end",
-    "translation": "fin, terminar",
+    "translation": "fin, final",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -4622,7 +4622,7 @@
   {
     "id": "134c0882-e055-42fb-b071-8632eb6d0f2f",
     "word": "may",
-    "translation": "poder, mayo",
+    "translation": "poder (permiso, posibilidad)",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "v",
@@ -5842,7 +5842,7 @@
   {
     "id": "189cae6a-9bbd-421f-8966-1de4c8d7c25d",
     "word": "crowded",
-    "translation": "lleno",
+    "translation": "abarrotado, atestado",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -7382,7 +7382,7 @@
   {
     "id": "1fefd785-02ea-434e-a195-d00b4519b3db",
     "word": "unreliable",
-    "translation": "poco confiable",
+    "translation": "poco fiable",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -9002,7 +9002,7 @@
   {
     "id": "28497210-a58b-4c63-b048-e1a8c2af3eff",
     "word": "effective",
-    "translation": "efectivo",
+    "translation": "eficaz",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -10662,7 +10662,7 @@
   {
     "id": "2f25e045-de22-4559-b35d-bf8c7f36679e",
     "word": "primary",
-    "translation": "primario",
+    "translation": "principal",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -11922,7 +11922,7 @@
   {
     "id": "34d875da-508a-4d72-99b1-197167a1f020",
     "word": "definite",
-    "translation": "definitivo",
+    "translation": "definido, claro",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -13342,7 +13342,7 @@
   {
     "id": "3c50830e-9b45-4ebc-b559-f9218511b305",
     "word": "fancy",
-    "translation": "elegante",
+    "translation": "llamativo, rebuscado",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -15422,7 +15422,7 @@
   {
     "id": "45c4b783-8d25-4d12-8054-b388ec957a77",
     "word": "video",
-    "translation": "video",
+    "translation": "vídeo",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -15902,7 +15902,7 @@
   {
     "id": "4820ab06-eab7-4ef4-b6fe-bc2a65c2d075",
     "word": "rating",
-    "translation": "calificación",
+    "translation": "valoración",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -17462,7 +17462,7 @@
   {
     "id": "4e7d914f-5be0-4b57-9fc5-90731da7559e",
     "word": "loosely",
-    "translation": "suelto",
+    "translation": "vagamente",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -17482,7 +17482,7 @@
   {
     "id": "4e8aec3d-ee94-49c7-9887-6503f5317559",
     "word": "angrily",
-    "translation": "con enojo",
+    "translation": "con enfado",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -18302,7 +18302,7 @@
   {
     "id": "52d6b7c9-8599-4648-9372-e85517d256ed",
     "word": "boundary",
-    "translation": "frontera",
+    "translation": "límite",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -18842,7 +18842,7 @@
   {
     "id": "55431c67-6369-4088-9c30-3cd89cae0d09",
     "word": "neither",
-    "translation": "ninguno",
+    "translation": "tampoco",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -19022,7 +19022,7 @@
   {
     "id": "5608f3a6-d889-4c19-835b-7076d75f7c66",
     "word": "ordinary",
-    "translation": "ordinario",
+    "translation": "normal, corriente",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -19262,7 +19262,7 @@
   {
     "id": "574cec9a-b212-4ddb-bed2-e72f3fd874de",
     "word": "evidence",
-    "translation": "evidencia",
+    "translation": "prueba",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -19542,7 +19542,7 @@
   {
     "id": "58981458-e45b-4fe5-a3d1-e0a49a79fa15",
     "word": "assist",
-    "translation": "asistir",
+    "translation": "ayudar",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "v",
@@ -19762,7 +19762,7 @@
   {
     "id": "59b9d05d-f58b-410a-82fe-3fe3d1b536de",
     "word": "eager",
-    "translation": "ansioso",
+    "translation": "entusiasmado, deseoso",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -26102,7 +26102,7 @@
   {
     "id": "7a3115dd-ec79-4ec9-8ad6-9134f6e81da0",
     "word": "virtually",
-    "translation": "virtualmente",
+    "translation": "prácticamente",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -29522,7 +29522,7 @@
   {
     "id": "8add4cf7-b8a7-48d1-badf-e645fdaca0b8",
     "word": "reliable",
-    "translation": "confiable",
+    "translation": "fiable",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -29782,7 +29782,7 @@
   {
     "id": "8bfa4f52-883d-4a38-9010-216ae7d020ea",
     "word": "feedback",
-    "translation": "retroalimentación",
+    "translation": "comentarios, opiniones",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -30782,7 +30782,7 @@
   {
     "id": "909aeb59-051f-4582-9719-7bbe2c5dad07",
     "word": "along",
-    "translation": "a lo largo",
+    "translation": "a lo largo de, por",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "prep",
@@ -32082,7 +32082,7 @@
   {
     "id": "97543fcb-2016-4281-9407-2b1d06686c78",
     "word": "ticket",
-    "translation": "boleto",
+    "translation": "billete, entrada",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -33082,7 +33082,7 @@
   {
     "id": "9c177d3a-3935-436d-a8db-17124bfd9d49",
     "word": "qualified",
-    "translation": "calificado",
+    "translation": "cualificado",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -35422,7 +35422,7 @@
   {
     "id": "a8278621-3de0-4a8b-adbe-e6d8dd77a223",
     "word": "press",
-    "translation": "prensa, presionar",
+    "translation": "prensa",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -36162,7 +36162,7 @@
   {
     "id": "abcd7dc9-68ac-4804-9414-c6c35400b701",
     "word": "reverse",
-    "translation": "invertir",
+    "translation": "invertir, dar marcha atrás",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "v",
@@ -37282,7 +37282,7 @@
   {
     "id": "b1f17cb1-78f2-4a72-9078-34f2a23d00f0",
     "word": "pavement",
-    "translation": "pavimento",
+    "translation": "acera",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -37362,7 +37362,7 @@
   {
     "id": "b227cc29-e3eb-4c1f-aca4-cfa294fc0961",
     "word": "yard",
-    "translation": "jardín, yarda",
+    "translation": "patio, yarda",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -37942,7 +37942,7 @@
   {
     "id": "b542bd74-3024-46d8-954a-61e363ac7887",
     "word": "outside",
-    "translation": "afuera",
+    "translation": "fuera de",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "prep",
@@ -38882,7 +38882,7 @@
   {
     "id": "b90982ee-c245-4389-8fd3-cc13b1265304",
     "word": "interestingly",
-    "translation": "interesantemente",
+    "translation": "curiosamente",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -39982,7 +39982,7 @@
   {
     "id": "bd25471e-cdbf-4215-9a8b-a6e2902a25fa",
     "word": "stranger",
-    "translation": "extraño",
+    "translation": "desconocido",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -40242,7 +40242,7 @@
   {
     "id": "be41d825-2c01-4f1a-a332-03887068e6ba",
     "word": "rate",
-    "translation": "calificar",
+    "translation": "valorar, puntuar",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "v",
@@ -40702,7 +40702,7 @@
   {
     "id": "bfd13b8d-57ec-4b29-828e-ea66d09cc1a1",
     "word": "successfully",
-    "translation": "exitosamente",
+    "translation": "con éxito",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -43522,7 +43522,7 @@
   {
     "id": "cb605c91-9cc8-4f65-9974-99acfc7db508",
     "word": "genuinely",
-    "translation": "genuinamente",
+    "translation": "de verdad, verdaderamente",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -44062,7 +44062,7 @@
   {
     "id": "ce69497d-a3c9-4c6c-b75b-6674c591a0ab",
     "word": "assume",
-    "translation": "asumir",
+    "translation": "suponer",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "v",
@@ -46362,7 +46362,7 @@
   {
     "id": "d9d0c425-94dd-45b4-a0e5-d903202ae56f",
     "word": "report",
-    "translation": "reportar",
+    "translation": "informar, denunciar",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "v",
@@ -49242,7 +49242,7 @@
   {
     "id": "e9b8167d-83cd-4639-96b5-cdbb090b592e",
     "word": "near",
-    "translation": "cerca",
+    "translation": "cerca de",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "prep",
@@ -49442,7 +49442,7 @@
   {
     "id": "ea71ab2d-0c6a-4aae-a976-738e7d02a58c",
     "word": "collect",
-    "translation": "coleccionar",
+    "translation": "recoger",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "v",
@@ -49542,7 +49542,7 @@
   {
     "id": "eab5f5ed-816d-477a-b042-63dafc5efa80",
     "word": "matter",
-    "translation": "asunto, importar",
+    "translation": "asunto, cuestión",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -50202,7 +50202,7 @@
   {
     "id": "ed6dcd6f-7936-4bbb-96be-e1536fd703ef",
     "word": "extent",
-    "translation": "extensión",
+    "translation": "grado, medida",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "n",
@@ -52282,7 +52282,7 @@
   {
     "id": "f8885d38-a84b-4b79-b9c7-60abbb1d7319",
     "word": "usually",
-    "translation": "usualmente",
+    "translation": "normalmente",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
@@ -52582,7 +52582,7 @@
   {
     "id": "faa06522-2714-4e3b-bfb6-79659b90871c",
     "word": "massive",
-    "translation": "masivo",
+    "translation": "enorme, descomunal",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adj",
@@ -52922,7 +52922,7 @@
   {
     "id": "fc0fcda7-6519-4f5d-8d07-de5ac6330577",
     "word": "eventually",
-    "translation": "eventualmente",
+    "translation": "finalmente, con el tiempo",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": "adv",
