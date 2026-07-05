@@ -1,5 +1,965 @@
 [
   {
+    "id": "00cc1f1e-ee54-4a4d-affb-ee22a4b95371",
+    "artist_id": "42219118-8bb7-4451-9082-b151121a0bfa",
+    "title": "Bring It All Back",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Bring It All Back",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "012bbbd0-2ef1-4946-8ffc-de11b22036b6",
+    "artist_id": "6576b185-a467-474d-9629-6bfac757bd3e",
+    "title": "Give It Back",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Give It Back",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "03066add-c429-437e-bd35-1418aadc10cf",
+    "artist_id": "7badf9d1-760a-47e0-9696-b20b651bdadb",
+    "title": "Story of My Life",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Story of My Life",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "04b28821-a904-4018-84c7-5ce2dcabca5d",
+    "artist_id": "4926cdb2-ed2a-422e-814d-4c73d3507373",
+    "title": "Cut to the Chase",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Cut down on the drama",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "04b46cc5-448e-422e-bd12-d0b001417f34",
+    "artist_id": "91be4c44-f497-4f60-8915-266a8b071337",
+    "title": "Fall Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Fall Down",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "067091e1-be03-474a-b224-81223ac9b473",
+    "artist_id": "de84b42a-7dd7-4b80-9a7e-01a0b419c41b",
+    "title": "Before You Go",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Before you go, was there something I could've said to make your heart beat better?",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "06bc6b62-592f-4506-98a1-35d6f88fc0f6",
+    "artist_id": "7816b384-855b-48bb-9041-872cca22af4d",
+    "title": "Get Off of My Cloud",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Off of My Cloud",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "0782b157-2a7e-4697-bc1c-519d936e63a6",
+    "artist_id": "8b0c51cf-af89-4966-8f47-078b075ef76a",
+    "title": "Grain Of Salt",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take it with a grain of salt, your leavin' ain't gonna bother me",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "0784458f-d822-4f11-8fd9-c75802b524b6",
+    "artist_id": "162e7da0-71b7-4d80-9161-285355d1259e",
+    "title": "Where Do You Come From",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Where Do You Come From",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "0892c8bb-0d75-4075-8e90-a3da64ec7b07",
+    "artist_id": "ee3096b8-5e75-492f-a82c-948f56ac9adb",
+    "title": "Dream On",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Dream On",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "09aca0a8-c8b6-4d21-9ec9-5afab19386f8",
+    "artist_id": "972e7f8d-689c-4841-8f50-9c259049139e",
+    "title": "Keep On Loving You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Keep On Loving You",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "0a08ac58-5178-47f6-a302-d82b359e57fc",
+    "artist_id": "c10e9b8f-1673-4bdb-8cb2-b672dcd11af6",
+    "title": "Out Of Hand",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I never intended for it to get out of hand",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "0b12ee93-82b2-4186-a1cd-5ba7bdce593b",
+    "artist_id": "d1f16693-7152-4c0a-8171-4a9afb64a0c7",
+    "title": "Come Over",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Come Over",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "0ca99622-8bd4-4e28-8155-c0d251273b90",
+    "artist_id": "30f6f169-f276-42a0-ab93-7a608d567022",
+    "title": "End of the Road",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Although we've come to the end of the road, still I can't let go",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "0d27bae6-8c33-4fb8-89b8-bcdfb3fd0dc9",
+    "artist_id": "c1c1e1fb-eaeb-48d5-99a6-abd232d1e16e",
+    "title": "Say My Name",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Say My Name",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "0d557956-2b13-4755-abce-0c6c10c73ee4",
+    "artist_id": "79b3a6aa-9778-4655-90e2-b21d5894f524",
+    "title": "Breaking Up Is Hard to Do",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Breaking Up Is Hard to Do",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "0e71be82-d8f2-4972-8716-7ec6c82a26a5",
+    "artist_id": "eaaf015b-1951-4d84-a126-531c7a41d936",
+    "title": "Put It Off",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Put It Off",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "0ea28d07-6333-46d5-93a9-b5a6d0aad93f",
+    "artist_id": "123deaec-5134-42b0-b4e7-6f77eb843445",
+    "title": "Once In A Blue Moon",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Once in a blue moon, something good comes along",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "1096e4b1-d245-46b4-a74c-8a393182f4fc",
+    "artist_id": "a218fa48-0d37-4e5b-af6f-65db6386002f",
+    "title": "Calm Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Calm Down",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "10cf8f47-5021-467e-8e43-79291273f2b5",
+    "artist_id": "c8b65184-6ab6-4979-bfa6-beea2e77b42b",
+    "title": "I Heard It Through the Grapevine",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Heard It Through the Grapevine",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "111e51d7-cf42-4e34-b636-c44c1634516a",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "We Can Work It Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "We Can Work It Out",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "125c9db7-cc86-46ff-aa0e-274269249c49",
+    "artist_id": "9892addc-cbbb-4453-a8f3-bfbe1eb71452",
+    "title": "Give Me Everything",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Give Me Everything",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "12647367-88ab-4b77-a4e2-fae790ff0722",
+    "artist_id": "c218997b-133a-405b-a9e8-c5e380a252e3",
+    "title": "Actions Speak Louder Than Words",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Action speaks louder than words, don't be deceived by all those fancy talkers",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "13e2b554-5399-4599-8d37-0e3b2eb769d5",
+    "artist_id": "dd388eed-b75e-4546-a9d2-50db2bbcb59d",
+    "title": "Warm It Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Warm It Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "14a8b120-7612-4bdf-b856-c9431e785a32",
+    "artist_id": "39197080-b675-4f7d-9c39-38f45e492268",
+    "title": "You and I",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "You and I, baby, nothing else could ever be better",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "150bb516-d6c4-4677-afe9-5aaf83c1c667",
+    "artist_id": "eaaf015b-1951-4d84-a126-531c7a41d936",
+    "title": "Get On Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get On Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "16a1be74-e37f-44ad-bb50-5f898f45b6e5",
+    "artist_id": "8bab1f93-e568-4c31-a97e-ab617f76f2ce",
+    "title": "Throw It All Away",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Throw It All Away",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "17390626-ea6c-411c-a706-aa3eaaa1bb6f",
+    "artist_id": "71b966ba-66c9-47a2-8eed-4531fc0d093a",
+    "title": "Bring It On Home",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Bring It On Home",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "1850b4e8-c1d7-42b5-be1f-b98778b1bfdf",
+    "artist_id": "23b8b7bd-9391-48ec-a1ea-47371704c7e1",
+    "title": "Give In to Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Give In to Me",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "1865c653-3a36-4477-9761-b8fa2375669a",
+    "artist_id": "d1f16693-7152-4c0a-8171-4a9afb64a0c7",
+    "title": "Get Along",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Along",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "1b3da344-aa56-4f69-a68a-1068d23477d4",
+    "artist_id": "10f6b869-2dc3-48a2-bca2-0f7d1a95528f",
+    "title": "Put Your Hands Together",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Put Your Hands Together",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "1b4b388c-5b79-4150-8732-e9ac87ab4782",
+    "artist_id": "23643993-4211-4666-855a-1831a82b9d50",
+    "title": "Because of You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Because of you, I never stray too far from the sidewalk",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "1b6ee44e-3501-4f35-99e3-5faf3fddc4a4",
+    "artist_id": "17ea1d4c-4892-49b4-a1bb-717133cd304a",
+    "title": "Elephant In The Room",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Time to address the elephant in the room",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "1b7b4d07-cc18-486c-aa80-787fc5c96d6a",
+    "artist_id": "69b50513-fa20-486b-97a6-8d5c9add0d12",
+    "title": "The Show Must Go On",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "The Show Must Go On",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "1c001555-b280-4e8a-b547-19b9838bddd8",
+    "artist_id": "87e450ca-f6b6-4354-bc85-f680b0898cf1",
+    "title": "Running Out of Time",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Running Out of Time",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "1c74a9d4-2b92-423b-a946-7fbb6b5451f0",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "While My Guitar Gently Weeps",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I look at you all, see the love there that's sleeping, while my guitar gently weeps",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "1c8a8ef7-3690-4243-81bc-8b433998469f",
+    "artist_id": "d07bf025-60f4-47f8-ade8-8a3e2c22306c",
+    "title": "When I Was Your Man",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "When I was your man, I should have gave you all my hours",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "1cdaec30-d42b-4902-bc58-0f61d4ace9ad",
+    "artist_id": "77c25ff5-b475-4b12-9aa1-c7540c58ae62",
+    "title": "Take Off",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take Off",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "1f6f30f7-464d-463f-af60-6faeeba4188a",
+    "artist_id": "7816b384-855b-48bb-9041-872cca22af4d",
+    "title": "Start Me Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Start Me Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "20097bde-ebea-463d-952f-aac4e6f8cdf6",
+    "artist_id": "1e44f3c0-7eea-4873-97ef-b76c4d7fc99f",
+    "title": "Speak Of The Devil",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Speak of the devil, well, she's right here in this bar",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "22f39131-d8d1-48a3-9fe0-861d333e0c5e",
+    "artist_id": "171fbaeb-f5d0-4874-815f-3fd1abfc0f53",
+    "title": "Going Through the Motions",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Going Through the Motions",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "23de8aa3-f8ee-4231-af24-0a74612ea5df",
+    "artist_id": "aa000001-0000-0000-0000-000000000006",
+    "title": "Set Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Set up the pins again",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "242c02f9-d766-4677-9cc5-31997a8985dd",
+    "artist_id": "122c7037-3f7f-4287-9d48-7680126740bf",
+    "title": "Turn On the Lights",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Turn On the Lights",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "242f4ae2-7603-4437-967e-83f9b8c2d4d0",
+    "artist_id": "665ce3b3-9cf0-4f06-9251-6dec827a9135",
+    "title": "Move In a Little Closer",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Move In a Little Closer",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "245ba53b-f657-48b8-9907-44c713663f65",
+    "artist_id": "852e4895-bb44-4e77-a05a-874aaefd1b83",
+    "title": "Picture",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Picture",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "2571be81-e61e-4dac-9837-3a64b1666a10",
+    "artist_id": "23643993-4211-4666-855a-1831a82b9d50",
+    "title": "Since U Been Gone",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Since you been gone, I can breathe for the first time",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "273378d6-a6a6-416d-ad18-0cc9bffc5897",
+    "artist_id": "1980bc8a-6b79-448c-8610-c92ab6c680e1",
+    "title": "Don't Look Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Don't Look Down",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "27a90305-4006-4479-9afb-ccf41607699e",
+    "artist_id": "fd5b0c53-9852-46c1-9b5b-cf779c89b98c",
+    "title": "Cake",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I'm not a piece of cake for you to just discard",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "27ca9eee-e245-4355-b7b1-823fed82fd03",
+    "artist_id": "2ce2d485-b397-4350-928c-240722fbac47",
+    "title": "Wrap My Head Around That",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I can't wrap my head around that",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "2a2094a0-4b7f-4905-86c2-817e8558959f",
+    "artist_id": "4d03976d-d717-42c8-9d61-1bdc400e3cff",
+    "title": "Lay Me Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Lay Me Down",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "2a46675c-971e-46a4-b6f6-54de965ee1e1",
+    "artist_id": "ff7b70e1-cc6a-4579-9795-7d5c5eb9d2f7",
+    "title": "Adding Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Sum It Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "2ab7d6cb-0135-497a-b6dc-18dfbfc421dd",
+    "artist_id": "15bf56be-205e-4ade-9bdf-742a02862ac8",
+    "title": "Grow Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Grow Up",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "2df21ff8-6186-4a0d-a26f-ca741b3d0955",
+    "artist_id": "5b29ee01-b9e4-4445-bb4e-94d463d313c7",
+    "title": "Do You Really Want to Hurt Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Do You Really Want to Hurt Me",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "2facf97a-593a-4d63-bb94-0d3f5a453c9e",
+    "artist_id": "9e08ae9f-e3fa-4931-92ed-9ee45c872226",
+    "title": "Fill Me In",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Fill Me In",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "3000c246-c762-4422-b40f-9aaeea72d52f",
+    "artist_id": "b7d74b46-885b-461c-9ff9-0aeb2b852c83",
+    "title": "Keep Your Head Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Keep Your Head Up",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "3051cb25-e46f-490b-a6d4-4a45a9892813",
+    "artist_id": "8deb18e6-ba85-46b0-8975-ff94c4834ee5",
+    "title": "Bridge Over Troubled Water",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Bridge Over Troubled Water",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "306c406a-a2e3-46ed-8a79-86304a4eeef8",
+    "artist_id": "641181c8-87b4-4eac-8eeb-fda4a5799333",
+    "title": "I Want It That Way",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "But we are two worlds apart, can't reach to your heart",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "31203f37-0a36-4672-b507-b7b0fc0ef2ac",
+    "artist_id": "23b8b7bd-9391-48ec-a1ea-47371704c7e1",
+    "title": "Remember the Time",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Remember the Time",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "31a00134-5d0f-47a9-ab56-a65e58b1aa9a",
+    "artist_id": "af76ffd2-5d47-44ef-b503-759d4eb618af",
+    "title": "Happy",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Happy",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "Hey Jude",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hey Jude, don't make it bad, take a sad song and make it better, then you can start to make it better",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "34115375-c431-43fb-bc84-22b1c0566b8c",
+    "artist_id": "a1d6db92-3d55-4f2a-b63e-fb0502fac192",
+    "title": "Don't Bite Off More Than You Can Chew",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Don't bite off more than you can chew",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "34373dcb-4790-4047-8cab-f93f199961c2",
+    "artist_id": "a76a2390-022f-43b2-a0ad-ecacbd9882d4",
+    "title": "Never Gonna Give You Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Never Gonna Give You Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "353b8dc7-d09a-43d0-bace-0d83b21a6ac4",
+    "artist_id": "23233d3b-29c2-49df-9b2a-f77868cbc902",
+    "title": "Nevertheless",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Nevertheless I'm in love with you",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "37946620-b6e2-46ab-bb98-792ebaa54303",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "Here Comes the Sun",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Here Comes the Sun",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "37dfcffd-c322-428c-8766-ba13f2e41695",
+    "artist_id": "9ad62f59-27ea-45c1-9677-71c6f6df790d",
+    "title": "Get Through This",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Through This",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "39adf57d-091d-4955-be52-6deba792690d",
+    "artist_id": "3d460217-30e8-4717-8c05-02409763d07c",
+    "title": "Slow Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Slow Down",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "3ad16613-b809-48ed-ace4-391d368d2482",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "I Need You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Need You",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "3b834cb9-becd-4be2-a4c7-367306d81398",
+    "artist_id": "10201352-931e-45d1-9779-1f4e5ba7ab4f",
+    "title": "Sweet Home Alabama",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Sweet Home Alabama",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "3c56755d-dfe7-4e75-9b01-3850063f9d45",
+    "artist_id": "0305a305-177b-480f-b08c-f4504714054d",
+    "title": "Bite The Bullet",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Grit down and bite the bullet",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "3fee06c9-6849-47ca-928e-a9595a17ab13",
+    "artist_id": "6f20aff4-2e17-4bbc-a9bc-f9db1775e645",
+    "title": "I Have a Dream",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Have a Dream",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "4009cf0c-53da-4ab2-a7ea-4f801046d297",
+    "artist_id": "38871770-393b-4bc6-9e3a-00df8e97da13",
+    "title": "Work",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Work",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "40c62a2d-5557-4593-b2eb-ddb01b7d5b20",
+    "artist_id": "d0f58beb-e43c-407b-8924-01d24843f456",
+    "title": "Turn Up the Music",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Turn Up the Music",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "40ceb56c-f9da-4d60-bf33-11f731a57120",
+    "artist_id": "d98fb754-eb3b-4fcd-8104-56b191672fb1",
+    "title": "Knockin' on Heaven's Door",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Knockin' on Heaven's Door",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "4274c776-7c5b-4515-a985-9e71614bcc83",
+    "artist_id": "8f30ee52-20ae-4796-8122-f4867a6bab8d",
+    "title": "Figure It Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Figure It Out",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "4295fa46-90c8-47db-9a77-8c6849942eac",
+    "artist_id": "bb0a22a5-2633-4aee-9325-979701c32464",
+    "title": "Beyond the Sea",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Beyond the Sea",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "42d91e89-ce8e-46c1-84a9-e66b75e68602",
+    "artist_id": "5befc7d4-e73b-4dc4-a184-1bed453ce53f",
+    "title": "Life Is a Highway",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Life Is a Highway",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "4379961b-b485-48eb-9039-11edd7582b4e",
+    "artist_id": "10c57642-8975-4c42-a6ef-454d2890c126",
+    "title": "What Is Love",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "What Is Love",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "43abf412-9dbf-4dde-922d-30f4721a73c8",
+    "artist_id": "37d3b0aa-858f-4a0e-9eb3-13b83d63c500",
+    "title": "Open Your Heart",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Open Up Your Heart",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "43ebb85c-5585-470e-b18b-1092ffd1a5da",
+    "artist_id": "66bb9e72-b39e-419a-b84b-82878a581dbe",
+    "title": "Bullet with Butterfly Wings",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Despite all my rage I am still just a rat in a cage",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "466c75aa-f9d7-4aca-a8f5-d0bdb0a1456d",
+    "artist_id": "4ab66009-5618-459f-b586-9ab149aa2a0e",
+    "title": "I Will Always Love You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Will Always Love You",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "46b0ea1b-28a6-46b8-9289-2709c3f4711b",
+    "artist_id": "ffb88969-5a8d-406f-9f48-f91dc4293236",
+    "title": "The Voice",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "The Voice",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "47714ef3-fc70-4a56-ace4-9b02a8439cfa",
+    "artist_id": "854dd15c-da75-4530-8793-bcc81ff0e90e",
+    "title": "Cut Off",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Don't cut off your feelings",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "47977744-fb09-4d28-85e8-e2e2595d2513",
+    "artist_id": "162e7da0-71b7-4d80-9161-285355d1259e",
+    "title": "Can't Help Falling in Love",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take my hand, take my whole life too",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "48dcbd6e-8010-4166-bb18-775a6828260b",
+    "artist_id": "dc54886d-239d-41b5-a86e-ecddc71c0f9e",
+    "title": "Pay Me My Money Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Pay Me My Money Down",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "4a32b488-f7c4-49fb-b950-78964cc0faf3",
+    "artist_id": "624820cd-a5a8-4834-a7b8-2e8445ed129b",
+    "title": "Back to Black",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Back to Black",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "4a608f6c-f8c4-485f-8360-85631861b69e",
+    "artist_id": "a25bcd8a-fb2c-4800-b361-db39d251f66c",
+    "title": "Blinding Lights",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Blinding Lights",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "4abe92f0-eac9-4dc3-9b7a-0ca73ee24203",
+    "artist_id": "dc54886d-239d-41b5-a86e-ecddc71c0f9e",
+    "title": "Thunder Road",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Set Out Running",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "4ac52c9b-fc1f-4955-81ec-486fb7a0fec3",
+    "artist_id": "c5329c52-1c45-47be-b97d-6f2d1ba15e35",
+    "title": "Move Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Move Out",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "4aea7eac-4528-4f4d-a2ab-e3a5e41782b8",
+    "artist_id": "aa25b8dc-d3c5-4607-bedf-185632206aa8",
+    "title": "Keep Away",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Keep Away",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "4bbfe68f-abb4-4e63-9427-11d55fa9855f",
+    "artist_id": "43322468-7312-4084-93dc-cc6ee52e4c95",
+    "title": "Pull Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Pull Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "4be6176f-b39f-47f1-8ff8-1ab4b7cd386d",
+    "artist_id": "5657c182-db70-4c6f-a5a8-50430fbf7e83",
+    "title": "Live and Learn",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Live and Learn",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "4c4fe204-3132-4a0b-b651-13ff8eea3c54",
+    "artist_id": "ee3096b8-5e75-492f-a82c-948f56ac9adb",
+    "title": "Walk This Way",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Walk This Way",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "4ce23565-9ecb-4814-b5f3-6150be220c5a",
+    "artist_id": "e7d5ea78-017c-49c4-a269-8dad6dfd7ab5",
+    "title": "Shy",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I'm too embarrassed to tell you what I feel",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "4e20f60b-27f1-4d53-a2e6-bef0fcfac549",
+    "artist_id": "4d03976d-d717-42c8-9d61-1bdc400e3cff",
+    "title": "Stay With Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Stay With Me",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "4e2f8be0-e3a8-4ac2-a9dd-e1836a5d396b",
+    "artist_id": "ee3096b8-5e75-492f-a82c-948f56ac9adb",
+    "title": "I Don't Want to Miss a Thing",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Don't Want to Miss a Thing",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "4e8b06ea-1d43-4dd6-8015-d5f7510e6dbf",
+    "artist_id": "064a1338-8e39-4099-a12a-7aa08bff1306",
+    "title": "You Hit The Nail On The Head",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "You hit the nail on the head",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
     "id": "50000001-0000-0000-0000-000000000001",
     "artist_id": "aa000001-0000-0000-0000-000000000001",
     "title": "Let It Be",
@@ -268,5 +1228,1855 @@
     "lyrics_excerpt": "Breaking my back just to know your name\nSeventeen tracks and I've had it with this game\nI'm breaking my back just to know your name\nBut heaven ain't close in a place like this",
     "created_at": "2026-03-23T16:41:49.946907+00:00",
     "updated_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "5014063a-8802-4968-9267-b2c897922731",
+    "artist_id": "26e8bed9-456e-4ce5-9d57-c40d13ba1462",
+    "title": "I Think We're Alone Now",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Think We're Alone Now",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "5082c3c8-5841-4ed9-b0aa-87bdccc1f61b",
+    "artist_id": "6a12aff7-a909-4ec8-bd67-8888e6ec52df",
+    "title": "Pass It On",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Pass It On",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "5208e232-a0e9-4d3f-a6fd-9a4911e1cdb5",
+    "artist_id": "53e63363-f400-4879-b1ba-a1663329bc09",
+    "title": "What a Wonderful World",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "What a Wonderful World",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "52b49ff4-9fe2-4e13-89ac-4bf0a1b372c0",
+    "artist_id": "a65ab8ed-b618-453d-a17b-5ca0be5f01e3",
+    "title": "Sensitive",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I'm sensitive, I'd like to stay that way",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "550b04c4-c145-491c-ad77-b37c6e3bbcef",
+    "artist_id": "652d6cc3-7be3-4df8-8de0-679ffd0d135b",
+    "title": "Lay Down Sally",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Lay Down Sally",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "557b5fc1-1d07-4f8b-b057-6a823363b545",
+    "artist_id": "e267b631-226d-4e69-b9f8-e2b1775a2557",
+    "title": "Wrap It Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Wrap It Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "5851afe8-cf93-4edb-b1e5-f0a8dc8a10bb",
+    "artist_id": "3a986513-7df8-4056-9d83-70fbc24edab3",
+    "title": "Speak Now",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Speak out, let your voice be heard",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "58dbc863-e4cf-4394-8f28-c118d465ac18",
+    "artist_id": "2a69a698-6fa0-4df3-a27e-3358b2c2706a",
+    "title": "Play That Funky Music",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Play That Funky Music",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "59f4ee84-278a-40e3-82c4-edec7b9d716d",
+    "artist_id": "6a1384f5-3d31-4453-a301-5dea4bc2dac3",
+    "title": "Spill The Beans",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Spill the beans, tell me what you want",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "59fa2818-4d83-473e-a8c9-4ebcb9b753c0",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "Get Back",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Back to where you once belonged",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "5a1f0a93-e535-4f53-b98c-e0cf4bba6004",
+    "artist_id": "77c25ff5-b475-4b12-9aa1-c7540c58ae62",
+    "title": "Time Flies",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Time flies when you're having fun",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "5aa0d9a5-800e-4fb8-aff6-53c41847d79b",
+    "artist_id": "78019ed8-309c-4ccd-81e3-424ee307d78e",
+    "title": "Call Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Call Me",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "5ad976a6-c1cd-4309-831a-664f7f565574",
+    "artist_id": "b069b1a3-4c9f-4d70-9f7c-3fc2c31d399a",
+    "title": "The Extra Mile",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I will go the extra mile for you",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "5b07c9d0-cd35-4f29-96d5-a117bd306303",
+    "artist_id": "8e821265-d11b-4556-b719-cca8619a2490",
+    "title": "Sign of the Times",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Sign of the Times",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "5b4a6c30-d359-420d-a816-15d206d3fee1",
+    "artist_id": "da91e6e8-a2b0-4bdd-96eb-19079805e58c",
+    "title": "Back To Square One",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I'm back to square one",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "5b56aa2d-8621-4b49-af2f-68ec3b1c8430",
+    "artist_id": "85e9f9f8-6056-47e6-8ef4-10120448ebf2",
+    "title": "Someone Like You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Never mind, I'll find someone like you",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "5b7aac93-1d62-4dc4-9a82-44e0e5af4a09",
+    "artist_id": "7ee1e86d-4ee7-4f87-8f7a-3de57e866259",
+    "title": "Blow Up the Outside World",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Blow Up the Outside World",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "5c077d12-f2fd-4972-b15d-77af069d68b1",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "In Spite of All the Danger",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "In spite of all the danger, in spite of all that may be",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "5c882db1-6f3c-4db6-bbe7-85361cdb1bbb",
+    "artist_id": "f52df9dd-8be7-4779-ac09-06cce39d5f5d",
+    "title": "On the Road Again",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "On the Road Again",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "Help!",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Help!",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "5f9e2b88-055f-4f08-8a91-b9f0369ceb3f",
+    "artist_id": "c380e46d-8f15-4dd8-aa8c-d4e18e138d3f",
+    "title": "Stand By Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Stand By Me",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "60dd4d84-10ff-451c-8399-ec3446be7b7b",
+    "artist_id": "a30eb987-06b3-4f86-80ae-400f8bea1efe",
+    "title": "Looking Into You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Looking Into You",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "62b9c3e8-92b4-4820-bec6-1a8321f67032",
+    "artist_id": "727b088d-7228-44f6-a0b4-9afa05ae1840",
+    "title": "Pulling My Leg",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Is that why you pulling my leg?",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "63275770-d526-4500-bb3e-55802b61e406",
+    "artist_id": "60e3ee71-ada3-4ebc-83cf-148f7c90460b",
+    "title": "Run Into You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Run Into You",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "6583f45b-b9b0-4497-98cc-0b1d0f0fadba",
+    "artist_id": "a605fbc3-337b-4ac2-974f-7ba81fbb030e",
+    "title": "Take My Breath Away",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take My Breath Away",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "6727ef62-30ff-4f82-aaab-2fb54a58b248",
+    "artist_id": "fb71e041-42a9-4e08-94d9-fb09a917d6eb",
+    "title": "Get Your Act Together",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get your act together, just stand up and face the music",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "68ed8cf5-f6c2-4a51-b284-cce77bbc5755",
+    "artist_id": "91be4c44-f497-4f60-8915-266a8b071337",
+    "title": "Check It Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Check It Out",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "69122546-4144-4d0f-956f-de66962a503d",
+    "artist_id": "aa000001-0000-0000-0000-000000000004",
+    "title": "Talk",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Talk",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "695b076b-898a-4b4e-8b53-3d2e40afd5b3",
+    "artist_id": "4ab66009-5618-459f-b586-9ab149aa2a0e",
+    "title": "I Wanna Dance With Somebody",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Dance With Somebody",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "6baab8d5-153c-40a4-9e0c-914f1ce6430e",
+    "artist_id": "f5d7a560-c94b-4707-aa1b-13fc620c99f0",
+    "title": "Build Me Up Buttercup",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Build Me Up Buttercup",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "6d017498-6152-4645-8d80-e917d25f9420",
+    "artist_id": "0b9509c9-da9e-4a96-ad0a-97c0da59264d",
+    "title": "Hand Over Your Heart",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hand over your heart",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "6f0f4913-40bd-4804-bef1-1a1c093bb8cc",
+    "artist_id": "176f2e97-0767-43c7-a5f7-81d8baebb7cd",
+    "title": "Think of Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Think of Me",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "708ca5cc-b903-4b27-bd83-490a7c9ec160",
+    "artist_id": "73d7f73e-aaa7-4290-a389-fb582ec6a4c0",
+    "title": "Looking After No. 1",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Looking After No. 1",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "70d3440a-010e-46c3-b9df-57f249b54c94",
+    "artist_id": "a7de65d6-baff-4dff-8470-d87b336a3e1a",
+    "title": "Don't Cry Over Spilled Milk",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Don't cry over spilled milk",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "70e77bbb-b0fc-42ad-8e06-bff324a49f2c",
+    "artist_id": "7550a4e8-45be-4412-9660-fad0634ed2fb",
+    "title": "Down by the River",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Come down to the river",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "71497c18-6fd7-49ea-8c35-ef0244e48f4f",
+    "artist_id": "00d8e801-4b1e-4452-b118-dcd19bdf3a75",
+    "title": "Run",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Run",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "718148a7-c253-4c68-93be-b5b2a4485d6e",
+    "artist_id": "77f1868b-b788-41bb-8f9c-d47c899c4f26",
+    "title": "Carry Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Carry out your plans",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "71b7ee02-ebb5-49d4-8ebd-658a4d9a5177",
+    "artist_id": "c277c92a-1bf4-4d0d-97c6-8d4ef5457bee",
+    "title": "Shut Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Shut down the city tonight",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "71d4fa72-21c4-493c-b9c8-c284c165357e",
+    "artist_id": "8508fc79-6152-41a0-9ebc-d44f7f207f52",
+    "title": "Settle Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Settle Down",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "72592cdf-8b65-496a-a661-ee1ffbadb672",
+    "artist_id": "69b50513-fa20-486b-97a6-8d5c9add0d12",
+    "title": "We Are the Champions",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "We Are the Champions",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "7269cfa6-2369-4d6d-9f1e-a6f833ac57d2",
+    "artist_id": "129f03dc-35ae-4fe0-98d1-bb3636943df9",
+    "title": "Tonight",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Let's go out tonight",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "72b94f12-1408-4ff9-afda-03cee9821695",
+    "artist_id": "63bcac19-b3b3-4dc7-b320-fb4694690151",
+    "title": "Hang with Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Just hang out with me",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "730a53cb-c5af-4f5d-a2bf-1b83ea5c0b3f",
+    "artist_id": "1b70d993-55eb-4f2e-8433-adf6cc29ba15",
+    "title": "Come Along",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Come Along",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "74b00b06-021e-44c1-adcf-d51cf12d9725",
+    "artist_id": "1c4990d6-e752-4a4a-b16b-bebcbd9280eb",
+    "title": "Work Hard, Play Hard",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Put in the work",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "77156795-645d-4ef3-b158-bf7d962c2089",
+    "artist_id": "9887d49d-a7e6-4b7f-8ede-3d443de60c56",
+    "title": "Write This Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Write This Down",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "77941bb0-075b-4920-a138-b8eaa79b9d63",
+    "artist_id": "273d0cc4-9b6f-4c5e-86f6-b7c6b963935b",
+    "title": "In the Still of the Night",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "In the Still of the Night",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "784bf543-08aa-430f-a2d9-0af2302664e7",
+    "artist_id": "037466f0-fdcf-409d-9e76-9138415b87fe",
+    "title": "Torn Apart",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Torn Apart",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "78c6ea57-9ba3-40aa-9a49-2be61a268712",
+    "artist_id": "372ec1d6-5331-492e-bc62-40f541db3abf",
+    "title": "Getaway",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Away",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "79f2da06-966f-4e98-97ec-665ad3a700ce",
+    "artist_id": "9b41e8ba-c441-42e1-8bf2-3d88fd061863",
+    "title": "Send Me on My Way",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Send Me on My Way",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "7b2cc228-a2d2-4729-92be-007407d00265",
+    "artist_id": "652d6cc3-7be3-4df8-8de0-679ffd0d135b",
+    "title": "Tears in Heaven",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Before you pass away",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "7b476aec-6573-4641-981c-d288976a342d",
+    "artist_id": "7816b384-855b-48bb-9041-872cca22af4d",
+    "title": "Sympathy for the Devil",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Please allow me to introduce myself, I'm a man of wealth and taste",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "7b73b60c-170c-40b5-b190-68d30adf58f9",
+    "artist_id": "2d66aa96-1dff-4b4c-ae97-543bba705a9b",
+    "title": "Under The Radar",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Under the radar, you're not alone, a UFO under the radar",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "7c9f9093-1cef-4ef2-85d7-ca6f53b9b2d0",
+    "artist_id": "1d4a8321-5ae0-4aef-b360-23b9d82af351",
+    "title": "Put Your Head on My Shoulder",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Put Your Head on My Shoulder",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "7de935b5-bb3a-4e71-9c7a-cfb824dd6ffa",
+    "artist_id": "aa000001-0000-0000-0000-000000000004",
+    "title": "Yellow",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Yellow",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "7df27a26-4045-40da-bc6a-9dd5409bb4b7",
+    "artist_id": "d1c2b101-9b83-478b-961c-4abaa4530f73",
+    "title": "Purple Rain",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Purple Rain",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "7ec620ed-3b87-4822-937b-a8057990928a",
+    "artist_id": "0a5d5786-27bb-4c27-a477-1e257bc8ebf4",
+    "title": "Try",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Try",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "7ed6b518-1cdf-4536-b083-55a8e030c283",
+    "artist_id": "5c245f46-dca5-43b8-b119-99461b6d60e7",
+    "title": "Deal With It",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Deal With It",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "7f447583-c475-4b55-bb7c-66305a40ca3c",
+    "artist_id": "b9ce29c5-04e5-4bd8-866f-9808cd1d3f36",
+    "title": "Let Sleeping Dogs Lie",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Let sleeping dogs lie, bring the subject to an end",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "7fd6abf4-9cad-4562-9489-ad473a0d9c6a",
+    "artist_id": "f93701e1-8b48-4783-b2f0-a1e2ed1cfbe8",
+    "title": "Sit On The Fence",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Don't sit on the fence, you're either hot or cold",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "81e47b1b-e5aa-42f3-8760-5b809f0a7c45",
+    "artist_id": "c8b7bd20-8ecf-4f1f-bec9-f2181093c86f",
+    "title": "Under The Weather",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Cause you're under the weather, just like the world",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "82ae04b9-4062-472f-aaf9-8cf78dd46970",
+    "artist_id": "7e71a6bf-29d1-4cf4-8390-982cb895f047",
+    "title": "Time After Time",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Time after time",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "856c36ba-ce8e-4627-aaf6-5a7bdde4ed3a",
+    "artist_id": "5444218b-e907-4d91-9197-03f414faf0db",
+    "title": "Looking Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Looking Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "8998b117-34b7-4c4d-841b-e912ca3e090d",
+    "artist_id": "8fe68a3f-fc51-45cc-841f-87a385f7bdf5",
+    "title": "Until I Found You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I would never fall in love again until I found you",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "8a0a3c5e-b497-41c8-8b69-c6755a0788dd",
+    "artist_id": "24c94a6c-0ce5-4642-9d4a-c8f3fef88b17",
+    "title": "We Are Family",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "We Are Family",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "8a2c10dc-e0c8-4d9b-83bf-ee4429daa8e5",
+    "artist_id": "cda041d9-334e-4434-b3c0-20a012c54ed8",
+    "title": "When It's Raining Cats And Dogs",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "When it's raining cats and dogs",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "8ab920b7-77ad-47c7-8e08-d49213b099ff",
+    "artist_id": "ea785484-cb0b-402e-9478-ffb052c77705",
+    "title": "Take On Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take On Me",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "8b5eebd5-bc74-4559-9b2a-e5089bcdcdf7",
+    "artist_id": "ac19cdf6-b77c-4716-bbd3-f7a5628c55c4",
+    "title": "Mix It Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Mix It Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "8bdf834b-939b-4a39-9d14-a88634a7223c",
+    "artist_id": "a1a69f85-54f8-49d1-a237-d152bdffb8e6",
+    "title": "You Are the Sunshine of My Life",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "You Are the Sunshine of My Life",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "8c27a910-fafd-4688-97bf-ddf5fbb6409a",
+    "artist_id": "b9cad86b-e526-4cce-ac4d-e4902de02df0",
+    "title": "Breakout",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Break Out",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "8e2442dc-74eb-4d51-b581-fc22def55a2a",
+    "artist_id": "b8f0c6fa-13ea-4338-8d45-42ec172129ab",
+    "title": "Understand",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Understand",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "8e342fb4-eca6-4823-94f3-4f34af04f598",
+    "artist_id": "625fa141-c080-4c3a-a9e1-7b4cedabfc9d",
+    "title": "Start of Something New",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Let's start off right",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "8f55d2e4-cbe5-42ef-802b-491d513d3e1e",
+    "artist_id": "7d1f3008-51e4-43d9-bde6-d2a09e1584e9",
+    "title": "Tell Me Something Good",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Tell Me Something Good",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "917f87b0-70ea-4faf-8dca-84f1434b207d",
+    "artist_id": "bfa41bf9-8c3b-4643-97b8-fb36b912afb5",
+    "title": "A Penny For Your Thoughts",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "A penny for your thoughts, I've got to know where I stand",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "91ccddda-9a54-4ce4-a328-534b600340ea",
+    "artist_id": "9acad276-c2d0-4e83-85a9-8c67d6f9f351",
+    "title": "Cold Shoulder",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "All she's giving me tonight is a cold shoulder",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "937e53cf-cb4b-405f-8c39-cb870b9e0e16",
+    "artist_id": "1323841e-bce1-4bea-ad3e-a3d6ac0d7052",
+    "title": "Footloose",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Kick off your shoes",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "962d8f09-e291-4b84-86f3-183e2d2d3ae5",
+    "artist_id": "5e213a79-6e5a-4061-b40b-63e0dd92d88b",
+    "title": "Hand in My Pocket",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hand in My Pocket",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "976e807a-fb71-4d2c-bfdb-685a67542238",
+    "artist_id": "7e2a3e9d-d880-4a24-93e9-ebe838287bdd",
+    "title": "Party At The Leper Colony",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "It won't cost you an arm and a leg, dance all night",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "98c45418-54ed-4fee-862b-72526f589632",
+    "artist_id": "c23fb36d-2d28-4338-a138-60b45283e4f4",
+    "title": "Look Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Look Out (Here Comes Tomorrow)",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "99642b65-f16f-4e9b-afe4-e3aeb602fa0f",
+    "artist_id": "d3306e33-9654-4f0c-850a-c624b7635fa3",
+    "title": "Head Over Heels",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Head Over Heels",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "9ab4073b-5606-4442-ae8d-dad82bef2f3c",
+    "artist_id": "8ae7f5ab-afb9-488a-a3c8-083c7f08b849",
+    "title": "Smile",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Smile",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "9ae4e60e-3326-440f-9fac-ed66b44edf11",
+    "artist_id": "c44edf44-00ef-4787-9bfd-399c4611bff9",
+    "title": "Wipe Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Wipe Out",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "9dbd08d3-a1be-4162-abf2-1d8861c03684",
+    "artist_id": "c5329c52-1c45-47be-b97d-6f2d1ba15e35",
+    "title": "We Didn't Start the Fire",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "We Didn't Start the Fire",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "9eb843a1-54ab-45e4-aee4-c87fc03f6b6a",
+    "artist_id": "dde164c2-a1a7-4068-ad81-3e48de27d0fe",
+    "title": "Drop It Like It's Hot",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Drop It Like It's Hot",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "9f28fa84-5bfb-4a9f-8acf-7e2a304018de",
+    "artist_id": "e3ec3b74-fc92-4e8b-a78e-71b4227f9d41",
+    "title": "Still Loving You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I'm still loving you, I need your love",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "a3720e91-9802-4c3f-bb91-55b010c15fd5",
+    "artist_id": "26d3347e-bdd7-47b5-8353-2faf3570ad6f",
+    "title": "We Belong Together",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "We split up but never apart",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "a4e04377-7486-4e33-9aa7-12184e7902c4",
+    "artist_id": "2a62d0e9-328f-4e41-b7d6-534bd13279f6",
+    "title": "Fly Away",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Fly Away",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "a673b964-f84a-4b6d-a873-6ec579f8dc8f",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "I Want to Hold Your Hand",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Want to Hold Your Hand",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "a6a648b0-acc3-4cd8-aaf7-e2a082c79a99",
+    "artist_id": "10adc3b1-5c7c-414e-95f3-871b44ed0011",
+    "title": "Bring Me Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Bring Me Up",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "All You Need Is Love",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "All You Need Is Love",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "a8580428-f1ec-45e7-8d9d-00f9a395bc82",
+    "artist_id": "ff0ab30d-e117-43d7-bf3f-30a467fc681c",
+    "title": "Should I Stay or Should I Go",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Should I stay or should I go?",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "a9f30241-c4f4-4785-b9d7-47b1e16fee72",
+    "artist_id": "44d47ffb-3c5e-4ef9-bafa-04f75e6df0a6",
+    "title": "Carry On Wayward Son",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Carry On Wayward Son",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "aa8790e8-1754-4528-a4ea-5ead1d153e6d",
+    "artist_id": "00df39e8-047a-44f6-ab92-11720225e906",
+    "title": "Best Of Both Worlds",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "You get the best of both worlds",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "ab51957a-34dc-42d9-82cb-d4c74f7023d5",
+    "artist_id": "86f01f22-7fb0-431f-a80c-b38fed6d335d",
+    "title": "Eyes Without a Face",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Eyes Without a Face",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "abaa29f7-3122-4f6f-94e6-e277f6d479ba",
+    "artist_id": "3d750e20-ed10-428e-b1db-26e0361af68a",
+    "title": "Let It Go",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Let It Go",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "ae6f85e8-4167-4381-a8c1-b5589825bc5a",
+    "artist_id": "aa000001-0000-0000-0000-000000000001",
+    "title": "A Hard Day's Night",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "A Hard Day's Night",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "aedd950a-77de-42b3-8a7f-be00bace6881",
+    "artist_id": "8e1af2e8-f4eb-49bb-92d1-03c937958824",
+    "title": "IDGAF",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I don't actually care if you like me or not",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "b197730a-23c7-4e04-8132-168bfa548b7e",
+    "artist_id": "37d3b0aa-858f-4a0e-9eb3-13b83d63c500",
+    "title": "Into the Groove",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Into the Groove",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "b1df1c66-8e84-46fb-ba42-832fbe5efe5d",
+    "artist_id": "cc17116b-6702-427f-894e-40f917565181",
+    "title": "Technologic",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Log On",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "b2580d20-f0aa-40ea-8516-ccdb6946482e",
+    "artist_id": "44d47ffb-3c5e-4ef9-bafa-04f75e6df0a6",
+    "title": "Point of Know Return",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Point of Know Return",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "b4918c8a-7136-4842-a25d-e87c49f9e566",
+    "artist_id": "8c5f916b-cc8b-49d2-b08b-81c887ce77f9",
+    "title": "Total Eclipse of the Heart",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Turn Around",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "b534be16-414a-4048-ab2a-68079bdc4c0e",
+    "artist_id": "deb40fdb-377e-4f03-aae0-73d847ebfc33",
+    "title": "Wake Me Up Before You Go-Go",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "When the alarm goes off",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "b587f1e6-5bfa-4e4f-ab06-5444bb136938",
+    "artist_id": "4813263f-01a4-456d-9592-eada34effe9f",
+    "title": "Call It A Day",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Can we call it a day, now would that be okay?",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "b5fc13fa-2bb0-4bec-a0fc-56719d51d716",
+    "artist_id": "a2bccad1-5f47-48f8-86ed-6b8c557c67aa",
+    "title": "Missed The Boat",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "We knew we missed the boat and we'd already missed the plane",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "b624aced-38a8-40d7-9f99-1ad3c989a88c",
+    "artist_id": "28e52fb5-bcfd-4605-adfe-fd1f02cf336f",
+    "title": "If I Were a Boy",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "If I were a boy, I think I could understand",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "b76c097b-7b89-498d-b1b2-858b594dd1c6",
+    "artist_id": "4a3405e6-dedb-466c-bb5c-499c77fd6ceb",
+    "title": "Changes",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Changes",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "b881e1a7-96db-473b-8c42-90da4252f4e0",
+    "artist_id": "94a5065a-f684-4b5c-a39c-c0ccf770a936",
+    "title": "Come In from the Cold",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Come In from the Cold",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "b88e1d4e-7dd4-45d4-b4c9-8a342af0faad",
+    "artist_id": "44011c30-6b75-4a18-a226-0cf46fa34f78",
+    "title": "After the Love Has Gone",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "After the love has gone, what used to be right is wrong",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "ba73f39a-d824-4f88-ba0b-3199de618bfe",
+    "artist_id": "5820271e-3871-414b-824e-477fe2c660b3",
+    "title": "However Do You Want Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "However do you want me, however do you need me",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "baeca4a3-5f3f-45c8-ae4c-4051b68f52cb",
+    "artist_id": "49162f23-9a70-4f08-b870-5190924d4ce9",
+    "title": "Take Me Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take Me Out",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "baf0521b-eac5-4888-a8e2-b016c1293009",
+    "artist_id": "bdccc3d1-d09c-4276-8c32-317b99a7329c",
+    "title": "Eye To Eye",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I wonder why it's hard to try to see eye to eye",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "bcb85048-35b5-4901-a0f5-d23c4949e46f",
+    "artist_id": "880a4a14-07c6-4600-9309-631ea2e5cec1",
+    "title": "Bring Em Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Bring Out the Best",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "bce9836d-7350-495f-8609-57e5141815f6",
+    "artist_id": "59b5c057-4895-4f87-a655-f70a107071f8",
+    "title": "Insult To Injury",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Add insult to injury, you hear the thunder",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "bd6980b7-7c2e-4d65-87c0-d1729badaf9f",
+    "artist_id": "6d4fa225-8e63-4753-a26c-441a0a142ddc",
+    "title": "Pick Up the Pieces",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Pick Up the Pieces",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "bdd92f37-5f53-4629-80df-1591198194b4",
+    "artist_id": "4e27846b-7673-4164-9bd0-79ee7054c117",
+    "title": "Catch Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Catch Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "bdefde72-ceb2-43e3-818a-703e9bbfeab8",
+    "artist_id": "d72fb38b-5900-460b-b6c2-39cedd3e88b4",
+    "title": "Closing Time",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Closing Time",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "bf60481d-d4e6-4397-9a43-2dbb75399c82",
+    "artist_id": "1d6b2a31-dbe2-41b7-8c96-7ff1d3586447",
+    "title": "I Can See Clearly Now",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Can See Clearly Now",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "bfe8d714-f432-4331-8a0e-64f28babfbbf",
+    "artist_id": "51562e0a-91f6-45fa-a530-f7fa9f70c1d1",
+    "title": "Call Me Maybe",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Call Me Maybe",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "c0e44918-eecb-465c-be60-eab410ff1767",
+    "artist_id": "d827ffb9-6727-4fb5-8fa0-1a409cd01b5f",
+    "title": "Hurry Up and Wait",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hurry Up and Wait",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "c1861b69-aaee-4b16-8c0b-420bec6fd920",
+    "artist_id": "ae0d3a14-1469-45ac-a580-d37e13cc902e",
+    "title": "Burn The Midnight Oil",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I burn the midnight oil and I sleep all day",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "c2640db2-646b-43e1-91c4-3c852f1d8cff",
+    "artist_id": "6585767e-4f0b-4b4f-9633-3dc3961abd0e",
+    "title": "Turn Down for What",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Turn Down for What",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "c5c1b87f-a045-4d08-917c-ee3aaaf4b6c5",
+    "artist_id": "53e63363-f400-4879-b1ba-a1663329bc09",
+    "title": "It Takes Two To Tango",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "It takes two to tango, two to really get the feeling of romance",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "c6ec70e5-09df-4414-b54e-bd0831d881e2",
+    "artist_id": "1fd72874-b09d-4386-b882-10da55eb49fd",
+    "title": "Falling Apart",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Falling Apart",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "c715b42d-a443-45e4-99e1-24ea139e9e06",
+    "artist_id": "8c2734d0-d40a-4a4a-8c4e-75f4aa57fa7c",
+    "title": "Get Up Stand Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Up Stand Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "c78f1c85-9a1e-47a6-a616-a62c7c50419e",
+    "artist_id": "68304596-2a50-43b1-b5ac-194a2dff2bdc",
+    "title": "When Pigs Fly",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "The time has come when pigs fly, yeah it's a beautiful thing",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "c8093bc8-977e-4994-8d16-5a78cb41742b",
+    "artist_id": "641181c8-87b4-4eac-8eeb-fda4a5799333",
+    "title": "As Long As You Love Me",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "As long as you love me, I don't care who you are",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "c81a6c68-4187-406b-bf7a-01956bb2e1d5",
+    "artist_id": "d0f58beb-e43c-407b-8924-01d24843f456",
+    "title": "Look at Me Now",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Look at Me Now",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "c884a853-40c0-40f8-a2db-4f657436b497",
+    "artist_id": "1e29dc4f-e77c-4f52-bb11-c9d9f7fc340c",
+    "title": "Get Over It",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Over It",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "cabd6c5f-4a32-4b91-ab97-b22d785b3f46",
+    "artist_id": "f73a2271-c36f-46aa-abbc-7dbce0092adb",
+    "title": "Stand Up for the Champions",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Stand Up for the Champions",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "cc078936-9518-4666-b1bb-72940a2f102f",
+    "artist_id": "be51710c-ac3e-4905-a5e4-b653dd316704",
+    "title": "Looking Forward",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Looking Forward",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "d0acd87a-9516-4229-bede-3ae8f97965df",
+    "artist_id": "b7433c71-8853-4c3e-865c-799e149c95d5",
+    "title": "I Miss You",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Miss You",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "d2eb4756-350a-452e-9739-0769c75ae774",
+    "artist_id": "ccb676fe-f059-472b-867e-91a302aa8f41",
+    "title": "Show Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Show Up",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "d4305355-53d2-436f-937f-798f834d7e9c",
+    "artist_id": "a13898b2-ccb1-404d-92a6-109470c865bb",
+    "title": "Throw It Away",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Throw It Away",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "d4a17e11-81fb-41d7-a772-2c3b8efb6743",
+    "artist_id": "ff7c10c8-e4ab-4181-bcb1-6ba8ed01e73a",
+    "title": "Hang In There Baby",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hang in there baby, things are crazy",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "d4e5568f-402c-43b5-8ab2-11c92707b90c",
+    "artist_id": "6576b185-a467-474d-9629-6bfac757bd3e",
+    "title": "Take It Back",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take It Back",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "d57979e2-7e12-4927-b69c-c29cdc8297ae",
+    "artist_id": "5a7858e0-7a69-4a6d-b2a3-02933001e7b8",
+    "title": "Based God",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Based God",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "d82ff484-adfd-401b-aedb-39a2b9b0805f",
+    "artist_id": "aa000001-0000-0000-0000-000000000008",
+    "title": "Let It Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Let It Out",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "d8d0bd2b-7671-45d8-85fe-8c446ce530c9",
+    "artist_id": "82935a2d-2716-44b5-8232-fad551216b67",
+    "title": "Kill Two Birds With One Stone",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Kill two birds with one stone, watch me fly",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "d8e9357e-f662-460d-8485-540315fc71fd",
+    "artist_id": "0971e01b-8fc4-43d8-9e0c-83b43f8d8218",
+    "title": "Baby Come Back",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Baby Come Back",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "d9fa9c27-7f90-488d-a8d2-16313cbe05cc",
+    "artist_id": "5780830d-6cb6-4de1-b1bb-edf52d5db7df",
+    "title": "The Sound of Music",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "The Sound of Music",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "dbd9301d-8fe1-4f22-84f7-fc4f78880332",
+    "artist_id": "7bd14ddc-94e8-4df9-bfbd-120ddc2e954a",
+    "title": "Put On a Happy Face",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Put On a Happy Face",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "dcd52d69-c71e-4004-bada-8b20f44d6de4",
+    "artist_id": "6611fd0f-d296-45f9-b3f4-6290df9ebc7f",
+    "title": "You've Got a Friend",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "You've Got a Friend",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "dcdea908-519b-4fbe-9a03-11734183161b",
+    "artist_id": "29720d2e-a965-4310-a8cb-f4aed6027f67",
+    "title": "So What",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "So, so what? I'm still a rock star",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "df0df014-04a7-4824-8696-ef370fce013d",
+    "artist_id": "b8f0c6fa-13ea-4338-8d45-42ec172129ab",
+    "title": "I Know What You Did Last Summer",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I Know What You Did Last Summer",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "dfd97ace-3701-40b3-927e-bd3238e12261",
+    "artist_id": "28e52fb5-bcfd-4605-adfe-fd1f02cf336f",
+    "title": "Hold Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hold Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "e24ebebc-df62-43f3-959f-1a55957ab0b6",
+    "artist_id": "8bf09cbc-9abd-47d4-9bca-caea73bd1743",
+    "title": "Turn Into",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Turn Into",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "e3e703c3-0e18-4602-a98c-de91e5903a6e",
+    "artist_id": "84f556b5-0f16-48f1-8454-1cb784d469e9",
+    "title": "Beating Round The Bush",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Don't beat around the bush, c'mon tell me what you want",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "e4ec0cb9-8de5-42a2-9d28-45616a08311a",
+    "artist_id": "4d756480-d70d-4fe6-bc03-082994779091",
+    "title": "Break The Ice",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Break the ice, take your time",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "e5a26019-b1d2-4e56-a8a8-f77093ea0169",
+    "artist_id": "88bdf387-e375-43f8-8342-1e09047ccac3",
+    "title": "Hold On",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hold On",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "e5d871be-3163-47bc-814d-5342db4dedb4",
+    "artist_id": "b5ffe5b0-a505-4bbb-a0c3-293735b20f72",
+    "title": "Counting Stars",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Point out the stars to me",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "e647357f-1b21-4c4e-86fe-3b84fade0d69",
+    "artist_id": "590f7619-53b3-4342-82da-4a3cf51ba701",
+    "title": "Turn Off the Light",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Turn Off the Light",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "e69cae83-a54b-42bf-bd05-58da107856d4",
+    "artist_id": "af4084f7-9a97-46d1-8c8d-5f5e9ccad87e",
+    "title": "High Hopes",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "High Hopes",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "e76befa1-1552-420e-a065-d035d159a381",
+    "artist_id": "4a04dc3d-8ca1-481b-b11b-8e859384f62e",
+    "title": "When the Sun Goes Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "When the Sun Goes Down",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "e7c4236d-21ec-41a8-b156-ab4d7a4684f3",
+    "artist_id": "a8f198bb-8149-4677-95e3-351f8eaa9a6a",
+    "title": "Stop! In the Name of Love",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Stop! In the Name of Love",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "ea4023ae-f074-45e8-9877-8135cff10b31",
+    "artist_id": "28e52fb5-bcfd-4605-adfe-fd1f02cf336f",
+    "title": "Work It Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Work it out, work it out",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "eb954514-f4cb-4eb0-b0dd-dfd1a0d5daec",
+    "artist_id": "78019ed8-309c-4ccd-81e3-424ee307d78e",
+    "title": "Heart of Glass",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Heart of Glass",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "ebbe7496-ae82-45ce-903f-3db803634279",
+    "artist_id": "2523bbca-b4ff-4353-b107-b820ce62eeba",
+    "title": "Clean Up Woman",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Clean Up Woman",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "ecc36552-8853-42a4-8c0b-3d4d6f8201ce",
+    "artist_id": "c979b1fc-86a9-4057-80fa-3e7b682af864",
+    "title": "Fight Song",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Fight Song",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "ecf0eb62-ca21-4826-bd80-7815f5d2bca2",
+    "artist_id": "dbda3a20-dabc-45df-9090-849a770327e7",
+    "title": "Back In Black",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Back in black, I hit the sack",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "edbc768d-bcdd-4cd5-b10a-cf288918a16e",
+    "artist_id": "4c7915de-7171-46a7-a0e5-2b9fca8165aa",
+    "title": "Runaway",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Runaway",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "ee9cdf0a-910a-47f6-b665-67b32ebb01d2",
+    "artist_id": "a9ac07cf-525d-4338-bd4d-f185579eab00",
+    "title": "Sit Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Sit Down",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "eefd5fd7-c796-4368-8b0f-6dc0a888d773",
+    "artist_id": "9bd39163-7af3-4a82-ba88-fee14c3615f9",
+    "title": "Try Everything",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Try Everything",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "efa1d955-199d-489a-81e0-887c3e7bf4d5",
+    "artist_id": "1742e775-158c-4236-ad38-30c975cbd0e6",
+    "title": "Haven't Met You Yet",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "I just haven't met you yet",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "f0201808-63d1-47e5-898d-6ce27dd6f128",
+    "artist_id": "3d1b2b06-005c-4d44-be51-3ef0618a36cf",
+    "title": "Blessings In Disguise",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "It was a blessing in disguise, the truth is always a surprise",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "f0f6919e-4884-4a82-af60-d2532d2715fa",
+    "artist_id": "473fbec2-b3f8-4de0-b34d-b029234926ab",
+    "title": "Stand Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Stand Out",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "f15559e5-44b8-485d-a4ae-71c004cba3aa",
+    "artist_id": "a42863b9-1ab5-4fb0-8124-b431045fced9",
+    "title": "Barking Up The Wrong Tree",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "You're barking up the wrong tree, that's what she said to me",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "f1e11534-963b-471f-afd6-e6daa0413c67",
+    "artist_id": "df2088b2-19b4-496f-93a6-da4c98de9078",
+    "title": "Hit The Ground Running",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hit the ground, hit the ground running",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "f3252ea5-3854-4079-9e10-269b35a6babf",
+    "artist_id": "4df1d89e-90af-46e2-8c6b-9ca59784bd7b",
+    "title": "Live Your Life",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Live Your Life",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "f3d2ca88-ef51-4421-97b2-0cbc8b12e985",
+    "artist_id": "8a757b0e-2bc8-4460-8cef-2fb7f32aa8dd",
+    "title": "Come On Eileen",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Come On Eileen",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "f435abe3-4dbe-4084-bca6-6d0d480eb22e",
+    "artist_id": "1c49c733-a67a-4224-ac98-30bb29c85845",
+    "title": "Piece of My Heart",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Piece of My Heart",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "f5b03dea-a72e-4811-852e-8f16554b9f81",
+    "artist_id": "c8c9c5ef-c8bb-468b-ab14-8199c47dfe59",
+    "title": "Better Late Than Never",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "It's better late than never, never too late",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "f6009aea-6804-421b-8e59-52ee80857b31",
+    "artist_id": "01813779-2bd5-45a0-bd2f-b7875b6a2d08",
+    "title": "Success",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Success is the best revenge",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "f6e39eb6-6e47-4883-bd44-1868fde59f5a",
+    "artist_id": "bf26765a-fef6-447d-907c-d69058760868",
+    "title": "Keep Your Chin Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Keep your chin up, I know it seems like no one's in your corner",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "f700c87c-4734-4dfc-af36-09c1f5a661a4",
+    "artist_id": "7d041c75-b329-43c7-8bf7-ea3296906c18",
+    "title": "Bring Me to Life",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Bring Me to Life",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "f77e158f-d083-4a0a-8f33-18335220183b",
+    "artist_id": "807d816a-8777-4265-bc36-bcccaf6317ef",
+    "title": "Moving On Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Movin' On Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "f797d4b4-411a-41f0-87df-b91e238db229",
+    "artist_id": "d69148af-848d-4a1b-9673-5a0565f6be1a",
+    "title": "Steal My Thunder",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "You can steal my thunder any time",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "f8ffbc45-12fc-4a5c-857c-030346f075db",
+    "artist_id": "f697fa35-38a2-430b-a012-52fb6bb52890",
+    "title": "Break A Leg",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Break a leg, all my life I've tried to avert incidents",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "fb19e641-fd0f-4443-85f0-c9ab043202c5",
+    "artist_id": "aa000001-0000-0000-0000-000000000008",
+    "title": "Sing",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Sing",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "fc8ab5f7-bb6a-4401-ba5a-fd8fbc9d8f2e",
+    "artist_id": "5685cec0-41b8-43e9-8c4f-ed32d006b00f",
+    "title": "Cat Out Of The Bag",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "She doesn't know my secret, if she knew that would let the cat out of the bag",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "fd0c72c3-1c8c-405f-9531-e097148e0e2f",
+    "artist_id": "72aaaad6-d191-47cc-a13b-69da8f12fefb",
+    "title": "Balls In Your Court",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "The ball is in your court, tell me just what you want",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "fd6bf01d-275a-4706-a4a6-458d774d54e1",
+    "artist_id": "37d3b0aa-858f-4a0e-9eb3-13b83d63c500",
+    "title": "Hung Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Hung Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "fda4df07-c032-471c-bbb2-cc755252a6b7",
+    "artist_id": "c74efc87-1b3b-4feb-8489-4216e9280168",
+    "title": "Takeover",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Takeover",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "fdfb99c2-187a-4bfd-8d30-de3c17abb53a",
+    "artist_id": "9921764d-6d79-4f14-845f-f52dd9b36fa4",
+    "title": "Wake Me Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Wake Me Up",
+    "created_at": "2026-07-05T16:57:09.917132+00:00",
+    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "fe4fd47f-5b14-4652-8e0c-59c265c70091",
+    "artist_id": "571b6cee-7de4-472d-80c7-c8503431b5de",
+    "title": "Get Out of My Dreams",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Get Out of My Dreams, Get Into My Car",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "fe67e705-341b-4273-b883-6b333cb77b69",
+    "artist_id": "37d3b0aa-858f-4a0e-9eb3-13b83d63c500",
+    "title": "Dress You Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Dress You Up",
+    "created_at": "2026-07-05T16:57:10.273709+00:00",
+    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "fef58fd1-dcf4-456e-8979-852d2d9a09b9",
+    "artist_id": "6f20aff4-2e17-4bbc-a9bc-f9db1775e645",
+    "title": "Money, Money, Money",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Money, Money, Money",
+    "created_at": "2026-07-05T16:57:10.171274+00:00",
+    "updated_at": "2026-07-05T16:57:10.171274+00:00"
   }
 ]

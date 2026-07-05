@@ -1,5 +1,167 @@
 [
   {
+    "id": "010f32cc-7639-4949-8c52-743cfb3c2cfa",
+    "song_id": "52b49ff4-9fe2-4e13-89ac-4bf0a1b372c0",
+    "vocabulary_id": "c7ac564e-0c7c-41da-8d40-964d2c97d006",
+    "line_text": "I'm sensitive, I'd like to stay that way",
+    "highlighted_word": "sensitive",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "01799df3-ab27-437d-b2a1-785b68bbfdbd",
+    "song_id": "abaa29f7-3122-4f6f-94e6-e277f6d479ba",
+    "vocabulary_id": "09a190b5-eb21-4cc5-95a3-6e6e94e518b9",
+    "line_text": "Let It Go",
+    "highlighted_word": "go",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "01f61b83-a118-4939-bd6d-59dbf65f78a5",
+    "song_id": "14a8b120-7612-4bdf-b856-c9431e785a32",
+    "vocabulary_id": "a3ee7756-e89c-4624-bd11-9e359d9264b1",
+    "line_text": "You and I, baby, nothing else could ever be better",
+    "highlighted_word": "and",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "034273e7-c396-460c-8974-6bdfd1ea73e0",
+    "song_id": "f1e11534-963b-471f-afd6-e6daa0413c67",
+    "vocabulary_id": "6e86d1be-9460-4657-b8b5-fd6505009007",
+    "line_text": "Hit the ground, hit the ground running",
+    "highlighted_word": "hit the ground running",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "034ddac1-2690-490a-b0df-c224466e0503",
+    "song_id": "60dd4d84-10ff-451c-8399-ec3446be7b7b",
+    "vocabulary_id": "fc94bf01-d299-4411-9292-2bc43f604b7a",
+    "line_text": "Looking Into You",
+    "highlighted_word": "look into",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "043849f5-ecd1-44fe-989c-35f866572307",
+    "song_id": "00cc1f1e-ee54-4a4d-affb-ee22a4b95371",
+    "vocabulary_id": "78d5cdd6-f4d7-4411-83d2-b7800703d0c1",
+    "line_text": "Bring It All Back",
+    "highlighted_word": "bring back",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "0487d234-5958-4466-a369-0daafe517490",
+    "song_id": "aa8790e8-1754-4528-a4ea-5ead1d153e6d",
+    "vocabulary_id": "64a2a2c6-6608-4b2e-b1ca-631961af8726",
+    "line_text": "You get the best of both worlds",
+    "highlighted_word": "the best of both worlds",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "0490e385-4af0-44ab-b741-ea79f1e0f9ef",
+    "song_id": "9f28fa84-5bfb-4a9f-8acf-7e2a304018de",
+    "vocabulary_id": "bc951f32-831e-49ce-9dc1-8f70b0411a6d",
+    "line_text": "I'm still loving you, I need your love",
+    "highlighted_word": "still",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "055c66a5-e0c2-47c4-8154-fe8d0f6e65d0",
+    "song_id": "bd6980b7-7c2e-4d65-87c0-d1729badaf9f",
+    "vocabulary_id": "838e3e18-8038-41d9-8d24-b0cc241d0abd",
+    "line_text": "Pick up the pieces",
+    "highlighted_word": "pick up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "05db215c-2617-4da6-874c-f5955659e992",
+    "song_id": "718148a7-c253-4c68-93be-b5b2a4485d6e",
+    "vocabulary_id": "6c2ea626-031b-411a-851d-3e1fc24eefe8",
+    "line_text": "Carry out your plans",
+    "highlighted_word": "carry out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "06f110be-259a-4329-bf69-caa1554c589b",
+    "song_id": "f797d4b4-411a-41f0-87df-b91e238db229",
+    "vocabulary_id": "7fc21034-f74a-4ba7-9cf4-3467b41ee116",
+    "line_text": "You can steal my thunder any time",
+    "highlighted_word": "steal someone's thunder",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "0758041e-c066-47ee-9199-f8e97d95ac76",
+    "song_id": "2ab7d6cb-0135-497a-b6dc-18dfbfc421dd",
+    "vocabulary_id": "6ab1c1ea-da38-42fa-b6ff-963a1225761d",
+    "line_text": "Grow Up",
+    "highlighted_word": "grow up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "07daa0e6-1983-4ca8-9f32-e98c36b2ab64",
+    "song_id": "e5d871be-3163-47bc-814d-5342db4dedb4",
+    "vocabulary_id": "624efac2-2220-4439-8533-5bfd95f03366",
+    "line_text": "Point out the stars to me",
+    "highlighted_word": "point out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "09b3ccff-6fce-422d-86c0-d7bcd404ad01",
+    "song_id": "34115375-c431-43fb-bc84-22b1c0566b8c",
+    "vocabulary_id": "192de8a7-8247-48f5-b3dd-e3ca4fdcaee6",
+    "line_text": "Don't bite off more than you can chew",
+    "highlighted_word": "bite off more than you can chew",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "09e4ee11-a365-4e9b-8fa9-1ddd17c25a4e",
+    "song_id": "71497c18-6fd7-49ea-8c35-ef0244e48f4f",
+    "vocabulary_id": "266ea2e2-e27c-4980-b9c6-4eecb9d51faa",
+    "line_text": "Run",
+    "highlighted_word": "run",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "0b019ee8-df06-4c91-989a-e3f046fabaa7",
+    "song_id": "1096e4b1-d245-46b4-a74c-8a393182f4fc",
+    "vocabulary_id": "ffe7a7d3-16a7-45e8-9353-85bccfd668a2",
+    "line_text": "Calm Down",
+    "highlighted_word": "calm down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "0c01d836-b566-4fa9-bdb6-dcdb663edfa5",
+    "song_id": "1c74a9d4-2b92-423b-a946-7fbb6b5451f0",
+    "vocabulary_id": "daddca52-efeb-4c0a-8948-eed6eb4b18aa",
+    "line_text": "I look at you all, see the love there that's sleeping, while my guitar gently weeps",
+    "highlighted_word": "while",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "0ca76af2-e6fd-420b-a0b4-168a3bd76d9b",
+    "song_id": "2a2094a0-4b7f-4905-86c2-817e8558959f",
+    "vocabulary_id": "c54253d4-c457-4288-a1c3-f2c7f49fd6aa",
+    "line_text": "Lay Me Down",
+    "highlighted_word": "put down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
     "id": "0f0f1a7b-5549-4a6a-85d3-181020726bca",
     "song_id": "50000001-0000-0000-0000-000000000013",
     "vocabulary_id": "eab5f5ed-816d-477a-b042-63dafc5efa80",
@@ -7,6 +169,42 @@
     "highlighted_word": "matter",
     "line_index": 1,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "10b38f61-850e-4589-a628-0bce711bcea1",
+    "song_id": "f15559e5-44b8-485d-a4ae-71c004cba3aa",
+    "vocabulary_id": "05c8c467-ebd5-4f28-af69-cf7e3aa6bd54",
+    "line_text": "You're barking up the wrong tree, that's what she said to me",
+    "highlighted_word": "barking up the wrong tree",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "10c15fe8-3477-4006-b4bb-195ae863acb3",
+    "song_id": "bfe8d714-f432-4331-8a0e-64f28babfbbf",
+    "vocabulary_id": "ee22d674-babe-4e91-b099-64ca3dfb6e29",
+    "line_text": "Call Me Maybe",
+    "highlighted_word": "call",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "1124429e-06cb-49cc-969f-3bc8683c00ef",
+    "song_id": "68ed8cf5-f6c2-4a51-b284-cce77bbc5755",
+    "vocabulary_id": "c4d7da66-0c89-490a-b3b9-30ad9566a696",
+    "line_text": "Check It Out",
+    "highlighted_word": "check out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "123ae7eb-5a52-49c1-9955-f5692b689561",
+    "song_id": "2facf97a-593a-4d63-bb94-0d3f5a453c9e",
+    "vocabulary_id": "5677da16-3c04-4d25-b307-367ca3fc936c",
+    "line_text": "Fill Me In",
+    "highlighted_word": "fill in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
     "id": "12ac7201-f2c3-4047-94b6-a33a0fb44419",
@@ -18,6 +216,177 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "133d4e0e-71cb-4cfd-8ea0-58d1c806a514",
+    "song_id": "067091e1-be03-474a-b224-81223ac9b473",
+    "vocabulary_id": "bda4a788-c4b0-4a0d-acfa-2d9bb874acb2",
+    "line_text": "Before you go, was there something I could've said to make your heart beat better?",
+    "highlighted_word": "before",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "13d2a6a8-8ba9-4689-aeb6-c651ff2c2722",
+    "song_id": "62b9c3e8-92b4-4820-bec6-1a8321f67032",
+    "vocabulary_id": "854e0f69-2a6a-42c9-895a-b5f11fdf73b7",
+    "line_text": "Is that why you pulling my leg?",
+    "highlighted_word": "pull someone's leg",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "141299ae-3398-4a38-86e2-3fcd68a90fb5",
+    "song_id": "d4305355-53d2-436f-937f-798f834d7e9c",
+    "vocabulary_id": "5a4a9ac4-e802-4708-9b1d-644ba4fa8a9b",
+    "line_text": "Throw It Away",
+    "highlighted_word": "throw out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "152f9a99-604f-42d5-a3da-b12bbd1686d7",
+    "song_id": "c884a853-40c0-40f8-a2db-4f657436b497",
+    "vocabulary_id": "c19f5d1a-7bcf-46e7-9f5e-714c1ff5680a",
+    "line_text": "Get Over It",
+    "highlighted_word": "get over",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "15a7a8ad-9961-4c2a-8185-386c96256e1a",
+    "song_id": "47714ef3-fc70-4a56-ace4-9b02a8439cfa",
+    "vocabulary_id": "5ab2a52c-fe4a-405c-9c0e-410027452a6a",
+    "line_text": "Don't cut off your feelings",
+    "highlighted_word": "cut off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "15ac5f84-5531-460e-be68-6cc4cdfd153d",
+    "song_id": "06bc6b62-592f-4506-98a1-35d6f88fc0f6",
+    "vocabulary_id": "51dd10a1-4180-46b5-91b6-a63920535091",
+    "line_text": "Get Off of My Cloud",
+    "highlighted_word": "get off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "15f2a4ce-290c-4b9a-9a96-a77a4acd2fea",
+    "song_id": "70e77bbb-b0fc-42ad-8e06-bff324a49f2c",
+    "vocabulary_id": "6764b622-1efa-4eaa-be00-ae2d35a0d125",
+    "line_text": "Come down to the river",
+    "highlighted_word": "come down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "163273ec-f725-4520-af18-abcaf7405b33",
+    "song_id": "10cf8f47-5021-467e-8e43-79291273f2b5",
+    "vocabulary_id": "1ec179c3-e041-4259-af0b-fbea0b49b017",
+    "line_text": "I Heard It Through the Grapevine",
+    "highlighted_word": "hear",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "168d03d0-5f9b-4716-b803-93bb56be80cd",
+    "song_id": "12647367-88ab-4b77-a4e2-fae790ff0722",
+    "vocabulary_id": "08d83754-22e3-4566-b464-d4b3053a43f1",
+    "line_text": "Action speaks louder than words, don't be deceived by all those fancy talkers",
+    "highlighted_word": "actions speak louder than words",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "172d3c82-479a-479a-a7e1-6a2052ed5315",
+    "song_id": "3051cb25-e46f-490b-a6d4-4a45a9892813",
+    "vocabulary_id": "e101ba56-7ec9-40c6-b65a-1f9ca2170883",
+    "line_text": "Bridge Over Troubled Water",
+    "highlighted_word": "water",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "1a2386ed-815d-4409-9ec9-1c600e193a6d",
+    "song_id": "48dcbd6e-8010-4166-bb18-775a6828260b",
+    "vocabulary_id": "10b646fd-70be-4330-ae78-cfae33195365",
+    "line_text": "Pay Me My Money Down",
+    "highlighted_word": "pay off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "1b97d0dc-880a-4583-b0f2-6345f44d81a5",
+    "song_id": "fe4fd47f-5b14-4652-8e0c-59c265c70091",
+    "vocabulary_id": "e99a0d8f-0776-403f-8f37-47b09b3718fb",
+    "line_text": "Get Out of My Dreams, Get Into My Car",
+    "highlighted_word": "get out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "1becb021-f980-4b38-be26-ef138735ccbe",
+    "song_id": "b587f1e6-5bfa-4e4f-ab06-5444bb136938",
+    "vocabulary_id": "23ba410b-cbf1-4a86-bb74-3a56059ff4b9",
+    "line_text": "Can we call it a day, now would that be okay?",
+    "highlighted_word": "call it a day",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "1c68891b-4ee8-4200-9933-b76effcb4b3b",
+    "song_id": "7de935b5-bb3a-4e71-9c7a-cfb824dd6ffa",
+    "vocabulary_id": "49409083-c739-4300-adc0-851204ecceb2",
+    "line_text": "Yellow",
+    "highlighted_word": "star",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "1cf71903-f35d-4400-a068-965bf0dd135b",
+    "song_id": "cabd6c5f-4a32-4b91-ab97-b22d785b3f46",
+    "vocabulary_id": "2693d6d8-dcdf-4ab3-954f-6102d7d01564",
+    "line_text": "Stand Up for the Champions",
+    "highlighted_word": "stand up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "1d278171-bca7-4c70-99ab-5632fa776925",
+    "song_id": "c8093bc8-977e-4994-8d16-5a78cb41742b",
+    "vocabulary_id": "0341bfd1-4902-4a87-98c6-bdf0f81c1431",
+    "line_text": "As long as you love me, I don't care who you are",
+    "highlighted_word": "as long as",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "1edaa0b2-5239-49ed-8241-0081884adfe4",
+    "song_id": "0784458f-d822-4f11-8fd9-c75802b524b6",
+    "vocabulary_id": "9499deab-dbf7-4aea-bbd6-ba0e4509be0b",
+    "line_text": "Where Do You Come From",
+    "highlighted_word": "come from",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "2332ad57-3495-46e7-8bef-329344974779",
+    "song_id": "40ceb56c-f9da-4d60-bf33-11f731a57120",
+    "vocabulary_id": "90b71b4b-6625-48f8-8b2a-b24f41ea0590",
+    "line_text": "Knockin' on Heaven's Door",
+    "highlighted_word": "door",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "234aeefd-45be-4e7f-b7f6-2e34ec3cfe66",
+    "song_id": "4e2f8be0-e3a8-4ac2-a9dd-e1836a5d396b",
+    "vocabulary_id": "c61ac358-7c12-4002-9c22-1835264844b0",
+    "line_text": "I Don't Want to Miss a Thing",
+    "highlighted_word": "sleep",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
     "id": "234f7780-9c34-4453-be9b-dc5827f6d252",
     "song_id": "50000001-0000-0000-0000-000000000008",
     "vocabulary_id": "c66707ae-fbea-4e74-b432-87083c00d2b8",
@@ -25,6 +394,123 @@
     "highlighted_word": "prayer",
     "line_index": 0,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "23e3c75d-a62c-4d16-a003-6702cbfafe14",
+    "song_id": "0d27bae6-8c33-4fb8-89b8-bcdfb3fd0dc9",
+    "vocabulary_id": "b2a7e5e9-bcea-4a84-bb4b-e97de5e2637d",
+    "line_text": "Say My Name",
+    "highlighted_word": "say",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "2469a1a6-604e-4a59-9f8e-3436aa9fb255",
+    "song_id": "7269cfa6-2369-4d6d-9f1e-a6f833ac57d2",
+    "vocabulary_id": "ef92136c-ce06-4d41-a5dc-de4b03c78648",
+    "line_text": "Let's go out tonight",
+    "highlighted_word": "go out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "25a3a6aa-d4f9-4ff6-a04f-2453d7a2591d",
+    "song_id": "557b5fc1-1d07-4f8b-b057-6a823363b545",
+    "vocabulary_id": "e6501ed3-ec45-4fde-a893-da0c7974a378",
+    "line_text": "Wrap It Up",
+    "highlighted_word": "wrap up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "25fd0462-ecdc-4a5c-925e-c19d9023e920",
+    "song_id": "fef58fd1-dcf4-456e-8979-852d2d9a09b9",
+    "vocabulary_id": "6fdb5f54-c7e3-4414-861d-15130c945ac3",
+    "line_text": "Money, Money, Money",
+    "highlighted_word": "money",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "27dc1760-f360-4a2b-ad12-d361968c99f2",
+    "song_id": "7ed6b518-1cdf-4536-b083-55a8e030c283",
+    "vocabulary_id": "06cc2816-d59d-476f-9d5f-8ac191f49365",
+    "line_text": "Deal With It",
+    "highlighted_word": "deal with",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "27e26c5b-3491-4ad0-aa49-ee76807a13db",
+    "song_id": "242c02f9-d766-4677-9cc5-31997a8985dd",
+    "vocabulary_id": "279c5eee-adfd-41e1-9f71-783f7d44b52a",
+    "line_text": "Turn On the Lights",
+    "highlighted_word": "turn on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "2840dcf9-1dd9-4e51-904e-e437e1b5467b",
+    "song_id": "e76befa1-1552-420e-a065-d035d159a381",
+    "vocabulary_id": "ebed2f74-cb60-4e57-b171-d6a35c18afe6",
+    "line_text": "When the Sun Goes Down",
+    "highlighted_word": "go down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "288c5795-c776-4441-b9c2-ed10b3751631",
+    "song_id": "eefd5fd7-c796-4368-8b0f-6dc0a888d773",
+    "vocabulary_id": "dd41cc51-b5dd-42fc-98b2-78c3ed259289",
+    "line_text": "Try Everything",
+    "highlighted_word": "try",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "2af76bba-d6a8-4cac-be6b-ec5c8baf625e",
+    "song_id": "8998b117-34b7-4c4d-841b-e912ca3e090d",
+    "vocabulary_id": "a41c1df3-544a-4ee7-8102-7edca841f6bc",
+    "line_text": "I would never fall in love again until I found you",
+    "highlighted_word": "until",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "2bf3e906-44ec-4506-8e9c-cb0f6c0fd98a",
+    "song_id": "353b8dc7-d09a-43d0-bace-0d83b21a6ac4",
+    "vocabulary_id": "37d3f96a-36cc-43a3-8f3b-3fe453e181f3",
+    "line_text": "Nevertheless I'm in love with you",
+    "highlighted_word": "nevertheless",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "2c9efd81-48a8-49be-9993-24f8b0c83f66",
+    "song_id": "6583f45b-b9b0-4497-98cc-0b1d0f0fadba",
+    "vocabulary_id": "ebac3aa0-257c-4d04-9481-0fe869637915",
+    "line_text": "Take My Breath Away",
+    "highlighted_word": "take",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "2d3800d7-8f23-4e7a-a693-471856c8b769",
+    "song_id": "0782b157-2a7e-4697-bc1c-519d936e63a6",
+    "vocabulary_id": "6f8b6889-8c4e-4c8e-98a6-7f655f96b1b8",
+    "line_text": "Take it with a grain of salt, your leavin' ain't gonna bother me",
+    "highlighted_word": "take it with a grain of salt",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "2d9d517f-cf25-455c-bc86-e9a0b4dc73aa",
+    "song_id": "5851afe8-cf93-4edb-b1e5-f0a8dc8a10bb",
+    "vocabulary_id": "a8b8219b-96ef-49e6-ba5c-40aa4200af77",
+    "line_text": "Speak out, let your voice be heard",
+    "highlighted_word": "speak out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
     "id": "2e480afd-ea5d-4515-adaa-a35b2473cd15",
@@ -36,6 +522,60 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "2e604bf4-4f15-4855-a5d2-4eead26be7f9",
+    "song_id": "f3d2ca88-ef51-4421-97b2-0cbc8b12e985",
+    "vocabulary_id": "0d22e142-ad3f-4e01-ae1f-df184f79ad36",
+    "line_text": "Come On Eileen",
+    "highlighted_word": "come on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "2e8c5f41-f892-4be5-b9e8-3361c0bd3589",
+    "song_id": "8e2442dc-74eb-4d51-b581-fc22def55a2a",
+    "vocabulary_id": "1563d3ee-7f9f-44c7-92be-c1049af335b1",
+    "line_text": "Understand",
+    "highlighted_word": "understand",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "3008bc62-0461-47b2-b23d-5c5ba5e0c1fd",
+    "song_id": "f77e158f-d083-4a0a-8f33-18335220183b",
+    "vocabulary_id": "369ab104-905d-40c1-8326-e55f904c5d16",
+    "line_text": "Moving On Up",
+    "highlighted_word": "move up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "304bcc76-ca2a-4ecc-b68c-cdf14a4f3394",
+    "song_id": "47977744-fb09-4d28-85e8-e2e2595d2513",
+    "vocabulary_id": "05be8399-ecb3-4fc6-a479-a8f6ddcd861f",
+    "line_text": "Take my hand, take my whole life too",
+    "highlighted_word": "too",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "3144fa58-5c08-49a6-affa-b3ed6ab7bea8",
+    "song_id": "22f39131-d8d1-48a3-9fe0-861d333e0c5e",
+    "vocabulary_id": "fe74d3b1-06ac-4e4a-91a5-8539b9851f0b",
+    "line_text": "Going Through the Motions",
+    "highlighted_word": "go through",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "3352bfc9-9789-4df0-815c-3ed2f175ecff",
+    "song_id": "dcdea908-519b-4fbe-9a03-11734183161b",
+    "vocabulary_id": "77dba7b9-c58b-4146-9944-76997519f800",
+    "line_text": "So, so what? I'm still a rock star",
+    "highlighted_word": "so",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
     "id": "34faca8b-b1a9-43d9-9ce9-a9bdf8a32832",
     "song_id": "50000001-0000-0000-0000-000000000026",
     "vocabulary_id": "b87b6aac-aee3-425c-b0cc-1a886bd7e8af",
@@ -43,6 +583,24 @@
     "highlighted_word": "look for",
     "line_index": 2,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "352781eb-dfd1-485a-9646-20e80d501dc8",
+    "song_id": "e5a26019-b1d2-4e56-a8a8-f77093ea0169",
+    "vocabulary_id": "bf8081f0-79ca-4591-be27-721a801826d4",
+    "line_text": "Hold On",
+    "highlighted_word": "hold",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "36fd4778-5451-4e46-8b24-09832fe1e986",
+    "song_id": "5f9e2b88-055f-4f08-8a91-b9f0369ceb3f",
+    "vocabulary_id": "192b90f1-46b0-4b85-a22d-a64835814b0c",
+    "line_text": "Stand By Me",
+    "highlighted_word": "stand",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "37185aa1-d85b-4b42-82cf-9d17730bf49d",
@@ -54,6 +612,51 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "3737d925-3b27-45ea-b604-e8c1e3eed35b",
+    "song_id": "9ae4e60e-3326-440f-9fac-ed66b44edf11",
+    "vocabulary_id": "2c03e2a2-bc11-49e2-852e-f8948b277917",
+    "line_text": "Wipe Out",
+    "highlighted_word": "wipe out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "37c4af09-6044-43eb-b4c8-3ac3db2a7726",
+    "song_id": "273378d6-a6a6-416d-ad18-0cc9bffc5897",
+    "vocabulary_id": "45c5cdb0-3cd8-4748-9fdd-511ce05f1d85",
+    "line_text": "Don't Look Down",
+    "highlighted_word": "look down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "381c1ba3-1dab-44b8-9b6f-7b0a51334076",
+    "song_id": "dcd52d69-c71e-4004-bada-8b20f44d6de4",
+    "vocabulary_id": "3f045f8c-30f2-45f5-bd8c-1b63fb40fbd9",
+    "line_text": "You've Got a Friend",
+    "highlighted_word": "friend",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "3a623b31-da4b-4998-a445-b6766f732320",
+    "song_id": "bd6980b7-7c2e-4d65-87c0-d1729badaf9f",
+    "vocabulary_id": "42dd8af3-c7fa-480b-befe-54b2f685ef8d",
+    "line_text": "Pick Up the Pieces",
+    "highlighted_word": "pick out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "3bdf52ef-4a2c-4fe4-9927-647052e548a9",
+    "song_id": "e647357f-1b21-4c4e-86fe-3b84fade0d69",
+    "vocabulary_id": "faf3ddb1-1f14-42b3-b557-f57b3f437b34",
+    "line_text": "Turn Off the Light",
+    "highlighted_word": "turn off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
     "id": "3c3b9773-da19-418d-8587-bd8e68cfc5a7",
     "song_id": "50000001-0000-0000-0000-000000000023",
     "vocabulary_id": "150eb92b-756f-42aa-b0f0-59446c3c6b22",
@@ -61,6 +664,69 @@
     "highlighted_word": "waiting",
     "line_index": 3,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "3d8edcfd-15ac-48b2-9c9d-95fbf8641451",
+    "song_id": "7ec620ed-3b87-4822-937b-a8057990928a",
+    "vocabulary_id": "91f3ac5f-53d5-4701-af49-d88cc1328a81",
+    "line_text": "Try",
+    "highlighted_word": "try on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "3e670956-978f-406d-8be7-a09ed7055d72",
+    "song_id": "98c45418-54ed-4fee-862b-72526f589632",
+    "vocabulary_id": "b37200b5-2375-4fb1-af0b-2b8707b511b7",
+    "line_text": "Look Out (Here Comes Tomorrow)",
+    "highlighted_word": "look out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "3e907bee-eea6-4aba-91ce-066f785368dc",
+    "song_id": "125c9db7-cc86-46ff-aa0e-274269249c49",
+    "vocabulary_id": "bdecae97-841d-4c44-828e-21f90f1ecc04",
+    "line_text": "Give Me Everything",
+    "highlighted_word": "give",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "3ee625d9-e313-47ca-ad4f-0559ec5c884c",
+    "song_id": "43ebb85c-5585-470e-b18b-1092ffd1a5da",
+    "vocabulary_id": "befbc6af-5575-47c1-9f78-21300f0bb084",
+    "line_text": "Despite all my rage I am still just a rat in a cage",
+    "highlighted_word": "despite",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "3f210d69-d2a2-408a-8a61-1e2637169462",
+    "song_id": "5b07c9d0-cd35-4f29-96d5-a117bd306303",
+    "vocabulary_id": "b810d848-12eb-45de-a6a9-14817e901ae8",
+    "line_text": "Sign of the Times",
+    "highlighted_word": "sign up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "3fcea13d-76e9-468a-8ae9-5a65e0ae8ce1",
+    "song_id": "d8e9357e-f662-460d-8485-540315fc71fd",
+    "vocabulary_id": "ebcc6891-51b5-4cd7-ae8f-149034273e91",
+    "line_text": "Baby Come Back",
+    "highlighted_word": "come back",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "40602041-75b6-487b-a26d-1c42a54bd167",
+    "song_id": "77941bb0-075b-4920-a138-b8eaa79b9d63",
+    "vocabulary_id": "3390aff7-9855-4575-93bf-9081c47a210f",
+    "line_text": "In the Still of the Night",
+    "highlighted_word": "night",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "40f33af0-e323-458b-b571-0409f3834edf",
@@ -72,6 +738,78 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "410fa3e0-9eb2-44da-b686-747682d3a852",
+    "song_id": "edbc768d-bcdd-4cd5-b10a-cf288918a16e",
+    "vocabulary_id": "bddadacb-46e4-4ff2-ba2a-9ccdc8be53fc",
+    "line_text": "Runaway",
+    "highlighted_word": "run away",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "41139dc9-ae6b-43a5-a4f1-9eb03cb2918a",
+    "song_id": "a673b964-f84a-4b6d-a873-6ec579f8dc8f",
+    "vocabulary_id": "4581a89b-17a6-4002-9d6b-14f7dcb50b81",
+    "line_text": "I Want to Hold Your Hand",
+    "highlighted_word": "want",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "42bb6f16-56a6-4167-8e66-cfdd852a0c06",
+    "song_id": "16a1be74-e37f-44ad-bb50-5f898f45b6e5",
+    "vocabulary_id": "69719f4e-64e0-4b4a-996d-31e58959381f",
+    "line_text": "Throw It All Away",
+    "highlighted_word": "throw away",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "43bc0727-cad9-4215-9981-e74f477ac9a7",
+    "song_id": "a6a648b0-acc3-4cd8-aaf7-e2a082c79a99",
+    "vocabulary_id": "b8009c55-c57f-4e69-b482-7c845b645d08",
+    "line_text": "Bring Me Up",
+    "highlighted_word": "bring up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "443f92b1-fa02-4167-a4af-5b4803c69f95",
+    "song_id": "37dfcffd-c322-428c-8766-ba13f2e41695",
+    "vocabulary_id": "26f04de9-91a7-4e2d-a3d7-70ada6ea07d8",
+    "line_text": "Get Through This",
+    "highlighted_word": "get through",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "44a6a06a-49b2-406c-b190-848add8d9e7d",
+    "song_id": "fd6bf01d-275a-4706-a4a6-458d774d54e1",
+    "vocabulary_id": "1ff2eee0-6f1a-4261-bd06-c2a31cf4af52",
+    "line_text": "Hung Up",
+    "highlighted_word": "hang up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "456d82bf-8ba4-45b0-b7d6-06c725f6f7ab",
+    "song_id": "b624aced-38a8-40d7-9f99-1ad3c989a88c",
+    "vocabulary_id": "40d743df-b57b-43b1-bb8c-db2e7519d56a",
+    "line_text": "If I were a boy, I think I could understand",
+    "highlighted_word": "if",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "4582345b-ae43-4ffd-b838-7cd00a7e1f7b",
+    "song_id": "b534be16-414a-4048-ab2a-68079bdc4c0e",
+    "vocabulary_id": "377921ee-c9d3-43df-9f83-24d0fa068929",
+    "line_text": "When the alarm goes off",
+    "highlighted_word": "go off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
     "id": "45c248bf-2b4e-49ff-bd67-7a369d46e76d",
     "song_id": "50000001-0000-0000-0000-000000000016",
     "vocabulary_id": "e95a0ec9-007b-4f7c-ae20-c159d6d18c67",
@@ -79,6 +817,87 @@
     "highlighted_word": "throw",
     "line_index": 1,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "49982524-73fa-4bae-833c-51c6ca05ac8d",
+    "song_id": "0892c8bb-0d75-4075-8e90-a3da64ec7b07",
+    "vocabulary_id": "cb6466a8-a6ba-4d27-a3e1-91c12799f8f8",
+    "line_text": "Dream On",
+    "highlighted_word": "dream",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "4a0037a0-93c0-4c00-88f3-0b059d6207a2",
+    "song_id": "1865c653-3a36-4477-9761-b8fa2375669a",
+    "vocabulary_id": "dafeb145-4903-41f4-9c7c-ce585c601942",
+    "line_text": "Get Along",
+    "highlighted_word": "get along",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "4b33c167-06d3-4270-9b67-15ca45b634a9",
+    "song_id": "8ab920b7-77ad-47c7-8e08-d49213b099ff",
+    "vocabulary_id": "37e0e20c-1675-4942-924a-9edfa3f7c55c",
+    "line_text": "Take On Me",
+    "highlighted_word": "take on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "4d20b6d1-3f32-4ae4-b420-9995ce92c73f",
+    "song_id": "f6009aea-6804-421b-8e59-52ee80857b31",
+    "vocabulary_id": "2a1fba05-b40a-49b4-8f7f-d8b71ba00a76",
+    "line_text": "Success is the best revenge",
+    "highlighted_word": "success",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "4e4eb41e-0160-47d3-8f02-efea72603b9e",
+    "song_id": "c1861b69-aaee-4b16-8c0b-420bec6fd920",
+    "vocabulary_id": "39003e37-8f21-4dad-8f03-df7a204adef6",
+    "line_text": "I burn the midnight oil and I sleep all day",
+    "highlighted_word": "burn the midnight oil",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "4eff1321-ac35-4d30-819a-dc09caa73a61",
+    "song_id": "34373dcb-4790-4047-8cab-f93f199961c2",
+    "vocabulary_id": "bcb678fe-4b5e-4671-b952-207116b5c5cc",
+    "line_text": "Never Gonna Give You Up",
+    "highlighted_word": "give up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "50433962-82ef-4c83-a4a6-e2155b4519c1",
+    "song_id": "466c75aa-f9d7-4aca-a8f5-d0bdb0a1456d",
+    "vocabulary_id": "1e501925-a3b6-473d-90b3-20a378493a97",
+    "line_text": "I Will Always Love You",
+    "highlighted_word": "will",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "50d48fc5-710d-4f89-bedf-536dbe73935e",
+    "song_id": "ea4023ae-f074-45e8-9877-8135cff10b31",
+    "vocabulary_id": "bec1835c-e243-4bfc-980e-a27b45ca6cbd",
+    "line_text": "Work it out, work it out",
+    "highlighted_word": "work out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "51387dee-c4dd-4de8-9b02-f70fb9e982dd",
+    "song_id": "8b5eebd5-bc74-4559-9b2a-e5089bcdcdf7",
+    "vocabulary_id": "36c3f5ae-916c-4226-8884-a59fe008df4d",
+    "line_text": "Mix It Up",
+    "highlighted_word": "mix up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "52704f4b-d4d7-4dfc-aa58-9160d23abeff",
@@ -90,6 +909,51 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "52b55b4f-6d4d-4589-91cf-397015025c7f",
+    "song_id": "4379961b-b485-48eb-9039-11edd7582b4e",
+    "vocabulary_id": "6eeb34d6-a0b8-47ae-b076-bb7ebcdaab92",
+    "line_text": "What Is Love",
+    "highlighted_word": "what",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "52f29978-1dc7-4bdb-bb1c-a541e3c6ac4e",
+    "song_id": "150bb516-d6c4-4677-afe9-5aaf83c1c667",
+    "vocabulary_id": "d3dc2d26-f96f-4807-b68a-2ddeac29e0cb",
+    "line_text": "Get On Up",
+    "highlighted_word": "get on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "534de334-ba5b-4dee-9536-768ff92dd3f9",
+    "song_id": "dbd9301d-8fe1-4f22-84f7-fc4f78880332",
+    "vocabulary_id": "55c59ddf-6052-4db6-90ff-400c7435ce85",
+    "line_text": "Put On a Happy Face",
+    "highlighted_word": "put on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "54b3e1c2-7daa-4569-bd24-776e1f30237f",
+    "song_id": "efa1d955-199d-489a-81e0-887c3e7bf4d5",
+    "vocabulary_id": "e4e99648-dc8e-40e1-a220-266b597564fc",
+    "line_text": "I just haven't met you yet",
+    "highlighted_word": "yet",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "55a75059-cfa6-49f9-a0bb-a7e98d137830",
+    "song_id": "a3720e91-9802-4c3f-bb91-55b010c15fd5",
+    "vocabulary_id": "1dacd643-086f-4e89-8567-d4ec84b16101",
+    "line_text": "We split up but never apart",
+    "highlighted_word": "split up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
     "id": "5753cd60-7165-422a-89b4-3b5578ad875f",
     "song_id": "50000001-0000-0000-0000-000000000001",
     "vocabulary_id": "5e1ce42d-bba6-4751-9a6d-c977c8bf0ca9",
@@ -99,6 +963,60 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "57f3b4d1-43b8-487e-bb3e-fcf9359edd8f",
+    "song_id": "7b2cc228-a2d2-4729-92be-007407d00265",
+    "vocabulary_id": "3e02fdb8-9602-43a4-b4d8-908fa48d6b93",
+    "line_text": "Before you pass away",
+    "highlighted_word": "pass away",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "583f64d3-e70e-4f56-8de5-b2db1e961d85",
+    "song_id": "e4ec0cb9-8de5-42a2-9d28-45616a08311a",
+    "vocabulary_id": "2f1d38ac-0ed3-4a99-a3aa-f59501eeaf35",
+    "line_text": "Break the ice, take your time",
+    "highlighted_word": "break the ice",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "5c88adec-e8cb-4cda-98e3-c2e1e3925c42",
+    "song_id": "59f4ee84-278a-40e3-82c4-edec7b9d716d",
+    "vocabulary_id": "bd8f5928-3b1c-418d-987b-056941e05c90",
+    "line_text": "Spill the beans, tell me what you want",
+    "highlighted_word": "spill the beans",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "5d711fa4-4a7a-49d5-be01-f0a34d13f5d5",
+    "song_id": "3000c246-c762-4422-b40f-9aaeea72d52f",
+    "vocabulary_id": "b4b47558-06d8-472a-81a5-cea464de1349",
+    "line_text": "Keep Your Head Up",
+    "highlighted_word": "keep up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "5d7e93b4-8ef7-4d42-bb9b-e08bf6dcd8d6",
+    "song_id": "9ab4073b-5606-4442-ae8d-dad82bef2f3c",
+    "vocabulary_id": "4f23a7ba-357e-45e9-a04b-8631e60a2e91",
+    "line_text": "Smile",
+    "highlighted_word": "smile",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "5f14242d-7880-43d2-888a-8e4f085013ea",
+    "song_id": "5b56aa2d-8621-4b49-af2f-68ec3b1c8430",
+    "vocabulary_id": "6945949a-bb9f-4cff-b3a0-2ef84ab764d1",
+    "line_text": "Never mind, I'll find someone like you",
+    "highlighted_word": "never mind",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
     "id": "5f5719ac-1f74-44aa-ad53-84e67cd77db5",
     "song_id": "50000001-0000-0000-0000-000000000016",
     "vocabulary_id": "39555b05-7130-4282-bff3-55028b2d193b",
@@ -106,6 +1024,33 @@
     "highlighted_word": "realize",
     "line_index": 3,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "5ff697da-6f3a-4a95-9aac-ec141ec6bc89",
+    "song_id": "df0df014-04a7-4824-8696-ef370fce013d",
+    "vocabulary_id": "6fc6ceb8-adf1-4918-8b6c-b84384da58c7",
+    "line_text": "I Know What You Did Last Summer",
+    "highlighted_word": "know",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "625726fd-2f6c-4c62-b4e5-1597efaa1b92",
+    "song_id": "8e342fb4-eca6-4823-94f3-4f34af04f598",
+    "vocabulary_id": "1c456364-9a58-4c0a-a254-36a2218bc9f2",
+    "line_text": "Let's start off right",
+    "highlighted_word": "start off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "627acd2a-2c96-4bad-819b-e8317b2b0ca1",
+    "song_id": "f6e39eb6-6e47-4883-bd44-1868fde59f5a",
+    "vocabulary_id": "004ce9d5-17dd-485c-8ec6-864731e22989",
+    "line_text": "Keep your chin up, I know it seems like no one's in your corner",
+    "highlighted_word": "keep your chin up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "62956d6b-1281-4494-b0d9-3dea893fa632",
@@ -126,6 +1071,60 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "63f75f90-264c-4d73-a41b-6ca0bec6e2dc",
+    "song_id": "fe67e705-341b-4273-b883-6b333cb77b69",
+    "vocabulary_id": "c570b4cb-d428-45aa-a321-2454f30852af",
+    "line_text": "Dress You Up",
+    "highlighted_word": "dress up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "64031e90-b83d-49fa-ae76-2e870d4c0bfe",
+    "song_id": "ee9cdf0a-910a-47f6-b665-67b32ebb01d2",
+    "vocabulary_id": "af7fb739-5315-4abf-80cb-7c89ddee5d1d",
+    "line_text": "Sit Down",
+    "highlighted_word": "sit down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "6718a1d3-5657-4acc-a7d7-dcc63aed534e",
+    "song_id": "82ae04b9-4062-472f-aaf9-8cf78dd46970",
+    "vocabulary_id": "49cfc47c-066b-440b-a96e-de3b3808051e",
+    "line_text": "Time after time",
+    "highlighted_word": "time",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "686a11ca-8ef0-4ca5-9bdc-143e0dfdb66b",
+    "song_id": "27a90305-4006-4479-9afb-ccf41607699e",
+    "vocabulary_id": "579acd8d-1a6d-4327-b267-396d9c757b40",
+    "line_text": "I'm not a piece of cake for you to just discard",
+    "highlighted_word": "piece of cake",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "68f163eb-9762-4d0e-8b77-874754bae65c",
+    "song_id": "1f6f30f7-464d-463f-af60-6faeeba4188a",
+    "vocabulary_id": "f515ed1c-6f05-42d5-9212-43cc97fcabc1",
+    "line_text": "Start Me Up",
+    "highlighted_word": "start",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "6924efac-88f8-424f-b51d-1a79997567d7",
+    "song_id": "245ba53b-f657-48b8-9907-44c713663f65",
+    "vocabulary_id": "b96f8574-c386-4f1f-8337-1d55c248be2c",
+    "line_text": "Picture",
+    "highlighted_word": "picture",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
     "id": "692dbf3f-62a8-419f-8900-0bd1292105c8",
     "song_id": "50000001-0000-0000-0000-000000000013",
     "vocabulary_id": "293868f1-fb10-417a-8bb5-21cd040fcf6e",
@@ -133,6 +1132,168 @@
     "highlighted_word": "fall",
     "line_index": 2,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "6a1dd16a-823f-4d07-9740-828d3a9aa332",
+    "song_id": "784bf543-08aa-430f-a2d9-0af2302664e7",
+    "vocabulary_id": "1b0ffe35-8945-4cfe-8111-2888141cf89f",
+    "line_text": "Torn Apart",
+    "highlighted_word": "take apart",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "6a8d1274-fad3-4200-b99b-7cf5569fa126",
+    "song_id": "d8d0bd2b-7671-45d8-85fe-8c446ce530c9",
+    "vocabulary_id": "c1b27946-4af4-434f-a18f-09db7f13c70a",
+    "line_text": "Kill two birds with one stone, watch me fly",
+    "highlighted_word": "kill two birds with one stone",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "6ab76433-6167-463f-adb0-65359874eb5a",
+    "song_id": "78c6ea57-9ba3-40aa-9a49-2be61a268712",
+    "vocabulary_id": "7d3c04e9-e427-4964-b7bb-ae0e448c4e9e",
+    "line_text": "Get Away",
+    "highlighted_word": "get away",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "6b0d0978-98a9-40be-8e81-1fa6620e330d",
+    "song_id": "4ac52c9b-fc1f-4955-81ec-486fb7a0fec3",
+    "vocabulary_id": "989bacef-0de8-461d-83e2-eadf67cce237",
+    "line_text": "Move Out",
+    "highlighted_word": "move out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "6b360dca-7b09-46a6-878e-0ff671c5ba28",
+    "song_id": "bcb85048-35b5-4901-a0f5-d23c4949e46f",
+    "vocabulary_id": "a4750a3a-e95e-46f1-ab71-5ba7c43f7f9a",
+    "line_text": "Bring Out the Best",
+    "highlighted_word": "bring out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "6c9a451a-701a-4570-9e85-68b7d998c991",
+    "song_id": "fc8ab5f7-bb6a-4401-ba5a-fd8fbc9d8f2e",
+    "vocabulary_id": "d15101c5-a433-466f-9955-94dc4e19838d",
+    "line_text": "She doesn't know my secret, if she knew that would let the cat out of the bag",
+    "highlighted_word": "let the cat out of the bag",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "6e08641c-b551-4a83-a62d-9616475dbe0f",
+    "song_id": "79f2da06-966f-4e98-97ec-665ad3a700ce",
+    "vocabulary_id": "7d030527-e095-4c81-aef5-0bb430bf6115",
+    "line_text": "Send Me on My Way",
+    "highlighted_word": "send out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "702fc4b0-21f5-4e68-baec-9c3fed7ecb92",
+    "song_id": "bdd92f37-5f53-4629-80df-1591198194b4",
+    "vocabulary_id": "4d14e371-f48f-43f8-8681-533b87ed0d66",
+    "line_text": "Catch Up",
+    "highlighted_word": "catch up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "707eaad1-7673-4cc3-a4a2-2b00057ab8a2",
+    "song_id": "d4e5568f-402c-43b5-8ab2-11c92707b90c",
+    "vocabulary_id": "19a80352-20c9-4f30-9fc1-b994ba06b490",
+    "line_text": "Take It Back",
+    "highlighted_word": "take back",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "709c9a81-87ca-438c-9caf-b5a83008ac85",
+    "song_id": "f700c87c-4734-4dfc-af36-09c1f5a661a4",
+    "vocabulary_id": "1ff89d80-9cd6-41d8-9356-f9351ab4dc2f",
+    "line_text": "Bring Me to Life",
+    "highlighted_word": "bring about",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "71d19738-c28d-4158-bb56-7bb6b6b0de3a",
+    "song_id": "5014063a-8802-4968-9267-b2c897922731",
+    "vocabulary_id": "07e6bb72-5b5e-4404-8cc4-1946f244070e",
+    "line_text": "I Think We're Alone Now",
+    "highlighted_word": "think",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "72dc8d10-6873-4a19-b7a5-ccf7b035a70b",
+    "song_id": "d82ff484-adfd-401b-aedb-39a2b9b0805f",
+    "vocabulary_id": "10383d17-bcde-48ee-86fe-0d1a292b3a01",
+    "line_text": "Let It Out",
+    "highlighted_word": "let out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "737c9069-1a4d-4a07-a099-3d0dfe264275",
+    "song_id": "f435abe3-4dbe-4084-bca6-6d0d480eb22e",
+    "vocabulary_id": "575e3305-22a5-44d7-8f1c-0ad95591e90a",
+    "line_text": "Piece of My Heart",
+    "highlighted_word": "mind",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "752cbc53-a74a-4a5c-987a-fa0617f45a6b",
+    "song_id": "42d91e89-ce8e-46c1-84a9-e66b75e68602",
+    "vocabulary_id": "e3bda9d6-b435-4e4f-bb48-595558fe0836",
+    "line_text": "Life Is a Highway",
+    "highlighted_word": "life",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "758ce928-c8a4-4e3a-987e-1152ce2035d3",
+    "song_id": "f5b03dea-a72e-4811-852e-8f16554b9f81",
+    "vocabulary_id": "eddf0bb0-78e6-4b94-be08-82525e5e915b",
+    "line_text": "It's better late than never, never too late",
+    "highlighted_word": "better late than never",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "76f076ae-0f71-4d1e-9314-403397ba084c",
+    "song_id": "6baab8d5-153c-40a4-9e0c-914f1ce6430e",
+    "vocabulary_id": "93f23dae-4482-4301-8fe7-5bc8edb7628b",
+    "line_text": "Build Me Up Buttercup",
+    "highlighted_word": "build up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "77a91275-e32c-4066-a52b-86ed53610fc7",
+    "song_id": "1850b4e8-c1d7-42b5-be1f-b98778b1bfdf",
+    "vocabulary_id": "6eb01d8c-828f-4015-9920-d7aaa6c700da",
+    "line_text": "Give In to Me",
+    "highlighted_word": "give in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "78c0a94a-17ed-43da-94a6-9d48290daca5",
+    "song_id": "71d4fa72-21c4-493c-b9c8-c284c165357e",
+    "vocabulary_id": "3e264585-01cb-47c3-b014-f949d9a04f35",
+    "line_text": "Settle Down",
+    "highlighted_word": "settle down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "79877bce-d6a3-46df-a29d-00d66227310f",
@@ -144,6 +1305,168 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "7a5b7f6b-1705-4c36-ba3e-bee0aede329f",
+    "song_id": "bdefde72-ceb2-43e3-818a-703e9bbfeab8",
+    "vocabulary_id": "97bf55c7-7508-4428-88aa-2163f639f054",
+    "line_text": "Closing Time",
+    "highlighted_word": "close down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "7b35026d-cb1d-43b4-ba6a-7c37bb9d0eed",
+    "song_id": "13e2b554-5399-4599-8d37-0e3b2eb769d5",
+    "vocabulary_id": "cdcd2793-2bae-4f47-ba39-bfd308c033f4",
+    "line_text": "Warm It Up",
+    "highlighted_word": "warm up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "7b393353-ac8a-4b00-ab09-db065fe39708",
+    "song_id": "8bdf834b-939b-4a39-9d14-a88634a7223c",
+    "vocabulary_id": "983afab6-5088-4a4c-bc28-53952b095da4",
+    "line_text": "You Are the Sunshine of My Life",
+    "highlighted_word": "you",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "7b8cd309-6f8f-43aa-a781-b48f2caf194b",
+    "song_id": "27ca9eee-e245-4355-b7b1-823fed82fd03",
+    "vocabulary_id": "f25e7739-a3fa-4b96-98c7-d3593304562e",
+    "line_text": "I can't wrap my head around that",
+    "highlighted_word": "wrap your head around",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "7d6722ac-ec0c-4f69-ae1c-8d36cacb1ff8",
+    "song_id": "74b00b06-021e-44c1-adcf-d51cf12d9725",
+    "vocabulary_id": "96f54409-b627-4d65-a406-fdb42e68d7c5",
+    "line_text": "Put in the work",
+    "highlighted_word": "put in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "7d92ad79-d4ec-4e1e-8398-f9c0d657cdf9",
+    "song_id": "c6ec70e5-09df-4414-b54e-bd0831d881e2",
+    "vocabulary_id": "62404f44-c0e1-41bc-a411-cf76d3122844",
+    "line_text": "Falling Apart",
+    "highlighted_word": "come apart",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "7f800da9-962f-4fc9-99f5-a343e276b6a4",
+    "song_id": "37946620-b6e2-46ab-bb98-792ebaa54303",
+    "vocabulary_id": "51fb8de0-9a08-4895-b14d-0a70defbe981",
+    "line_text": "Here Comes the Sun",
+    "highlighted_word": "sun",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "7fe7478c-bf13-4c77-ad40-396db25a06a2",
+    "song_id": "f8ffbc45-12fc-4a5c-857c-030346f075db",
+    "vocabulary_id": "7746062d-71ce-4871-9c1d-99ff0d1fd0ce",
+    "line_text": "Break a leg, all my life I've tried to avert incidents",
+    "highlighted_word": "break a leg",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "7ffceae5-586b-4ad1-8af9-b3bf60f9e584",
+    "song_id": "695b076b-898a-4b4e-8b53-3d2e40afd5b3",
+    "vocabulary_id": "a6912c5a-0c83-46f8-bd88-27b9ca9dce55",
+    "line_text": "Dance With Somebody",
+    "highlighted_word": "dance",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "827b84c8-aafd-43b9-b353-9831f33069ed",
+    "song_id": "77156795-645d-4ef3-b158-bf7d962c2089",
+    "vocabulary_id": "fc8bfba6-4217-4fdb-842a-3e0041fa237c",
+    "line_text": "Write This Down",
+    "highlighted_word": "write down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "83fdea81-f8c1-4a4a-a9f3-0cd98d7df475",
+    "song_id": "8a0a3c5e-b497-41c8-8b69-c6755a0788dd",
+    "vocabulary_id": "eb504791-245d-4803-ae72-956618811713",
+    "line_text": "We Are Family",
+    "highlighted_word": "family",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "85af4867-db49-469a-8aca-f22f230049c3",
+    "song_id": "917f87b0-70ea-4faf-8dca-84f1434b207d",
+    "vocabulary_id": "ea5b8e7c-6677-4fb9-b5eb-c6b6685998bc",
+    "line_text": "A penny for your thoughts, I've got to know where I stand",
+    "highlighted_word": "a penny for your thoughts",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "86249b9d-8b78-4f12-b45a-7b9b136eeabb",
+    "song_id": "7df27a26-4045-40da-bc6a-9dd5409bb4b7",
+    "vocabulary_id": "f5863035-4721-4f24-8255-0e8c81535d4d",
+    "line_text": "Purple Rain",
+    "highlighted_word": "rain",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "8694b64d-d26f-43eb-9e39-a64f32765dd5",
+    "song_id": "708ca5cc-b903-4b27-bd83-490a7c9ec160",
+    "vocabulary_id": "87ea6922-98c8-4724-a902-b1de09bfde6c",
+    "line_text": "Looking After No. 1",
+    "highlighted_word": "look after",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "893f1ea0-8f9c-4d91-9711-add2403aa175",
+    "song_id": "9eb843a1-54ab-45e4-aee4-c87fc03f6b6a",
+    "vocabulary_id": "064e716f-cafa-4842-823e-cc83c618f511",
+    "line_text": "Drop It Like It's Hot",
+    "highlighted_word": "drop off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "89a4219c-477f-4b43-a4f0-fb17ccf84ddb",
+    "song_id": "8f55d2e4-cbe5-42ef-802b-491d513d3e1e",
+    "vocabulary_id": "81b15ce7-c530-4331-b065-ee020774f797",
+    "line_text": "Tell Me Something Good",
+    "highlighted_word": "tell",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "8a7ee88c-b0fd-4f76-83a8-b3ffdfaa34ff",
+    "song_id": "eb954514-f4cb-4eb0-b0dd-dfd1a0d5daec",
+    "vocabulary_id": "6e449f80-1daa-4f92-b305-2d292d68f87f",
+    "line_text": "Heart of Glass",
+    "highlighted_word": "heart",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "8af02ca2-943c-454c-a13c-55517114b3c5",
+    "song_id": "fda4df07-c032-471c-bbb2-cc755252a6b7",
+    "vocabulary_id": "a174affd-a76f-417d-a015-26cb7440f64b",
+    "line_text": "Takeover",
+    "highlighted_word": "take over",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
     "id": "8b54e371-81b9-4e55-a37e-5d6bed5ed720",
     "song_id": "50000001-0000-0000-0000-000000000010",
     "vocabulary_id": "a9d9f6c9-63ed-4eb7-be49-c2a243cb34c9",
@@ -151,6 +1474,69 @@
     "highlighted_word": "come up",
     "line_index": 0,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "8bcd439d-0947-489a-8576-ea242723bf3a",
+    "song_id": "b1df1c66-8e84-46fb-ba42-832fbe5efe5d",
+    "vocabulary_id": "0c3da5cf-9b1b-4672-87ce-27219b1e38a7",
+    "line_text": "Log On",
+    "highlighted_word": "log in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "8de1893e-b262-4fa5-8df5-4742b02f6dd7",
+    "song_id": "fb19e641-fd0f-4443-85f0-c9ab043202c5",
+    "vocabulary_id": "f7678e94-f873-4f53-b566-5aa5a10f8720",
+    "line_text": "Sing",
+    "highlighted_word": "sing",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "8e967d26-acd7-4d8c-934e-5d6a430c80be",
+    "song_id": "1c8a8ef7-3690-4243-81bc-8b433998469f",
+    "vocabulary_id": "3831a38e-9e3d-4fe1-ad07-be13cb21901b",
+    "line_text": "When I was your man, I should have gave you all my hours",
+    "highlighted_word": "when",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "8ece5217-d7e7-4a7a-9ab3-2450bd6392b3",
+    "song_id": "306c406a-a2e3-46ed-8a79-86304a4eeef8",
+    "vocabulary_id": "06f3c816-0133-4306-9da8-e040abdf21f1",
+    "line_text": "But we are two worlds apart, can't reach to your heart",
+    "highlighted_word": "but",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "90eaffb7-8ac5-42ba-a8eb-f6859cc7f3bb",
+    "song_id": "59fa2818-4d83-473e-a8c9-4ebcb9b753c0",
+    "vocabulary_id": "41d9c755-3e4f-4303-b0de-3b70defb9302",
+    "line_text": "Get Back to where you once belonged",
+    "highlighted_word": "get back",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "90f14b5c-3d69-4b0a-bc27-69e241befe93",
+    "song_id": "ba73f39a-d824-4f88-ba0b-3199de618bfe",
+    "vocabulary_id": "9f46def6-d80e-4e7d-8669-67ea127d79b0",
+    "line_text": "However do you want me, however do you need me",
+    "highlighted_word": "however",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "910a0b02-a535-4b67-a226-31ec15dde998",
+    "song_id": "5ad976a6-c1cd-4309-831a-664f7f565574",
+    "vocabulary_id": "ca0069ef-6d6e-48cf-adbd-1fdde06038a9",
+    "line_text": "I will go the extra mile for you",
+    "highlighted_word": "go the extra mile",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
     "id": "91b3703d-0031-4c17-b238-f31d7dc34400",
@@ -162,6 +1548,69 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "9226cd8e-d4b3-4159-b734-45d6f913f914",
+    "song_id": "1c001555-b280-4e8a-b547-19b9838bddd8",
+    "vocabulary_id": "f7d7e365-63a9-438e-8b03-055296e4715c",
+    "line_text": "Running Out of Time",
+    "highlighted_word": "run out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "93703397-7070-47ac-9fc6-397e3089c7ed",
+    "song_id": "baf0521b-eac5-4888-a8e2-b016c1293009",
+    "vocabulary_id": "1ec75f6e-a907-42ae-9bd4-4c877a63f528",
+    "line_text": "I wonder why it's hard to try to see eye to eye",
+    "highlighted_word": "see eye to eye",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "937bc2de-30a4-4038-8c70-62d3f76e1425",
+    "song_id": "7f447583-c475-4b55-bb7c-66305a40ca3c",
+    "vocabulary_id": "31cab399-db59-4f54-8cc1-64f3bb057c58",
+    "line_text": "Let sleeping dogs lie, bring the subject to an end",
+    "highlighted_word": "let sleeping dogs lie",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "9412085a-76fa-43aa-b420-817f65cbf4ce",
+    "song_id": "fdfb99c2-187a-4bfd-8d30-de3c17abb53a",
+    "vocabulary_id": "17406597-ef6d-4039-b747-f5979f0dc075",
+    "line_text": "Wake Me Up",
+    "highlighted_word": "wake up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "961d3e8d-8e3b-4d0f-a0d9-14ec9fb6466b",
+    "song_id": "d4a17e11-81fb-41d7-a772-2c3b8efb6743",
+    "vocabulary_id": "777085a3-30ef-4785-9ee7-2d6521df364e",
+    "line_text": "Hang in there baby, things are crazy",
+    "highlighted_word": "hang in there",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "976cd05b-4ab2-4e29-a8b6-ae506937cd2d",
+    "song_id": "71b7ee02-ebb5-49d4-8ebd-658a4d9a5177",
+    "vocabulary_id": "c21f799f-323f-4d84-bf90-97b01fd00f35",
+    "line_text": "Shut down the city tonight",
+    "highlighted_word": "shut down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "978d426e-cf95-4412-8ebf-3891978c3995",
+    "song_id": "50000001-0000-0000-0000-000000000013",
+    "vocabulary_id": "17b7fa1f-5250-4a89-988d-c09b4a58e099",
+    "line_text": "In the end, it doesn't even matter",
+    "highlighted_word": "in the end",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
     "id": "991ba487-f7a1-4a5d-9d82-20ee38c94b0f",
     "song_id": "50000001-0000-0000-0000-000000000014",
     "vocabulary_id": "3f2d2230-8f4d-4d36-8c2d-8e16c763f99e",
@@ -169,6 +1618,69 @@
     "highlighted_word": "aware",
     "line_index": 1,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "9b16fc91-0f5e-43c9-8437-4004151371f3",
+    "song_id": "b197730a-23c7-4e04-8132-168bfa548b7e",
+    "vocabulary_id": "603df48a-d40a-4ae2-a31e-c81b1eb8b4a8",
+    "line_text": "Get Into the Groove",
+    "highlighted_word": "get in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "9bc05bc7-9f77-4b69-9d90-55d7be7185ce",
+    "song_id": "aedd950a-77de-42b3-8a7f-be00bace6881",
+    "vocabulary_id": "8ee0a25c-f661-411b-8d06-c9de6cabcf34",
+    "line_text": "I don't actually care if you like me or not",
+    "highlighted_word": "actually",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "9c25e18d-0e9a-46d1-a49c-8969101b62d6",
+    "song_id": "4295fa46-90c8-47db-9a77-8c6849942eac",
+    "vocabulary_id": "d646d081-9120-4b25-a194-ab40133441d4",
+    "line_text": "Beyond the Sea",
+    "highlighted_word": "sea",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "9c376fd5-7417-4d38-93d9-78049da72dbb",
+    "song_id": "d9fa9c27-7f90-488d-a8d2-16313cbe05cc",
+    "vocabulary_id": "243e8d4e-f540-4c3d-add5-1d6fed551351",
+    "line_text": "The Sound of Music",
+    "highlighted_word": "music",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "9c585a54-dfb6-4c61-95a2-e58d2f266c59",
+    "song_id": "730a53cb-c5af-4f5d-a2bf-1b83ea5c0b3f",
+    "vocabulary_id": "7e84696a-e4cf-420c-bdc4-02b71fa3469b",
+    "line_text": "Come Along",
+    "highlighted_word": "come along",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "9c64d990-ac78-479b-a403-a8d49307be38",
+    "song_id": "b76c097b-7b89-498d-b1b2-858b594dd1c6",
+    "vocabulary_id": "d8ec10ca-8099-4654-8123-bc2e17294f46",
+    "line_text": "Changes",
+    "highlighted_word": "change",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "9cb43060-7638-4e84-b7e2-fcedf98b2d84",
+    "song_id": "b5fc13fa-2bb0-4bec-a0fc-56719d51d716",
+    "vocabulary_id": "1f82b77c-3e65-477d-a562-9f7ff25d39db",
+    "line_text": "We knew we missed the boat and we'd already missed the plane",
+    "highlighted_word": "miss the boat",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "9cdc0fef-e78c-4eee-a7cb-0dd02f491b24",
@@ -180,6 +1692,114 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "9f2ce362-b36f-412e-992b-a54cf62c39f3",
+    "song_id": "e24ebebc-df62-43f3-959f-1a55957ab0b6",
+    "vocabulary_id": "200de18e-17b8-4b77-b08f-9cbf954e872a",
+    "line_text": "Turn Into",
+    "highlighted_word": "turn into",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "9fd4a1dd-22c4-4b0a-90d1-39b10c11fc3c",
+    "song_id": "b1df1c66-8e84-46fb-ba42-832fbe5efe5d",
+    "vocabulary_id": "8536badd-a7a5-4c16-b12b-9e8dadbe5e8f",
+    "line_text": "Log Out",
+    "highlighted_word": "log out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a0d10d94-a53a-4b72-882b-f80edbe7f761",
+    "song_id": "2571be81-e61e-4dac-9837-3a64b1666a10",
+    "vocabulary_id": "55295b5d-2c33-4f8e-9782-b4b13d91fa0b",
+    "line_text": "Since you been gone, I can breathe for the first time",
+    "highlighted_word": "since",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a2bc683d-4c01-4295-aaae-6a62599f42aa",
+    "song_id": "ab51957a-34dc-42d9-82cb-d4c74f7023d5",
+    "vocabulary_id": "87c76159-fae4-4b50-a346-a06e566e2127",
+    "line_text": "Eyes Without a Face",
+    "highlighted_word": "eye",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a2e59235-7c9b-4eea-8bba-97ed0e3a316e",
+    "song_id": "c81a6c68-4187-406b-bf7a-01956bb2e1d5",
+    "vocabulary_id": "07015a2b-6350-473d-a099-2ddc633e89d7",
+    "line_text": "Look at Me Now",
+    "highlighted_word": "look at",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "a3c84c51-5134-4801-af9b-ae1a66cfa20d",
+    "song_id": "7fd6abf4-9cad-4562-9489-ad473a0d9c6a",
+    "vocabulary_id": "19b276ed-8220-4264-9d09-5c0d0fb0f1e3",
+    "line_text": "Don't sit on the fence, you're either hot or cold",
+    "highlighted_word": "sit on the fence",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "a465e131-447e-4cad-beda-ae28f36139cd",
+    "song_id": "5208e232-a0e9-4d3f-a6fd-9a4911e1cdb5",
+    "vocabulary_id": "09c27829-379f-4e04-8bad-7c685ef77e0b",
+    "line_text": "What a Wonderful World",
+    "highlighted_word": "world",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "a4d082f0-0b61-4a10-8570-7ff66e6441ef",
+    "song_id": "04b46cc5-448e-422e-bd12-d0b001417f34",
+    "vocabulary_id": "17b961bd-b04a-4434-a640-9f3221d74cde",
+    "line_text": "Fall Down",
+    "highlighted_word": "fall down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "a566a04d-1be5-4c7a-99cb-c85ce30d2e01",
+    "song_id": "03066add-c429-437e-bd35-1418aadc10cf",
+    "vocabulary_id": "ba638652-76cf-42f0-9e21-c115e11bfe30",
+    "line_text": "Story of My Life",
+    "highlighted_word": "story",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "a6738078-6d53-4d67-980d-da3469da9e62",
+    "song_id": "4009cf0c-53da-4ab2-a7ea-4f801046d297",
+    "vocabulary_id": "d10c4b4d-520c-40db-898c-a77929e733bd",
+    "line_text": "Work",
+    "highlighted_word": "work",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "a69eb33a-a3c0-46a8-97dc-ba1f60bf17e5",
+    "song_id": "81e47b1b-e5aa-42f3-8760-5b809f0a7c45",
+    "vocabulary_id": "4a656281-6295-42f1-85a0-c0bfbfb70050",
+    "line_text": "Cause you're under the weather, just like the world",
+    "highlighted_word": "under the weather",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "a70530fb-de2f-49ad-9b8f-81b6358c1eef",
+    "song_id": "2df21ff8-6186-4a0d-a26f-ca741b3d0955",
+    "vocabulary_id": "17d99ceb-74af-4b9b-aa76-033c16214e10",
+    "line_text": "Do You Really Want to Hurt Me",
+    "highlighted_word": "do",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
     "id": "a734b94b-e561-40c0-bfec-99439bbc8b33",
     "song_id": "50000001-0000-0000-0000-000000000022",
     "vocabulary_id": "bb50abcf-42d3-4ca6-b585-e254d7e495de",
@@ -187,6 +1807,222 @@
     "highlighted_word": "pull",
     "line_index": 1,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "a767313a-9907-4c27-a93f-e9e4cde5b53a",
+    "song_id": "58dbc863-e4cf-4394-8f28-c118d465ac18",
+    "vocabulary_id": "81658758-a2b5-47ca-812f-3966a9d7a398",
+    "line_text": "Play That Funky Music",
+    "highlighted_word": "play",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a7bbc0a6-0b35-4f32-8682-a46d43af8797",
+    "song_id": "ecc36552-8853-42a4-8c0b-3d4d6f8201ce",
+    "vocabulary_id": "62699baf-eb9a-493a-bdf5-cf9a7d8399b5",
+    "line_text": "Fight Song",
+    "highlighted_word": "fight",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a80014ff-f6ad-48aa-a008-a93291a9d592",
+    "song_id": "0b12ee93-82b2-4186-a1cd-5ba7bdce593b",
+    "vocabulary_id": "7d28e258-97f3-4392-8228-599a45f9f2d0",
+    "line_text": "Come Over",
+    "highlighted_word": "come over",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a8ba9b5f-36d2-4b0c-96b1-64216d6b02c8",
+    "song_id": "a9f30241-c4f4-4785-b9d7-47b1e16fee72",
+    "vocabulary_id": "726b0da2-c4ac-4bd4-ba7a-44c3b67c057e",
+    "line_text": "Carry On Wayward Son",
+    "highlighted_word": "carry on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "a9d4e021-7b2b-484b-9294-eadc8a4de43b",
+    "song_id": "5082c3c8-5841-4ed9-b0aa-87bdccc1f61b",
+    "vocabulary_id": "253099cb-e57e-4230-a221-559687c2eb83",
+    "line_text": "Pass It On",
+    "highlighted_word": "pass on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "aa001e9c-456c-49c7-bd02-12ceb50b31f6",
+    "song_id": "04b28821-a904-4018-84c7-5ce2dcabca5d",
+    "vocabulary_id": "8829cb74-6c88-4cea-b95a-ae640737e3c8",
+    "line_text": "Cut to the chase, a danger I'm prepared to face",
+    "highlighted_word": "cut to the chase",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "ab511490-4d71-4b56-be22-1bd81acaca70",
+    "song_id": "a8580428-f1ec-45e7-8d9d-00f9a395bc82",
+    "vocabulary_id": "a7a57f76-2c92-44b5-baf7-aeaa5fe56b03",
+    "line_text": "Should I stay or should I go?",
+    "highlighted_word": "or",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "aba5ca11-beb7-48b1-ae17-9337c76a0673",
+    "song_id": "dfd97ace-3701-40b3-927e-bd3238e12261",
+    "vocabulary_id": "f402cae4-4d72-4428-b079-51bb7aa5140b",
+    "line_text": "Hold Up",
+    "highlighted_word": "hold up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "abcdf6db-7dd1-4da5-81c1-32b40563535e",
+    "song_id": "937e53cf-cb4b-405f-8c39-cb870b9e0e16",
+    "vocabulary_id": "389d590c-b03e-4976-ae38-84251478878e",
+    "line_text": "Kick off your shoes",
+    "highlighted_word": "kick off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "ac53c0cb-0ab3-4b2e-9f74-55eeb98276d2",
+    "song_id": "8c27a910-fafd-4688-97bf-ddf5fbb6409a",
+    "vocabulary_id": "c279b914-1bb4-46eb-a5da-25c301c8b2f0",
+    "line_text": "Break Out",
+    "highlighted_word": "break out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "ac79cf6f-0b4a-4f39-94ec-3efd85579569",
+    "song_id": "31203f37-0a36-4672-b507-b7b0fc0ef2ac",
+    "vocabulary_id": "d0b253b1-ec69-44eb-bf5f-f1c4c86bda17",
+    "line_text": "Remember the Time",
+    "highlighted_word": "remember",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "acedf0dc-10dc-4c74-901e-ee956ad24896",
+    "song_id": "baeca4a3-5f3f-45c8-ae4c-4051b68f52cb",
+    "vocabulary_id": "b8f755c9-c966-41cf-af72-aa1e870f017f",
+    "line_text": "Take Me Out",
+    "highlighted_word": "take out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "ae1cb4ea-c891-455b-af6f-116a1c8ec869",
+    "song_id": "5aa0d9a5-800e-4fb8-aff6-53c41847d79b",
+    "vocabulary_id": "f8962acf-4412-47f0-8e86-647f30166ecb",
+    "line_text": "Call Me",
+    "highlighted_word": "call for",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "ae2f65e1-a23a-4941-a953-eda84b0dbbdb",
+    "song_id": "f0201808-63d1-47e5-898d-6ce27dd6f128",
+    "vocabulary_id": "fde0ff94-62d1-4d3b-b35f-c1bcae7a63f9",
+    "line_text": "It was a blessing in disguise, the truth is always a surprise",
+    "highlighted_word": "blessing in disguise",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "ae85222f-a1eb-4000-ab6b-3b027423e347",
+    "song_id": "0ea28d07-6333-46d5-93a9-b5a6d0aad93f",
+    "vocabulary_id": "857c7811-6119-4d61-96ca-ecc6f984b9c8",
+    "line_text": "Once in a blue moon, something good comes along",
+    "highlighted_word": "once in a blue moon",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "afcbe70d-2b27-4e7d-984c-760d8062a578",
+    "song_id": "4abe92f0-eac9-4dc3-9b7a-0ca73ee24203",
+    "vocabulary_id": "93e8df02-76bb-441e-9399-2b9c685ef397",
+    "line_text": "Set Out Running",
+    "highlighted_word": "set out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "b08fd70b-8b52-4984-9e24-7f984f599f79",
+    "song_id": "b4918c8a-7136-4842-a25d-e87c49f9e566",
+    "vocabulary_id": "a3db1a69-bd2d-4b01-a54b-5727a0cfa7f9",
+    "line_text": "Turn Around",
+    "highlighted_word": "turn",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "b0fa28a7-6f3d-4325-998d-204493db63bb",
+    "song_id": "1b3da344-aa56-4f69-a68a-1068d23477d4",
+    "vocabulary_id": "f5b191a1-c4b9-4143-93f3-a22763d41b8b",
+    "line_text": "Put Your Hands Together",
+    "highlighted_word": "put together",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "b12bf5e4-2410-4a77-9116-d32f4b9aeba8",
+    "song_id": "23de8aa3-f8ee-4231-af24-0a74612ea5df",
+    "vocabulary_id": "206b7143-fd8f-42c6-a5df-453b8fde843d",
+    "line_text": "Set up the pins again",
+    "highlighted_word": "set up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "b1508569-8785-4907-99df-e6dfb649dfa2",
+    "song_id": "6f0f4913-40bd-4804-bef1-1a1c093bb8cc",
+    "vocabulary_id": "305aa80c-421b-41d8-b599-c716d95a5f04",
+    "line_text": "Think of Me",
+    "highlighted_word": "think of",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "b2059fc9-f995-4693-a828-84a34e8146c5",
+    "song_id": "d57979e2-7e12-4927-b69c-c29cdc8297ae",
+    "vocabulary_id": "0674d47a-32cc-47a2-97c9-941f2234f4e0",
+    "line_text": "Based God",
+    "highlighted_word": "base on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "b221bdbd-883c-43b5-9e60-4e1d21db751a",
+    "song_id": "1b4b388c-5b79-4150-8732-e9ac87ab4782",
+    "vocabulary_id": "0cf04155-3a4c-410c-b785-860bf7dd51c3",
+    "line_text": "Because of you, I never stray too far from the sidewalk",
+    "highlighted_word": "because",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "b3c455cf-2864-4730-80aa-cb76ef237d14",
+    "song_id": "8a2c10dc-e0c8-4d9b-83bf-ee4429daa8e5",
+    "vocabulary_id": "6437dba2-2cc5-4be0-a5f8-ba88b70b64fb",
+    "line_text": "When it's raining cats and dogs",
+    "highlighted_word": "raining cats and dogs",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "b3da8f0c-4e5b-4cd4-92d3-13cdfed06227",
+    "song_id": "3fee06c9-6849-47ca-928e-a9595a17ab13",
+    "vocabulary_id": "a1e31a2d-a924-49bc-b708-845d6cba93b2",
+    "line_text": "I Have a Dream",
+    "highlighted_word": "have",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
     "id": "b4df5a7c-8bb8-4b80-9b52-6b7b3fc89cb3",
@@ -207,6 +2043,60 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "b5f1d419-7d72-40c7-9a36-d210e7421dea",
+    "song_id": "72592cdf-8b65-496a-a661-ee1ffbadb672",
+    "vocabulary_id": "5188b1e1-ec75-4439-a2cb-9e91a4997399",
+    "line_text": "We Are the Champions",
+    "highlighted_word": "we",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "b69abde6-fbae-46f8-b60a-0f45cdf02223",
+    "song_id": "4be6176f-b39f-47f1-8ff8-1ab4b7cd386d",
+    "vocabulary_id": "0eeb780a-e415-4fba-b3fc-ba2e6b2d4f16",
+    "line_text": "Live and Learn",
+    "highlighted_word": "learn",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "b6c26ac0-2783-480e-b868-8690688afead",
+    "song_id": "4e20f60b-27f1-4d53-a2e6-bef0fcfac549",
+    "vocabulary_id": "eae249e1-c5dd-48e5-a802-1d9b40124819",
+    "line_text": "Stay With Me",
+    "highlighted_word": "stay",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "b7158c39-66ef-4a89-9b9b-cf77c7e7181d",
+    "song_id": "a673b964-f84a-4b6d-a873-6ec579f8dc8f",
+    "vocabulary_id": "b033ac63-352b-4f2a-a872-3ea8cef43ca8",
+    "line_text": "I Want to Hold Your Hand",
+    "highlighted_word": "hand",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "baf7595a-86bd-4f83-938f-e14a7100d12b",
+    "song_id": "c0e44918-eecb-465c-be60-eab410ff1767",
+    "vocabulary_id": "8d821173-4df6-4255-91fb-d3a742672d36",
+    "line_text": "Hurry Up and Wait",
+    "highlighted_word": "hurry up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "bafc6bd4-9749-4125-af6b-8365388c7135",
+    "song_id": "43abf412-9dbf-4dde-922d-30f4721a73c8",
+    "vocabulary_id": "7b297c4c-65a6-4052-a050-83e5adfdca95",
+    "line_text": "Open Up Your Heart",
+    "highlighted_word": "open up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
     "id": "bb26e905-6b24-47a5-8c97-87bb8a2ffe36",
     "song_id": "50000001-0000-0000-0000-000000000022",
     "vocabulary_id": "142e8507-7520-46b3-ac27-d5c2a282459f",
@@ -214,6 +2104,33 @@
     "highlighted_word": "push",
     "line_index": 1,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "bb7e9cf9-f93b-4f6d-9ed9-8a9d13b60d56",
+    "song_id": "99642b65-f16f-4e9b-afe4-e3aeb602fa0f",
+    "vocabulary_id": "16669b52-b76e-4b5c-8946-c59f064aeead",
+    "line_text": "Head Over Heels",
+    "highlighted_word": "head",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "bb9567ee-76d4-4d7a-935d-894ea6811d82",
+    "song_id": "1b6ee44e-3501-4f35-99e3-5faf3fddc4a4",
+    "vocabulary_id": "ae5e512a-f310-42be-bdf1-75f26c9ba1ea",
+    "line_text": "Time to address the elephant in the room",
+    "highlighted_word": "the elephant in the room",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "bc35a60e-5d55-4cc9-b4e8-15965e5ab47e",
+    "song_id": "cc078936-9518-4666-b1bb-72940a2f102f",
+    "vocabulary_id": "bb3edd9b-210e-46f5-a41a-8d45f72a3bc8",
+    "line_text": "Looking Forward",
+    "highlighted_word": "look forward to",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
     "id": "bcb0e290-6267-4dd6-a814-7820067819d4",
@@ -225,6 +2142,105 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "bcfcf592-b191-44ca-98ba-c63cdfe872e9",
+    "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "vocabulary_id": "7fafd2fc-2022-45d8-b062-8ef6500504cd",
+    "line_text": "All You Need Is Love",
+    "highlighted_word": "love",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "bf0df336-3520-4522-b745-c7d737a21e85",
+    "song_id": "7b73b60c-170c-40b5-b190-68d30adf58f9",
+    "vocabulary_id": "2db6eb47-da66-46a0-803d-a88b34ce6c2e",
+    "line_text": "Under the radar, you're not alone, a UFO under the radar",
+    "highlighted_word": "under the radar",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "bf7e5b7d-a81a-4b93-9d93-d5f0d58b8eb1",
+    "song_id": "0d557956-2b13-4755-abce-0c6c10c73ee4",
+    "vocabulary_id": "cd43f245-2df0-4b7a-b662-d60b980cd55f",
+    "line_text": "Breaking Up Is Hard to Do",
+    "highlighted_word": "break up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "bfb4f4da-6e3d-4f33-8299-a0580bd6e67d",
+    "song_id": "69122546-4144-4d0f-956f-de66962a503d",
+    "vocabulary_id": "df43ddc5-e973-46e2-baf9-280dac806de5",
+    "line_text": "Talk",
+    "highlighted_word": "talk",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "bfb80fa5-5b25-4811-8db5-7c655aeacfbb",
+    "song_id": "31a00134-5d0f-47a9-ab56-a65e58b1aa9a",
+    "vocabulary_id": "4c8d3b36-3e27-4f5b-90c8-b988eec6a158",
+    "line_text": "Happy",
+    "highlighted_word": "happy",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "bfbf09d4-6c24-40a1-8389-9c34005b47ff",
+    "song_id": "0a08ac58-5178-47f6-a302-d82b359e57fc",
+    "vocabulary_id": "e45fee5c-1315-4ce1-880c-bf81ac3b6685",
+    "line_text": "I never intended for it to get out of hand",
+    "highlighted_word": "get out of hand",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "bff22f23-f7dc-46bb-a48b-0df212141ae4",
+    "song_id": "91ccddda-9a54-4ce4-a328-534b600340ea",
+    "vocabulary_id": "61d02110-ae17-483d-b54c-b1e68a5dc303",
+    "line_text": "All she's giving me tonight is a cold shoulder",
+    "highlighted_word": "give someone the cold shoulder",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "c02c3dd4-fc84-4ac3-9995-319c061deae1",
+    "song_id": "a4e04377-7486-4e33-9aa7-12184e7902c4",
+    "vocabulary_id": "8d42b368-af52-4488-9719-6ebc6caa2702",
+    "line_text": "Fly Away",
+    "highlighted_word": "fly",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "c14a1243-a057-4218-8653-59fb95c9600b",
+    "song_id": "6d017498-6152-4645-8d80-e917d25f9420",
+    "vocabulary_id": "3cc28087-4436-4210-a0bc-b3e174492f6f",
+    "line_text": "Hand over your heart",
+    "highlighted_word": "hand over",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "c14e4c25-41ac-4f39-8d11-62ad768bc0b6",
+    "song_id": "17390626-ea6c-411c-a706-aa3eaaa1bb6f",
+    "vocabulary_id": "24a45a9a-6cce-445b-a525-22c83d544c79",
+    "line_text": "Bring It On Home",
+    "highlighted_word": "bring in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "c19db6a2-3540-403b-951b-cf32fe3f7a68",
+    "song_id": "c715b42d-a443-45e4-99e1-24ea139e9e06",
+    "vocabulary_id": "47c42b9e-0245-457d-8b5e-5d766268a287",
+    "line_text": "Get Up Stand Up",
+    "highlighted_word": "get up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
     "id": "c422d1c7-5a58-4d80-8f8c-9c01af1bd6e6",
     "song_id": "50000001-0000-0000-0000-000000000017",
     "vocabulary_id": "781d47c0-00c6-421c-a681-ae63b8faac52",
@@ -232,6 +2248,186 @@
     "highlighted_word": "slip",
     "line_index": 0,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "c4bdc0c6-ab4e-403f-8486-73453072a1c6",
+    "song_id": "3b834cb9-becd-4be2-a4c7-367306d81398",
+    "vocabulary_id": "2d99f0fa-023a-455e-82f9-db886589b0d7",
+    "line_text": "Sweet Home Alabama",
+    "highlighted_word": "home",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "c54ed4c9-b7fa-4c95-b73b-42e2088c9f0e",
+    "song_id": "5c077d12-f2fd-4972-b15d-77af069d68b1",
+    "vocabulary_id": "e7e40f69-dc7a-44a5-98f8-c32eb5ae4c56",
+    "line_text": "In spite of all the danger, in spite of all that may be",
+    "highlighted_word": "in spite of",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "c78efebb-963b-4ed3-b347-11c8204e8638",
+    "song_id": "72b94f12-1408-4ff9-afda-03cee9821695",
+    "vocabulary_id": "f49934c9-846c-4ea9-a64d-82f4eed9abe3",
+    "line_text": "Just hang out with me",
+    "highlighted_word": "hang out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "c7b4e27e-4574-484f-a26f-77e6190a617a",
+    "song_id": "2a46675c-971e-46a4-b6f6-54de965ee1e1",
+    "vocabulary_id": "14f56337-be23-46dc-98f7-bb6c510a9142",
+    "line_text": "Sum It Up",
+    "highlighted_word": "sum up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "c8fd688e-1a66-4cd9-b583-d06e6c764567",
+    "song_id": "e69cae83-a54b-42bf-bd05-58da107856d4",
+    "vocabulary_id": "037e3739-6e29-4403-9e4a-038b3ceb902d",
+    "line_text": "High Hopes",
+    "highlighted_word": "hope",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "ca11d975-32f9-401f-aaf4-450f1ee01b30",
+    "song_id": "4e8b06ea-1d43-4dd6-8015-d5f7510e6dbf",
+    "vocabulary_id": "77f48191-6166-4db2-bd02-4f26b1f314fd",
+    "line_text": "You hit the nail on the head",
+    "highlighted_word": "hit the nail on the head",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "cab402ae-f12e-421a-8f22-09a4f7e4ed72",
+    "song_id": "e7c4236d-21ec-41a8-b156-ab4d7a4684f3",
+    "vocabulary_id": "aee653d0-52d3-464e-b534-508f55c74031",
+    "line_text": "Stop! In the Name of Love",
+    "highlighted_word": "stop",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "cb829982-d5f1-4468-a7a2-0f5804f51c6f",
+    "song_id": "d2eb4756-350a-452e-9739-0769c75ae774",
+    "vocabulary_id": "6411e97d-efc1-4b1f-b4b7-7662f1caf928",
+    "line_text": "Show Up",
+    "highlighted_word": "show up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "cb96b47e-f0db-4853-abeb-cc78dff4c557",
+    "song_id": "e3e703c3-0e18-4602-a98c-de91e5903a6e",
+    "vocabulary_id": "18dda409-a80c-41c9-9e9f-7c724696952f",
+    "line_text": "Don't beat around the bush, c'mon tell me what you want",
+    "highlighted_word": "beat around the bush",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "cde094ea-457b-42b0-ace2-003537079afb",
+    "song_id": "6727ef62-30ff-4f82-aaab-2fb54a58b248",
+    "vocabulary_id": "eb874032-3ab8-48fa-9734-57587854b94c",
+    "line_text": "Get your act together, just stand up and face the music",
+    "highlighted_word": "get your act together",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "cf6aa5f5-9abe-41ec-8399-e5e7cbbb3d6d",
+    "song_id": "856c36ba-ce8e-4627-aaf6-5a7bdde4ed3a",
+    "vocabulary_id": "c66b342b-0bc0-4699-a02a-c74134bf9f2f",
+    "line_text": "Looking Up",
+    "highlighted_word": "look up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "cf994d0f-1bd8-47ad-b2d1-896dc106d5eb",
+    "song_id": "4a608f6c-f8c4-485f-8360-85631861b69e",
+    "vocabulary_id": "9b4fe71f-c024-4641-a7d9-5a0086df30c5",
+    "line_text": "Blinding Lights",
+    "highlighted_word": "light",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "d06274ad-feb7-43c1-83c1-103d471bc0f5",
+    "song_id": "f77e158f-d083-4a0a-8f33-18335220183b",
+    "vocabulary_id": "19c6052d-4409-41c1-89ee-d47160eb7e04",
+    "line_text": "Movin' On Up",
+    "highlighted_word": "move on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "d1dd6081-8a28-44f5-be20-fe5c04b83d5f",
+    "song_id": "ebbe7496-ae82-45ce-903f-3db803634279",
+    "vocabulary_id": "2e25effd-6826-4d90-9e38-5fe4718907ff",
+    "line_text": "Clean Up Woman",
+    "highlighted_word": "clean up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "d24d3293-00de-4b52-8cbf-0ab7e55c489c",
+    "song_id": "b2580d20-f0aa-40ea-8516-ccdb6946482e",
+    "vocabulary_id": "cf11c5b4-92f3-41d5-8903-c57e162adcd4",
+    "line_text": "Point of Know Return",
+    "highlighted_word": "point to",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "d2fa3063-72ff-404a-a32a-f7dd8cf9d91b",
+    "song_id": "3ad16613-b809-48ed-ace4-391d368d2482",
+    "vocabulary_id": "9bd40fc5-4e0b-4d01-b613-bdbe17f41ff4",
+    "line_text": "I Need You",
+    "highlighted_word": "need",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "d358919f-5f3d-4942-9475-ba9a5461f649",
+    "song_id": "1cdaec30-d42b-4902-bc58-0f61d4ace9ad",
+    "vocabulary_id": "6e68e153-18d9-4125-978b-ce3ba65fc9a3",
+    "line_text": "Take Off",
+    "highlighted_word": "take off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "d3d74f33-7fec-4ed9-aef8-c43478aaf6c6",
+    "song_id": "5c882db1-6f3c-4db6-bbe7-85361cdb1bbb",
+    "vocabulary_id": "16a7a472-1e0b-4306-95a1-c93200169d94",
+    "line_text": "On the Road Again",
+    "highlighted_word": "road",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "d3d82007-b414-4e4b-b40e-22cc8d994eaa",
+    "song_id": "b881e1a7-96db-473b-8c42-90da4252f4e0",
+    "vocabulary_id": "87ee9a27-cdc9-4fd7-8ddd-ae2e792b1659",
+    "line_text": "Come In from the Cold",
+    "highlighted_word": "come in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "d40d1f2c-b840-4b22-b5fb-72b9752bce25",
+    "song_id": "111e51d7-cf42-4e34-b636-c44c1634516a",
+    "vocabulary_id": "c17dbe5c-257c-4520-827d-ed8cf504bf39",
+    "line_text": "We Can Work It Out",
+    "highlighted_word": "can",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
     "id": "d413b0e0-8a21-44b1-a5bc-8db764f7dde5",
@@ -243,6 +2439,150 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "d434dc43-101b-4927-a6d2-19ba7dd75ad7",
+    "song_id": "04b28821-a904-4018-84c7-5ce2dcabca5d",
+    "vocabulary_id": "5bd526bc-0d52-4b70-916b-a4073aeb7834",
+    "line_text": "Cut down on the drama",
+    "highlighted_word": "cut down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "d50fcdc5-595e-4495-be3f-426e9e96817d",
+    "song_id": "5b7aac93-1d62-4dc4-9a82-44e0e5af4a09",
+    "vocabulary_id": "2f11d691-9b7d-4466-8ba1-0150a2a213e8",
+    "line_text": "Blow Up the Outside World",
+    "highlighted_word": "blow up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "d5281148-3923-47fe-9044-25391a1ff425",
+    "song_id": "0e71be82-d8f2-4972-8716-7ec6c82a26a5",
+    "vocabulary_id": "e0c5f939-dc55-434b-a164-d8fc06f79097",
+    "line_text": "Put It Off",
+    "highlighted_word": "put off",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "d5580aa4-31d4-4bb4-9480-82dd2fab61ba",
+    "song_id": "b88e1d4e-7dd4-45d4-b4c9-8a342af0faad",
+    "vocabulary_id": "11904737-e7d8-4bd0-b2ae-a62aaabb39ab",
+    "line_text": "After the love has gone, what used to be right is wrong",
+    "highlighted_word": "after",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "d663867b-ef18-4874-8eec-637c1d0a0c48",
+    "song_id": "bce9836d-7350-495f-8609-57e5141815f6",
+    "vocabulary_id": "adb0bf43-358a-4816-b4a0-3d78d906fecf",
+    "line_text": "Add insult to injury, you hear the thunder",
+    "highlighted_word": "add insult to injury",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "d672fde8-b1c9-49d7-a397-f65684ecb7d8",
+    "song_id": "ae6f85e8-4167-4381-a8c1-b5589825bc5a",
+    "vocabulary_id": "59c505f7-e848-4de5-b2fa-77f5182a4e23",
+    "line_text": "A Hard Day's Night",
+    "highlighted_word": "day",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "d6a7814a-5386-4d05-a226-8dead6d54a9a",
+    "song_id": "39adf57d-091d-4955-be52-6deba792690d",
+    "vocabulary_id": "c0d7835c-fcdc-4941-8f12-4188233c1c9d",
+    "line_text": "Slow Down",
+    "highlighted_word": "slow down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "d9a23116-1a43-406c-8b28-81b1913db2c0",
+    "song_id": "d0acd87a-9516-4229-bede-3ae8f97965df",
+    "vocabulary_id": "4739c44e-bcee-4c6c-826b-56165d75b8a0",
+    "line_text": "I Miss You",
+    "highlighted_word": "miss",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "da40faf2-38d9-4fc6-9efa-d428e64068a2",
+    "song_id": "50000001-0000-0000-0000-000000000017",
+    "vocabulary_id": "9918c842-6a06-4397-b31f-32e5b3687527",
+    "line_text": "Don't Look Back in Anger",
+    "highlighted_word": "look back",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "dba57720-0a1a-4ef7-b89a-8510da042327",
+    "song_id": "012bbbd0-2ef1-4946-8ffc-de11b22036b6",
+    "vocabulary_id": "15c57701-1f5a-45ed-9f9a-4f0542391bec",
+    "line_text": "Give It Back",
+    "highlighted_word": "give back",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "de161c15-95c3-42ba-bab8-de7f014d44bb",
+    "song_id": "0ca99622-8bd4-4e28-8155-c0d251273b90",
+    "vocabulary_id": "2d1bac32-69fd-4960-ac5a-7655817f41c9",
+    "line_text": "Although we've come to the end of the road, still I can't let go",
+    "highlighted_word": "although",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "dea1f729-120b-4eec-900f-6bcc47602231",
+    "song_id": "9dbd08d3-a1be-4162-abf2-1d8861c03684",
+    "vocabulary_id": "75c07119-4892-49e8-8bb7-2dfe2d0f6915",
+    "line_text": "We Didn't Start the Fire",
+    "highlighted_word": "fire",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "defaf265-a01b-4231-91b7-4ac742c96401",
+    "song_id": "3c56755d-dfe7-4e75-9b01-3850063f9d45",
+    "vocabulary_id": "ba1a9f44-f0f0-4e10-a9b0-a0cc1e2bde94",
+    "line_text": "Grit down and bite the bullet",
+    "highlighted_word": "bite the bullet",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "e046ed71-9e42-441f-b837-41e4f2945899",
+    "song_id": "962d8f09-e291-4b84-86f3-183e2d2d3ae5",
+    "vocabulary_id": "3d6a7343-60b7-423f-8b61-d30a6fb59e5a",
+    "line_text": "Hand in My Pocket",
+    "highlighted_word": "hand in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "e0f2798b-d790-4116-b713-6004014b11c8",
+    "song_id": "976e807a-fb71-4d2c-bfdb-685a67542238",
+    "vocabulary_id": "af2a9da3-45b5-4f1e-97c6-070046a5930e",
+    "line_text": "It won't cost you an arm and a leg, dance all night",
+    "highlighted_word": "cost an arm and a leg",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "e16e913a-bcb1-4219-bd83-6ab83d3f625a",
+    "song_id": "5b4a6c30-d359-420d-a816-15d206d3fee1",
+    "vocabulary_id": "147a0502-91d5-42c8-880f-7f1e723d7ee0",
+    "line_text": "I'm back to square one",
+    "highlighted_word": "back to square one",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
     "id": "e1e7d855-e093-445a-8c0e-3e1ba02ec247",
     "song_id": "50000001-0000-0000-0000-000000000025",
     "vocabulary_id": "33609a8d-4253-4101-b876-7dbe66970aa7",
@@ -250,6 +2590,33 @@
     "highlighted_word": "end up",
     "line_index": 2,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "e208c65d-bcfc-484a-8061-4a947b0a9195",
+    "song_id": "7b476aec-6573-4641-981c-d288976a342d",
+    "vocabulary_id": "1a0f4825-2385-4e84-9f4a-916fef713013",
+    "line_text": "Please allow me to introduce myself, I'm a man of wealth and taste",
+    "highlighted_word": "sympathy",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "e41c6b10-a914-4e5b-899a-34400e6e64ec",
+    "song_id": "fd0c72c3-1c8c-405f-9531-e097148e0e2f",
+    "vocabulary_id": "a10f728d-81d4-4a17-a597-79347b66ba2f",
+    "line_text": "The ball is in your court, tell me just what you want",
+    "highlighted_word": "the ball is in your court",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "e5fe7573-c5d6-450c-8e25-effcdee93712",
+    "song_id": "550b04c4-c145-491c-ad77-b37c6e3bbcef",
+    "vocabulary_id": "126c5f10-f713-4f56-8077-9e264648e262",
+    "line_text": "Lay Down Sally",
+    "highlighted_word": "lie down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "e63a5674-da6d-445e-8007-04df97bac871",
@@ -270,6 +2637,69 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "e8aa52bc-0e69-41ab-926c-7fb3f8f3e4c4",
+    "song_id": "20097bde-ebea-463d-952f-aac4e6f8cdf6",
+    "vocabulary_id": "f703577c-fe87-4e0f-8efc-de2865bc7ba3",
+    "line_text": "Speak of the devil, well, she's right here in this bar",
+    "highlighted_word": "speak of the devil",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "eaa70690-a306-4bb6-bd27-54beead40930",
+    "song_id": "4aea7eac-4528-4f4d-a2ab-e3a5e41782b8",
+    "vocabulary_id": "40136bed-b256-40ce-89b2-4180b058d502",
+    "line_text": "Keep Away",
+    "highlighted_word": "keep away",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "eb5d05eb-bfdf-475b-8799-89d256109521",
+    "song_id": "4c4fe204-3132-4a0b-b651-13ff8eea3c54",
+    "vocabulary_id": "f1647569-d182-49a1-b6de-5681151869d6",
+    "line_text": "Walk This Way",
+    "highlighted_word": "walk",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "ecb842a2-2ef8-4f8c-869b-95d0e3d0eef3",
+    "song_id": "63275770-d526-4500-bb3e-55802b61e406",
+    "vocabulary_id": "cbd9ff47-8921-475b-99b7-dc80bbea0643",
+    "line_text": "Run Into You",
+    "highlighted_word": "run into",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "ed7fcf1c-2675-4d23-97fb-ca902157c180",
+    "song_id": "1b7b4d07-cc18-486c-aa80-787fc5c96d6a",
+    "vocabulary_id": "cc75d266-b056-4fb7-bac1-28e36f64b060",
+    "line_text": "The Show Must Go On",
+    "highlighted_word": "go on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "ed8ce30b-2fe8-403e-80e1-6ec4744563d1",
+    "song_id": "c5c1b87f-a045-4d08-917c-ee3aaaf4b6c5",
+    "vocabulary_id": "7249bb85-8404-4b71-9ebc-d1c394817569",
+    "line_text": "It takes two to tango, two to really get the feeling of romance",
+    "highlighted_word": "it takes two to tango",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "ef3dcce4-3ee7-4ca9-9613-9e0eb864071c",
+    "song_id": "40c62a2d-5557-4593-b2eb-ddb01b7d5b20",
+    "vocabulary_id": "0c373940-ae54-4e43-8d08-e8f599dc4fd0",
+    "line_text": "Turn Up the Music",
+    "highlighted_word": "turn up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
     "id": "f0934e33-8cc0-445e-ab6f-defb8bf8be85",
     "song_id": "50000001-0000-0000-0000-000000000007",
     "vocabulary_id": "04909ab6-e4c3-4896-ac9b-1613d9572d21",
@@ -277,6 +2707,51 @@
     "highlighted_word": "trust",
     "line_index": 2,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "f238f3c6-d6f7-4512-a0fa-b7c07e22fee2",
+    "song_id": "4274c776-7c5b-4515-a985-9e71614bcc83",
+    "vocabulary_id": "5015923f-35e6-4c0d-bc0c-ef6d45f4427c",
+    "line_text": "Figure It Out",
+    "highlighted_word": "figure out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "f3716220-754d-4917-ab1a-a4040354cfb4",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "vocabulary_id": "d66c332c-244a-4fc0-9784-9adcae6d77ef",
+    "line_text": "Hey Jude, don't make it bad, take a sad song and make it better, then you can start to make it better",
+    "highlighted_word": "then",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "f4348c47-dd62-4066-8186-fac5c0c48726",
+    "song_id": "4bbfe68f-abb4-4e63-9427-11d55fa9855f",
+    "vocabulary_id": "18fa7594-a610-44c3-ab05-75507e00a0ea",
+    "line_text": "Pull Up",
+    "highlighted_word": "pull up",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "f459015e-eb0b-4070-b2aa-2f94c5a3e5ec",
+    "song_id": "f3252ea5-3854-4079-9e10-269b35a6babf",
+    "vocabulary_id": "5a8c2e2b-3cbe-44b0-bd93-fa66311175db",
+    "line_text": "Live Your Life",
+    "highlighted_word": "live",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "f5b39a88-6066-4041-85be-a26f1a8bc322",
+    "song_id": "c78f1c85-9a1e-47a6-a616-a62c7c50419e",
+    "vocabulary_id": "f8e51d2b-adfa-48c9-8058-d0a3f7dea932",
+    "line_text": "The time has come when pigs fly, yeah it's a beautiful thing",
+    "highlighted_word": "when pigs fly",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
     "id": "f60fe78b-c45f-4fdc-9c5b-6eb970b76052",
@@ -297,6 +2772,69 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
+    "id": "f7c3c5f6-c344-411c-bceb-4bb42e3d0b46",
+    "song_id": "09aca0a8-c8b6-4d21-9ec9-5afab19386f8",
+    "vocabulary_id": "f825a8ed-0989-47d0-a136-46b077f0a15b",
+    "line_text": "Keep On Loving You",
+    "highlighted_word": "keep on",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "f81891a9-66e7-471c-81d8-fe30e1404e18",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "vocabulary_id": "21c7f08b-501a-442f-afcd-eac97f955ee3",
+    "line_text": "Help!",
+    "highlighted_word": "help",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "f81b297d-0e25-4db2-b063-55d5a0c91668",
+    "song_id": "f0f6919e-4884-4a82-af60-d2532d2715fa",
+    "vocabulary_id": "4226daa2-ae55-4166-a23b-fc1805dbdf7b",
+    "line_text": "Stand Out",
+    "highlighted_word": "stand out",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "f999fe8d-0657-415f-be22-79c062f45201",
+    "song_id": "46b0ea1b-28a6-46b8-9289-2709c3f4711b",
+    "vocabulary_id": "8eadb8a1-0fea-4593-b384-98acf2c882ad",
+    "line_text": "The Voice",
+    "highlighted_word": "voice",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "f9c7a30e-165a-48dc-b944-95201bd9f5cf",
+    "song_id": "7c9f9093-1cef-4ef2-85d7-ca6f53b9b2d0",
+    "vocabulary_id": "c27ae1c5-cc64-479e-ab25-86ae83051969",
+    "line_text": "Put Your Head on My Shoulder",
+    "highlighted_word": "put away",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "fa286c4a-c394-476a-b998-d294f3c7e71c",
+    "song_id": "bf60481d-d4e6-4397-9a43-2dbb75399c82",
+    "vocabulary_id": "a1a62a06-6f8f-438e-86b7-7d9c3280ad0b",
+    "line_text": "I Can See Clearly Now",
+    "highlighted_word": "see",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "fa567c37-07c4-4137-a2bc-7c8ca25f1a8d",
+    "song_id": "4a32b488-f7c4-49fb-b950-78964cc0faf3",
+    "vocabulary_id": "c7795ec4-a191-4940-a38a-73a89cc80f0d",
+    "line_text": "Back to Black",
+    "highlighted_word": "go back",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
     "id": "fa5a9b5d-9cd2-416b-be06-8a94d05ce67f",
     "song_id": "50000001-0000-0000-0000-000000000019",
     "vocabulary_id": "75e3349c-b3db-4618-a937-981808817683",
@@ -304,5 +2842,59 @@
     "highlighted_word": "feel",
     "line_index": 1,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "fa60dd6e-fb14-41a2-9b30-5ccda83f2bb5",
+    "song_id": "c2640db2-646b-43e1-91c4-3c852f1d8cff",
+    "vocabulary_id": "1cd79737-3ecb-49c9-9596-dabbdfdb9d19",
+    "line_text": "Turn Down for What",
+    "highlighted_word": "turn down",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "fa7e2bd0-f42b-4fea-a714-34b1a43a4b08",
+    "song_id": "70d3440a-010e-46c3-b9df-57f249b54c94",
+    "vocabulary_id": "f1e9ed31-b803-4432-a09e-1d35c2df14b6",
+    "line_text": "Don't cry over spilled milk",
+    "highlighted_word": "cry over spilled milk",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "fd634dc0-e324-4480-8c2e-d7cd7a1f866e",
+    "song_id": "ecf0eb62-ca21-4826-bd80-7815f5d2bca2",
+    "vocabulary_id": "27f47282-afb1-41b7-86d9-432f5585a42b",
+    "line_text": "Back in black, I hit the sack",
+    "highlighted_word": "hit the sack",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.409466+00:00"
+  },
+  {
+    "id": "fda1afb2-389d-4cc2-b805-eec3c3d79e11",
+    "song_id": "4ce23565-9ecb-4814-b5f3-6150be220c5a",
+    "vocabulary_id": "e9cc26eb-3064-4c22-bae3-dd8f3c2a36c1",
+    "line_text": "I'm too embarrassed to tell you what I feel",
+    "highlighted_word": "embarrassed",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "fdeeefe9-89f6-44e7-9175-bbb16cb57a92",
+    "song_id": "242f4ae2-7603-4437-967e-83f9b8c2d4d0",
+    "vocabulary_id": "4e04df0a-ab3d-4eaa-8541-e389768e57ce",
+    "line_text": "Move In a Little Closer",
+    "highlighted_word": "move in",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "ff9a849d-4629-4226-8ce4-b15daaed36ac",
+    "song_id": "5a1f0a93-e535-4f53-b98c-e0cf4bba6004",
+    "vocabulary_id": "ab1469f2-961a-4611-b897-02ef199455c4",
+    "line_text": "Time flies when you're having fun",
+    "highlighted_word": "time flies",
+    "line_index": 0,
+    "created_at": "2026-07-05T16:57:10.524919+00:00"
   }
 ]
