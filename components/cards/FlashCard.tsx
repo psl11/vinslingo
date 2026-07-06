@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Pressable, StyleSheet, ScrollView, Linking, Platform } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
@@ -46,6 +46,19 @@ export function FlashCard({
       await playUrl(audioUrl);
     } else {
       await playWord(word);
+    }
+  };
+
+  const openSpotify = (e?: any) => {
+    e?.stopPropagation?.(); // evita que el toque también voltee la tarjeta
+    const cleanArtist = (songArtist || '').replace(/\s*\([^)]*\)/g, '').trim();
+    const query = [songTitle, cleanArtist].filter(Boolean).join(' ');
+    if (!query) return;
+    const url = `https://open.spotify.com/search/${encodeURIComponent(query)}`;
+    if (Platform.OS === 'web') {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      Linking.openURL(url);
     }
   };
 
@@ -134,6 +147,11 @@ export function FlashCard({
                     <Text style={styles.songCredit}>
                       — {songTitle}{songArtist ? ` (${songArtist})` : ''}
                     </Text>
+                  )}
+                  {songTitle && (
+                    <Pressable onPress={openSpotify} style={styles.spotifyButton}>
+                      <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
+                    </Pressable>
                   )}
                 </View>
               )}
@@ -307,5 +325,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 6,
     fontWeight: '600',
+  },
+  spotifyButton: {
+    marginTop: 10,
+    alignSelf: 'center',
+    backgroundColor: '#1DB954',
+    paddingVertical: 7,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+  },
+  spotifyButtonText: {
+    color: '#FFFFFF',
+    fontSize: 12,
+    fontWeight: '700',
   },
 });
