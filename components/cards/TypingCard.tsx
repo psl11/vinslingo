@@ -152,12 +152,14 @@ export function TypingCard({
       {!submitted ? (
         /* Input phase */
         <View style={styles.card}>
-          <Text style={styles.languageLabel}>🇪🇸 ESPAÑOL → 🇬🇧 INGLÉS</Text>
-          {cefrLevel && (
-            <View style={styles.cefrBadge}>
-              <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
-            </View>
-          )}
+          <View style={styles.cardHeader}>
+            <Text style={styles.languageLabel}>🇪🇸 ESPAÑOL → 🇬🇧 INGLÉS</Text>
+            {cefrLevel && (
+              <View style={styles.cefrBadge}>
+                <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
+              </View>
+            )}
+          </View>
 
           <Text style={styles.translationText}>{maskedTranslation}</Text>
 
@@ -316,18 +318,22 @@ const styles = StyleSheet.create({
   cardWrong: {
     backgroundColor: '#FEF2F2',
   },
-  languageLabel: {
+  cardHeader: {
     position: 'absolute',
     top: 16,
     left: 16,
+    right: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    zIndex: 2,
+  },
+  languageLabel: {
     fontSize: 13,
     fontWeight: '600',
     color: '#6B7280',
   },
   cefrBadge: {
-    position: 'absolute',
-    top: 16,
-    right: 16,
     backgroundColor: '#EEF2FF',
     paddingHorizontal: 8,
     paddingVertical: 3,

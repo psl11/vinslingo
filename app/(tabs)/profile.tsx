@@ -134,6 +134,9 @@ export default function ProfileScreen() {
                 <Text style={styles.statValue}>{progress?.currentStreak ?? 0}</Text>
                 <Text style={styles.statLabel}>🔥 Racha</Text>
               </View>
+              {/* Hueco central: alinea esta fila (2 stats) con la rejilla de
+                  3 columnas de la fila inferior. Racha↔Palabras, Mejor↔Precisión. */}
+              <View style={styles.stat} />
               <View style={styles.stat}>
                 <Text style={styles.statValue}>{progress?.longestStreak ?? 0}</Text>
                 <Text style={styles.statLabel}>🏆 Mejor</Text>
@@ -307,9 +310,9 @@ const styles = StyleSheet.create({
   },
   statsRow: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
   },
   stat: {
+    flex: 1,
     alignItems: 'center',
   },
   statValue: {

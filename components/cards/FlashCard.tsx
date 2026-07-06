@@ -77,31 +77,37 @@ export function FlashCard({
       {!isFlipped ? (
         /* Front of card - ENGLISH word */
         <View style={[styles.card, styles.cardFront]}>
-          <Text style={styles.languageLabel}>🇬🇧 INGLÉS</Text>
-          {cefrLevel && (
-            <View style={styles.cefrBadge}>
-              <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
+          <View style={styles.cardHeader}>
+            <Text style={styles.languageLabel}>🇬🇧 INGLÉS</Text>
+            <View style={styles.headerRight}>
+              {cefrLevel && (
+                <View style={styles.cefrBadge}>
+                  <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
+                </View>
+              )}
+              <Pressable onPress={handlePlayAudio} style={styles.audioButton}>
+                <Text style={styles.audioIcon}>🔊</Text>
+              </Pressable>
             </View>
-          )}
+          </View>
           <Text style={styles.wordText}>{word}</Text>
           {pronunciation && (
             <Text style={styles.pronunciationText}>{pronunciation}</Text>
           )}
-          <Pressable onPress={handlePlayAudio} style={styles.audioButton}>
-            <Text style={styles.audioIcon}>🔊</Text>
-          </Pressable>
           <Text style={styles.tapHint}>¿Sabes qué significa? Toca para ver</Text>
         </View>
       ) : (
         /* Back of card - SPANISH translation */
         <View style={[styles.card, styles.cardBack]}>
-          <Text style={styles.languageLabel}>🇪🇸 ESPAÑOL</Text>
-          {cefrLevel && (
-            <View style={styles.cefrBadge}>
-              <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
-            </View>
-          )}
-          <ScrollView 
+          <View style={styles.cardHeader}>
+            <Text style={styles.languageLabel}>🇪🇸 ESPAÑOL</Text>
+            {cefrLevel && (
+              <View style={styles.cefrBadge}>
+                <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
+              </View>
+            )}
+          </View>
+          <ScrollView
             style={styles.scrollContent} 
             contentContainerStyle={styles.scrollContentContainer}
             showsVerticalScrollIndicator={false}
@@ -189,10 +195,22 @@ const styles = StyleSheet.create({
   cardBack: {
     backgroundColor: '#F0F9FF',
   },
-  languageLabel: {
+  cardHeader: {
     position: 'absolute',
     top: 16,
     left: 16,
+    right: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    zIndex: 2,
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+  },
+  languageLabel: {
     fontSize: 14,
     fontWeight: '600',
     color: '#6B7280',
@@ -215,9 +233,6 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   cefrBadge: {
-    position: 'absolute',
-    top: 16,
-    right: 68,
     backgroundColor: '#EEF2FF',
     paddingHorizontal: 8,
     paddingVertical: 3,
@@ -229,9 +244,6 @@ const styles = StyleSheet.create({
     color: '#4F46E5',
   },
   audioButton: {
-    position: 'absolute',
-    top: 16,
-    right: 16,
     width: 44,
     height: 44,
     borderRadius: 22,
