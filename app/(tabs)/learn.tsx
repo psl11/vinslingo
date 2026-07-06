@@ -518,7 +518,11 @@ const styles = StyleSheet.create({
   progressText: {
     fontSize: 14,
     color: '#6B7280',
-    minWidth: 70,
+    // Ancho fijo suficiente para el peor caso ("2235/2235" ≈ 72px): así la
+    // columna del contador no crece al avanzar el progreso y todas las barras
+    // (flex:1) terminan en la misma x. Con 70px, "2235/2235" desbordaba y
+    // desalineaba la barra de NGSL en cuanto había progreso real.
+    minWidth: 80,
     textAlign: 'right',
   },
   cardCountSection: {
