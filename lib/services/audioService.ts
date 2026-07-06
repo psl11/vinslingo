@@ -81,13 +81,3 @@ export async function stopAudio(): Promise<void> {
     }
   }
 }
-
-export async function playCorrectSound(): Promise<void> {
-  // Could use a local asset or generate a simple tone
-  // For now, we'll skip this or use haptics instead
-}
-
-export async function playIncorrectSound(): Promise<void> {
-  // Could use a local asset or generate a simple tone
-  // For now, we'll skip this or use haptics instead
-}

@@ -186,27 +186,3 @@ async function syncQueuedVocabularyProgress(
     if (error) throw error;
   }
 }
-
-export async function getLastSyncTime(): Promise<number | null> {
-  try {
-    const result = await runQuery<{ value: string }>(
-      "SELECT value FROM sync_metadata WHERE key = 'last_full_sync'"
-    );
-    return result[0] ? parseInt(result[0].value, 10) : null;
-  } catch {
-    return null;
-  }
-}
-
-export function formatLastSync(timestamp: number | null): string {
-  if (!timestamp) return 'Nunca';
-  
-  const now = Date.now();
-  const diff = now - timestamp;
-  
-  if (diff < 60000) return 'Hace un momento';
-  if (diff < 3600000) return `Hace ${Math.round(diff / 60000)} min`;
-  if (diff < 86400000) return `Hace ${Math.round(diff / 3600000)} horas`;
-  
-  return new Date(timestamp).toLocaleDateString();
-}
