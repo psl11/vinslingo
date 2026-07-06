@@ -153,15 +153,6 @@
     "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
-    "id": "0ca76af2-e6fd-420b-a0b4-168a3bd76d9b",
-    "song_id": "2a2094a0-4b7f-4905-86c2-817e8558959f",
-    "vocabulary_id": "c54253d4-c457-4288-a1c3-f2c7f49fd6aa",
-    "line_text": "Lay Me Down",
-    "highlighted_word": "put down",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:11.219462+00:00"
-  },
-  {
     "id": "0f0f1a7b-5549-4a6a-85d3-181020726bca",
     "song_id": "50000001-0000-0000-0000-000000000013",
     "vocabulary_id": "eab5f5ed-816d-477a-b042-63dafc5efa80",
@@ -234,15 +225,6 @@
     "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
-    "id": "141299ae-3398-4a38-86e2-3fcd68a90fb5",
-    "song_id": "d4305355-53d2-436f-937f-798f834d7e9c",
-    "vocabulary_id": "5a4a9ac4-e802-4708-9b1d-644ba4fa8a9b",
-    "line_text": "Throw It Away",
-    "highlighted_word": "throw out",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.524919+00:00"
-  },
-  {
     "id": "152f9a99-604f-42d5-a3da-b12bbd1686d7",
     "song_id": "c884a853-40c0-40f8-a2db-4f657436b497",
     "vocabulary_id": "c19f5d1a-7bcf-46e7-9f5e-714c1ff5680a",
@@ -306,15 +288,6 @@
     "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
-    "id": "1a2386ed-815d-4409-9ec9-1c600e193a6d",
-    "song_id": "48dcbd6e-8010-4166-bb18-775a6828260b",
-    "vocabulary_id": "10b646fd-70be-4330-ae78-cfae33195365",
-    "line_text": "Pay Me My Money Down",
-    "highlighted_word": "pay off",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.409466+00:00"
-  },
-  {
     "id": "1b97d0dc-880a-4583-b0f2-6345f44d81a5",
     "song_id": "fe4fd47f-5b14-4652-8e0c-59c265c70091",
     "vocabulary_id": "e99a0d8f-0776-403f-8f37-47b09b3718fb",
@@ -336,7 +309,7 @@
     "id": "1c68891b-4ee8-4200-9933-b76effcb4b3b",
     "song_id": "7de935b5-bb3a-4e71-9c7a-cfb824dd6ffa",
     "vocabulary_id": "49409083-c739-4300-adc0-851204ecceb2",
-    "line_text": "Yellow",
+    "line_text": "Look at the stars, look how they shine for you",
     "highlighted_word": "star",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.409466+00:00"
@@ -360,6 +333,15 @@
     "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
+    "id": "1d420047-98ab-46b7-a111-1267f7db2d84",
+    "song_id": "fc8f5e4b-8a6a-4853-a82d-01ba669ee8e3",
+    "vocabulary_id": "7d030527-e095-4c81-aef5-0bb430bf6115",
+    "line_text": "Send me out to the world to make You known",
+    "highlighted_word": "send out",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:41.550357+00:00"
+  },
+  {
     "id": "1edaa0b2-5239-49ed-8241-0081884adfe4",
     "song_id": "0784458f-d822-4f11-8fd9-c75802b524b6",
     "vocabulary_id": "9499deab-dbf7-4aea-bbd6-ba0e4509be0b",
@@ -381,7 +363,7 @@
     "id": "234aeefd-45be-4e7f-b7f6-2e34ec3cfe66",
     "song_id": "4e2f8be0-e3a8-4ac2-a9dd-e1836a5d396b",
     "vocabulary_id": "c61ac358-7c12-4002-9c22-1835264844b0",
-    "line_text": "I Don't Want to Miss a Thing",
+    "line_text": "Watch you smile while you are sleeping",
     "highlighted_word": "sleep",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00"
@@ -549,15 +531,6 @@
     "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
-    "id": "3008bc62-0461-47b2-b23d-5c5ba5e0c1fd",
-    "song_id": "f77e158f-d083-4a0a-8f33-18335220183b",
-    "vocabulary_id": "369ab104-905d-40c1-8326-e55f904c5d16",
-    "line_text": "Moving On Up",
-    "highlighted_word": "move up",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.409466+00:00"
-  },
-  {
     "id": "304bcc76-ca2a-4ecc-b68c-cdf14a4f3394",
     "song_id": "47977744-fb09-4d28-85e8-e2e2595d2513",
     "vocabulary_id": "05be8399-ecb3-4fc6-a479-a8f6ddcd861f",
@@ -583,6 +556,15 @@
     "highlighted_word": "so",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "33be8b4d-1bb8-4db6-8712-efbe2d1f0b93",
+    "song_id": "42686000-066f-477e-90e2-ae57fe9e8c3e",
+    "vocabulary_id": "f8962acf-4412-47f0-8e86-647f30166ecb",
+    "line_text": "This Calls for a Celebration",
+    "highlighted_word": "call for",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:41.072178+00:00"
   },
   {
     "id": "34faca8b-b1a9-43d9-9ce9-a9bdf8a32832",
@@ -648,15 +630,6 @@
     "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
-    "id": "3a623b31-da4b-4998-a445-b6766f732320",
-    "song_id": "bd6980b7-7c2e-4d65-87c0-d1729badaf9f",
-    "vocabulary_id": "42dd8af3-c7fa-480b-befe-54b2f685ef8d",
-    "line_text": "Pick Up the Pieces",
-    "highlighted_word": "pick out",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.409466+00:00"
-  },
-  {
     "id": "3bdf52ef-4a2c-4fe4-9927-647052e548a9",
     "song_id": "e647357f-1b21-4c4e-86fe-3b84fade0d69",
     "vocabulary_id": "faf3ddb1-1f14-42b3-b557-f57b3f437b34",
@@ -700,6 +673,15 @@
     "highlighted_word": "give",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "3e96d065-a7fd-4f5e-ae5c-d17ac6d908dd",
+    "song_id": "3125424f-e979-4bcc-9211-028e85bfb427",
+    "vocabulary_id": "064e716f-cafa-4842-823e-cc83c618f511",
+    "line_text": "Drop Me Off in Harlem",
+    "highlighted_word": "drop off",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:37.634589+00:00"
   },
   {
     "id": "3ee625d9-e313-47ca-ad4f-0559ec5c884c",
@@ -1143,15 +1125,6 @@
     "created_at": "2026-03-23T16:41:49.946907+00:00"
   },
   {
-    "id": "6a1dd16a-823f-4d07-9740-828d3a9aa332",
-    "song_id": "784bf543-08aa-430f-a2d9-0af2302664e7",
-    "vocabulary_id": "1b0ffe35-8945-4cfe-8111-2888141cf89f",
-    "line_text": "Torn Apart",
-    "highlighted_word": "take apart",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.409466+00:00"
-  },
-  {
     "id": "6a8d1274-fad3-4200-b99b-7cf5569fa126",
     "song_id": "d8d0bd2b-7671-45d8-85fe-8c446ce530c9",
     "vocabulary_id": "c1b27946-4af4-434f-a18f-09db7f13c70a",
@@ -1197,15 +1170,6 @@
     "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
-    "id": "6e08641c-b551-4a83-a62d-9616475dbe0f",
-    "song_id": "79f2da06-966f-4e98-97ec-665ad3a700ce",
-    "vocabulary_id": "7d030527-e095-4c81-aef5-0bb430bf6115",
-    "line_text": "Send Me on My Way",
-    "highlighted_word": "send out",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.524919+00:00"
-  },
-  {
     "id": "702fc4b0-21f5-4e68-baec-9c3fed7ecb92",
     "song_id": "bdd92f37-5f53-4629-80df-1591198194b4",
     "vocabulary_id": "4d14e371-f48f-43f8-8681-533b87ed0d66",
@@ -1220,15 +1184,6 @@
     "vocabulary_id": "19a80352-20c9-4f30-9fc1-b994ba06b490",
     "line_text": "Take It Back",
     "highlighted_word": "take back",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.409466+00:00"
-  },
-  {
-    "id": "709c9a81-87ca-438c-9caf-b5a83008ac85",
-    "song_id": "f700c87c-4734-4dfc-af36-09c1f5a661a4",
-    "vocabulary_id": "1ff89d80-9cd6-41d8-9356-f9351ab4dc2f",
-    "line_text": "Bring Me to Life",
-    "highlighted_word": "bring about",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
@@ -1252,9 +1207,9 @@
   },
   {
     "id": "737c9069-1a4d-4a07-a099-3d0dfe264275",
-    "song_id": "f435abe3-4dbe-4084-bca6-6d0d480eb22e",
+    "song_id": "241ca682-5771-4a73-9179-5f94d5eba995",
     "vocabulary_id": "575e3305-22a5-44d7-8f1c-0ad95591e90a",
-    "line_text": "Piece of My Heart",
+    "line_text": "You were always on my mind",
     "highlighted_word": "mind",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00"
@@ -1287,6 +1242,15 @@
     "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
+    "id": "7794b67c-1189-4cbc-ad84-fdd867bd7084",
+    "song_id": "2fbb8927-c475-4e5d-8809-9f342574cc7e",
+    "vocabulary_id": "10b646fd-70be-4330-ae78-cfae33195365",
+    "line_text": "They say hard work pays off, I've been feeling paid off",
+    "highlighted_word": "pay off",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:38.344348+00:00"
+  },
+  {
     "id": "77a91275-e32c-4066-a52b-86ed53610fc7",
     "song_id": "1850b4e8-c1d7-42b5-be1f-b98778b1bfdf",
     "vocabulary_id": "6eb01d8c-828f-4015-9920-d7aaa6c700da",
@@ -1312,15 +1276,6 @@
     "highlighted_word": "bring",
     "line_index": 0,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
-  },
-  {
-    "id": "7a5b7f6b-1705-4c36-ba3e-bee0aede329f",
-    "song_id": "bdefde72-ceb2-43e3-818a-703e9bbfeab8",
-    "vocabulary_id": "97bf55c7-7508-4428-88aa-2163f639f054",
-    "line_text": "Closing Time",
-    "highlighted_word": "close down",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
     "id": "7b35026d-cb1d-43b4-ba6a-7c37bb9d0eed",
@@ -1359,15 +1314,6 @@
     "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
-    "id": "7d92ad79-d4ec-4e1e-8398-f9c0d657cdf9",
-    "song_id": "c6ec70e5-09df-4414-b54e-bd0831d881e2",
-    "vocabulary_id": "62404f44-c0e1-41bc-a411-cf76d3122844",
-    "line_text": "Falling Apart",
-    "highlighted_word": "come apart",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.524919+00:00"
-  },
-  {
     "id": "7f800da9-962f-4fc9-99f5-a343e276b6a4",
     "song_id": "37946620-b6e2-46ab-bb98-792ebaa54303",
     "vocabulary_id": "51fb8de0-9a08-4895-b14d-0a70defbe981",
@@ -1393,6 +1339,15 @@
     "highlighted_word": "dance",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "81033861-d8e2-4637-b2e7-ebade8901412",
+    "song_id": "70877285-d6c1-4684-9e12-9868158ee3d1",
+    "vocabulary_id": "c54253d4-c457-4288-a1c3-f2c7f49fd6aa",
+    "line_text": "Put the gun down",
+    "highlighted_word": "put down",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:42.507411+00:00"
   },
   {
     "id": "827b84c8-aafd-43b9-b353-9831f33069ed",
@@ -1438,15 +1393,6 @@
     "highlighted_word": "look after",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00"
-  },
-  {
-    "id": "893f1ea0-8f9c-4d91-9711-add2403aa175",
-    "song_id": "9eb843a1-54ab-45e4-aee4-c87fc03f6b6a",
-    "vocabulary_id": "064e716f-cafa-4842-823e-cc83c618f511",
-    "line_text": "Drop It Like It's Hot",
-    "highlighted_word": "drop off",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.409466+00:00"
   },
   {
     "id": "89a4219c-477f-4b43-a4f0-fb17ccf84ddb",
@@ -1935,15 +1881,6 @@
     "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
-    "id": "ae1cb4ea-c891-455b-af6f-116a1c8ec869",
-    "song_id": "5aa0d9a5-800e-4fb8-aff6-53c41847d79b",
-    "vocabulary_id": "f8962acf-4412-47f0-8e86-647f30166ecb",
-    "line_text": "Call Me",
-    "highlighted_word": "call for",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:11.219462+00:00"
-  },
-  {
     "id": "ae2f65e1-a23a-4941-a953-eda84b0dbbdb",
     "song_id": "f0201808-63d1-47e5-898d-6ce27dd6f128",
     "vocabulary_id": "fde0ff94-62d1-4d3b-b35f-c1bcae7a63f9",
@@ -2140,6 +2077,15 @@
     "highlighted_word": "the elephant in the room",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00"
+  },
+  {
+    "id": "bbb515ef-4056-4954-b265-5ea1937d4e4d",
+    "song_id": "a5e11fb3-c3ed-4066-b7a0-d7540e9c9ac4",
+    "vocabulary_id": "1b0ffe35-8945-4cfe-8111-2888141cf89f",
+    "line_text": "Take me apart, tear me to pieces",
+    "highlighted_word": "take apart",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:39.011423+00:00"
   },
   {
     "id": "bc35a60e-5d55-4cc9-b4e8-15965e5ab47e",
@@ -2377,9 +2323,9 @@
   },
   {
     "id": "d06274ad-feb7-43c1-83c1-103d471bc0f5",
-    "song_id": "f77e158f-d083-4a0a-8f33-18335220183b",
+    "song_id": "5a5d008f-2582-4c0b-92dc-55f8825b0b33",
     "vocabulary_id": "19c6052d-4409-41c1-89ee-d47160eb7e04",
-    "line_text": "Movin' On Up",
+    "line_text": "Move on, yeah, hold it together, move on, move on",
     "highlighted_word": "move on",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.409466+00:00"
@@ -2466,6 +2412,15 @@
     "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
+    "id": "d4b97699-5938-4b7a-af00-abca2710cc8d",
+    "song_id": "3b78b7e9-3e2d-4250-a9cd-101761a1fe98",
+    "vocabulary_id": "c27ae1c5-cc64-479e-ab25-86ae83051969",
+    "line_text": "Clean up, clean up, put your toys away",
+    "highlighted_word": "put away",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:42.007901+00:00"
+  },
+  {
     "id": "d50fcdc5-595e-4495-be3f-426e9e96817d",
     "song_id": "5b7aac93-1d62-4dc4-9a82-44e0e5af4a09",
     "vocabulary_id": "2f11d691-9b7d-4466-8ba1-0150a2a213e8",
@@ -2518,6 +2473,15 @@
     "highlighted_word": "slow down",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00"
+  },
+  {
+    "id": "d80f1528-4c63-4662-8bdc-262f3d8f84b6",
+    "song_id": "bb0b6dd4-0386-4ef6-834f-f47a8c5c4162",
+    "vocabulary_id": "369ab104-905d-40c1-8326-e55f904c5d16",
+    "line_text": "Movin' up, mmm yeah",
+    "highlighted_word": "move up",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:39.572853+00:00"
   },
   {
     "id": "d9a23116-1a43-406c-8b28-81b1913db2c0",
@@ -2613,7 +2577,7 @@
     "id": "e208c65d-bcfc-484a-8061-4a947b0a9195",
     "song_id": "7b476aec-6573-4641-981c-d288976a342d",
     "vocabulary_id": "1a0f4825-2385-4e84-9f4a-916fef713013",
-    "line_text": "Please allow me to introduce myself, I'm a man of wealth and taste",
+    "line_text": "Sympathy for the Devil",
     "highlighted_word": "sympathy",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.409466+00:00"
@@ -2628,15 +2592,6 @@
     "created_at": "2026-07-05T16:57:10.524919+00:00"
   },
   {
-    "id": "e5fe7573-c5d6-450c-8e25-effcdee93712",
-    "song_id": "550b04c4-c145-491c-ad77-b37c6e3bbcef",
-    "vocabulary_id": "126c5f10-f713-4f56-8077-9e264648e262",
-    "line_text": "Lay Down Sally",
-    "highlighted_word": "lie down",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:10.409466+00:00"
-  },
-  {
     "id": "e63a5674-da6d-445e-8007-04df97bac871",
     "song_id": "50000001-0000-0000-0000-000000000001",
     "vocabulary_id": "a87f937f-f984-4321-9bc3-197384ee0cc3",
@@ -2644,6 +2599,15 @@
     "highlighted_word": "find",
     "line_index": 0,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "e6e53bb4-1f12-4f68-9520-d79e2e5832ed",
+    "song_id": "485bcb3d-9beb-4031-a5d2-bda88ea0bef3",
+    "vocabulary_id": "97bf55c7-7508-4428-88aa-2163f639f054",
+    "line_text": "I'm out of step and closing down",
+    "highlighted_word": "close down",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:40.576727+00:00"
   },
   {
     "id": "e8908d6a-6444-44ec-b2c5-13ba2a6ba844",
@@ -2725,6 +2689,15 @@
     "highlighted_word": "trust",
     "line_index": 2,
     "created_at": "2026-03-23T16:41:49.946907+00:00"
+  },
+  {
+    "id": "f189aa45-b574-4bb2-9bff-c552ab3e1726",
+    "song_id": "ac435320-103d-4e86-9e4e-29df3a697af0",
+    "vocabulary_id": "62404f44-c0e1-41bc-a411-cf76d3122844",
+    "line_text": "I come apart, and you keep it together",
+    "highlighted_word": "come apart",
+    "line_index": 0,
+    "created_at": "2026-07-06T08:17:40.078401+00:00"
   },
   {
     "id": "f238f3c6-d6f7-4512-a0fa-b7c07e22fee2",
@@ -2824,15 +2797,6 @@
     "highlighted_word": "voice",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00"
-  },
-  {
-    "id": "f9c7a30e-165a-48dc-b944-95201bd9f5cf",
-    "song_id": "7c9f9093-1cef-4ef2-85d7-ca6f53b9b2d0",
-    "vocabulary_id": "c27ae1c5-cc64-479e-ab25-86ae83051969",
-    "line_text": "Put Your Head on My Shoulder",
-    "highlighted_word": "put away",
-    "line_index": 0,
-    "created_at": "2026-07-05T16:57:11.219462+00:00"
   },
   {
     "id": "fa286c4a-c394-476a-b998-d294f3c7e71c",

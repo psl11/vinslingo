@@ -90,6 +90,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "12782656-e9a4-46e7-8881-099730ed079c",
+    "name": "Fee",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:41.382143+00:00"
+  },
+  {
     "id": "129f03dc-35ae-4fe0-98d1-bb3636943df9",
     "name": "Fun.",
     "image_url": null,
@@ -130,6 +136,12 @@
     "name": "Phantom of the Opera",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "17ae2526-05c5-40c0-8856-98c6d7f862e6",
+    "name": "ZZ Ward",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:42.344292+00:00"
   },
   {
     "id": "17ea1d4c-4892-49b4-a1bb-717133cd304a",
@@ -186,10 +198,22 @@
     "created_at": "2026-07-05T16:55:41.17869+00:00"
   },
   {
+    "id": "1e9b3b78-3572-4030-9e61-92a5f9c61ef9",
+    "name": "George Michael",
+    "image_url": null,
+    "created_at": "2026-07-06T07:22:39.621026+00:00"
+  },
+  {
     "id": "1fd72874-b09d-4386-b882-10da55eb49fd",
     "name": "Papa Roach",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "22e26ac1-c3ac-49e2-adc7-d7ed8f7d8454",
+    "name": "Duke Ellington",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:37.205957+00:00"
   },
   {
     "id": "23233d3b-29c2-49df-9b2a-f77868cbc902",
@@ -520,6 +544,12 @@
     "name": "Alanis Morissette",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "60245089-3099-43ab-9667-c47e754402b8",
+    "name": "SYML",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:38.682955+00:00"
   },
   {
     "id": "60e3ee71-ada3-4ebc-83cf-148f7c90460b",
@@ -864,6 +894,12 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "8f6df7fb-1c3c-4525-a79a-962e8351f5c3",
+    "name": "The Cure",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:40.41291+00:00"
+  },
+  {
     "id": "8fe68a3f-fc51-45cc-841f-87a385f7bdf5",
     "name": "Stephen Sanchez",
     "image_url": null,
@@ -1110,6 +1146,18 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "b18a72cc-b443-4f62-ac34-779f750f3d41",
+    "name": "Dannii Minogue",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:39.367218+00:00"
+  },
+  {
+    "id": "b535f936-8b9c-48d3-b4d1-db764db634f1",
+    "name": "A$AP Rocky ft. Florence Welch",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:39.891311+00:00"
+  },
+  {
     "id": "b5ffe5b0-a505-4bbb-a0c3-293735b20f72",
     "name": "OneRepublic",
     "image_url": null,
@@ -1332,6 +1380,12 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "dabdca68-7a00-442c-9b2a-5aa7219a2336",
+    "name": "Future & Juice WRLD",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:38.157495+00:00"
+  },
+  {
     "id": "dbda3a20-dabc-45df-9090-849a770327e7",
     "name": "AC/DC",
     "image_url": null,
@@ -1374,6 +1428,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "dfae53a6-ab38-462e-9710-b99e1970c255",
+    "name": "The Fantastic Zoo",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:40.850747+00:00"
+  },
+  {
     "id": "e267b631-226d-4e69-b9f8-e2b1775a2557",
     "name": "The Fabulous Thunderbirds",
     "image_url": null,
@@ -1384,6 +1444,12 @@
     "name": "Scorpions",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "e4424162-0179-4423-b75d-9a6c71845771",
+    "name": "Leigha Marina (nursery rhyme)",
+    "image_url": null,
+    "created_at": "2026-07-06T08:17:41.832913+00:00"
   },
   {
     "id": "e7d5ea78-017c-49c4-a269-8dad6dfd7ab5",

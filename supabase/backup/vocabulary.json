@@ -87,9 +87,9 @@
     "song_lyric_translation": "No te desanimes, sé que parece que nadie te apoya",
     "song_title": "Keep Your Chin Up",
     "song_artist": "Face To Face",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Keep your chin up, keep your chin up",
+    "quote_translation": "No te desanimes, no te desanimes",
+    "quote_author": "Frank Turner"
   },
   {
     "id": "00c662de-0f1e-45ff-87f6-ced39f172726",
@@ -1375,9 +1375,9 @@
     "song_lyric_translation": "Te equivocas de medio a medio, eso me dijo",
     "song_title": "Barking Up The Wrong Tree",
     "song_artist": "Don Woody",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "I might have barked up the wrong tree many a long day before I would have got any help from him.",
+    "quote_translation": "Podría haber ladrado al árbol equivocado durante mucho tiempo antes de recibir ayuda de él.",
+    "quote_author": "Davy Crockett"
   },
   {
     "id": "05c9b15f-9f90-4870-a359-872e318d4f3f",
@@ -1578,10 +1578,10 @@
     "created_at": "2026-01-13T15:25:13.149954+00:00",
     "example_sentence_2": "Can you drop me off at the station?",
     "example_translation_2": "¿Puedes dejarme en la estación?",
-    "song_lyric": "Drop It Like It's Hot",
-    "song_lyric_translation": "Déjalo caer como si quemara",
-    "song_title": "Drop It Like It's Hot",
-    "song_artist": "Snoop Dogg",
+    "song_lyric": "Drop Me Off in Harlem",
+    "song_lyric_translation": "Déjame en Harlem",
+    "song_title": "Drop Me Off in Harlem",
+    "song_artist": "Duke Ellington",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -3330,9 +3330,9 @@
     "song_lyric_translation": "Vamos Eileen",
     "song_title": "Come On Eileen",
     "song_artist": "Dexys Midnight Runners",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Come on Eileen",
+    "quote_translation": "Vamos, Eileen",
+    "quote_author": "Dexys Midnight Runners"
   },
   {
     "id": "0d24987e-28c4-4627-ac28-8cf8cbdf72ca",
@@ -4591,10 +4591,10 @@
     "created_at": "2026-01-13T15:25:13.149954+00:00",
     "example_sentence_2": "Hard work always pays off in the end.",
     "example_translation_2": "El trabajo duro siempre da frutos al final.",
-    "song_lyric": "Pay Me My Money Down",
-    "song_lyric_translation": "Págame mi dinero",
-    "song_title": "Pay Me My Money Down",
-    "song_artist": "Bruce Springsteen",
+    "song_lyric": "They say hard work pays off, I've been feeling paid off",
+    "song_lyric_translation": "Dicen que el trabajo duro da sus frutos, me he sentido recompensado",
+    "song_title": "Hard Work Pays Off",
+    "song_artist": "Future & Juice WRLD",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -5051,10 +5051,10 @@
     "created_at": "2026-01-13T15:24:47.225074+00:00",
     "example_sentence_2": "Lie down and rest for a while.",
     "example_translation_2": "Acuéstate y descansa un rato.",
-    "song_lyric": "Lay Down Sally",
-    "song_lyric_translation": "Recuéstate Sally",
-    "song_title": "Lay Down Sally",
-    "song_artist": "Eric Clapton",
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -6320,9 +6320,9 @@
     "song_lyric_translation": "Despiértame",
     "song_title": "Wake Me Up",
     "song_artist": "Avicii",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Wake up, wake up, wake up",
+    "quote_translation": "Despierta, despierta, despierta",
+    "quote_author": "Arcade Fire"
   },
   {
     "id": "174187a2-b7fe-4b38-9e19-d81a5495663a",
@@ -6780,9 +6780,9 @@
     "song_lyric_translation": "No te andes con rodeos, dime qué quieres",
     "song_title": "Beating Round The Bush",
     "song_artist": "Mud",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "He beat about the bush, while others caught the birds.",
+    "quote_translation": "Él se andaba con rodeos, mientras otros cazaban los pájaros.",
+    "quote_author": "George Gascoigne"
   },
   {
     "id": "18e9d381-b3c6-4e55-a4fe-bab35e6a0514",
@@ -7121,10 +7121,10 @@
     "created_at": "2026-01-13T15:24:19.7533+00:00",
     "example_sentence_2": "We need to move on from the past.",
     "example_translation_2": "Necesitamos dejar atrás el pasado y seguir adelante.",
-    "song_lyric": "Movin' On Up",
-    "song_lyric_translation": "Avanzando hacia arriba",
-    "song_title": "Moving On Up",
-    "song_artist": "M People",
+    "song_lyric": "Move on, yeah, hold it together, move on, move on",
+    "song_lyric_translation": "Sigue adelante, sí, mantente entero, sigue adelante, sigue adelante",
+    "song_title": "Move On",
+    "song_artist": "George Michael",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -7213,8 +7213,8 @@
     "created_at": "2026-02-16T11:14:23.528363+00:00",
     "example_sentence_2": "She showed no sympathy when he lost his job.",
     "example_translation_2": "No mostró ninguna compasión cuando perdió su trabajo.",
-    "song_lyric": "Please allow me to introduce myself, I'm a man of wealth and taste",
-    "song_lyric_translation": "Permítanme presentarme, soy un hombre de riqueza y buen gusto",
+    "song_lyric": "Sympathy for the Devil",
+    "song_lyric_translation": "Simpatía por el diablo",
     "song_title": "Sympathy for the Devil",
     "song_artist": "The Rolling Stones",
     "quote_text": null,
@@ -7443,10 +7443,10 @@
     "created_at": "2026-01-13T15:25:13.149954+00:00",
     "example_sentence_2": "He took apart the radio to fix it.",
     "example_translation_2": "Desarmó la radio para arreglarla.",
-    "song_lyric": "Torn Apart",
-    "song_lyric_translation": "Destrozado",
-    "song_title": "Torn Apart",
-    "song_artist": "Bastille",
+    "song_lyric": "Take me apart, tear me to pieces",
+    "song_lyric_translation": "Desármame, hazme pedazos",
+    "song_title": "Take Me Apart",
+    "song_artist": "SYML",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -7792,9 +7792,9 @@
     "song_lyric_translation": "¿Bajar para qué?",
     "song_title": "Turn Down for What",
     "song_artist": "DJ Snake & Lil Jon",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Turn Down for What",
+    "quote_translation": "Por qué contenerse / por qué parar",
+    "quote_author": "DJ Snake & Lil Jon"
   },
   {
     "id": "1ce354ce-ed6d-4cfb-a309-b98df05b2a62",
@@ -8206,9 +8206,9 @@
     "song_lyric_translation": "Me pregunto por qué es difícil intentar estar de acuerdo",
     "song_title": "Eye To Eye",
     "song_artist": "Ringo Starr",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "For they shall see eye to eye, when the LORD shall bring again Zion.",
+    "quote_translation": "Porque verán ojo a ojo, cuando el SEÑOR restaure a Sión.",
+    "quote_author": "Biblia"
   },
   {
     "id": "1efd95ea-a0d4-4889-a503-18e386073465",
@@ -8547,10 +8547,10 @@
     "created_at": "2026-01-13T15:24:19.7533+00:00",
     "example_sentence_2": "Social media has brought about major changes.",
     "example_translation_2": "Las redes sociales han provocado grandes cambios.",
-    "song_lyric": "Bring Me to Life",
-    "song_lyric_translation": "Tráeme a la vida",
-    "song_title": "Bring Me to Life",
-    "song_artist": "Evanescence",
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -11426,9 +11426,9 @@
     "song_lyric_translation": "De nada, de nada",
     "song_title": "You're Welcome",
     "song_artist": "Lin-Manuel Miranda",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "What can I say except, 'You're welcome'",
+    "quote_translation": "Qué puedo decir salvo, 'De nada'",
+    "quote_author": "Dwayne Johnson (voz de Maui)"
   },
   {
     "id": "2c85b57d-62ce-48e8-85c8-9142e30ee632",
@@ -12231,9 +12231,9 @@
     "song_lyric_translation": "Rompe el hielo, tómate tu tiempo",
     "song_title": "Break The Ice",
     "song_artist": "Britney Spears",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Let me break the ice",
+    "quote_translation": "Déjame romper el hielo",
+    "quote_author": "Britney Spears"
   },
   {
     "id": "2f23b99e-2a6b-4c7c-85ed-3ddf2c5d38ee",
@@ -14090,10 +14090,10 @@
     "created_at": "2026-01-13T15:24:47.225074+00:00",
     "example_sentence_2": "She has moved up quickly in the company.",
     "example_translation_2": "Ella ha ascendido rápidamente en la empresa.",
-    "song_lyric": "Moving On Up",
-    "song_lyric_translation": "Avanzando hacia arriba",
-    "song_title": "Moving On Up",
-    "song_artist": "M People",
+    "song_lyric": "Movin' up, mmm yeah",
+    "song_lyric_translation": "Subiendo, mmm sí",
+    "song_title": "Moving Up",
+    "song_artist": "Dannii Minogue",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -16877,9 +16877,9 @@
     "song_lyric_translation": "Destaca",
     "song_title": "Stand Out",
     "song_artist": "A Goofy Movie",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "In a crowded marketplace, fitting in is a failure. In a busy marketplace, not standing out is the same as being invisible.",
+    "quote_translation": "En un mercado saturado, encajar es un fracaso. En un mercado ocupado, no destacar es lo mismo que ser invisible.",
+    "quote_author": "Seth Godin"
   },
   {
     "id": "424307dd-024c-4d02-a8ce-7f911f4d150b",
@@ -17172,10 +17172,10 @@
     "created_at": "2026-01-13T15:25:13.149954+00:00",
     "example_sentence_2": "Help me pick out a birthday gift.",
     "example_translation_2": "Ayúdame a elegir un regalo de cumpleaños.",
-    "song_lyric": "Pick Up the Pieces",
-    "song_lyric_translation": "Recoge las piezas",
-    "song_title": "Pick Up the Pieces",
-    "song_artist": "Average White Band",
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -18257,9 +18257,9 @@
     "song_lyric_translation": "Levántate, ponte de pie",
     "song_title": "Get Up Stand Up",
     "song_artist": "Bob Marley",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Get up, stand up, stand up for your rights",
+    "quote_translation": "Levántate, ponte en pie, defiende tus derechos",
+    "quote_author": "Bob Marley & The Wailers"
   },
   {
     "id": "47d51cac-8d66-496f-ab8b-8164d522eef0",
@@ -18667,8 +18667,8 @@
     "created_at": "2026-01-13T15:28:08.653793+00:00",
     "example_sentence_2": "Look at the stars above.",
     "example_translation_2": "Mira las estrellas arriba.",
-    "song_lyric": "Yellow",
-    "song_lyric_translation": "Amarillo",
+    "song_lyric": "Look at the stars, look how they shine for you",
+    "song_lyric_translation": "Mira las estrellas, mira cómo brillan para ti",
     "song_title": "Yellow",
     "song_artist": "Coldplay",
     "quote_text": null,
@@ -20212,9 +20212,9 @@
     "song_lyric_translation": null,
     "song_title": null,
     "song_artist": null,
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Sooner or later you're going to be mine, sooner or later you're going to be fine",
+    "quote_translation": "Tarde o temprano serás mío, tarde o temprano estarás bien",
+    "quote_author": "Stephen Sondheim (interpretada por Madonna)"
   },
   {
     "id": "4ef74d5f-96f2-4d1f-b2b5-172c4898c53f",
@@ -22209,10 +22209,10 @@
     "created_at": "2026-01-13T15:26:58.711221+00:00",
     "example_sentence_2": "My mind is racing with ideas.",
     "example_translation_2": "Mi mente está llena de ideas.",
-    "song_lyric": "Piece of My Heart",
-    "song_lyric_translation": "Pedazo de mi corazón",
-    "song_title": "Piece of My Heart",
-    "song_artist": "Janis Joplin",
+    "song_lyric": "You were always on my mind",
+    "song_lyric_translation": "Siempre estuviste en mi mente",
+    "song_title": "Always on My Mind",
+    "song_artist": "Willie Nelson",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -22512,9 +22512,9 @@
     "song_lyric_translation": null,
     "song_title": null,
     "song_artist": null,
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "By the way, I tried to say, I'd be there, waiting for",
+    "quote_translation": "Por cierto, intenté decir que estaría ahí, esperando",
+    "quote_author": "Red Hot Chili Peppers"
   },
   {
     "id": "589e0816-a9f2-4fac-8ef6-a8b5793d3ba7",
@@ -22807,10 +22807,10 @@
     "created_at": "2026-01-13T15:24:47.225074+00:00",
     "example_sentence_2": "Don't throw out those old photos!",
     "example_translation_2": "¡No tires esas fotos viejas!",
-    "song_lyric": "Throw It Away",
-    "song_lyric_translation": "Tíralo",
-    "song_title": "Throw It Away",
-    "song_artist": "Abbey Lincoln",
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -24260,9 +24260,9 @@
     "song_lyric_translation": null,
     "song_title": null,
     "song_artist": null,
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "It doesn't really matter that I loved you",
+    "quote_translation": "Realmente no importa que te haya querido",
+    "quote_author": "George Michael"
   },
   {
     "id": "61334c27-fb18-4521-a246-e195f61fbdce",
@@ -24467,9 +24467,9 @@
     "song_lyric_translation": "Todo lo que me da esta noche es el vacío",
     "song_title": "Cold Shoulder",
     "song_artist": "Josh Turner",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "See that girl over there, she's gonna give me the cold shoulder",
+    "quote_translation": "Mira a esa chica de ahí, me va a hacer el vacío",
+    "quote_author": "Amy Ray"
   },
   {
     "id": "61d265d5-200e-4910-84f9-81e7182d5477",
@@ -24601,10 +24601,10 @@
     "created_at": "2026-01-13T15:25:13.149954+00:00",
     "example_sentence_2": "Their relationship came apart after years of problems.",
     "example_translation_2": "Su relación se deshizo después de años de problemas.",
-    "song_lyric": "Falling Apart",
-    "song_lyric_translation": "Desmoronándose",
-    "song_title": "Falling Apart",
-    "song_artist": "Papa Roach",
+    "song_lyric": "I come apart, and you keep it together",
+    "song_lyric_translation": "Yo me deshago, y tú te mantienes entera",
+    "song_title": "I Come Apart",
+    "song_artist": "A$AP Rocky ft. Florence Welch",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -24950,9 +24950,9 @@
     "song_lyric_translation": "Cuando llueve a cántaros",
     "song_title": "When It's Raining Cats And Dogs",
     "song_artist": "P.M. Dawn",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "I know Sir John will go, though he was sure it would rain cats and dogs.",
+    "quote_translation": "Sé que Sir John irá, aunque estuviera seguro de que lloverían chuzos de punta.",
+    "quote_author": "Jonathan Swift"
   },
   {
     "id": "643ffe4c-0bc2-4257-b7fb-a2b1c2135ef2",
@@ -26077,9 +26077,9 @@
     "song_lyric_translation": "No importa, encontraré a alguien como tú",
     "song_title": "Someone Like You",
     "song_artist": "Adele",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Oh well, whatever, nevermind",
+    "quote_translation": "Bueno, da igual, no importa",
+    "quote_author": "Nirvana (Kurt Cobain)"
   },
   {
     "id": "69719f4e-64e0-4b4a-996d-31e58959381f",
@@ -26100,9 +26100,9 @@
     "song_lyric_translation": "Tíralo todo",
     "song_title": "Throw It All Away",
     "song_artist": "Toad the Wet Sprocket",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "I am not throwing away my shot",
+    "quote_translation": "No voy a desperdiciar mi oportunidad",
+    "quote_author": "Lin-Manuel Miranda"
   },
   {
     "id": "6979ca85-165a-4599-963b-2eb2e51156a3",
@@ -26330,9 +26330,9 @@
     "song_lyric_translation": "Crecer",
     "song_title": "Grow Up",
     "song_artist": "Simple Plan",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "All children, except one, grow up.",
+    "quote_translation": "Todos los niños, excepto uno, crecen.",
+    "quote_author": "J.M. Barrie"
   },
   {
     "id": "6b0bda0b-f3a6-4fa5-a176-c2ad57761d2e",
@@ -27227,9 +27227,9 @@
     "song_lyric_translation": "Empieza con fuerza, arranca sin parar",
     "song_title": "Hit The Ground Running",
     "song_artist": "Alice Merton",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "To be successful, you have to be out there, you have to hit the ground running",
+    "quote_translation": "Para tener éxito, tienes que estar ahí fuera, tienes que empezar con buen pie",
+    "quote_author": "Richard Branson"
   },
   {
     "id": "6e9a170d-f9ff-4d32-b9ce-153607e987ee",
@@ -27250,9 +27250,9 @@
     "song_lyric_translation": "En resumen, era el chico equivocado",
     "song_title": "long story short",
     "song_artist": "Taylor Swift",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Long story short, it was the wrong guy",
+    "quote_translation": "En resumen, era el chico equivocado",
+    "quote_author": "Taylor Swift"
   },
   {
     "id": "6ea44342-ddfc-4047-9a97-3cfd327ed152",
@@ -28285,9 +28285,9 @@
     "song_lyric_translation": "Continúa, hijo descarriado",
     "song_title": "Carry On Wayward Son",
     "song_artist": "Kansas",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "I shall strive to carry on their work",
+    "quote_translation": "Me esforzaré por continuar su labor",
+    "quote_author": "Reina Isabel II"
   },
   {
     "id": "726ebc88-987a-487e-a528-4290241c8034",
@@ -29366,9 +29366,9 @@
     "song_lyric_translation": "Mucha suerte, toda mi vida he intentado evitar incidentes",
     "song_title": "Break A Leg",
     "song_artist": "Gilbert O'Sullivan",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Break a leg. On second thought, let me break it for you.",
+    "quote_translation": "Que se te rompa una pierna. Pensándolo mejor, deja que te la rompa yo.",
+    "quote_author": "Shrek (personaje)"
   },
   {
     "id": "77599c80-56bf-4cbe-b6fd-1e8b0faa8c1e",
@@ -30857,10 +30857,10 @@
     "created_at": "2026-01-13T15:24:47.225074+00:00",
     "example_sentence_2": "They sent out invitations to everyone.",
     "example_translation_2": "Enviaron invitaciones a todos.",
-    "song_lyric": "Send Me on My Way",
-    "song_lyric_translation": "Déjame partir",
-    "song_title": "Send Me on My Way",
-    "song_artist": "Rusted Root",
+    "song_lyric": "Send me out to the world to make You known",
+    "song_lyric_translation": "Envíame al mundo para darte a conocer",
+    "song_title": "Send Me Out",
+    "song_artist": "Fee",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -32540,9 +32540,9 @@
     "song_lyric_translation": "¿Por eso me estás tomando el pelo?",
     "song_title": "Pulling My Leg",
     "song_artist": "Born Again Floozies",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "I was just pulling your leg and it came off in my hand",
+    "quote_translation": "Solo te estaba tomando el pelo y se me quedó en la mano",
+    "quote_author": "Robert A. Heinlein"
   },
   {
     "id": "85741b80-cfca-483e-8d64-5edf0efc1248",
@@ -32586,9 +32586,9 @@
     "song_lyric_translation": "De vez en cuando, algo bueno aparece",
     "song_title": "Once In A Blue Moon",
     "song_artist": "Van Morrison",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Once in a blue moon such a thing may be allowed.",
+    "quote_translation": "De higos a brevas, se puede permitir tal cosa.",
+    "quote_author": "Anónimo (The Athenæum, revista literaria)"
   },
   {
     "id": "8590293c-dbea-42ca-8573-4f57b5b15b6f",
@@ -37044,10 +37044,10 @@
     "created_at": "2026-01-13T15:24:47.225074+00:00",
     "example_sentence_2": "They had to close down the restaurant due to health violations.",
     "example_translation_2": "Tuvieron que cerrar el restaurante por violaciones sanitarias.",
-    "song_lyric": "Closing Time",
-    "song_lyric_translation": "Hora de cerrar",
-    "song_title": "Closing Time",
-    "song_artist": "Semisonic",
+    "song_lyric": "I'm out of step and closing down",
+    "song_lyric_translation": "Estoy desincronizado y cerrándome",
+    "song_title": "Closedown",
+    "song_artist": "The Cure",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -40935,9 +40935,9 @@
     "song_lyric_translation": "Alza la voz, que se te oiga",
     "song_title": "Speak Now",
     "song_artist": "Taylor Swift",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Silence becomes cowardice when occasion demands speaking out the whole truth and acting accordingly.",
+    "quote_translation": "El silencio se vuelve cobardía cuando la ocasión exige decir toda la verdad y actuar en consecuencia.",
+    "quote_author": "Mahatma Gandhi"
   },
   {
     "id": "a8c7ef29-5792-4a23-ab45-bd5492574bf6",
@@ -42039,9 +42039,9 @@
     "song_lyric_translation": "Para colmo, escuchas el trueno",
     "song_title": "Insult To Injury",
     "song_artist": "The Butchies",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "You wanted to revenge the sting of a tiny insect with death; what will you do to yourself, who have added insult to injury?",
+    "quote_translation": "Quisiste vengar la picadura de un insecto diminuto con la muerte; ¿qué te harás a ti mismo, que has añadido el insulto a la herida?",
+    "quote_author": "Fedro (Phaedrus)"
   },
   {
     "id": "adba8daf-ace8-4e3b-ade5-d18fb8dbeae8",
@@ -43160,8 +43160,8 @@
     "example_sentence": "Look out! There's a car coming!",
     "example_translation": "¡Cuidado! ¡Viene un coche!",
     "created_at": "2026-01-13T15:25:13.149954+00:00",
-    "example_sentence_2": "Watch out! The floor is wet.",
-    "example_translation_2": "¡Cuidado! El suelo está mojado.",
+    "example_sentence_2": "Look out for snakes on the trail.",
+    "example_translation_2": "Ten cuidado con las serpientes en el sendero.",
     "song_lyric": "Look Out (Here Comes Tomorrow)",
     "song_lyric_translation": "Cuidado (ahí viene el mañana)",
     "song_title": "Look Out",
@@ -45029,9 +45029,9 @@
     "song_lyric_translation": "Aprieta los dientes y aguanta",
     "song_title": "Bite The Bullet",
     "song_artist": "Machine Head",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Bite on the bullet, old man, and don't let them think you're afraid.",
+    "quote_translation": "Muerde la bala, viejo, y no dejes que piensen que tienes miedo.",
+    "quote_author": "Rudyard Kipling"
   },
   {
     "id": "ba5704c3-9013-41e4-b1ee-6b8a2699f015",
@@ -45926,9 +45926,9 @@
     "song_lyric_translation": "Nunca voy a rendirme contigo",
     "song_title": "Never Gonna Give You Up",
     "song_artist": "Rick Astley",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Never gonna give you up, never gonna let you down",
+    "quote_translation": "Nunca voy a abandonarte, nunca voy a decepcionarte",
+    "quote_author": "Rick Astley"
   },
   {
     "id": "bcbf46ac-4ceb-4e05-99b0-6d31d1a3c581",
@@ -47463,10 +47463,10 @@
     "created_at": "2026-01-13T15:25:13.149954+00:00",
     "example_sentence_2": "Put away your phone during dinner.",
     "example_translation_2": "Guarda el móvil durante la cena.",
-    "song_lyric": "Put Your Head on My Shoulder",
-    "song_lyric_translation": "Pon tu cabeza en mi hombro",
-    "song_title": "Put Your Head on My Shoulder",
-    "song_artist": "Paul Anka",
+    "song_lyric": "Clean up, clean up, put your toys away",
+    "song_lyric_translation": "Recoge, recoge, guarda tus juguetes",
+    "song_title": "Clean Up, Put Your Toys Away",
+    "song_artist": "Leigha Marina (nursery rhyme)",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -48157,9 +48157,9 @@
     "song_lyric_translation": "Échale un vistazo",
     "song_title": "Check It Out",
     "song_artist": "will.i.am",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "You can check-out any time you like, but you can never leave!",
+    "quote_translation": "Puedes irte (marcharte) cuando quieras, ¡pero nunca podrás salir!",
+    "quote_author": "Eagles"
   },
   {
     "id": "c4ea23c7-e852-4236-a520-4d967b548671",
@@ -48245,10 +48245,10 @@
     "created_at": "2026-01-13T15:24:47.225074+00:00",
     "example_sentence_2": "Put down your phone and listen.",
     "example_translation_2": "Deja el móvil y escucha.",
-    "song_lyric": "Lay Me Down",
-    "song_lyric_translation": "Recuéstame",
-    "song_title": "Lay Me Down",
-    "song_artist": "Sam Smith",
+    "song_lyric": "Put the gun down",
+    "song_lyric_translation": "Baja el arma",
+    "song_title": "Put the Gun Down",
+    "song_artist": "ZZ Ward",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -48544,8 +48544,8 @@
     "created_at": "2026-01-13T15:29:41.201366+00:00",
     "example_sentence_2": "Sleep well and dream beautiful dreams.",
     "example_translation_2": "Duerme bien y sueña sueños hermosos.",
-    "song_lyric": "I Don't Want to Miss a Thing",
-    "song_lyric_translation": "No quiero perderme nada",
+    "song_lyric": "Watch you smile while you are sleeping",
+    "song_lyric_translation": "Verte sonreír mientras duermes",
     "song_title": "I Don't Want to Miss a Thing",
     "song_artist": "Aerosmith",
     "quote_text": null,
@@ -50319,9 +50319,9 @@
     "song_lyric_translation": "El espectáculo debe continuar",
     "song_title": "The Show Must Go On",
     "song_artist": "Queen",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Near, far, wherever you are, I believe that the heart does go on",
+    "quote_translation": "Cerca, lejos, dondequiera que estés, creo que el corazón sigue latiendo",
+    "quote_author": "Céline Dion"
   },
   {
     "id": "cc7a08c5-bec5-4c54-ac9d-7b7a2cdec0b2",
@@ -50457,9 +50457,9 @@
     "song_lyric_translation": "Romper es difícil de hacer",
     "song_title": "Breaking Up Is Hard to Do",
     "song_artist": "Neil Sedaka",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Breaking up is hard to do",
+    "quote_translation": "Romper (una relación) es difícil de hacer",
+    "quote_author": "Neil Sedaka"
   },
   {
     "id": "cd459440-ce36-401d-a3d7-f3801c7f7516",
@@ -60159,10 +60159,10 @@
     "created_at": "2026-01-13T15:24:19.7533+00:00",
     "example_sentence_2": "This situation calls for immediate action.",
     "example_translation_2": "Esta situación requiere acción inmediata.",
-    "song_lyric": "Call Me",
-    "song_lyric_translation": "Llámame",
-    "song_title": "Call Me",
-    "song_artist": "Blondie",
+    "song_lyric": "This Calls for a Celebration",
+    "song_lyric_translation": "Esto merece una celebración",
+    "song_title": "This Calls for a Celebration",
+    "song_artist": "The Fantastic Zoo",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null
@@ -61359,9 +61359,9 @@
     "song_lyric_translation": "Fue una suerte inesperada, la verdad siempre sorprende",
     "song_title": "Blessings In Disguise",
     "song_artist": "Michael Martin Murphey",
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null
+    "quote_text": "Good when He gives, supremely good, Nor less when He denies; Ev'n crosses from His sovereign hand, Are blessings in disguise.",
+    "quote_translation": "Bueno cuando da, supremamente bueno, ni menos cuando niega; incluso las cruces de Su mano soberana son bendiciones disfrazadas.",
+    "quote_author": "James Hervey"
   },
   {
     "id": "fde75e7c-3ad1-4f9b-9ed1-e96d0e64a9b0",

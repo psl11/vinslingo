@@ -1,5 +1,131 @@
 [
   {
+    "id": "01d1ebc6-f643-4b15-872d-f58b44169d70",
+    "quote_id": "e444aaa2-7aac-41f4-9e40-f270bb993170",
+    "vocabulary_id": "17406597-ef6d-4039-b747-f5979f0dc075",
+    "highlighted_word": "wake up",
+    "created_at": "2026-07-05T20:58:08.628366+00:00"
+  },
+  {
+    "id": "05d174d7-6148-47ee-8d63-4bf68eee1198",
+    "quote_id": "29d680a9-541a-4271-be9a-cd2b5f8f9500",
+    "vocabulary_id": "1cd79737-3ecb-49c9-9596-dabbdfdb9d19",
+    "highlighted_word": "turn down",
+    "created_at": "2026-07-05T20:58:09.179637+00:00"
+  },
+  {
+    "id": "078c3b7f-81ad-4603-9c75-0190dfc45349",
+    "quote_id": "88132751-456b-400d-96fa-413cfd1ac773",
+    "vocabulary_id": "1ec75f6e-a907-42ae-9bd4-4c877a63f528",
+    "highlighted_word": "see eye to eye",
+    "created_at": "2026-07-06T07:32:22.172329+00:00"
+  },
+  {
+    "id": "0bc564e4-f012-4caf-a9bc-5cb803016a18",
+    "quote_id": "b9df6d19-8bab-482f-a198-9975def4393e",
+    "vocabulary_id": "6945949a-bb9f-4cff-b3a0-2ef84ab764d1",
+    "highlighted_word": "never mind",
+    "created_at": "2026-07-05T20:58:13.239317+00:00"
+  },
+  {
+    "id": "1084478c-ca18-4942-8ddd-b755abffdfb2",
+    "quote_id": "0df4ff6a-00bf-46b9-b386-d3e49ec0b8e2",
+    "vocabulary_id": "004ce9d5-17dd-485c-8ec6-864731e22989",
+    "highlighted_word": "keep your chin up",
+    "created_at": "2026-07-05T20:58:07.398837+00:00"
+  },
+  {
+    "id": "1417f649-8dab-4a5a-9e0e-e6a6dc3395c7",
+    "quote_id": "e86edb9c-b204-455b-a0b8-b6b9c4d572d5",
+    "vocabulary_id": "61d02110-ae17-483d-b54c-b1e68a5dc303",
+    "highlighted_word": "give someone the cold shoulder",
+    "created_at": "2026-07-05T20:58:13.684021+00:00"
+  },
+  {
+    "id": "144b7051-0fc5-4f86-a1b5-8bc6d1c82114",
+    "quote_id": "b61f9dc7-5080-44fc-8209-a66e9511e36f",
+    "vocabulary_id": "611f920f-0335-41d1-baa6-fc5c9ac166af",
+    "highlighted_word": "it doesn't matter",
+    "created_at": "2026-07-05T22:37:51.098922+00:00"
+  },
+  {
+    "id": "1d154a97-c39a-4064-bf76-476e685c64a2",
+    "quote_id": "3ae13008-6c79-4bd5-a0db-4e648bc131be",
+    "vocabulary_id": "ba1a9f44-f0f0-4e10-a9b0-a0cc1e2bde94",
+    "highlighted_word": "bite the bullet",
+    "created_at": "2026-07-05T22:37:49.750107+00:00"
+  },
+  {
+    "id": "27f6f18a-76d4-4841-80e5-ac7e185db8fe",
+    "quote_id": "2c9c942d-20e4-4fcd-9cd5-9f6787dbddcd",
+    "vocabulary_id": "bcb678fe-4b5e-4671-b952-207116b5c5cc",
+    "highlighted_word": "give up",
+    "created_at": "2026-07-05T22:27:37.308611+00:00"
+  },
+  {
+    "id": "2c999a87-e811-4a3b-b1a6-3ab53a1ef172",
+    "quote_id": "f338d7de-1b15-49e5-8e5b-ab3d57ebb9cd",
+    "vocabulary_id": "6e86d1be-9460-4657-b8b5-fd6505009007",
+    "highlighted_word": "hit the ground running",
+    "created_at": "2026-07-05T20:58:12.204179+00:00"
+  },
+  {
+    "id": "2d36299f-6af9-46b4-978e-5f3120641810",
+    "quote_id": "5ac84041-b007-4caa-b171-059063e1e4c8",
+    "vocabulary_id": "47c42b9e-0245-457d-8b5e-5d766268a287",
+    "highlighted_word": "get up",
+    "created_at": "2026-07-05T20:58:10.241421+00:00"
+  },
+  {
+    "id": "2fcc7d1f-707c-4242-aa7f-c458e777f744",
+    "quote_id": "4ff3a965-625d-47df-a5ad-bfad97fa345a",
+    "vocabulary_id": "589bbae9-d18c-48f3-a66d-d29bf214f87f",
+    "highlighted_word": "by the way",
+    "created_at": "2026-07-05T22:37:50.654993+00:00"
+  },
+  {
+    "id": "34af22c4-1f69-448f-9728-fb9160c2f3c3",
+    "quote_id": "840593c7-05b4-40d2-8e54-5b6689fbd62a",
+    "vocabulary_id": "fde0ff94-62d1-4d3b-b35f-c1bcae7a63f9",
+    "highlighted_word": "blessing in disguise",
+    "created_at": "2026-07-05T22:37:49.118243+00:00"
+  },
+  {
+    "id": "3c1048a1-dfa2-4956-b7a5-79dfdfd3f32e",
+    "quote_id": "b009ab31-99cd-4a1d-98e8-3041ef899e16",
+    "vocabulary_id": "4ef0e511-e7fb-4c05-8cb2-6d40cf685801",
+    "highlighted_word": "sooner or later",
+    "created_at": "2026-07-05T22:37:51.61544+00:00"
+  },
+  {
+    "id": "404fb5a9-f1e0-4ff1-bb75-7b11d15a5af4",
+    "quote_id": "1ff272e6-37b3-47c0-abcd-fc71b1b576eb",
+    "vocabulary_id": "18dda409-a80c-41c9-9e9f-7c724696952f",
+    "highlighted_word": "beat around the bush",
+    "created_at": "2026-07-06T07:32:21.658805+00:00"
+  },
+  {
+    "id": "424be555-1f21-4060-bbb0-b36a06f12c8f",
+    "quote_id": "78f56392-f479-4617-9c87-c5f0727ab602",
+    "vocabulary_id": "cd43f245-2df0-4b7a-b662-d60b980cd55f",
+    "highlighted_word": "break up",
+    "created_at": "2026-07-05T22:27:38.257622+00:00"
+  },
+  {
+    "id": "48eaa7ff-a372-4cc0-8f0e-17c1a64980f7",
+    "quote_id": "bdb68a24-1efe-44df-aed9-82f6b1230891",
+    "vocabulary_id": "a8b8219b-96ef-49e6-ba5c-40aa4200af77",
+    "highlighted_word": "speak out",
+    "created_at": "2026-07-05T22:27:39.291549+00:00"
+  },
+  {
+    "id": "4bb7fdb1-d093-4b82-884a-4ab1475938ee",
+    "quote_id": "d036aa8e-4f08-4e8f-b2cf-3c3b6363856e",
+    "vocabulary_id": "05c8c467-ebd5-4f28-af69-cf7e3aa6bd54",
+    "highlighted_word": "barking up the wrong tree",
+    "created_at": "2026-07-06T07:32:21.16231+00:00"
+  },
+  {
     "id": "50eba0b9-1db3-4035-96ad-aa2525b53e29",
     "quote_id": "672bd52d-d8ee-4ec1-918f-7bc7769f7cfc",
     "vocabulary_id": "17b961bd-b04a-4434-a640-9f3221d74cde",
@@ -42,11 +168,60 @@
     "created_at": "2026-07-05T19:33:19.161826+00:00"
   },
   {
+    "id": "8265b6c8-8729-46e8-b526-5c791b8d1cba",
+    "quote_id": "17cadcd6-b9b7-4ffd-a1f4-79669eecb229",
+    "vocabulary_id": "c4d7da66-0c89-490a-b3b9-30ad9566a696",
+    "highlighted_word": "check out",
+    "created_at": "2026-07-05T22:27:35.07201+00:00"
+  },
+  {
+    "id": "87771d20-a21a-4213-a150-1f5391e32e20",
+    "quote_id": "ff864172-5364-40dc-afa7-5bc41712d492",
+    "vocabulary_id": "6437dba2-2cc5-4be0-a5f8-ba88b70b64fb",
+    "highlighted_word": "raining cats and dogs",
+    "created_at": "2026-07-06T07:32:22.605445+00:00"
+  },
+  {
+    "id": "88584123-fb4f-4b56-a33a-0fbe4d50d21b",
+    "quote_id": "ad81d430-e769-4347-a6a2-e75676091c1d",
+    "vocabulary_id": "0d22e142-ad3f-4e01-ae1f-df184f79ad36",
+    "highlighted_word": "come on",
+    "created_at": "2026-07-05T20:58:07.921307+00:00"
+  },
+  {
+    "id": "a59e032e-0abe-47bd-bec8-03bd8613a528",
+    "quote_id": "12e90139-52bf-429c-a24e-6e90ca9faf15",
+    "vocabulary_id": "854e0f69-2a6a-42c9-895a-b5f11fdf73b7",
+    "highlighted_word": "pull someone's leg",
+    "created_at": "2026-07-05T20:58:11.323344+00:00"
+  },
+  {
+    "id": "a79ec971-3a05-4431-b12e-d814e89d623f",
+    "quote_id": "bfce2e12-0e96-4b6c-8eb6-382fe1fece35",
+    "vocabulary_id": "cc75d266-b056-4fb7-bac1-28e36f64b060",
+    "highlighted_word": "go on",
+    "created_at": "2026-07-05T22:27:37.785718+00:00"
+  },
+  {
+    "id": "aa07bcaa-236b-4cf6-974c-b0410050e720",
+    "quote_id": "4b5c1644-0717-406c-8af7-00da44426240",
+    "vocabulary_id": "4226daa2-ae55-4166-a23b-fc1805dbdf7b",
+    "highlighted_word": "stand out",
+    "created_at": "2026-07-05T22:27:38.769331+00:00"
+  },
+  {
     "id": "abf53a02-2656-4795-9de5-011af930bcb3",
     "quote_id": "02cf69b3-87ea-485a-9143-9a48854eee0c",
     "vocabulary_id": "6eb01d8c-828f-4015-9920-d7aaa6c700da",
     "highlighted_word": "give in",
     "created_at": "2026-07-05T20:20:07.226896+00:00"
+  },
+  {
+    "id": "ad540fad-078a-4be4-aaa8-85a233cb28bd",
+    "quote_id": "7ac76e44-5b96-43f7-98ea-b362fc59e44c",
+    "vocabulary_id": "7746062d-71ce-4871-9c1d-99ff0d1fd0ce",
+    "highlighted_word": "break a leg",
+    "created_at": "2026-07-05T20:58:12.72512+00:00"
   },
   {
     "id": "ade97da9-45ce-4b53-a4a1-d8fb1ce7d507",
@@ -56,6 +231,41 @@
     "created_at": "2026-07-05T19:43:56.462005+00:00"
   },
   {
+    "id": "af984483-e529-4f16-8f54-c6006e616b09",
+    "quote_id": "f0690f69-cddd-439d-9cd5-f17381d07704",
+    "vocabulary_id": "726b0da2-c4ac-4bd4-ba7a-44c3b67c057e",
+    "highlighted_word": "carry on",
+    "created_at": "2026-07-05T20:58:11.758194+00:00"
+  },
+  {
+    "id": "be8f8863-6d17-48c0-b64d-bae0db62f692",
+    "quote_id": "a4befddf-db6c-42dc-80f6-6a922cb0b377",
+    "vocabulary_id": "2c7ecb0b-74a8-4d83-b437-029636b360a7",
+    "highlighted_word": "you're welcome",
+    "created_at": "2026-07-05T20:58:09.69194+00:00"
+  },
+  {
+    "id": "c90471dc-d446-4d16-a903-03b51466a3ab",
+    "quote_id": "fb6ae7f6-77f1-47e8-8aab-30f41631b85f",
+    "vocabulary_id": "6e9a170d-f9ff-4d32-b9ce-153607e987ee",
+    "highlighted_word": "long story short",
+    "created_at": "2026-07-05T20:58:10.813024+00:00"
+  },
+  {
+    "id": "c91e2ca0-2cf5-424d-8466-8f86a2077827",
+    "quote_id": "083c87aa-a00a-4ab9-b647-5b350f86eec2",
+    "vocabulary_id": "6ab1c1ea-da38-42fa-b6ff-963a1225761d",
+    "highlighted_word": "grow up",
+    "created_at": "2026-07-05T22:27:35.737374+00:00"
+  },
+  {
+    "id": "d4fb4fa2-d974-466a-b9e0-6966aa4667d6",
+    "quote_id": "833f87e0-1c20-4fa5-afd7-1065624ed77c",
+    "vocabulary_id": "69719f4e-64e0-4b4a-996d-31e58959381f",
+    "highlighted_word": "throw away",
+    "created_at": "2026-07-05T22:27:36.278517+00:00"
+  },
+  {
     "id": "de1a4d8d-fb6b-4390-a173-89cb90eac3bf",
     "quote_id": "42f52f69-5722-420d-8968-4f569b2c0d25",
     "vocabulary_id": "f703577c-fe87-4e0f-8efc-de2865bc7ba3",
@@ -63,10 +273,31 @@
     "created_at": "2026-07-05T19:33:19.462708+00:00"
   },
   {
+    "id": "f3065eb9-e5a2-4941-b6eb-168188801f73",
+    "quote_id": "57febd2d-886f-4c3a-b598-60302d7fc74c",
+    "vocabulary_id": "857c7811-6119-4d61-96ca-ecc6f984b9c8",
+    "highlighted_word": "once in a blue moon",
+    "created_at": "2026-07-06T07:32:23.051788+00:00"
+  },
+  {
     "id": "f8382ebc-f148-49a5-8d89-fc079153db66",
     "quote_id": "30d42029-1312-43bc-9b58-e3019d9e613a",
     "vocabulary_id": "31cab399-db59-4f54-8cc1-64f3bb057c58",
     "highlighted_word": "let sleeping dogs lie",
     "created_at": "2026-07-05T19:33:18.322123+00:00"
+  },
+  {
+    "id": "f92e9566-b884-4e88-98ae-edf62121fef9",
+    "quote_id": "b4586117-81a1-4473-b69d-1ca3cd6171c1",
+    "vocabulary_id": "adb0bf43-358a-4816-b4a0-3d78d906fecf",
+    "highlighted_word": "add insult to injury",
+    "created_at": "2026-07-05T22:37:48.587826+00:00"
+  },
+  {
+    "id": "fad64847-0d00-466c-8913-ae8a7b80550e",
+    "quote_id": "9c46c435-d9a3-49d0-9757-198897d9a2ab",
+    "vocabulary_id": "2f1d38ac-0ed3-4a99-a3aa-f59501eeaf35",
+    "highlighted_word": "break the ice",
+    "created_at": "2026-07-05T22:37:50.207662+00:00"
   }
 ]

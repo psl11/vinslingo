@@ -7,11 +7,60 @@
     "created_at": "2026-07-05T20:20:07.145965+00:00"
   },
   {
+    "id": "083c87aa-a00a-4ab9-b647-5b350f86eec2",
+    "author_id": "8f15ad7c-bd84-45f6-a372-5988b95d8939",
+    "quote_text": "All children, except one, grow up.",
+    "source": "Peter Pan (1911), primera línea de la novela",
+    "created_at": "2026-07-05T22:27:35.640891+00:00"
+  },
+  {
+    "id": "0df4ff6a-00bf-46b9-b386-d3e49ec0b8e2",
+    "author_id": "582233af-eb1b-42a1-940d-7906c7663caf",
+    "quote_text": "Keep your chin up, keep your chin up",
+    "source": "Keep Your Chin Up (2011)",
+    "created_at": "2026-07-05T20:58:07.174985+00:00"
+  },
+  {
+    "id": "12e90139-52bf-429c-a24e-6e90ca9faf15",
+    "author_id": "d0d1fed1-aef2-45bb-b92c-d4739ef6dc74",
+    "quote_text": "I was just pulling your leg and it came off in my hand",
+    "source": "The Past Through Tomorrow",
+    "created_at": "2026-07-05T20:58:11.235849+00:00"
+  },
+  {
+    "id": "17cadcd6-b9b7-4ffd-a1f4-79669eecb229",
+    "author_id": "95413240-2d2f-4533-bda6-efa3193c31f4",
+    "quote_text": "You can check-out any time you like, but you can never leave!",
+    "source": "Hotel California (1976)",
+    "created_at": "2026-07-05T22:27:34.968087+00:00"
+  },
+  {
     "id": "195f984c-a8dc-4d98-ac89-a1b1c44bc1da",
     "author_id": "949029df-f0ba-499c-ada8-cceeae616a3b",
     "quote_text": "Turn on, tune in, drop out",
     "source": "Discurso en el Human Be-In (1967)",
     "created_at": "2026-07-05T20:20:06.798295+00:00"
+  },
+  {
+    "id": "1ff272e6-37b3-47c0-abcd-fc71b1b576eb",
+    "author_id": "cee77f64-54fe-4f27-8951-6aded98508d1",
+    "quote_text": "He beat about the bush, while others caught the birds.",
+    "source": "Obra de George Gascoigne (1572)",
+    "created_at": "2026-07-06T07:32:21.573945+00:00"
+  },
+  {
+    "id": "29d680a9-541a-4271-be9a-cd2b5f8f9500",
+    "author_id": "88783287-ff16-4232-8dc1-31bef9935eb8",
+    "quote_text": "Turn Down for What",
+    "source": "Turn Down for What (2013)",
+    "created_at": "2026-07-05T20:58:09.075541+00:00"
+  },
+  {
+    "id": "2c9c942d-20e4-4fcd-9cd5-9f6787dbddcd",
+    "author_id": "5c921769-be83-4bb0-9087-c8c9a0889278",
+    "quote_text": "Never gonna give you up, never gonna let you down",
+    "source": "Never Gonna Give You Up (1987)",
+    "created_at": "2026-07-05T22:27:36.757109+00:00"
   },
   {
     "id": "30d42029-1312-43bc-9b58-e3019d9e613a",
@@ -21,11 +70,46 @@
     "created_at": "2026-07-05T19:33:18.045063+00:00"
   },
   {
+    "id": "3ae13008-6c79-4bd5-a0db-4e648bc131be",
+    "author_id": "75af6477-a5e4-4ea0-a5ab-d9ad476bf152",
+    "quote_text": "Bite on the bullet, old man, and don't let them think you're afraid.",
+    "source": "The Light That Failed (1891)",
+    "created_at": "2026-07-05T22:37:49.653997+00:00"
+  },
+  {
     "id": "42f52f69-5722-420d-8968-4f569b2c0d25",
     "author_id": "8ec330f6-5243-4346-8df6-89103cb4604a",
     "quote_text": "Speak of the devil, and he will appear.",
     "source": null,
     "created_at": "2026-07-05T19:33:19.371151+00:00"
+  },
+  {
+    "id": "4b5c1644-0717-406c-8af7-00da44426240",
+    "author_id": "fa38fd4a-2a7d-4d84-9c08-0f33243e6f8c",
+    "quote_text": "In a crowded marketplace, fitting in is a failure. In a busy marketplace, not standing out is the same as being invisible.",
+    "source": "Purple Cow (2009)",
+    "created_at": "2026-07-05T22:27:38.68435+00:00"
+  },
+  {
+    "id": "4ff3a965-625d-47df-a5ad-bfad97fa345a",
+    "author_id": "9c4dfed6-a3c3-4263-91cc-24377f28c721",
+    "quote_text": "By the way, I tried to say, I'd be there, waiting for",
+    "source": "By the Way (2002)",
+    "created_at": "2026-07-05T22:37:50.570773+00:00"
+  },
+  {
+    "id": "57febd2d-886f-4c3a-b598-60302d7fc74c",
+    "author_id": "37ea929e-01cd-4c47-9bed-3570f79e69d8",
+    "quote_text": "Once in a blue moon such a thing may be allowed.",
+    "source": "The Athenæum (principios del s. XIX)",
+    "created_at": "2026-07-06T07:32:22.969898+00:00"
+  },
+  {
+    "id": "5ac84041-b007-4caa-b171-059063e1e4c8",
+    "author_id": "b33054eb-3918-4059-ac0d-0548b92f717c",
+    "quote_text": "Get up, stand up, stand up for your rights",
+    "source": "Get Up, Stand Up (1973)",
+    "created_at": "2026-07-05T20:58:10.133915+00:00"
   },
   {
     "id": "672bd52d-d8ee-4ec1-918f-7bc7769f7cfc",
@@ -35,11 +119,60 @@
     "created_at": "2026-07-05T20:20:06.362116+00:00"
   },
   {
+    "id": "78f56392-f479-4617-9c87-c5f0727ab602",
+    "author_id": "575cf096-b033-4ee7-8b77-312c38dc2609",
+    "quote_text": "Breaking up is hard to do",
+    "source": "Breaking Up Is Hard to Do (1962)",
+    "created_at": "2026-07-05T22:27:38.171444+00:00"
+  },
+  {
+    "id": "7ac76e44-5b96-43f7-98ea-b362fc59e44c",
+    "author_id": "8d2e0aa9-ef8b-46ca-bffa-dfc7d7434c37",
+    "quote_text": "Break a leg. On second thought, let me break it for you.",
+    "source": "Shrek the Third (2007)",
+    "created_at": "2026-07-05T20:58:12.641427+00:00"
+  },
+  {
+    "id": "833f87e0-1c20-4fa5-afd7-1065624ed77c",
+    "author_id": "4e2182c5-b945-47e3-a248-11e513e85aa5",
+    "quote_text": "I am not throwing away my shot",
+    "source": "My Shot, musical Hamilton (2015)",
+    "created_at": "2026-07-05T22:27:36.195478+00:00"
+  },
+  {
+    "id": "840593c7-05b4-40d2-8e54-5b6689fbd62a",
+    "author_id": "ea0c81d2-c4e1-4cf7-9b90-ab1766c696e3",
+    "quote_text": "Good when He gives, supremely good, Nor less when He denies; Ev'n crosses from His sovereign hand, Are blessings in disguise.",
+    "source": "Himno \"Since all the downward tracts of time\" (1746)",
+    "created_at": "2026-07-05T22:37:48.99384+00:00"
+  },
+  {
     "id": "84eaca88-2ec8-46d3-b1bd-d0261286c2f5",
     "author_id": "8ec330f6-5243-4346-8df6-89103cb4604a",
     "quote_text": "Better late than never.",
     "source": null,
     "created_at": "2026-07-05T19:33:19.05767+00:00"
+  },
+  {
+    "id": "88132751-456b-400d-96fa-413cfd1ac773",
+    "author_id": "a1157131-0399-42a7-92c2-abc115cc24dd",
+    "quote_text": "For they shall see eye to eye, when the LORD shall bring again Zion.",
+    "source": "Isaías 52:8 (King James Version)",
+    "created_at": "2026-07-06T07:32:22.09136+00:00"
+  },
+  {
+    "id": "9c46c435-d9a3-49d0-9757-198897d9a2ab",
+    "author_id": "d727a5f8-fa10-4d6c-812e-d3a37c4b4b69",
+    "quote_text": "Let me break the ice",
+    "source": "Break the Ice (2007)",
+    "created_at": "2026-07-05T22:37:50.12351+00:00"
+  },
+  {
+    "id": "a4befddf-db6c-42dc-80f6-6a922cb0b377",
+    "author_id": "89a3e334-7cc7-4bdc-8bc8-c95aa5883ca4",
+    "quote_text": "What can I say except, 'You're welcome'",
+    "source": "You're Welcome, banda sonora de Moana (2016)",
+    "created_at": "2026-07-05T20:58:09.598462+00:00"
   },
   {
     "id": "a95d2713-9343-4c56-9a04-c057c9376b22",
@@ -49,11 +182,81 @@
     "created_at": "2026-07-05T20:20:07.511986+00:00"
   },
   {
+    "id": "ad81d430-e769-4347-a6a2-e75676091c1d",
+    "author_id": "a963eeb1-519b-405d-badd-e728562e0a90",
+    "quote_text": "Come on Eileen",
+    "source": "Come On Eileen (1982)",
+    "created_at": "2026-07-05T20:58:07.786582+00:00"
+  },
+  {
+    "id": "b009ab31-99cd-4a1d-98e8-3041ef899e16",
+    "author_id": "6f84757f-f5c3-4b46-b637-cdd0f4e948e8",
+    "quote_text": "Sooner or later you're going to be mine, sooner or later you're going to be fine",
+    "source": "Sooner or Later (I Always Get My Man), banda sonora de Dick Tracy (1990)",
+    "created_at": "2026-07-05T22:37:51.450498+00:00"
+  },
+  {
+    "id": "b4586117-81a1-4473-b69d-1ca3cd6171c1",
+    "author_id": "194ac580-b75a-43f5-a3b3-c0ecda7efbab",
+    "quote_text": "You wanted to revenge the sting of a tiny insect with death; what will you do to yourself, who have added insult to injury?",
+    "source": "Fábula del calvo y la mosca, s. I d.C.",
+    "created_at": "2026-07-05T22:37:48.48526+00:00"
+  },
+  {
+    "id": "b61f9dc7-5080-44fc-8209-a66e9511e36f",
+    "author_id": "5dbbc8c2-2852-4711-831e-72545be4199c",
+    "quote_text": "It doesn't really matter that I loved you",
+    "source": "It Doesn’t Really Matter",
+    "created_at": "2026-07-05T22:37:50.994472+00:00"
+  },
+  {
+    "id": "b9df6d19-8bab-482f-a198-9975def4393e",
+    "author_id": "7799526f-b30d-4ee3-8209-e727dfbfb39d",
+    "quote_text": "Oh well, whatever, nevermind",
+    "source": "Smells Like Teen Spirit (1991)",
+    "created_at": "2026-07-05T20:58:13.155059+00:00"
+  },
+  {
+    "id": "bdb68a24-1efe-44df-aed9-82f6b1230891",
+    "author_id": "dfa4e949-e269-414b-99da-0021970c01f1",
+    "quote_text": "Silence becomes cowardice when occasion demands speaking out the whole truth and acting accordingly.",
+    "source": "Gandhi on Non-violence (recopilación de Thomas Merton, 1965)",
+    "created_at": "2026-07-05T22:27:39.201045+00:00"
+  },
+  {
+    "id": "bfce2e12-0e96-4b6c-8eb6-382fe1fece35",
+    "author_id": "1537b5d4-8644-45a7-8dbd-6ef90c58907d",
+    "quote_text": "Near, far, wherever you are, I believe that the heart does go on",
+    "source": "My Heart Will Go On, banda sonora de Titanic (1997)",
+    "created_at": "2026-07-05T22:27:37.707814+00:00"
+  },
+  {
+    "id": "d036aa8e-4f08-4e8f-b2cf-3c3b6363856e",
+    "author_id": "e31d770d-fac5-4c59-b386-85ca59274977",
+    "quote_text": "I might have barked up the wrong tree many a long day before I would have got any help from him.",
+    "source": "Memorias / relato autobiográfico (1833)",
+    "created_at": "2026-07-06T07:32:21.060815+00:00"
+  },
+  {
     "id": "d38aa95d-e799-4a70-9728-d1e924aa1248",
     "author_id": "8ec330f6-5243-4346-8df6-89103cb4604a",
     "quote_text": "Actions speak louder than words.",
     "source": null,
     "created_at": "2026-07-05T19:43:55.923268+00:00"
+  },
+  {
+    "id": "e444aaa2-7aac-41f4-9e40-f270bb993170",
+    "author_id": "9be31ee4-0023-4ff0-9f93-976ebef7ea2e",
+    "quote_text": "Wake up, wake up, wake up",
+    "source": "Wake Up (2004)",
+    "created_at": "2026-07-05T20:58:08.533828+00:00"
+  },
+  {
+    "id": "e86edb9c-b204-455b-a0b8-b6b9c4d572d5",
+    "author_id": "022967f0-3272-4fcc-87ac-42ac1f30b7b0",
+    "quote_text": "See that girl over there, she's gonna give me the cold shoulder",
+    "source": "Cold Shoulder",
+    "created_at": "2026-07-05T20:58:13.582539+00:00"
   },
   {
     "id": "ee08be7e-856b-4564-b0ed-7a88ed7da246",
@@ -63,10 +266,38 @@
     "created_at": "2026-07-05T19:33:18.736831+00:00"
   },
   {
+    "id": "f0690f69-cddd-439d-9cd5-f17381d07704",
+    "author_id": "039d8045-dcb2-4727-ad95-0e8898e10d06",
+    "quote_text": "I shall strive to carry on their work",
+    "source": "Discurso de Navidad (1952)",
+    "created_at": "2026-07-05T20:58:11.668888+00:00"
+  },
+  {
+    "id": "f338d7de-1b15-49e5-8e5b-ab3d57ebb9cd",
+    "author_id": "573de0bf-70e7-4eaa-8450-c5a4b92876bb",
+    "quote_text": "To be successful, you have to be out there, you have to hit the ground running",
+    "source": "Losing My Virginity (1998)",
+    "created_at": "2026-07-05T20:58:12.112819+00:00"
+  },
+  {
+    "id": "fb6ae7f6-77f1-47e8-8aab-30f41631b85f",
+    "author_id": "24ad803e-71d8-4ab5-991f-502df58708bb",
+    "quote_text": "Long story short, it was the wrong guy",
+    "source": "long story short, álbum evermore (2020)",
+    "created_at": "2026-07-05T20:58:10.720595+00:00"
+  },
+  {
     "id": "fcc7a263-61cf-4294-8cc0-2418d6473b1b",
     "author_id": "8ec330f6-5243-4346-8df6-89103cb4604a",
     "quote_text": "To hit the nail on the head.",
     "source": null,
     "created_at": "2026-07-05T19:43:56.375067+00:00"
+  },
+  {
+    "id": "ff864172-5364-40dc-afa7-5bc41712d492",
+    "author_id": "a2c3af38-e49d-4548-936d-2c5464bac5df",
+    "quote_text": "I know Sir John will go, though he was sure it would rain cats and dogs.",
+    "source": "A Complete Collection of Polite and Ingenious Conversation (1738)",
+    "created_at": "2026-07-06T07:32:22.523878+00:00"
   }
 ]

@@ -430,6 +430,16 @@
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
   {
+    "id": "241ca682-5771-4a73-9179-5f94d5eba995",
+    "artist_id": "f52df9dd-8be7-4779-ac09-06cce39d5f5d",
+    "title": "Always on My Mind",
+    "album": null,
+    "year": 1982,
+    "lyrics_excerpt": "You were always on my mind",
+    "created_at": "2026-07-06T07:22:40.128228+00:00",
+    "updated_at": "2026-07-06T07:22:40.128228+00:00"
+  },
+  {
     "id": "242c02f9-d766-4677-9cc5-31997a8985dd",
     "artist_id": "122c7037-3f7f-4287-9d48-7680126740bf",
     "title": "Turn On the Lights",
@@ -500,16 +510,6 @@
     "updated_at": "2026-07-05T16:57:10.273709+00:00"
   },
   {
-    "id": "2a2094a0-4b7f-4905-86c2-817e8558959f",
-    "artist_id": "4d03976d-d717-42c8-9d61-1bdc400e3cff",
-    "title": "Lay Me Down",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Lay Me Down",
-    "created_at": "2026-07-05T16:57:10.273709+00:00",
-    "updated_at": "2026-07-05T16:57:10.273709+00:00"
-  },
-  {
     "id": "2a46675c-971e-46a4-b6f6-54de965ee1e1",
     "artist_id": "ff7b70e1-cc6a-4579-9795-7d5c5eb9d2f7",
     "title": "Adding Up",
@@ -550,6 +550,16 @@
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
   {
+    "id": "2fbb8927-c475-4e5d-8809-9f342574cc7e",
+    "artist_id": "dabdca68-7a00-442c-9b2a-5aa7219a2336",
+    "title": "Hard Work Pays Off",
+    "album": null,
+    "year": 2018,
+    "lyrics_excerpt": "They say hard work pays off, I've been feeling paid off",
+    "created_at": "2026-07-06T08:17:38.253928+00:00",
+    "updated_at": "2026-07-06T08:17:38.253928+00:00"
+  },
+  {
     "id": "3000c246-c762-4422-b40f-9aaeea72d52f",
     "artist_id": "b7d74b46-885b-461c-9ff9-0aeb2b852c83",
     "title": "Keep Your Head Up",
@@ -588,6 +598,16 @@
     "lyrics_excerpt": "Remember the Time",
     "created_at": "2026-07-05T16:57:10.273709+00:00",
     "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "3125424f-e979-4bcc-9211-028e85bfb427",
+    "artist_id": "22e26ac1-c3ac-49e2-adc7-d7ed8f7d8454",
+    "title": "Drop Me Off in Harlem",
+    "album": null,
+    "year": 1933,
+    "lyrics_excerpt": "Drop Me Off in Harlem",
+    "created_at": "2026-07-06T08:17:37.443278+00:00",
+    "updated_at": "2026-07-06T08:17:37.443278+00:00"
   },
   {
     "id": "31a00134-5d0f-47a9-ab56-a65e58b1aa9a",
@@ -680,6 +700,16 @@
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
   {
+    "id": "3b78b7e9-3e2d-4250-a9cd-101761a1fe98",
+    "artist_id": "e4424162-0179-4423-b75d-9a6c71845771",
+    "title": "Clean Up, Put Your Toys Away",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Clean up, clean up, put your toys away",
+    "created_at": "2026-07-06T08:17:41.920221+00:00",
+    "updated_at": "2026-07-06T08:17:41.920221+00:00"
+  },
+  {
     "id": "3b834cb9-becd-4be2-a4c7-367306d81398",
     "artist_id": "10201352-931e-45d1-9779-1f4e5ba7ab4f",
     "title": "Sweet Home Alabama",
@@ -738,6 +768,16 @@
     "lyrics_excerpt": "Knockin' on Heaven's Door",
     "created_at": "2026-07-05T16:57:10.171274+00:00",
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "42686000-066f-477e-90e2-ae57fe9e8c3e",
+    "artist_id": "dfae53a6-ab38-462e-9710-b99e1970c255",
+    "title": "This Calls for a Celebration",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "This Calls for a Celebration",
+    "created_at": "2026-07-06T08:17:40.985787+00:00",
+    "updated_at": "2026-07-06T08:17:40.985787+00:00"
   },
   {
     "id": "4274c776-7c5b-4515-a985-9e71614bcc83",
@@ -840,14 +880,14 @@
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
   {
-    "id": "48dcbd6e-8010-4166-bb18-775a6828260b",
-    "artist_id": "dc54886d-239d-41b5-a86e-ecddc71c0f9e",
-    "title": "Pay Me My Money Down",
+    "id": "485bcb3d-9beb-4031-a5d2-bda88ea0bef3",
+    "artist_id": "8f6df7fb-1c3c-4525-a79a-962e8351f5c3",
+    "title": "Closedown",
     "album": null,
-    "year": null,
-    "lyrics_excerpt": "Pay Me My Money Down",
-    "created_at": "2026-07-05T16:57:09.917132+00:00",
-    "updated_at": "2026-07-05T16:57:09.917132+00:00"
+    "year": 1989,
+    "lyrics_excerpt": "I'm out of step and closing down",
+    "created_at": "2026-07-06T08:17:40.495411+00:00",
+    "updated_at": "2026-07-06T08:17:40.495411+00:00"
   },
   {
     "id": "4a32b488-f7c4-49fb-b950-78964cc0faf3",
@@ -955,7 +995,7 @@
     "title": "I Don't Want to Miss a Thing",
     "album": null,
     "year": null,
-    "lyrics_excerpt": "I Don't Want to Miss a Thing",
+    "lyrics_excerpt": "Watch you smile while you are sleeping",
     "created_at": "2026-07-05T16:57:10.273709+00:00",
     "updated_at": "2026-07-05T16:57:10.273709+00:00"
   },
@@ -1280,16 +1320,6 @@
     "updated_at": "2026-07-05T16:57:10.273709+00:00"
   },
   {
-    "id": "550b04c4-c145-491c-ad77-b37c6e3bbcef",
-    "artist_id": "652d6cc3-7be3-4df8-8de0-679ffd0d135b",
-    "title": "Lay Down Sally",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Lay Down Sally",
-    "created_at": "2026-07-05T16:57:09.917132+00:00",
-    "updated_at": "2026-07-05T16:57:09.917132+00:00"
-  },
-  {
     "id": "557b5fc1-1d07-4f8b-b057-6a823363b545",
     "artist_id": "e267b631-226d-4e69-b9f8-e2b1775a2557",
     "title": "Wrap It Up",
@@ -1360,14 +1390,14 @@
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
   {
-    "id": "5aa0d9a5-800e-4fb8-aff6-53c41847d79b",
-    "artist_id": "78019ed8-309c-4ccd-81e3-424ee307d78e",
-    "title": "Call Me",
+    "id": "5a5d008f-2582-4c0b-92dc-55f8825b0b33",
+    "artist_id": "1e9b3b78-3572-4030-9e61-92a5f9c61ef9",
+    "title": "Move On",
     "album": null,
-    "year": null,
-    "lyrics_excerpt": "Call Me",
-    "created_at": "2026-07-05T16:57:10.273709+00:00",
-    "updated_at": "2026-07-05T16:57:10.273709+00:00"
+    "year": 1996,
+    "lyrics_excerpt": "Move on, yeah, hold it together, move on, move on",
+    "created_at": "2026-07-06T07:22:39.752111+00:00",
+    "updated_at": "2026-07-06T07:22:39.752111+00:00"
   },
   {
     "id": "5ad976a6-c1cd-4309-831a-664f7f565574",
@@ -1580,6 +1610,16 @@
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
   {
+    "id": "70877285-d6c1-4684-9e12-9868158ee3d1",
+    "artist_id": "17ae2526-05c5-40c0-8856-98c6d7f862e6",
+    "title": "Put the Gun Down",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Put the gun down",
+    "created_at": "2026-07-06T08:17:42.42337+00:00",
+    "updated_at": "2026-07-06T08:17:42.42337+00:00"
+  },
+  {
     "id": "708ca5cc-b903-4b27-bd83-490a7c9ec160",
     "artist_id": "73d7f73e-aaa7-4290-a389-fb582ec6a4c0",
     "title": "Looking After No. 1",
@@ -1720,32 +1760,12 @@
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
   {
-    "id": "784bf543-08aa-430f-a2d9-0af2302664e7",
-    "artist_id": "037466f0-fdcf-409d-9e76-9138415b87fe",
-    "title": "Torn Apart",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Torn Apart",
-    "created_at": "2026-07-05T16:57:09.917132+00:00",
-    "updated_at": "2026-07-05T16:57:09.917132+00:00"
-  },
-  {
     "id": "78c6ea57-9ba3-40aa-9a49-2be61a268712",
     "artist_id": "372ec1d6-5331-492e-bc62-40f541db3abf",
     "title": "Getaway",
     "album": null,
     "year": null,
     "lyrics_excerpt": "Get Away",
-    "created_at": "2026-07-05T16:57:10.171274+00:00",
-    "updated_at": "2026-07-05T16:57:10.171274+00:00"
-  },
-  {
-    "id": "79f2da06-966f-4e98-97ec-665ad3a700ce",
-    "artist_id": "9b41e8ba-c441-42e1-8bf2-3d88fd061863",
-    "title": "Send Me on My Way",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Send Me on My Way",
     "created_at": "2026-07-05T16:57:10.171274+00:00",
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
@@ -1765,7 +1785,7 @@
     "title": "Sympathy for the Devil",
     "album": null,
     "year": null,
-    "lyrics_excerpt": "Please allow me to introduce myself, I'm a man of wealth and taste",
+    "lyrics_excerpt": "Sympathy for the Devil",
     "created_at": "2026-07-05T16:57:09.917132+00:00",
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
@@ -1780,22 +1800,12 @@
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
   {
-    "id": "7c9f9093-1cef-4ef2-85d7-ca6f53b9b2d0",
-    "artist_id": "1d4a8321-5ae0-4aef-b360-23b9d82af351",
-    "title": "Put Your Head on My Shoulder",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Put Your Head on My Shoulder",
-    "created_at": "2026-07-05T16:57:10.273709+00:00",
-    "updated_at": "2026-07-05T16:57:10.273709+00:00"
-  },
-  {
     "id": "7de935b5-bb3a-4e71-9c7a-cfb824dd6ffa",
     "artist_id": "aa000001-0000-0000-0000-000000000004",
     "title": "Yellow",
     "album": null,
     "year": null,
-    "lyrics_excerpt": "Yellow",
+    "lyrics_excerpt": "Look at the stars, look how they shine for you",
     "created_at": "2026-07-05T16:57:09.917132+00:00",
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
@@ -2080,16 +2090,6 @@
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
   {
-    "id": "9eb843a1-54ab-45e4-aee4-c87fc03f6b6a",
-    "artist_id": "dde164c2-a1a7-4068-ad81-3e48de27d0fe",
-    "title": "Drop It Like It's Hot",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Drop It Like It's Hot",
-    "created_at": "2026-07-05T16:57:09.917132+00:00",
-    "updated_at": "2026-07-05T16:57:09.917132+00:00"
-  },
-  {
     "id": "9f28fa84-5bfb-4a9f-8acf-7e2a304018de",
     "artist_id": "e3ec3b74-fc92-4e8b-a78e-71b4227f9d41",
     "title": "Still Loving You",
@@ -2118,6 +2118,16 @@
     "lyrics_excerpt": "Fly Away",
     "created_at": "2026-07-05T16:57:10.171274+00:00",
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
+  },
+  {
+    "id": "a5e11fb3-c3ed-4066-b7a0-d7540e9c9ac4",
+    "artist_id": "60245089-3099-43ab-9667-c47e754402b8",
+    "title": "Take Me Apart",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Take me apart, tear me to pieces",
+    "created_at": "2026-07-06T08:17:38.86539+00:00",
+    "updated_at": "2026-07-06T08:17:38.86539+00:00"
   },
   {
     "id": "a673b964-f84a-4b6d-a873-6ec579f8dc8f",
@@ -2198,6 +2208,16 @@
     "lyrics_excerpt": "Let It Go",
     "created_at": "2026-07-05T16:57:09.917132+00:00",
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
+  },
+  {
+    "id": "ac435320-103d-4e86-9e4e-29df3a697af0",
+    "artist_id": "b535f936-8b9c-48d3-b4d1-db764db634f1",
+    "title": "I Come Apart",
+    "album": null,
+    "year": 2013,
+    "lyrics_excerpt": "I come apart, and you keep it together",
+    "created_at": "2026-07-06T08:17:39.996836+00:00",
+    "updated_at": "2026-07-06T08:17:39.996836+00:00"
   },
   {
     "id": "ae6f85e8-4167-4381-a8c1-b5589825bc5a",
@@ -2360,6 +2380,16 @@
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
   {
+    "id": "bb0b6dd4-0386-4ef6-834f-f47a8c5c4162",
+    "artist_id": "b18a72cc-b443-4f62-ac34-779f750f3d41",
+    "title": "Moving Up",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Movin' up, mmm yeah",
+    "created_at": "2026-07-06T08:17:39.469239+00:00",
+    "updated_at": "2026-07-06T08:17:39.469239+00:00"
+  },
+  {
     "id": "bcb85048-35b5-4901-a0f5-d23c4949e46f",
     "artist_id": "880a4a14-07c6-4600-9309-631ea2e5cec1",
     "title": "Bring Em Out",
@@ -2398,16 +2428,6 @@
     "lyrics_excerpt": "Catch Up",
     "created_at": "2026-07-05T16:57:09.917132+00:00",
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
-  },
-  {
-    "id": "bdefde72-ceb2-43e3-818a-703e9bbfeab8",
-    "artist_id": "d72fb38b-5900-460b-b6c2-39cedd3e88b4",
-    "title": "Closing Time",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Closing Time",
-    "created_at": "2026-07-05T16:57:10.171274+00:00",
-    "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
   {
     "id": "bf60481d-d4e6-4397-9a43-2dbb75399c82",
@@ -2466,16 +2486,6 @@
     "album": null,
     "year": null,
     "lyrics_excerpt": "It takes two to tango, two to really get the feeling of romance",
-    "created_at": "2026-07-05T16:57:10.171274+00:00",
-    "updated_at": "2026-07-05T16:57:10.171274+00:00"
-  },
-  {
-    "id": "c6ec70e5-09df-4414-b54e-bd0831d881e2",
-    "artist_id": "1fd72874-b09d-4386-b882-10da55eb49fd",
-    "title": "Falling Apart",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Falling Apart",
     "created_at": "2026-07-05T16:57:10.171274+00:00",
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
@@ -2566,16 +2576,6 @@
     "album": null,
     "year": null,
     "lyrics_excerpt": "Show Up",
-    "created_at": "2026-07-05T16:57:10.171274+00:00",
-    "updated_at": "2026-07-05T16:57:10.171274+00:00"
-  },
-  {
-    "id": "d4305355-53d2-436f-937f-798f834d7e9c",
-    "artist_id": "a13898b2-ccb1-404d-92a6-109470c865bb",
-    "title": "Throw It Away",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Throw It Away",
     "created_at": "2026-07-05T16:57:10.171274+00:00",
     "updated_at": "2026-07-05T16:57:10.171274+00:00"
   },
@@ -2940,16 +2940,6 @@
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
   {
-    "id": "f435abe3-4dbe-4084-bca6-6d0d480eb22e",
-    "artist_id": "1c49c733-a67a-4224-ac98-30bb29c85845",
-    "title": "Piece of My Heart",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Piece of My Heart",
-    "created_at": "2026-07-05T16:57:10.171274+00:00",
-    "updated_at": "2026-07-05T16:57:10.171274+00:00"
-  },
-  {
     "id": "f5b03dea-a72e-4811-852e-8f16554b9f81",
     "artist_id": "c8c9c5ef-c8bb-468b-ab14-8199c47dfe59",
     "title": "Better Late Than Never",
@@ -2976,26 +2966,6 @@
     "album": null,
     "year": null,
     "lyrics_excerpt": "Keep your chin up, I know it seems like no one's in your corner",
-    "created_at": "2026-07-05T16:57:09.917132+00:00",
-    "updated_at": "2026-07-05T16:57:09.917132+00:00"
-  },
-  {
-    "id": "f700c87c-4734-4dfc-af36-09c1f5a661a4",
-    "artist_id": "7d041c75-b329-43c7-8bf7-ea3296906c18",
-    "title": "Bring Me to Life",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Bring Me to Life",
-    "created_at": "2026-07-05T16:57:09.917132+00:00",
-    "updated_at": "2026-07-05T16:57:09.917132+00:00"
-  },
-  {
-    "id": "f77e158f-d083-4a0a-8f33-18335220183b",
-    "artist_id": "807d816a-8777-4265-bc36-bcccaf6317ef",
-    "title": "Moving On Up",
-    "album": null,
-    "year": null,
-    "lyrics_excerpt": "Movin' On Up",
     "created_at": "2026-07-05T16:57:09.917132+00:00",
     "updated_at": "2026-07-05T16:57:09.917132+00:00"
   },
@@ -3038,6 +3008,16 @@
     "lyrics_excerpt": "She doesn't know my secret, if she knew that would let the cat out of the bag",
     "created_at": "2026-07-05T16:57:10.273709+00:00",
     "updated_at": "2026-07-05T16:57:10.273709+00:00"
+  },
+  {
+    "id": "fc8f5e4b-8a6a-4853-a82d-01ba669ee8e3",
+    "artist_id": "12782656-e9a4-46e7-8881-099730ed079c",
+    "title": "Send Me Out",
+    "album": null,
+    "year": null,
+    "lyrics_excerpt": "Send me out to the world to make You known",
+    "created_at": "2026-07-06T08:17:41.466396+00:00",
+    "updated_at": "2026-07-06T08:17:41.466396+00:00"
   },
   {
     "id": "fd0c72c3-1c8c-405f-9531-e097148e0e2f",

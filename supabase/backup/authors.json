@@ -1,10 +1,59 @@
 [
   {
+    "id": "022967f0-3272-4fcc-87ac-42ac1f30b7b0",
+    "name": "Amy Ray",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:13.492222+00:00"
+  },
+  {
+    "id": "039d8045-dcb2-4727-ad95-0e8898e10d06",
+    "name": "Reina Isabel II",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:11.58475+00:00"
+  },
+  {
+    "id": "1537b5d4-8644-45a7-8dbd-6ef90c58907d",
+    "name": "Céline Dion",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:37.615432+00:00"
+  },
+  {
+    "id": "194ac580-b75a-43f5-a3b3-c0ecda7efbab",
+    "name": "Fedro (Phaedrus)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:37:48.374407+00:00"
+  },
+  {
+    "id": "24ad803e-71d8-4ab5-991f-502df58708bb",
+    "name": "Taylor Swift",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:10.631536+00:00"
+  },
+  {
     "id": "30472c4e-e565-49c6-9ae9-83d32c8d7439",
     "name": "Winston Churchill",
     "birth_year": null,
     "death_year": null,
     "created_at": "2026-07-05T20:20:07.06252+00:00"
+  },
+  {
+    "id": "37ea929e-01cd-4c47-9bed-3570f79e69d8",
+    "name": "Anónimo (The Athenæum, revista literaria)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-06T07:32:22.850861+00:00"
+  },
+  {
+    "id": "4e2182c5-b945-47e3-a248-11e513e85aa5",
+    "name": "Lin-Manuel Miranda",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:36.087788+00:00"
   },
   {
     "id": "52d3d992-5a58-4c5b-a6c9-80def2748098",
@@ -14,11 +63,95 @@
     "created_at": "2026-07-05T20:20:06.278387+00:00"
   },
   {
+    "id": "573de0bf-70e7-4eaa-8450-c5a4b92876bb",
+    "name": "Richard Branson",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:12.008838+00:00"
+  },
+  {
+    "id": "575cf096-b033-4ee7-8b77-312c38dc2609",
+    "name": "Neil Sedaka",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:38.082438+00:00"
+  },
+  {
+    "id": "582233af-eb1b-42a1-940d-7906c7663caf",
+    "name": "Frank Turner",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:07.050665+00:00"
+  },
+  {
+    "id": "5c921769-be83-4bb0-9087-c8c9a0889278",
+    "name": "Rick Astley",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:36.674396+00:00"
+  },
+  {
+    "id": "5dbbc8c2-2852-4711-831e-72545be4199c",
+    "name": "George Michael",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:37:50.91669+00:00"
+  },
+  {
+    "id": "6f84757f-f5c3-4b46-b637-cdd0f4e948e8",
+    "name": "Stephen Sondheim (interpretada por Madonna)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:37:51.358047+00:00"
+  },
+  {
+    "id": "75af6477-a5e4-4ea0-a5ab-d9ad476bf152",
+    "name": "Rudyard Kipling",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:37:49.56377+00:00"
+  },
+  {
+    "id": "7799526f-b30d-4ee3-8209-e727dfbfb39d",
+    "name": "Nirvana (Kurt Cobain)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:12.983451+00:00"
+  },
+  {
+    "id": "88783287-ff16-4232-8dc1-31bef9935eb8",
+    "name": "DJ Snake & Lil Jon",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:08.974761+00:00"
+  },
+  {
+    "id": "89a3e334-7cc7-4bdc-8bc8-c95aa5883ca4",
+    "name": "Dwayne Johnson (voz de Maui)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:09.501984+00:00"
+  },
+  {
+    "id": "8d2e0aa9-ef8b-46ca-bffa-dfc7d7434c37",
+    "name": "Shrek (personaje)",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:12.469548+00:00"
+  },
+  {
     "id": "8ec330f6-5243-4346-8df6-89103cb4604a",
     "name": "Anónimo (proverbio tradicional)",
     "birth_year": null,
     "death_year": null,
     "created_at": "2026-07-05T19:33:17.791184+00:00"
+  },
+  {
+    "id": "8f15ad7c-bd84-45f6-a372-5988b95d8939",
+    "name": "J.M. Barrie",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:35.556356+00:00"
   },
   {
     "id": "949029df-f0ba-499c-ada8-cceeae616a3b",
@@ -28,6 +161,13 @@
     "created_at": "2026-07-05T20:20:06.629795+00:00"
   },
   {
+    "id": "95413240-2d2f-4533-bda6-efa3193c31f4",
+    "name": "Eagles",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:34.541015+00:00"
+  },
+  {
     "id": "9ac4595e-6587-4161-b1df-054169ec1cae",
     "name": "Shel Silverstein",
     "birth_year": null,
@@ -35,10 +175,101 @@
     "created_at": "2026-07-05T20:20:07.410713+00:00"
   },
   {
+    "id": "9be31ee4-0023-4ff0-9f93-976ebef7ea2e",
+    "name": "Arcade Fire",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:08.445591+00:00"
+  },
+  {
+    "id": "9c4dfed6-a3c3-4263-91cc-24377f28c721",
+    "name": "Red Hot Chili Peppers",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:37:50.463655+00:00"
+  },
+  {
+    "id": "a1157131-0399-42a7-92c2-abc115cc24dd",
+    "name": "Biblia",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-06T07:32:22.002553+00:00"
+  },
+  {
+    "id": "a2c3af38-e49d-4548-936d-2c5464bac5df",
+    "name": "Jonathan Swift",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-06T07:32:22.444677+00:00"
+  },
+  {
+    "id": "a963eeb1-519b-405d-badd-e728562e0a90",
+    "name": "Dexys Midnight Runners",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:07.686099+00:00"
+  },
+  {
+    "id": "b33054eb-3918-4059-ac0d-0548b92f717c",
+    "name": "Bob Marley & The Wailers",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:10.019956+00:00"
+  },
+  {
+    "id": "cee77f64-54fe-4f27-8951-6aded98508d1",
+    "name": "George Gascoigne",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-06T07:32:21.486539+00:00"
+  },
+  {
+    "id": "d0d1fed1-aef2-45bb-b92c-d4739ef6dc74",
+    "name": "Robert A. Heinlein",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T20:58:11.151843+00:00"
+  },
+  {
+    "id": "d727a5f8-fa10-4d6c-812e-d3a37c4b4b69",
+    "name": "Britney Spears",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:37:50.0452+00:00"
+  },
+  {
+    "id": "dfa4e949-e269-414b-99da-0021970c01f1",
+    "name": "Mahatma Gandhi",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:39.119184+00:00"
+  },
+  {
+    "id": "e31d770d-fac5-4c59-b386-85ca59274977",
+    "name": "Davy Crockett",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-06T07:32:20.942858+00:00"
+  },
+  {
+    "id": "ea0c81d2-c4e1-4cf7-9b90-ab1766c696e3",
+    "name": "James Hervey",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:37:48.898399+00:00"
+  },
+  {
     "id": "ec94c906-8ec1-45ca-aeed-f19c8af10ffe",
     "name": "Geoffrey Chaucer",
     "birth_year": null,
     "death_year": 1400,
     "created_at": "2026-07-05T19:33:17.537426+00:00"
+  },
+  {
+    "id": "fa38fd4a-2a7d-4d84-9c08-0f33243e6f8c",
+    "name": "Seth Godin",
+    "birth_year": null,
+    "death_year": null,
+    "created_at": "2026-07-05T22:27:38.591316+00:00"
   }
 ]
