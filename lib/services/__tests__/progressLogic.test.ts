@@ -121,23 +121,23 @@ describe('computeStreakUpdate', () => {
   });
 });
 
-describe('calculateMasteryLevel', () => {
-  it('repetitions 0 -> nivel 0 (nueva), sea cual sea el interval', () => {
+describe('calculateMasteryLevel (términos FSRS: reps + stability)', () => {
+  it('reps 0 -> nivel 0 (nueva), sea cual sea la stability', () => {
     expect(calculateMasteryLevel(0, 0)).toBe(0);
     expect(calculateMasteryLevel(0, 100)).toBe(0);
   });
 
-  it('interval < 7 -> nivel 1 (aprendiendo)', () => {
-    expect(calculateMasteryLevel(1, 1)).toBe(1);
-    expect(calculateMasteryLevel(2, 6)).toBe(1);
+  it('stability < 7 -> nivel 1 (aprendiendo)', () => {
+    expect(calculateMasteryLevel(1, 2.3)).toBe(1); // primer "good" real de FSRS
+    expect(calculateMasteryLevel(2, 6.9)).toBe(1);
   });
 
-  it('7 <= interval < 30 -> nivel 2 (repasando)', () => {
+  it('7 <= stability < 30 -> nivel 2 (repasando)', () => {
     expect(calculateMasteryLevel(2, 7)).toBe(2);
-    expect(calculateMasteryLevel(3, 29)).toBe(2);
+    expect(calculateMasteryLevel(3, 29.9)).toBe(2);
   });
 
-  it('interval >= 30 -> nivel 3 (dominada)', () => {
+  it('stability >= 30 -> nivel 3 (dominada)', () => {
     expect(calculateMasteryLevel(4, 30)).toBe(3);
     expect(calculateMasteryLevel(5, 365)).toBe(3);
   });

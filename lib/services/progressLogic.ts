@@ -46,9 +46,12 @@ export function computeStreakUpdate(input: StreakUpdateInput): StreakUpdateResul
 }
 
 // 0 = nueva, 1 = aprendiendo, 2 = repasando, 3 = dominada
-export function calculateMasteryLevel(repetitions: number, interval: number): number {
-  if (repetitions === 0) return 0;
-  if (interval < 7) return 1;
-  if (interval < 30) return 2;
+// Términos FSRS: `stability` es la fuerza de memoria en días (tiempo hasta que
+// la probabilidad de recuerdo cae a ~90%), el análogo directo del antiguo
+// interval de SM-2, así que se mantienen los mismos umbrales (7/30 días).
+export function calculateMasteryLevel(reps: number, stability: number): number {
+  if (reps === 0) return 0;
+  if (stability < 7) return 1;
+  if (stability < 30) return 2;
   return 3;
 }

@@ -197,4 +197,24 @@ cuantos miles de repasos registrados; antes, no.
     local con `needs_sync=1`; sube en el paso 7).
   - Verificado: typecheck limpio, 83 tests, y simulación SQL de INSERT/UPDATE +
     `review_log`. Falta la prueba en dispositivo (runtime), que es manual.
-- **Siguiente:** paso 5 (redefinir `calculateMasteryLevel` en términos FSRS).
+- **Paso 5 completado:** `calculateMasteryLevel(reps, stability)` — stability es
+  el análogo FSRS del interval (días de fuerza de memoria), mismos umbrales
+  7/30. Callers y tests actualizados.
+- **Paso 6 completado:** `getDueVocabulary` y el contador de repasos de
+  `getStudyStats` filtran/ordenan por `COALESCE(due, next_review_at)`. El
+  COALESCE es imprescindible: las filas de la era SM-2 (soft-reset) tienen
+  `due` NULL y sin él desaparecerían del repaso (tampoco saldrían como nuevas,
+  porque ya tienen fila de progreso). Validado con simulación SQL. Se sigue
+  escribiendo `next_review_at`/`repetitions` como espejo de `due`/`reps`
+  (coste cero y mantiene legibles los dashboards de Supabase).
+- **Paso 7 completado:** `syncPendingReviewLogs()` en `progressService.ts` sube
+  las filas locales con `needs_sync=1` (hasta 200 por tanda, idempotente vía
+  upsert por id con `ignoreDuplicates`), y se llama tras cada repaso — con lo
+  que un periodo offline se drena solo en el siguiente repaso con conexión.
+- **Paso 8 completado:** `lib/srs/sm2.ts` y su test retirados; el último
+  consumidor (`AnswerButtons.tsx`) importa ahora `SimpleQuality`/`formatInterval`
+  de `lib/srs/fsrs.ts`. FSRS es el único scheduler del proyecto.
+
+**Migración terminada.** Queda solo la optimización futura de parámetros
+(sección "Cómo se cierra el círculo") cuando haya miles de repasos en
+`review_log`.

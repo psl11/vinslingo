@@ -151,7 +151,7 @@ export async function updateUserVocabularyAfterReview(
 ): Promise<void> {
   const now = Date.now();
   const { state, isCorrect, log } = data;
-  const masteryLevel = calculateMasteryLevel(state.reps, state.scheduled_days);
+  const masteryLevel = calculateMasteryLevel(state.reps, state.stability);
   const userVocab = await getUserVocabulary(vocabularyId);
 
   // next_review_at = due y repetitions = reps se mantienen sincronizados para
@@ -246,7 +246,9 @@ export async function getStudyStats(): Promise<StudyStats> {
   `);
   
   const [reviewCount] = await runQuery<{ count: number }>(
-    'SELECT COUNT(*) as count FROM user_vocabulary WHERE next_review_at <= ?',
+    // COALESCE: filas de la era SM-2 (soft-reset) tienen due NULL; ver
+    // getDueVocabulary en vocabularyService.ts.
+    'SELECT COUNT(*) as count FROM user_vocabulary WHERE COALESCE(due, next_review_at) <= ?',
     [Date.now()]
   );
   

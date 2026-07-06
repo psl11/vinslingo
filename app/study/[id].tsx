@@ -153,7 +153,7 @@ export default function StudyScreen() {
       console.log('💾 Saving progress for:', currentCard.word, '(ID:', currentCard.id, ')');
 
       const { updateUserVocabularyAfterReview } = await import('../../lib/database/queries');
-      const { syncVocabularyProgress } = await import('../../lib/services/progressService');
+      const { syncVocabularyProgress, syncPendingReviewLogs } = await import('../../lib/services/progressService');
       const { schedule, cardFromRow, cardToState, logToRow } = await import('../../lib/srs/fsrs');
 
       // Programa con FSRS a partir del estado actual de la tarjeta (o nueva).
@@ -172,8 +172,10 @@ export default function StudyScreen() {
       });
       console.log('✅ Saved to local DB');
 
-      // Sincronizar user_vocabulary a Supabase
+      // Sincronizar user_vocabulary y review_log a Supabase (el segundo
+      // arrastra también el backlog offline pendiente, si lo hay)
       await syncVocabularyProgress(currentCard.id, { state, isCorrect });
+      await syncPendingReviewLogs();
       console.log('✅ Synced to Supabase');
     } catch (error) {
       console.error('❌ Error saving progress:', error);

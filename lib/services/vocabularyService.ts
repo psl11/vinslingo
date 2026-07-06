@@ -168,13 +168,16 @@ export async function getDueVocabulary(
   
   // Hidrata las tarjetas con el estado FSRS (fsrs_state se aliasa como `state`,
   // que es como lo espera StudyFsrsFields en lib/srs/fsrs.ts).
+  // COALESCE(due, next_review_at): las filas de la era SM-2 (soft-reset) tienen
+  // due NULL pero next_review_at válido — sin el COALESCE desaparecerían del
+  // repaso (y tampoco saldrían como "nuevas", porque ya tienen fila de progreso).
   let query = `SELECT v.*,
        uv.stability, uv.difficulty, uv.elapsed_days, uv.scheduled_days,
        uv.learning_steps, uv.reps, uv.lapses, uv.fsrs_state AS state,
        uv.due, uv.last_review
      FROM vocabulary v
      INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
-     WHERE uv.next_review_at <= ?`;
+     WHERE COALESCE(uv.due, uv.next_review_at) <= ?`;
   const params: any[] = [now];
 
   if (cefrLevels && cefrLevels.length > 0) {
@@ -191,7 +194,7 @@ export async function getDueVocabulary(
 
   // Orden de repaso con desempate suave por frecuencia:
   //  1º) por "día de vencimiento" (los más atrasados primero) para no romper
-  //      la urgencia de memoria de SM-2 a nivel de día;
+  //      la urgencia de memoria del scheduler a nivel de día;
   //  2º) dentro del mismo día, por frecuencia real (rank más bajo = más común
   //      = antes), de modo que si hay más tarjetas vencidas que el límite de la
   //      sesión, se ven antes las expresiones más útiles;
@@ -200,9 +203,9 @@ export async function getDueVocabulary(
   // día anterior y acaba ganando igualmente: nunca se queda sin repasar.
   // COALESCE evita que un frequency_rank NULL (categorías sin rank) se cuele
   // primero (en SQLite los NULL ordenarían antes en ASC).
-  query += ` ORDER BY CAST(uv.next_review_at / 86400000 AS INTEGER) ASC,
+  query += ` ORDER BY CAST(COALESCE(uv.due, uv.next_review_at) / 86400000 AS INTEGER) ASC,
              COALESCE(v.frequency_rank, 999999) ASC,
-             uv.next_review_at ASC
+             COALESCE(uv.due, uv.next_review_at) ASC
              LIMIT ?`;
   params.push(limit);
 

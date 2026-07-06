@@ -40,7 +40,7 @@ export async function syncVocabularyProgress(
   const { state, isCorrect } = data;
   const dueISO = new Date(state.due).toISOString();
   const lastReviewISO = state.last_review ? new Date(state.last_review).toISOString() : null;
-  const masteryLevel = calculateMasteryLevel(state.reps, state.scheduled_days);
+  const masteryLevel = calculateMasteryLevel(state.reps, state.stability);
 
   // Columnas FSRS + columnas de compat (next_review_at = due, repetitions =
   // reps) para que las consultas por next_review_at sigan funcionando.
@@ -121,6 +121,66 @@ export async function syncVocabularyProgress(
     } catch (queueError) {
       console.error('❌ Failed to queue sync:', queueError);
     }
+  }
+}
+
+// Sube a Supabase los repasos de review_log pendientes (needs_sync=1).
+// Idempotente: usa el id local como PK con ignoreDuplicates, así un reintento
+// tras un fallo a mitad no duplica repasos. Pensada para llamarse tras cada
+// repaso (barata: normalmente 1 fila) — si estuvo offline, arrastra el backlog.
+export async function syncPendingReviewLogs(): Promise<number> {
+  try {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return 0;
+
+    const pending = await runQuery<{
+      id: string;
+      vocabulary_id: string;
+      rating: number;
+      state: number;
+      due: number | null;
+      stability: number | null;
+      difficulty: number | null;
+      elapsed_days: number | null;
+      scheduled_days: number | null;
+      review: number;
+      review_duration_ms: number | null;
+    }>('SELECT * FROM review_log WHERE needs_sync = 1 ORDER BY review ASC LIMIT 200');
+
+    if (pending.length === 0) return 0;
+
+    const rows = pending.map((r) => ({
+      id: r.id,
+      user_id: user.id,
+      vocabulary_id: r.vocabulary_id,
+      rating: r.rating,
+      state: r.state,
+      due: r.due != null ? new Date(r.due).toISOString() : null,
+      stability: r.stability,
+      difficulty: r.difficulty,
+      elapsed_days: r.elapsed_days,
+      scheduled_days: r.scheduled_days,
+      review: new Date(r.review).toISOString(),
+      review_duration_ms: r.review_duration_ms,
+    }));
+
+    const { error } = await supabase
+      .from('review_log')
+      .upsert(rows, { onConflict: 'id', ignoreDuplicates: true });
+    if (error) throw error;
+
+    const placeholders = pending.map(() => '?').join(', ');
+    await runStatement(
+      `UPDATE review_log SET needs_sync = 0 WHERE id IN (${placeholders})`,
+      pending.map((r) => r.id)
+    );
+    console.log(`☁️ Synced ${pending.length} review log(s)`);
+    return pending.length;
+  } catch (error) {
+    // Sin cola aparte: las filas siguen con needs_sync=1 y se reintentan en el
+    // próximo repaso con conexión.
+    console.log('⚠️ review_log sync deferred:', error);
+    return 0;
   }
 }
 

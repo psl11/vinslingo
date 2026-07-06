@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 import * as Haptics from 'expo-haptics';
-import { SimpleQuality, formatInterval } from '../../lib/srs/sm2';
+import { SimpleQuality, formatInterval } from '../../lib/srs/fsrs';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 
 interface AnswerButtonsProps {
