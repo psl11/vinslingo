@@ -13,6 +13,7 @@ export interface GapFillSeedItem {
   category: string;
   difficulty: number;
   answer_es?: string;
+  base_word?: string; // frase completa para el chip (p.ej. "set up" en ejercicios de partícula)
 }
 
 export const GAP_FILL_CONNECTORS: GapFillSeedItem[] = [

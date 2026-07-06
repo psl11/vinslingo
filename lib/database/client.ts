@@ -177,7 +177,7 @@ async function runMigrations(): Promise<void> {
 // *Seed.ts para que los dispositivos ya instalados re-siembren los ejercicios.
 // (Con el mecanismo anterior de INSERT OR IGNORE + check de recuento, las
 // correcciones de contenido nunca llegaban a instalaciones existentes.)
-const SEED_VERSION = 4;
+const SEED_VERSION = 5;
 
 async function seedGapFillExercises(): Promise<void> {
   if (!db) return;

@@ -11,6 +11,7 @@ interface GapFillCardProps {
   explanationEs: string;
   cefrLevel?: string;
   answerEs?: string;
+  baseWord?: string;      // frase completa a mostrar en el chip (p.ej. "set up" en vez de "up")
   onResult: (isCorrect: boolean) => void;
 }
 
@@ -22,6 +23,7 @@ export function GapFillCard({
   explanationEs,
   cefrLevel,
   answerEs,
+  baseWord,
   onResult,
 }: GapFillCardProps) {
   const [selected, setSelected] = useState<string | null>(null);
@@ -174,7 +176,7 @@ export function GapFillCard({
 
             {answerEs && (
               <View style={styles.translationRow}>
-                <Text style={styles.translationLabel}>{answer}</Text>
+                <Text style={styles.translationLabel}>{baseWord || answer}</Text>
                 <Text style={styles.translationArrow}> = </Text>
                 <Text style={styles.translationValue}>{answerEs}</Text>
               </View>

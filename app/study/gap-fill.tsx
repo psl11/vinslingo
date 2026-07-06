@@ -283,6 +283,7 @@ export default function GapFillScreen() {
             explanationEs={currentExercise.explanation_es}
             cefrLevel={currentExercise.cefr_level}
             answerEs={currentExercise.answer_es}
+            baseWord={currentExercise.base_word || undefined}
             onResult={handleResult}
           />
         );
