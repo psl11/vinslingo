@@ -1,0 +1,17 @@
+{
+  "name": "VinsLingo",
+  "short_name": "VinsLingo",
+  "description": "Aprende inglés con vocabulario, phrasal verbs, idioms y repetición espaciada",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366F1",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

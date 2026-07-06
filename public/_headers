@@ -1,0 +1,7 @@
+# Cabeceras para Netlify / Cloudflare Pages.
+# COOP/COEP son imprescindibles: expo-sqlite en web usa WASM con
+# SharedArrayBuffer, que los navegadores solo habilitan en contextos
+# cross-origin-isolated (mismo motivo que metro.config.js en desarrollo).
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp

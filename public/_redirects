@@ -1,0 +1,3 @@
+# SPA fallback para Netlify: cualquier ruta (p.ej. /study/abc) sirve el
+# index.html y expo-router resuelve la ruta en cliente.
+/*  /index.html  200
