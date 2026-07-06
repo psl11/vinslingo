@@ -32,7 +32,10 @@ export default function TabLayout() {
         // → las etiquetas se recortaban. Ahora la zona de contenido es ~60px.
         // insets.bottom sigue reservando el home indicator en nativo; en web es
         // 0 (el navegador/standalone ya excluye la zona insegura).
-        tabBarStyle: [styles.tabBar, { height: 68 + insets.bottom, paddingBottom: insets.bottom }],
+        // +14 de paddingBottom para que las etiquetas no queden pegadas al
+        // borde inferior (en web insets.bottom es 0). La altura crece igual
+        // para mantener la zona de contenido (~56px, sin recorte).
+        tabBarStyle: [styles.tabBar, { height: 78 + insets.bottom, paddingBottom: insets.bottom + 14 }],
         tabBarActiveTintColor: '#4F46E5',
         tabBarInactiveTintColor: '#9CA3AF',
         tabBarLabelStyle: styles.tabLabel,
