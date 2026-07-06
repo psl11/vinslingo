@@ -9,7 +9,7 @@ import { ProgressBar } from '../../components/ui/ProgressBar';
 import { useStudyStore } from '../../stores/useStudyStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useUserStore } from '../../stores/useUserStore';
-import { SimpleQuality, getEstimatedIntervals } from '../../lib/srs/sm2';
+import { SimpleQuality, getEstimatedIntervals, cardFromRow } from '../../lib/srs/fsrs';
 
 export default function StudyScreen() {
   const { id, categories, mode, limit } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string }>();
@@ -126,11 +126,11 @@ export default function StudyScreen() {
   const handleAnswer = async (quality: SimpleQuality) => {
     const responseTimeMs = Date.now() - responseStart;
     
-    // Penalize retried cards: cap at 'good' and downgrade 'good' to 'hard' for SM2
+    // Penalize retried cards: cap at 'good' and downgrade 'good' to 'hard'
     const effectiveQuality: SimpleQuality = isRetry && quality === 'good' ? 'hard' : quality;
-    
+
     // Save progress for this card to database
-    await saveCardProgress(effectiveQuality);
+    await saveCardProgress(effectiveQuality, responseTimeMs);
     
     // Update session state
     answerCard(effectiveQuality, responseTimeMs);
@@ -143,50 +143,38 @@ export default function StudyScreen() {
     }
   };
 
-  const saveCardProgress = async (quality: SimpleQuality) => {
+  const saveCardProgress = async (quality: SimpleQuality, responseTimeMs: number) => {
     if (!currentCard) {
       console.log('⚠️ No current card to save');
       return;
     }
-    
+
     try {
       console.log('💾 Saving progress for:', currentCard.word, '(ID:', currentCard.id, ')');
-      
+
       const { updateUserVocabularyAfterReview } = await import('../../lib/database/queries');
       const { syncVocabularyProgress } = await import('../../lib/services/progressService');
-      const { calculateSM2 } = await import('../../lib/srs/sm2');
-      
-      // Convert SimpleQuality to number for SM2
-      const qualityMap: Record<SimpleQuality, number> = {
-        'again': 1,
-        'hard': 3,
-        'good': 4,
-        'easy': 5,
-      };
-      const qualityNum = qualityMap[quality];
-      
-      const sm2Result = calculateSM2({
-        easeFactor: currentCard.easeFactor ?? 2.5,
-        interval: currentCard.interval ?? 0,
-        repetitions: currentCard.repetitions ?? 0,
-      }, qualityNum as 0 | 1 | 2 | 3 | 4 | 5);
-      
-      const progressData = {
-        easeFactor: sm2Result.easeFactor,
-        interval: sm2Result.interval,
-        repetitions: sm2Result.repetitions,
-        nextReviewAt: sm2Result.nextReviewAt.getTime(),
-        isCorrect: qualityNum >= 3,
-      };
-      
-      // Save to local SQLite
-      await updateUserVocabularyAfterReview(currentCard.id, progressData);
+      const { schedule, cardFromRow, cardToState, logToRow } = await import('../../lib/srs/fsrs');
+
+      // Programa con FSRS a partir del estado actual de la tarjeta (o nueva).
+      const now = new Date();
+      const { card: nextCard, log } = schedule(cardFromRow(currentCard, now), quality, now);
+      const state = cardToState(nextCard);
+      // isCorrect se deriva de la etiqueta, NO del número de grado (en FSRS
+      // Hard=2; usar `>= 3` marcaría "Difícil" como fallo). Ver docs.
+      const isCorrect = quality !== 'again';
+
+      // Guardar en SQLite local (incluye el registro en review_log)
+      await updateUserVocabularyAfterReview(currentCard.id, {
+        state,
+        isCorrect,
+        log: logToRow(log, responseTimeMs),
+      });
       console.log('✅ Saved to local DB');
-      
-      // Sync to Supabase
-      await syncVocabularyProgress(currentCard.id, progressData);
+
+      // Sincronizar user_vocabulary a Supabase
+      await syncVocabularyProgress(currentCard.id, { state, isCorrect });
       console.log('✅ Synced to Supabase');
-      
     } catch (error) {
       console.error('❌ Error saving progress:', error);
     }
@@ -338,11 +326,7 @@ export default function StudyScreen() {
   }
 
   const totalCards = currentSession.cards.length;
-  const intervals = getEstimatedIntervals({
-    easeFactor: currentCard.easeFactor ?? 2.5,
-    interval: currentCard.interval ?? 0,
-    repetitions: currentCard.repetitions ?? 0,
-  });
+  const intervals = getEstimatedIntervals(cardFromRow(currentCard));
 
   return (
     <SafeAreaView style={styles.container}>

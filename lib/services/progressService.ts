@@ -3,6 +3,7 @@ import { runQuery, runStatement } from '../database/client';
 import { getStudyStats, StudyStats, addToSyncQueue } from '../database/queries';
 import * as Network from 'expo-network';
 import { computeStreakUpdate, calculateMasteryLevel } from './progressLogic';
+import type { PersistedFsrsState } from '../srs/fsrs';
 
 export { computeStreakUpdate, calculateMasteryLevel };
 export type { StreakUpdateInput, StreakUpdateResult } from './progressLogic';
@@ -28,17 +29,37 @@ export interface UserProgress {
   todayCards: number;
 }
 
-// Sync a single vocabulary progress to Supabase
+// Sync a single vocabulary progress to Supabase (estado FSRS)
 export async function syncVocabularyProgress(
   vocabularyId: string,
   data: {
-    easeFactor: number;
-    interval: number;
-    repetitions: number;
-    nextReviewAt: number;
+    state: PersistedFsrsState;
     isCorrect: boolean;
   }
 ): Promise<void> {
+  const { state, isCorrect } = data;
+  const dueISO = new Date(state.due).toISOString();
+  const lastReviewISO = state.last_review ? new Date(state.last_review).toISOString() : null;
+  const masteryLevel = calculateMasteryLevel(state.reps, state.scheduled_days);
+
+  // Columnas FSRS + columnas de compat (next_review_at = due, repetitions =
+  // reps) para que las consultas por next_review_at sigan funcionando.
+  const fsrsCols = {
+    stability: state.stability,
+    difficulty: state.difficulty,
+    elapsed_days: state.elapsed_days,
+    scheduled_days: state.scheduled_days,
+    learning_steps: state.learning_steps,
+    reps: state.reps,
+    lapses: state.lapses,
+    fsrs_state: state.state,
+    due: dueISO,
+    last_review: lastReviewISO,
+    repetitions: state.reps,
+    next_review_at: dueISO,
+    mastery_level: masteryLevel,
+  };
+
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
@@ -57,18 +78,13 @@ export async function syncVocabularyProgress(
     const now = new Date().toISOString();
 
     if (existing) {
-      // Update existing record
       const { error } = await supabase
         .from('user_vocabulary')
         .update({
-          ease_factor: data.easeFactor,
-          interval_days: data.interval,
-          repetitions: data.repetitions,
-          next_review_at: new Date(data.nextReviewAt).toISOString(),
+          ...fsrsCols,
           last_reviewed_at: now,
-          times_correct: existing.times_correct + (data.isCorrect ? 1 : 0),
-          times_incorrect: existing.times_incorrect + (data.isCorrect ? 0 : 1),
-          mastery_level: calculateMasteryLevel(data.repetitions, data.interval),
+          times_correct: existing.times_correct + (isCorrect ? 1 : 0),
+          times_incorrect: existing.times_incorrect + (isCorrect ? 0 : 1),
           updated_at: now,
         })
         .eq('id', existing.id);
@@ -76,20 +92,15 @@ export async function syncVocabularyProgress(
       if (error) throw error;
       console.log('☁️ Updated vocabulary progress in Supabase');
     } else {
-      // Insert new record
       const { error } = await supabase
         .from('user_vocabulary')
         .insert({
           user_id: user.id,
           vocabulary_id: vocabularyId,
-          ease_factor: data.easeFactor,
-          interval_days: data.interval,
-          repetitions: data.repetitions,
-          next_review_at: new Date(data.nextReviewAt).toISOString(),
+          ...fsrsCols,
           last_reviewed_at: now,
-          times_correct: data.isCorrect ? 1 : 0,
-          times_incorrect: data.isCorrect ? 0 : 1,
-          mastery_level: calculateMasteryLevel(data.repetitions, data.interval),
+          times_correct: isCorrect ? 1 : 0,
+          times_incorrect: isCorrect ? 0 : 1,
         });
 
       if (error) throw error;
@@ -101,14 +112,10 @@ export async function syncVocabularyProgress(
     try {
       await addToSyncQueue('user_vocabulary', vocabularyId, 'UPDATE', {
         vocabulary_id: vocabularyId,
-        ease_factor: data.easeFactor,
-        interval_days: data.interval,
-        repetitions: data.repetitions,
-        next_review_at: new Date(data.nextReviewAt).toISOString(),
+        ...fsrsCols,
         last_reviewed_at: new Date().toISOString(),
-        times_correct_delta: data.isCorrect ? 1 : 0,
-        times_incorrect_delta: data.isCorrect ? 0 : 1,
-        mastery_level: calculateMasteryLevel(data.repetitions, data.interval),
+        times_correct_delta: isCorrect ? 1 : 0,
+        times_incorrect_delta: isCorrect ? 0 : 1,
       });
       console.log('📥 Queued vocabulary progress for later sync');
     } catch (queueError) {

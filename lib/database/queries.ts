@@ -1,6 +1,7 @@
 import { runQuery, runStatement, getOne, withTransaction } from './client';
 import { generateUUID } from '../utils/uuid';
 import { calculateMasteryLevel } from '../services/progressLogic';
+import type { PersistedFsrsState, ReviewLogRow } from '../srs/fsrs';
 
 export { calculateMasteryLevel };
 
@@ -101,6 +102,7 @@ export async function getNewVocabulary(limit: number = 10, cefrLevels?: string[]
 export interface UserVocabulary {
   id: string;
   vocabulary_id: string;
+  // Columnas SM-2 (vestigiales durante la migración; ver docs/fsrs-migration.md)
   ease_factor: number;
   interval_days: number;
   repetitions: number;
@@ -110,6 +112,17 @@ export interface UserVocabulary {
   times_incorrect: number;
   mastery_level: number;
   needs_sync: number;
+  // Estado FSRS
+  stability?: number;
+  difficulty?: number;
+  elapsed_days?: number;
+  scheduled_days?: number;
+  learning_steps?: number;
+  reps?: number;
+  lapses?: number;
+  fsrs_state?: number;
+  due?: number;
+  last_review?: number;
 }
 
 export async function getUserVocabulary(vocabularyId: string): Promise<UserVocabulary | null> {
@@ -131,51 +144,67 @@ export async function createUserVocabulary(vocabularyId: string): Promise<string
 export async function updateUserVocabularyAfterReview(
   vocabularyId: string,
   data: {
-    easeFactor: number;
-    interval: number;
-    repetitions: number;
-    nextReviewAt: number;
-    isCorrect: boolean;
+    state: PersistedFsrsState; // nuevo estado FSRS de la tarjeta
+    isCorrect: boolean; // derivado de la etiqueta (quality !== 'again'), no del número
+    log: ReviewLogRow; // repaso a registrar en review_log
   }
 ): Promise<void> {
   const now = Date.now();
+  const { state, isCorrect, log } = data;
+  const masteryLevel = calculateMasteryLevel(state.reps, state.scheduled_days);
   const userVocab = await getUserVocabulary(vocabularyId);
-  
+
+  // next_review_at = due y repetitions = reps se mantienen sincronizados para
+  // que el filtro/orden de getDueVocabulary (por next_review_at) siga
+  // funcionando hasta el paso 6. Ver docs/fsrs-migration.md.
   if (!userVocab) {
-    // Crear nuevo registro
     const id = generateUUID();
     await runStatement(
       `INSERT INTO user_vocabulary (
-        id, vocabulary_id, ease_factor, interval_days, repetitions,
-        next_review_at, last_reviewed_at, times_correct, times_incorrect,
-        mastery_level, updated_at, needs_sync
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)`,
+        id, vocabulary_id,
+        stability, difficulty, elapsed_days, scheduled_days, learning_steps,
+        reps, lapses, fsrs_state, due, last_review,
+        repetitions, next_review_at, last_reviewed_at,
+        times_correct, times_incorrect, mastery_level, updated_at, needs_sync
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)`,
       [
-        id, vocabularyId, data.easeFactor, data.interval, data.repetitions,
-        data.nextReviewAt, now, data.isCorrect ? 1 : 0, data.isCorrect ? 0 : 1,
-        calculateMasteryLevel(data.repetitions, data.interval), now
+        id, vocabularyId,
+        state.stability, state.difficulty, state.elapsed_days, state.scheduled_days, state.learning_steps,
+        state.reps, state.lapses, state.state, state.due, state.last_review,
+        state.reps, state.due, state.last_review,
+        isCorrect ? 1 : 0, isCorrect ? 0 : 1, masteryLevel, now,
       ]
     );
   } else {
-    // Actualizar registro existente
-    const timesCorrect = userVocab.times_correct + (data.isCorrect ? 1 : 0);
-    const timesIncorrect = userVocab.times_incorrect + (data.isCorrect ? 0 : 1);
-    const masteryLevel = calculateMasteryLevel(data.repetitions, data.interval);
-    
+    const timesCorrect = userVocab.times_correct + (isCorrect ? 1 : 0);
+    const timesIncorrect = userVocab.times_incorrect + (isCorrect ? 0 : 1);
     await runStatement(
       `UPDATE user_vocabulary SET
-        ease_factor = ?, interval_days = ?, repetitions = ?,
-        next_review_at = ?, last_reviewed_at = ?,
-        times_correct = ?, times_incorrect = ?,
-        mastery_level = ?, updated_at = ?, needs_sync = 1
+        stability = ?, difficulty = ?, elapsed_days = ?, scheduled_days = ?, learning_steps = ?,
+        reps = ?, lapses = ?, fsrs_state = ?, due = ?, last_review = ?,
+        repetitions = ?, next_review_at = ?, last_reviewed_at = ?,
+        times_correct = ?, times_incorrect = ?, mastery_level = ?, updated_at = ?, needs_sync = 1
       WHERE vocabulary_id = ?`,
       [
-        data.easeFactor, data.interval, data.repetitions,
-        data.nextReviewAt, now, timesCorrect, timesIncorrect,
-        masteryLevel, now, vocabularyId
+        state.stability, state.difficulty, state.elapsed_days, state.scheduled_days, state.learning_steps,
+        state.reps, state.lapses, state.state, state.due, state.last_review,
+        state.reps, state.due, state.last_review,
+        timesCorrect, timesIncorrect, masteryLevel, now, vocabularyId,
       ]
     );
   }
+
+  // Log del repaso (append-only), base para optimizar parámetros FSRS a futuro.
+  await runStatement(
+    `INSERT INTO review_log (
+      id, vocabulary_id, rating, state, due, stability, difficulty,
+      elapsed_days, scheduled_days, review, review_duration_ms, needs_sync
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)`,
+    [
+      generateUUID(), vocabularyId, log.rating, log.state, log.due, log.stability, log.difficulty,
+      log.elapsed_days, log.scheduled_days, log.review, log.review_duration_ms,
+    ]
+  );
 }
 
 // ============================================

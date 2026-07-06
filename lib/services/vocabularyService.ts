@@ -166,7 +166,12 @@ export async function getDueVocabulary(
 ): Promise<VocabularyItem[]> {
   const now = Date.now();
   
-  let query = `SELECT v.*, uv.ease_factor, uv.interval_days as interval, uv.repetitions
+  // Hidrata las tarjetas con el estado FSRS (fsrs_state se aliasa como `state`,
+  // que es como lo espera StudyFsrsFields en lib/srs/fsrs.ts).
+  let query = `SELECT v.*,
+       uv.stability, uv.difficulty, uv.elapsed_days, uv.scheduled_days,
+       uv.learning_steps, uv.reps, uv.lapses, uv.fsrs_state AS state,
+       uv.due, uv.last_review
      FROM vocabulary v
      INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
      WHERE uv.next_review_at <= ?`;
@@ -184,7 +189,21 @@ export async function getDueVocabulary(
     params.push(...categories);
   }
 
-  query += ` ORDER BY uv.next_review_at ASC LIMIT ?`;
+  // Orden de repaso con desempate suave por frecuencia:
+  //  1º) por "día de vencimiento" (los más atrasados primero) para no romper
+  //      la urgencia de memoria de SM-2 a nivel de día;
+  //  2º) dentro del mismo día, por frecuencia real (rank más bajo = más común
+  //      = antes), de modo que si hay más tarjetas vencidas que el límite de la
+  //      sesión, se ven antes las expresiones más útiles;
+  //  3º) por la marca de tiempo exacta, como orden estable final.
+  // Es "suave" porque una tarjeta poco frecuente que se va atrasando cae a un
+  // día anterior y acaba ganando igualmente: nunca se queda sin repasar.
+  // COALESCE evita que un frequency_rank NULL (categorías sin rank) se cuele
+  // primero (en SQLite los NULL ordenarían antes en ASC).
+  query += ` ORDER BY CAST(uv.next_review_at / 86400000 AS INTEGER) ASC,
+             COALESCE(v.frequency_rank, 999999) ASC,
+             uv.next_review_at ASC
+             LIMIT ?`;
   params.push(limit);
 
   return runQuery<VocabularyItem>(query, params);

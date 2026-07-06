@@ -1,7 +1,14 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { SM2Result, SimpleQuality, QUALITY_MAP, calculateSM2 } from '../lib/srs/sm2';
+import {
+  SimpleQuality,
+  schedule,
+  cardFromRow,
+  cardToState,
+  type Card,
+  type StudyFsrsFields,
+} from '../lib/srs/fsrs';
 
 export interface VocabularyItem {
   id: string;
@@ -23,11 +30,9 @@ export interface VocabularyItem {
   song_artist?: string;
 }
 
-export interface StudyCard extends VocabularyItem {
-  easeFactor?: number;
-  interval?: number;
-  repetitions?: number;
-}
+// StudyCard lleva el estado FSRS de la fila de progreso (StudyFsrsFields).
+// Las tarjetas de lección nueva no traen estos campos → se tratan como nuevas.
+export interface StudyCard extends VocabularyItem, StudyFsrsFields {}
 
 interface StudySession {
   id: string;
@@ -39,7 +44,6 @@ interface StudySession {
   results: {
     cardId: string;
     quality: SimpleQuality;
-    sm2Result: SM2Result;
     responseTimeMs: number;
   }[];
 }
@@ -56,7 +60,7 @@ interface StudyState {
   // Acciones de tarjeta
   getCurrentCard: () => StudyCard | null;
   isCurrentCardRetry: () => boolean;
-  answerCard: (quality: SimpleQuality, responseTimeMs: number) => SM2Result | null;
+  answerCard: (quality: SimpleQuality, responseTimeMs: number) => Card | null;
   nextCard: () => boolean; // returns true if there are more cards
   
   // Estadísticas de sesión
@@ -116,30 +120,23 @@ export const useStudyStore = create<StudyState>()(
         const card = session.cards[session.currentIndex];
         if (!card) return null;
 
-        const sm2Result = calculateSM2(
-          {
-            easeFactor: card.easeFactor,
-            interval: card.interval,
-            repetitions: card.repetitions,
-          },
-          QUALITY_MAP[quality]
-        );
+        // Programa con FSRS a partir del estado de la tarjeta (o nueva si nunca
+        // fue programada). La persistencia real la hace la pantalla; aquí solo
+        // se actualiza el estado de sesión y se re-encolan los fallos.
+        const { card: nextState } = schedule(cardFromRow(card), quality);
 
         const result = {
           cardId: card.id,
           quality,
-          sm2Result,
           responseTimeMs,
         };
 
-        // Re-queue failed cards at the end with updated SM2 values
+        // Re-queue failed cards at the end con el estado FSRS actualizado
         const updatedCards = [...session.cards];
         if (quality === 'again') {
           updatedCards.push({
             ...card,
-            easeFactor: sm2Result.easeFactor,
-            interval: sm2Result.interval,
-            repetitions: sm2Result.repetitions,
+            ...cardToState(nextState),
           });
         }
 
@@ -151,7 +148,7 @@ export const useStudyStore = create<StudyState>()(
           },
         });
 
-        return sm2Result;
+        return nextState;
       },
 
       nextCard: () => {

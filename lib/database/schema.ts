@@ -31,6 +31,9 @@ export const LOCAL_SCHEMA = `
   CREATE INDEX IF NOT EXISTS idx_vocab_rank ON vocabulary(frequency_rank);
 
   -- Progreso del usuario por palabra (sync bidireccional)
+  -- Columnas SM-2 (ease_factor, interval_days, repetitions, next_review_at) y
+  -- columnas FSRS (stability..due) conviven durante la migración; ver
+  -- docs/fsrs-migration.md. Las SM-2 sin equivalente se retiran en el paso 8.
   CREATE TABLE IF NOT EXISTS user_vocabulary (
     id TEXT PRIMARY KEY,
     vocabulary_id TEXT NOT NULL,
@@ -42,6 +45,17 @@ export const LOCAL_SCHEMA = `
     times_correct INTEGER DEFAULT 0,
     times_incorrect INTEGER DEFAULT 0,
     mastery_level INTEGER DEFAULT 0,
+    -- Estado FSRS (ver lib/srs/fsrs.ts -> PersistedFsrsState)
+    stability REAL DEFAULT 0,
+    difficulty REAL DEFAULT 0,
+    elapsed_days INTEGER DEFAULT 0,
+    scheduled_days INTEGER DEFAULT 0,
+    learning_steps INTEGER DEFAULT 0,
+    reps INTEGER DEFAULT 0,
+    lapses INTEGER DEFAULT 0,
+    fsrs_state INTEGER DEFAULT 0,
+    due INTEGER,
+    last_review INTEGER,
     created_at INTEGER DEFAULT (strftime('%s', 'now') * 1000),
     updated_at INTEGER DEFAULT (strftime('%s', 'now') * 1000),
     needs_sync INTEGER DEFAULT 0,
@@ -52,6 +66,29 @@ export const LOCAL_SCHEMA = `
   CREATE INDEX IF NOT EXISTS idx_user_vocab_review ON user_vocabulary(next_review_at);
   CREATE INDEX IF NOT EXISTS idx_user_vocab_mastery ON user_vocabulary(mastery_level);
   CREATE INDEX IF NOT EXISTS idx_user_vocab_sync ON user_vocabulary(needs_sync);
+  CREATE INDEX IF NOT EXISTS idx_user_vocab_due ON user_vocabulary(due);
+
+  -- Log de repasos FSRS (append-only). Base para optimizar los parámetros del
+  -- algoritmo en el futuro (ver docs/fsrs-migration.md). Dato de usuario.
+  CREATE TABLE IF NOT EXISTS review_log (
+    id TEXT PRIMARY KEY,
+    vocabulary_id TEXT NOT NULL,
+    rating INTEGER NOT NULL,          -- grado FSRS 1-4 (Again/Hard/Good/Easy)
+    state INTEGER NOT NULL,           -- estado PREVIO al repaso (0-3)
+    due INTEGER,                      -- due previo (epoch ms)
+    stability REAL,
+    difficulty REAL,
+    elapsed_days INTEGER,
+    scheduled_days INTEGER,
+    review INTEGER NOT NULL,          -- timestamp del repaso (epoch ms)
+    review_duration_ms INTEGER,       -- responseTimeMs, nullable
+    needs_sync INTEGER DEFAULT 0,
+    created_at INTEGER DEFAULT (strftime('%s', 'now') * 1000),
+    FOREIGN KEY (vocabulary_id) REFERENCES vocabulary(id)
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_review_log_vocab ON review_log(vocabulary_id);
+  CREATE INDEX IF NOT EXISTS idx_review_log_sync ON review_log(needs_sync);
 
   -- Lecciones (cache de servidor)
   CREATE TABLE IF NOT EXISTS lessons (

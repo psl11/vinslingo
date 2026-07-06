@@ -104,6 +104,37 @@ async function runMigrations(): Promise<void> {
     console.log('Migration check:', error);
   }
 
+  // Migración FSRS: añadir columnas de estado del algoritmo a user_vocabulary.
+  // (La tabla review_log se crea vía CREATE TABLE IF NOT EXISTS en LOCAL_SCHEMA,
+  // que corre en cada init, así que cubre instalaciones nuevas y existentes.)
+  // Ver docs/fsrs-migration.md. Aditivo: SM-2 sigue operativo hasta el paso 4.
+  try {
+    const uvCols = await db.getAllAsync<{ name: string }>(
+      "PRAGMA table_info(user_vocabulary)"
+    );
+    const uvColNames = uvCols.map(c => c.name);
+    const fsrsColumns: [string, string][] = [
+      ['stability', 'REAL DEFAULT 0'],
+      ['difficulty', 'REAL DEFAULT 0'],
+      ['elapsed_days', 'INTEGER DEFAULT 0'],
+      ['scheduled_days', 'INTEGER DEFAULT 0'],
+      ['learning_steps', 'INTEGER DEFAULT 0'],
+      ['reps', 'INTEGER DEFAULT 0'],
+      ['lapses', 'INTEGER DEFAULT 0'],
+      ['fsrs_state', 'INTEGER DEFAULT 0'],
+      ['due', 'INTEGER'],
+      ['last_review', 'INTEGER'],
+    ];
+    for (const [name, def] of fsrsColumns) {
+      if (!uvColNames.includes(name)) {
+        await db.execAsync(`ALTER TABLE user_vocabulary ADD COLUMN ${name} ${def}`);
+      }
+    }
+    await db.execAsync('CREATE INDEX IF NOT EXISTS idx_user_vocab_due ON user_vocabulary(due)');
+  } catch (error) {
+    console.log('FSRS migration check:', error);
+  }
+
   // Migrate gap_fill_exercises: add base_word and context_sentence columns
   try {
     const gfCols = await db.getAllAsync<{ name: string }>(
