@@ -49,6 +49,36 @@ fallback SPA. El shell HTML con las metas de iOS vive en `app/+html.tsx`.
 `npx expo export --platform web`, publish dir `dist`, mismas 2 env vars);
 `_headers`/`_redirects` hacen el resto.
 
+## Login con Google (OAuth)
+
+El código ya está (botón "Continuar con Google" en web, `detectSessionInUrl`
+activado). Falta la configuración de dashboards, una sola vez:
+
+1. **Google Cloud Console** (console.cloud.google.com) → APIs & Services →
+   Credentials → Create OAuth client ID → tipo "Web application".
+   En *Authorized redirect URIs* añadir exactamente:
+   `https://qsdzoelgqyymtwublxoq.supabase.co/auth/v1/callback`
+2. **Supabase → Authentication → Providers → Google**: activar y pegar el
+   Client ID y el Client Secret del paso 1.
+3. **Supabase → Authentication → URL Configuration → Redirect URLs**: añadir
+   la URL de producción (`https://<tu-app>.vercel.app/**`) y, para desarrollo,
+   `http://localhost:8081/**`.
+
+**Vinculación con la cuenta existente:** Supabase vincula el login de Google a
+la cuenta previa automáticamente **si el email coincide y la cuenta existente
+está confirmada**. Antes de usar Google por primera vez, comprobar en
+Authentication → Users que la cuenta antigua figura como *Confirmed*; si no lo
+está, entrar antes por contraseña (el flujo de recuperación ya funciona) para
+no acabar con un usuario nuevo vacío.
+
+## Recuperación de contraseña
+
+Arreglada en código (antes el enlace del correo moría): el cliente lee el token
+de la URL en web, el correo redirige a `/reset-password` y esa pantalla guarda
+la contraseña nueva. Requisito de dashboard: la URL de la app debe estar en
+*Redirect URLs* (paso 3 de arriba). El enlace debe abrirse en el mismo
+navegador desde el que se solicitó.
+
 ## Después del primer deploy
 
 1. **Supabase → Authentication → URL Configuration**: poner la URL de

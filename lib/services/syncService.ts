@@ -87,31 +87,47 @@ export async function syncUserProgress(): Promise<SyncResult> {
     }
 
     // 2. Download user progress from Supabase
-    // Fetch user's vocabulary progress
+    // Fetch user's vocabulary progress. OJO: al ser INSERT OR REPLACE, hay que
+    // escribir TODAS las columnas de estado (incluidas las FSRS) o el replace
+    // las machacaría con sus defaults y se perdería la programación local.
     const { data: userVocab, error } = await supabase
       .from('user_vocabulary')
       .select('*')
       .eq('user_id', user.id);
 
     if (!error && userVocab) {
+      const toMs = (v: string | null | undefined) => (v ? new Date(v).getTime() : null);
       for (const item of userVocab) {
         await runStatement(
           `INSERT OR REPLACE INTO user_vocabulary (
             id, vocabulary_id, ease_factor, interval_days, repetitions,
             next_review_at, last_reviewed_at, times_correct, times_incorrect,
-            mastery_level, updated_at, needs_sync
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`,
+            mastery_level,
+            stability, difficulty, elapsed_days, scheduled_days, learning_steps,
+            reps, lapses, fsrs_state, due, last_review,
+            updated_at, needs_sync
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`,
           [
             item.id,
             item.vocabulary_id,
-            item.ease_factor,
-            item.interval_days,
-            item.repetitions,
-            item.next_review_at ? new Date(item.next_review_at).getTime() : null,
-            item.last_reviewed_at ? new Date(item.last_reviewed_at).getTime() : null,
-            item.times_correct,
-            item.times_incorrect,
-            item.mastery_level,
+            item.ease_factor ?? 2.5,
+            item.interval_days ?? 0,
+            item.repetitions ?? 0,
+            toMs(item.next_review_at),
+            toMs(item.last_reviewed_at),
+            item.times_correct ?? 0,
+            item.times_incorrect ?? 0,
+            item.mastery_level ?? 0,
+            item.stability ?? 0,
+            item.difficulty ?? 0,
+            item.elapsed_days ?? 0,
+            item.scheduled_days ?? 0,
+            item.learning_steps ?? 0,
+            item.reps ?? 0,
+            item.lapses ?? 0,
+            item.fsrs_state ?? 0,
+            toMs(item.due),
+            toMs(item.last_review),
             Date.now(),
           ]
         );
@@ -136,12 +152,21 @@ export async function syncUserProgress(): Promise<SyncResult> {
   return result;
 }
 
-// Handle queued vocabulary progress with delta-based counts
+// Handle queued vocabulary progress with delta-based counts.
+// El payload lo escribe addToSyncQueue en progressService (columnas FSRS +
+// espejos next_review_at/repetitions + deltas): se reenvía tal cual, separando
+// solo los deltas de aciertos, para no volver a desalinearse con el esquema
+// (este replay se quedó en columnas SM-2 tras la migración FSRS — bug).
 async function syncQueuedVocabularyProgress(
   userId: string,
   payload: any
 ): Promise<void> {
-  const vocabId = payload.vocabulary_id;
+  const {
+    vocabulary_id: vocabId,
+    times_correct_delta,
+    times_incorrect_delta,
+    ...cols
+  } = payload;
   const now = new Date().toISOString();
 
   // Check if record exists in Supabase
@@ -156,14 +181,10 @@ async function syncQueuedVocabularyProgress(
     const { error } = await supabase
       .from('user_vocabulary')
       .update({
-        ease_factor: payload.ease_factor,
-        interval_days: payload.interval_days,
-        repetitions: payload.repetitions,
-        next_review_at: payload.next_review_at,
-        last_reviewed_at: payload.last_reviewed_at || now,
-        times_correct: existing.times_correct + (payload.times_correct_delta || 0),
-        times_incorrect: existing.times_incorrect + (payload.times_incorrect_delta || 0),
-        mastery_level: payload.mastery_level,
+        ...cols,
+        last_reviewed_at: cols.last_reviewed_at || now,
+        times_correct: existing.times_correct + (times_correct_delta || 0),
+        times_incorrect: existing.times_incorrect + (times_incorrect_delta || 0),
         updated_at: now,
       })
       .eq('id', existing.id);
@@ -174,14 +195,10 @@ async function syncQueuedVocabularyProgress(
       .insert({
         user_id: userId,
         vocabulary_id: vocabId,
-        ease_factor: payload.ease_factor,
-        interval_days: payload.interval_days,
-        repetitions: payload.repetitions,
-        next_review_at: payload.next_review_at,
-        last_reviewed_at: payload.last_reviewed_at || now,
-        times_correct: payload.times_correct_delta || 0,
-        times_incorrect: payload.times_incorrect_delta || 0,
-        mastery_level: payload.mastery_level,
+        ...cols,
+        last_reviewed_at: cols.last_reviewed_at || now,
+        times_correct: times_correct_delta || 0,
+        times_incorrect: times_incorrect_delta || 0,
       });
     if (error) throw error;
   }

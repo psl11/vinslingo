@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
+import { Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
 import { useUserStore } from '../stores/useUserStore';
 import { Session, User } from '@supabase/supabase-js';
@@ -12,9 +13,11 @@ interface AuthState {
 
 interface AuthActions {
   signIn: (email: string, password: string) => Promise<{ error: Error | null }>;
+  signInWithGoogle: () => Promise<{ error: Error | null }>;
   signUp: (email: string, password: string, displayName?: string) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error: Error | null }>;
+  updatePassword: (newPassword: string) => Promise<{ error: Error | null }>;
 }
 
 export function useAuth(): AuthState & AuthActions {
@@ -178,7 +181,42 @@ export function useAuth(): AuthState & AuthActions {
 
   const resetPassword = useCallback(async (email: string) => {
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email);
+      // En web, el enlace del correo debe volver a NUESTRA pantalla de
+      // restablecer contraseña (con el token en la URL, que el cliente lee
+      // gracias a detectSessionInUrl). Sin redirectTo, Supabase manda al
+      // Site URL genérico y el flujo muere ahí.
+      const options =
+        Platform.OS === 'web'
+          ? { redirectTo: `${window.location.origin}/reset-password` }
+          : undefined;
+      const { error } = await supabase.auth.resetPasswordForEmail(email, options);
+      return { error: error as Error | null };
+    } catch (error) {
+      return { error: error as Error };
+    }
+  }, []);
+
+  const updatePassword = useCallback(async (newPassword: string) => {
+    try {
+      const { error } = await supabase.auth.updateUser({ password: newPassword });
+      return { error: error as Error | null };
+    } catch (error) {
+      return { error: error as Error };
+    }
+  }, []);
+
+  const signInWithGoogle = useCallback(async () => {
+    // Solo web por ahora: en nativo requiere deep-linking (expo-auth-session),
+    // que no montamos mientras la app se use como PWA.
+    if (Platform.OS !== 'web') {
+      return { error: new Error('Google login solo está disponible en la versión web por ahora') };
+    }
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: window.location.origin },
+      });
+      // Si no hay error, el navegador redirige a Google; no hay más que hacer.
       return { error: error as Error | null };
     } catch (error) {
       return { error: error as Error };
@@ -191,8 +229,10 @@ export function useAuth(): AuthState & AuthActions {
     isLoading,
     isAuthenticated: !!session,
     signIn,
+    signInWithGoogle,
     signUp,
     signOut,
     resetPassword,
+    updatePassword,
   };
 }

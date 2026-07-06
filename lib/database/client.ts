@@ -8,14 +8,28 @@ import { OPEN_CLOZE_EXERCISES } from './openClozeSeed';
 import { OFFICIAL_CAMBRIDGE_EXERCISES } from './officialCambridgeSeed';
 
 let db: SQLite.SQLiteDatabase | null = null;
+let dbReady: Promise<SQLite.SQLiteDatabase> | null = null;
 let needsResync = false;
 
 export async function getDatabase(): Promise<SQLite.SQLiteDatabase> {
-  if (db) return db;
-  
-  db = await SQLite.openDatabaseAsync('vinslingo.db');
-  await initializeDatabase();
-  return db;
+  // Memoizar la PROMESA (no solo el handle): antes se asignaba `db` antes de
+  // terminar initializeDatabase(), así que un llamador concurrente durante el
+  // arranque (p.ej. el sync de foreground en web, donde la visibilidad cambia
+  // constantemente) recibía una BD a medio inicializar y las queries fallaban
+  // con SQLITE_MISUSE (error 21).
+  if (!dbReady) {
+    dbReady = (async () => {
+      db = await SQLite.openDatabaseAsync('vinslingo.db');
+      await initializeDatabase();
+      return db;
+    })().catch((err) => {
+      // Si el init falla, permitir reintentar en vez de cachear el fallo
+      dbReady = null;
+      db = null;
+      throw err;
+    });
+  }
+  return dbReady;
 }
 
 export function checkNeedsResync(): boolean {
@@ -221,6 +235,7 @@ export async function closeDatabase(): Promise<void> {
   if (db) {
     await db.closeAsync();
     db = null;
+    dbReady = null;
   }
 }
 

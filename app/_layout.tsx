@@ -103,11 +103,15 @@ export default function RootLayout() {
     if (isInitializing || authLoading) return;
 
     const inAuthGroup = segments[0] === '(auth)';
+    // El enlace de recuperación crea una sesión al aterrizar: sin esta
+    // excepción, el guard expulsaría al usuario a home antes de que pueda
+    // escribir la contraseña nueva.
+    const onResetPassword = (segments as string[])[1] === 'reset-password';
 
     if (!isAuthenticated && !inAuthGroup) {
       // Redirect to sign-in if not authenticated
       router.replace('/(auth)/sign-in');
-    } else if (isAuthenticated && inAuthGroup) {
+    } else if (isAuthenticated && inAuthGroup && !onResetPassword) {
       // Redirect to home if authenticated but on auth screen
       router.replace('/(tabs)');
     }

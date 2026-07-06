@@ -15,11 +15,18 @@ import { useAuth } from '../../hooks/useAuth';
 
 export default function SignInScreen() {
   const router = useRouter();
-  const { signIn, isLoading } = useAuth();
-  
+  const { signIn, signInWithGoogle, isLoading } = useAuth();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  const handleGoogle = async () => {
+    setError('');
+    const { error } = await signInWithGoogle();
+    // Si no hay error, el navegador redirige a Google y esta pantalla muere.
+    if (error) setError(error.message);
+  };
 
   const handleSignIn = async () => {
     if (!email || !password) {
@@ -97,6 +104,20 @@ export default function SignInScreen() {
               <Text style={styles.buttonText}>Iniciar Sesión</Text>
             )}
           </Pressable>
+
+          {Platform.OS === 'web' && (
+            <>
+              <View style={styles.dividerRow}>
+                <View style={styles.dividerLine} />
+                <Text style={styles.dividerText}>o</Text>
+                <View style={styles.dividerLine} />
+              </View>
+              <Pressable style={styles.googleButton} onPress={handleGoogle} disabled={isLoading}>
+                <Text style={styles.googleG}>G</Text>
+                <Text style={styles.googleButtonText}>Continuar con Google</Text>
+              </Pressable>
+            </>
+          )}
 
           <Link href="/(auth)/forgot-password" asChild>
             <Pressable style={styles.forgotPassword}>
@@ -189,6 +210,42 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  dividerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginTop: 4,
+  },
+  dividerLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#E5E7EB',
+  },
+  dividerText: {
+    color: '#9CA3AF',
+    fontSize: 14,
+  },
+  googleButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 10,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#D1D5DB',
+    paddingVertical: 14,
+    borderRadius: 12,
+  },
+  googleG: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#4285F4',
+  },
+  googleButtonText: {
+    color: '#374151',
     fontSize: 16,
     fontWeight: '600',
   },
