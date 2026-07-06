@@ -26,10 +26,13 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        // Altura fija + inset real del dispositivo: con los valores
-        // hardcodeados (85/28) las etiquetas se recortaban en dispositivos
-        // sin home indicator (Android, web).
-        tabBarStyle: [styles.tabBar, { height: 57 + insets.bottom, paddingBottom: insets.bottom }],
+        // La zona de contenido = height - paddingTop - paddingBottom. Antes
+        // era 57 - 8 - insets = 49px fijos (el +insets de la altura lo anulaba
+        // el paddingBottom), insuficiente para el emoji (24px) + etiqueta (12px)
+        // → las etiquetas se recortaban. Ahora la zona de contenido es ~60px.
+        // insets.bottom sigue reservando el home indicator en nativo; en web es
+        // 0 (el navegador/standalone ya excluye la zona insegura).
+        tabBarStyle: [styles.tabBar, { height: 68 + insets.bottom, paddingBottom: insets.bottom }],
         tabBarActiveTintColor: '#4F46E5',
         tabBarInactiveTintColor: '#9CA3AF',
         tabBarLabelStyle: styles.tabLabel,
