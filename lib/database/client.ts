@@ -6,6 +6,7 @@ import { KEY_WORD_TRANSFORM_EXERCISES } from './keyWordTransformSeed';
 import { ERROR_CORRECTION_EXERCISES } from './errorCorrectionSeed';
 import { OPEN_CLOZE_EXERCISES } from './openClozeSeed';
 import { OFFICIAL_CAMBRIDGE_EXERCISES } from './officialCambridgeSeed';
+import { PHRASAL_VERB_PARTICLES } from './phrasalVerbParticleSeed';
 
 let db: SQLite.SQLiteDatabase | null = null;
 let dbReady: Promise<SQLite.SQLiteDatabase> | null = null;
@@ -176,7 +177,7 @@ async function runMigrations(): Promise<void> {
 // *Seed.ts para que los dispositivos ya instalados re-siembren los ejercicios.
 // (Con el mecanismo anterior de INSERT OR IGNORE + check de recuento, las
 // correcciones de contenido nunca llegaban a instalaciones existentes.)
-const SEED_VERSION = 2;
+const SEED_VERSION = 3;
 
 async function seedGapFillExercises(): Promise<void> {
   if (!db) return;
@@ -188,6 +189,7 @@ async function seedGapFillExercises(): Promise<void> {
       ...ERROR_CORRECTION_EXERCISES,
       ...OPEN_CLOZE_EXERCISES,
       ...OFFICIAL_CAMBRIDGE_EXERCISES,
+      ...PHRASAL_VERB_PARTICLES,
     ];
 
     const versionRow = await db.getFirstAsync<{ value: string }>(

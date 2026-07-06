@@ -251,6 +251,32 @@ export default function LearnScreen() {
 
         <Card style={styles.categoryCard}>
           <View style={styles.categoryHeader}>
+            <Text style={styles.categoryEmoji}>🚀</Text>
+            <View style={styles.categoryInfo}>
+              <Text style={styles.categoryTitle}>Rellena la partícula</Text>
+              <Text style={styles.categoryDescription}>
+                Phrasal verbs: elige up, off, on...
+              </Text>
+            </View>
+            <View style={styles.levelBadge}>
+              <Text style={styles.levelText}>A2-B2</Text>
+            </View>
+          </View>
+          <View style={styles.modeButtons}>
+            <Pressable
+              style={[styles.modeButton, styles.modeButtonGapFill]}
+              onPress={() => router.push({
+                pathname: '/study/gap-fill',
+                params: { category: 'phrasal_particle', limit: String(cardsPerRound), source: 'all' },
+              })}
+            >
+              <Text style={styles.modeButtonText}>Practicar</Text>
+            </Pressable>
+          </View>
+        </Card>
+
+        <Card style={styles.categoryCard}>
+          <View style={styles.categoryHeader}>
             <Text style={styles.categoryEmoji}>🔗</Text>
             <View style={styles.categoryInfo}>
               <Text style={styles.categoryTitle}>Multiple Choice</Text>

@@ -38,6 +38,11 @@ const CATEGORY_CONFIG: Record<string, { emoji: string; title: string; subtitle: 
     description: 'Escribe la palabra que falta. Sin opciones, solo gramática pura.',
     hasModeSelect: false,
   },
+  phrasal_particle: {
+    emoji: '🚀', title: 'Rellena la partícula', subtitle: 'Phrasal Verbs',
+    description: 'El verbo está; elige la partícula correcta (up, off, on...).\nEs la que cambia el significado. ¿Cómo quieres practicar?',
+    hasModeSelect: true,
+  },
 };
 
 export default function GapFillScreen() {
