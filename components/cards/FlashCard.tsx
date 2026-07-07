@@ -56,6 +56,9 @@ export function FlashCard({
   // disponible y el alto natural del contenido (onLayout devuelve el tamaño de
   // layout SIN transform, así que la medida es estable y no oscila).
   const [contentScale, setContentScale] = useState(1);
+  // Mantenemos el contenido invisible (pero medible) hasta la 1ª medición para
+  // evitar un frame a escala 1 antes de encoger (flicker en fichas densas).
+  const [measured, setMeasured] = useState(false);
   const availHeight = useRef(0);
   const contentHeight = useRef(0);
   const recomputeScale = () => {
@@ -65,6 +68,7 @@ export function FlashCard({
     // Sin ampliar (máx 1) y con un suelo razonable para que nunca quede ilegible.
     const next = content <= avail ? 1 : Math.max(0.55, avail / content);
     setContentScale((prev) => (Math.abs(prev - next) > 0.005 ? next : prev));
+    setMeasured(true);
   };
   const onAvailLayout = (e: LayoutChangeEvent) => {
     availHeight.current = e.nativeEvent.layout.height;
@@ -143,7 +147,7 @@ export function FlashCard({
           </View>
           <View style={styles.backContent} onLayout={onAvailLayout}>
             <View
-              style={[styles.backInner, { transform: [{ scale: contentScale }] }]}
+              style={[styles.backInner, { transform: [{ scale: contentScale }], opacity: measured ? 1 : 0 }]}
               onLayout={onContentLayout}
             >
               <TranslationBody translation={translation} align="center" />

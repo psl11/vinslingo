@@ -39,3 +39,6 @@ jobs:
 
       - name: Run tests
         run: npm test -- --ci
+
+      - name: Validate vocabulary content
+        run: npm run validate:content
