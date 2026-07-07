@@ -41,6 +41,14 @@ export function FlashCard({
   const { hapticsEnabled } = useSettingsStore();
   const { playWord, playUrl } = useAudio();
 
+  // En phrasal verbs / idioms la traducción viene como "TÉRMINO — explicación".
+  // La separamos para destacar el término en su propia línea y poner la
+  // explicación debajo. El vocabulario simple ("correr") no lleva "—" y se
+  // muestra tal cual.
+  const dashMatch = translation.match(/^(.*?)\s*—\s*([\s\S]+)$/);
+  const translationTerm = dashMatch ? dashMatch[1].trim() : null;
+  const translationExplanation = dashMatch ? dashMatch[2].trim() : null;
+
   // Escalado del reverso: si el contenido (traducción + ejemplos + canción)
   // no cabe en el alto disponible, encogemos todo el bloque de forma
   // proporcional en vez de mostrar scroll dentro de la ficha. Medimos el alto
@@ -137,12 +145,19 @@ export function FlashCard({
               style={[styles.backInner, { transform: [{ scale: contentScale }] }]}
               onLayout={onContentLayout}
             >
-              <Text style={[
-                styles.translationText,
-                translation.length > 50 && styles.translationTextSmall
-              ]}>
-                {translation}
-              </Text>
+              {translationTerm ? (
+                <View style={styles.translationBlock}>
+                  <Text style={styles.translationTerm}>{translationTerm}</Text>
+                  <Text style={styles.translationExplanation}>{translationExplanation}</Text>
+                </View>
+              ) : (
+                <Text style={[
+                  styles.translationText,
+                  translation.length > 50 && styles.translationTextSmall
+                ]}>
+                  {translation}
+                </Text>
+              )}
 
               {/* Examples Container */}
               <View style={styles.allExamplesContainer}>
@@ -294,6 +309,25 @@ const styles = StyleSheet.create({
   },
   translationTextSmall: {
     fontSize: 18,
+  },
+  translationBlock: {
+    width: '100%',
+    alignItems: 'center',
+  },
+  translationTerm: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#0F172A',
+    textAlign: 'center',
+    letterSpacing: 0.3,
+  },
+  translationExplanation: {
+    fontSize: 15,
+    fontWeight: '400',
+    color: '#475569',
+    textAlign: 'center',
+    lineHeight: 21,
+    marginTop: 8,
   },
   backContent: {
     flex: 1,
