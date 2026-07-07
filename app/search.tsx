@@ -11,6 +11,8 @@ import {
   Keyboard,
 } from 'react-native';
 import { useRouter } from 'expo-router';
+import { TranslationBody } from '../components/vocabulary/TranslationBody';
+import { analyzeTranslation, translationSummary } from '../lib/vocabulary/translationParser';
 
 interface SearchResultItem {
   id: string;
@@ -119,13 +121,18 @@ export default function SearchScreen() {
   const renderItem = ({ item }: { item: SearchResultItem }) => {
     const mastery = getMasteryInfo(item.mastery_level);
     const isExpanded = expandedId === item.id;
+    // En entradas multi-acepción los ejemplos ya van dentro de cada acepción
+    // (TranslationBody), así que ocultamos los example_sentence(_2) duplicados.
+    const isMultiSense = analyzeTranslation(item.translation).kind === 'senses';
 
     return (
       <Pressable onPress={() => toggleExpand(item.id)} style={styles.resultItem}>
         <View style={styles.resultHeader}>
           <View style={styles.resultMain}>
             <Text style={styles.wordText}>{item.word}</Text>
-            <Text style={styles.translationText}>{item.translation}</Text>
+            <Text style={styles.translationText} numberOfLines={isExpanded ? undefined : 2}>
+              {translationSummary(item.translation)}
+            </Text>
           </View>
           <View style={styles.resultMeta}>
             <View style={[styles.masteryBadge, { backgroundColor: mastery.bg }]}>
@@ -150,7 +157,12 @@ export default function SearchScreen() {
               )}
             </View>
 
-            {item.example_sentence && (
+            {/* Traducción con maquetación coherente (acepciones / pares / etc.) */}
+            <View style={styles.translationBody}>
+              <TranslationBody translation={item.translation} align="left" />
+            </View>
+
+            {!isMultiSense && item.example_sentence && (
               <View style={styles.exampleBlock}>
                 <Text style={styles.exampleText}>"{item.example_sentence}"</Text>
                 {item.example_translation && (
@@ -159,7 +171,7 @@ export default function SearchScreen() {
               </View>
             )}
 
-            {item.example_sentence_2 && (
+            {!isMultiSense && item.example_sentence_2 && (
               <View style={styles.exampleBlock}>
                 <Text style={styles.exampleText}>"{item.example_sentence_2}"</Text>
                 {item.example_translation_2 && (
@@ -425,6 +437,9 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#6B7280',
     fontWeight: '500',
+  },
+  translationBody: {
+    marginBottom: 12,
   },
   exampleBlock: {
     marginBottom: 8,

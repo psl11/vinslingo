@@ -3,6 +3,8 @@ import { View, Text, Pressable, StyleSheet, Linking, Platform, LayoutChangeEvent
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
+import { TranslationBody } from '../vocabulary/TranslationBody';
+import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
 
 interface FlashCardProps {
   word: string;
@@ -19,75 +21,6 @@ interface FlashCardProps {
   songArtist?: string;
   cefrLevel?: string;
   onFlip?: (isFlipped: boolean) => void;
-}
-
-interface ParsedExample {
-  en: string;
-  es: string;
-}
-interface ParsedSense {
-  n: string;
-  desc: string;
-  examples: ParsedExample[];
-}
-interface ParsedTranslation {
-  header: string | null;
-  body: string;
-  senses: ParsedSense[] | null; // solo cuando hay varias acepciones numeradas
-  note: string | null;
-}
-
-// Extrae la descripción y los pares "inglés" = español de una acepción.
-function extractExamples(text: string): { desc: string; examples: ParsedExample[] } {
-  const firstQuote = text.indexOf('"');
-  let desc = firstQuote >= 0 ? text.slice(0, firstQuote) : text;
-  desc = desc.replace(/[:\s]+$/, '').trim();
-  const examples: ParsedExample[] = [];
-  const re = /"([^"]+)"\s*=\s*([^"]*)/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(text)) !== null) {
-    // El español es hasta la siguiente comilla; recortamos una posible nota
-    // final ("... . Opuesto: ...") que empiece tras un signo de puntuación.
-    const es = m[2]
-      .replace(/([.?!])\s+[A-ZÁÉÍÓÚÑ¿¡].*$/, '$1')
-      .replace(/[.,;:\s]+$/, '')
-      .trim();
-    examples.push({ en: m[1].trim(), es });
-  }
-  return { desc, examples };
-}
-
-// Las traducciones de phrasal verbs / idioms vienen como
-//   "TÍTULOS — 1) desc: "eng" = esp. 2) desc: "eng" = esp. (nota)"
-// (monosémicas: "TÍTULO — explicación" sin numerar). Separamos título,
-// acepciones numeradas (con sus ejemplos) y una posible nota final.
-function parseTranslation(translation: string): ParsedTranslation {
-  const dashIdx = translation.indexOf(' — ');
-  if (dashIdx === -1) {
-    return { header: null, body: translation.trim(), senses: null, note: null };
-  }
-  const header = translation.slice(0, dashIdx).trim();
-  const body = translation.slice(dashIdx + 3).trim();
-  if (!/\d\)/.test(body)) {
-    return { header, body, senses: null, note: null };
-  }
-  const rawSenses: { n: string; text: string }[] = [];
-  const re = /(\d)\)\s*([\s\S]*?)(?=\s*\d\)\s|$)/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(body)) !== null) {
-    rawSenses.push({ n: m[1], text: m[2].trim() });
-  }
-  let note: string | null = null;
-  if (rawSenses.length) {
-    const last = rawSenses[rawSenses.length - 1];
-    const nm = last.text.match(/\s*(\([^()]*\)[.)]?)\s*$/);
-    if (nm) {
-      note = nm[1];
-      last.text = last.text.slice(0, nm.index).trim();
-    }
-  }
-  const senses: ParsedSense[] = rawSenses.map((s) => ({ n: s.n, ...extractExamples(s.text) }));
-  return { header, body, senses, note };
 }
 
 export function FlashCard({
@@ -110,16 +43,11 @@ export function FlashCard({
   const { hapticsEnabled } = useSettingsStore();
   const { playWord, playUrl } = useAudio();
 
-  // Estructura del reverso. Multi-acepción → lista tipo diccionario (título +
-  // acepciones numeradas con su ejemplo). Monosémica → término destacado +
-  // explicación. Vocabulario simple ("correr") sin "—" → tal cual.
-  const parsed = parseTranslation(translation);
-  const isMultiSense = !!parsed.senses && parsed.senses.length >= 2;
-  const translationTerm = !isMultiSense && parsed.header ? parsed.header : null;
-  const translationExplanation = translationTerm ? parsed.body : null;
-  // Los campos example_sentence(_2) duplican ejemplos que en las entradas
-  // multi-acepción ya van dentro de cada acepción: solo los mostramos abajo en
-  // las monosémicas.
+  // La maquetación del reverso la resuelve <TranslationBody>. Aquí solo
+  // necesitamos saber si es multi-acepción: en ese caso los ejemplos ya van
+  // dentro de cada acepción, así que ocultamos los example_sentence(_2) de
+  // abajo (que los duplican).
+  const isMultiSense = analyzeTranslation(translation).kind === 'senses';
   const showBottomExamples = !isMultiSense && (!!example || !!example2);
 
   // Escalado del reverso: si el contenido (traducción + ejemplos + canción)
@@ -218,51 +146,7 @@ export function FlashCard({
               style={[styles.backInner, { transform: [{ scale: contentScale }] }]}
               onLayout={onContentLayout}
             >
-              {isMultiSense ? (
-                /* Varias acepciones: lista tipo diccionario, cada una separada
-                   y con su(s) ejemplo(s) debajo. */
-                <View style={styles.sensesBlock}>
-                  {parsed.header ? (
-                    <Text style={styles.sensesHeader}>{parsed.header}</Text>
-                  ) : null}
-                  {parsed.senses!.map((s, i) => (
-                    <View
-                      key={s.n}
-                      style={[styles.senseItem, i > 0 && styles.senseItemDivider]}
-                    >
-                      <View style={styles.senseRow}>
-                        <View style={styles.senseNumber}>
-                          <Text style={styles.senseNumberText}>{s.n}</Text>
-                        </View>
-                        <Text style={styles.senseDesc}>{s.desc}</Text>
-                      </View>
-                      {s.examples.map((ex, j) => (
-                        <View key={j} style={styles.senseExample}>
-                          <Text style={styles.senseExampleEn}>"{ex.en}"</Text>
-                          {ex.es ? (
-                            <Text style={styles.senseExampleEs}>{ex.es}</Text>
-                          ) : null}
-                        </View>
-                      ))}
-                    </View>
-                  ))}
-                  {parsed.note ? (
-                    <Text style={styles.senseNote}>{parsed.note}</Text>
-                  ) : null}
-                </View>
-              ) : translationTerm ? (
-                <View style={styles.translationBlock}>
-                  <Text style={styles.translationTerm}>{translationTerm}</Text>
-                  <Text style={styles.translationExplanation}>{translationExplanation}</Text>
-                </View>
-              ) : (
-                <Text style={[
-                  styles.translationText,
-                  translation.length > 50 && styles.translationTextSmall
-                ]}>
-                  {translation}
-                </Text>
-              )}
+              <TranslationBody translation={translation} align="center" />
 
               {/* Ejemplos sueltos (solo monosémicas) + canción */}
               {(showBottomExamples || songLyric) && (
@@ -407,104 +291,6 @@ const styles = StyleSheet.create({
     bottom: 20,
     fontSize: 14,
     color: '#999999',
-  },
-  translationText: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: '#1A1A1A',
-    textAlign: 'center',
-  },
-  translationTextSmall: {
-    fontSize: 18,
-  },
-  translationBlock: {
-    width: '100%',
-    alignItems: 'center',
-  },
-  translationTerm: {
-    fontSize: 22,
-    fontWeight: '800',
-    color: '#0F172A',
-    textAlign: 'center',
-    letterSpacing: 0.3,
-  },
-  translationExplanation: {
-    fontSize: 15,
-    fontWeight: '400',
-    color: '#475569',
-    textAlign: 'center',
-    lineHeight: 21,
-    marginTop: 8,
-  },
-  // --- Multi-acepción (lista tipo diccionario) ---
-  sensesBlock: {
-    width: '100%',
-    alignItems: 'stretch',
-  },
-  sensesHeader: {
-    fontSize: 18,
-    fontWeight: '800',
-    color: '#0F172A',
-    textAlign: 'center',
-    letterSpacing: 0.3,
-    marginBottom: 12,
-  },
-  senseItem: {
-    width: '100%',
-    paddingVertical: 8,
-  },
-  senseItemDivider: {
-    borderTopWidth: 1,
-    borderTopColor: '#E2E8F0',
-  },
-  senseRow: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-  },
-  senseNumber: {
-    width: 22,
-    height: 22,
-    borderRadius: 11,
-    backgroundColor: '#EEF2FF',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 8,
-    marginTop: 1,
-  },
-  senseNumberText: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: '#4F46E5',
-  },
-  senseDesc: {
-    flex: 1,
-    fontSize: 15,
-    fontWeight: '600',
-    color: '#1E293B',
-    lineHeight: 20,
-  },
-  senseExample: {
-    marginLeft: 30,
-    marginTop: 5,
-  },
-  senseExampleEn: {
-    fontSize: 14,
-    fontStyle: 'italic',
-    color: '#334155',
-    lineHeight: 18,
-  },
-  senseExampleEs: {
-    fontSize: 13,
-    color: '#64748B',
-    lineHeight: 17,
-    marginTop: 1,
-  },
-  senseNote: {
-    marginTop: 10,
-    fontSize: 12,
-    fontStyle: 'italic',
-    color: '#94A3B8',
-    lineHeight: 16,
   },
   backContent: {
     flex: 1,
