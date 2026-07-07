@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, Pressable, StyleSheet, ScrollView, Linking, Platform } from 'react-native';
+import React, { useState, useRef } from 'react';
+import { View, Text, Pressable, StyleSheet, Linking, Platform, LayoutChangeEvent } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
@@ -40,6 +40,31 @@ export function FlashCard({
   const [isFlipped, setIsFlipped] = useState(false);
   const { hapticsEnabled } = useSettingsStore();
   const { playWord, playUrl } = useAudio();
+
+  // Escalado del reverso: si el contenido (traducción + ejemplos + canción)
+  // no cabe en el alto disponible, encogemos todo el bloque de forma
+  // proporcional en vez de mostrar scroll dentro de la ficha. Medimos el alto
+  // disponible y el alto natural del contenido (onLayout devuelve el tamaño de
+  // layout SIN transform, así que la medida es estable y no oscila).
+  const [contentScale, setContentScale] = useState(1);
+  const availHeight = useRef(0);
+  const contentHeight = useRef(0);
+  const recomputeScale = () => {
+    const avail = availHeight.current;
+    const content = contentHeight.current;
+    if (avail <= 0 || content <= 0) return;
+    // Sin ampliar (máx 1) y con un suelo razonable para que nunca quede ilegible.
+    const next = content <= avail ? 1 : Math.max(0.55, avail / content);
+    setContentScale((prev) => (Math.abs(prev - next) > 0.005 ? next : prev));
+  };
+  const onAvailLayout = (e: LayoutChangeEvent) => {
+    availHeight.current = e.nativeEvent.layout.height;
+    recomputeScale();
+  };
+  const onContentLayout = (e: LayoutChangeEvent) => {
+    contentHeight.current = e.nativeEvent.layout.height;
+    recomputeScale();
+  };
 
   const handlePlayAudio = async () => {
     if (audioUrl) {
@@ -107,62 +132,63 @@ export function FlashCard({
               </View>
             )}
           </View>
-          <ScrollView
-            style={styles.scrollContent} 
-            contentContainerStyle={styles.scrollContentContainer}
-            showsVerticalScrollIndicator={false}
-          >
-            <Text style={[
-              styles.translationText,
-              translation.length > 50 && styles.translationTextSmall
-            ]}>
-              {translation}
-            </Text>
-            
-            {/* Examples Container */}
-            <View style={styles.allExamplesContainer}>
-              {/* Example 1 */}
-              {example && (
-                <View style={styles.exampleItem}>
-                  <Text style={styles.exampleText}>"{example}"</Text>
-                  {exampleTranslation && (
-                    <Text style={styles.exampleTranslation}>"{exampleTranslation}"</Text>
-                  )}
-                </View>
-              )}
-              
-              {/* Example 2 */}
-              {example2 && (
-                <View style={styles.exampleItem}>
-                  <Text style={styles.exampleText}>"{example2}"</Text>
-                  {exampleTranslation2 && (
-                    <Text style={styles.exampleTranslation}>"{exampleTranslation2}"</Text>
-                  )}
-                </View>
-              )}
-              
-              {/* Song Example */}
-              {songLyric && (
-                <View style={styles.songExampleItem}>
-                  <Text style={styles.songIcon}>🎵</Text>
-                  <Text style={styles.songLyricText}>"{songLyric}"</Text>
-                  {songLyricTranslation && (
-                    <Text style={styles.exampleTranslation}>"{songLyricTranslation}"</Text>
-                  )}
-                  {(songTitle || songArtist) && (
-                    <Text style={styles.songCredit}>
-                      — {songTitle}{songArtist ? ` (${songArtist})` : ''}
-                    </Text>
-                  )}
-                  {songTitle && (
-                    <Pressable onPress={openSpotify} style={styles.spotifyButton}>
-                      <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
-                    </Pressable>
-                  )}
-                </View>
-              )}
+          <View style={styles.backContent} onLayout={onAvailLayout}>
+            <View
+              style={[styles.backInner, { transform: [{ scale: contentScale }] }]}
+              onLayout={onContentLayout}
+            >
+              <Text style={[
+                styles.translationText,
+                translation.length > 50 && styles.translationTextSmall
+              ]}>
+                {translation}
+              </Text>
+
+              {/* Examples Container */}
+              <View style={styles.allExamplesContainer}>
+                {/* Example 1 */}
+                {example && (
+                  <View style={styles.exampleItem}>
+                    <Text style={styles.exampleText}>"{example}"</Text>
+                    {exampleTranslation && (
+                      <Text style={styles.exampleTranslation}>"{exampleTranslation}"</Text>
+                    )}
+                  </View>
+                )}
+
+                {/* Example 2 */}
+                {example2 && (
+                  <View style={styles.exampleItem}>
+                    <Text style={styles.exampleText}>"{example2}"</Text>
+                    {exampleTranslation2 && (
+                      <Text style={styles.exampleTranslation}>"{exampleTranslation2}"</Text>
+                    )}
+                  </View>
+                )}
+
+                {/* Song Example */}
+                {songLyric && (
+                  <View style={styles.songExampleItem}>
+                    <Text style={styles.songIcon}>🎵</Text>
+                    <Text style={styles.songLyricText}>"{songLyric}"</Text>
+                    {songLyricTranslation && (
+                      <Text style={styles.exampleTranslation}>"{songLyricTranslation}"</Text>
+                    )}
+                    {(songTitle || songArtist) && (
+                      <Text style={styles.songCredit}>
+                        — {songTitle}{songArtist ? ` (${songArtist})` : ''}
+                      </Text>
+                    )}
+                    {songTitle && (
+                      <Pressable onPress={openSpotify} style={styles.spotifyButton}>
+                        <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
+                      </Pressable>
+                    )}
+                  </View>
+                )}
+              </View>
             </View>
-          </ScrollView>
+          </View>
         </View>
       )}
     </Pressable>
@@ -172,7 +198,7 @@ export function FlashCard({
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    flex: 0.75,
+    flex: 1,
     alignSelf: 'center',
   },
   card: {
@@ -269,16 +295,17 @@ const styles = StyleSheet.create({
   translationTextSmall: {
     fontSize: 18,
   },
-  scrollContent: {
+  backContent: {
     flex: 1,
     width: '100%',
     marginTop: 36,
-  },
-  scrollContentContainer: {
-    flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 16,
+    overflow: 'hidden',
+  },
+  backInner: {
+    width: '100%',
+    alignItems: 'center',
   },
   exampleContainer: {
     marginTop: 20,
