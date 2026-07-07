@@ -62,7 +62,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     gap: 8,
-    paddingHorizontal: 16,
+    // 20 para coincidir con el paddingHorizontal de cardContainer y que los
+    // botones queden alineados exactamente con los bordes de la tarjeta.
+    paddingHorizontal: 20,
   },
   button: {
     flex: 1,

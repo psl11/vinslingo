@@ -485,11 +485,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     paddingHorizontal: 20,
+    // En pantallas anchas (desktop) la tarjeta se centra y se limita a un ancho
+    // cómodo de lectura en vez de estirarse a toda la banda. Los botones de
+    // respuesta comparten el mismo tope para quedar alineados con la tarjeta.
+    width: '100%',
+    maxWidth: 680,
+    alignSelf: 'center',
   },
   answersContainer: {
     paddingVertical: 24,
     minHeight: 100,
     justifyContent: 'center',
+    width: '100%',
+    maxWidth: 680,
+    alignSelf: 'center',
   },
   flipHint: {
     textAlign: 'center',
