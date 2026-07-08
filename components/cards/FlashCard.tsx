@@ -370,11 +370,13 @@ const styles = StyleSheet.create({
   },
   songExampleItem: {
     width: '100%',
-    paddingVertical: 6,
+    // Padding vertical simétrico y generoso: mismo aire encima del 🎵 que debajo
+    // del botón de Spotify.
+    paddingVertical: 14,
     backgroundColor: '#FEF3C7',
     borderRadius: 8,
     paddingHorizontal: 12,
-    marginTop: 4,
+    marginTop: 12,
   },
   songIcon: {
     fontSize: 16,

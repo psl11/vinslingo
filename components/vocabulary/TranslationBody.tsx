@@ -28,10 +28,13 @@ export function TranslationBody({ translation, align = 'left' }: TranslationBody
   }
 
   if (a.kind === 'senses') {
+    // Las acepciones numeradas se maquetan siempre alineadas a la izquierda
+    // (lista tipo diccionario), idéntico en la ficha y en el buscador, para que
+    // la UI sea coherente. El prop `align` solo afecta a término/texto simple.
     return (
       <View style={styles.block}>
         {a.header ? (
-          <Text style={[styles.sensesHeader, { textAlign }]}>{a.header}</Text>
+          <Text style={styles.sensesHeader}>{a.header}</Text>
         ) : null}
         {a.senses.map((s, i) => (
           <View key={s.n} style={[styles.item, i > 0 && styles.itemDivider]}>
