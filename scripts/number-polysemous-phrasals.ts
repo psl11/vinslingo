@@ -65,6 +65,10 @@ const CONVERSIONS: Record<string, string> = {
   // uno estándar ("Her career took off") para que cada acepción tenga el suyo.
   'take off':
     'DESPEGAR / QUITARSE / TRIUNFAR — 1) Despegar un avión: "The plane took off" = el avión despegó. 2) Quitarse ropa: "Take off your shoes" = quítate los zapatos. 3) Triunfar o despegar (figurado): "Her career took off" = su carrera despegó.',
+  // make up venía en prosa ("Tres usos: ..."). La 3ª acepción (MAQUILLARSE) no
+  // tenía ejemplo; se añade uno estándar ("She makes up before going out").
+  'make up':
+    'INVENTAR / RECONCILIARSE / MAQUILLARSE — 1) Inventar algo: "Did you make up that story?" = ¿te inventaste esa historia? 2) Hacer las paces: "They kissed and made up" = hicieron las paces. 3) Maquillarse: "She makes up before going out" = se maquilla antes de salir.',
 };
 
 async function main() {
