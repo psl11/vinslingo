@@ -42,6 +42,10 @@ const ANCHORS: Record<string, Anchor> = {
   // Fix: la anterior ("Down by the River") no contenía el phrasal. "Comedown"
   // (Bush, 1995) sí (comedown = come down).
   'come down': { title: 'Comedown', creator: 'Bush', type: 'song', year: 1995, clearLyric: true },
+  // Hueco. "Up" (Pixar, 2009): icónica y temáticamente perfecta (una casa que
+  // SUBE con globos). Política: prima el ancla famosa aunque el título no lleve
+  // el phrasal completo.
+  'go up': { title: 'Up', creator: 'Pete Docter', type: 'movie', year: 2009, clearLyric: true },
 };
 
 async function main() {
