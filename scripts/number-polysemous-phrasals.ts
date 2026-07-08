@@ -52,6 +52,19 @@ const CONVERSIONS: Record<string, string> = {
     'ASUMIR / CONTRATAR — 1) Asumir una tarea o responsabilidad: "She took on more work" = asumió más trabajo. 2) Contratar personal: "We\'re taking on new staff" = estamos contratando personal.',
   'get back':
     'VOLVER / RECUPERAR — 1) Volver o regresar: "When did you get back?" = ¿cuándo volviste? 2) Recuperar algo: "I need to get my money back" = necesito recuperar mi dinero.',
+  // Segunda tanda (detectadas al revisar el modo escribir).
+  'take up':
+    'EMPEZAR / OCUPAR — 1) Empezar un hobby o actividad: "I took up tennis" = empecé a jugar tenis. 2) Ocupar espacio o tiempo: "It takes up too much time" = ocupa demasiado tiempo.',
+  'put in':
+    'INVERTIR / METER — 1) Invertir tiempo o esfuerzo: "She put in a lot of work" = invirtió mucho trabajo. 2) Meter o introducir algo: "Put your card in the machine" = mete la tarjeta en el cajero.',
+  'get in':
+    'SUBIRSE / LLEGAR — 1) Subirse a un vehículo: "Get in the car!" = ¡súbete al coche! 2) Llegar a un sitio: "What time did you get in?" = ¿a qué hora llegaste?',
+  'work out':
+    'HACER EJERCICIO / RESOLVER / FUNCIONAR — 1) Hacer ejercicio: "I work out daily" = hago ejercicio a diario. 2) Resolver o calcular: "I need to work out this problem" = necesito resolver este problema. 3) Salir bien o funcionar: "It\'ll work out" = saldrá bien.',
+  // take off: la 3ª acepción (TRIUNFAR) no tenía ejemplo en los datos; se añade
+  // uno estándar ("Her career took off") para que cada acepción tenga el suyo.
+  'take off':
+    'DESPEGAR / QUITARSE / TRIUNFAR — 1) Despegar un avión: "The plane took off" = el avión despegó. 2) Quitarse ropa: "Take off your shoes" = quítate los zapatos. 3) Triunfar o despegar (figurado): "Her career took off" = su carrera despegó.',
 };
 
 async function main() {
