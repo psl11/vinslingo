@@ -46,6 +46,10 @@ const ANCHORS: Record<string, Anchor> = {
   // SUBE con globos). Política: prima el ancla famosa aunque el título no lleve
   // el phrasal completo.
   'go up': { title: 'Up', creator: 'Pete Docter', type: 'movie', year: 2009, clearLyric: true },
+  // Hueco. "Livin' on a Prayer" (Bon Jovi, 1986): icónica; "livin' on" = live on.
+  'live on': { title: "Livin' on a Prayer", creator: 'Bon Jovi', type: 'song', year: 1986, clearLyric: true },
+  // Hueco. "Lay Down Sally" (Eric Clapton, 1977): famosa; "lay down" (variante).
+  'lie down': { title: 'Lay Down Sally', creator: 'Eric Clapton', type: 'song', year: 1977, clearLyric: true },
 };
 
 async function main() {
