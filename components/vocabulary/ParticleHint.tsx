@@ -26,8 +26,11 @@ export function ParticleHint({ word, category }: ParticleHintProps) {
 const styles = StyleSheet.create({
   box: {
     width: '100%',
+    // Margen vertical simétrico: mismo aire arriba y abajo (antes solo tenía
+    // marginTop y quedaba pegado a los ejemplos de debajo).
     marginTop: 12,
-    paddingVertical: 8,
+    marginBottom: 12,
+    paddingVertical: 10,
     paddingHorizontal: 12,
     backgroundColor: '#F5F3FF',
     borderRadius: 8,
