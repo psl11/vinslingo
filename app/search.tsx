@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { TranslationBody } from '../components/vocabulary/TranslationBody';
+import { ParticleHint } from '../components/vocabulary/ParticleHint';
 import { analyzeTranslation, translationSummary } from '../lib/vocabulary/translationParser';
 
 interface SearchResultItem {
@@ -161,6 +162,9 @@ export default function SearchScreen() {
             <View style={styles.translationBody}>
               <TranslationBody translation={item.translation} align="left" />
             </View>
+
+            <ParticleHint word={item.word} category={item.category} />
+
 
             {!isMultiSense && item.example_sentence && (
               <View style={styles.exampleBlock}>

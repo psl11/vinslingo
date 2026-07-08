@@ -4,6 +4,7 @@ import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
 import { TranslationBody } from '../vocabulary/TranslationBody';
+import { ParticleHint } from '../vocabulary/ParticleHint';
 import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
 
 interface FlashCardProps {
@@ -20,6 +21,7 @@ interface FlashCardProps {
   songTitle?: string;
   songArtist?: string;
   cefrLevel?: string;
+  category?: string;
   onFlip?: (isFlipped: boolean) => void;
 }
 
@@ -37,6 +39,7 @@ export function FlashCard({
   songTitle,
   songArtist,
   cefrLevel,
+  category,
   onFlip,
 }: FlashCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -175,6 +178,8 @@ export function FlashCard({
               onLayout={onContentLayout}
             >
               <TranslationBody translation={translation} align="center" />
+
+              <ParticleHint word={word} category={category} />
 
               {/* Ejemplos sueltos (solo monosémicas) + canción */}
               {(showBottomExamples || songLyric) && (

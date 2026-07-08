@@ -374,6 +374,7 @@ export default function StudyScreen() {
             songTitle={currentCard.song_title}
             songArtist={currentCard.song_artist}
             cefrLevel={currentCard.cefr_level}
+            category={currentCard.category}
             onFlip={handleFlip}
           />
         )}
