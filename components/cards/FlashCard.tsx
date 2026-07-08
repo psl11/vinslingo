@@ -181,8 +181,8 @@ export function FlashCard({
 
               <ParticleHint word={word} category={category} />
 
-              {/* Ejemplos sueltos (solo monosémicas) + canción */}
-              {(showBottomExamples || songLyric) && (
+              {/* Ejemplos sueltos (solo monosémicas) + ancla (canción/…) */}
+              {(showBottomExamples || songTitle) && (
               <View style={styles.allExamplesContainer}>
                 {/* Example 1 */}
                 {showBottomExamples && example && (
@@ -204,12 +204,16 @@ export function FlashCard({
                   </View>
                 )}
 
-                {/* Song Example */}
-                {songLyric && (
+                {/* Ancla (canción con el phrasal en el título). La letra es
+                    opcional: las anclas nuevas solo llevan título (los títulos
+                    no tienen copyright). */}
+                {songTitle && (
                   <View style={styles.songExampleItem}>
                     <Text style={styles.songIcon}>🎵</Text>
-                    <Text style={styles.songLyricText}>"{songLyric}"</Text>
-                    {songLyricTranslation && (
+                    {songLyric && (
+                      <Text style={styles.songLyricText}>"{songLyric}"</Text>
+                    )}
+                    {songLyric && songLyricTranslation && (
                       <Text style={styles.exampleTranslation}>"{songLyricTranslation}"</Text>
                     )}
                     {(songTitle || songArtist) && (

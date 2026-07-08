@@ -184,11 +184,13 @@ export default function SearchScreen() {
               </View>
             )}
 
-            {item.song_lyric && (
+            {item.song_title && (
               <View style={styles.songBlock}>
                 <Text style={styles.songIcon}>🎵</Text>
-                <Text style={styles.songLyric}>"{item.song_lyric}"</Text>
-                {item.song_lyric_translation && (
+                {item.song_lyric && (
+                  <Text style={styles.songLyric}>"{item.song_lyric}"</Text>
+                )}
+                {item.song_lyric && item.song_lyric_translation && (
                   <Text style={styles.songTranslation}>"{item.song_lyric_translation}"</Text>
                 )}
                 {(item.song_title || item.song_artist) && (
