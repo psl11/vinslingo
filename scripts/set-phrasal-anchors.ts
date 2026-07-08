@@ -29,6 +29,8 @@ interface Anchor {
   type?: 'song' | 'movie' | 'book'; // por defecto 'song'
   year?: number;
   clearLyric?: boolean; // true = borrar la letra existente (ancla solo-título)
+  lyric?: string; // verso que SÍ contiene el phrasal (cuando el título no)
+  lyricEs?: string; // traducción del verso
 }
 
 // word (phave) -> ancla verificada (título que SÍ contiene el phrasal). Todas
@@ -50,6 +52,15 @@ const ANCHORS: Record<string, Anchor> = {
   'live on': { title: "Livin' on a Prayer", creator: 'Bon Jovi', type: 'song', year: 1986, clearLyric: true },
   // Hueco. "Lay Down Sally" (Eric Clapton, 1977): famosa; "lay down" (variante).
   'lie down': { title: 'Lay Down Sally', creator: 'Eric Clapton', type: 'song', year: 1977, clearLyric: true },
+
+  // ── Subir de nivel anclas oscuras (artista poco conocido → famoso) ──
+  // break down: Julie Roberts (oscura) → "Breakdown" (Tom Petty, 1976), título.
+  'break down': { title: 'Breakdown', creator: 'Tom Petty and the Heartbreakers', type: 'song', year: 1976, clearLyric: true },
+  // send out: Fee (oscura) → "Message in a Bottle" (The Police, 1979). El título
+  // no lleva el phrasal, así que usamos el verso icónico.
+  'send out': { title: 'Message in a Bottle', creator: 'The Police', type: 'song', year: 1979, lyric: "I'll send out an S.O.S. to the world", lyricEs: 'Lanzaré un S.O.S. al mundo' },
+  // move up: Dannii Minogue (oscura) → "Moving On Up" (M People, 1993), título.
+  'move up': { title: 'Moving On Up', creator: 'M People', type: 'song', year: 1993, clearLyric: true },
 };
 
 async function main() {
@@ -84,7 +95,10 @@ async function main() {
         anchor_type: a.type || 'song',
         anchor_year: a.year || null,
       };
-      if (a.clearLyric) {
+      if (a.lyric) {
+        patch.song_lyric = a.lyric;
+        patch.song_lyric_translation = a.lyricEs || null;
+      } else if (a.clearLyric) {
         patch.song_lyric = null;
         patch.song_lyric_translation = null;
       }
