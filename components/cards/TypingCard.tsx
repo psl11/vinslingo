@@ -4,6 +4,7 @@ import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
 import { matchAnswer, MatchResult } from '../../lib/utils/fuzzyMatch';
+import { translationSummary } from '../../lib/vocabulary/translationParser';
 
 interface TypingCardProps {
   word: string;
@@ -130,14 +131,17 @@ export function TypingCard({
   const revealedCount = hintText.split('').filter(c => c !== '_' && c !== ' ').length;
   const canRevealMore = revealedCount < Math.ceil(totalLetters * 0.65);
 
-  // Mask the English word (and its parts) in the translation to avoid revealing the answer
+  // El enunciado del modo escribir debe mostrar SOLO el significado en español,
+  // nunca los ejemplos en inglés: esos contienen el propio phrasal verb (a veces
+  // conjugado: "went up", "gave up", "points to") y filtrarían la respuesta.
+  // translationSummary devuelve el título/acepciones en español sin ejemplos.
+  // Enmascaramos además el objetivo por si acaso el resumen contuviera parte de
+  // la respuesta (red de seguridad; normalmente no toca nada).
   const maskText = (text: string, target: string): string => {
     if (!text || !target) return text;
     let result = text;
-    // First mask the full phrase (e.g. "come across")
     const escapeFull = target.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     result = result.replace(new RegExp(escapeFull, 'gi'), '___');
-    // Then mask individual words ≥ 3 chars (skip short words like "a", "to", "the")
     const parts = target.split(/\s+/).filter(w => w.length >= 3);
     for (const part of parts) {
       const escapePart = part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -145,7 +149,7 @@ export function TypingCard({
     }
     return result;
   };
-  const maskedTranslation = maskText(translation, word);
+  const maskedTranslation = maskText(translationSummary(translation), word);
 
   return (
     <View style={styles.container}>
