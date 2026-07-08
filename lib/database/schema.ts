@@ -21,6 +21,8 @@ export const LOCAL_SCHEMA = `
     song_lyric_translation TEXT,
     song_title TEXT,
     song_artist TEXT,
+    anchor_type TEXT,
+    anchor_year INTEGER,
     updated_at INTEGER,
     synced_at INTEGER
   );

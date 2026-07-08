@@ -93,7 +93,15 @@ async function runMigrations(): Promise<void> {
       await db.execAsync('ALTER TABLE vocabulary ADD COLUMN song_artist TEXT');
       migrationsRan = true;
     }
-    
+    if (!columnNames.includes('anchor_type')) {
+      await db.execAsync('ALTER TABLE vocabulary ADD COLUMN anchor_type TEXT');
+      migrationsRan = true;
+    }
+    if (!columnNames.includes('anchor_year')) {
+      await db.execAsync('ALTER TABLE vocabulary ADD COLUMN anchor_year INTEGER');
+      migrationsRan = true;
+    }
+
     if (migrationsRan) {
       // Forzar resincronización del vocabulario para obtener los nuevos datos
       await db.runAsync(

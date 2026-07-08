@@ -373,6 +373,8 @@ export default function StudyScreen() {
             songLyricTranslation={currentCard.song_lyric_translation}
             songTitle={currentCard.song_title}
             songArtist={currentCard.song_artist}
+            anchorType={(currentCard as any).anchor_type}
+            anchorYear={(currentCard as any).anchor_year}
             cefrLevel={currentCard.cefr_level}
             category={currentCard.category}
             onFlip={handleFlip}

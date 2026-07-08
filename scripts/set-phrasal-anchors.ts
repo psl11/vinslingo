@@ -26,14 +26,22 @@ const supabase = createClient(
 interface Anchor {
   title: string;
   creator: string; // artista / director / autor
+  type?: 'song' | 'movie' | 'book'; // por defecto 'song'
+  year?: number;
   clearLyric?: boolean; // true = borrar la letra existente (ancla solo-título)
 }
 
-// word (phave) -> ancla verificada
+// word (phave) -> ancla verificada (título que SÍ contiene el phrasal). Todas
+// verificadas en la web. Los títulos no tienen copyright.
 const ANCHORS: Record<string, Anchor> = {
-  // Sin ancla hasta ahora. Verificado: "Kiss and Make Up" (Dua Lipa & BLACKPINK,
-  // 2018) contiene "make up" en el título.
-  'make up': { title: 'Kiss and Make Up', creator: 'Dua Lipa & BLACKPINK', clearLyric: true },
+  // Sin ancla hasta ahora. "Kiss and Make Up" (Dua Lipa & BLACKPINK, 2018).
+  'make up': { title: 'Kiss and Make Up', creator: 'Dua Lipa & BLACKPINK', year: 2018, clearLyric: true },
+  // Upgrade: la peli "Get Out" (Jordan Peele, 2017) es más icónica que la
+  // canción genérica anterior.
+  'get out': { title: 'Get Out', creator: 'Jordan Peele', type: 'movie', year: 2017, clearLyric: true },
+  // Fix: la anterior ("Down by the River") no contenía el phrasal. "Comedown"
+  // (Bush, 1995) sí (comedown = come down).
+  'come down': { title: 'Comedown', creator: 'Bush', type: 'song', year: 1995, clearLyric: true },
 };
 
 async function main() {
@@ -41,7 +49,7 @@ async function main() {
   const words = Object.keys(ANCHORS);
   const { data: rows, error } = await supabase
     .from('vocabulary')
-    .select('id, word, song_title, song_artist')
+    .select('id, word, song_title, song_artist, anchor_type, anchor_year')
     .eq('category', 'phave')
     .in('word', words);
   if (error) {
@@ -57,11 +65,17 @@ async function main() {
       continue;
     }
     const a = ANCHORS[word];
+    const typeLabel = a.type && a.type !== 'song' ? ` [${a.type}]` : '';
     console.log(`• ${word}`);
     console.log(`  ANTES: ${row.song_title ? `${row.song_title} — ${row.song_artist}` : '(sin ancla)'}`);
-    console.log(`  AHORA: ${a.title} — ${a.creator}`);
+    console.log(`  AHORA: ${a.title} — ${a.creator}${a.year ? `, ${a.year}` : ''}${typeLabel}`);
     if (APPLY) {
-      const patch: Record<string, unknown> = { song_title: a.title, song_artist: a.creator };
+      const patch: Record<string, unknown> = {
+        song_title: a.title,
+        song_artist: a.creator,
+        anchor_type: a.type || 'song',
+        anchor_year: a.year || null,
+      };
       if (a.clearLyric) {
         patch.song_lyric = null;
         patch.song_lyric_translation = null;

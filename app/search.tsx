@@ -30,6 +30,8 @@ interface SearchResultItem {
   song_lyric_translation?: string;
   song_title?: string;
   song_artist?: string;
+  anchor_type?: string;
+  anchor_year?: number;
   mastery_level?: number;
   times_correct?: number;
   times_incorrect?: number;
@@ -186,18 +188,18 @@ export default function SearchScreen() {
 
             {item.song_title && (
               <View style={styles.songBlock}>
-                <Text style={styles.songIcon}>🎵</Text>
+                <Text style={styles.songIcon}>
+                  {item.anchor_type === 'movie' ? '🎬' : item.anchor_type === 'book' ? '📖' : '🎵'}
+                </Text>
                 {item.song_lyric && (
                   <Text style={styles.songLyric}>"{item.song_lyric}"</Text>
                 )}
                 {item.song_lyric && item.song_lyric_translation && (
                   <Text style={styles.songTranslation}>"{item.song_lyric_translation}"</Text>
                 )}
-                {(item.song_title || item.song_artist) && (
-                  <Text style={styles.songCredit}>
-                    — {item.song_title}{item.song_artist ? ` (${item.song_artist})` : ''}
-                  </Text>
-                )}
+                <Text style={styles.songCredit}>
+                  — {item.song_title}{item.song_artist ? ` (${item.song_artist}` : ''}{item.song_artist && item.anchor_year ? `, ${item.anchor_year}` : ''}{item.song_artist ? ')' : ''}
+                </Text>
               </View>
             )}
 

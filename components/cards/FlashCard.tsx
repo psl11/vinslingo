@@ -20,6 +20,8 @@ interface FlashCardProps {
   songLyricTranslation?: string;
   songTitle?: string;
   songArtist?: string;
+  anchorType?: string; // 'song' | 'movie' | 'book' (null → canción)
+  anchorYear?: number;
   cefrLevel?: string;
   category?: string;
   onFlip?: (isFlipped: boolean) => void;
@@ -38,10 +40,14 @@ export function FlashCard({
   songLyricTranslation,
   songTitle,
   songArtist,
+  anchorType,
+  anchorYear,
   cefrLevel,
   category,
   onFlip,
 }: FlashCardProps) {
+  const anchorIcon = anchorType === 'movie' ? '🎬' : anchorType === 'book' ? '📖' : '🎵';
+  const anchorIsSong = !anchorType || anchorType === 'song';
   const [isFlipped, setIsFlipped] = useState(false);
   const { hapticsEnabled } = useSettingsStore();
   const { playWord, playUrl } = useAudio();
@@ -209,19 +215,17 @@ export function FlashCard({
                     no tienen copyright). */}
                 {songTitle && (
                   <View style={styles.songExampleItem}>
-                    <Text style={styles.songIcon}>🎵</Text>
+                    <Text style={styles.songIcon}>{anchorIcon}</Text>
                     {songLyric && (
                       <Text style={styles.songLyricText}>"{songLyric}"</Text>
                     )}
                     {songLyric && songLyricTranslation && (
                       <Text style={styles.exampleTranslation}>"{songLyricTranslation}"</Text>
                     )}
-                    {(songTitle || songArtist) && (
-                      <Text style={styles.songCredit}>
-                        — {songTitle}{songArtist ? ` (${songArtist})` : ''}
-                      </Text>
-                    )}
-                    {songTitle && (
+                    <Text style={styles.songCredit}>
+                      — {songTitle}{songArtist ? ` (${songArtist}` : ''}{songArtist && anchorYear ? `, ${anchorYear}` : ''}{songArtist ? ')' : ''}
+                    </Text>
+                    {anchorIsSong && (
                       <Pressable onPress={openSpotify} style={styles.spotifyButton}>
                         <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
                       </Pressable>
