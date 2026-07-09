@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 
@@ -100,7 +101,7 @@ export function ErrorCorrectionCard({
             {options && options.length > 0 && (
               <View style={styles.optionsGrid}>
                 {options.map((option) => (
-                  <Pressable
+                  <PressableScale
                     key={option}
                     style={[styles.optionButton, selected === option && styles.optionSelected]}
                     onPress={() => handleSelect(option)}
@@ -108,18 +109,18 @@ export function ErrorCorrectionCard({
                     <Text style={[styles.optionText, selected === option && styles.optionTextSelected]}>
                       {option}
                     </Text>
-                  </Pressable>
+                  </PressableScale>
                 ))}
               </View>
             )}
 
-            <Pressable
+            <PressableScale
               style={[styles.submitButton, !selected && styles.submitButtonDisabled]}
               onPress={handleSubmit}
               disabled={!selected}
             >
               <Text style={styles.submitButtonText}>Comprobar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         ) : (
           <>
@@ -147,9 +148,9 @@ export function ErrorCorrectionCard({
               <Text style={styles.explanationEs}>{explanationEs}</Text>
             </View>
 
-            <Pressable style={styles.continueButton} onPress={() => onResult(isCorrect)}>
+            <PressableScale style={styles.continueButton} onPress={() => onResult(isCorrect)}>
               <Text style={styles.continueButtonText}>Continuar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         )}
       </View>

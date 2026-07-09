@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 
@@ -108,13 +109,13 @@ export function KeyWordTransformCard({
               autoFocus
             />
 
-            <Pressable
+            <PressableScale
               style={[styles.submitButton, typedInput.trim().length === 0 && styles.submitButtonDisabled]}
               onPress={handleSubmit}
               disabled={typedInput.trim().length === 0}
             >
               <Text style={styles.submitButtonText}>Comprobar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         ) : (
           <>
@@ -149,9 +150,9 @@ export function KeyWordTransformCard({
               <Text style={styles.explanationEs}>{explanationEs}</Text>
             </View>
 
-            <Pressable style={styles.continueButton} onPress={() => onResult(isCorrect)}>
+            <PressableScale style={styles.continueButton} onPress={() => onResult(isCorrect)}>
               <Text style={styles.continueButtonText}>Continuar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         )}
       </View>

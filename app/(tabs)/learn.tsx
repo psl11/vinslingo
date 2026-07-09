@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import { PressableScale } from '../../components/ui/PressableScale';
 import { useRouter } from 'expo-router';
 import { useFocusEffect } from 'expo-router';
 import { Card } from '../../components/ui/Card';
@@ -139,12 +140,12 @@ export default function LearnScreen() {
               {stats?.total ?? 0} palabras disponibles
             </Text>
           </View>
-          <Pressable 
+          <PressableScale 
             onPress={() => router.push('/search')} 
             style={styles.searchButton}
           >
             <Text style={styles.searchButtonText}>🔍</Text>
-          </Pressable>
+          </PressableScale>
         </View>
       </View>
 
@@ -153,7 +154,7 @@ export default function LearnScreen() {
         <Text style={styles.cardCountLabel}>Tarjetas por ronda</Text>
         <View style={styles.cardCountRow}>
           {CARD_COUNT_OPTIONS.map((count) => (
-            <Pressable
+            <PressableScale
               key={count}
               style={[
                 styles.cardCountChip,
@@ -167,7 +168,7 @@ export default function LearnScreen() {
               ]}>
                 {count}
               </Text>
-            </Pressable>
+            </PressableScale>
           ))}
         </View>
       </View>
@@ -205,18 +206,18 @@ export default function LearnScreen() {
               </View>
 
               <View style={styles.modeButtons}>
-                <Pressable
+                <PressableScale
                   style={styles.modeButton}
                   onPress={() => handleStartLesson(category.id)}
                 >
                   <Text style={styles.modeButtonText}>Tarjetas</Text>
-                </Pressable>
-                <Pressable
+                </PressableScale>
+                <PressableScale
                   style={[styles.modeButton, styles.modeButtonTyping]}
                   onPress={() => handleStartLesson(category.id, true)}
                 >
                   <Text style={styles.modeButtonText}>Escribir</Text>
-                </Pressable>
+                </PressableScale>
               </View>
             </Card>
           );
@@ -231,7 +232,7 @@ export default function LearnScreen() {
         {/* Source filter */}
         <View style={styles.sourceFilterRow}>
           {SOURCE_FILTERS.map((f) => (
-            <Pressable
+            <PressableScale
               key={f.key}
               style={[
                 styles.sourceFilterChip,
@@ -245,7 +246,7 @@ export default function LearnScreen() {
               ]}>
                 {f.key === 'official' ? '🎓 ' : f.key === 'custom' ? '✏️ ' : ''}{f.label}
               </Text>
-            </Pressable>
+            </PressableScale>
           ))}
         </View>
 
@@ -263,7 +264,7 @@ export default function LearnScreen() {
             </View>
           </View>
           <View style={styles.modeButtons}>
-            <Pressable
+            <PressableScale
               style={[styles.modeButton, styles.modeButtonGapFill]}
               onPress={() => router.push({
                 pathname: '/study/gap-fill',
@@ -271,7 +272,7 @@ export default function LearnScreen() {
               })}
             >
               <Text style={styles.modeButtonText}>Practicar</Text>
-            </Pressable>
+            </PressableScale>
           </View>
         </Card>
 
@@ -289,7 +290,7 @@ export default function LearnScreen() {
             </View>
           </View>
           <View style={styles.modeButtons}>
-            <Pressable
+            <PressableScale
               style={[styles.modeButton, styles.modeButtonGapFill]}
               onPress={() => router.push({
                 pathname: '/study/gap-fill',
@@ -297,7 +298,7 @@ export default function LearnScreen() {
               })}
             >
               <Text style={styles.modeButtonText}>Practicar</Text>
-            </Pressable>
+            </PressableScale>
           </View>
         </Card>
 
@@ -315,7 +316,7 @@ export default function LearnScreen() {
             </View>
           </View>
           <View style={styles.modeButtons}>
-            <Pressable
+            <PressableScale
               style={[styles.modeButton, styles.modeButtonGapFill]}
               onPress={() => router.push({
                 pathname: '/study/gap-fill',
@@ -323,7 +324,7 @@ export default function LearnScreen() {
               })}
             >
               <Text style={styles.modeButtonText}>Practicar</Text>
-            </Pressable>
+            </PressableScale>
           </View>
         </Card>
 
@@ -341,7 +342,7 @@ export default function LearnScreen() {
             </View>
           </View>
           <View style={styles.modeButtons}>
-            <Pressable
+            <PressableScale
               style={[styles.modeButton, styles.modeButtonGapFill]}
               onPress={() => router.push({
                 pathname: '/study/gap-fill',
@@ -349,7 +350,7 @@ export default function LearnScreen() {
               })}
             >
               <Text style={styles.modeButtonText}>Practicar</Text>
-            </Pressable>
+            </PressableScale>
           </View>
         </Card>
 
@@ -367,7 +368,7 @@ export default function LearnScreen() {
             </View>
           </View>
           <View style={styles.modeButtons}>
-            <Pressable
+            <PressableScale
               style={[styles.modeButton, styles.modeButtonGapFill]}
               onPress={() => router.push({
                 pathname: '/study/gap-fill',
@@ -375,7 +376,7 @@ export default function LearnScreen() {
               })}
             >
               <Text style={styles.modeButtonText}>Practicar</Text>
-            </Pressable>
+            </PressableScale>
           </View>
         </Card>
 
@@ -393,7 +394,7 @@ export default function LearnScreen() {
             </View>
           </View>
           <View style={styles.modeButtons}>
-            <Pressable
+            <PressableScale
               style={[styles.modeButton, styles.modeButtonGapFill]}
               onPress={() => router.push({
                 pathname: '/study/gap-fill',
@@ -401,7 +402,7 @@ export default function LearnScreen() {
               })}
             >
               <Text style={styles.modeButtonText}>Practicar</Text>
-            </Pressable>
+            </PressableScale>
           </View>
         </Card>
       </View>

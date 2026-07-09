@@ -59,7 +59,6 @@ export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: Answer
         .map(({ quality, label, color }) => (
         <PressableScale
           key={quality}
-          containerStyle={styles.buttonWrap}
           style={[styles.button, { backgroundColor: color, opacity: disabled ? 0.7 : 1 }]}
           onPress={() => handlePress(quality)}
           disabled={disabled}
@@ -81,11 +80,8 @@ const styles = StyleSheet.create({
     // botones queden alineados exactamente con los bordes de la tarjeta.
     paddingHorizontal: 20,
   },
-  buttonWrap: {
-    flex: 1,
-  },
   button: {
-    width: '100%',
+    flex: 1,
     paddingVertical: 12,
     paddingHorizontal: 8,
     borderRadius: 12,

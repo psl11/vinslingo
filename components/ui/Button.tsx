@@ -1,7 +1,8 @@
 import React from 'react';
-import { Text, Pressable, StyleSheet, ActivityIndicator } from 'react-native';
+import { Text, StyleSheet, ActivityIndicator } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { PressableScale } from './PressableScale';
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
 type ButtonSize = 'sm' | 'md' | 'lg';
@@ -51,10 +52,10 @@ export function Button({
   };
 
   return (
-    <Pressable
+    <PressableScale
       onPress={handlePress}
       disabled={disabled || loading}
-      style={({ pressed }) => [
+      style={[
         styles.button,
         {
           backgroundColor: variantStyle.bg,
@@ -62,7 +63,7 @@ export function Button({
           borderWidth: variantStyle.border ? 2 : 0,
           paddingVertical: sizeStyle.paddingVertical,
           paddingHorizontal: sizeStyle.paddingHorizontal,
-          opacity: disabled ? 0.5 : pressed ? 0.8 : 1,
+          opacity: disabled ? 0.5 : 1,
         },
         fullWidth && styles.fullWidth,
       ]}
@@ -74,7 +75,7 @@ export function Button({
           {children}
         </Text>
       )}
-    </Pressable>
+    </PressableScale>
   );
 }
 

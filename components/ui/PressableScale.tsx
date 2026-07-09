@@ -1,23 +1,24 @@
 import React, { useRef } from 'react';
 import { Pressable, Animated, StyleProp, ViewStyle } from 'react-native';
 
+const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
+
 interface PressableScaleProps {
   onPress?: () => void;
   disabled?: boolean;
-  // Estilo del área táctil (p.ej. { flex: 1 } en una fila de botones).
-  containerStyle?: StyleProp<ViewStyle>;
-  // Estilo visual del botón (fondo, padding, radio…): va en la vista animada.
+  // Estilo del botón (mismo que pondrías en un <Pressable>): la escala se aplica
+  // sobre el propio botón, sin envoltorios, así es un drop-in sin tocar layout.
   style?: StyleProp<ViewStyle>;
   scaleTo?: number;
   children: React.ReactNode;
 }
 
 // Feedback táctil sutil: el botón se encoge levemente al pulsar y vuelve.
-// Animated + native driver (60fps, hilo de UI), funciona en nativo y en web.
+// Animated + native driver (60fps, hilo de UI); funciona en nativo y en web.
+// Drop-in de <Pressable>: <Pressable style={s}> → <PressableScale style={s}>.
 export function PressableScale({
   onPress,
   disabled,
-  containerStyle,
   style,
   scaleTo = 0.96,
   children,
@@ -33,14 +34,14 @@ export function PressableScale({
     }).start();
 
   return (
-    <Pressable
+    <AnimatedPressable
       onPress={onPress}
       disabled={disabled}
       onPressIn={() => !disabled && animateTo(scaleTo)}
       onPressOut={() => animateTo(1)}
-      style={containerStyle}
+      style={[style, { transform: [{ scale }] }]}
     >
-      <Animated.View style={[style, { transform: [{ scale }] }]}>{children}</Animated.View>
-    </Pressable>
+      {children}
+    </AnimatedPressable>
   );
 }

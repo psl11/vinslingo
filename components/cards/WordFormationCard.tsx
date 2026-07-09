@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 
@@ -94,7 +95,7 @@ export function WordFormationCard({
             {isMultipleChoice ? (
               <View style={styles.optionsGrid}>
                 {options.map((option) => (
-                  <Pressable
+                  <PressableScale
                     key={option}
                     style={[styles.optionButton, selected === option && styles.optionSelected]}
                     onPress={() => setSelected(option)}
@@ -102,7 +103,7 @@ export function WordFormationCard({
                     <Text style={[styles.optionText, selected === option && styles.optionTextSelected]}>
                       {option}
                     </Text>
-                  </Pressable>
+                  </PressableScale>
                 ))}
               </View>
             ) : (
@@ -121,7 +122,7 @@ export function WordFormationCard({
               />
             )}
 
-            <Pressable
+            <PressableScale
               style={[
                 styles.submitButton,
                 ((isMultipleChoice && !selected) || (!isMultipleChoice && typedInput.trim().length === 0))
@@ -131,7 +132,7 @@ export function WordFormationCard({
               disabled={(isMultipleChoice && !selected) || (!isMultipleChoice && typedInput.trim().length === 0)}
             >
               <Text style={styles.submitButtonText}>Comprobar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         ) : (
           <>
@@ -167,9 +168,9 @@ export function WordFormationCard({
               <Text style={styles.explanationEs}>{explanationEs}</Text>
             </View>
 
-            <Pressable style={styles.continueButton} onPress={() => onResult(isCorrect)}>
+            <PressableScale style={styles.continueButton} onPress={() => onResult(isCorrect)}>
               <Text style={styles.continueButtonText}>Continuar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         )}
       </View>

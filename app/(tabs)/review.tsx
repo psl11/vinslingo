@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, StyleSheet, ScrollView, ActivityIndicator, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import { PressableScale } from '../../components/ui/PressableScale';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
@@ -137,7 +138,7 @@ export default function ReviewScreen() {
               <Text style={styles.categoryTitle}>¿Qué quieres repasar?</Text>
               <View style={styles.categoryGrid}>
                 {CATEGORIES.map((cat) => (
-                  <Pressable
+                  <PressableScale
                     key={cat.id}
                     style={[
                       styles.categoryChip,
@@ -152,26 +153,26 @@ export default function ReviewScreen() {
                     ]}>
                       {cat.label}
                     </Text>
-                  </Pressable>
+                  </PressableScale>
                 ))}
               </View>
             </View>
 
             <View style={styles.reviewModeButtons}>
-              <Pressable
+              <PressableScale
                 style={styles.reviewModeButton}
                 onPress={() => handleStartReview(false)}
               >
                 <Text style={styles.reviewModeEmoji}>🃏</Text>
                 <Text style={styles.reviewModeText}>Tarjetas</Text>
-              </Pressable>
-              <Pressable
+              </PressableScale>
+              <PressableScale
                 style={[styles.reviewModeButton, styles.reviewModeButtonTyping]}
                 onPress={() => handleStartReview(true)}
               >
                 <Text style={styles.reviewModeEmoji}>✏️</Text>
                 <Text style={styles.reviewModeText}>Escribir</Text>
-              </Pressable>
+              </PressableScale>
             </View>
           </>
         )}
@@ -217,7 +218,7 @@ export default function ReviewScreen() {
         <Text style={styles.mistakesDescription}>
           Repasa los ejercicios tipo Cambridge que has fallado para reforzar tus puntos débiles.
         </Text>
-        <Pressable
+        <PressableScale
           style={[
             styles.mistakesButton,
             mistakeCount === 0 && styles.mistakesButtonDisabled,
@@ -231,7 +232,7 @@ export default function ReviewScreen() {
           ]}>
             {mistakeCount > 0 ? `Repasar ${mistakeCount} errores` : 'Sin errores pendientes'}
           </Text>
-        </Pressable>
+        </PressableScale>
       </Card>
 
       {/* SRS Info */}

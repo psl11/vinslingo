@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 
@@ -111,7 +112,7 @@ export function GapFillCard({
             {isMultipleChoice ? (
               <View style={styles.optionsGrid}>
                 {shuffledOptions.map((option) => (
-                  <Pressable
+                  <PressableScale
                     key={option}
                     style={[
                       styles.optionButton,
@@ -125,7 +126,7 @@ export function GapFillCard({
                     ]}>
                       {option}
                     </Text>
-                  </Pressable>
+                  </PressableScale>
                 ))}
               </View>
             ) : (
@@ -146,7 +147,7 @@ export function GapFillCard({
             )}
 
             {/* Submit button */}
-            <Pressable
+            <PressableScale
               style={[
                 styles.submitButton,
                 ((isMultipleChoice && !selected) || (!isMultipleChoice && typedInput.trim().length === 0))
@@ -156,7 +157,7 @@ export function GapFillCard({
               disabled={(isMultipleChoice && !selected) || (!isMultipleChoice && typedInput.trim().length === 0)}
             >
               <Text style={styles.submitButtonText}>Comprobar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         ) : (
           /* Result phase */
@@ -187,9 +188,9 @@ export function GapFillCard({
               <Text style={styles.explanationEs}>{explanationEs}</Text>
             </View>
 
-            <Pressable style={styles.continueButton} onPress={handleContinue}>
+            <PressableScale style={styles.continueButton} onPress={handleContinue}>
               <Text style={styles.continueButtonText}>Continuar</Text>
-            </Pressable>
+            </PressableScale>
           </>
         )}
       </View>

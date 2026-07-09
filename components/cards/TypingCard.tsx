@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, TextInput, Pressable, StyleSheet, Keyboard } from 'react-native';
+import { View, Text, TextInput, StyleSheet, Keyboard } from 'react-native';
+import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
@@ -202,20 +203,20 @@ export function TypingCard({
 
           <View style={styles.buttonRow}>
             {canRevealMore && (
-              <Pressable
+              <PressableScale
                 style={styles.hintButton}
                 onPress={() => setHintLevel(prev => prev + 1)}
               >
                 <Text style={styles.hintButtonText}>💡 {hintLevel === 0 ? 'Pista' : 'Más'}</Text>
-              </Pressable>
+              </PressableScale>
             )}
-            <Pressable
+            <PressableScale
               style={[styles.submitButton, input.trim().length === 0 && styles.submitButtonDisabled]}
               onPress={handleSubmit}
               disabled={input.trim().length === 0}
             >
               <Text style={styles.submitButtonText}>Comprobar</Text>
-            </Pressable>
+            </PressableScale>
           </View>
         </View>
       ) : (
@@ -269,23 +270,23 @@ export function TypingCard({
           {matchResult === 'wrong' ? (
             /* Wrong: let user self-assess like flashcard mode */
             <View style={styles.selfAssessRow}>
-              <Pressable
+              <PressableScale
                 style={[styles.assessButton, styles.assessAgain]}
                 onPress={() => onResult('wrong', input, hintLevel)}
               >
                 <Text style={styles.assessButtonText}>No lo sabía</Text>
-              </Pressable>
-              <Pressable
+              </PressableScale>
+              <PressableScale
                 style={[styles.assessButton, styles.assessKnew]}
                 onPress={() => onResult('close', input, hintLevel)}
               >
                 <Text style={styles.assessButtonText}>Sí lo sabía</Text>
-              </Pressable>
+              </PressableScale>
             </View>
           ) : (
-            <Pressable style={styles.continueButton} onPress={handleContinue}>
+            <PressableScale style={styles.continueButton} onPress={handleContinue}>
               <Text style={styles.continueButtonText}>Continuar</Text>
-            </Pressable>
+            </PressableScale>
           )}
         </View>
       )}
