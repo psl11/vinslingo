@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { VocabResultCard, VocabResultItem } from '../components/vocabulary/VocabResultCard';
-import { colors, radius, spacing, fontSize, fontWeight } from '../constants/theme';
+import { colors, radius, spacing, fontSize, fontWeight, webInputReset } from '../constants/theme';
 
 export default function SearchScreen() {
   const router = useRouter();
@@ -104,9 +104,9 @@ export default function SearchScreen() {
       <View style={styles.searchContainer}>
         <Text style={styles.searchIcon}>🔍</Text>
         <TextInput
-          style={styles.searchInput}
+          style={[styles.searchInput, webInputReset]}
           placeholder="Busca una palabra en inglés o español..."
-          placeholderTextColor="#9CA3AF"
+          placeholderTextColor={colors.textTertiary}
           value={query}
           onChangeText={handleSearch}
           autoFocus

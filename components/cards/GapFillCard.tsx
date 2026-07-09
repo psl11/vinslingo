@@ -3,6 +3,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { webInputReset } from '../../constants/theme';
 
 interface GapFillCardProps {
   sentence: string;       // e.g. "I wanted to go, ___ it was raining."
@@ -133,7 +134,7 @@ export function GapFillCard({
               /* Typing input */
               <TextInput
                 ref={inputRef}
-                style={styles.input}
+                style={[styles.input, webInputReset]}
                 placeholder="Escribe el conector..."
                 placeholderTextColor="#9CA3AF"
                 value={typedInput}

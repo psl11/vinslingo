@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { useRouter, Link } from 'expo-router';
 import { useAuth } from '../../hooks/useAuth';
+import { webInputReset } from '../../constants/theme';
 
 export default function ForgotPasswordScreen() {
   const router = useRouter();
@@ -81,7 +82,7 @@ export default function ForgotPasswordScreen() {
           <View style={styles.inputContainer}>
             <Text style={styles.label}>Email</Text>
             <TextInput
-              style={styles.input}
+              style={[styles.input, webInputReset]}
               placeholder="tu@email.com"
               placeholderTextColor="#9CA3AF"
               keyboardType="email-address"

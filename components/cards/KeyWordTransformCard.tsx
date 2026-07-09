@@ -3,6 +3,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { webInputReset } from '../../constants/theme';
 
 interface KeyWordTransformCardProps {
   originalSentence: string;  // "I last saw her three years ago."
@@ -97,7 +98,7 @@ export function KeyWordTransformCard({
           <>
             <TextInput
               ref={inputRef}
-              style={styles.input}
+              style={[styles.input, webInputReset]}
               placeholder="Completa la transformación..."
               placeholderTextColor="#9CA3AF"
               value={typedInput}

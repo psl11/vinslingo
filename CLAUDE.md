@@ -2,6 +2,25 @@
 
 App de aprendizaje de inglés (Expo/React Native) con Supabase como backend.
 
+El repaso usa el algoritmo **FSRS** (Free Spaced Repetition Scheduler), no SM-2
+(migración documentada en [`docs/fsrs-migration.md`](docs/fsrs-migration.md)).
+Al escribir textos de cara al usuario sobre el scheduler, referirse a FSRS.
+
+## Sistema de diseño (UI)
+
+Toda la apariencia (espaciado, radios, colores, tipografía) sale de tokens en
+[`constants/theme.ts`](constants/theme.ts). **Regla:** en cualquier `StyleSheet`
+usar SIEMPRE tokens (`spacing`, `radius`, `colors`, `fontSize`, `fontWeight`),
+nunca hex ni números sueltos; si falta un color, añadirlo al theme. Todo
+`TextInput` debe incluir `webInputReset` en su `style` (quita el recuadro azul de
+foco en web). Detalle completo, principios de espaciado y estado de la migración
+en [`docs/design-system.md`](docs/design-system.md).
+
+**Regla de documentación:** cualquier cambio estructural (sistema de diseño,
+esquema de datos, features nuevas, decisiones de arquitectura) debe quedar
+reflejado en un `.md` del repo (`docs/` o este CLAUDE.md), no solo en el código,
+para que otra persona que trabaje con Claude Code tenga el contexto.
+
 ## Backup del contenido de Supabase
 
 El proyecto de Supabase (`qsdzoelgqyymtwublxoq`) ya estuvo caído/pausado una vez

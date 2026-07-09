@@ -240,8 +240,8 @@ export default function ReviewScreen() {
       <Card style={styles.infoCard}>
         <Text style={styles.infoTitle}>📈 Repaso Espaciado</Text>
         <Text style={styles.infoText}>
-          El sistema SM-2 programa tus repasos en el momento óptimo para 
-          maximizar la retención. Las tarjetas que dominas aparecerán menos 
+          El algoritmo FSRS programa tus repasos en el momento óptimo para
+          maximizar la retención. Las tarjetas que dominas aparecerán menos
           frecuentemente, mientras que las difíciles se repiten más seguido.
         </Text>
       </Card>

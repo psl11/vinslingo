@@ -1,5 +1,11 @@
 // Sistema de diseño de VinsLingo — fuente única de verdad para espaciado,
-// radios, colores y tipografía. Ver la memoria "feedback_ui_spacing_system".
+// radios, colores y tipografía. Ver docs/design-system.md.
+import { Platform } from 'react-native';
+
+// react-native-web pinta un recuadro azul de foco en los <input>. `outlineStyle`
+// no existe en RN nativo, así que se aplica solo en web (casteado). Añadir a la
+// prop `style` de cualquier TextInput: style={[styles.input, webInputReset]}.
+export const webInputReset = Platform.OS === 'web' ? ({ outlineStyle: 'none' } as any) : null;
 //
 // Regla: en los StyleSheet usar SIEMPRE estos tokens en lugar de números o
 // hex sueltos. Cada token conserva exactamente el valor que ya se usaba, así

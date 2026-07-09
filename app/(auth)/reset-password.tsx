@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { useRouter, Link } from 'expo-router';
 import { useAuth } from '../../hooks/useAuth';
+import { webInputReset } from '../../constants/theme';
 
 // Pantalla de destino del enlace de recuperación de contraseña. El correo de
 // Supabase redirige aquí con el token en la URL; el cliente lo procesa
@@ -102,7 +103,7 @@ export default function ResetPasswordScreen() {
           <View style={styles.inputContainer}>
             <Text style={styles.label}>Nueva contraseña</Text>
             <TextInput
-              style={styles.input}
+              style={[styles.input, webInputReset]}
               placeholder="••••••••"
               placeholderTextColor="#9CA3AF"
               secureTextEntry
@@ -114,7 +115,7 @@ export default function ResetPasswordScreen() {
           <View style={styles.inputContainer}>
             <Text style={styles.label}>Repite la contraseña</Text>
             <TextInput
-              style={styles.input}
+              style={[styles.input, webInputReset]}
               placeholder="••••••••"
               placeholderTextColor="#9CA3AF"
               secureTextEntry

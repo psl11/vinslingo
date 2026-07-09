@@ -3,6 +3,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { webInputReset } from '../../constants/theme';
 
 interface WordFormationCardProps {
   sentence: string;       // "The experiment was a great ___."
@@ -109,7 +110,7 @@ export function WordFormationCard({
             ) : (
               <TextInput
                 ref={inputRef}
-                style={styles.input}
+                style={[styles.input, webInputReset]}
                 placeholder="Escribe la palabra transformada..."
                 placeholderTextColor="#9CA3AF"
                 value={typedInput}

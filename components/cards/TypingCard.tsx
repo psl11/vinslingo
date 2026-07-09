@@ -6,6 +6,7 @@ import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
 import { matchAnswer, MatchResult } from '../../lib/utils/fuzzyMatch';
 import { translationSummary } from '../../lib/vocabulary/translationParser';
+import { webInputReset } from '../../constants/theme';
 
 interface TypingCardProps {
   word: string;
@@ -186,7 +187,7 @@ export function TypingCard({
 
           <TextInput
             ref={inputRef}
-            style={styles.input}
+            style={[styles.input, webInputReset]}
             placeholder={hasVs ? '___  vs  ___' : 'Escribe en inglés...'}
             placeholderTextColor="#9CA3AF"
             value={input}

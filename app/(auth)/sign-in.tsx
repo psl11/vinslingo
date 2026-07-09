@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useRouter, Link } from 'expo-router';
 import { useAuth } from '../../hooks/useAuth';
+import { webInputReset } from '../../constants/theme';
 
 export default function SignInScreen() {
   const router = useRouter();
@@ -64,7 +65,7 @@ export default function SignInScreen() {
           <View style={styles.inputContainer}>
             <Text style={styles.label}>Email</Text>
             <TextInput
-              style={styles.input}
+              style={[styles.input, webInputReset]}
               placeholder="tu@email.com"
               placeholderTextColor="#9CA3AF"
               keyboardType="email-address"
@@ -78,7 +79,7 @@ export default function SignInScreen() {
           <View style={styles.inputContainer}>
             <Text style={styles.label}>Contraseña</Text>
             <TextInput
-              style={styles.input}
+              style={[styles.input, webInputReset]}
               placeholder="••••••••"
               placeholderTextColor="#9CA3AF"
               secureTextEntry

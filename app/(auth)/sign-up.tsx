@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useRouter, Link } from 'expo-router';
 import { useAuth } from '../../hooks/useAuth';
+import { webInputReset } from '../../constants/theme';
 
 export default function SignUpScreen() {
   const router = useRouter();
@@ -73,7 +74,7 @@ export default function SignUpScreen() {
             <View style={styles.inputContainer}>
               <Text style={styles.label}>Nombre (opcional)</Text>
               <TextInput
-                style={styles.input}
+                style={[styles.input, webInputReset]}
                 placeholder="¿Cómo te llamamos?"
                 placeholderTextColor="#9CA3AF"
                 autoCapitalize="words"
@@ -85,7 +86,7 @@ export default function SignUpScreen() {
             <View style={styles.inputContainer}>
               <Text style={styles.label}>Email *</Text>
               <TextInput
-                style={styles.input}
+                style={[styles.input, webInputReset]}
                 placeholder="tu@email.com"
                 placeholderTextColor="#9CA3AF"
                 keyboardType="email-address"
@@ -99,7 +100,7 @@ export default function SignUpScreen() {
             <View style={styles.inputContainer}>
               <Text style={styles.label}>Contraseña *</Text>
               <TextInput
-                style={styles.input}
+                style={[styles.input, webInputReset]}
                 placeholder="Mínimo 6 caracteres"
                 placeholderTextColor="#9CA3AF"
                 secureTextEntry
@@ -111,7 +112,7 @@ export default function SignUpScreen() {
             <View style={styles.inputContainer}>
               <Text style={styles.label}>Confirmar Contraseña *</Text>
               <TextInput
-                style={styles.input}
+                style={[styles.input, webInputReset]}
                 placeholder="Repite tu contraseña"
                 placeholderTextColor="#9CA3AF"
                 secureTextEntry
