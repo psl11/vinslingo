@@ -118,11 +118,23 @@ async function runMigrations(): Promise<void> {
       needsResync = true;
       console.log('✅ Migrations completed - resync needed');
     } else {
-      // Verificar si las columnas existen pero los datos están vacíos
+      // Verificar si las columnas existen pero los datos están vacíos. Cubre a
+      // quien migró una columna en una versión previa a que su contenido
+      // existiera en el servidor: la columna ya está (migrationsRan=false) pero
+      // sin datos, así que hay que forzar el resync igualmente.
+      //  - song_lyric: contenido de anclas.
+      //  - formal_synonym: mini-gramática de phrasal verbs (119/150 la tienen);
+      //    si NINGÚN phave la tiene, es que se sincronizó antes de poblarla.
       const emptyCheck = await db.getFirstAsync<{ count: number }>(
         "SELECT COUNT(*) as count FROM vocabulary WHERE song_lyric IS NOT NULL"
       );
-      if (emptyCheck && emptyCheck.count === 0) {
+      const phaveGrammarCheck = await db.getFirstAsync<{ count: number }>(
+        "SELECT COUNT(*) as count FROM vocabulary WHERE category = 'phave' AND formal_synonym IS NOT NULL"
+      );
+      if (
+        (emptyCheck && emptyCheck.count === 0) ||
+        (phaveGrammarCheck && phaveGrammarCheck.count === 0)
+      ) {
         // Las columnas existen pero no hay datos, necesita resync
         await db.runAsync(
           "DELETE FROM sync_metadata WHERE key = 'vocabulary_last_sync'"
