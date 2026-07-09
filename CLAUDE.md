@@ -19,7 +19,8 @@ en [`docs/design-system.md`](docs/design-system.md).
 **Regla de documentación:** cualquier cambio estructural (sistema de diseño,
 esquema de datos, features nuevas, decisiones de arquitectura) debe quedar
 reflejado en un `.md` del repo (`docs/` o este CLAUDE.md), no solo en el código,
-para que otra persona que trabaje con Claude Code tenga el contexto.
+para que otra persona que trabaje con Claude Code tenga el contexto. Las
+funcionalidades de aprendizaje están resumidas en [`docs/features.md`](docs/features.md).
 
 ## Backup del contenido de Supabase
 

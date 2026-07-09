@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { useRouter, Link } from 'expo-router';
 import { useAuth } from '../../hooks/useAuth';
-import { webInputReset } from '../../constants/theme';
+import { colors, radius, spacing, fontSize, fontWeight, webInputReset } from '../../constants/theme';
 
 // Pantalla de destino del enlace de recuperación de contraseña. El correo de
 // Supabase redirige aquí con el token en la URL; el cliente lo procesa
@@ -150,78 +150,78 @@ export default function ResetPasswordScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: colors.screen,
   },
   content: {
     flex: 1,
-    paddingHorizontal: 24,
+    paddingHorizontal: spacing.xxl,
     justifyContent: 'center',
   },
   header: {
     alignItems: 'center',
-    marginBottom: 40,
+    marginBottom: spacing.huge,
   },
   logo: {
     fontSize: 64,
-    marginBottom: 12,
+    marginBottom: spacing.md,
   },
   title: {
-    fontSize: 28,
-    fontWeight: '700',
-    color: '#1F2937',
+    fontSize: fontSize.display,
+    fontWeight: fontWeight.bold,
+    color: colors.textPrimary,
     textAlign: 'center',
   },
   subtitle: {
-    fontSize: 16,
-    color: '#6B7280',
-    marginTop: 8,
+    fontSize: fontSize.md,
+    color: colors.textSecondary,
+    marginTop: spacing.sm,
     textAlign: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal: spacing.xl,
   },
   form: {
-    gap: 16,
+    gap: spacing.lg,
   },
   inputContainer: {
-    gap: 6,
+    gap: spacing.sm,
   },
   label: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#374151',
+    fontSize: fontSize.base,
+    fontWeight: fontWeight.semibold,
+    color: colors.textStrong,
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: colors.card,
     borderWidth: 1,
-    borderColor: '#D1D5DB',
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    fontSize: 16,
-    color: '#1F2937',
+    borderColor: colors.borderStrong,
+    borderRadius: radius.md,
+    paddingHorizontal: spacing.lg,
+    paddingVertical: spacing.lg,
+    fontSize: fontSize.md,
+    color: colors.textPrimary,
   },
   errorContainer: {
-    backgroundColor: '#FEE2E2',
-    padding: 12,
-    borderRadius: 12,
+    backgroundColor: colors.dangerSurface,
+    padding: spacing.md,
+    borderRadius: radius.md,
   },
   errorText: {
-    color: '#DC2626',
-    fontSize: 14,
+    color: colors.danger,
+    fontSize: fontSize.base,
     textAlign: 'center',
   },
   button: {
-    backgroundColor: '#4F46E5',
-    paddingVertical: 16,
-    borderRadius: 12,
+    backgroundColor: colors.primary,
+    paddingVertical: spacing.lg,
+    borderRadius: radius.md,
     alignItems: 'center',
-    marginTop: 8,
+    marginTop: spacing.sm,
   },
   buttonDisabled: {
-    backgroundColor: '#A5B4FC',
+    backgroundColor: colors.primaryDisabled,
   },
   buttonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: '600',
+    color: colors.onPrimary,
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.semibold,
   },
 });
