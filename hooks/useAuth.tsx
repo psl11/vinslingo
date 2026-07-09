@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState, useCallback, useMemo } from 'react';
+import React, { createContext, useContext, useEffect, useState, useCallback, useMemo, useRef } from 'react';
 import { Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
 import { useUserStore } from '../stores/useUserStore';
@@ -32,10 +32,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  // Perfil ya cargado para este userId: evita refetches redundantes (Supabase v2
+  // dispara SIGNED_IN en refresh de token / foco de pestaña, no solo al loguear).
+  const loadedProfileUserIdRef = useRef<string | null>(null);
 
   const { setProfile, clearProfile } = useUserStore();
 
+  // Mantiene la referencia de `user` estable si el id no cambia → no re-renderiza
+  // a los consumidores de useAuth en cada evento de auth con el mismo usuario.
+  const applyUser = useCallback((next: User | null) => {
+    setUser((prev) => (prev?.id === (next?.id ?? null) ? prev : next));
+  }, []);
+
   const loadUserProfile = useCallback(async (userId: string) => {
+    // Ya cargado (o cargándose) para este usuario: no repetir la llamada de red.
+    if (loadedProfileUserIdRef.current === userId) {
+      setIsLoading(false);
+      return;
+    }
+    loadedProfileUserIdRef.current = userId;
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -78,6 +93,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
     } catch (error) {
       console.error('Error in loadUserProfile:', error);
+      // Permitir reintento en el próximo evento si falló.
+      loadedProfileUserIdRef.current = null;
     } finally {
       setIsLoading(false);
     }
@@ -87,7 +104,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
-      setUser(session?.user ?? null);
+      applyUser(session?.user ?? null);
 
       if (session?.user) {
         loadUserProfile(session.user.id);
@@ -103,9 +120,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Por eso el trabajo async se difiere con setTimeout(0).
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (event, session) => {
-        console.log('🔐 Auth event:', event);
         setSession(session);
-        setUser(session?.user ?? null);
+        applyUser(session?.user ?? null);
 
         if (event === 'SIGNED_IN' && session?.user) {
           const userId = session.user.id;
@@ -113,6 +129,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             loadUserProfile(userId);
           }, 0);
         } else if (event === 'SIGNED_OUT') {
+          loadedProfileUserIdRef.current = null;
           clearProfile();
           setIsLoading(false);
         } else {
@@ -122,7 +139,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     );
 
     return () => subscription.unsubscribe();
-  }, [loadUserProfile, clearProfile]);
+  }, [loadUserProfile, clearProfile, applyUser]);
 
   const signIn = useCallback(async (email: string, password: string) => {
     setIsLoading(true);

@@ -236,28 +236,31 @@ async function seedGapFillExercises(): Promise<void> {
     if (upToDate) return;
 
     // INSERT OR REPLACE: refresca el contenido de ejercicios existentes
-    // (el progreso del usuario vive en user_gap_fill, no se toca).
-    for (const item of allExercises) {
-      await db.runAsync(
-        `INSERT OR REPLACE INTO gap_fill_exercises
-         (id, sentence, answer, options, explanation, explanation_es, cefr_level, category, difficulty, source, base_word, context_sentence, is_official, answer_es)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'cambridge', ?, ?, ?, ?)`,
-        [
-          item.id, item.sentence, item.answer, item.options || null,
-          item.explanation, item.explanation_es, item.cefr_level,
-          item.category, item.difficulty,
-          (item as any).base_word || null,
-          (item as any).context_sentence || null,
-          (item as any).is_official ? 1 : 0,
-          (item as any).answer_es || null,
-        ]
+    // (el progreso del usuario vive en user_gap_fill, no se toca). Todo en una
+    // sola transacción: seedear 520 filas suelta es lento en la PWA (un
+    // round-trip al worker por fila).
+    await db.withTransactionAsync(async () => {
+      for (const item of allExercises) {
+        await db!.runAsync(
+          `INSERT OR REPLACE INTO gap_fill_exercises
+           (id, sentence, answer, options, explanation, explanation_es, cefr_level, category, difficulty, source, base_word, context_sentence, is_official, answer_es)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'cambridge', ?, ?, ?, ?)`,
+          [
+            item.id, item.sentence, item.answer, item.options || null,
+            item.explanation, item.explanation_es, item.cefr_level,
+            item.category, item.difficulty,
+            (item as any).base_word || null,
+            (item as any).context_sentence || null,
+            (item as any).is_official ? 1 : 0,
+            (item as any).answer_es || null,
+          ]
+        );
+      }
+      await db!.runAsync(
+        `INSERT OR REPLACE INTO sync_metadata (key, value, updated_at) VALUES ('gap_fill_seed_version', ?, ?)`,
+        [String(SEED_VERSION), Date.now()]
       );
-    }
-
-    await db.runAsync(
-      `INSERT OR REPLACE INTO sync_metadata (key, value, updated_at) VALUES ('gap_fill_seed_version', ?, ?)`,
-      [String(SEED_VERSION), Date.now()]
-    );
+    });
     console.log(`✅ Seeded ${allExercises.length} exercises (seed v${SEED_VERSION})`);
   } catch (error) {
     console.log('Gap-fill seed error:', error);

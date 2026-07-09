@@ -1,5 +1,5 @@
 import { supabase } from '../supabase';
-import { runQuery, runStatement } from '../database/client';
+import { runQuery, runStatement, withTransaction } from '../database/client';
 import { getPendingSyncItems } from '../database/queries';
 
 export interface SyncResult {
@@ -95,44 +95,49 @@ export async function syncUserProgress(): Promise<SyncResult> {
       .select('*')
       .eq('user_id', user.id);
 
-    if (!error && userVocab) {
+    if (!error && userVocab && userVocab.length > 0) {
       const toMs = (v: string | null | undefined) => (v ? new Date(v).getTime() : null);
-      for (const item of userVocab) {
-        await runStatement(
-          `INSERT OR REPLACE INTO user_vocabulary (
-            id, vocabulary_id, ease_factor, interval_days, repetitions,
-            next_review_at, last_reviewed_at, times_correct, times_incorrect,
-            mastery_level,
-            stability, difficulty, elapsed_days, scheduled_days, learning_steps,
-            reps, lapses, fsrs_state, due, last_review,
-            updated_at, needs_sync
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`,
-          [
-            item.id,
-            item.vocabulary_id,
-            item.ease_factor ?? 2.5,
-            item.interval_days ?? 0,
-            item.repetitions ?? 0,
-            toMs(item.next_review_at),
-            toMs(item.last_reviewed_at),
-            item.times_correct ?? 0,
-            item.times_incorrect ?? 0,
-            item.mastery_level ?? 0,
-            item.stability ?? 0,
-            item.difficulty ?? 0,
-            item.elapsed_days ?? 0,
-            item.scheduled_days ?? 0,
-            item.learning_steps ?? 0,
-            item.reps ?? 0,
-            item.lapses ?? 0,
-            item.fsrs_state ?? 0,
-            toMs(item.due),
-            toMs(item.last_review),
-            Date.now(),
-          ]
-        );
-        result.downloaded++;
-      }
+      // Una sola transacción para todo el progreso descargado: escribir fila a
+      // fila con runStatement suelto es un round-trip al worker por fila (lento
+      // en la PWA cuando el usuario tiene cientos de palabras repasadas).
+      await withTransaction(async (db) => {
+        for (const item of userVocab) {
+          await db.runAsync(
+            `INSERT OR REPLACE INTO user_vocabulary (
+              id, vocabulary_id, ease_factor, interval_days, repetitions,
+              next_review_at, last_reviewed_at, times_correct, times_incorrect,
+              mastery_level,
+              stability, difficulty, elapsed_days, scheduled_days, learning_steps,
+              reps, lapses, fsrs_state, due, last_review,
+              updated_at, needs_sync
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)`,
+            [
+              item.id,
+              item.vocabulary_id,
+              item.ease_factor ?? 2.5,
+              item.interval_days ?? 0,
+              item.repetitions ?? 0,
+              toMs(item.next_review_at),
+              toMs(item.last_reviewed_at),
+              item.times_correct ?? 0,
+              item.times_incorrect ?? 0,
+              item.mastery_level ?? 0,
+              item.stability ?? 0,
+              item.difficulty ?? 0,
+              item.elapsed_days ?? 0,
+              item.scheduled_days ?? 0,
+              item.learning_steps ?? 0,
+              item.reps ?? 0,
+              item.lapses ?? 0,
+              item.fsrs_state ?? 0,
+              toMs(item.due),
+              toMs(item.last_review),
+              Date.now(),
+            ]
+          );
+        }
+      });
+      result.downloaded += userVocab.length;
     }
 
     // Update last sync time
