@@ -151,9 +151,9 @@ export function VocabResultCard({ item, expanded, onToggle, headerBadge }: Vocab
 const styles = StyleSheet.create({
   resultItem: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 12,
-    padding: 14,
-    marginBottom: 8,
+    borderRadius: 14,
+    padding: 16,
+    marginBottom: 12,
     borderWidth: 1,
     borderColor: '#F3F4F6',
   },
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
   },
   resultMeta: {
     alignItems: 'flex-end',
-    gap: 4,
+    gap: 6,
   },
   masteryBadge: {
     paddingHorizontal: 8,
