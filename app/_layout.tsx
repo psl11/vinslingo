@@ -9,6 +9,7 @@ import { syncUserProgress } from '../lib/services/syncService';
 import { getPendingSyncItems } from '../lib/database/queries';
 import { AuthProvider, useAuth } from '../hooks/useAuth';
 import { useSyncStore } from '../stores/useSyncStore';
+import { colors, spacing, fontSize, fontWeight } from '../constants/theme';
 
 export default function RootLayout() {
   return (
@@ -130,7 +131,7 @@ function RootLayoutNav() {
       <View style={styles.loadingContainer}>
         <Text style={styles.logo}>📚</Text>
         <Text style={styles.appName}>VinsLingo</Text>
-        <ActivityIndicator size="large" color="#4F46E5" style={styles.spinner} />
+        <ActivityIndicator size="large" color={colors.primary} style={styles.spinner} />
         <Text style={styles.status}>{initStatus}</Text>
       </View>
     );
@@ -173,23 +174,23 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F9FAFB',
+    backgroundColor: colors.screen,
   },
   logo: {
     fontSize: 64,
-    marginBottom: 16,
+    marginBottom: spacing.lg,
   },
   appName: {
-    fontSize: 28,
-    fontWeight: '700',
-    color: '#1F2937',
-    marginBottom: 24,
+    fontSize: fontSize.display,
+    fontWeight: fontWeight.bold,
+    color: colors.textPrimary,
+    marginBottom: spacing.xxl,
   },
   spinner: {
-    marginBottom: 16,
+    marginBottom: spacing.lg,
   },
   status: {
-    fontSize: 14,
-    color: '#6B7280',
+    fontSize: fontSize.base,
+    color: colors.textSecondary,
   },
 });

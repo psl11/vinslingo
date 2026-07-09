@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 import { View, Text, StyleSheet } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { colors, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 function TabIcon({ name, focused }: { name: string; focused: boolean }) {
   const icons: Record<string, string> = {
@@ -36,8 +37,8 @@ export default function TabLayout() {
         // borde inferior (en web insets.bottom es 0). La altura crece igual
         // para mantener la zona de contenido (~56px, sin recorte).
         tabBarStyle: [styles.tabBar, { height: 78 + insets.bottom, paddingBottom: insets.bottom + 14 }],
-        tabBarActiveTintColor: '#4F46E5',
-        tabBarInactiveTintColor: '#9CA3AF',
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.textTertiary,
         tabBarLabelStyle: styles.tabLabel,
       }}
     >
@@ -75,21 +76,21 @@ export default function TabLayout() {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: colors.card,
     borderTopWidth: 1,
-    borderTopColor: '#F3F4F6',
-    paddingTop: 8,
+    borderTopColor: colors.surfaceSubtle,
+    paddingTop: spacing.sm,
   },
   tabLabel: {
-    fontSize: 12,
-    fontWeight: '500',
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.medium,
   },
   iconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
   },
   icon: {
-    fontSize: 24,
+    fontSize: fontSize.xxl,
     opacity: 0.6,
   },
   iconFocused: {
