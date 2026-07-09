@@ -3,6 +3,7 @@ import { Text, StyleSheet, ActivityIndicator } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { PressableScale } from './PressableScale';
+import { colors, radius, spacing, fontSize } from '../../constants/theme';
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
 type ButtonSize = 'sm' | 'md' | 'lg';
@@ -18,16 +19,16 @@ interface ButtonProps {
 }
 
 const VARIANTS: Record<ButtonVariant, { bg: string; text: string; border?: string }> = {
-  primary: { bg: '#4F46E5', text: '#FFFFFF' },
-  secondary: { bg: '#F3F4F6', text: '#1F2937' },
-  outline: { bg: 'transparent', text: '#4F46E5', border: '#4F46E5' },
-  ghost: { bg: 'transparent', text: '#6B7280' },
+  primary: { bg: colors.primary, text: colors.onPrimary },
+  secondary: { bg: colors.surfaceSubtle, text: colors.textPrimary },
+  outline: { bg: 'transparent', text: colors.primary, border: colors.primary },
+  ghost: { bg: 'transparent', text: colors.textSecondary },
 };
 
 const SIZES: Record<ButtonSize, { paddingVertical: number; paddingHorizontal: number; fontSize: number }> = {
-  sm: { paddingVertical: 8, paddingHorizontal: 16, fontSize: 14 },
-  md: { paddingVertical: 12, paddingHorizontal: 24, fontSize: 16 },
-  lg: { paddingVertical: 16, paddingHorizontal: 32, fontSize: 18 },
+  sm: { paddingVertical: spacing.sm, paddingHorizontal: spacing.lg, fontSize: fontSize.base },
+  md: { paddingVertical: spacing.md, paddingHorizontal: spacing.xxl, fontSize: fontSize.md },
+  lg: { paddingVertical: spacing.lg, paddingHorizontal: spacing.xxxl, fontSize: fontSize.lg },
 };
 
 export function Button({
@@ -81,7 +82,7 @@ export function Button({
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 12,
+    borderRadius: radius.md,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',

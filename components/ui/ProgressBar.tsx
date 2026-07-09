@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
+import { colors, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 interface ProgressBarProps {
   current: number;
@@ -14,9 +15,9 @@ export function ProgressBar({
   current,
   total,
   showLabel = true,
-  color = '#4F46E5',
-  backgroundColor = '#E5E7EB',
-  height = 8,
+  color = colors.primary,
+  backgroundColor = colors.border,
+  height = spacing.sm,
 }: ProgressBarProps) {
   const progress = total > 0 ? (current / total) * 100 : 0;
 
@@ -60,20 +61,20 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: spacing.md,
   },
   label: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#6B7280',
+    fontSize: fontSize.base,
+    fontWeight: fontWeight.semibold,
+    color: colors.textSecondary,
     minWidth: 50,
   },
   track: {
     flex: 1,
-    borderRadius: 4,
+    borderRadius: spacing.xs,
     overflow: 'hidden',
   },
   fill: {
-    borderRadius: 4,
+    borderRadius: spacing.xs,
   },
 });
