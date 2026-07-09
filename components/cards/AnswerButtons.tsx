@@ -4,6 +4,7 @@ import * as Haptics from 'expo-haptics';
 import { PressableScale } from '../ui/PressableScale';
 import { SimpleQuality, formatInterval } from '../../lib/srs/fsrs';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 interface AnswerButtonsProps {
   intervals: Record<SimpleQuality, number>;
@@ -75,26 +76,26 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    gap: 8,
+    gap: spacing.sm,
     // 20 para coincidir con el paddingHorizontal de cardContainer y que los
     // botones queden alineados exactamente con los bordes de la tarjeta.
-    paddingHorizontal: 20,
+    paddingHorizontal: spacing.xl,
   },
   button: {
     flex: 1,
-    paddingVertical: 12,
-    paddingHorizontal: 8,
-    borderRadius: 12,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.sm,
+    borderRadius: radius.md,
     alignItems: 'center',
   },
   buttonLabel: {
-    color: '#FFFFFF',
-    fontSize: 14,
-    fontWeight: '600',
+    color: colors.onPrimary,
+    fontSize: fontSize.base,
+    fontWeight: fontWeight.semibold,
   },
   intervalText: {
     color: 'rgba(255, 255, 255, 0.8)',
-    fontSize: 12,
-    marginTop: 4,
+    fontSize: fontSize.xs,
+    marginTop: spacing.xs,
   },
 });

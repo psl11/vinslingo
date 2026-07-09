@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
+import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 interface TranslationBodyProps {
   translation: string;
@@ -73,6 +74,10 @@ export function TranslationBody({ translation, align = 'left' }: TranslationBody
   );
 }
 
+// NOTA: esta unidad tipográfica (tipo diccionario) usa a propósito la familia
+// SLATE (#0F172A, #475569, #1E293B, #334155, #64748B, #94A3B8, #E2E8F0), distinta
+// del gris de la app. Esos slate se dejan en crudo; el espaciado/tipografía y los
+// colores de marca (primary / primarySurface) sí usan tokens.
 const styles = StyleSheet.create({
   block: {
     width: '100%',
@@ -80,7 +85,7 @@ const styles = StyleSheet.create({
   },
   item: {
     width: '100%',
-    paddingVertical: 8,
+    paddingVertical: spacing.sm,
   },
   itemDivider: {
     borderTopWidth: 1,
@@ -95,34 +100,34 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   term: {
-    fontSize: 22,
-    fontWeight: '800',
+    fontSize: fontSize.xl,
+    fontWeight: fontWeight.extrabold,
     color: '#0F172A',
     letterSpacing: 0.3,
   },
   explanation: {
-    fontSize: 15,
-    fontWeight: '400',
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.regular,
     color: '#475569',
     lineHeight: 21,
-    marginTop: 8,
+    marginTop: spacing.sm,
   },
   // Texto simple
   raw: {
-    fontSize: 24,
-    fontWeight: '600',
+    fontSize: fontSize.xxl,
+    fontWeight: fontWeight.semibold,
     color: '#1A1A1A',
   },
   rawSmall: {
-    fontSize: 18,
+    fontSize: fontSize.lg,
   },
   // Acepciones numeradas
   sensesHeader: {
-    fontSize: 18,
-    fontWeight: '800',
+    fontSize: fontSize.lg,
+    fontWeight: fontWeight.extrabold,
     color: '#0F172A',
     letterSpacing: 0.3,
-    marginBottom: 12,
+    marginBottom: spacing.md,
   },
   senseRow: {
     flexDirection: 'row',
@@ -132,21 +137,21 @@ const styles = StyleSheet.create({
     width: 22,
     height: 22,
     borderRadius: 11,
-    backgroundColor: '#EEF2FF',
+    backgroundColor: colors.primarySurface,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 8,
+    marginRight: spacing.sm,
     marginTop: 1,
   },
   senseNumberText: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: '#4F46E5',
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.bold,
+    color: colors.primary,
   },
   senseDesc: {
     flex: 1,
-    fontSize: 15,
-    fontWeight: '600',
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.semibold,
     color: '#1E293B',
     lineHeight: 20,
   },
@@ -155,35 +160,35 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   senseExampleEn: {
-    fontSize: 14,
+    fontSize: fontSize.base,
     fontStyle: 'italic',
     color: '#334155',
     lineHeight: 18,
   },
   senseExampleEs: {
-    fontSize: 13,
+    fontSize: fontSize.sm,
     color: '#64748B',
     lineHeight: 17,
     marginTop: 1,
   },
   senseNote: {
-    marginTop: 10,
-    fontSize: 12,
+    marginTop: spacing.md,
+    fontSize: fontSize.xs,
     fontStyle: 'italic',
     color: '#94A3B8',
     lineHeight: 16,
   },
   // Pares confusos
   cpTerm: {
-    fontSize: 16,
-    fontWeight: '800',
-    color: '#4F46E5',
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.extrabold,
+    color: colors.primary,
     letterSpacing: 0.3,
   },
   cpDef: {
-    fontSize: 15,
+    fontSize: fontSize.md,
     color: '#334155',
     lineHeight: 20,
-    marginTop: 2,
+    marginTop: spacing.xxs,
   },
 });

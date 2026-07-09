@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { getParticleHint } from '../../lib/vocabulary/particleHints';
+import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 interface ParticleHintProps {
   word: string;
@@ -28,21 +29,21 @@ const styles = StyleSheet.create({
     width: '100%',
     // Margen vertical simétrico: mismo aire arriba y abajo (antes solo tenía
     // marginTop y quedaba pegado a los ejemplos de debajo).
-    marginTop: 12,
-    marginBottom: 12,
-    paddingVertical: 10,
-    paddingHorizontal: 12,
-    backgroundColor: '#F5F3FF',
-    borderRadius: 8,
+    marginTop: spacing.md,
+    marginBottom: spacing.md,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.md,
+    backgroundColor: colors.accentPurpleSurface,
+    borderRadius: radius.sm,
     borderLeftWidth: 3,
     borderLeftColor: '#8B5CF6',
   },
   text: {
-    fontSize: 13,
+    fontSize: fontSize.sm,
     color: '#4C1D95',
     lineHeight: 18,
   },
   label: {
-    fontWeight: '700',
+    fontWeight: fontWeight.bold,
   },
 });
