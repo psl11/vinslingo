@@ -11,6 +11,7 @@ import { useStudyStore } from '../../stores/useStudyStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useUserStore } from '../../stores/useUserStore';
 import { SimpleQuality, getEstimatedIntervals, cardFromRow } from '../../lib/srs/fsrs';
+import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 export default function StudyScreen() {
   const { id, categories, mode, limit, particle, scope } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string; particle?: string; scope?: string }>();
@@ -437,7 +438,7 @@ export default function StudyScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: colors.screen,
   },
   loading: {
     flex: 1,
@@ -445,57 +446,57 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   loadingText: {
-    fontSize: 18,
-    color: '#6B7280',
+    fontSize: fontSize.lg,
+    color: colors.textSecondary,
   },
   emptyEmoji: {
     fontSize: 64,
-    marginBottom: 16,
+    marginBottom: spacing.lg,
   },
   emptyTitle: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: '#1F2937',
-    marginBottom: 8,
+    fontSize: fontSize.xxl,
+    fontWeight: fontWeight.bold,
+    color: colors.textPrimary,
+    marginBottom: spacing.sm,
     textAlign: 'center',
   },
   emptyText: {
-    fontSize: 16,
-    color: '#6B7280',
+    fontSize: fontSize.md,
+    color: colors.textSecondary,
     textAlign: 'center',
-    paddingHorizontal: 32,
-    marginBottom: 24,
+    paddingHorizontal: spacing.xxxl,
+    marginBottom: spacing.xxl,
   },
   backButton: {
-    backgroundColor: '#4F46E5',
-    paddingHorizontal: 24,
-    paddingVertical: 12,
-    borderRadius: 12,
+    backgroundColor: colors.primary,
+    paddingHorizontal: spacing.xxl,
+    paddingVertical: spacing.md,
+    borderRadius: radius.md,
   },
   backButtonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: '600',
+    color: colors.onPrimary,
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.semibold,
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 16,
-    paddingTop: 12,
-    paddingBottom: 16,
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.md,
+    paddingBottom: spacing.lg,
   },
   closeButton: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: colors.surfaceSubtle,
     justifyContent: 'center',
     alignItems: 'center',
-    marginRight: 12,
+    marginRight: spacing.md,
   },
   closeText: {
-    fontSize: 20,
-    color: '#6B7280',
+    fontSize: fontSize.xl,
+    color: colors.textSecondary,
   },
   progressContainer: {
     flex: 1,
@@ -503,7 +504,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 20,
+    paddingHorizontal: spacing.xl,
     // En pantallas anchas (desktop) la tarjeta se centra y se limita a un ancho
     // cómodo de lectura en vez de estirarse a toda la banda. Los botones de
     // respuesta comparten el mismo tope para quedar alineados con la tarjeta.
@@ -512,7 +513,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   answersContainer: {
-    paddingVertical: 24,
+    paddingVertical: spacing.xxl,
     minHeight: 100,
     justifyContent: 'center',
     width: '100%',
@@ -521,75 +522,75 @@ const styles = StyleSheet.create({
   },
   flipHint: {
     textAlign: 'center',
-    fontSize: 16,
-    color: '#9CA3AF',
+    fontSize: fontSize.md,
+    color: colors.textTertiary,
   },
   statsBar: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingVertical: 16,
-    paddingBottom: 32,
-    backgroundColor: '#FFFFFF',
+    paddingVertical: spacing.lg,
+    paddingBottom: spacing.xxxl,
+    backgroundColor: colors.card,
     borderTopWidth: 1,
-    borderTopColor: '#F3F4F6',
+    borderTopColor: colors.surfaceSubtle,
   },
   statItem: {
     alignItems: 'center',
   },
   statValue: {
-    fontSize: 20,
-    fontWeight: '600',
-    color: '#1F2937',
+    fontSize: fontSize.xl,
+    fontWeight: fontWeight.semibold,
+    color: colors.textPrimary,
   },
   statLabel: {
-    fontSize: 12,
-    color: '#6B7280',
-    marginTop: 4,
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    marginTop: spacing.xs,
   },
   modalOverlay: {
     flex: 1,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    padding: spacing.xl,
   },
   modalContent: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 20,
-    padding: 24,
+    backgroundColor: colors.card,
+    borderRadius: radius.xl,
+    padding: spacing.xxl,
     width: '100%',
     maxWidth: 340,
     alignItems: 'center',
   },
   modalEmoji: {
     fontSize: 64,
-    marginBottom: 16,
+    marginBottom: spacing.lg,
   },
   modalTitle: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: '#1F2937',
-    marginBottom: 24,
+    fontSize: fontSize.xxl,
+    fontWeight: fontWeight.bold,
+    color: colors.textPrimary,
+    marginBottom: spacing.xxl,
   },
   summaryStats: {
     width: '100%',
-    marginBottom: 24,
+    marginBottom: spacing.xxl,
   },
   summaryRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 12,
+    paddingVertical: spacing.md,
     borderBottomWidth: 1,
-    borderBottomColor: '#F3F4F6',
+    borderBottomColor: colors.surfaceSubtle,
   },
   summaryLabel: {
-    fontSize: 16,
-    color: '#6B7280',
+    fontSize: fontSize.md,
+    color: colors.textSecondary,
   },
   summaryValue: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#1F2937',
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.semibold,
+    color: colors.textPrimary,
   },
   correctValue: {
     color: '#10B981',
@@ -598,19 +599,19 @@ const styles = StyleSheet.create({
     color: '#EF4444',
   },
   xpValue: {
-    color: '#F59E0B',
+    color: colors.warning,
   },
   finishButton: {
-    backgroundColor: '#4F46E5',
-    paddingHorizontal: 32,
-    paddingVertical: 14,
-    borderRadius: 12,
+    backgroundColor: colors.primary,
+    paddingHorizontal: spacing.xxxl,
+    paddingVertical: spacing.lg,
+    borderRadius: radius.md,
     width: '100%',
     alignItems: 'center',
   },
   finishButtonText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: '600',
+    color: colors.onPrimary,
+    fontSize: fontSize.md,
+    fontWeight: fontWeight.semibold,
   },
 });

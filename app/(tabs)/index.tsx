@@ -7,6 +7,7 @@ import { useSettingsStore } from '../../stores/useSettingsStore';
 import { Card } from '../../components/ui/Card';
 import { ProgressBar } from '../../components/ui/ProgressBar';
 import { Button } from '../../components/ui/Button';
+import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -105,115 +106,115 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F9FAFB',
+    backgroundColor: colors.screen,
   },
   content: {
-    padding: 20,
+    padding: spacing.xl,
     paddingTop: 60,
   },
   header: {
-    marginBottom: 24,
+    marginBottom: spacing.xxl,
   },
   greeting: {
-    fontSize: 28,
-    fontWeight: '700',
-    color: '#1F2937',
+    fontSize: fontSize.display,
+    fontWeight: fontWeight.bold,
+    color: colors.textPrimary,
   },
   subtitle: {
-    fontSize: 16,
-    color: '#6B7280',
-    marginTop: 4,
+    fontSize: fontSize.md,
+    color: colors.textSecondary,
+    marginTop: spacing.xs,
   },
   streakCard: {
-    backgroundColor: '#FEF3C7',
-    marginBottom: 16,
+    backgroundColor: colors.warningSurface,
+    marginBottom: spacing.lg,
   },
   streakContent: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 16,
+    gap: spacing.lg,
   },
   streakEmoji: {
     fontSize: 48,
   },
   streakNumber: {
-    fontSize: 32,
-    fontWeight: '700',
-    color: '#92400E',
+    fontSize: fontSize.displayLg,
+    fontWeight: fontWeight.bold,
+    color: colors.warningText,
   },
   streakLabel: {
-    fontSize: 14,
-    color: '#B45309',
+    fontSize: fontSize.base,
+    color: colors.warningTextSoft,
   },
   progressCard: {
-    marginBottom: 16,
+    marginBottom: spacing.lg,
   },
   cardTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#1F2937',
-    marginBottom: 16,
+    fontSize: fontSize.lg,
+    fontWeight: fontWeight.semibold,
+    color: colors.textPrimary,
+    marginBottom: spacing.lg,
   },
   progressRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    marginBottom: spacing.sm,
   },
   progressLabel: {
-    fontSize: 14,
-    color: '#6B7280',
+    fontSize: fontSize.base,
+    color: colors.textSecondary,
   },
   progressValue: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: '#4F46E5',
+    fontSize: fontSize.base,
+    fontWeight: fontWeight.semibold,
+    color: colors.primary,
   },
   statsRow: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: 20,
-    paddingTop: 16,
+    marginTop: spacing.xl,
+    paddingTop: spacing.lg,
     borderTopWidth: 1,
-    borderTopColor: '#F3F4F6',
+    borderTopColor: colors.surfaceSubtle,
   },
   stat: {
     alignItems: 'center',
   },
   statValue: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: '#1F2937',
+    fontSize: fontSize.xxl,
+    fontWeight: fontWeight.bold,
+    color: colors.textPrimary,
   },
   statLabel: {
-    fontSize: 12,
-    color: '#6B7280',
-    marginTop: 4,
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
+    marginTop: spacing.xs,
   },
   levelCard: {
-    marginBottom: 24,
+    marginBottom: spacing.xxl,
   },
   levelHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
-    marginBottom: 12,
+    gap: spacing.md,
+    marginBottom: spacing.md,
   },
   levelBadge: {
-    backgroundColor: '#F59E0B',
-    color: '#FFFFFF',
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 12,
-    fontSize: 14,
-    fontWeight: '600',
+    backgroundColor: colors.warning,
+    color: colors.onPrimary,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    borderRadius: radius.md,
+    fontSize: fontSize.base,
+    fontWeight: fontWeight.semibold,
     overflow: 'hidden',
   },
   levelTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#1F2937',
+    fontSize: fontSize.lg,
+    fontWeight: fontWeight.semibold,
+    color: colors.textPrimary,
   },
   actions: {
-    gap: 12,
+    gap: spacing.md,
   },
 });

@@ -90,6 +90,7 @@ export const fontSize = {
 
 // Pesos de fuente (tipados como los literales que espera React Native).
 export const fontWeight = {
+  regular: '400',
   medium: '500',
   semibold: '600',
   bold: '700',
