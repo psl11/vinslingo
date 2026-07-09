@@ -201,7 +201,6 @@ export function FlashCard({
           {pronunciation && (
             <Text style={styles.pronunciationText}>{pronunciation}</Text>
           )}
-          <Text style={styles.tapHint}>¿Sabes qué significa? Toca para ver</Text>
         </View>
       ) : (
         /* Back of card - SPANISH translation */
@@ -383,12 +382,6 @@ const styles = StyleSheet.create({
   },
   audioIcon: {
     fontSize: 24,
-  },
-  tapHint: {
-    position: 'absolute',
-    bottom: 20,
-    fontSize: 14,
-    color: '#999999',
   },
   backContent: {
     flex: 1,
