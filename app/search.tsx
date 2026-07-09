@@ -14,6 +14,7 @@ import { useRouter } from 'expo-router';
 import { TranslationBody } from '../components/vocabulary/TranslationBody';
 import { ParticleHint } from '../components/vocabulary/ParticleHint';
 import { analyzeTranslation, translationSummary } from '../lib/vocabulary/translationParser';
+import { anchorIcon, anchorCredit, AnchorType } from '../lib/vocabulary/anchor';
 
 interface SearchResultItem {
   id: string;
@@ -188,9 +189,7 @@ export default function SearchScreen() {
 
             {item.song_title && (
               <View style={styles.songBlock}>
-                <Text style={styles.songIcon}>
-                  {item.anchor_type === 'movie' ? '🎬' : item.anchor_type === 'book' ? '📖' : '🎵'}
-                </Text>
+                <Text style={styles.songIcon}>{anchorIcon(item.anchor_type as AnchorType)}</Text>
                 {item.song_lyric && (
                   <Text style={styles.songLyric}>"{item.song_lyric}"</Text>
                 )}
@@ -198,7 +197,7 @@ export default function SearchScreen() {
                   <Text style={styles.songTranslation}>"{item.song_lyric_translation}"</Text>
                 )}
                 <Text style={styles.songCredit}>
-                  — {item.song_title}{item.song_artist ? ` (${item.song_artist}` : ''}{item.song_artist && item.anchor_year ? `, ${item.anchor_year}` : ''}{item.song_artist ? ')' : ''}
+                  — {anchorCredit(item.song_title, item.song_artist, item.anchor_year)}
                 </Text>
               </View>
             )}
