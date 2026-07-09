@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, Alert, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from 'react-native';
+import { confirmAction } from '../../lib/utils/confirm';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useUserStore } from '../../stores/useUserStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
@@ -76,18 +77,13 @@ export default function ProfileScreen() {
   const levelInfo = getCurrentLevel();
 
   const handleSignOut = () => {
-    Alert.alert(
-      'Cerrar Sesión',
-      '¿Estás seguro de que quieres cerrar sesión?',
-      [
-        { text: 'Cancelar', style: 'cancel' },
-        { 
-          text: 'Cerrar Sesión', 
-          style: 'destructive',
-          onPress: signOut,
-        },
-      ]
-    );
+    confirmAction({
+      title: 'Cerrar Sesión',
+      message: '¿Estás seguro de que quieres cerrar sesión?',
+      confirmText: 'Cerrar Sesión',
+      destructive: true,
+      onConfirm: signOut,
+    });
   };
 
   return (

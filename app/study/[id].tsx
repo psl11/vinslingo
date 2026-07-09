@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { View, Text, StyleSheet, Pressable, SafeAreaView, Alert } from 'react-native';
+import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
+import { confirmAction } from '../../lib/utils/confirm';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FlashCard } from '../../components/cards/FlashCard';
 import { AnswerButtons } from '../../components/cards/AnswerButtons';
@@ -194,22 +195,18 @@ export default function StudyScreen() {
   };
 
   const handleClose = () => {
-    Alert.alert(
-      'Abandonar Lección',
-      '¿Estás seguro de que quieres salir? Tu progreso hasta ahora se guardará.',
-      [
-        { text: 'Continuar', style: 'cancel' },
-        {
-          text: 'Abandonar',
-          style: 'destructive',
-          onPress: async () => {
-            await saveAllProgress();
-            endSession();
-            router.back();
-          },
-        },
-      ]
-    );
+    confirmAction({
+      title: 'Abandonar Lección',
+      message: '¿Estás seguro de que quieres salir? Tu progreso hasta ahora se guardará.',
+      confirmText: 'Abandonar',
+      cancelText: 'Continuar',
+      destructive: true,
+      onConfirm: async () => {
+        await saveAllProgress();
+        endSession();
+        router.back();
+      },
+    });
   };
 
   const handleFinish = async () => {
