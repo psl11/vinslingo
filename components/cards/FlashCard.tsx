@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useMemo } from 'react';
 import { View, Text, Pressable, StyleSheet, Linking, Platform, LayoutChangeEvent } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
@@ -56,7 +56,10 @@ export function FlashCard({
   // necesitamos saber si es multi-acepción: en ese caso los ejemplos ya van
   // dentro de cada acepción, así que ocultamos los example_sentence(_2) de
   // abajo (que los duplican).
-  const isMultiSense = analyzeTranslation(translation).kind === 'senses';
+  const isMultiSense = useMemo(
+    () => analyzeTranslation(translation).kind === 'senses',
+    [translation]
+  );
   const showBottomExamples = !isMultiSense && (!!example || !!example2);
 
   // Escalado del reverso: si el contenido (traducción + ejemplos + canción)

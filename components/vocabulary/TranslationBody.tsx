@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
 
@@ -11,7 +11,7 @@ interface TranslationBodyProps {
 // Render coherente del campo `translation` en toda la app: pares confusos,
 // acepciones numeradas (tipo diccionario), término + explicación, o texto simple.
 export function TranslationBody({ translation, align = 'left' }: TranslationBodyProps) {
-  const a = analyzeTranslation(translation);
+  const a = useMemo(() => analyzeTranslation(translation), [translation]);
   const textAlign = align;
 
   if (a.kind === 'comparison') {
