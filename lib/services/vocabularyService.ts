@@ -25,128 +25,153 @@ export interface SupabaseVocabulary {
   anchor_year?: number;
   formal_synonym?: string;
   separability?: string;
+  updated_at?: string; // ISO timestamptz del servidor (para el sync incremental)
 }
 
 export interface VocabSyncOptions {
-  // Fuerza el sync aunque el último sea reciente (primera descarga, o resync
-  // forzado por una migración de esquema).
+  // Fuerza el sync ya (ignora el intervalo mínimo entre syncs).
   force?: boolean;
-  // Antigüedad máxima del último sync para considerarlo "fresco" y saltarlo.
-  maxAgeMs?: number;
+  // Fuerza un sync COMPLETO (no incremental): re-baja todo y reconcilia borrados.
+  fullResync?: boolean;
+  // No re-sincronizar si el último intento fue hace menos de esto.
+  minIntervalMs?: number;
+  // Cada cuánto se hace un full completo (para reconciliar filas borradas en el
+  // servidor, que el incremental por updated_at no puede detectar).
+  fullResyncMaxAgeMs?: number;
 }
 
-// El contenido de vocabulario es editorial y cambia rara vez, así que por
-// defecto se sincroniza como mucho una vez al día.
-const VOCAB_SYNC_MAX_AGE_MS = 24 * 60 * 60 * 1000;
+// Intervalo mínimo entre syncs (evita re-sincronizar en relanzamientos rápidos).
+const MIN_SYNC_INTERVAL_MS = 5 * 60 * 1000;
+// Cada cuánto un full completo (reconcilia borrados). Entre medias, incremental.
+const FULL_RESYNC_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 
-// Devuelve el nº de filas sincronizadas, o -1 si se saltó por estar fresco.
+const VOCAB_COLUMNS = `id, word, translation, pronunciation, audio_url,
+  part_of_speech, cefr_level, category, frequency_rank,
+  example_sentence, example_translation, example_sentence_2, example_translation_2,
+  song_lyric, song_lyric_translation, song_title, song_artist,
+  anchor_type, anchor_year, formal_synonym, separability, updated_at`;
+
+function vocabRowParams(item: SupabaseVocabulary, localTs: number): (string | number | null)[] {
+  return [
+    item.id, item.word, item.translation,
+    item.pronunciation || null, item.audio_url || null, item.part_of_speech || null,
+    item.cefr_level, item.category || null, item.frequency_rank || null,
+    item.example_sentence || null, item.example_translation || null,
+    item.example_sentence_2 || null, item.example_translation_2 || null,
+    item.song_lyric || null, item.song_lyric_translation || null,
+    item.song_title || null, item.song_artist || null,
+    item.anchor_type || null, item.anchor_year || null,
+    item.formal_synonym || null, item.separability || null,
+    localTs,
+  ];
+}
+
+// Sincroniza el vocabulario desde Supabase. Por defecto INCREMENTAL: solo baja
+// las filas cambiadas desde el último sync (comparando el `updated_at` del
+// servidor). Hace un full completo la primera vez, cada FULL_RESYNC_MAX_AGE_MS
+// (para reconciliar borrados) o si se fuerza. Degrada con gracia: si la columna
+// `updated_at` aún no existe en Supabase, no se captura marca de agua y se queda
+// en modo full (comportamiento anterior).
+// Devuelve nº de filas escritas (0 si nada cambió), o -1 si se saltó por intervalo.
 export async function syncVocabularyFromSupabase(
   options: VocabSyncOptions = {}
 ): Promise<number> {
-  const { force = false, maxAgeMs = VOCAB_SYNC_MAX_AGE_MS } = options;
+  const {
+    force = false,
+    fullResync = false,
+    minIntervalMs = MIN_SYNC_INTERVAL_MS,
+    fullResyncMaxAgeMs = FULL_RESYNC_MAX_AGE_MS,
+  } = options;
   try {
-    // Gate temporal: si ya sincronizamos hace poco (y no se fuerza), saltamos
-    // tanto el fetch de red como la reescritura local entera. Tras una
-    // migración que añade columnas, client.ts borra 'vocabulary_last_sync', así
-    // que no hay marca → sincroniza (resync forzado por esquema).
+    // Intervalo mínimo: no re-sincronizar en relanzamientos rápidos.
     if (!force) {
       const last = await getSyncMetadata('vocabulary_last_sync');
-      if (last && Date.now() - Number(last) < maxAgeMs) {
-        console.log('⏭️ Vocabulary sync skipped (sincronizado hace poco)');
+      if (last && Date.now() - Number(last) < minIntervalMs) {
         return -1;
       }
     }
 
-    // Fetch todo el vocabulario de Supabase (sin filtro incremental).
-    // PostgREST limita cada respuesta a 1000 filas, así que hay que paginar
-    // con .range() o solo llegarían las primeras 1000 palabras de ~3250.
+    const watermark = await getSyncMetadata('vocabulary_sync_watermark');
+    const lastFull = await getSyncMetadata('vocabulary_last_full_sync');
+    // Full si: se fuerza, no hay marca de agua (primera vez / columna ausente),
+    // o el último full es demasiado viejo (reconciliar borrados).
+    const needFull =
+      fullResync ||
+      !watermark ||
+      !lastFull ||
+      Date.now() - Number(lastFull) >= fullResyncMaxAgeMs;
+
+    // Fetch paginado (PostgREST limita a 1000 filas/respuesta).
     const PAGE_SIZE = 1000;
     const data: SupabaseVocabulary[] = [];
     let from = 0;
-
     while (true) {
-      const { data: page, error } = await supabase
-        .from('vocabulary')
-        .select('*')
-        .order('id', { ascending: true })
-        .range(from, from + PAGE_SIZE - 1);
-
+      let query = supabase.from('vocabulary').select('*');
+      query = needFull
+        ? query.order('id', { ascending: true })
+        : query.gt('updated_at', watermark!).order('updated_at', { ascending: true });
+      const { data: page, error } = await query.range(from, from + PAGE_SIZE - 1);
       if (error) {
         console.error('Error fetching vocabulary:', error);
         throw error;
       }
       if (!page || page.length === 0) break;
-
       data.push(...page);
       if (page.length < PAGE_SIZE) break;
       from += PAGE_SIZE;
     }
 
+    // Nueva marca de agua = máximo updated_at del servidor entre lo traído.
+    let maxUpdatedAt: string | null = needFull ? null : watermark;
+    let maxMs = maxUpdatedAt ? new Date(maxUpdatedAt).getTime() : -Infinity;
+    for (const r of data) {
+      if (r.updated_at) {
+        const ms = new Date(r.updated_at).getTime();
+        if (ms > maxMs) {
+          maxMs = ms;
+          maxUpdatedAt = r.updated_at;
+        }
+      }
+    }
+
     if (data.length === 0) {
+      // Incremental sin cambios: nada que escribir.
+      await setSyncMetadata('vocabulary_last_sync', String(Date.now()));
+      console.log('✅ Vocabulary up to date (incremental, 0 cambios)');
       return 0;
     }
 
     const syncStartedAt = Date.now();
 
-    // UNA sola transacción para las ~2684 filas + la purga. En la PWA cada
+    // UNA sola transacción para todas las filas (+ purga en full). En la PWA cada
     // runAsync suelto es un round-trip al worker de SQLite; batchearlo en un
-    // único commit es ~10-50x más rápido (y evita los "Error finalizing
-    // statement" por escrituras concurrentes sin batch).
+    // único commit es ~10-50x más rápido.
     await withTransaction(async (db) => {
       for (const item of data) {
         await db.runAsync(
-          `INSERT OR REPLACE INTO vocabulary (
-            id, word, translation, pronunciation, audio_url,
-            part_of_speech, cefr_level, category, frequency_rank,
-            example_sentence, example_translation,
-            example_sentence_2, example_translation_2,
-            song_lyric, song_lyric_translation, song_title, song_artist,
-            anchor_type, anchor_year, formal_synonym, separability,
-            updated_at
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-          [
-            item.id,
-            item.word,
-            item.translation,
-            item.pronunciation || null,
-            item.audio_url || null,
-            item.part_of_speech || null,
-            item.cefr_level,
-            item.category || null,
-            item.frequency_rank || null,
-            item.example_sentence || null,
-            item.example_translation || null,
-            item.example_sentence_2 || null,
-            item.example_translation_2 || null,
-            item.song_lyric || null,
-            item.song_lyric_translation || null,
-            item.song_title || null,
-            item.song_artist || null,
-            item.anchor_type || null,
-            item.anchor_year || null,
-            item.formal_synonym || null,
-            item.separability || null,
-            syncStartedAt,
-          ]
+          `INSERT OR REPLACE INTO vocabulary (${VOCAB_COLUMNS}) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          vocabRowParams(item, syncStartedAt)
         );
       }
-
-      // Purgar filas que ya no existen en el servidor (p.ej. duplicados
-      // eliminados): todo lo recién sincronizado tiene updated_at = syncStartedAt,
-      // así que lo anterior es contenido obsoleto. También se limpia el progreso
-      // huérfano que apunte a vocabulario borrado.
-      await db.runAsync(
-        'DELETE FROM vocabulary WHERE updated_at IS NULL OR updated_at < ?',
-        [syncStartedAt]
-      );
-      await db.runAsync(
-        'DELETE FROM user_vocabulary WHERE vocabulary_id NOT IN (SELECT id FROM vocabulary)'
-      );
+      // Purga de borrados: SOLO en full (el incremental no ve las filas
+      // borradas en el servidor). En full traemos todo → lo que quede con
+      // updated_at < syncStartedAt es obsoleto.
+      if (needFull) {
+        await db.runAsync(
+          'DELETE FROM vocabulary WHERE updated_at IS NULL OR updated_at < ?',
+          [syncStartedAt]
+        );
+        await db.runAsync(
+          'DELETE FROM user_vocabulary WHERE vocabulary_id NOT IN (SELECT id FROM vocabulary)'
+        );
+      }
     });
 
     await setSyncMetadata('vocabulary_last_sync', String(Date.now()));
+    if (maxUpdatedAt) await setSyncMetadata('vocabulary_sync_watermark', maxUpdatedAt);
+    if (needFull) await setSyncMetadata('vocabulary_last_full_sync', String(Date.now()));
 
-    console.log(`✅ Synced ${data.length} vocabulary items`);
+    console.log(`✅ Synced ${data.length} vocabulary items (${needFull ? 'full' : 'incremental'})`);
     return data.length;
   } catch (error) {
     console.error('Failed to sync vocabulary:', error);

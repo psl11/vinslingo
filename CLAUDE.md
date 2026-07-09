@@ -22,20 +22,30 @@ reflejado en un `.md` del repo (`docs/` o este CLAUDE.md), no solo en el código
 para que otra persona que trabaje con Claude Code tenga el contexto. Las
 funcionalidades de aprendizaje están resumidas en [`docs/features.md`](docs/features.md).
 
-## Sync de vocabulario (gate + transacción)
+## Sync de vocabulario (incremental + transacción)
 
 `syncVocabularyFromSupabase` ([`lib/services/vocabularyService.ts`](lib/services/vocabularyService.ts))
-está **gateado**: se sincroniza como mucho **1 vez al día** (guarda
-`vocabulary_last_sync` en `sync_metadata` y salta si es reciente). El upsert de
-las ~2684 filas va en **una sola transacción**. Implicaciones:
+es **incremental**: por defecto solo baja las filas cambiadas desde el último
+sync, comparando el `updated_at` (timestamptz) del servidor contra una marca de
+agua (`vocabulary_sync_watermark` en `sync_metadata`). El upsert va siempre en
+**una sola transacción**. Detalles:
 
-- Editar contenido en Supabase **no se ve al instante** en un cliente ya
-  sincronizado: tarda hasta 24 h (o hasta que se limpie la marca). Para forzar:
-  `syncVocabularyFromSupabase({ force: true })`, o borrar `vocabulary_last_sync`.
+- Requiere la columna `vocabulary.updated_at` + un trigger `BEFORE UPDATE` que la
+  ponga a `now()` en Supabase. **Degrada con gracia**: si la columna no existe,
+  no se captura marca de agua y se queda en modo *full* (comportamiento
+  anterior), sin errores.
+- Hace un **full completo** la primera vez, cada 7 días (para reconciliar filas
+  borradas en el servidor, que el incremental por `updated_at` no detecta) o si
+  se fuerza (`{ fullResync: true }`). Entre medias, incremental (normalmente 0
+  filas → un request barato).
+- Intervalo mínimo entre syncs: 5 min (evita re-sync en relanzamientos rápidos).
+  La primera descarga pasa `{ force: true }`.
+- Editar contenido en Supabase se propaga en el siguiente sync del cliente
+  (minutos), no al instante pero sin re-bajar todo.
 - Las migraciones que añaden columnas ([`lib/database/client.ts`](lib/database/client.ts))
-  borran esa marca → **resync forzado** tras un cambio de esquema. Por eso, al
-  añadir una columna nueva de contenido, basta con la migración: el cliente
-  la repoblará solo en el siguiente arranque.
+  borran la marca de agua + `vocabulary_last_full_sync` → **full resync forzado**
+  tras un cambio de esquema (un `ALTER` no cambia el `updated_at` de las filas
+  existentes, así que hace falta el full para repoblar la columna nueva).
 
 ## Backup del contenido de Supabase
 

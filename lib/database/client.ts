@@ -111,9 +111,12 @@ async function runMigrations(): Promise<void> {
     }
 
     if (migrationsRan) {
-      // Forzar resincronización del vocabulario para obtener los nuevos datos
+      // Forzar un resync COMPLETO: borrar la marca de agua y el last_full_sync
+      // (además de last_sync) para que el sync re-baje TODO y repueble la
+      // columna nueva en las filas existentes (un ALTER no cambia su updated_at,
+      // así que el incremental no las traería).
       await db.runAsync(
-        "DELETE FROM sync_metadata WHERE key = 'vocabulary_last_sync'"
+        "DELETE FROM sync_metadata WHERE key IN ('vocabulary_last_sync', 'vocabulary_sync_watermark', 'vocabulary_last_full_sync')"
       );
       needsResync = true;
       console.log('✅ Migrations completed - resync needed');
@@ -135,9 +138,9 @@ async function runMigrations(): Promise<void> {
         (emptyCheck && emptyCheck.count === 0) ||
         (phaveGrammarCheck && phaveGrammarCheck.count === 0)
       ) {
-        // Las columnas existen pero no hay datos, necesita resync
+        // Las columnas existen pero no hay datos, necesita resync completo.
         await db.runAsync(
-          "DELETE FROM sync_metadata WHERE key = 'vocabulary_last_sync'"
+          "DELETE FROM sync_metadata WHERE key IN ('vocabulary_last_sync', 'vocabulary_sync_watermark', 'vocabulary_last_full_sync')"
         );
         needsResync = true;
         console.log('✅ New columns empty - resync needed');
