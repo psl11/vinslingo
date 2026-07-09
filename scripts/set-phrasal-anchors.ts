@@ -61,6 +61,10 @@ const ANCHORS: Record<string, Anchor> = {
   'send out': { title: 'Message in a Bottle', creator: 'The Police', type: 'song', year: 1979, lyric: "I'll send out an S.O.S. to the world", lyricEs: 'Lanzaré un S.O.S. al mundo' },
   // move up: Dannii Minogue (oscura) → "Moving On Up" (M People, 1993), título.
   'move up': { title: 'Moving On Up', creator: 'M People', type: 'song', year: 1993, clearLyric: true },
+  // Fix: "Back to Black" no tenía nada que ver con "go back". "Back to the
+  // Future" (Zemeckis, 1985) es icónica y va literalmente de VOLVER ATRÁS en el
+  // tiempo — ancla temática perfecta (política: fama > título exacto).
+  'go back': { title: 'Back to the Future', creator: 'Robert Zemeckis', type: 'movie', year: 1985, clearLyric: true },
 };
 
 async function main() {

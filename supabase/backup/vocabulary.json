@@ -53164,15 +53164,15 @@
     "created_at": "2026-01-13T15:24:19.7533+00:00",
     "example_sentence_2": "I want to go back to those happy days.",
     "example_translation_2": "Quiero volver a esos días felices.",
-    "song_lyric": "Back to Black",
-    "song_lyric_translation": "De vuelta al negro",
-    "song_title": "Back to Black",
-    "song_artist": "Amy Winehouse",
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": "Back to the Future",
+    "song_artist": "Robert Zemeckis",
     "quote_text": null,
     "quote_translation": null,
     "quote_author": null,
-    "anchor_type": null,
-    "anchor_year": null
+    "anchor_type": "movie",
+    "anchor_year": 1985
   },
   {
     "id": "c7883211-119a-4853-9419-47b5991414f2",
