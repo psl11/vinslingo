@@ -28,6 +28,10 @@ export interface VocabularyItem {
   song_lyric_translation?: string;
   song_title?: string;
   song_artist?: string;
+  anchor_type?: string;
+  anchor_year?: number;
+  formal_synonym?: string;
+  separability?: string;
 }
 
 // StudyCard lleva el estado FSRS de la fila de progreso (StudyFsrsFields).

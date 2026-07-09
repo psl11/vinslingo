@@ -23,6 +23,8 @@ export const LOCAL_SCHEMA = `
     song_artist TEXT,
     anchor_type TEXT,
     anchor_year INTEGER,
+    formal_synonym TEXT,
+    separability TEXT,
     updated_at INTEGER,
     synced_at INTEGER
   );

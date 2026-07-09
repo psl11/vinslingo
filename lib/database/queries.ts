@@ -27,6 +27,10 @@ export interface VocabularyItem {
   song_lyric_translation?: string;
   song_title?: string;
   song_artist?: string;
+  anchor_type?: string;
+  anchor_year?: number;
+  formal_synonym?: string;
+  separability?: string;
 }
 
 export async function getVocabularyByLevel(cefrLevel: string): Promise<VocabularyItem[]> {

@@ -379,8 +379,10 @@ export default function StudyScreen() {
             songLyricTranslation={currentCard.song_lyric_translation}
             songTitle={currentCard.song_title}
             songArtist={currentCard.song_artist}
-            anchorType={(currentCard as any).anchor_type}
-            anchorYear={(currentCard as any).anchor_year}
+            anchorType={currentCard.anchor_type}
+            anchorYear={currentCard.anchor_year}
+            formalSynonym={currentCard.formal_synonym}
+            separability={currentCard.separability}
             cefrLevel={currentCard.cefr_level}
             category={currentCard.category}
             onFlip={handleFlip}

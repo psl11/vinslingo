@@ -23,6 +23,8 @@ export interface SupabaseVocabulary {
   song_artist?: string;
   anchor_type?: string;
   anchor_year?: number;
+  formal_synonym?: string;
+  separability?: string;
 }
 
 export async function syncVocabularyFromSupabase(): Promise<number> {
@@ -69,9 +71,9 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
           example_sentence, example_translation,
           example_sentence_2, example_translation_2,
           song_lyric, song_lyric_translation, song_title, song_artist,
-          anchor_type, anchor_year,
+          anchor_type, anchor_year, formal_synonym, separability,
           updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         [
           item.id,
           item.word,
@@ -92,6 +94,8 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
           item.song_artist || null,
           item.anchor_type || null,
           item.anchor_year || null,
+          item.formal_synonym || null,
+          item.separability || null,
           Date.now(),
         ]
       );
@@ -256,6 +260,8 @@ export interface SearchResult {
   song_artist?: string;
   anchor_type?: string;
   anchor_year?: number;
+  formal_synonym?: string;
+  separability?: string;
   mastery_level?: number;
   times_correct?: number;
   times_incorrect?: number;

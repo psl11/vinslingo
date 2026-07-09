@@ -7,6 +7,7 @@ import { TranslationBody } from '../vocabulary/TranslationBody';
 import { ParticleHint } from '../vocabulary/ParticleHint';
 import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
 import { anchorIcon, anchorIsSong, anchorCredit } from '../../lib/vocabulary/anchor';
+import { formalSynonymLabel, separabilityNote } from '../../lib/vocabulary/phaveGrammar';
 
 interface FlashCardProps {
   word: string;
@@ -23,6 +24,8 @@ interface FlashCardProps {
   songArtist?: string;
   anchorType?: string; // 'song' | 'movie' | 'book' (null → canción)
   anchorYear?: number;
+  formalSynonym?: string; // cognado latino formal (put off ≈ postpone)
+  separability?: string; // 'separable' | 'inseparable' | 'intransitive'
   cefrLevel?: string;
   category?: string;
   onFlip?: (isFlipped: boolean) => void;
@@ -43,11 +46,15 @@ export function FlashCard({
   songArtist,
   anchorType,
   anchorYear,
+  formalSynonym,
+  separability,
   cefrLevel,
   category,
   onFlip,
 }: FlashCardProps) {
   const anchorIconChar = anchorIcon(anchorType);
+  const formalLabel = formalSynonymLabel(formalSynonym);
+  const sepNote = separabilityNote(separability);
   const isSongAnchor = anchorIsSong(anchorType);
   const [isFlipped, setIsFlipped] = useState(false);
   const { hapticsEnabled } = useSettingsStore();
@@ -215,6 +222,19 @@ export function FlashCard({
               <TranslationBody translation={translation} align="center" />
 
               <ParticleHint word={word} category={category} />
+
+              {/* Mini-gramática del phrasal: sinónimo formal (cognado latino) y
+                  separabilidad. Enseña significado + registro + sintaxis. */}
+              {(formalLabel || sepNote) && (
+                <View style={styles.phaveGrammar}>
+                  {formalLabel && (
+                    <Text style={styles.formalSynonym}>{formalLabel}</Text>
+                  )}
+                  {sepNote && (
+                    <Text style={styles.separabilityNote}>📐 {sepNote}</Text>
+                  )}
+                </View>
+              )}
 
               {/* Ejemplos sueltos (solo monosémicas) + ancla (canción/…) */}
               {(showBottomExamples || songTitle) && (
@@ -397,6 +417,24 @@ const styles = StyleSheet.create({
     color: '#666666',
     marginTop: 2,
     textAlign: 'center',
+  },
+  phaveGrammar: {
+    width: '100%',
+    marginTop: 12,
+    gap: 6,
+    alignItems: 'center',
+  },
+  formalSynonym: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#6D28D9',
+    textAlign: 'center',
+  },
+  separabilityNote: {
+    fontSize: 12,
+    color: '#6B7280',
+    textAlign: 'center',
+    lineHeight: 17,
   },
   allExamplesContainer: {
     marginTop: 12,

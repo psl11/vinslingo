@@ -101,6 +101,14 @@ async function runMigrations(): Promise<void> {
       await db.execAsync('ALTER TABLE vocabulary ADD COLUMN anchor_year INTEGER');
       migrationsRan = true;
     }
+    if (!columnNames.includes('formal_synonym')) {
+      await db.execAsync('ALTER TABLE vocabulary ADD COLUMN formal_synonym TEXT');
+      migrationsRan = true;
+    }
+    if (!columnNames.includes('separability')) {
+      await db.execAsync('ALTER TABLE vocabulary ADD COLUMN separability TEXT');
+      migrationsRan = true;
+    }
 
     if (migrationsRan) {
       // Forzar resincronización del vocabulario para obtener los nuevos datos
