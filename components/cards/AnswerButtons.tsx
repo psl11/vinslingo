@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import { View, Text, Pressable, StyleSheet, Animated, Easing } from 'react-native';
+import { Text, StyleSheet, Animated, Easing } from 'react-native';
 import * as Haptics from 'expo-haptics';
+import { PressableScale } from '../ui/PressableScale';
 import { SimpleQuality, formatInterval } from '../../lib/srs/fsrs';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 
@@ -56,18 +57,16 @@ export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: Answer
       {BUTTON_CONFIG
         .filter(({ quality }) => !(isRetry && (quality === 'easy' || quality === 'hard')))
         .map(({ quality, label, color }) => (
-        <Pressable
+        <PressableScale
           key={quality}
-          style={({ pressed }) => [
-            styles.button,
-            { backgroundColor: color, opacity: pressed || disabled ? 0.7 : 1 },
-          ]}
+          containerStyle={styles.buttonWrap}
+          style={[styles.button, { backgroundColor: color, opacity: disabled ? 0.7 : 1 }]}
           onPress={() => handlePress(quality)}
           disabled={disabled}
         >
           <Text style={styles.buttonLabel}>{label}</Text>
           <Text style={styles.intervalText}>{formatInterval(intervals[quality])}</Text>
-        </Pressable>
+        </PressableScale>
       ))}
     </Animated.View>
   );
@@ -82,8 +81,11 @@ const styles = StyleSheet.create({
     // botones queden alineados exactamente con los bordes de la tarjeta.
     paddingHorizontal: 20,
   },
-  button: {
+  buttonWrap: {
     flex: 1,
+  },
+  button: {
+    width: '100%',
     paddingVertical: 12,
     paddingHorizontal: 8,
     borderRadius: 12,

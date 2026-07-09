@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useRef, useEffect } from 'react';
+import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
 
 interface ProgressBarProps {
   current: number;
@@ -20,6 +20,26 @@ export function ProgressBar({
 }: ProgressBarProps) {
   const progress = total > 0 ? (current / total) * 100 : 0;
 
+  // Relleno animado: al avanzar de tarjeta, la barra crece con suavidad en vez
+  // de saltar. width no admite native driver, pero animar una barra fina es
+  // despreciable en rendimiento. Arranca en el valor actual (sin animar el 1er
+  // render).
+  const anim = useRef(new Animated.Value(progress)).current;
+  useEffect(() => {
+    Animated.timing(anim, {
+      toValue: progress,
+      duration: 300,
+      easing: Easing.out(Easing.cubic),
+      useNativeDriver: false,
+    }).start();
+  }, [progress, anim]);
+
+  const width = anim.interpolate({
+    inputRange: [0, 100],
+    outputRange: ['0%', '100%'],
+    extrapolate: 'clamp',
+  });
+
   return (
     <View style={styles.container}>
       {showLabel && (
@@ -28,11 +48,8 @@ export function ProgressBar({
         </Text>
       )}
       <View style={[styles.track, { backgroundColor, height }]}>
-        <View
-          style={[
-            styles.fill,
-            { backgroundColor: color, height, width: `${progress}%` },
-          ]}
+        <Animated.View
+          style={[styles.fill, { backgroundColor: color, height, width }]}
         />
       </View>
     </View>
