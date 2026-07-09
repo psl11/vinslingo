@@ -14,14 +14,6 @@ export function formalSynonymLabel(synonym?: string | null): string | null {
 
 export type Separability = 'separable' | 'inseparable' | 'intransitive';
 
-const SEPARABILITY_NOTES: Record<Separability, string> = {
-  separable:
-    'Separable: el objeto puede ir en medio (turn the light off / turn it off).',
-  inseparable:
-    'Inseparable: el objeto va siempre después del phrasal (look after him).',
-  intransitive: 'Intransitivo: no lleva objeto (the car broke down).',
-};
-
 const SEPARABILITY_LABELS: Record<Separability, string> = {
   separable: 'Separable',
   inseparable: 'Inseparable',
@@ -35,10 +27,31 @@ function normalizeSeparability(sep?: string | null): Separability | null {
     : null;
 }
 
-// Nota explicativa completa (para mostrar en la ficha), o null.
-export function separabilityNote(sep?: string | null): string | null {
+// Nota explicativa completa para la ficha, con un ejemplo construido a partir
+// del PROPIO phrasal (no uno genérico que no cuadre con la palabra). El
+// pronombre "it" es la prueba de separabilidad: en los separables va en medio
+// (take it off), en los inseparables va detrás (look after it). Devuelve null
+// si la separabilidad no se reconoce o falta la palabra.
+export function separabilityNote(sep?: string | null, word?: string): string | null {
   const key = normalizeSeparability(sep);
-  return key ? SEPARABILITY_NOTES[key] : null;
+  if (!key) return null;
+  const tokens = (word || '').trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (key === 'intransitive') {
+    return 'Intransitivo: no lleva objeto directo.';
+  }
+  if (tokens.length < 2) {
+    // Sin verbo+partícula no podemos dar un ejemplo fiable: solo la etiqueta.
+    return key === 'separable'
+      ? 'Separable: el objeto puede ir en medio.'
+      : 'Inseparable: el objeto va siempre después del phrasal.';
+  }
+  if (key === 'separable') {
+    // "it" se intercala entre el verbo y el resto de la partícula.
+    const ex = `${tokens[0]} it ${tokens.slice(1).join(' ')}`;
+    return `Separable: el objeto puede ir en medio (${ex}).`;
+  }
+  // Inseparable: el objeto va después de todo el phrasal.
+  return `Inseparable: el objeto va siempre después (${tokens.join(' ')} it).`;
 }
 
 // Etiqueta corta ("Separable" / "Inseparable" / "Intransitivo"), o null.

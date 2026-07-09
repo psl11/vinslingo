@@ -293,8 +293,8 @@
     "quote_author": null,
     "anchor_type": "song",
     "anchor_year": 2018,
-    "formal_synonym": "invent",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "0182b3af-41db-492a-aaba-8afb06def109",
@@ -1859,8 +1859,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "deliver",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "06506038-e989-47b9-849a-4eba94acec38",
@@ -2102,8 +2102,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "address",
-    "separability": "inseparable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "06d78137-94a6-459d-a95d-9e2d9bffe8bf",
@@ -3587,8 +3587,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "appear",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "0c3b0165-0eb8-426c-bb83-e6cb207af114",
@@ -5396,8 +5396,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "settle",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "10d70f48-f488-44f0-87e1-530340d58d4f",
@@ -5990,8 +5990,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "occupy",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "12a088bf-74a9-4c89-a836-e7e253f4b5d4",
@@ -7421,8 +7421,8 @@
     "quote_author": "Arcade Fire",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "awaken",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "174187a2-b7fe-4b38-9e19-d81a5495663a",
@@ -7556,8 +7556,8 @@
     "quote_author": "Anónimo (nursery rhyme tradicional)",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "collapse",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "17beff50-24d5-45cc-a077-b3a1748c5935",
@@ -8016,7 +8016,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "190b677d-1803-4a02-a3ab-d2aa521b26ed",
@@ -8312,8 +8312,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "retract",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "19b276ed-8220-4264-9d09-5c0d0fb0f1e3",
@@ -8744,8 +8744,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "dismantle",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "1b2d897c-fac6-41a9-9dcb-87b2b36798ff",
@@ -9149,8 +9149,8 @@
     "quote_author": "DJ Snake & Lil Jon",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "decline",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "1ce354ce-ed6d-4cfb-a309-b98df05b2a62",
@@ -9284,8 +9284,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "separate",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "1db148e0-197f-4669-863f-5ae157a4b903",
@@ -10014,7 +10014,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "separable"
+    "separability": null
   },
   {
     "id": "1ff89d80-9cd6-41d8-9356-f9351ab4dc2f",
@@ -11309,8 +11309,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "transmit",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "253cfd10-cf3c-4ea9-90df-14b9a86ca7a2",
@@ -11660,8 +11660,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "rise",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "2695c87d-ca6a-4cb1-bc11-e2bf4f45bc12",
@@ -11741,8 +11741,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "endure",
-    "separability": "inseparable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "26f2d00e-1c74-464f-8079-3e5b8103db68",
@@ -14333,8 +14333,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "explode",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "2f1d38ac-0ed3-4a99-a3aa-f59501eeaf35",
@@ -14657,8 +14657,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "consider",
-    "separability": "inseparable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "305b7b1a-fb74-4ca8-9a8a-5230be1a3df7",
@@ -16547,8 +16547,8 @@
     "quote_author": null,
     "anchor_type": "song",
     "anchor_year": 1993,
-    "formal_synonym": "ascend",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "36a5fa7e-9c74-4aa9-8043-fc26b2347096",
@@ -16601,8 +16601,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "confuse",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "36c8ce9e-ab21-4e2d-ad3b-ddc969661b8e",
@@ -16818,7 +16818,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "379de033-8872-41de-819f-14718fdfa651",
@@ -16898,8 +16898,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "assume",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "37ed094a-20df-4a64-83ea-85f9586c32f6",
@@ -18248,8 +18248,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "surrender",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "3cda80d7-92d5-4884-a23d-04dc3a2915b1",
@@ -18654,7 +18654,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "3e76aa3f-701c-4d2c-a7d4-8d9d2bf65f0f",
@@ -19032,7 +19032,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "402f0a5d-c4fe-40d3-b7bd-0352b9350a8c",
@@ -19679,8 +19679,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "return",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "41e24022-8077-4ffc-98d4-0e8b3b62b257",
@@ -19841,8 +19841,8 @@
     "quote_author": null,
     "anchor_type": "song",
     "anchor_year": 1976,
-    "formal_synonym": "malfunction",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "424dc2cc-8134-423e-80b3-c3eb138964ee",
@@ -20165,8 +20165,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "select",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "4336aa51-2d1c-4d7f-b763-8dc36b493740",
@@ -20868,7 +20868,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "45cc50fe-e7b8-466b-95e8-444150d74741",
@@ -23028,7 +23028,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "4d1e85e9-52d4-4b92-8c50-aa4450209f7e",
@@ -23433,7 +23433,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "4e2068fa-a2e7-4849-baa4-c3a10c7632ed",
@@ -23999,8 +23999,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "determine",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "501ab8fb-dcd8-4519-9e47-1851d176e2f0",
@@ -24350,8 +24350,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "disembark",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "51f0deeb-095d-40e4-b77a-e63e740fccea",
@@ -25538,8 +25538,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "don",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "55d28787-2ea3-424e-aa3b-ca828a2cc2e1",
@@ -25808,8 +25808,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "complete",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "5681f147-59e8-41b6-beb9-7091a2856778",
@@ -26780,8 +26780,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "discard",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "5a687975-6fd7-4798-91c2-626c3b433163",
@@ -26915,8 +26915,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "sever",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "5ab2e94b-cc50-4f29-9641-0e3cbda3f2c9",
@@ -27131,8 +27131,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "reduce",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "5c02ea27-d494-41b0-b62d-fa77486a0e1d",
@@ -28103,8 +28103,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "emerge",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "60092af1-9626-434d-9160-c6a761d313ac",
@@ -28292,8 +28292,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "enter",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "606783e5-c4c1-4d9f-b022-762c9d6a969c",
@@ -28886,8 +28886,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "disintegrate",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "624efac2-2220-4439-8533-5bfd95f03366",
@@ -29156,8 +29156,8 @@
     "quote_author": null,
     "anchor_type": "song",
     "anchor_year": 1986,
-    "formal_synonym": "subsist",
-    "separability": "inseparable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "640e775f-87f7-4154-adff-ceeabaede6d7",
@@ -29210,8 +29210,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "appear",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "6419035c-8d62-4fa9-a367-c3891fe20816",
@@ -30641,8 +30641,8 @@
     "quote_author": "Lin-Manuel Miranda",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "discard",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "6979ca85-165a-4599-963b-2eb2e51156a3",
@@ -31532,8 +31532,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "discern",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "6ce8da4d-c853-41b5-8190-cce10d6b432e",
@@ -31910,8 +31910,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "remove",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "6e7475a3-09c1-4c9a-96c0-604d3cfe6861",
@@ -34961,8 +34961,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "restore",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "78dcc064-ba85-4547-a776-fd170a927ea2",
@@ -35529,7 +35529,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "7b396fd7-a1c6-4e91-bcc8-6c48b2f077e7",
@@ -36230,8 +36230,8 @@
     "quote_author": null,
     "anchor_type": "song",
     "anchor_year": 1979,
-    "formal_synonym": "distribute",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "7d1212e8-a534-440e-b065-31e376d31791",
@@ -36284,8 +36284,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "visit",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "7d3c04e9-e427-4964-b7bb-ae0e448c4e9e",
@@ -36311,8 +36311,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "escape",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "7d5528ca-b44b-402d-b7e7-450bdf342f28",
@@ -36582,7 +36582,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "7e8c9a10-c1a2-41ae-b731-1308079feeb0",
@@ -37823,8 +37823,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "collect",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "83edf5c2-0d94-4bad-8af3-07e94afd76ce",
@@ -40631,8 +40631,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "hasten",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "8d85e299-7567-4f8b-b7c9-6a05e06d968e",
@@ -42575,8 +42575,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "accumulate",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "93fa1192-2002-414a-915b-3e8bd3653368",
@@ -43142,8 +43142,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "invest",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "9720a739-95b6-46ca-beea-3fdc1ae55416",
@@ -46868,8 +46868,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "release",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "a4782300-58be-4589-96d1-8de7fc570a4b",
@@ -50676,7 +50676,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "b39ac4f4-e064-4645-9a7e-b73dbf5aea42",
@@ -51053,8 +51053,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "maintain",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "b4c927ae-a7a3-4f97-9c1f-ab209c5c15de",
@@ -52133,8 +52133,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "mention",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "b810d848-12eb-45de-a6a9-14817e901ae8",
@@ -52160,8 +52160,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "register",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "b86aa27c-cfa2-43a6-97de-54cf54dbfa13",
@@ -52457,8 +52457,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "extract",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "b907d693-8f64-41fc-b12b-5af87ea1c387",
@@ -53915,8 +53915,8 @@
     "quote_author": "Rick Astley",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "abandon",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "bcbf46ac-4ceb-4e05-99b0-6d31d1a3c581",
@@ -54212,8 +54212,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "flee",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "bdecae97-841d-4c44-828e-21f90f1ecc04",
@@ -54428,8 +54428,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "resolve",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "bedced50-7b09-4e02-9b31-ffe277eef2d6",
@@ -55211,8 +55211,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "decelerate",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "c0da0623-3ac3-49b7-bf03-1cbe1381e6a4",
@@ -55454,8 +55454,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "overcome",
-    "separability": "inseparable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "c1b27946-4af4-434f-a18f-09db7f13c70a",
@@ -55616,8 +55616,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "deactivate",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "c23128b4-282e-465d-a410-8c05e00d1ec0",
@@ -55697,8 +55697,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "erupt",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "c27ae1c5-cc64-479e-ab25-86ae83051969",
@@ -56534,8 +56534,8 @@
     "quote_author": "Eagles",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "examine",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "c4ea23c7-e852-4236-a520-4d967b548671",
@@ -56643,7 +56643,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "separable"
+    "separability": null
   },
   {
     "id": "c550bf6a-7659-40ea-bb96-91749c27f048",
@@ -56805,7 +56805,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "c579f648-04f0-4e93-9f13-c46fe300ae43",
@@ -57128,8 +57128,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "consult",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "c66bc801-0391-41e5-bfef-a607dfa272fb",
@@ -58910,8 +58910,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "encounter",
-    "separability": "inseparable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "cbef4841-bc19-4666-9e27-6265d5c467d8",
@@ -59234,8 +59234,8 @@
     "quote_author": "Neil Sedaka",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "separate",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "cd459440-ce36-401d-a3d7-f3801c7f7516",
@@ -59370,7 +59370,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "separable"
+    "separability": null
   },
   {
     "id": "ce0db65f-2240-4457-b70c-1ab3ff61d021",
@@ -60990,7 +60990,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "d3dcf157-f5b0-40db-8e52-4d7f77247d5f",
@@ -62393,8 +62393,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "withdraw",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "d94a0e55-1491-4c60-9b24-f492dc231f5a",
@@ -62745,7 +62745,7 @@
     "anchor_type": null,
     "anchor_year": null,
     "formal_synonym": null,
-    "separability": "intransitive"
+    "separability": null
   },
   {
     "id": "db21422e-a600-4a47-a54c-754bc38dcb65",
@@ -63338,8 +63338,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "support",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "dd73b72c-4214-49db-b04a-423872349491",
@@ -64121,8 +64121,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "postpone",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "e0e73171-7273-4268-85f2-2b148c152bd3",
@@ -65417,8 +65417,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "conclude",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "e653eb05-9693-4e1e-823d-1b9b1370d4a4",
@@ -69494,8 +69494,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "delay",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "f40d7aa6-f218-460f-9b73-5e64ec0e7869",
@@ -69953,8 +69953,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "assemble",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "f5cfca14-3222-46bd-ac41-6763611ec12c",
@@ -70439,8 +70439,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "expire",
-    "separability": "intransitive"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "f7f60260-2b3b-4312-8b5a-5b008bf9df73",
@@ -71168,8 +71168,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "deactivate",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "fb0ae0df-08bf-46be-8a35-84355db81c57",
@@ -72167,8 +72167,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "endure",
-    "separability": "inseparable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "fe7a6527-8200-4109-83e3-7b44830ed48f",
@@ -72410,8 +72410,8 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "pacify",
-    "separability": "separable"
+    "formal_synonym": null,
+    "separability": null
   },
   {
     "id": "ffef40cf-1bee-46f6-b60e-db607b49db68",

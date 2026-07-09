@@ -54,7 +54,7 @@ export function FlashCard({
 }: FlashCardProps) {
   const anchorIconChar = anchorIcon(anchorType);
   const formalLabel = formalSynonymLabel(formalSynonym);
-  const sepNote = separabilityNote(separability);
+  const sepNote = separabilityNote(separability, word);
   const isSongAnchor = anchorIsSong(anchorType);
   const [isFlipped, setIsFlipped] = useState(false);
   const { hapticsEnabled } = useSettingsStore();
@@ -224,8 +224,11 @@ export function FlashCard({
               <ParticleHint word={word} category={category} />
 
               {/* Mini-gramática del phrasal: sinónimo formal (cognado latino) y
-                  separabilidad. Enseña significado + registro + sintaxis. */}
-              {(formalLabel || sepNote) && (
+                  separabilidad. SOLO en phrasals monosémicos: en un polisémico
+                  (take off = despegar/quitarse/triunfar) tanto el sinónimo como
+                  la separabilidad dependen de la acepción, así que un único
+                  valor engañaría. */}
+              {!isMultiSense && (formalLabel || sepNote) && (
                 <View style={styles.phaveGrammar}>
                   {formalLabel && (
                     <Text style={styles.formalSynonym}>{formalLabel}</Text>

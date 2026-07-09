@@ -1,6 +1,12 @@
 #!/usr/bin/env npx tsx
 /**
- * Rellena, para cada phrasal verb (category = 'phave'), dos columnas nuevas:
+ * Rellena, para cada phrasal verb MONOSÉMICO (category = 'phave'), dos columnas:
+ *
+ * ⚠️ Solo se pueblan los phrasals MONOSÉMICOS. En un polisémico (take off =
+ * despegar / quitarse / triunfar) tanto el sinónimo formal como la
+ * separabilidad dependen de la acepción, y un único valor engañaría — así que
+ * a los polisémicos se les deja formal_synonym Y separability en null. La
+ * polisemia se detecta con analyzeTranslation (≥2 acepciones numeradas).
  *
  *  - formal_synonym: sinónimo FORMAL de UNA sola palabra (put off ≈ postpone).
  *    Se prima el cognado latino cuando existe (posponer, continuar, establecer…)
@@ -25,6 +31,7 @@
  * `npm run backup:supabase`, revisar el diff y commitear (ver CLAUDE.md).
  */
 import { createClient } from '@supabase/supabase-js';
+import { analyzeTranslation } from '../lib/vocabulary/translationParser';
 
 const APPLY = process.argv.includes('--apply');
 
@@ -199,17 +206,23 @@ async function main() {
     `\n${APPLY ? '🔧 APLICANDO' : '🔍 DRY-RUN'} — ${words.length} phrasal verbs\n`
   );
 
-  // Traer todas las filas phave para avisar de discrepancias (palabras del mapa
-  // que no existan, o phave en BD sin entrada en el mapa).
+  // Traer todas las filas phave (con la traducción, para detectar polisemia y
+  // avisar de discrepancias con el mapa).
   const { data: rows, error } = await supabase
     .from('vocabulary')
-    .select('id, word')
+    .select('id, word, translation')
     .eq('category', 'phave');
   if (error) {
     console.error('Error leyendo vocabulary:', error);
     process.exit(1);
   }
   const dbWords = new Set((rows || []).map((r) => r.word));
+  // Una palabra es polisémica si CUALQUIERA de sus filas tiene ≥2 acepciones.
+  const polysemous = new Set(
+    (rows || [])
+      .filter((r) => analyzeTranslation(r.translation || '').kind === 'senses')
+      .map((r) => r.word)
+  );
 
   const missingInDb = words.filter((w) => !dbWords.has(w));
   const missingInMap = [...dbWords].filter((w) => !GRAMMAR[w]);
@@ -221,18 +234,28 @@ async function main() {
   }
 
   let updated = 0;
+  let mono = 0;
+  let poly = 0;
   for (const word of words) {
     const g = GRAMMAR[word];
     if (!dbWords.has(word)) continue;
-    const formalLabel = g.formal ? `≈ ${g.formal} (formal)` : '(sin sinónimo)';
-    console.log(`• ${word.padEnd(16)} ${g.sep.padEnd(12)} ${formalLabel}`);
+    // Polisémico → sin mini-gramática (ambos null): un único valor engañaría.
+    const isPoly = polysemous.has(word);
+    const formal = isPoly ? null : g.formal;
+    const sep = isPoly ? null : g.sep;
+    if (isPoly) poly++;
+    else mono++;
+    const desc = isPoly
+      ? 'POLISÉMICO → null/null'
+      : `${g.sep.padEnd(12)} ${g.formal ? `≈ ${g.formal} (formal)` : '(sin sinónimo)'}`;
+    console.log(`• ${word.padEnd(16)} ${desc}`);
     if (APPLY) {
       // Actualiza TODAS las filas con esa palabra (una lema puede tener varias
       // filas por polisemia); el rasgo gramatical aplica a la lema entera.
       const { error: upErr, count } = await supabase
         .from('vocabulary')
         .update(
-          { formal_synonym: g.formal, separability: g.sep },
+          { formal_synonym: formal, separability: sep },
           { count: 'exact' }
         )
         .eq('category', 'phave')
@@ -245,13 +268,17 @@ async function main() {
     }
   }
 
-  const sepCount = (s: Sep) => words.filter((w) => GRAMMAR[w].sep === s).length;
-  const withFormal = words.filter((w) => GRAMMAR[w].formal).length;
+  const monoWords = words.filter((w) => dbWords.has(w) && !polysemous.has(w));
+  const sepCount = (s: Sep) => monoWords.filter((w) => GRAMMAR[w].sep === s).length;
+  const withFormal = monoWords.filter((w) => GRAMMAR[w].formal).length;
   console.log(
-    `\nResumen: ${sepCount('separable')} separables, ` +
+    `\nMonosémicos con mini-gramática: ${mono} · Polisémicos (null): ${poly}`
+  );
+  console.log(
+    `De los monosémicos: ${sepCount('separable')} separables, ` +
       `${sepCount('inseparable')} inseparables, ` +
       `${sepCount('intransitive')} intransitivos · ` +
-      `${withFormal}/${words.length} con sinónimo formal`
+      `${withFormal}/${mono} con sinónimo formal`
   );
   console.log(
     `\n${APPLY ? `✅ ${updated} filas actualizadas` : 'ℹ️  dry-run. Añade --apply.'}\n`
