@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { View, Text, StyleSheet, Pressable, SafeAreaView, Alert } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FlashCard } from '../../components/cards/FlashCard';
@@ -13,7 +13,14 @@ import { SimpleQuality, getEstimatedIntervals, cardFromRow } from '../../lib/srs
 
 export default function StudyScreen() {
   const { id, categories, mode, limit } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string }>();
-  const selectedReviewCategories = categories ? categories.split(',') : undefined;
+  // Memoizado: sin useMemo, `categories.split(',')` crea un array NUEVO en cada
+  // render, y como está en las deps del useEffect de carga, éste se re-dispara
+  // sin parar → "Maximum update depth exceeded" y la app se cuelga al repasar
+  // por categoría.
+  const selectedReviewCategories = useMemo(
+    () => (categories ? categories.split(',') : undefined),
+    [categories]
+  );
   const isTypingMode = mode === 'typing';
   const cardLimit = limit ? parseInt(limit, 10) : 20;
   const router = useRouter();
