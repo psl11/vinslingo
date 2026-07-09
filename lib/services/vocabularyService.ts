@@ -1,5 +1,5 @@
 import { supabase } from '../supabase';
-import { runQuery, runStatement, getDatabase } from '../database/client';
+import { runQuery, withTransaction, getSyncMetadata, setSyncMetadata } from '../database/client';
 import { VocabularyItem } from '../database/queries';
 import { extractParticle } from '../vocabulary/particleHints';
 
@@ -27,8 +27,36 @@ export interface SupabaseVocabulary {
   separability?: string;
 }
 
-export async function syncVocabularyFromSupabase(): Promise<number> {
+export interface VocabSyncOptions {
+  // Fuerza el sync aunque el último sea reciente (primera descarga, o resync
+  // forzado por una migración de esquema).
+  force?: boolean;
+  // Antigüedad máxima del último sync para considerarlo "fresco" y saltarlo.
+  maxAgeMs?: number;
+}
+
+// El contenido de vocabulario es editorial y cambia rara vez, así que por
+// defecto se sincroniza como mucho una vez al día.
+const VOCAB_SYNC_MAX_AGE_MS = 24 * 60 * 60 * 1000;
+
+// Devuelve el nº de filas sincronizadas, o -1 si se saltó por estar fresco.
+export async function syncVocabularyFromSupabase(
+  options: VocabSyncOptions = {}
+): Promise<number> {
+  const { force = false, maxAgeMs = VOCAB_SYNC_MAX_AGE_MS } = options;
   try {
+    // Gate temporal: si ya sincronizamos hace poco (y no se fuerza), saltamos
+    // tanto el fetch de red como la reescritura local entera. Tras una
+    // migración que añade columnas, client.ts borra 'vocabulary_last_sync', así
+    // que no hay marca → sincroniza (resync forzado por esquema).
+    if (!force) {
+      const last = await getSyncMetadata('vocabulary_last_sync');
+      if (last && Date.now() - Number(last) < maxAgeMs) {
+        console.log('⏭️ Vocabulary sync skipped (sincronizado hace poco)');
+        return -1;
+      }
+    }
+
     // Fetch todo el vocabulario de Supabase (sin filtro incremental).
     // PostgREST limita cada respuesta a 1000 filas, así que hay que paginar
     // con .range() o solo llegarían las primeras 1000 palabras de ~3250.
@@ -57,65 +85,69 @@ export async function syncVocabularyFromSupabase(): Promise<number> {
     if (data.length === 0) {
       return 0;
     }
-    
-    // Insertar/actualizar en SQLite
-    const db = await getDatabase();
+
     const syncStartedAt = Date.now();
-    let insertedCount = 0;
 
-    for (const item of data) {
+    // UNA sola transacción para las ~2684 filas + la purga. En la PWA cada
+    // runAsync suelto es un round-trip al worker de SQLite; batchearlo en un
+    // único commit es ~10-50x más rápido (y evita los "Error finalizing
+    // statement" por escrituras concurrentes sin batch).
+    await withTransaction(async (db) => {
+      for (const item of data) {
+        await db.runAsync(
+          `INSERT OR REPLACE INTO vocabulary (
+            id, word, translation, pronunciation, audio_url,
+            part_of_speech, cefr_level, category, frequency_rank,
+            example_sentence, example_translation,
+            example_sentence_2, example_translation_2,
+            song_lyric, song_lyric_translation, song_title, song_artist,
+            anchor_type, anchor_year, formal_synonym, separability,
+            updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          [
+            item.id,
+            item.word,
+            item.translation,
+            item.pronunciation || null,
+            item.audio_url || null,
+            item.part_of_speech || null,
+            item.cefr_level,
+            item.category || null,
+            item.frequency_rank || null,
+            item.example_sentence || null,
+            item.example_translation || null,
+            item.example_sentence_2 || null,
+            item.example_translation_2 || null,
+            item.song_lyric || null,
+            item.song_lyric_translation || null,
+            item.song_title || null,
+            item.song_artist || null,
+            item.anchor_type || null,
+            item.anchor_year || null,
+            item.formal_synonym || null,
+            item.separability || null,
+            syncStartedAt,
+          ]
+        );
+      }
+
+      // Purgar filas que ya no existen en el servidor (p.ej. duplicados
+      // eliminados): todo lo recién sincronizado tiene updated_at = syncStartedAt,
+      // así que lo anterior es contenido obsoleto. También se limpia el progreso
+      // huérfano que apunte a vocabulario borrado.
       await db.runAsync(
-        `INSERT OR REPLACE INTO vocabulary (
-          id, word, translation, pronunciation, audio_url,
-          part_of_speech, cefr_level, category, frequency_rank,
-          example_sentence, example_translation,
-          example_sentence_2, example_translation_2,
-          song_lyric, song_lyric_translation, song_title, song_artist,
-          anchor_type, anchor_year, formal_synonym, separability,
-          updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        [
-          item.id,
-          item.word,
-          item.translation,
-          item.pronunciation || null,
-          item.audio_url || null,
-          item.part_of_speech || null,
-          item.cefr_level,
-          item.category || null,
-          item.frequency_rank || null,
-          item.example_sentence || null,
-          item.example_translation || null,
-          item.example_sentence_2 || null,
-          item.example_translation_2 || null,
-          item.song_lyric || null,
-          item.song_lyric_translation || null,
-          item.song_title || null,
-          item.song_artist || null,
-          item.anchor_type || null,
-          item.anchor_year || null,
-          item.formal_synonym || null,
-          item.separability || null,
-          Date.now(),
-        ]
+        'DELETE FROM vocabulary WHERE updated_at IS NULL OR updated_at < ?',
+        [syncStartedAt]
       );
-      insertedCount++;
-    }
+      await db.runAsync(
+        'DELETE FROM user_vocabulary WHERE vocabulary_id NOT IN (SELECT id FROM vocabulary)'
+      );
+    });
 
-    // Purgar filas que ya no existen en el servidor (p.ej. duplicados
-    // eliminados): todo lo recién sincronizado tiene updated_at >= inicio
-    // del sync, así que lo anterior es contenido obsoleto. También se
-    // limpia el progreso huérfano que apunte a vocabulario borrado.
-    await db.runAsync(
-      'DELETE FROM vocabulary WHERE updated_at IS NULL OR updated_at < ?',
-      [syncStartedAt]
-    );
-    await db.runAsync(
-      'DELETE FROM user_vocabulary WHERE vocabulary_id NOT IN (SELECT id FROM vocabulary)'
-    );
+    await setSyncMetadata('vocabulary_last_sync', String(Date.now()));
 
-    console.log(`✅ Synced ${insertedCount} vocabulary items`);
-    return insertedCount;
+    console.log(`✅ Synced ${data.length} vocabulary items`);
+    return data.length;
   } catch (error) {
     console.error('Failed to sync vocabulary:', error);
     throw error;

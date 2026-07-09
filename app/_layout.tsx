@@ -44,13 +44,15 @@ function RootLayoutNav() {
         setOnlineStatus(isConnected);
         
         if (isConnected && localCount === 0) {
-          // Primera descarga: sin datos locales no hay app, hay que esperar
+          // Primera descarga: sin datos locales no hay app, hay que esperar.
+          // force: sin marca de sync todavía, hay que bajar sí o sí.
           setInitStatus('Descargando vocabulario...');
-          await syncVocabularyFromSupabase();
+          await syncVocabularyFromSupabase({ force: true });
         } else if (isConnected) {
           // Ya hay datos locales: arrancar al instante y sincronizar en
-          // segundo plano (antes se bloqueaba la UI en cada arranque en
-          // frío re-descargando todo el vocabulario).
+          // segundo plano. El sync está gateado (máx. 1/día salvo que una
+          // migración lo fuerce), así que en la mayoría de arranques no hace
+          // ni fetch de red ni reescritura local.
           (async () => {
             try {
               await syncVocabularyFromSupabase();

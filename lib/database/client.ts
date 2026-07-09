@@ -296,6 +296,22 @@ export async function getOne<T>(
   return database.getFirstAsync<T>(query, params);
 }
 
+// Lee/escribe una clave de sync_metadata (p.ej. 'vocabulary_last_sync').
+export async function getSyncMetadata(key: string): Promise<string | null> {
+  const row = await getOne<{ value: string }>(
+    'SELECT value FROM sync_metadata WHERE key = ?',
+    [key]
+  );
+  return row?.value ?? null;
+}
+
+export async function setSyncMetadata(key: string, value: string): Promise<void> {
+  await runStatement(
+    'INSERT OR REPLACE INTO sync_metadata (key, value, updated_at) VALUES (?, ?, ?)',
+    [key, value, Date.now()]
+  );
+}
+
 // Helper para transacciones
 export async function withTransaction(
   callback: (db: SQLite.SQLiteDatabase) => Promise<void>
