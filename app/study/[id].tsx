@@ -13,7 +13,7 @@ import { useUserStore } from '../../stores/useUserStore';
 import { SimpleQuality, getEstimatedIntervals, cardFromRow } from '../../lib/srs/fsrs';
 
 export default function StudyScreen() {
-  const { id, categories, mode, limit, particle } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string; particle?: string }>();
+  const { id, categories, mode, limit, particle, scope } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string; particle?: string; scope?: string }>();
   // Memoizado: sin useMemo, `categories.split(',')` crea un array NUEVO en cada
   // render, y como está en las deps del useEffect de carga, éste se re-dispara
   // sin parar → "Maximum update depth exceeded" y la app se cuelga al repasar
@@ -73,19 +73,27 @@ export default function StudyScreen() {
         setIsLoading(true);
         setNoCards(false);
         
-        const { getVocabularyForLesson, getDueVocabulary, getVocabularyByParticle } = await import('../../lib/services/vocabularyService');
+        const { getVocabularyForLesson, getDueVocabulary, getVocabularyByParticle, getMostFailedVocabulary } = await import('../../lib/services/vocabularyService');
 
         let cards;
         if (id === 'review') {
           cards = await getDueVocabulary(cardLimit, selectedCEFRLevels, selectedReviewCategories);
+        } else if (id === 'failed') {
+          // Cuestionario de "palabras más falladas". El scope refleja el toggle
+          // de la pantalla de listado (todas / solo no dominadas).
+          cards = await getMostFailedVocabulary({
+            limit: cardLimit,
+            cefrLevels: selectedCEFRLevels,
+            onlyNotMastered: scope === 'notmastered',
+          });
         } else if (particle) {
           cards = await getVocabularyByParticle(particle, cardLimit, selectedCEFRLevels);
         } else {
           cards = await getVocabularyForLesson(id || 'ngsl', cardLimit, selectedCEFRLevels);
         }
-        
+
         if (cards.length > 0) {
-          startSession(id === 'review' ? 'review' : 'lesson', cards);
+          startSession(id === 'review' || id === 'failed' ? 'review' : 'lesson', cards);
         } else {
           setNoCards(true);
         }
@@ -102,7 +110,7 @@ export default function StudyScreen() {
     return () => {
       endSession();
     };
-  }, [id, particle, selectedCEFRLevels, selectedReviewCategories]);
+  }, [id, particle, scope, selectedCEFRLevels, selectedReviewCategories]);
 
   const handleFlip = (flipped: boolean) => {
     setIsFlipped(flipped);

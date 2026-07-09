@@ -282,6 +282,41 @@ export async function searchVocabulary(query: string, limit: number = 50): Promi
   );
 }
 
+export interface FailedWordFilter {
+  // true = solo palabras aún NO dominadas (mastery < 3); false/undefined = todas
+  // las que se hayan fallado alguna vez (historial completo, incluso dominadas).
+  onlyNotMastered?: boolean;
+  cefrLevels?: string[];
+  limit?: number;
+}
+
+// "Palabras más falladas": las que el usuario ha fallado al menos una vez,
+// ordenadas por nº de fallos ↓ (desempate: menos dominadas primero, luego por
+// frecuencia). Para el listado (sin límite) y para el cuestionario (con límite).
+export async function getMostFailedVocabulary(
+  filter: FailedWordFilter = {}
+): Promise<SearchResult[]> {
+  const { onlyNotMastered, cefrLevels, limit } = filter;
+  let query = `SELECT v.*, uv.mastery_level, uv.times_correct, uv.times_incorrect
+     FROM vocabulary v
+     INNER JOIN user_vocabulary uv ON v.id = uv.vocabulary_id
+     WHERE uv.times_incorrect > 0`;
+  const params: (string | number)[] = [];
+  if (onlyNotMastered) {
+    query += ` AND uv.mastery_level < 3`;
+  }
+  if (cefrLevels && cefrLevels.length > 0) {
+    query += ` AND v.cefr_level IN (${cefrLevels.map(() => '?').join(', ')})`;
+    params.push(...cefrLevels);
+  }
+  query += ` ORDER BY uv.times_incorrect DESC, uv.mastery_level ASC, COALESCE(v.frequency_rank, 999999) ASC`;
+  if (limit && limit > 0) {
+    query += ` LIMIT ?`;
+    params.push(limit);
+  }
+  return runQuery<SearchResult>(query, params);
+}
+
 export async function getAllLearnedVocabulary(limit: number = 100, offset: number = 0): Promise<SearchResult[]> {
   return runQuery<SearchResult>(
     `SELECT v.*, uv.mastery_level, uv.times_correct, uv.times_incorrect

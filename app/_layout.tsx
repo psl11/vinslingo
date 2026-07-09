@@ -149,12 +149,19 @@ function RootLayoutNav() {
             presentation: 'fullScreenModal',
           }} 
         />
-        <Stack.Screen 
-          name="search" 
-          options={{ 
+        <Stack.Screen
+          name="search"
+          options={{
             headerShown: false,
             presentation: 'modal',
-          }} 
+          }}
+        />
+        <Stack.Screen
+          name="failed-words"
+          options={{
+            headerShown: false,
+            presentation: 'modal',
+          }}
         />
       </Stack>
     </>

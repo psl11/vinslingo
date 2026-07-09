@@ -184,6 +184,21 @@ export default function LearnScreen() {
         </View>
       </View>
 
+      {/* Acceso a "palabras más falladas": repaso de lo que más te cuesta. */}
+      <PressableScale
+        style={styles.failedCard}
+        onPress={() => router.push('/failed-words')}
+      >
+        <Text style={styles.failedEmoji}>🔥</Text>
+        <View style={styles.failedInfo}>
+          <Text style={styles.failedTitle}>Palabras más falladas</Text>
+          <Text style={styles.failedDescription}>
+            Las que más se te resisten, ordenadas por fallos
+          </Text>
+        </View>
+        <Text style={styles.failedChevron}>›</Text>
+      </PressableScale>
+
       <View style={styles.categories}>
         {categories.map((category) => {
           const progress = category.totalWords > 0 
@@ -655,6 +670,39 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: '#1F2937',
+  },
+  failedCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FEF2F2',
+    borderWidth: 1.5,
+    borderColor: '#FECACA',
+    borderRadius: 16,
+    padding: 16,
+    marginBottom: 20,
+  },
+  failedEmoji: {
+    fontSize: 28,
+    marginRight: 14,
+  },
+  failedInfo: {
+    flex: 1,
+  },
+  failedTitle: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#1F2937',
+  },
+  failedDescription: {
+    fontSize: 13,
+    color: '#6B7280',
+    marginTop: 2,
+  },
+  failedChevron: {
+    fontSize: 26,
+    color: '#DC2626',
+    fontWeight: '400',
+    marginLeft: 8,
   },
   particleSection: {
     marginTop: 16,
