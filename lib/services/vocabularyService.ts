@@ -1,6 +1,7 @@
 import { supabase } from '../supabase';
 import { runQuery, runStatement, getDatabase } from '../database/client';
 import { VocabularyItem } from '../database/queries';
+import { extractParticle } from '../vocabulary/particleHints';
 
 export interface SupabaseVocabulary {
   id: string;
@@ -162,6 +163,27 @@ export async function getVocabularyForLesson(
      LIMIT ?`,
     [category, limit]
   );
+}
+
+// Estudiar por partícula: agrupa los phrasal verbs con la misma partícula (up,
+// out, off…). Enseñar así — todos los "up" juntos — refuerza el patrón de la
+// partícula (Rudzka-Ostyn). Incluye el grupo completo (estudiados o no) para
+// que se vea el patrón, ordenado por frecuencia. La partícula se deriva de la
+// palabra, así que se filtra en JS (solo 150 phrasal, coste despreciable).
+export async function getVocabularyByParticle(
+  particle: string,
+  limit: number = 20,
+  cefrLevels?: string[]
+): Promise<VocabularyItem[]> {
+  let query = `SELECT v.* FROM vocabulary v WHERE v.category = 'phave'`;
+  const params: (string | number)[] = [];
+  if (cefrLevels && cefrLevels.length > 0) {
+    query += ` AND v.cefr_level IN (${cefrLevels.map(() => '?').join(', ')})`;
+    params.push(...cefrLevels);
+  }
+  query += ` ORDER BY v.frequency_rank ASC`;
+  const all = await runQuery<VocabularyItem>(query, params);
+  return all.filter((v) => extractParticle(v.word) === particle).slice(0, limit);
 }
 
 export async function getDueVocabulary(

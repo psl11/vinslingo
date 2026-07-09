@@ -5,6 +5,10 @@ import { useRouter } from 'expo-router';
 import { useFocusEffect } from 'expo-router';
 import { Card } from '../../components/ui/Card';
 import { useVocabularyStats } from '../../hooks/useVocabulary';
+import { KNOWN_PARTICLES } from '../../lib/vocabulary/particleHints';
+
+// Partículas con suficientes phrasal verbs para una sesión útil.
+const PARTICLE_CHIPS = KNOWN_PARTICLES.slice(0, 9); // up, out, on, off, down, in, back, over, away
 
 interface LessonCategory {
   id: string;
@@ -121,6 +125,13 @@ export default function LearnScreen() {
     });
   };
 
+  const handleStartByParticle = (particle: string) => {
+    router.push({
+      pathname: '/study/phave',
+      params: { particle, limit: String(cardsPerRound) },
+    });
+  };
+
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
@@ -219,6 +230,25 @@ export default function LearnScreen() {
                   <Text style={styles.modeButtonText}>Escribir</Text>
                 </PressableScale>
               </View>
+
+              {/* Estudiar por partícula: solo para phrasal verbs. Agrupa todos
+                  los "up", "out", etc. para reforzar el patrón de la partícula. */}
+              {category.id === 'phave' && (
+                <View style={styles.particleSection}>
+                  <Text style={styles.particleLabel}>🧲 Estudiar por partícula</Text>
+                  <View style={styles.particleRow}>
+                    {PARTICLE_CHIPS.map((p) => (
+                      <PressableScale
+                        key={p}
+                        style={styles.particleChip}
+                        onPress={() => handleStartByParticle(p)}
+                      >
+                        <Text style={styles.particleChipText}>{p}</Text>
+                      </PressableScale>
+                    ))}
+                  </View>
+                </View>
+              )}
             </Card>
           );
         })}
@@ -625,5 +655,36 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     color: '#1F2937',
+  },
+  particleSection: {
+    marginTop: 16,
+    paddingTop: 14,
+    borderTopWidth: 1,
+    borderTopColor: '#F3F4F6',
+  },
+  particleLabel: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#6B7280',
+    marginBottom: 10,
+  },
+  particleRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  particleChip: {
+    paddingVertical: 7,
+    paddingHorizontal: 14,
+    borderRadius: 999,
+    backgroundColor: '#F5F3FF',
+    borderWidth: 1.5,
+    borderColor: '#DDD6FE',
+  },
+  particleChipText: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#6D28D9',
+    textTransform: 'uppercase',
   },
 });

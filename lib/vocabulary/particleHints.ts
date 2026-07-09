@@ -27,15 +27,26 @@ const PARTICLE_HINTS: Record<string, string> = {
   into: 'La partícula INTO suele aportar la idea de entrar en algo o de transformarse en algo (get into, turn into, run into).',
 };
 
-// Extrae la partícula del phrasal verb y devuelve su pista, o null si no aplica.
-export function getParticleHint(word: string): string | null {
+// Extrae la partícula conocida del phrasal verb (la primera a partir de la 2ª
+// palabra; la 1ª es el verbo). Devuelve el token en minúsculas, o null.
+export function extractParticle(word: string): string | null {
   const tokens = word.toLowerCase().trim().split(/\s+/);
   if (tokens.length < 2) return null;
-  // La partícula es una de las palabras a partir de la segunda (no la primera,
-  // que es el verbo). Nos quedamos con la primera partícula conocida.
   for (let i = 1; i < tokens.length; i++) {
-    const hint = PARTICLE_HINTS[tokens[i]];
-    if (hint) return hint;
+    if (PARTICLE_HINTS[tokens[i]]) return tokens[i];
   }
   return null;
 }
+
+// Pista del truco para la partícula del phrasal verb, o null si no aplica.
+export function getParticleHint(word: string): string | null {
+  const particle = extractParticle(word);
+  return particle ? PARTICLE_HINTS[particle] : null;
+}
+
+// Lista de partículas conocidas (para el modo "estudiar por partícula"),
+// ordenadas de más a menos frecuente entre los phrasal verbs.
+export const KNOWN_PARTICLES = [
+  'up', 'out', 'on', 'off', 'down', 'in', 'back', 'over', 'away', 'through',
+  'into', 'apart', 'along', 'around', 'about',
+] as const;

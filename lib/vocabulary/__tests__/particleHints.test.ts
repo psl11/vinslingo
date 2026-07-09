@@ -1,4 +1,4 @@
-import { getParticleHint } from '../particleHints';
+import { getParticleHint, extractParticle } from '../particleHints';
 
 describe('getParticleHint', () => {
   it('devuelve la pista de la partícula final (give up → UP)', () => {
@@ -25,5 +25,24 @@ describe('getParticleHint', () => {
     expect(getParticleHint('productive')).toBeNull();
     expect(getParticleHint('make a decision')).toBeNull();
     expect(getParticleHint('look forward to')).toBeNull();
+  });
+});
+
+describe('extractParticle', () => {
+  it('extrae la partícula (para agrupar el modo "por partícula")', () => {
+    expect(extractParticle('set up')).toBe('up');
+    expect(extractParticle('turn off')).toBe('off');
+    expect(extractParticle('back up')).toBe('up'); // no toma el verbo "back"
+    expect(extractParticle('run into')).toBe('into');
+  });
+
+  it('normaliza mayúsculas y espacios', () => {
+    expect(extractParticle('  Give   UP  ')).toBe('up');
+  });
+
+  it('devuelve null cuando no hay partícula conocida tras el verbo', () => {
+    expect(extractParticle('productive')).toBeNull();
+    expect(extractParticle('out of the blue')).toBeNull(); // "out" es token 0
+    expect(extractParticle('look forward to')).toBeNull();
   });
 });
