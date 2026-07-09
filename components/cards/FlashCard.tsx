@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from 'react';
-import { View, Text, Pressable, StyleSheet, Linking, Platform, LayoutChangeEvent } from 'react-native';
+import { View, Text, Pressable, StyleSheet, Linking, Platform, LayoutChangeEvent, Animated, Easing } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useAudio } from '../../hooks/useAudio';
@@ -136,18 +136,43 @@ export function FlashCard({
     window.location.href = appUrl;
   };
 
+  // Fundido sutil al voltear: la cara actual se desvanece (con micro-zoom), se
+  // intercambia el contenido y la nueva cara aparece. Animated + native driver.
+  const flipAnim = useRef(new Animated.Value(1)).current;
+  const flipScale = flipAnim.interpolate({ inputRange: [0, 1], outputRange: [0.96, 1] });
+  const isAnimating = useRef(false);
+
   const handleFlip = () => {
+    if (isAnimating.current) return; // evita solapar animaciones con toques rápidos
+    isAnimating.current = true;
     if (hapticsEnabled) {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
-    
-    const newFlipped = !isFlipped;
-    setIsFlipped(newFlipped);
-    onFlip?.(newFlipped);
+    Animated.timing(flipAnim, {
+      toValue: 0,
+      duration: 120,
+      easing: Easing.in(Easing.quad),
+      useNativeDriver: true,
+    }).start(() => {
+      const newFlipped = !isFlipped;
+      setIsFlipped(newFlipped);
+      onFlip?.(newFlipped);
+      Animated.timing(flipAnim, {
+        toValue: 1,
+        duration: 160,
+        easing: Easing.out(Easing.quad),
+        useNativeDriver: true,
+      }).start(() => {
+        isAnimating.current = false;
+      });
+    });
   };
 
   return (
     <Pressable onPress={handleFlip} style={styles.container}>
+      <Animated.View
+        style={[styles.animatedFace, { opacity: flipAnim, transform: [{ scale: flipScale }] }]}
+      >
       {!isFlipped ? (
         /* Front of card - ENGLISH word */
         <View style={[styles.card, styles.cardFront]}>
@@ -241,6 +266,7 @@ export function FlashCard({
           </View>
         </View>
       )}
+      </Animated.View>
     </Pressable>
   );
 }
@@ -250,6 +276,10 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     alignSelf: 'center',
+  },
+  animatedFace: {
+    flex: 1,
+    width: '100%',
   },
   card: {
     position: 'absolute',

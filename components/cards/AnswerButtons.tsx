@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import React, { useRef, useEffect } from 'react';
+import { View, Text, Pressable, StyleSheet, Animated, Easing } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { SimpleQuality, formatInterval } from '../../lib/srs/fsrs';
 import { useSettingsStore } from '../../stores/useSettingsStore';
@@ -21,6 +21,17 @@ const BUTTON_CONFIG: { quality: SimpleQuality; label: string; color: string }[] 
 export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: AnswerButtonsProps) {
   const { hapticsEnabled } = useSettingsStore();
 
+  // Entrada sutil (fade + leve subida) al aparecer tras voltear la ficha.
+  const enter = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    Animated.timing(enter, {
+      toValue: 1,
+      duration: 220,
+      easing: Easing.out(Easing.quad),
+      useNativeDriver: true,
+    }).start();
+  }, [enter]);
+
   const handlePress = (quality: SimpleQuality) => {
     if (disabled) return;
     
@@ -36,7 +47,12 @@ export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: Answer
   };
 
   return (
-    <View style={styles.container}>
+    <Animated.View
+      style={[
+        styles.container,
+        { opacity: enter, transform: [{ translateY: enter.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] },
+      ]}
+    >
       {BUTTON_CONFIG
         .filter(({ quality }) => !(isRetry && (quality === 'easy' || quality === 'hard')))
         .map(({ quality, label, color }) => (
@@ -53,7 +69,7 @@ export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: Answer
           <Text style={styles.intervalText}>{formatInterval(intervals[quality])}</Text>
         </Pressable>
       ))}
-    </View>
+    </Animated.View>
   );
 }
 
