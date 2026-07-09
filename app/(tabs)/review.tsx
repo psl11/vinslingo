@@ -394,7 +394,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    paddingVertical: 14,
+    paddingVertical: 15,
     borderRadius: 12,
     backgroundColor: '#4F46E5',
   },
@@ -439,12 +439,12 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#7F1D1D',
     lineHeight: 18,
-    marginBottom: 14,
+    marginBottom: 16,
   },
   mistakesButton: {
     backgroundColor: '#DC2626',
     paddingVertical: 12,
-    borderRadius: 10,
+    borderRadius: 12,
     alignItems: 'center',
   },
   mistakesButtonDisabled: {

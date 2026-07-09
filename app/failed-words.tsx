@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
   },
   scopeChip: {
     flex: 1,
-    paddingVertical: 11,
+    paddingVertical: 12,
     borderRadius: 12,
     backgroundColor: '#FFFFFF',
     borderWidth: 1.5,
@@ -255,7 +255,7 @@ const styles = StyleSheet.create({
   },
   cardCountChip: {
     flex: 1,
-    paddingVertical: 11,
+    paddingVertical: 12,
     borderRadius: 12,
     backgroundColor: '#FFFFFF',
     borderWidth: 1.5,

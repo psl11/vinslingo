@@ -586,8 +586,8 @@ const styles = StyleSheet.create({
   },
   cardCountChip: {
     flex: 1,
-    paddingVertical: 10,
-    borderRadius: 10,
+    paddingVertical: 12,
+    borderRadius: 12,
     backgroundColor: '#FFFFFF',
     borderWidth: 1.5,
     borderColor: '#E5E7EB',
@@ -608,15 +608,15 @@ const styles = StyleSheet.create({
   modeButtons: {
     flexDirection: 'row',
     gap: 10,
-    marginTop: 14,
+    marginTop: 16,
   },
   modeButton: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 10,
-    borderRadius: 10,
+    paddingVertical: 12,
+    borderRadius: 12,
     backgroundColor: '#EEF2FF',
   },
   modeButtonTyping: {
@@ -628,12 +628,12 @@ const styles = StyleSheet.create({
   sourceFilterRow: {
     flexDirection: 'row',
     gap: 8,
-    marginBottom: 14,
+    marginBottom: 16,
   },
   sourceFilterChip: {
     flex: 1,
     paddingVertical: 8,
-    borderRadius: 10,
+    borderRadius: 12,
     backgroundColor: '#FFFFFF',
     borderWidth: 1.5,
     borderColor: '#E5E7EB',
@@ -664,7 +664,7 @@ const styles = StyleSheet.create({
   gapFillSubtitle: {
     fontSize: 14,
     color: '#6B7280',
-    marginBottom: 14,
+    marginBottom: 16,
   },
   modeButtonText: {
     fontSize: 14,
@@ -722,7 +722,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   particleChip: {
-    paddingVertical: 7,
+    paddingVertical: 8,
     paddingHorizontal: 14,
     borderRadius: 999,
     backgroundColor: '#F5F3FF',

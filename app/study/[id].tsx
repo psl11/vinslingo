@@ -470,7 +470,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#4F46E5',
     paddingHorizontal: 24,
     paddingVertical: 12,
-    borderRadius: 8,
+    borderRadius: 12,
   },
   backButtonText: {
     color: '#FFFFFF',
@@ -481,7 +481,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingTop: 8,
+    paddingTop: 12,
     paddingBottom: 16,
   },
   closeButton: {

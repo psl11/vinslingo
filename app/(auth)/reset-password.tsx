@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
   errorContainer: {
     backgroundColor: '#FEE2E2',
     padding: 12,
-    borderRadius: 8,
+    borderRadius: 12,
   },
   errorText: {
     color: '#DC2626',
