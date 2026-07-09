@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import React, { createContext, useContext, useEffect, useState, useCallback, useMemo } from 'react';
 import { Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
 import { useUserStore } from '../stores/useUserStore';
@@ -20,55 +20,22 @@ interface AuthActions {
   updatePassword: (newPassword: string) => Promise<{ error: Error | null }>;
 }
 
-export function useAuth(): AuthState & AuthActions {
+type AuthContextValue = AuthState & AuthActions;
+
+const AuthContext = createContext<AuthContextValue | null>(null);
+
+// Un único proveedor de auth para toda la app: monta UNA sola suscripción a
+// onAuthStateChange y comparte el estado. Antes cada llamada a useAuth() (6 en
+// la app) creaba su propia suscripción y su propio estado, que podían quedar
+// desincronizados y multiplicaban los eventos de auth.
+export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  
+
   const { setProfile, clearProfile } = useUserStore();
 
-  useEffect(() => {
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      
-      if (session?.user) {
-        loadUserProfile(session.user.id);
-      } else {
-        setIsLoading(false);
-      }
-    });
-
-    // Listen for auth changes.
-    // OJO: no hacer llamadas a supabase con await directamente dentro del
-    // callback — el cliente mantiene un lock interno mientras se ejecuta y
-    // puede provocar deadlock (limitación documentada de supabase-js v2).
-    // Por eso el trabajo async se difiere con setTimeout(0).
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (event, session) => {
-        console.log('🔐 Auth event:', event);
-        setSession(session);
-        setUser(session?.user ?? null);
-
-        if (event === 'SIGNED_IN' && session?.user) {
-          const userId = session.user.id;
-          setTimeout(() => {
-            loadUserProfile(userId);
-          }, 0);
-        } else if (event === 'SIGNED_OUT') {
-          clearProfile();
-          setIsLoading(false);
-        } else {
-          setIsLoading(false);
-        }
-      }
-    );
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  const loadUserProfile = async (userId: string) => {
+  const loadUserProfile = useCallback(async (userId: string) => {
     try {
       const { data, error } = await supabase
         .from('profiles')
@@ -114,15 +81,53 @@ export function useAuth(): AuthState & AuthActions {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [setProfile]);
+
+  useEffect(() => {
+    // Get initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+
+      if (session?.user) {
+        loadUserProfile(session.user.id);
+      } else {
+        setIsLoading(false);
+      }
+    });
+
+    // Listen for auth changes.
+    // OJO: no hacer llamadas a supabase con await directamente dentro del
+    // callback — el cliente mantiene un lock interno mientras se ejecuta y
+    // puede provocar deadlock (limitación documentada de supabase-js v2).
+    // Por eso el trabajo async se difiere con setTimeout(0).
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        console.log('🔐 Auth event:', event);
+        setSession(session);
+        setUser(session?.user ?? null);
+
+        if (event === 'SIGNED_IN' && session?.user) {
+          const userId = session.user.id;
+          setTimeout(() => {
+            loadUserProfile(userId);
+          }, 0);
+        } else if (event === 'SIGNED_OUT') {
+          clearProfile();
+          setIsLoading(false);
+        } else {
+          setIsLoading(false);
+        }
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, [loadUserProfile, clearProfile]);
 
   const signIn = useCallback(async (email: string, password: string) => {
     setIsLoading(true);
     try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
       return { error: error as Error | null };
     } catch (error) {
       return { error: error as Error };
@@ -137,11 +142,7 @@ export function useAuth(): AuthState & AuthActions {
       const { data, error } = await supabase.auth.signUp({
         email,
         password,
-        options: {
-          data: {
-            display_name: displayName,
-          },
-        },
+        options: { data: { display_name: displayName } },
       });
 
       if (!error && data.user) {
@@ -223,16 +224,29 @@ export function useAuth(): AuthState & AuthActions {
     }
   }, []);
 
-  return {
-    user,
-    session,
-    isLoading,
-    isAuthenticated: !!session,
-    signIn,
-    signInWithGoogle,
-    signUp,
-    signOut,
-    resetPassword,
-    updatePassword,
-  };
+  const value = useMemo<AuthContextValue>(
+    () => ({
+      user,
+      session,
+      isLoading,
+      isAuthenticated: !!session,
+      signIn,
+      signInWithGoogle,
+      signUp,
+      signOut,
+      resetPassword,
+      updatePassword,
+    }),
+    [user, session, isLoading, signIn, signInWithGoogle, signUp, signOut, resetPassword, updatePassword]
+  );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+}
+
+export function useAuth(): AuthContextValue {
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error('useAuth debe usarse dentro de <AuthProvider>');
+  }
+  return ctx;
 }

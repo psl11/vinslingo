@@ -7,10 +7,18 @@ import { getDatabase } from '../lib/database/client';
 import { syncVocabularyFromSupabase, getLocalVocabularyCount } from '../lib/services/vocabularyService';
 import { syncUserProgress } from '../lib/services/syncService';
 import { getPendingSyncItems } from '../lib/database/queries';
-import { useAuth } from '../hooks/useAuth';
+import { AuthProvider, useAuth } from '../hooks/useAuth';
 import { useSyncStore } from '../stores/useSyncStore';
 
 export default function RootLayout() {
+  return (
+    <AuthProvider>
+      <RootLayoutNav />
+    </AuthProvider>
+  );
+}
+
+function RootLayoutNav() {
   const [isInitializing, setIsInitializing] = useState(true);
   const [initStatus, setInitStatus] = useState('Iniciando...');
   const { isAuthenticated, isLoading: authLoading } = useAuth();
