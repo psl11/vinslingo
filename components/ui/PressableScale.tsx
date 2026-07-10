@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Pressable, Animated, StyleProp, ViewStyle } from 'react-native';
+import { useReduceMotion } from '../../hooks/useReduceMotion';
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
@@ -24,14 +25,17 @@ export function PressableScale({
   children,
 }: PressableScaleProps) {
   const scale = useRef(new Animated.Value(1)).current;
+  const reduceMotion = useReduceMotion();
 
-  const animateTo = (toValue: number) =>
+  const animateTo = (toValue: number) => {
+    if (reduceMotion) return; // sin feedback de escala si se pide menos movimiento
     Animated.spring(scale, {
       toValue,
       useNativeDriver: true,
       speed: 40,
       bounciness: 0,
     }).start();
+  };
 
   return (
     <AnimatedPressable

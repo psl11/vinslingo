@@ -1,7 +1,7 @@
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState, useRef } from 'react';
-import { View, Text, ActivityIndicator, StyleSheet, AppState } from 'react-native';
+import { View, Text, ActivityIndicator, StyleSheet, AppState, Platform } from 'react-native';
 import * as Network from 'expo-network';
 import { getDatabase } from '../lib/database/client';
 import { syncVocabularyFromSupabase, getLocalVocabularyCount } from '../lib/services/vocabularyService';
@@ -10,6 +10,7 @@ import { getPendingSyncItems } from '../lib/database/queries';
 import { AuthProvider, useAuth } from '../hooks/useAuth';
 import { useSyncStore } from '../stores/useSyncStore';
 import { colors, spacing, fontSize, fontWeight } from '../constants/theme';
+import { SyncStatusBanner } from '../components/ui/SyncStatusBanner';
 
 export default function RootLayout() {
   return (
@@ -109,6 +110,21 @@ function RootLayoutNav() {
     return () => subscription.remove();
   }, []);
 
+  // En web (PWA), reflejar los cambios de conexión en vivo (eventos online/offline
+  // del navegador) para que el banner de "sin conexión" sea inmediato. En nativo,
+  // el estado se refresca al arrancar y al volver a primer plano (arriba).
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    const update = () => setOnlineStatus(navigator.onLine);
+    update();
+    window.addEventListener('online', update);
+    window.addEventListener('offline', update);
+    return () => {
+      window.removeEventListener('online', update);
+      window.removeEventListener('offline', update);
+    };
+  }, [setOnlineStatus]);
+
   // Handle auth navigation
   useEffect(() => {
     if (isInitializing || authLoading) return;
@@ -140,8 +156,9 @@ function RootLayoutNav() {
   }
 
   return (
-    <>
+    <View style={styles.appRoot}>
       <StatusBar style="dark" />
+      <SyncStatusBanner />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
@@ -167,11 +184,14 @@ function RootLayoutNav() {
           }}
         />
       </Stack>
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  appRoot: {
+    flex: 1,
+  },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',

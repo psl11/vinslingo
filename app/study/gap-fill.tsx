@@ -117,7 +117,7 @@ export default function GapFillScreen() {
     return (
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.modeSelectContainer}>
-          <Pressable style={styles.backButton} onPress={() => router.back()}>
+          <Pressable style={styles.backButton} onPress={() => router.back()} hitSlop={12}>
             <Text style={styles.backButtonText}>← Volver</Text>
           </Pressable>
 
@@ -296,7 +296,7 @@ export default function GapFillScreen() {
       <View style={styles.studyContainer}>
         {/* Header */}
         <View style={styles.header}>
-          <Pressable onPress={() => router.back()}>
+          <Pressable onPress={() => router.back()} hitSlop={12}>
             <Text style={styles.closeButton}>✕</Text>
           </Pressable>
           <View style={styles.progressWrapper}>

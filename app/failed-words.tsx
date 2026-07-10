@@ -80,7 +80,7 @@ export default function FailedWordsScreen() {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Pressable onPress={() => router.back()} style={styles.backBtn}>
+        <Pressable onPress={() => router.back()} style={styles.backBtn} hitSlop={12}>
           <Text style={styles.backBtnText}>← Volver</Text>
         </Pressable>
         <Text style={styles.title}>🔥 Palabras más falladas</Text>

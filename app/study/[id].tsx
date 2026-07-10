@@ -349,7 +349,7 @@ export default function StudyScreen() {
     <SafeAreaView style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <Pressable onPress={handleClose} style={styles.closeButton}>
+        <Pressable onPress={handleClose} style={styles.closeButton} hitSlop={12}>
           <Text style={styles.closeText}>✕</Text>
         </Pressable>
         <View style={styles.progressContainer}>

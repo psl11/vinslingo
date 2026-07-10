@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text, StyleSheet, Animated, Easing } from 'react-native';
 import { colors, spacing, fontSize, fontWeight } from '../../constants/theme';
+import { useReduceMotion } from '../../hooks/useReduceMotion';
 
 interface ProgressBarProps {
   current: number;
@@ -26,14 +27,19 @@ export function ProgressBar({
   // despreciable en rendimiento. Arranca en el valor actual (sin animar el 1er
   // render).
   const anim = useRef(new Animated.Value(progress)).current;
+  const reduceMotion = useReduceMotion();
   useEffect(() => {
+    if (reduceMotion) {
+      anim.setValue(progress); // salto instantáneo, sin animar
+      return;
+    }
     Animated.timing(anim, {
       toValue: progress,
       duration: 300,
       easing: Easing.out(Easing.cubic),
       useNativeDriver: false,
     }).start();
-  }, [progress, anim]);
+  }, [progress, anim, reduceMotion]);
 
   const width = anim.interpolate({
     inputRange: [0, 100],

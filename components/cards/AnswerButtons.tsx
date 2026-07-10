@@ -5,6 +5,7 @@ import { PressableScale } from '../ui/PressableScale';
 import { SimpleQuality, formatInterval } from '../../lib/srs/fsrs';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
+import { useReduceMotion } from '../../hooks/useReduceMotion';
 
 interface AnswerButtonsProps {
   intervals: Record<SimpleQuality, number>;
@@ -22,17 +23,22 @@ const BUTTON_CONFIG: { quality: SimpleQuality; label: string; color: string }[] 
 
 export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: AnswerButtonsProps) {
   const { hapticsEnabled } = useSettingsStore();
+  const reduceMotion = useReduceMotion();
 
   // Entrada sutil (fade + leve subida) al aparecer tras voltear la ficha.
   const enter = useRef(new Animated.Value(0)).current;
   useEffect(() => {
+    if (reduceMotion) {
+      enter.setValue(1); // aparece sin animar
+      return;
+    }
     Animated.timing(enter, {
       toValue: 1,
       duration: 220,
       easing: Easing.out(Easing.quad),
       useNativeDriver: true,
     }).start();
-  }, [enter]);
+  }, [enter, reduceMotion]);
 
   const handlePress = (quality: SimpleQuality) => {
     if (disabled) return;

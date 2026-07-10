@@ -151,6 +151,10 @@ export function FlashCard({
   const flipScale = flipAnim.interpolate({ inputRange: [0, 1], outputRange: [0.96, 1] });
   const isAnimating = useRef(false);
 
+  // NOTA: el volteo se deja SIEMPRE animado a propósito. react-native-web reporta
+  // "reduce motion" de forma poco fiable (a veces true aunque el usuario no lo
+  // tenga), y atar una interacción core a esa señal rompería el giro. El fundido
+  // es sutil (280ms), no el tipo de movimiento que "reduce motion" debe eliminar.
   const handleFlip = () => {
     if (isAnimating.current) return; // evita solapar animaciones con toques rápidos
     isAnimating.current = true;
