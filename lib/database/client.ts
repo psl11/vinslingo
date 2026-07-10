@@ -150,6 +150,34 @@ async function runMigrations(): Promise<void> {
     console.log('Migration check:', error);
   }
 
+  // Reconciliación puntual del slang: la 2ª tanda se sembró con borrado +
+  // reinserción, cambiando los id de filas ya existentes. El sync incremental
+  // NO detecta filas borradas en el servidor, así que sin esto quedarían
+  // duplicados locales (id viejo huérfano + id nuevo). Forzamos UN full-resync
+  // por dispositivo borrando las marcas de agua. Desde entonces el seed usa id
+  // DETERMINISTAS (scripts/seed-slang.ts), así que no hará falta repetirlo salvo
+  // que se suba SLANG_RECONCILE_VERSION a propósito.
+  try {
+    const SLANG_RECONCILE_VERSION = 1;
+    const row = await db.getFirstAsync<{ value: string }>(
+      "SELECT value FROM sync_metadata WHERE key = 'slang_reconcile_version'"
+    );
+    const current = row ? parseInt(row.value, 10) : 0;
+    if (current < SLANG_RECONCILE_VERSION) {
+      await db.runAsync(
+        "DELETE FROM sync_metadata WHERE key IN ('vocabulary_last_sync', 'vocabulary_sync_watermark', 'vocabulary_last_full_sync')"
+      );
+      await db.runAsync(
+        "INSERT OR REPLACE INTO sync_metadata (key, value, updated_at) VALUES ('slang_reconcile_version', ?, ?)",
+        [String(SLANG_RECONCILE_VERSION), Date.now()]
+      );
+      needsResync = true;
+      console.log('✅ Slang reconcile - full resync forced');
+    }
+  } catch (error) {
+    console.log('Slang reconcile check:', error);
+  }
+
   // Migración FSRS: añadir columnas de estado del algoritmo a user_vocabulary.
   // (La tabla review_log se crea vía CREATE TABLE IF NOT EXISTS en LOCAL_SCHEMA,
   // que corre en cada init, así que cubre instalaciones nuevas y existentes.)

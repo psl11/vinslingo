@@ -16,7 +16,19 @@
  * npm run backup:supabase + revisar diff + commit.
  */
 import { createClient } from '@supabase/supabase-js';
-import { randomUUID } from 'crypto';
+import { createHash } from 'crypto';
+
+/**
+ * ID determinista (UUID v5-like) derivado de `categoría:word`. Clave para que
+ * re-ejecutar el seed NO cambie los id: el borrado+reinserción produce los
+ * mismos id, así que el sync incremental del cliente los actualiza en su sitio
+ * y nunca deja filas huérfanas/duplicadas. Debe seguir siendo estable: no
+ * cambiar la fórmula ni la clave sin forzar un full-resync.
+ */
+function detId(key: string): string {
+  const h = createHash('sha1').update(key).digest('hex');
+  return `${h.slice(0, 8)}-${h.slice(8, 12)}-5${h.slice(13, 16)}-8${h.slice(17, 20)}-${h.slice(20, 32)}`;
+}
 
 const APPLY = process.argv.includes('--apply');
 const supabase = createClient(
@@ -75,6 +87,46 @@ const BRITISH: Slang[] = [
   { word: 'twat', es: 'imbécil, gilipollas', reg: 'vulgar', ex: "Don't be a twat.", exEs: 'No seas gilipollas.' },
   { word: 'tosser', es: 'gilipollas', reg: 'vulgar', ex: 'What a tosser.', exEs: 'Vaya gilipollas.' },
   { word: 'knobhead', es: 'capullo, gilipollas', reg: 'vulgar', ex: "He's an absolute knobhead.", exEs: 'Es un capullo integral.' },
+  { word: 'gaffer', es: 'jefe (en el curro)', reg: 'casual', ex: 'The gaffer wants a word.', exEs: 'El jefe quiere hablar contigo.' },
+  { word: 'cracking', es: 'estupendo, genial', reg: 'casual', ex: 'It was a cracking match.', exEs: 'Fue un partidazo.' },
+  { word: 'proper', es: 'de verdad, muy (intensificador)', reg: 'casual', ex: "I'm proper hungry.", exEs: 'Tengo un hambre de verdad.' },
+  { word: 'jammy', es: 'con potra, suertudo', reg: 'casual', ex: 'You jammy git, you won again!', exEs: '¡Qué potra tienes, has vuelto a ganar!' },
+  { word: 'minted', es: 'forrado (de dinero)', reg: 'casual', ex: 'Her family is minted.', exEs: 'Su familia está forrada.' },
+  { word: 'blinding', es: 'genial, brutal', reg: 'casual', ex: 'That was a blinding goal.', exEs: 'Fue un golazo brutal.' },
+  { word: 'lush', es: 'delicioso; genial', reg: 'casual', ex: 'This cake is lush.', exEs: 'Este pastel está buenísimo.' },
+  { word: 'bevvy', es: 'bebida (alcohólica)', reg: 'casual', ex: 'Fancy a bevvy?', exEs: '¿Te apetece una copa?' },
+  { word: 'sesh', es: 'sesión de fiesta/copas', reg: 'casual', ex: 'We had a big sesh last night.', exEs: 'Anoche nos pegamos una buena juerga.' },
+  { word: 'banter', es: 'cachondeo, pique amistoso', reg: 'casual', ex: "Relax, it's just banter.", exEs: 'Tranquilo, es solo cachondeo.' },
+  { word: 'peckish', es: 'con algo de hambre', reg: 'casual', ex: "I'm feeling a bit peckish.", exEs: 'Tengo algo de hambre.' },
+  { word: 'wonky', es: 'torcido, que cojea/falla', reg: 'casual', ex: 'This table is a bit wonky.', exEs: 'Esta mesa cojea un poco.' },
+  { word: 'skive off', es: 'escaquearse, hacer pellas', reg: 'casual', ex: 'He skived off work today.', exEs: 'Hoy se escaqueó del trabajo.' },
+  { word: 'barmy', es: 'chiflado, majara', reg: 'casual', ex: "That's a barmy idea.", exEs: 'Esa idea es una locura.' },
+  { word: 'daft', es: 'tonto, bobo', reg: 'casual', ex: "Don't be daft.", exEs: 'No seas bobo.' },
+  { word: 'fit', es: 'atractivo, buenorro', reg: 'casual', ex: "He's well fit.", exEs: 'Está buenísimo.' },
+  { word: 'plastered', es: 'muy borracho', reg: 'casual', ex: 'He got plastered at the party.', exEs: 'Se puso ciego en la fiesta.' },
+  { word: 'knees-up', es: 'fiestón, juerga', reg: 'casual', ex: 'We had a proper knees-up.', exEs: 'Nos montamos un fiestón.' },
+  { word: 'nosh', es: 'comida, papeo', reg: 'casual', ex: "Let's get some nosh.", exEs: 'Vamos a por algo de papeo.' },
+  { word: 'brolly', es: 'paraguas', reg: 'casual', ex: "Take a brolly, it's chucking it down.", exEs: 'Llévate el paraguas, está diluviando.' },
+  { word: 'telly', es: 'la tele', reg: 'casual', ex: "There's nothing on the telly.", exEs: 'No hay nada en la tele.' },
+  { word: 'loo', es: 'el váter, el baño', reg: 'casual', ex: "Where's the loo?", exEs: '¿Dónde está el baño?' },
+  { word: 'bin', es: 'tirar a la basura', reg: 'casual', ex: 'Just bin it.', exEs: 'Tíralo a la basura.' },
+  { word: 'porkies', es: 'mentiras (de «porky pies» = lies)', reg: 'casual', ex: 'Stop telling porkies.', exEs: 'Deja de contar mentiras.' },
+  { word: 'codswallop', es: 'tonterías, paparruchas', reg: 'casual', ex: 'What a load of codswallop.', exEs: 'Menuda sarta de tonterías.' },
+  { word: 'gormless', es: 'pasmado, atontado', reg: 'casual', ex: 'He gave me a gormless look.', exEs: 'Me miró con cara de pasmado.' },
+  { word: 'numpty', es: 'zoquete, inútil (cariñoso)', reg: 'casual', ex: "You numpty, that's the wrong one.", exEs: 'Zoquete, ese no es.' },
+  { word: 'muppet', es: 'inútil, memo (cariñoso)', reg: 'casual', ex: "He's a bit of a muppet.", exEs: 'Es un poco memo.' },
+  { word: 'div', es: 'tonto, idiota', reg: 'casual', ex: "Don't be such a div.", exEs: 'No seas tan tonto.' },
+  { word: 'throw a wobbly', es: 'coger una pataleta/berrinche', reg: 'casual', ex: 'She threw a wobbly over nothing.', exEs: 'Cogió una pataleta por nada.' },
+  { word: 'chinwag', es: 'charla, cotorreo', reg: 'casual', ex: 'We had a good chinwag.', exEs: 'Nos echamos una buena charla.' },
+  { word: 'moreish', es: 'que engancha (comida)', reg: 'casual', ex: 'These crisps are so moreish.', exEs: 'Estas patatas enganchan que no veas.' },
+  { word: 'mardy', es: 'enfurruñado, gruñón', reg: 'casual', ex: "Don't be so mardy.", exEs: 'No te enfurruñes.' },
+  { word: 'cushty', es: 'genial, de lujo', reg: 'casual', ex: 'Sorted? Cushty.', exEs: '¿Listo? De lujo.' },
+  { word: 'lairy', es: 'chulesco, alborotador', reg: 'malsonante', ex: 'He gets lairy after a few drinks.', exEs: 'Se pone chulesco tras unas copas.' },
+  { word: 'pillock', es: 'idiota, memo', reg: 'malsonante', ex: 'You absolute pillock!', exEs: '¡Serás memo!' },
+  { word: 'arsehole', es: 'gilipollas', reg: 'vulgar', ex: "He's being an arsehole.", exEs: 'Se está portando como un gilipollas.' },
+  { word: 'bellend', es: 'gilipollas, capullo', reg: 'vulgar', ex: 'What an absolute bellend.', exEs: 'Menudo gilipollas.' },
+  { word: 'shite', es: 'mierda (variante de shit)', reg: 'vulgar', ex: 'This film is shite.', exEs: 'Esta peli es una mierda.' },
+  { word: 'minger', es: 'feo, callo (ofensivo, sobre el aspecto físico)', reg: 'casual', ex: "That's a bit of a minger.", exEs: 'Eso es bastante feo.' },
 ];
 
 const AMERICAN: Slang[] = [
@@ -118,6 +170,46 @@ const AMERICAN: Slang[] = [
   { word: 'dumbass', es: 'idiota, memo', reg: 'vulgar', ex: 'What a dumbass move.', exEs: 'Vaya idiotez.' },
   { word: 'asshole', es: 'gilipollas', reg: 'vulgar', ex: "He's a total asshole.", exEs: 'Es un gilipollas de manual.' },
   { word: 'dickhead', es: 'capullo, gilipollas', reg: 'vulgar', ex: 'Total dickhead.', exEs: 'Un capullo integral.' },
+  { word: "y'all", es: 'vosotros, todos (sur de EE. UU.)', reg: 'casual', ex: "Are y'all coming tonight?", exEs: '¿Venís todos esta noche?' },
+  { word: 'gnarly', es: 'brutal; o chungo, feo', reg: 'casual', ex: 'That was a gnarly crash.', exEs: 'Fue un accidente muy bestia.' },
+  { word: 'stoked', es: 'encantado, emocionado', reg: 'casual', ex: "I'm so stoked for the trip.", exEs: 'Estoy emocionadísimo por el viaje.' },
+  { word: 'bummer', es: 'qué faena, qué pena', reg: 'casual', ex: 'No tickets left? Bummer.', exEs: '¿No quedan entradas? Qué faena.' },
+  { word: 'gig', es: 'bolo; curro puntual', reg: 'casual', ex: 'I picked up a weekend gig.', exEs: 'Pillé un curro para el finde.' },
+  { word: 'rip-off', es: 'timo, estafa', reg: 'casual', ex: 'Twenty bucks? What a rip-off.', exEs: '¿Veinte pavos? Menudo timo.' },
+  { word: 'cheesy', es: 'cursi, hortera', reg: 'casual', ex: "It's a cheesy rom-com.", exEs: 'Es una comedia romántica muy cursi.' },
+  { word: 'corny', es: 'cursi, malo (chiste)', reg: 'casual', ex: 'That joke was so corny.', exEs: 'Ese chiste fue malísimo.' },
+  { word: 'lame', es: 'soso, patético', reg: 'casual', ex: 'The party was kinda lame.', exEs: 'La fiesta fue un poco sosa.' },
+  { word: 'wing it', es: 'improvisar', reg: 'casual', ex: "I didn't study, I'll just wing it.", exEs: 'No estudié, ya improvisaré.' },
+  { word: 'hit up', es: 'contactar; pasarse por', reg: 'casual', ex: "Hit me up when you're free.", exEs: 'Escríbeme cuando estés libre.' },
+  { word: 'grub', es: 'comida, papeo', reg: 'casual', ex: "Let's grab some grub.", exEs: 'Vamos a por algo de papeo.' },
+  { word: 'dough', es: 'pasta (dinero)', reg: 'casual', ex: "I'm low on dough.", exEs: 'Ando corto de pasta.' },
+  { word: 'loaded', es: 'forrado (de dinero)', reg: 'casual', ex: 'His parents are loaded.', exEs: 'Sus padres están forrados.' },
+  { word: 'broke', es: 'sin blanca, pelado', reg: 'casual', ex: "I'm totally broke.", exEs: 'Estoy sin un duro.' },
+  { word: 'tight', es: '(1) tacaño (2) muy amigos (3) genial', reg: 'casual', ex: "We've been tight since school.", exEs: 'Somos muy amigos desde el cole.' },
+  { word: 'buzzed', es: 'achispado', reg: 'casual', ex: "I'm a little buzzed.", exEs: 'Estoy un poco achispado.' },
+  { word: 'tipsy', es: 'piripi, achispado', reg: 'casual', ex: 'She got tipsy after one glass.', exEs: 'Se puso piripi con una copa.' },
+  { word: 'dip', es: 'largarse, irse', reg: 'casual', ex: "It's late, let's dip.", exEs: 'Es tarde, larguémonos.' },
+  { word: 'hooked', es: 'enganchado', reg: 'casual', ex: "I'm hooked on this show.", exEs: 'Estoy enganchado a esta serie.' },
+  { word: 'binge', es: 'darse un atracón (ver/comer)', reg: 'casual', ex: 'We binged the whole season.', exEs: 'Nos ventilamos la temporada entera.' },
+  { word: 'crush', es: 'estar colado por alguien', reg: 'casual', ex: 'I have a crush on her.', exEs: 'Estoy colado por ella.' },
+  { word: 'cringe', es: 'vergüenza ajena', reg: 'casual', ex: "That's so cringe.", exEs: 'Eso da mucha vergüenza ajena.' },
+  { word: 'vibe', es: 'rollo, buena onda', reg: 'casual', ex: 'I love the vibe here.', exEs: 'Me encanta el rollo de aquí.' },
+  { word: 'slay', es: 'arrasar, bordarlo', reg: 'casual', ex: 'You totally slayed that.', exEs: 'Lo bordaste totalmente.' },
+  { word: 'bet', es: 'vale, hecho (afirmación)', reg: 'casual', ex: 'Wanna go? — Bet.', exEs: '¿Vamos? — Hecho.' },
+  { word: 'deadass', es: 'en serio, de verdad', reg: 'casual', ex: 'Deadass, it really happened.', exEs: 'En serio, pasó de verdad.' },
+  { word: 'extra', es: 'exagerado, dramático', reg: 'casual', ex: "She's being so extra.", exEs: 'Está siendo súper exagerada.' },
+  { word: 'basic', es: 'del montón, poco original', reg: 'casual', ex: 'That outfit is so basic.', exEs: 'Ese look es súper del montón.' },
+  { word: 'simp', es: 'baboso (que se rebaja por alguien)', reg: 'casual', ex: 'Stop being a simp.', exEs: 'Deja de hacer el baboso.' },
+  { word: 'glow up', es: 'mejora notable (de aspecto)', reg: 'casual', ex: 'He had a serious glow up.', exEs: 'Ha pegado un cambiazo tremendo.' },
+  { word: 'beef', es: 'bronca, rencilla', reg: 'casual', ex: 'Those two have beef.', exEs: 'Esos dos tienen movida.' },
+  { word: 'throw shade', es: 'soltar pullas, criticar de reojo', reg: 'casual', ex: "She's throwing shade at me.", exEs: 'Me está soltando pullas.' },
+  { word: 'hustle', es: 'currar duro; buscarse la vida', reg: 'casual', ex: "He's got a side hustle.", exEs: 'Tiene un curro extra por su cuenta.' },
+  { word: 'kickass', es: 'genial, con caña', reg: 'casual', ex: 'That was a kickass show.', exEs: 'Fue un conciertazo brutal.' },
+  { word: 'hell yeah', es: '¡claro que sí!, ¡toma ya!', reg: 'casual', ex: 'Free pizza? Hell yeah!', exEs: '¿Pizza gratis? ¡Toma ya!' },
+  { word: 'jerk', es: 'imbécil, idiota (leve)', reg: 'casual', ex: "Don't be a jerk.", exEs: 'No seas imbécil.' },
+  { word: 'douchebag', es: 'imbécil, creído', reg: 'vulgar', ex: 'What a douchebag.', exEs: 'Menudo imbécil.' },
+  { word: 'prick', es: 'capullo, gilipollas', reg: 'vulgar', ex: "He's such a prick.", exEs: 'Es un capullo.' },
+  { word: 'son of a bitch', es: 'hijo de puta, cabrón', reg: 'vulgar', ex: 'That son of a bitch lied to me.', exEs: 'Ese cabrón me mintió.' },
 ];
 
 // Trampas UK↔US (mismo término, sentido distinto). Van como confusing_pair
@@ -134,7 +226,7 @@ const TRAPS: { word: string; translation: string }[] = [
 
 function slangRow(s: Slang, category: string, rank: number) {
   return {
-    id: randomUUID(),
+    id: detId(`${category}:${s.word}`),
     word: s.word,
     translation: `${s.es}${regNote[s.reg]}`,
     cefr_level: 'B2',
@@ -149,7 +241,7 @@ async function main() {
   const british = BRITISH.map((s, i) => slangRow(s, 'british_slang', i + 1));
   const american = AMERICAN.map((s, i) => slangRow(s, 'american_slang', i + 1));
   const traps = TRAPS.map((t) => ({
-    id: randomUUID(),
+    id: detId(`confusing_pair:${t.word}`),
     word: t.word,
     translation: t.translation,
     cefr_level: 'B2',
