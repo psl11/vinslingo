@@ -115,6 +115,24 @@ export default function LearnScreen() {
       completedWords: stats?.learnedByCategory?.find(c => c.category === 'collocation')?.count ?? 0,
       cefrLevel: 'A1-B2',
     },
+    {
+      id: 'british_slang',
+      title: 'Slang británico',
+      emoji: '🇬🇧',
+      description: 'Jerga del día a día en UK',
+      totalWords: stats?.byCategory.find(c => c.category === 'british_slang')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'british_slang')?.count ?? 0,
+      cefrLevel: 'B2',
+    },
+    {
+      id: 'american_slang',
+      title: 'Slang americano',
+      emoji: '🇺🇸',
+      description: 'Jerga del día a día en EE. UU.',
+      totalWords: stats?.byCategory.find(c => c.category === 'american_slang')?.count ?? 0,
+      completedWords: stats?.learnedByCategory?.find(c => c.category === 'american_slang')?.count ?? 0,
+      cefrLevel: 'B2',
+    },
   ];
 
   const handleStartLesson = (categoryId: string, typingMode = false) => {

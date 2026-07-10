@@ -27,6 +27,8 @@ const CATEGORIES = [
   { id: 'expression', label: 'Expresiones', emoji: '💬' },
   { id: 'confusing_pair', label: 'Confusing Pairs', emoji: '🔀' },
   { id: 'collocation', label: 'Collocations', emoji: '🧩' },
+  { id: 'british_slang', label: 'Slang UK', emoji: '🇬🇧' },
+  { id: 'american_slang', label: 'Slang US', emoji: '🇺🇸' },
 ];
 
 export default function ReviewScreen() {

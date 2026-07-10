@@ -57,6 +57,22 @@ Reglas importantes (ver [`phaveGrammar.ts`](../lib/vocabulary/phaveGrammar.ts)):
   (dry-run / `--apply`). Tras aplicar: `npm run backup:supabase` + commit (ver
   regla de backup en [`CLAUDE.md`](../CLAUDE.md)).
 
+## Slang británico y americano
+
+Dos categorías de vocabulario, **`british_slang`** y **`american_slang`** (~40
+cada una), con la jerga del día a día etiquetada por registro en la traducción:
+casual (sin nota), `(malsonante)` y `(vulgar)`. Nivel CEFR B2. Se excluyen
+insultos contra grupos protegidos; sí se incluye profanidad común con aviso.
+Además, un puñado de **trampas UK↔US** (mismo término, sentido distinto:
+*pissed*, *fanny*, *fag*, *pants*, *rubber*, *bum*, *piss off*) como
+`confusing_pair`.
+
+- Contenido curado contra bibliografía de referencia (Green's Dictionary of
+  Slang, New Partridge, corpora COCA/BNC/GloWbE para vigencia y región).
+- Generado con [`scripts/seed-slang.ts`](../scripts/seed-slang.ts) (dry-run /
+  `--apply`; idempotente). Tras aplicar: `npm run backup:supabase` + commit.
+- Las categorías están cableadas en el tab Aprender, Repasar y el buscador.
+
 ## Ancla (canción/película/libro)
 
 Cada phrasal verb puede llevar un "ancla": un título famoso que contiene el

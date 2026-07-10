@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-09T17:45:14.480Z",
+  "generated_at": "2026-07-10T16:14:48.242Z",
   "supabase_url": "https://qsdzoelgqyymtwublxoq.supabase.co",
   "tables": {
-    "vocabulary": 2684,
+    "vocabulary": 2771,
     "songs": 309,
     "song_vocabulary": 320,
     "artists": 257,

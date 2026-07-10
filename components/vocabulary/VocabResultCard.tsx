@@ -40,6 +40,8 @@ const CATEGORY_LABELS: Record<string, string> = {
   expression: 'Expresiones',
   confusing_pair: 'Confusing Pairs',
   collocation: 'Collocations',
+  british_slang: 'Slang británico',
+  american_slang: 'Slang americano',
 };
 
 export function getMasteryInfo(level?: number): { label: string; color: string; bg: string } {
