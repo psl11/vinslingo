@@ -59,8 +59,9 @@ Reglas importantes (ver [`phaveGrammar.ts`](../lib/vocabulary/phaveGrammar.ts)):
 
 ## Slang británico y americano
 
-Dos categorías de vocabulario, **`british_slang`** y **`american_slang`** (~80
-cada una), con la jerga del día a día etiquetada por registro en la traducción:
+Dos categorías de vocabulario, **`british_slang`** y **`american_slang`** (~120
+cada una: coloquial clásico, MLE británico y Gen-Z ya asentado), con la jerga del
+día a día etiquetada por registro en la traducción:
 casual (sin nota), `(malsonante)` y `(vulgar)`. Nivel CEFR B2. Se excluyen
 insultos contra grupos protegidos; sí se incluye profanidad común con aviso.
 Además, un puñado de **trampas UK↔US** (mismo término, sentido distinto:
