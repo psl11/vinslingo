@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator, Platform } from 'react-native';
 import { confirmAction } from '../../lib/utils/confirm';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { useUserStore } from '../../stores/useUserStore';
@@ -208,6 +208,29 @@ export default function ProfileScreen() {
         </View>
       </Card>
 
+      {/* Atajos de teclado (solo en web/desktop) */}
+      {Platform.OS === 'web' && (
+        <Card style={styles.shortcutsCard}>
+          <Text style={styles.sectionTitle}>⌨️ Atajos de teclado</Text>
+          <Text style={styles.shortcutsHint}>
+            Al estudiar en el ordenador, para ir más rápido:
+          </Text>
+          {[
+            ['Espacio', 'Girar la tarjeta'],
+            ['1 / 2 / 3 / 4', 'Otra vez / Difícil / Bien / Fácil'],
+            ['Espacio (con respuesta visible)', 'Bien'],
+            ['Enter (modo escribir)', 'Comprobar / Continuar'],
+          ].map(([key, desc]) => (
+            <View key={key} style={styles.shortcutRow}>
+              <View style={styles.shortcutKey}>
+                <Text style={styles.shortcutKeyText}>{key}</Text>
+              </View>
+              <Text style={styles.shortcutDesc}>{desc}</Text>
+            </View>
+          ))}
+        </Card>
+      )}
+
       {/* Sign Out */}
       <Pressable style={styles.signOutButton} onPress={handleSignOut}>
         <Text style={styles.signOutText}>🚪 Cerrar Sesión</Text>
@@ -324,6 +347,39 @@ const styles = StyleSheet.create({
   },
   settingsCard: {
     marginBottom: spacing.xxl,
+  },
+  shortcutsCard: {
+    marginBottom: spacing.xxl,
+  },
+  shortcutsHint: {
+    fontSize: fontSize.sm,
+    color: colors.textSecondary,
+    marginTop: -spacing.sm,
+    marginBottom: spacing.lg,
+  },
+  shortcutRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: spacing.md,
+    paddingVertical: spacing.sm,
+  },
+  shortcutKey: {
+    backgroundColor: colors.surfaceSubtle,
+    borderRadius: radius.sm,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: spacing.xs,
+    minWidth: 44,
+    alignItems: 'center',
+  },
+  shortcutKeyText: {
+    fontSize: fontSize.xs,
+    fontWeight: fontWeight.bold,
+    color: colors.textStrong,
+  },
+  shortcutDesc: {
+    flex: 1,
+    fontSize: fontSize.base,
+    color: colors.textPrimary,
   },
   settingRow: {
     flexDirection: 'row',

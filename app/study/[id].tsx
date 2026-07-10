@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { View, Text, StyleSheet, Pressable, SafeAreaView } from 'react-native';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { View, Text, StyleSheet, Pressable, SafeAreaView, Platform } from 'react-native';
 import { confirmAction } from '../../lib/utils/confirm';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { FlashCard } from '../../components/cards/FlashCard';
@@ -161,6 +161,39 @@ export default function StudyScreen() {
       setShowSummary(true);
     }
   };
+
+  // Atajos de teclado (solo web/desktop): valorar la tarjeta ya volteada.
+  // 1/2/3/4 = Otra vez/Difícil/Bien/Fácil; Espacio o Enter = Bien (respuesta
+  // más común). El volteo (Espacio con la tarjeta sin girar) lo maneja FlashCard.
+  // Refs para no re-suscribir el listener en cada render y evitar closures viejas.
+  const handleAnswerRef = useRef(handleAnswer);
+  handleAnswerRef.current = handleAnswer;
+  const isFlippedRef = useRef(isFlipped);
+  isFlippedRef.current = isFlipped;
+  const isRetryRef = useRef(isRetry);
+  isRetryRef.current = isRetry;
+
+  useEffect(() => {
+    if (Platform.OS !== 'web' || isTypingMode) return;
+    const KEY_QUALITY: Record<string, SimpleQuality> = {
+      '1': 'again',
+      '2': 'hard',
+      '3': 'good',
+      '4': 'easy',
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (!isFlippedRef.current) return; // sin girar: el flip lo maneja FlashCard
+      let quality: SimpleQuality | undefined = KEY_QUALITY[e.key];
+      if (!quality && (e.code === 'Space' || e.key === 'Enter')) quality = 'good';
+      if (!quality) return;
+      // En retry solo se muestran Otra vez/Bien: ignorar Difícil/Fácil.
+      if (isRetryRef.current && (quality === 'hard' || quality === 'easy')) return;
+      e.preventDefault();
+      handleAnswerRef.current(quality);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isTypingMode]);
 
   const saveCardProgress = async (quality: SimpleQuality, responseTimeMs: number) => {
     if (!currentCard) {

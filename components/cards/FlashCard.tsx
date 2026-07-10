@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react';
+import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet, Linking, Platform, LayoutChangeEvent, Animated, Easing } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
@@ -180,6 +180,23 @@ export function FlashCard({
       });
     });
   };
+
+  // Atajo de teclado (solo web/desktop): Espacio o Enter voltea la tarjeta del
+  // anverso al reverso. Ya volteada, las valoraciones las maneja la pantalla de
+  // estudio (1-4 / Espacio), así que aquí solo actuamos si NO está girada.
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (isFlipped) return;
+      if (e.code === 'Space' || e.key === 'Enter') {
+        e.preventDefault();
+        handleFlip();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFlipped]);
 
   return (
     <Pressable onPress={handleFlip} style={styles.container}>

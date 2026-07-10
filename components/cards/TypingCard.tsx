@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, TextInput, StyleSheet, Keyboard } from 'react-native';
+import { View, Text, TextInput, StyleSheet, Keyboard, Platform } from 'react-native';
 import { PressableScale } from '../ui/PressableScale';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
@@ -68,6 +68,23 @@ export function TypingCard({
     if (!matchResult) return;
     onResult(matchResult, input, hintLevel);
   };
+
+  // Atajo (solo web): con la respuesta ya comprobada (correcta/casi), Enter
+  // continúa a la siguiente. Antes de comprobar, Enter lo maneja el propio input
+  // (onSubmitEditing). En el caso "incorrecto" hay dos botones, así que ahí no
+  // se mapea Enter (se elige con el ratón/toque).
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (submitted && matchResult && matchResult !== 'wrong' && e.key === 'Enter') {
+        e.preventDefault();
+        handleContinue();
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [submitted, matchResult]);
 
   // Words to always show in full in hints (connectors, prepositions etc.)
   const ALWAYS_REVEAL = ['vs', 'to', 'a', 'the', 'of', 'in', 'on', 'up', 'out', 'off', 'for', 'at', 'by', 'an'];
