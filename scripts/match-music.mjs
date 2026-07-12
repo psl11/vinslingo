@@ -123,6 +123,9 @@ for (const s of songs) {
     for (let i = 0; i < realLines.length; i++) {
       if (re.test(realLines[i].toLowerCase().replace(/[’]/g, "'"))) { lineText = realLines[i].trim(); lineIdx = i; break; }
     }
+    // Sin línea única localizable (match que cruza líneas) → descartar: sería un
+    // contexto vacío y de baja precisión.
+    if (lineIdx === -1) continue;
     matches.push({ songN: s.n, title: s.title, artist: primaryArtist(s.artist), vid: v.id, word: v.word, cat: v.category, cefr: v.cefr_level, line: lineText, lineIdx });
   }
 }
@@ -193,14 +196,21 @@ if (APPLY) {
   }
 
   // 2) canciones (source='user' para separarlas del seed genérico).
+  // Reutilizar id de canciones ya existentes (hay unique (artist_id,title): si
+  // una de tus canciones coincide con una del seed, la adoptamos y la marcamos
+  // source='user' en vez de duplicarla).
+  const { data: existingSongs, error: esErr } = await supabase.from('songs').select('id,artist_id,title');
+  if (esErr) { console.error('songs select', esErr); process.exit(1); }
+  const songKeyToId = new Map(existingSongs.map((s) => [`${s.artist_id}|${s.title}`, s.id]));
   const songIdByN = new Map();
   const songRows = songs.map((s) => {
     const name = primaryArtist(s.artist);
-    const id = detId(`song:${name.toLowerCase().trim()}|${s.title.toLowerCase().trim()}`);
+    const aid = nameToId.get(name.toLowerCase().trim());
+    const id = songKeyToId.get(`${aid}|${s.title}`) || detId(`song:${name.toLowerCase().trim()}|${s.title.toLowerCase().trim()}`);
     songIdByN.set(s.n, id);
     // lyrics_excerpt='' a propósito: no guardamos letra en songs (el contexto va
     // en song_vocabulary.line_text). '' satisface un posible NOT NULL sin texto.
-    return { id, artist_id: nameToId.get(name.toLowerCase().trim()), title: s.title, source: 'user', lyrics_excerpt: '' };
+    return { id, artist_id: aid, title: s.title, source: 'user', lyrics_excerpt: '' };
   });
   {
     const { error } = await supabase.from('songs').upsert(songRows, { onConflict: 'id' });
