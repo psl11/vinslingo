@@ -14,6 +14,7 @@ const APPLY = process.argv.includes('--apply');
 const JUICY = new Set(['phave', 'idiom', 'expression', 'collocation', 'false_friend', 'confusing_pair', 'british_slang', 'american_slang']);
 const B2PLUS = new Set(['B2', 'C1', 'C2']);
 const B1PLUS = new Set(['B1', 'B2', 'C1', 'C2']);
+const A2PLUS = new Set(['A2', 'B1', 'B2', 'C1', 'C2']);
 
 // Palabras comunes (ngsl A1/A2/B1): sirven para detectar homógrafos ambiguos.
 const BASIC = new Set(
@@ -43,7 +44,7 @@ function inScope(v) {
   if (ambiguous(v)) return false;                        // precisión: fuera homógrafos/trampas
   if (v.category === 'ngsl') return B1PLUS.has(c);       // suelto: no hay B2+, así que B1
   if (v.category === 'connector') return false;          // fuera (ruido)
-  if (JUICY.has(v.category)) return B1PLUS.has(c);        // jugoso: B1+
+  if (JUICY.has(v.category)) return A2PLUS.has(c);        // jugoso: A2+ (phrasals, idioms, falsos amigos… valen aunque sean A2)
   return B1PLUS.has(c);
 }
 

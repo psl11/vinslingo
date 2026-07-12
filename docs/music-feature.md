@@ -90,9 +90,11 @@ El estándar de exactitud del contenido es sagrado, así que el cruce es
 conservador (ver [`match-music.mjs`](../scripts/match-music.mjs)):
 
 - **Alcance**: categorías "jugosas" (phrasal, idiom, expresión, colocación,
-  slang, false friend) en B1+; vocabulario suelto `ngsl` en B1 (no hay B2+ en
-  ngsl: todo el B2/C1 vive en las categorías jugosas). Los `connector` quedan
-  fuera (ruido).
+  slang, false friend) en **A2+** — un phrasal o un falso amigo vale la pena
+  aunque esté etiquetado A2, y así muchas más canciones (pop/rock melódico)
+  encuentran contenido útil (cobertura ~48%→69%). El vocabulario suelto `ngsl`
+  se queda en B1 a propósito: bajarlo a A2 solo metería palabras básicas
+  (love, night, you…) que ya se dominan = ruido. Los `connector`, fuera.
 - **Homógrafos fuera**: slang de una palabra que coincide con una palabra común
   (long, fire, sick, beat, ride, fit, broke…) se excluye del auto-match —
   matcharía su sentido cotidiano, no el del slang. Se detectan por coincidencia
