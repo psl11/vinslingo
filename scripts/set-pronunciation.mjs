@@ -80,22 +80,35 @@ async function main() {
     if (data.length < 1000) break;
   }
 
+  const lookup = (word) => dict[word.toLowerCase().replace(/[’]/g, "'")];
   const patched = [];
-  let single = 0, noIpa = 0;
+  let single = 0, multi = 0, noIpa = 0;
   for (const v of vocab) {
     const w = (v.word || '').trim();
-    if (/\s/.test(w) || /\(uk vs us\)/i.test(w)) continue; // solo 1 palabra
-    single++;
-    const ipa = dict[w.toLowerCase().replace(/[’]/g, "'")];
-    if (!ipa) { noIpa++; continue; }
+    if (/\(uk vs us\)/i.test(w)) continue; // trampas UK↔US fuera
+    const words = w.split(/\s+/);
+    let ipa, es;
+    if (words.length === 1) {
+      single++;
+      ipa = lookup(w);
+      if (!ipa) { noIpa++; continue; }
+      es = respell(ipa);
+    } else {
+      // Multipalabra (phrasals, idioms, expresiones): componer palabra a palabra.
+      multi++;
+      const parts = words.map(lookup);
+      if (parts.some((p) => !p)) { noIpa++; continue; } // si falta alguna, mejor nada
+      ipa = '/' + parts.map((p) => p.replace(/^\/|\/$/g, '')).join(' ') + '/';
+      es = parts.map((p) => respell(p)).join(' ');
+    }
     const { updated_at, ...rest } = v; // dejar que el trigger ponga updated_at
-    patched.push({ ...rest, pronunciation: ipa, pronunciation_es: respell(ipa) });
+    patched.push({ ...rest, pronunciation: ipa, pronunciation_es: es });
   }
 
   console.log(`\n${APPLY ? '🔧 APLICANDO' : '🔍 DRY-RUN'}`);
-  console.log(`palabras de 1: ${single} | con IPA: ${patched.length} | sin IPA: ${noIpa}`);
+  console.log(`1 palabra: ${single} | multipalabra: ${multi} | con pronunciación: ${patched.length} | sin IPA: ${noIpa}`);
   console.log('muestra:');
-  for (const w of ['kidney', 'minute', 'through', 'world', 'beautiful', 'question', 'nature', 'money', 'because', 'young']) {
+  for (const w of ['kidney', 'minute', 'through', 'world', 'beautiful', 'let out', 'take off', 'run out', 'give up', 'look after']) {
     const p = patched.find((x) => x.word.toLowerCase() === w);
     if (p) console.log(`  ${w.padEnd(12)} ${p.pronunciation.padEnd(16)} ${p.pronunciation_es}`);
   }

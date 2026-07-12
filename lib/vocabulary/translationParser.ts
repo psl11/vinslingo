@@ -106,8 +106,26 @@ export function analyzeTranslation(translation: string): TranslationAnalysis {
   if (parsed.senses && parsed.senses.length >= 2) {
     return { kind: 'senses', header: parsed.header, senses: parsed.senses, note: parsed.note };
   }
-  if (parsed.header) return { kind: 'term', term: parsed.header, explanation: parsed.body };
+  if (parsed.header) {
+    // Quitar los ejemplos incrustados de la explicación (p. ej. phrasals
+    // monosémicos: "…" = …): los ejemplos ya salen en su propio bloque, así que
+    // aquí sobran (evita duplicidad). La prosa explicativa sin comillas se
+    // conserva; si no queda nada, la explicación va vacía y solo se ve el título.
+    return { kind: 'term', term: parsed.header, explanation: stripInlineExamples(parsed.body) };
+  }
   return { kind: 'raw', text: translation };
+}
+
+// Elimina pares "inglés" = español y comillas sueltas de un texto, dejando solo
+// la prosa explicativa (si la hay).
+function stripInlineExamples(text: string): string {
+  return text
+    .replace(/"[^"]*"\s*=\s*[^".]*\.?/g, '')
+    .replace(/"[^"]*"/g, '')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/^[\s.,;:—-]+/, '')
+    .replace(/[\s,;:—-]+$/, '') // conserva el punto final de la prosa
+    .trim();
 }
 
 // Resumen de una línea para vistas compactas (línea colapsada del buscador).

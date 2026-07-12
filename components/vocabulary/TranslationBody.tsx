@@ -62,7 +62,9 @@ export function TranslationBody({ translation, align = 'left' }: TranslationBody
     return (
       <View style={[styles.termBlock, align === 'center' && styles.termBlockCenter]}>
         <Text style={[styles.term, { textAlign }]}>{a.term}</Text>
-        <Text style={[styles.explanation, { textAlign }]}>{a.explanation}</Text>
+        {a.explanation ? (
+          <Text style={[styles.explanation, { textAlign }]}>{a.explanation}</Text>
+        ) : null}
       </View>
     );
   }

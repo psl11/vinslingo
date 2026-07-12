@@ -13,9 +13,12 @@ la palabra y reverso bajo la palabra) y en el resultado de la
 
 ## Datos
 
-- Solo para palabras de **una sola palabra** (2477/2531 tienen IPA; las ~54 sin
-  IPA son slang nuevo tipo *rizz/bussin/mandem*). Los phrasals/idioms multipalabra
-  no llevan pronunciación.
+- Palabras de **una sola palabra**: 2477/2531 con IPA (las ~54 sin IPA son slang
+  nuevo tipo *rizz/bussin/mandem*).
+- **Multipalabra** (phrasals, idioms, expresiones): la pronunciación se **compone
+  palabra a palabra** (`let out → /ˈlɛt ˈaʊt/ · lét áut`). Si a alguna palabra le
+  falta IPA, la entrada se deja sin pronunciación (mejor nada que a medias). ~384
+  entradas cubiertas.
 - Fuente del IPA: dataset abierto open-dict [`ipa-dict`](https://github.com/open-dict-data/ipa-dict)
   (`en_US`, primera pronunciación).
 - Generado con [`scripts/set-pronunciation.mjs`](../scripts/set-pronunciation.mjs)
