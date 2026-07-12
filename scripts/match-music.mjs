@@ -233,7 +233,9 @@ if (APPLY) {
     songIdByN.set(s.n, id);
     // lyrics_excerpt='' a propósito: no guardamos letra en songs (el contexto va
     // en song_vocabulary.line_text). '' satisface un posible NOT NULL sin texto.
-    return { id, artist_id: aid, title: s.title, source: 'user', lyrics_excerpt: '' };
+    // rank = nº en el catálogo (tu top personal primero, luego "This Is" por
+    // popularidad): se usa para priorizar QUÉ canción se muestra por palabra.
+    return { id, artist_id: aid, title: s.title, source: 'user', lyrics_excerpt: '', rank: s.n };
   });
   {
     const { error } = await supabase.from('songs').upsert(songRows, { onConflict: 'id' });

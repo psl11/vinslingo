@@ -25,7 +25,7 @@ export async function syncMusicFromSupabase(options: { force?: boolean } = {}): 
 
     const { data: songs, error: se } = await supabase
       .from('songs')
-      .select('id, artist_id, title, source')
+      .select('id, artist_id, title, source, rank')
       .eq('source', 'user');
     if (se) throw se;
     if (!songs || songs.length === 0) return 0;
@@ -58,8 +58,8 @@ export async function syncMusicFromSupabase(options: { force?: boolean } = {}): 
         await db.runAsync('INSERT OR REPLACE INTO artists (id, name) VALUES (?, ?)', [a.id, a.name]);
       }
       for (const s of songs) {
-        await db.runAsync('INSERT OR REPLACE INTO songs (id, artist_id, title, source) VALUES (?, ?, ?, ?)', [
-          s.id, s.artist_id, s.title, s.source,
+        await db.runAsync('INSERT OR REPLACE INTO songs (id, artist_id, title, source, rank) VALUES (?, ?, ?, ?, ?)', [
+          s.id, s.artist_id, s.title, s.source, s.rank ?? null,
         ]);
       }
       for (const r of sv) {
@@ -194,9 +194,12 @@ export async function getMusicVocabulary(opts: {
      FROM song_vocabulary sv
      JOIN songs s ON s.id = sv.song_id
      LEFT JOIN artists a ON a.id = s.artist_id
-     WHERE ${ctxWhere.join(' AND ')} AND sv.line_text IS NOT NULL`,
+     WHERE ${ctxWhere.join(' AND ')} AND sv.line_text IS NOT NULL
+     ORDER BY s.rank ASC`,
     ctxParams
   );
+  // Prioriza la canción de menor rank (tu top personal primero, luego la más
+  // popular del artista): al recorrer en orden, el primero por palabra gana.
   const byWord = new Map<string, typeof ctx[number]>();
   for (const c of ctx) if (!byWord.has(c.vocabulary_id)) byWord.set(c.vocabulary_id, c);
   return words.map((w) => {

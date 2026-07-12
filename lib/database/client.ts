@@ -182,17 +182,24 @@ async function runMigrations(): Promise<void> {
     console.log('Slang reconcile check:', error);
   }
 
-  // Migración de música: añadir line_translation a song_vocabulary si la tabla
-  // ya existía sin la columna (traducción del verso). Fuerza un re-sync de
-  // música para repoblarla.
+  // Migración de música: añadir columnas nuevas a las tablas de música si ya
+  // existían sin ellas (line_translation en song_vocabulary; rank en songs).
+  // Fuerza un re-sync de música para repoblarlas.
   try {
-    const cols = await db.getAllAsync<{ name: string }>('PRAGMA table_info(song_vocabulary)');
-    if (cols.length > 0 && !cols.some((c) => c.name === 'line_translation')) {
+    const svCols = await db.getAllAsync<{ name: string }>('PRAGMA table_info(song_vocabulary)');
+    const sCols = await db.getAllAsync<{ name: string }>('PRAGMA table_info(songs)');
+    let needMusicResync = false;
+    if (svCols.length > 0 && !svCols.some((c) => c.name === 'line_translation')) {
       await db.execAsync('ALTER TABLE song_vocabulary ADD COLUMN line_translation TEXT');
-      await db.runAsync("DELETE FROM sync_metadata WHERE key = 'music_last_sync'");
+      needMusicResync = true;
     }
+    if (sCols.length > 0 && !sCols.some((c) => c.name === 'rank')) {
+      await db.execAsync('ALTER TABLE songs ADD COLUMN rank INTEGER');
+      needMusicResync = true;
+    }
+    if (needMusicResync) await db.runAsync("DELETE FROM sync_metadata WHERE key = 'music_last_sync'");
   } catch (error) {
-    console.log('song_vocabulary migration:', error);
+    console.log('music tables migration:', error);
   }
 
   // Migración FSRS: añadir columnas de estado del algoritmo a user_vocabulary.

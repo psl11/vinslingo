@@ -210,7 +210,8 @@ export const LOCAL_SCHEMA = `
     id TEXT PRIMARY KEY,
     artist_id TEXT,
     title TEXT NOT NULL,
-    source TEXT
+    source TEXT,
+    rank INTEGER
   );
   CREATE TABLE IF NOT EXISTS song_vocabulary (
     id TEXT PRIMARY KEY,
