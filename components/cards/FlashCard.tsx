@@ -137,6 +137,18 @@ export function FlashCard({
     }
   };
 
+  // Altavoz reutilizable para oír una frase/verso (TTS). stopPropagation para no
+  // voltear la tarjeta al tocarlo (mismo patrón que el botón de Spotify).
+  const Speak = ({ text }: { text: string }) => (
+    <Pressable
+      onPress={(e) => { (e as any)?.stopPropagation?.(); playWord(text); }}
+      hitSlop={8}
+      style={styles.speakerBtn}
+    >
+      <Text style={styles.speakerIcon}>🔊</Text>
+    </Pressable>
+  );
+
   const openSpotify = (e: any, title?: string | null, artist?: string | null) => {
     e?.stopPropagation?.(); // evita que el toque también voltee la tarjeta
     const cleanArtist = (artist || '').replace(/\s*\([^)]*\)/g, '').trim();
@@ -306,7 +318,10 @@ export function FlashCard({
                 {/* Example 1 */}
                 {showBottomExamples && example && (
                   <View style={styles.exampleItem}>
-                    <Text style={styles.exampleText}>"{example}"</Text>
+                    <View style={styles.exampleEnRow}>
+                      <Text style={styles.exampleText}>"{example}"</Text>
+                      <Speak text={example} />
+                    </View>
                     {exampleTranslation && (
                       <Text style={styles.exampleTranslation}>"{exampleTranslation}"</Text>
                     )}
@@ -316,7 +331,10 @@ export function FlashCard({
                 {/* Example 2 */}
                 {showBottomExamples && example2 && (
                   <View style={styles.exampleItem}>
-                    <Text style={styles.exampleText}>"{example2}"</Text>
+                    <View style={styles.exampleEnRow}>
+                      <Text style={styles.exampleText}>"{example2}"</Text>
+                      <Speak text={example2} />
+                    </View>
                     {exampleTranslation2 && (
                       <Text style={styles.exampleTranslation}>"{exampleTranslation2}"</Text>
                     )}
@@ -328,7 +346,10 @@ export function FlashCard({
                     evita mostrar dos tarjetas de canción a la vez. */}
                 {songTitle && !musicLine && (
                   <View style={styles.songExampleItem}>
-                    <Text style={styles.songIcon}>{anchorIconChar}</Text>
+                    <View style={styles.musicIconRow}>
+                      <Text style={styles.songIcon}>{anchorIconChar}</Text>
+                      {songLyric && <Speak text={songLyric} />}
+                    </View>
                     {songLyric && (
                       <Text style={styles.songLyricText}>"{songLyric}"</Text>
                     )}
@@ -353,7 +374,10 @@ export function FlashCard({
                   la canción te acuerdas de la expresión. */}
               {musicLine && (
                 <View style={styles.musicContext}>
-                  <Text style={styles.musicIcon}>🎵</Text>
+                  <View style={styles.musicIconRow}>
+                    <Text style={styles.musicIcon}>🎵</Text>
+                    <Speak text={musicLine} />
+                  </View>
                   <HighlightedLine line={musicLine} highlight={musicHighlight} />
                   {musicLineTranslation && (
                     <Text style={styles.exampleTranslation}>"{musicLineTranslation}"</Text>
@@ -547,6 +571,26 @@ const styles = StyleSheet.create({
   exampleItem: {
     width: '100%',
     paddingVertical: spacing.xs,
+  },
+  exampleEnRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.xs,
+    flexWrap: 'wrap',
+  },
+  musicIconRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.sm,
+  },
+  speakerBtn: {
+    paddingHorizontal: spacing.xs,
+    paddingVertical: 2,
+  },
+  speakerIcon: {
+    fontSize: fontSize.md,
   },
   songExampleItem: {
     width: '100%',

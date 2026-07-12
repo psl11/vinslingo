@@ -11,6 +11,11 @@ Se muestran en la [`FlashCard`](../components/cards/FlashCard.tsx) (anverso bajo
 la palabra y reverso bajo la palabra) y en el resultado de la
 [`TypingCard`](../components/cards/TypingCard.tsx).
 
+**Audio de frases**: además del altavoz de la palabra, cada **frase de ejemplo** y
+el **verso de la canción** llevan un botón 🔊 que las reproduce con TTS
+(`playPronunciation` acepta cualquier texto: Web Speech en web, Google TTS en
+móvil). Refuerza el *listening* en contexto.
+
 ## Datos
 
 - Palabras de **una sola palabra**: 2477/2531 con IPA (las ~54 sin IPA son slang
