@@ -134,6 +134,9 @@ conservador (ver [`match-music.mjs`](../scripts/match-music.mjs)):
 - ✅ **UI**: sección "Aprende con tu música" (hub con **Top recurrentes / Por tipo
   / Por artista ≥8**), estudio con flashcard/typing (FSRS compartido), verso de la
   canción con la palabra en negrita + Spotify.
-- ⏳ **Pendiente**: traducción del verso (`line_translation`, sin poblar);
-  **ancla "🎵 aparece en…" en las fichas normales** (fuera de la sección de
-  música); **selector de nivel** dedicado en el hub.
+- ✅ **Ancla inversa**: en el estudio **normal** (repaso, lección, falladas…), si la
+  palabra aparece en tu música se muestra su verso (misma prioridad por rank).
+  `attachMusicContext` en [`musicService`](../lib/services/musicService.ts), llamado
+  desde [`study/[id].tsx`](../app/study/[id].tsx) para todo `id !== 'music'`.
+- ⏳ **Pendiente**: traducción del verso (`line_translation`, sin poblar) y
+  **selector de nivel** dedicado en el hub.

@@ -101,6 +101,14 @@ export default function StudyScreen() {
           cards = await getVocabularyForLesson(id || 'ngsl', cardLimit, selectedCEFRLevels);
         }
 
+        // Ancla inversa: en el estudio normal, adjunta el verso de tu música si
+        // la palabra aparece en alguna de tus canciones (en modo 'music' ya viene
+        // del propio query). Así cualquier ficha se vuelve "consciente" de tu música.
+        if (id !== 'music' && cards.length > 0) {
+          const { attachMusicContext } = await import('../../lib/services/musicService');
+          cards = await attachMusicContext(cards);
+        }
+
         if (cards.length > 0) {
           startSession(id === 'review' || id === 'failed' ? 'review' : 'lesson', cards);
         } else {

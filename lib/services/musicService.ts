@@ -181,38 +181,53 @@ export async function getMusicVocabulary(opts: {
   );
   if (words.length === 0) return words;
 
-  // Adjuntar a cada palabra UN verso de contexto (el de su canción, priorizando
-  // el mismo artista/canción del alcance si lo hay). Refuerza la memoria: verso
-  // + título + artista donde aparece la palabra.
-  const ids = words.map((w) => w.id);
-  const ctxWhere: string[] = [`sv.vocabulary_id IN (${ids.map(() => '?').join(', ')})`];
-  const ctxParams: (string | number)[] = [...ids];
-  if (songId) { ctxWhere.push('sv.song_id = ?'); ctxParams.push(songId); }
-  else if (artistId) { ctxWhere.push('s.artist_id = ?'); ctxParams.push(artistId); }
-  const ctx = await runQuery<{ vocabulary_id: string; line_text: string | null; line_translation: string | null; highlighted_word: string | null; title: string; artist: string | null }>(
+  // Verso de contexto (prioridad por rank) para cada palabra del alcance.
+  const byWord = await fetchMusicContext(words.map((w) => w.id), { songId, artistId });
+  return words.map((w) => mergeMusicContext(w, byWord.get(w.id)));
+}
+
+type MusicCtx = { vocabulary_id: string; line_text: string | null; line_translation: string | null; highlighted_word: string | null; title: string; artist: string | null };
+type MusicContextFields = { music_line: string | null; music_line_translation: string | null; music_highlight: string | null; music_song: string | null; music_artist: string | null };
+
+// Contexto (verso + canción) de MENOR rank por vocabulary_id — tu top personal
+// primero, luego la más popular del artista. Opcionalmente acotado a una
+// canción/artista (ejes del hub).
+async function fetchMusicContext(ids: string[], opts: { songId?: string; artistId?: string } = {}): Promise<Map<string, MusicCtx>> {
+  const byWord = new Map<string, MusicCtx>();
+  if (ids.length === 0) return byWord;
+  const where = [`sv.vocabulary_id IN (${ids.map(() => '?').join(', ')})`];
+  const params: (string | number)[] = [...ids];
+  if (opts.songId) { where.push('sv.song_id = ?'); params.push(opts.songId); }
+  else if (opts.artistId) { where.push('s.artist_id = ?'); params.push(opts.artistId); }
+  const ctx = await runQuery<MusicCtx>(
     `SELECT sv.vocabulary_id, sv.line_text, sv.line_translation, sv.highlighted_word, s.title, a.name as artist
      FROM song_vocabulary sv
      JOIN songs s ON s.id = sv.song_id
      LEFT JOIN artists a ON a.id = s.artist_id
-     WHERE ${ctxWhere.join(' AND ')} AND sv.line_text IS NOT NULL
+     WHERE ${where.join(' AND ')} AND sv.line_text IS NOT NULL
      ORDER BY s.rank ASC`,
-    ctxParams
+    params
   );
-  // Prioriza la canción de menor rank (tu top personal primero, luego la más
-  // popular del artista): al recorrer en orden, el primero por palabra gana.
-  const byWord = new Map<string, typeof ctx[number]>();
   for (const c of ctx) if (!byWord.has(c.vocabulary_id)) byWord.set(c.vocabulary_id, c);
-  return words.map((w) => {
-    const c = byWord.get(w.id);
-    return {
-      ...w,
-      music_line: c?.line_text ?? null,
-      music_line_translation: c?.line_translation ?? null,
-      music_highlight: c?.highlighted_word ?? null,
-      music_song: c?.title ?? null,
-      music_artist: c?.artist ?? null,
-    };
-  });
+  return byWord;
+}
+
+function mergeMusicContext<T extends { id: string }>(card: T, c?: MusicCtx): T & MusicContextFields {
+  return {
+    ...card,
+    music_line: c?.line_text ?? null,
+    music_line_translation: c?.line_translation ?? null,
+    music_highlight: c?.highlighted_word ?? null,
+    music_song: c?.title ?? null,
+    music_artist: c?.artist ?? null,
+  };
+}
+
+// Ancla inversa: adjunta a cualquier lista de tarjetas (estudio normal) el verso
+// de tu música donde aparece cada palabra, si aparece. Misma prioridad por rank.
+export async function attachMusicContext<T extends { id: string }>(cards: T[]): Promise<(T & MusicContextFields)[]> {
+  const byWord = cards.length ? await fetchMusicContext(cards.map((c) => c.id)) : new Map<string, MusicCtx>();
+  return cards.map((c) => mergeMusicContext(c, byWord.get(c.id)));
 }
 
 /** Canciones en las que aparece una palabra (para el ancla en la ficha). */
