@@ -128,13 +128,22 @@ for (const s of songs) {
   const low = text.toLowerCase().replace(/[’]/g, "'");
   for (const { v, re } of scoped) {
     if (!re.test(low)) continue;
-    // localizar la línea y capturar la FORMA REAL que aparece en el verso
-    // (para poder resaltarla exacta en negrita, aunque sea una flexión).
+    // localizar la línea, capturar la FORMA REAL que aparece (para resaltarla
+    // exacta en negrita, aunque sea flexión) y guardar el verso anterior y el
+    // posterior como contexto (ancla más fuerte con la canción).
     let lineText = '', lineIdx = -1, surface = '';
     const realLines = s.lines.filter((l) => l.trim() && !isSection(l));
     for (let i = 0; i < realLines.length; i++) {
       const mm = realLines[i].replace(/[’]/g, "'").match(re);
-      if (mm) { lineText = realLines[i].trim(); lineIdx = i; surface = mm[0].trim(); break; }
+      if (mm) {
+        lineIdx = i;
+        surface = mm[0].trim();
+        lineText = [realLines[i - 1], realLines[i], realLines[i + 1]]
+          .filter(Boolean)
+          .map((l) => l.trim())
+          .join('\n');
+        break;
+      }
     }
     // Sin línea única localizable (match que cruza líneas) → descartar: sería un
     // contexto vacío y de baja precisión.
