@@ -792,6 +792,12 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "7902b10f-216c-5033-8073-cf0f41fc51e1",
+    "name": "Jeezy",
+    "image_url": null,
+    "created_at": "2026-07-12T14:44:02.955007+00:00"
+  },
+  {
     "id": "79b3a6aa-9778-4655-90e2-b21d5894f524",
     "name": "Neil Sedaka",
     "image_url": null,
@@ -984,6 +990,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "8ef8d702-1c6c-5a17-8f1c-3f21aa012b6d",
+    "name": "Justin Timberlake",
+    "image_url": null,
+    "created_at": "2026-07-12T14:44:02.955007+00:00"
+  },
+  {
     "id": "8f30ee52-20ae-4796-8122-f4867a6bab8d",
     "name": "Royal Blood",
     "image_url": null,
@@ -1036,6 +1048,12 @@
     "name": "Avicii",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "9a8934ca-aa95-5419-89f8-b9c28bfd1831",
+    "name": "Frank Ocean",
+    "image_url": null,
+    "created_at": "2026-07-12T14:44:02.955007+00:00"
   },
   {
     "id": "9acad276-c2d0-4e83-85a9-8c67d6f9f351",
@@ -1720,6 +1738,12 @@
     "name": "Supertramp",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.17869+00:00"
+  },
+  {
+    "id": "fc078995-793c-55fb-887a-1b9dc6591672",
+    "name": "The Chainsmokers",
+    "image_url": null,
+    "created_at": "2026-07-12T14:44:02.955007+00:00"
   },
   {
     "id": "fc7949c7-d81c-5d9e-81db-d6f96240b234",
