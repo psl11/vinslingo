@@ -106,12 +106,19 @@ export async function getMusicCategories(cefrLevels?: string[]): Promise<{ categ
   );
 }
 
-/** Artistas de tu música con vocabulario, ordenados por nº de palabras. */
+// Umbral mínimo de palabras para que un artista aparezca como entrada propia:
+// con media ~2 palabras/canción, "por canción" sería ruido; agrupando por
+// artista buscamos que cada uno dé una ronda de verdad. Los artistas por debajo
+// del umbral no se pierden: su vocabulario sigue en "Top recurrentes" y "Por tipo".
+export const MIN_ARTIST_WORDS = 8;
+
+/** Artistas de tu música con >= MIN_ARTIST_WORDS palabras, por nº de palabras. */
 export async function getMusicArtists(
   cefrLevels?: string[]
 ): Promise<{ id: string; name: string; wordCount: number; songCount: number }[]> {
   const params: (string | number)[] = [];
   const cefr = cefrClause(cefrLevels, params);
+  params.push(MIN_ARTIST_WORDS);
   return runQuery(
     `SELECT a.id as id, a.name as name,
        COUNT(DISTINCT v.id) as wordCount,
@@ -122,7 +129,7 @@ export async function getMusicArtists(
      JOIN vocabulary v ON v.id = sv.vocabulary_id
      WHERE 1=1${cefr}
      GROUP BY a.id
-     HAVING wordCount > 0
+     HAVING wordCount >= ?
      ORDER BY wordCount DESC`,
     params
   );

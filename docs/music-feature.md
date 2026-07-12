@@ -11,10 +11,16 @@ Sección "Aprende con tu música" en el tab Aprender. Al entrar, se elige:
 - **Por tipo**: vocabulario suelto, slang, phrasal, idiom… pero solo las palabras
   que aparecen en tu música.
 - **Por artista**: p. ej. Linkin Park → todo el vocabulario asociado a sus
-  canciones, mezclando categorías.
-- **Por canción**: elegir un tema y estudiar su vocabulario.
+  canciones, mezclando categorías. Solo se muestran artistas con
+  `>= MIN_ARTIST_WORDS` (8) palabras únicas, para que cada uno dé una ronda de
+  verdad; el resto de artistas no se pierde (su vocabulario sigue en "Top
+  recurrentes" y "Por tipo").
 - **Top recurrentes**: las palabras que aparecen en más de tus canciones (mayor
   ROI para memorizar).
+
+**"Por canción" descartado**: con media ~2,3 palabras únicas por canción (solo 2
+canciones llegan a ≥8), un listado de 250+ temas sería ruido. Se agrupa por
+artista en su lugar. La query soporta `songId` por si se retoma.
 - **Buscador de huecos**: palabras frecuentes en tu música que **no** están en la
   BD — candidatas a añadir al contenido curado.
 
