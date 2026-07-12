@@ -198,6 +198,29 @@ export const LOCAL_SCHEMA = `
     key TEXT PRIMARY KEY,
     value TEXT
   );
+
+  -- "Aprende con tu música": espejo local de las tablas de contenido musical.
+  -- Solo canciones del usuario (source='user'); ver docs/music-feature.md.
+  CREATE TABLE IF NOT EXISTS artists (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL
+  );
+  CREATE TABLE IF NOT EXISTS songs (
+    id TEXT PRIMARY KEY,
+    artist_id TEXT,
+    title TEXT NOT NULL,
+    source TEXT
+  );
+  CREATE TABLE IF NOT EXISTS song_vocabulary (
+    id TEXT PRIMARY KEY,
+    song_id TEXT NOT NULL,
+    vocabulary_id TEXT NOT NULL,
+    line_text TEXT,
+    highlighted_word TEXT,
+    line_index INTEGER
+  );
+  CREATE INDEX IF NOT EXISTS idx_sv_vocab ON song_vocabulary(vocabulary_id);
+  CREATE INDEX IF NOT EXISTS idx_sv_song ON song_vocabulary(song_id);
 `;
 
 // Queries para inicialización

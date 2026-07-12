@@ -218,6 +218,21 @@ export default function LearnScreen() {
         <Text style={styles.failedChevron}>›</Text>
       </PressableScale>
 
+      {/* Aprende con tu música: vocabulario que aparece en tus canciones. */}
+      <PressableScale
+        style={styles.musicCard}
+        onPress={() => router.push('/music')}
+      >
+        <Text style={styles.failedEmoji}>🎵</Text>
+        <View style={styles.failedInfo}>
+          <Text style={styles.failedTitle}>Aprende con tu música</Text>
+          <Text style={styles.failedDescription}>
+            El vocabulario que aparece en tus canciones
+          </Text>
+        </View>
+        <Text style={styles.musicChevron}>›</Text>
+      </PressableScale>
+
       <View style={styles.categories}>
         {categories.map((category) => {
           const progress = category.totalWords > 0 
@@ -716,6 +731,22 @@ const styles = StyleSheet.create({
     fontSize: fontSize.sm,
     color: colors.textSecondary,
     marginTop: spacing.xxs,
+  },
+  musicCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.accentPurpleSurface,
+    borderWidth: 1.5,
+    borderColor: colors.accentPurpleBorder,
+    borderRadius: radius.lg,
+    padding: spacing.lg,
+    marginBottom: spacing.xl,
+  },
+  musicChevron: {
+    fontSize: 26,
+    color: colors.accentPurple,
+    fontWeight: fontWeight.regular,
+    marginLeft: spacing.sm,
   },
   failedChevron: {
     fontSize: 26,

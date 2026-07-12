@@ -14,7 +14,7 @@ import { SimpleQuality, getEstimatedIntervals, cardFromRow } from '../../lib/srs
 import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 export default function StudyScreen() {
-  const { id, categories, mode, limit, particle, scope } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string; particle?: string; scope?: string }>();
+  const { id, categories, mode, limit, particle, scope, artistId, songId, musicCategory, top } = useLocalSearchParams<{ id: string; categories?: string; mode?: string; limit?: string; particle?: string; scope?: string; artistId?: string; songId?: string; musicCategory?: string; top?: string }>();
   // Memoizado: sin useMemo, `categories.split(',')` crea un array NUEVO en cada
   // render, y como está en las deps del useEffect de carga, éste se re-dispara
   // sin parar → "Maximum update depth exceeded" y la app se cuelga al repasar
@@ -89,6 +89,14 @@ export default function StudyScreen() {
           });
         } else if (particle) {
           cards = await getVocabularyByParticle(particle, cardLimit, selectedCEFRLevels);
+        } else if (id === 'music') {
+          // "Aprende con tu música": vocabulario que aparece en tus canciones,
+          // filtrado por artista / categoría / canción, o top recurrentes.
+          const { getMusicVocabulary } = await import('../../lib/services/musicService');
+          cards = await getMusicVocabulary({
+            artistId, songId, category: musicCategory, top: top === '1',
+            cefrLevels: selectedCEFRLevels, limit: cardLimit,
+          });
         } else {
           cards = await getVocabularyForLesson(id || 'ngsl', cardLimit, selectedCEFRLevels);
         }
@@ -111,7 +119,7 @@ export default function StudyScreen() {
     return () => {
       endSession();
     };
-  }, [id, particle, scope, selectedCEFRLevels, selectedReviewCategories]);
+  }, [id, particle, scope, artistId, songId, musicCategory, top, selectedCEFRLevels, selectedReviewCategories]);
 
   const handleFlip = (flipped: boolean) => {
     setIsFlipped(flipped);

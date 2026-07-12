@@ -43,6 +43,7 @@ export const colors = {
   primaryDisabled: '#A5B4FC',
   accentPurple: '#6D28D9', // partículas de phrasal verbs
   accentPurpleSurface: '#F5F3FF',
+  accentPurpleBorder: '#DDD6FE', // borde suave púrpura (tarjeta "tu música")
 
   // Texto
   textPrimary: '#1F2937',

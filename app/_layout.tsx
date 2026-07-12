@@ -5,6 +5,7 @@ import { View, Text, ActivityIndicator, StyleSheet, AppState, Platform } from 'r
 import * as Network from 'expo-network';
 import { getDatabase } from '../lib/database/client';
 import { syncVocabularyFromSupabase, getLocalVocabularyCount } from '../lib/services/vocabularyService';
+import { syncMusicFromSupabase } from '../lib/services/musicService';
 import { syncUserProgress } from '../lib/services/syncService';
 import { getPendingSyncItems } from '../lib/database/queries';
 import { AuthProvider, useAuth } from '../hooks/useAuth';
@@ -49,6 +50,7 @@ function RootLayoutNav() {
           // force: sin marca de sync todavía, hay que bajar sí o sí.
           setInitStatus('Descargando vocabulario...');
           await syncVocabularyFromSupabase({ force: true });
+          await syncMusicFromSupabase({ force: true });
         } else if (isConnected) {
           // Ya hay datos locales: arrancar al instante y sincronizar en
           // segundo plano. El sync está gateado (máx. 1/día salvo que una
@@ -57,6 +59,7 @@ function RootLayoutNav() {
           (async () => {
             try {
               await syncVocabularyFromSupabase();
+              await syncMusicFromSupabase();
               const pendingItems = await getPendingSyncItems();
               if (pendingItems.length > 0) {
                 await syncUserProgress();
@@ -178,6 +181,13 @@ function RootLayoutNav() {
         />
         <Stack.Screen
           name="failed-words"
+          options={{
+            headerShown: false,
+            presentation: 'modal',
+          }}
+        />
+        <Stack.Screen
+          name="music"
           options={{
             headerShown: false,
             presentation: 'modal',
