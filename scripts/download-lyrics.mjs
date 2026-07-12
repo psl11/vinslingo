@@ -16,7 +16,7 @@
  * No lo subas al repo (letras-playlist.txt está en .gitignore).
  */
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 
 const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36';
@@ -92,10 +92,31 @@ function extractLyrics(html) {
   return out.join('\n').trim();
 }
 
+// Reanudable: reutiliza las letras ya presentes en letras-playlist.txt (por nº)
+// y NO las vuelve a descargar. Devuelve Map<n, cuerpo>.
+function loadExisting() {
+  const map = new Map();
+  if (!existsSync(OUT)) return map;
+  for (const blk of readFileSync(OUT, 'utf8').split(/(?=^### )/m)) {
+    const m = blk.match(/^###\s*(\d+)\s*\|[^\n]*\n([\s\S]*?)\s*$/);
+    if (!m) continue;
+    const body = m[2].trim();
+    if (body && !/NO DESCARGADA/.test(body)) map.set(+m[1], body);
+  }
+  return map;
+}
+
 async function main() {
   const chunks = [];
   const failed = [];
+  const done = loadExisting();
+  let reused = 0;
   for (const { n, title, artist, url } of SONGS) {
+    if (done.has(n)) {
+      chunks.push(`### ${n} | ${title} | ${artist}\n${done.get(n)}\n`);
+      reused++;
+      continue;
+    }
     let lyrics = '';
     for (let attempt = 1; attempt <= 2 && !lyrics; attempt++) {
       try { lyrics = extractLyrics(fetchHtml(url)); } catch { /* reintento */ }
@@ -111,7 +132,7 @@ async function main() {
     await sleep(700 + Math.random() * 600); // educado con el servidor
   }
   writeFileSync(OUT, chunks.join('\n') + '\n', 'utf8');
-  process.stderr.write(`\n📄 Escrito ${OUT} (${SONGS.length - failed.length}/${SONGS.length} con letra).\n`);
+  process.stderr.write(`\n📄 Escrito ${OUT} (${SONGS.length - failed.length}/${SONGS.length} con letra; ${reused} reutilizadas, ${SONGS.length - reused - failed.length} descargadas ahora).\n`);
   if (failed.length) {
     process.stderr.write('Faltaron:\n' + failed.map(([n, t]) => `  - ${n} ${t}`).join('\n') + '\n');
   }
