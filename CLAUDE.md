@@ -72,3 +72,16 @@ descarga tablas de contenido público (`vocabulary`, `songs`, `song_vocabulary`,
 personales/de progreso, no contenido editorial, y no deben vivir en el repo. Si se
 añaden nuevas tablas de contenido a Supabase, hay que añadirlas también a
 `CONTENT_TABLES` en ese script.
+
+## Aprende con tu música
+
+Feature (en desarrollo) para estudiar el vocabulario a través de las canciones
+del usuario: se cruzan letras con la BD y se estudia por tipo/artista/canción.
+Reutiliza las tablas `songs`/`artists`/`song_vocabulary` (`source='user'` separa
+la música importada del seed genérico). Pipeline: `scripts/music-catalog.json`
+(catálogo de canciones + URLs de Genius verificadas) → `scripts/download-lyrics.mjs`
+(descarga local reanudable a `letras-playlist.txt`, **gitignored**, uso personal)
+→ `scripts/match-music.mjs` (`--apply` para poblar Supabase). **Las letras nunca
+se versionan ni se guardan completas en la BD**; solo enlaces palabra↔canción +
+la línea de contexto. Diseño, política de matching y estado por fases en
+[`docs/music-feature.md`](docs/music-feature.md).
