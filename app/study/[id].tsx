@@ -438,6 +438,7 @@ export default function StudyScreen() {
             cefrLevel={currentCard.cefr_level}
             category={currentCard.category}
             musicLine={(currentCard as any).music_line}
+            musicLineTranslation={(currentCard as any).music_line_translation}
             musicHighlight={(currentCard as any).music_highlight}
             musicSong={(currentCard as any).music_song}
             musicArtist={(currentCard as any).music_artist}

@@ -33,6 +33,7 @@ interface FlashCardProps {
   // "Aprende con tu música": verso de una canción del usuario donde aparece la
   // palabra (con la forma exacta a resaltar), + título y artista.
   musicLine?: string | null;
+  musicLineTranslation?: string | null;
   musicHighlight?: string | null;
   musicSong?: string | null;
   musicArtist?: string | null;
@@ -75,6 +76,7 @@ export function FlashCard({
   cefrLevel,
   category,
   musicLine,
+  musicLineTranslation,
   musicHighlight,
   musicSong,
   musicArtist,
@@ -135,10 +137,10 @@ export function FlashCard({
     }
   };
 
-  const openSpotify = (e?: any) => {
+  const openSpotify = (e: any, title?: string | null, artist?: string | null) => {
     e?.stopPropagation?.(); // evita que el toque también voltee la tarjeta
-    const cleanArtist = (songArtist || '').replace(/\s*\([^)]*\)/g, '').trim();
-    const query = [songTitle, cleanArtist].filter(Boolean).join(' ');
+    const cleanArtist = (artist || '').replace(/\s*\([^)]*\)/g, '').trim();
+    const query = [title, cleanArtist].filter(Boolean).join(' ');
     if (!query) return;
     const webUrl = `https://open.spotify.com/search/${encodeURIComponent(query)}`;
 
@@ -299,7 +301,7 @@ export function FlashCard({
               )}
 
               {/* Ejemplos sueltos (solo monosémicas) + ancla (canción/…) */}
-              {(showBottomExamples || songTitle) && (
+              {(showBottomExamples || (songTitle && !musicLine)) && (
               <View style={styles.allExamplesContainer}>
                 {/* Example 1 */}
                 {showBottomExamples && example && (
@@ -321,10 +323,10 @@ export function FlashCard({
                   </View>
                 )}
 
-                {/* Ancla (canción con el phrasal en el título). La letra es
-                    opcional: las anclas nuevas solo llevan título (los títulos
-                    no tienen copyright). */}
-                {songTitle && (
+                {/* Ancla (canción con el phrasal en el título). Se oculta si hay
+                    verso de TU música (musicLine): ese bloque es más personal y
+                    evita mostrar dos tarjetas de canción a la vez. */}
+                {songTitle && !musicLine && (
                   <View style={styles.songExampleItem}>
                     <Text style={styles.songIcon}>{anchorIconChar}</Text>
                     {songLyric && (
@@ -337,7 +339,7 @@ export function FlashCard({
                       — {anchorCredit(songTitle, songArtist, anchorYear)}
                     </Text>
                     {isSongAnchor && (
-                      <Pressable onPress={openSpotify} style={styles.spotifyButton}>
+                      <Pressable onPress={(e) => openSpotify(e, songTitle, songArtist)} style={styles.spotifyButton}>
                         <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
                       </Pressable>
                     )}
@@ -353,10 +355,18 @@ export function FlashCard({
                 <View style={styles.musicContext}>
                   <Text style={styles.musicIcon}>🎵</Text>
                   <HighlightedLine line={musicLine} highlight={musicHighlight} />
+                  {musicLineTranslation && (
+                    <Text style={styles.exampleTranslation}>"{musicLineTranslation}"</Text>
+                  )}
                   {(musicSong || musicArtist) && (
                     <Text style={styles.musicCredit}>
                       — {[musicSong, musicArtist].filter(Boolean).join(' · ')}
                     </Text>
+                  )}
+                  {(musicSong || musicArtist) && (
+                    <Pressable onPress={(e) => openSpotify(e, musicSong, musicArtist)} style={styles.spotifyButton}>
+                      <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
+                    </Pressable>
                   )}
                 </View>
               )}
