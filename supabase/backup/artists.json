@@ -528,6 +528,12 @@
     "created_at": "2026-07-12T12:47:13.685096+00:00"
   },
   {
+    "id": "557225e3-77ad-5e14-85af-98ab8ca241c2",
+    "name": "Outkast",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
     "id": "5657c182-db70-4c6f-a5a8-50430fbf7e83",
     "name": "Crush 40",
     "image_url": null,
@@ -690,6 +696,12 @@
     "created_at": "2026-07-05T16:55:41.17869+00:00"
   },
   {
+    "id": "68daeadb-a933-5d35-8f5a-aa38d789e7f4",
+    "name": "Fort Minor",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
     "id": "69b50513-fa20-486b-97a6-8d5c9add0d12",
     "name": "Queen",
     "image_url": null,
@@ -822,6 +834,12 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "7e75660a-6b24-593f-8403-9acb6a4bcf96",
+    "name": "Nelly",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
     "id": "7ee1e86d-4ee7-4f87-8f7a-3de57e866259",
     "name": "Soundgarden",
     "image_url": null,
@@ -880,6 +898,12 @@
     "name": "Billy Idol",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "878a9e2a-ce5c-58ea-8d23-a26c9265dd92",
+    "name": "Gorillaz",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
   },
   {
     "id": "87e450ca-f6b6-4354-bc85-f680b0898cf1",
@@ -1236,6 +1260,12 @@
     "created_at": "2026-07-06T08:17:39.367218+00:00"
   },
   {
+    "id": "b2bf27bc-154b-5ac1-8b97-e883ea731358",
+    "name": "Afroman",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
     "id": "b535f936-8b9c-48d3-b4d1-db764db634f1",
     "name": "A$AP Rocky ft. Florence Welch",
     "image_url": null,
@@ -1428,6 +1458,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "d0162798-b2b8-51cb-8c6c-611ca629e3ba",
+    "name": "Bone Thugs-N-Harmony",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
     "id": "d07bf025-60f4-47f8-ade8-8a3e2c22306c",
     "name": "Bruno Mars",
     "image_url": null,
@@ -1590,10 +1626,22 @@
     "created_at": "2026-07-06T08:17:41.832913+00:00"
   },
   {
+    "id": "e5f8c881-811f-5241-8402-bd77e356123b",
+    "name": "Limp Bizkit",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
     "id": "e7d5ea78-017c-49c4-a269-8dad6dfd7ab5",
     "name": "Jai Waetford",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.17869+00:00"
+  },
+  {
+    "id": "e83d9045-2231-5f12-8f45-816937dfebda",
+    "name": "House Of Pain",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
   },
   {
     "id": "ea785484-cb0b-402e-9478-ffb052c77705",
@@ -1624,6 +1672,12 @@
     "name": "Willie Nelson",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "f59f0f33-09c6-5cd7-88d8-0a36a43f0d35",
+    "name": "My Darkest Days",
+    "image_url": null,
+    "created_at": "2026-07-12T14:35:51.073502+00:00"
   },
   {
     "id": "f5d7a560-c94b-4707-aa1b-13fc620c99f0",
