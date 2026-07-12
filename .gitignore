@@ -37,6 +37,10 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# letras descargadas (contenido con copyright, uso local — no versionar)
+letras-playlist.txt
+*.lyrics.txt
+
 # generated native folders
 /ios
 /android
