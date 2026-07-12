@@ -19,11 +19,22 @@ const B1PLUS = new Set(['B1', 'B2', 'C1', 'C2']);
 const BASIC = new Set(
   vocab.filter((v) => v.category === 'ngsl' && ['A1', 'A2', 'B1'].includes(v.cefr_level)).map((v) => v.word.toLowerCase())
 );
+// Homógrafos: slang de una palabra que coincide con una palabra común de uso
+// diario con OTRO sentido dominante (matcharían su sentido cotidiano, no el del
+// slang). El ngsl básico no los cubre todos, así que se curan a mano sobre el
+// listado de slang. Precisión > recall (estándar de exactitud del contenido).
+const SLANG_HOMOGRAPHS = new Set([
+  'long', 'sound', 'calm', 'peak', 'safe', 'fire', 'basic', 'extra', 'salty', 'bottle',
+  'thirsty', 'ghost', 'sick', 'beat', 'tight', 'awesome', 'ride', 'fit', 'broke', 'dough',
+  'dip', 'ace', 'bin', 'crush', 'lame', 'grand', 'grim', 'mint', 'loaded', 'wasted', 'chill',
+  'crash', 'bounce', 'score', 'creep', 'hooked', 'beef', 'flex', 'buff', 'bare', 'proper',
+  'suck', 'bet', 'epic', 'graft', 'bail', 'jerk', 'rank', 'w', 'goat',
+]);
 // Ambiguo = trampa UK↔US (meta), o slang de UNA palabra homógrafo de una común.
 function ambiguous(v) {
   if (/\(uk vs us\)/i.test(v.word || '')) return true;
   const w = (v.word || '').toLowerCase().trim();
-  if (!/\s/.test(w) && BASIC.has(w)) return true;
+  if (!/\s/.test(w) && (BASIC.has(w) || SLANG_HOMOGRAPHS.has(w))) return true;
   return false;
 }
 

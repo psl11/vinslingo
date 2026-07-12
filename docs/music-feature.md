@@ -88,9 +88,10 @@ conservador (ver [`match-music.mjs`](../scripts/match-music.mjs)):
   ngsl: todo el B2/C1 vive en las categorías jugosas). Los `connector` quedan
   fuera (ruido).
 - **Homógrafos fuera**: slang de una palabra que coincide con una palabra común
-  (long, fire, sick, beat, ride…) se excluye del auto-match — matcharía su
-  sentido cotidiano, no el del slang. ~16 casos detectados vía coincidencia con
-  ngsl básico.
+  (long, fire, sick, beat, ride, fit, broke…) se excluye del auto-match —
+  matcharía su sentido cotidiano, no el del slang. Se detectan por coincidencia
+  con el ngsl básico **y** una blocklist curada a mano (`SLANG_HOMOGRAPHS` en
+  `match-music.mjs`, ~50 términos) para los comunes que no están en la BD.
 - **Lematización**: inflexiones (running→run, tomó→take) con mapa de irregulares;
   phrasals **separables** con hueco (*take it off*, *pick you up*).
 - **Cross-line fuera**: un match que solo casa cruzando líneas (hueco de phrasal
