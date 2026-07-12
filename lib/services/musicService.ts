@@ -37,7 +37,7 @@ export async function syncMusicFromSupabase(options: { force?: boolean } = {}): 
     for (let i = 0; i < songIds.length; i += 200) {
       const { data, error } = await supabase
         .from('song_vocabulary')
-        .select('id, song_id, vocabulary_id, line_text, highlighted_word, line_index')
+        .select('id, song_id, vocabulary_id, line_text, line_translation, highlighted_word, line_index')
         .in('song_id', songIds.slice(i, i + 200));
       if (error) throw error;
       if (data) sv.push(...data);
@@ -64,8 +64,8 @@ export async function syncMusicFromSupabase(options: { force?: boolean } = {}): 
       }
       for (const r of sv) {
         await db.runAsync(
-          'INSERT OR REPLACE INTO song_vocabulary (id, song_id, vocabulary_id, line_text, highlighted_word, line_index) VALUES (?, ?, ?, ?, ?, ?)',
-          [r.id, r.song_id, r.vocabulary_id, r.line_text, r.highlighted_word, r.line_index]
+          'INSERT OR REPLACE INTO song_vocabulary (id, song_id, vocabulary_id, line_text, line_translation, highlighted_word, line_index) VALUES (?, ?, ?, ?, ?, ?, ?)',
+          [r.id, r.song_id, r.vocabulary_id, r.line_text, r.line_translation ?? null, r.highlighted_word, r.line_index]
         );
       }
     });
@@ -142,6 +142,7 @@ export async function getMusicArtists(
  */
 export type MusicVocabularyItem = VocabularyItem & {
   music_line?: string | null;
+  music_line_translation?: string | null;
   music_highlight?: string | null;
   music_song?: string | null;
   music_artist?: string | null;
@@ -188,8 +189,8 @@ export async function getMusicVocabulary(opts: {
   const ctxParams: (string | number)[] = [...ids];
   if (songId) { ctxWhere.push('sv.song_id = ?'); ctxParams.push(songId); }
   else if (artistId) { ctxWhere.push('s.artist_id = ?'); ctxParams.push(artistId); }
-  const ctx = await runQuery<{ vocabulary_id: string; line_text: string | null; highlighted_word: string | null; title: string; artist: string | null }>(
-    `SELECT sv.vocabulary_id, sv.line_text, sv.highlighted_word, s.title, a.name as artist
+  const ctx = await runQuery<{ vocabulary_id: string; line_text: string | null; line_translation: string | null; highlighted_word: string | null; title: string; artist: string | null }>(
+    `SELECT sv.vocabulary_id, sv.line_text, sv.line_translation, sv.highlighted_word, s.title, a.name as artist
      FROM song_vocabulary sv
      JOIN songs s ON s.id = sv.song_id
      LEFT JOIN artists a ON a.id = s.artist_id
@@ -203,6 +204,7 @@ export async function getMusicVocabulary(opts: {
     return {
       ...w,
       music_line: c?.line_text ?? null,
+      music_line_translation: c?.line_translation ?? null,
       music_highlight: c?.highlighted_word ?? null,
       music_song: c?.title ?? null,
       music_artist: c?.artist ?? null,

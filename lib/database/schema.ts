@@ -217,6 +217,7 @@ export const LOCAL_SCHEMA = `
     song_id TEXT NOT NULL,
     vocabulary_id TEXT NOT NULL,
     line_text TEXT,
+    line_translation TEXT,
     highlighted_word TEXT,
     line_index INTEGER
   );

@@ -182,6 +182,19 @@ async function runMigrations(): Promise<void> {
     console.log('Slang reconcile check:', error);
   }
 
+  // Migración de música: añadir line_translation a song_vocabulary si la tabla
+  // ya existía sin la columna (traducción del verso). Fuerza un re-sync de
+  // música para repoblarla.
+  try {
+    const cols = await db.getAllAsync<{ name: string }>('PRAGMA table_info(song_vocabulary)');
+    if (cols.length > 0 && !cols.some((c) => c.name === 'line_translation')) {
+      await db.execAsync('ALTER TABLE song_vocabulary ADD COLUMN line_translation TEXT');
+      await db.runAsync("DELETE FROM sync_metadata WHERE key = 'music_last_sync'");
+    }
+  } catch (error) {
+    console.log('song_vocabulary migration:', error);
+  }
+
   // Migración FSRS: añadir columnas de estado del algoritmo a user_vocabulary.
   // (La tabla review_log se crea vía CREATE TABLE IF NOT EXISTS en LOCAL_SCHEMA,
   // que corre en cada init, así que cubre instalaciones nuevas y existentes.)
