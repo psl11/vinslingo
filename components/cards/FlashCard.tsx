@@ -235,6 +235,9 @@ export function FlashCard({
               </View>
             )}
           </View>
+          {/* La palabra estudiada, en grande arriba del reverso, para no perder
+              de vista a qué se refiere el significado y los ejemplos. */}
+          <Text style={styles.backWord} numberOfLines={2}>{word}</Text>
           <View style={styles.backContent} onLayout={onAvailLayout}>
             <View
               style={[styles.backInner, { transform: [{ scale: contentScale }], opacity: measured ? 1 : 0 }]}
@@ -405,10 +408,17 @@ const styles = StyleSheet.create({
   audioIcon: {
     fontSize: fontSize.xxl,
   },
+  backWord: {
+    marginTop: 40,
+    fontSize: fontSize.xxl,
+    fontWeight: fontWeight.bold,
+    color: '#1A1A1A',
+    textAlign: 'center',
+  },
   backContent: {
     flex: 1,
     width: '100%',
-    marginTop: 36,
+    marginTop: spacing.sm,
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
