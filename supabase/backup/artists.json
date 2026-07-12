@@ -48,6 +48,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "08f39ddd-4691-5742-8675-2250ca4fa578",
+    "name": "TOTO",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "0971e01b-8fc4-43d8-9e0c-83b43f8d8218",
     "name": "Player",
     "image_url": null,
@@ -64,6 +70,24 @@
     "name": "Tina Arena",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "0c75a3be-7e0c-5b7e-8b14-d4481b10e9bd",
+    "name": "The Monkees",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
+    "id": "0c8f9110-c539-53f0-885e-7e34098f9b50",
+    "name": "Aretha Franklin",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
+    "id": "0e2ec681-5cda-5bed-8ee6-e1f83e107fb9",
+    "name": "The Turtles",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "10201352-931e-45d1-9779-1f4e5ba7ab4f",
@@ -126,6 +150,12 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "14ca2f9f-40e0-5c39-8c94-0fa8f1c361f8",
+    "name": "Creedence Clearwater Revival",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "15bf56be-205e-4ade-9bdf-742a02862ac8",
     "name": "Simple Plan",
     "image_url": null,
@@ -174,10 +204,22 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "1a98ded5-ca69-5a63-8faa-278a6f23461b",
+    "name": "Soft Cell",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "1b70d993-55eb-4f2e-8433-adf6cc29ba15",
     "name": "Titiyo",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "1b810de5-1372-5a93-80d6-0444143ca3fe",
+    "name": "Roy Orbison",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "1c4990d6-e752-4a4a-b16b-bebcbd9280eb",
@@ -282,6 +324,12 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "2806d6fd-245b-5c16-8f72-8066ed8b1ab2",
+    "name": "Stevie Nicks",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "28e52fb5-bcfd-4605-adfe-fd1f02cf336f",
     "name": "Beyoncé",
     "image_url": null,
@@ -324,6 +372,12 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "30b31d54-6e87-5048-82bf-e28603a1e5ec",
+    "name": "Alphaville",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "30f6f169-f276-42a0-ab93-7a608d567022",
     "name": "Boyz II Men",
     "image_url": null,
@@ -346,6 +400,12 @@
     "name": "Madonna",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "37ea7348-0e83-5dd9-8fb1-4954729e2b5f",
+    "name": "America",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "38871770-393b-4bc6-9e3a-00df8e97da13",
@@ -426,6 +486,12 @@
     "created_at": "2026-07-05T20:20:05.033498+00:00"
   },
   {
+    "id": "465c2036-278e-5c58-8852-ce9c258fd2aa",
+    "name": "Tom Petty",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "473fbec2-b3f8-4de0-b34d-b029234926ab",
     "name": "A Goofy Movie",
     "image_url": null,
@@ -448,6 +514,12 @@
     "name": "Rush",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "495e3e4c-42c8-5eb9-8200-2ce050a83f14",
+    "name": "John Mellencamp",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "4a04dc3d-8ca1-481b-b11b-8e859384f62e",
@@ -510,6 +582,12 @@
     "created_at": "2026-07-05T16:55:41.17869+00:00"
   },
   {
+    "id": "53e03e9d-d6cc-5a87-8890-f8e120dffe68",
+    "name": "Carly Simon",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "53e63363-f400-4879-b1ba-a1663329bc09",
     "name": "Louis Armstrong",
     "image_url": null,
@@ -550,6 +628,12 @@
     "name": "Billy Ocean",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.17869+00:00"
+  },
+  {
+    "id": "577008ea-42f6-56e6-86ae-d46aa8a85fba",
+    "name": "Otis Redding",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "5780830d-6cb6-4de1-b1bb-edf52d5db7df",
@@ -610,6 +694,18 @@
     "name": "Alanis Morissette",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "5fa57304-6312-5aef-8b17-72505d1b81f3",
+    "name": "Daryl Hall & John Oates",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
+    "id": "5fda071f-a195-5569-8990-9cc1e0a675dd",
+    "name": "Ramones",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "60245089-3099-43ab-9667-c47e754402b8",
@@ -700,6 +796,12 @@
     "name": "Fort Minor",
     "image_url": null,
     "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
+    "id": "692764ea-fd79-55a1-8f2a-ddc46aa03df1",
+    "name": "Electric Light Orchestra",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "69b50513-fa20-486b-97a6-8d5c9add0d12",
@@ -804,6 +906,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "7b74122d-19ea-5bd6-80dc-3064281852f9",
+    "name": "Survivor",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "7badf9d1-760a-47e0-9696-b20b651bdadb",
     "name": "One Direction",
     "image_url": null,
@@ -850,6 +958,12 @@
     "name": "Soundgarden",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "7f5796f6-18c0-5da0-88fc-0c5905ad38ec",
+    "name": "Fleetwood Mac",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "807d816a-8777-4265-bc36-bcccaf6317ef",
@@ -930,10 +1044,22 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "899b0ec2-245e-598e-8405-8af4432e2a7a",
+    "name": "Jimi Hendrix",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "8a757b0e-2bc8-4460-8cef-2fb7f32aa8dd",
     "name": "Dexys Midnight Runners",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "8a9c4367-c24d-56d8-8a89-fb00f1a4226b",
+    "name": "The Stranglers",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "8ae7f5ab-afb9-488a-a3c8-083c7f08b849",
@@ -970,6 +1096,18 @@
     "name": "Bonnie Tyler",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "8d42d8af-46ce-5591-8ab3-4fb7e76d78de",
+    "name": "The Cars",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
+    "id": "8dc68118-b04a-54a7-85d4-95a65e1b6a3d",
+    "name": "Van Halen",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "8deb18e6-ba85-46b0-8975-ff94c4834ee5",
@@ -1024,6 +1162,12 @@
     "name": "Joni Mitchell",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "950bb41d-8f42-5bda-8252-fd20c4c8a799",
+    "name": "Heart",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "972e7f8d-689c-4841-8f50-9c259049139e",
@@ -1086,10 +1230,22 @@
     "created_at": "2026-07-05T16:55:40.930945+00:00"
   },
   {
+    "id": "9eddda24-8f4b-5d04-8368-9bc26cf8af2b",
+    "name": "The Smiths",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "9f9440be-4d34-5afd-8b3f-8ba829af87df",
     "name": "Lil Wayne",
     "image_url": null,
     "created_at": "2026-07-12T12:47:13.685096+00:00"
+  },
+  {
+    "id": "a0a8b2db-317a-5f61-8b49-a326cb9b3d13",
+    "name": "Deep Purple",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "a13898b2-ccb1-404d-92a6-109470c865bb",
@@ -1272,6 +1428,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "b0fb1dd3-b1b0-5e16-800a-bd8d3b7adc11",
+    "name": "Duran Duran",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "b18a72cc-b443-4f62-ac34-779f750f3d41",
     "name": "Dannii Minogue",
     "image_url": null,
@@ -1282,6 +1444,12 @@
     "name": "Afroman",
     "image_url": null,
     "created_at": "2026-07-12T14:35:51.073502+00:00"
+  },
+  {
+    "id": "b41d03a4-976b-5e6e-8862-2b4fdccddfcd",
+    "name": "Blue Öyster Cult",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "b535f936-8b9c-48d3-b4d1-db764db634f1",
@@ -1306,6 +1474,12 @@
     "name": "Andy Grammer",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "b7f01a0b-f7a6-57f0-8a75-dce76c86fc4b",
+    "name": "Buffalo Springfield",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "b8f0c6fa-13ea-4338-8d45-42ec172129ab",
@@ -1422,6 +1596,12 @@
     "created_at": "2026-07-12T12:47:13.685096+00:00"
   },
   {
+    "id": "c5f60e2e-a99a-5dac-89ff-b9650f7af2b8",
+    "name": "Bill Withers",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "c74efc87-1b3b-4feb-8489-4216e9280168",
     "name": "Jay-Z",
     "image_url": null,
@@ -1462,6 +1642,12 @@
     "name": "Daft Punk",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "cc406db8-43d3-5a01-8585-4a0018957f8b",
+    "name": "Depeche Mode",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "ccb676fe-f059-472b-867e-91a302aa8f41",
@@ -1518,6 +1704,12 @@
     "created_at": "2026-07-12T12:47:13.685096+00:00"
   },
   {
+    "id": "d44c0cc8-8e42-5a52-88bf-b3d7ca296a2a",
+    "name": "Paul Simon",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "d458e537-d837-5ec0-8a94-bc048067d87e",
     "name": "Guns N' Roses",
     "image_url": null,
@@ -1540,6 +1732,12 @@
     "name": "Stereophonics",
     "image_url": null,
     "created_at": "2026-07-05T16:55:41.08868+00:00"
+  },
+  {
+    "id": "d94da054-3995-5405-82f9-007cdfea913d",
+    "name": "Phil Collins",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "d98fb754-eb3b-4fcd-8104-56b191672fb1",
@@ -1614,6 +1812,12 @@
     "created_at": "2026-07-05T16:55:41.08868+00:00"
   },
   {
+    "id": "df2e924c-4e07-5372-8a38-297a6d42ebc6",
+    "name": "Roberta Flack",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "dfae53a6-ab38-462e-9710-b99e1970c255",
     "name": "The Fantastic Zoo",
     "image_url": null,
@@ -1680,6 +1884,12 @@
     "created_at": "2026-07-12T12:47:13.685096+00:00"
   },
   {
+    "id": "ed94ff60-5679-53fb-8ce3-a8678e59f82a",
+    "name": "Simon & Garfunkel",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
+  },
+  {
     "id": "ee3096b8-5e75-492f-a82c-948f56ac9adb",
     "name": "Aerosmith",
     "image_url": null,
@@ -1732,6 +1942,12 @@
     "name": "Housefires",
     "image_url": null,
     "created_at": "2026-07-05T16:55:40.930945+00:00"
+  },
+  {
+    "id": "f9aba138-7308-53d0-87cd-b08a3f412a9c",
+    "name": "John Lennon",
+    "image_url": null,
+    "created_at": "2026-07-12T14:46:21.792619+00:00"
   },
   {
     "id": "fb71e041-42a9-4e08-94d9-fb09a917d6eb",
