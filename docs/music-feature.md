@@ -38,15 +38,33 @@ Ya existían en Supabase (seed genérico del 5-jul, sin usar). Se **reutilizan**
 
 - **`artists`** (`id`, `name`, `image_url`) → habilita el eje "por artista".
 - **`songs`** (`id`, `artist_id`, `title`, `album`, `year`, `lyrics_excerpt`,
-  `source`) → `source='user'` distingue la música importada del seed genérico
-  (`source='seed'`), que queda intacto pero invisible. **No se guarda la letra**
-  (`lyrics_excerpt=''`).
+  `source`, `rank`) → `source='user'` distingue la música importada del seed
+  genérico (`source='seed'`), que queda intacto pero invisible. **No se guarda la
+  letra** (`lyrics_excerpt=''`). `rank` = posición en el catálogo (tu top personal
+  primero, luego las colecciones "This Is" ya ordenadas por popularidad).
 - **`song_vocabulary`** (`song_id`, `vocabulary_id`, `line_text`,
-  `highlighted_word`, `line_index`) → la "BD de matches". `line_text` guarda la
-  **línea** donde aparece la palabra (contexto), decisión consciente del usuario.
+  `line_translation`, `highlighted_word`, `line_index`) → la "BD de matches".
 
-`source` se añadió con: `ALTER TABLE songs ADD COLUMN IF NOT EXISTS source text
-NOT NULL DEFAULT 'seed';` (las de usuario se insertan con `'user'`).
+Columnas añadidas por `ALTER` (las de usuario se insertan con `source='user'`):
+`songs.source` (`text NOT NULL DEFAULT 'seed'`), `songs.rank` (`integer`),
+`song_vocabulary.line_translation` (`text`, de momento sin poblar).
+
+## Verso de contexto en la ficha (gancho de memoria)
+
+Al estudiar en la sección de música, la ficha muestra —además del significado y
+los ejemplos— el **verso real de tu canción** donde aparece la palabra. Reglas:
+
+- **Contexto de 3 líneas**: `line_text` guarda la línea anterior, la de la palabra
+  y la posterior (ancla más fuerte al escuchar la canción). La palabra va en
+  **negrita** usando `highlighted_word`, que guarda la **forma exacta** que
+  aparece en el verso (flexión incluida), no la canónica.
+- **Prioridad por `rank`**: cuando una palabra sale en varias canciones, se muestra
+  el verso de la de **menor rank** (tu canción más escuchada; si no está en tu top,
+  la más popular del artista). Orden en `getMusicVocabulary` (`ORDER BY s.rank ASC`).
+- **Bloque unificado**: si hay verso de tu música, se **oculta** el "ancla" del
+  phrasal (título famoso), para no mostrar dos tarjetas de canción. El bloque lleva
+  botón **▶ Escuchar en Spotify** (canción/artista reales) y un hueco para la
+  traducción del verso (`line_translation`, se pinta cuando exista el dato).
 
 ## Copyright
 
@@ -106,13 +124,16 @@ conservador (ver [`match-music.mjs`](../scripts/match-music.mjs)):
   separable que salta un `\n`) se descarta — contexto no localizable y de baja
   precisión.
 
-## Estado (fases)
+## Estado
 
-- ✅ **Fase 1-3 (datos)**: esquema (`source`), pipeline y carga verificada. Las
-  primeras 72 canciones están en Supabase (`source='user'`, 164 matches). El
-  catálogo tiene 449; el resto se carga tras descargar sus letras.
-- ⏳ **Fase 2 (sync cliente, pendiente)**: tablas locales `songs`/`artists`/
-  `song_vocabulary` en SQLite + `syncMusic`. Se monta cuando el dataset esté
-  completo, para verificar con datos reales.
-- ⏳ **Fase 4-5 (UI, pendiente)**: la sección "Aprende con tu música" con los
-  modos de arriba + ancla en la ficha normal.
+- ✅ **Datos**: catálogo de **518 canciones** cargadas (`source='user'`), **993
+  matches** (A2+ jugoso), con verso de contexto (3 líneas), `highlighted_word`
+  exacto y `rank`.
+- ✅ **Sync cliente**: tablas locales `songs`/`artists`/`song_vocabulary` +
+  `syncMusicFromSupabase` (full replace gateado, degrada con gracia).
+- ✅ **UI**: sección "Aprende con tu música" (hub con **Top recurrentes / Por tipo
+  / Por artista ≥8**), estudio con flashcard/typing (FSRS compartido), verso de la
+  canción con la palabra en negrita + Spotify.
+- ⏳ **Pendiente**: traducción del verso (`line_translation`, sin poblar);
+  **ancla "🎵 aparece en…" en las fichas normales** (fuera de la sección de
+  música); **selector de nivel** dedicado en el hub.
