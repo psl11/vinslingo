@@ -435,6 +435,10 @@ export default function StudyScreen() {
             separability={currentCard.separability}
             cefrLevel={currentCard.cefr_level}
             category={currentCard.category}
+            musicLine={(currentCard as any).music_line}
+            musicHighlight={(currentCard as any).music_highlight}
+            musicSong={(currentCard as any).music_song}
+            musicArtist={(currentCard as any).music_artist}
             onFlip={handleFlip}
           />
         )}

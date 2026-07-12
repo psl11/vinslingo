@@ -128,16 +128,18 @@ for (const s of songs) {
   const low = text.toLowerCase().replace(/[’]/g, "'");
   for (const { v, re } of scoped) {
     if (!re.test(low)) continue;
-    // localizar la línea
-    let lineText = '', lineIdx = -1;
+    // localizar la línea y capturar la FORMA REAL que aparece en el verso
+    // (para poder resaltarla exacta en negrita, aunque sea una flexión).
+    let lineText = '', lineIdx = -1, surface = '';
     const realLines = s.lines.filter((l) => l.trim() && !isSection(l));
     for (let i = 0; i < realLines.length; i++) {
-      if (re.test(realLines[i].toLowerCase().replace(/[’]/g, "'"))) { lineText = realLines[i].trim(); lineIdx = i; break; }
+      const mm = realLines[i].replace(/[’]/g, "'").match(re);
+      if (mm) { lineText = realLines[i].trim(); lineIdx = i; surface = mm[0].trim(); break; }
     }
     // Sin línea única localizable (match que cruza líneas) → descartar: sería un
     // contexto vacío y de baja precisión.
     if (lineIdx === -1) continue;
-    matches.push({ songN: s.n, title: s.title, artist: primaryArtist(s.artist), vid: v.id, word: v.word, cat: v.category, cefr: v.cefr_level, line: lineText, lineIdx });
+    matches.push({ songN: s.n, title: s.title, artist: primaryArtist(s.artist), vid: v.id, word: v.word, surface: surface || v.word, cat: v.category, cefr: v.cefr_level, line: lineText, lineIdx });
   }
 }
 
@@ -237,7 +239,7 @@ if (APPLY) {
   const seen = new Set();
   const svRows = matches.map((m) => {
     const sid = songIdByN.get(m.songN);
-    return { id: detId(`sv:${sid}|${m.vid}`), song_id: sid, vocabulary_id: m.vid, line_text: m.line || null, highlighted_word: m.word, line_index: m.lineIdx };
+    return { id: detId(`sv:${sid}|${m.vid}`), song_id: sid, vocabulary_id: m.vid, line_text: m.line || null, highlighted_word: m.surface || m.word, line_index: m.lineIdx };
   }).filter((r) => { if (seen.has(r.id)) return false; seen.add(r.id); return true; });
   for (let i = 0; i < svRows.length; i += 200) {
     const { error } = await supabase.from('song_vocabulary').upsert(svRows.slice(i, i + 200), { onConflict: 'id' });

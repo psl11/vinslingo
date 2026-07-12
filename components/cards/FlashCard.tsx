@@ -29,7 +29,28 @@ interface FlashCardProps {
   separability?: string; // 'separable' | 'inseparable' | 'intransitive'
   cefrLevel?: string;
   category?: string;
+  // "Aprende con tu música": verso de una canción del usuario donde aparece la
+  // palabra (con la forma exacta a resaltar), + título y artista.
+  musicLine?: string | null;
+  musicHighlight?: string | null;
+  musicSong?: string | null;
+  musicArtist?: string | null;
   onFlip?: (isFlipped: boolean) => void;
+}
+
+// Renderiza un verso resaltando en negrita la forma exacta que aparece (case-
+// insensitive). Si no la encuentra, muestra el verso tal cual.
+function HighlightedLine({ line, highlight }: { line: string; highlight?: string | null }) {
+  if (!highlight) return <Text style={styles.musicLineText}>“{line}”</Text>;
+  const idx = line.toLowerCase().indexOf(highlight.toLowerCase());
+  if (idx < 0) return <Text style={styles.musicLineText}>“{line}”</Text>;
+  return (
+    <Text style={styles.musicLineText}>
+      “{line.slice(0, idx)}
+      <Text style={styles.musicLineBold}>{line.slice(idx, idx + highlight.length)}</Text>
+      {line.slice(idx + highlight.length)}”
+    </Text>
+  );
 }
 
 export function FlashCard({
@@ -51,6 +72,10 @@ export function FlashCard({
   separability,
   cefrLevel,
   category,
+  musicLine,
+  musicHighlight,
+  musicSong,
+  musicArtist,
   onFlip,
 }: FlashCardProps) {
   const anchorIconChar = anchorIcon(anchorType);
@@ -310,6 +335,21 @@ export function FlashCard({
                 )}
               </View>
               )}
+
+              {/* Verso de tu música donde aparece la palabra (con la forma exacta
+                  en negrita) + canción y artista. Gancho de memoria: al escuchar
+                  la canción te acuerdas de la expresión. */}
+              {musicLine && (
+                <View style={styles.musicContext}>
+                  <Text style={styles.musicIcon}>🎵</Text>
+                  <HighlightedLine line={musicLine} highlight={musicHighlight} />
+                  {(musicSong || musicArtist) && (
+                    <Text style={styles.musicCredit}>
+                      — {[musicSong, musicArtist].filter(Boolean).join(' · ')}
+                    </Text>
+                  )}
+                </View>
+              )}
             </View>
           </View>
         </View>
@@ -501,6 +541,37 @@ const styles = StyleSheet.create({
   songCredit: {
     fontSize: fontSize.xs,
     color: colors.warningTextSoft,
+    textAlign: 'center',
+    marginTop: spacing.sm,
+    fontWeight: fontWeight.semibold,
+  },
+  musicContext: {
+    width: '100%',
+    marginTop: spacing.md,
+    paddingVertical: spacing.lg,
+    paddingHorizontal: spacing.md,
+    backgroundColor: colors.accentPurpleSurface,
+    borderRadius: radius.sm,
+  },
+  musicIcon: {
+    fontSize: fontSize.md,
+    textAlign: 'center',
+    marginBottom: spacing.xs,
+  },
+  musicLineText: {
+    fontSize: fontSize.sm,
+    color: colors.accentPurple,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    lineHeight: 19,
+  },
+  musicLineBold: {
+    fontWeight: fontWeight.bold,
+    fontStyle: 'normal',
+  },
+  musicCredit: {
+    fontSize: fontSize.xs,
+    color: colors.textSecondary,
     textAlign: 'center',
     marginTop: spacing.sm,
     fontWeight: fontWeight.semibold,

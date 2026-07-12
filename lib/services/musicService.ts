@@ -140,6 +140,13 @@ export async function getMusicArtists(
  * (v.*) — el mismo shape que el resto del estudio. `top` ordena por nº de
  * canciones distintas (recurrencia); si no, por frecuencia.
  */
+export type MusicVocabularyItem = VocabularyItem & {
+  music_line?: string | null;
+  music_highlight?: string | null;
+  music_song?: string | null;
+  music_artist?: string | null;
+};
+
 export async function getMusicVocabulary(opts: {
   artistId?: string;
   songId?: string;
@@ -147,7 +154,7 @@ export async function getMusicVocabulary(opts: {
   top?: boolean;
   cefrLevels?: string[];
   limit?: number;
-}): Promise<VocabularyItem[]> {
+}): Promise<MusicVocabularyItem[]> {
   const { artistId, songId, category, top, cefrLevels, limit = 20 } = opts;
   const where: string[] = [];
   const params: (string | number)[] = [];
@@ -161,7 +168,7 @@ export async function getMusicVocabulary(opts: {
   const whereSql = where.length ? 'WHERE ' + where.join(' AND ') : '';
   const order = top ? 'ORDER BY COUNT(DISTINCT sv.song_id) DESC, v.frequency_rank ASC' : 'ORDER BY v.frequency_rank ASC';
   params.push(limit);
-  return runQuery<VocabularyItem>(
+  const words = await runQuery<VocabularyItem>(
     `SELECT v.* FROM vocabulary v
        JOIN song_vocabulary sv ON sv.vocabulary_id = v.id
        JOIN songs s ON s.id = sv.song_id
@@ -171,6 +178,36 @@ export async function getMusicVocabulary(opts: {
      LIMIT ?`,
     params
   );
+  if (words.length === 0) return words;
+
+  // Adjuntar a cada palabra UN verso de contexto (el de su canción, priorizando
+  // el mismo artista/canción del alcance si lo hay). Refuerza la memoria: verso
+  // + título + artista donde aparece la palabra.
+  const ids = words.map((w) => w.id);
+  const ctxWhere: string[] = [`sv.vocabulary_id IN (${ids.map(() => '?').join(', ')})`];
+  const ctxParams: (string | number)[] = [...ids];
+  if (songId) { ctxWhere.push('sv.song_id = ?'); ctxParams.push(songId); }
+  else if (artistId) { ctxWhere.push('s.artist_id = ?'); ctxParams.push(artistId); }
+  const ctx = await runQuery<{ vocabulary_id: string; line_text: string | null; highlighted_word: string | null; title: string; artist: string | null }>(
+    `SELECT sv.vocabulary_id, sv.line_text, sv.highlighted_word, s.title, a.name as artist
+     FROM song_vocabulary sv
+     JOIN songs s ON s.id = sv.song_id
+     LEFT JOIN artists a ON a.id = s.artist_id
+     WHERE ${ctxWhere.join(' AND ')} AND sv.line_text IS NOT NULL`,
+    ctxParams
+  );
+  const byWord = new Map<string, typeof ctx[number]>();
+  for (const c of ctx) if (!byWord.has(c.vocabulary_id)) byWord.set(c.vocabulary_id, c);
+  return words.map((w) => {
+    const c = byWord.get(w.id);
+    return {
+      ...w,
+      music_line: c?.line_text ?? null,
+      music_highlight: c?.highlighted_word ?? null,
+      music_song: c?.title ?? null,
+      music_artist: c?.artist ?? null,
+    };
+  });
 }
 
 /** Canciones en las que aparece una palabra (para el ancla en la ficha). */
