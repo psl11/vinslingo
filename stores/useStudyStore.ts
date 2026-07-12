@@ -15,6 +15,7 @@ export interface VocabularyItem {
   word: string;
   translation: string;
   pronunciation?: string;
+  pronunciation_es?: string;
   audio_url?: string;
   part_of_speech?: string;
   cefr_level: string;

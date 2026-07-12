@@ -410,6 +410,7 @@ export default function StudyScreen() {
             word={currentCard.word}
             translation={currentCard.translation}
             pronunciation={currentCard.pronunciation}
+            pronunciationEs={currentCard.pronunciation_es}
             category={currentCard.category}
             partOfSpeech={currentCard.part_of_speech}
             cefrLevel={currentCard.cefr_level}
@@ -421,6 +422,7 @@ export default function StudyScreen() {
             word={currentCard.word}
             translation={currentCard.translation}
             pronunciation={currentCard.pronunciation}
+            pronunciationEs={currentCard.pronunciation_es}
             example={currentCard.example_sentence}
             exampleTranslation={currentCard.example_translation}
             example2={currentCard.example_sentence_2}

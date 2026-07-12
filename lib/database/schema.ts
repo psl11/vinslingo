@@ -8,6 +8,7 @@ export const LOCAL_SCHEMA = `
     word TEXT NOT NULL,
     translation TEXT NOT NULL,
     pronunciation TEXT,
+    pronunciation_es TEXT,
     audio_url TEXT,
     part_of_speech TEXT,
     cefr_level TEXT NOT NULL,

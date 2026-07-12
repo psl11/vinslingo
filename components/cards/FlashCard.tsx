@@ -14,6 +14,7 @@ interface FlashCardProps {
   word: string;
   translation: string;
   pronunciation?: string;
+  pronunciationEs?: string; // respelling legible adaptado al español (kídni)
   audioUrl?: string;
   example?: string;
   exampleTranslation?: string;
@@ -57,6 +58,7 @@ export function FlashCard({
   word,
   translation,
   pronunciation,
+  pronunciationEs,
   audioUrl,
   example,
   exampleTranslation,
@@ -248,6 +250,9 @@ export function FlashCard({
           {pronunciation && (
             <Text style={styles.pronunciationText}>{pronunciation}</Text>
           )}
+          {pronunciationEs && (
+            <Text style={styles.respellText}>{pronunciationEs}</Text>
+          )}
         </View>
       ) : (
         /* Back of card - SPANISH translation */
@@ -263,6 +268,11 @@ export function FlashCard({
           {/* La palabra estudiada, en grande arriba del reverso, para no perder
               de vista a qué se refiere el significado y los ejemplos. */}
           <Text style={styles.backWord} numberOfLines={2}>{word}</Text>
+          {(pronunciation || pronunciationEs) && (
+            <Text style={styles.backPron}>
+              {[pronunciation, pronunciationEs].filter(Boolean).join('   ·   ')}
+            </Text>
+          )}
           <View style={styles.backContent} onLayout={onAvailLayout}>
             <View
               style={[styles.backInner, { transform: [{ scale: contentScale }], opacity: measured ? 1 : 0 }]}
@@ -425,6 +435,18 @@ const styles = StyleSheet.create({
     fontSize: fontSize.md,
     color: '#666666',
     marginTop: spacing.sm,
+  },
+  respellText: {
+    fontSize: fontSize.base,
+    color: colors.accentPurple,
+    fontStyle: 'italic',
+    marginTop: spacing.xxs,
+  },
+  backPron: {
+    fontSize: fontSize.sm,
+    color: colors.textSecondary,
+    textAlign: 'center',
+    marginTop: spacing.xxs,
   },
   cefrBadge: {
     backgroundColor: colors.primarySurface,

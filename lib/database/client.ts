@@ -109,6 +109,10 @@ async function runMigrations(): Promise<void> {
       await db.execAsync('ALTER TABLE vocabulary ADD COLUMN separability TEXT');
       migrationsRan = true;
     }
+    if (!columnNames.includes('pronunciation_es')) {
+      await db.execAsync('ALTER TABLE vocabulary ADD COLUMN pronunciation_es TEXT');
+      migrationsRan = true;
+    }
 
     if (migrationsRan) {
       // Forzar un resync COMPLETO: borrar la marca de agua y el last_full_sync

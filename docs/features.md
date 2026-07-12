@@ -3,8 +3,9 @@
 Resumen de las funcionalidades de estudio recientes y cómo están montadas, para
 tener el contexto sin leer todo el código. Ver también
 [`docs/design-system.md`](design-system.md) (UI),
-[`docs/fsrs-migration.md`](fsrs-migration.md) (scheduler) y
-[`docs/music-feature.md`](music-feature.md) ("Aprende con tu música").
+[`docs/fsrs-migration.md`](fsrs-migration.md) (scheduler),
+[`docs/music-feature.md`](music-feature.md) ("Aprende con tu música") y
+[`docs/pronunciation.md`](pronunciation.md) (IPA + respelling al español).
 
 ## Palabras más falladas
 

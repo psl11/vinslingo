@@ -10,6 +10,7 @@ import { colors, radius, spacing, fontSize, fontWeight, webInputReset } from '..
 
 interface TypingCardProps {
   word: string;
+  pronunciationEs?: string;
   translation: string;
   pronunciation?: string;
   category?: string;
@@ -20,6 +21,7 @@ interface TypingCardProps {
 
 export function TypingCard({
   word,
+  pronunciationEs,
   translation,
   pronunciation,
   category,
@@ -285,6 +287,12 @@ export function TypingCard({
 
           <Text style={styles.translationSmall}>{translation}</Text>
 
+          {(pronunciation || pronunciationEs) && (
+            <Text style={styles.pronResult}>
+              {[pronunciation, pronunciationEs].filter(Boolean).join('   ·   ')}
+            </Text>
+          )}
+
           {matchResult === 'wrong' ? (
             /* Wrong: let user self-assess like flashcard mode */
             <View style={styles.selfAssessRow}>
@@ -492,6 +500,12 @@ const styles = StyleSheet.create({
     fontSize: fontSize.base,
     color: colors.textSecondary,
     marginTop: spacing.xs,
+    marginBottom: spacing.md,
+    textAlign: 'center',
+  },
+  pronResult: {
+    fontSize: fontSize.sm,
+    color: colors.accentPurple,
     marginBottom: spacing.xl,
     textAlign: 'center',
   },

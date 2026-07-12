@@ -8,6 +8,7 @@ export interface SupabaseVocabulary {
   word: string;
   translation: string;
   pronunciation?: string;
+  pronunciation_es?: string;
   audio_url?: string;
   part_of_speech?: string;
   cefr_level: string;
@@ -45,7 +46,7 @@ const MIN_SYNC_INTERVAL_MS = 5 * 60 * 1000;
 // Cada cuánto un full completo (reconcilia borrados). Entre medias, incremental.
 const FULL_RESYNC_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 
-const VOCAB_COLUMNS = `id, word, translation, pronunciation, audio_url,
+const VOCAB_COLUMNS = `id, word, translation, pronunciation, pronunciation_es, audio_url,
   part_of_speech, cefr_level, category, frequency_rank,
   example_sentence, example_translation, example_sentence_2, example_translation_2,
   song_lyric, song_lyric_translation, song_title, song_artist,
@@ -54,7 +55,7 @@ const VOCAB_COLUMNS = `id, word, translation, pronunciation, audio_url,
 function vocabRowParams(item: SupabaseVocabulary, localTs: number): (string | number | null)[] {
   return [
     item.id, item.word, item.translation,
-    item.pronunciation || null, item.audio_url || null, item.part_of_speech || null,
+    item.pronunciation || null, item.pronunciation_es || null, item.audio_url || null, item.part_of_speech || null,
     item.cefr_level, item.category || null, item.frequency_rank || null,
     item.example_sentence || null, item.example_translation || null,
     item.example_sentence_2 || null, item.example_translation_2 || null,
@@ -149,7 +150,7 @@ export async function syncVocabularyFromSupabase(
     await withTransaction(async (db) => {
       for (const item of data) {
         await db.runAsync(
-          `INSERT OR REPLACE INTO vocabulary (${VOCAB_COLUMNS}) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          `INSERT OR REPLACE INTO vocabulary (${VOCAB_COLUMNS}) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           vocabRowParams(item, syncStartedAt)
         );
       }
