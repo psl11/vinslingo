@@ -34,3 +34,16 @@ preserva el *cross-origin isolation* que necesita `SharedArrayBuffer` /
 SQLite-wasm. Verificado: con el SW activo, `crossOriginIsolated === true` y el
 WASM queda en caché. (La primera visita registra el SW; a partir de la segunda
 carga la shell completa está cacheada y funciona offline.)
+
+## Qué funciona / no funciona offline
+
+Casi todo es local (estudio, repaso, buscador, ficha, "Aprende con tu música",
+pronunciación mostrada). Lo que depende de red se blinda con `isOnline`
+(`useSyncStore`, actualizado por `navigator.onLine` en web):
+
+- **🔊 pronunciación**: **funciona offline**. En la PWA usa el TTS del
+  dispositivo (Web Speech API), no red. El audio remoto (`audioUrl`) sí necesita
+  red → offline cae al TTS.
+- **▶ Escuchar en Spotify**: se **oculta** sin conexión (abre un enlace externo
+  que fallaría).
+- **Sync** (vocabulario/música/progreso): degrada con gracia (banner offline).

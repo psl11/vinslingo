@@ -2,6 +2,7 @@ import React, { useState, useRef, useMemo, useEffect } from 'react';
 import { View, Text, Pressable, StyleSheet, Linking, Platform, LayoutChangeEvent, Animated, Easing } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { useSettingsStore } from '../../stores/useSettingsStore';
+import { useSyncStore } from '../../stores/useSyncStore';
 import { useAudio } from '../../hooks/useAudio';
 import { TranslationBody } from '../vocabulary/TranslationBody';
 import { ParticleHint } from '../vocabulary/ParticleHint';
@@ -88,6 +89,7 @@ export function FlashCard({
   const isSongAnchor = anchorIsSong(anchorType);
   const [isFlipped, setIsFlipped] = useState(false);
   const { hapticsEnabled } = useSettingsStore();
+  const isOnline = useSyncStore((s) => s.isOnline);
   const { playWord, playUrl } = useAudio();
 
   // La maquetación del reverso la resuelve <TranslationBody>. Aquí solo
@@ -130,7 +132,9 @@ export function FlashCard({
   };
 
   const handlePlayAudio = async () => {
-    if (audioUrl) {
+    // El audio remoto (audioUrl) necesita red; offline caemos al TTS del
+    // dispositivo (Web Speech), que funciona sin conexión.
+    if (audioUrl && isOnline) {
       await playUrl(audioUrl);
     } else {
       await playWord(word);
@@ -359,7 +363,7 @@ export function FlashCard({
                     <Text style={styles.songCredit}>
                       — {anchorCredit(songTitle, songArtist, anchorYear)}
                     </Text>
-                    {isSongAnchor && (
+                    {isSongAnchor && isOnline && (
                       <Pressable onPress={(e) => openSpotify(e, songTitle, songArtist)} style={styles.spotifyButton}>
                         <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
                       </Pressable>
@@ -387,7 +391,7 @@ export function FlashCard({
                       — {[musicSong, musicArtist].filter(Boolean).join(' · ')}
                     </Text>
                   )}
-                  {(musicSong || musicArtist) && (
+                  {(musicSong || musicArtist) && isOnline && (
                     <Pressable onPress={(e) => openSpotify(e, musicSong, musicArtist)} style={styles.spotifyButton}>
                       <Text style={styles.spotifyButtonText}>▶  Escuchar en Spotify</Text>
                     </Pressable>
