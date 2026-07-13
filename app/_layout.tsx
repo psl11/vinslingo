@@ -31,6 +31,22 @@ function RootLayoutNav() {
   const { setOnlineStatus } = useSyncStore();
   const appState = useRef(AppState.currentState);
 
+  // Registrar el service worker (solo web y en producción): cachea la shell para
+  // que la app instalada abra y funcione sin conexión. En dev no, para no servir
+  // bundles cacheados obsoletos.
+  useEffect(() => {
+    if (
+      Platform.OS === 'web' &&
+      !__DEV__ &&
+      typeof navigator !== 'undefined' &&
+      'serviceWorker' in navigator
+    ) {
+      navigator.serviceWorker.register('/sw.js').catch((err) => {
+        console.log('SW registration failed:', err);
+      });
+    }
+  }, []);
+
   // Initialize database and sync vocabulary
   useEffect(() => {
     async function initialize() {
