@@ -12,9 +12,26 @@ la palabra y reverso bajo la palabra) y en el resultado de la
 [`TypingCard`](../components/cards/TypingCard.tsx).
 
 **Audio de frases**: además del altavoz de la palabra, cada **frase de ejemplo** y
-el **verso de la canción** llevan un botón 🔊 que las reproduce con TTS
-(`playPronunciation` acepta cualquier texto: Web Speech en web, Google TTS en
-móvil). Refuerza el *listening* en contexto.
+el **verso de la canción** llevan un botón 🔊 que las reproduce. Refuerza el
+*listening* en contexto.
+
+## Sistemas de audio (dos, distintos)
+
+Ver [`audioService.ts`](../lib/services/audioService.ts) / [`useAudio`](../hooks/useAudio.ts):
+
+- **Pronunciación (`playWord` → `playPronunciation`)** = voz **sintetizada (TTS)** a
+  partir del texto, sin descargar fichero. En **web/PWA** usa el **Web Speech API**
+  (el motor de voz del propio dispositivo) → **funciona offline**. En una app
+  **nativa** usaría Google Translate TTS por URL (esa sí necesitaría red).
+- **Audio remoto (`playUrl` → `playAudioFromUrl`)** = reproduce un **fichero
+  pregrabado** en `vocabulary.audio_url`. Siempre necesita red.
+
+Hoy **ninguna carta tiene `audio_url`** (0/2931): todo el 🔊 tira del TTS del
+dispositivo, así que **el audio funciona sin conexión**. El campo `audio_url`
+está previsto por si se añaden locuciones humanas grabadas (se priorizarían sobre
+la voz sintética). Por eso `FlashCard` solo usa `playUrl` si hay `audioUrl` **y**
+`isOnline`; si no, cae a `playWord` (ver [`docs/pwa.md`](pwa.md), comportamiento
+offline).
 
 ## Datos
 
