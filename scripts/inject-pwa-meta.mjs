@@ -16,6 +16,7 @@ const indexPath = resolve('dist', 'index.html');
 const MARKER = 'apple-mobile-web-app-capable';
 
 const TAGS = [
+  '<meta name="description" content="Aprende inglés con vocabulario, phrasal verbs, idioms, slang y repetición espaciada (FSRS), y con tu propia música." />',
   '<meta name="apple-mobile-web-app-capable" content="yes" />',
   '<meta name="mobile-web-app-capable" content="yes" />',
   '<meta name="apple-mobile-web-app-status-bar-style" content="default" />',
@@ -45,5 +46,14 @@ if (!html.includes('</head>')) {
 }
 
 html = html.replace('</head>', `    ${TAGS}\n  </head>`);
+
+// lang del documento (accesibilidad/SEO) y viewport-fit=cover (pantalla completa
+// en iPhone con notch, respetando safe-area). Idempotente (reemplazos estables).
+html = html.replace(/<html(\s[^>]*)?>/i, '<html lang="es">');
+html = html.replace(
+  /<meta name="viewport"[^>]*>/i,
+  '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />'
+);
+
 writeFileSync(indexPath, html);
 console.log('✓ PWA meta inyectada en dist/index.html.');
