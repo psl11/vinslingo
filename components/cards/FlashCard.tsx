@@ -285,12 +285,9 @@ export function FlashCard({
           </View>
           {/* La palabra estudiada, en grande arriba del reverso, para no perder
               de vista a qué se refiere el significado y los ejemplos. */}
+          {/* La pronunciación (IPA + respelling) va solo en el anverso; en el
+              reverso se omite para que la ficha respire. */}
           <Text style={styles.backWord} numberOfLines={2}>{word}</Text>
-          {(pronunciation || pronunciationEs) && (
-            <Text style={styles.backPron}>
-              {[pronunciation, pronunciationEs].filter(Boolean).join('   ·   ')}
-            </Text>
-          )}
           <View style={styles.backContent} onLayout={onAvailLayout}>
             <View
               style={[styles.backInner, { transform: [{ scale: contentScale }], opacity: measured ? 1 : 0 }]}
@@ -350,10 +347,7 @@ export function FlashCard({
                     evita mostrar dos tarjetas de canción a la vez. */}
                 {songTitle && !musicLine && (
                   <View style={styles.songExampleItem}>
-                    <View style={styles.musicIconRow}>
-                      <Text style={styles.songIcon}>{anchorIconChar}</Text>
-                      {songLyric && <Speak text={songLyric} />}
-                    </View>
+                    <Text style={styles.songIcon}>{anchorIconChar}</Text>
                     {songLyric && (
                       <Text style={styles.songLyricText}>"{songLyric}"</Text>
                     )}
@@ -378,10 +372,7 @@ export function FlashCard({
                   la canción te acuerdas de la expresión. */}
               {musicLine && (
                 <View style={styles.musicContext}>
-                  <View style={styles.musicIconRow}>
-                    <Text style={styles.musicIcon}>🎵</Text>
-                    <Speak text={musicLine} />
-                  </View>
+                  <Text style={styles.musicIcon}>🎵</Text>
                   <HighlightedLine line={musicLine} highlight={musicHighlight} />
                   {musicLineTranslation && (
                     <Text style={styles.exampleTranslation}>"{musicLineTranslation}"</Text>
@@ -480,12 +471,6 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
     marginTop: spacing.xxs,
   },
-  backPron: {
-    fontSize: fontSize.sm,
-    color: colors.textSecondary,
-    textAlign: 'center',
-    marginTop: spacing.xxs,
-  },
   cefrBadge: {
     backgroundColor: colors.primarySurface,
     paddingHorizontal: spacing.sm,
@@ -582,12 +567,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: spacing.xs,
     flexWrap: 'wrap',
-  },
-  musicIconRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    gap: spacing.sm,
   },
   speakerBtn: {
     paddingHorizontal: spacing.xs,

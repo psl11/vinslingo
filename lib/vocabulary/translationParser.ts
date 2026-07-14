@@ -123,6 +123,9 @@ function stripInlineExamples(text: string): string {
     .replace(/"[^"]*"\s*=\s*[^".]*\.?/g, '')
     .replace(/"[^"]*"/g, '')
     .replace(/\s{2,}/g, ' ')
+    // marcador de ejemplo huérfano tras quitar el ejemplo ("… algo. Ej:"),
+    // conservando el punto de la frase (solo se come el espacio previo).
+    .replace(/\s+\b(?:p\.?\s*ej\.?|por ejemplo|ejemplos?|ej)\b\.?:?\s*$/i, '')
     .replace(/^[\s.,;:—-]+/, '')
     .replace(/[\s,;:—-]+$/, '') // conserva el punto final de la prosa
     .trim();

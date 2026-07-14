@@ -7,8 +7,8 @@ Bajo cada palabra en inglés se muestra su pronunciación en dos capas:
 - **Respelling adaptado al español** — una lectura legible sin saber IPA:
   `kidney → kídni`. Columna `vocabulary.pronunciation_es`.
 
-Se muestran en la [`FlashCard`](../components/cards/FlashCard.tsx) (anverso bajo
-la palabra y reverso bajo la palabra) y en el resultado de la
+Se muestran en la [`FlashCard`](../components/cards/FlashCard.tsx) **solo en el
+anverso** (bajo la palabra; el reverso se deja limpio) y en el resultado de la
 [`TypingCard`](../components/cards/TypingCard.tsx).
 
 **Audio de frases**: además del altavoz de la palabra, cada **frase de ejemplo** y
