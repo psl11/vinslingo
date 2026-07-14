@@ -375,6 +375,14 @@ export async function getMostFailedVocabulary(
   return runQuery<SearchResult>(query, params);
 }
 
+// Pool para generar distractores del modo Entrenamiento (drill): todo el
+// vocabulario, solo con los campos que usa el generador (ligero: ~3k filas).
+export async function getDistractorPool(): Promise<VocabularyItem[]> {
+  return runQuery<VocabularyItem>(
+    'SELECT id, word, translation, category, cefr_level, part_of_speech FROM vocabulary'
+  );
+}
+
 export async function getAllLearnedVocabulary(limit: number = 100, offset: number = 0): Promise<SearchResult[]> {
   return runQuery<SearchResult>(
     `SELECT v.*, uv.mastery_level, uv.times_correct, uv.times_incorrect

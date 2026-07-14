@@ -136,17 +136,32 @@ export default function FailedWordsScreen() {
         </View>
 
         {words.length > 0 && (
-          <View style={styles.ctaRow}>
-            <PressableScale style={styles.ctaButton} onPress={() => startQuiz(false)}>
-              <Text style={styles.ctaButtonText}>Tarjetas</Text>
-            </PressableScale>
+          <>
+            {/* Entrenamiento: drill estilo Duolingo (cada palabra en 3 formatos,
+                los fallos se repiten al final). Ver docs/drill-mode.md. */}
             <PressableScale
-              style={[styles.ctaButton, styles.ctaButtonTyping]}
-              onPress={() => startQuiz(true)}
+              style={styles.trainButton}
+              onPress={() =>
+                router.push({
+                  pathname: '/study/drill',
+                  params: { limit: String(cardsPerRound), scope },
+                })
+              }
             >
-              <Text style={styles.ctaButtonText}>Escribir</Text>
+              <Text style={styles.ctaButtonText}>🏋️ Entrenar</Text>
             </PressableScale>
-          </View>
+            <View style={styles.ctaRow}>
+              <PressableScale style={styles.ctaButton} onPress={() => startQuiz(false)}>
+                <Text style={styles.ctaButtonText}>Tarjetas</Text>
+              </PressableScale>
+              <PressableScale
+                style={[styles.ctaButton, styles.ctaButtonTyping]}
+                onPress={() => startQuiz(true)}
+              >
+                <Text style={styles.ctaButtonText}>Escribir</Text>
+              </PressableScale>
+            </View>
+          </>
         )}
       </View>
 
@@ -274,6 +289,15 @@ const styles = StyleSheet.create({
   },
   cardCountTextSelected: {
     color: colors.primary,
+  },
+  trainButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: spacing.lg,
+    borderRadius: radius.md,
+    backgroundColor: colors.accentPurple,
+    marginBottom: spacing.md,
   },
   ctaRow: {
     flexDirection: 'row',

@@ -27,6 +27,14 @@ el tab Aprender.
 - El cuestionario entra por `/study/failed`; el motor lee `id === 'failed'` y el
   `scope` del toggle (ver [`app/study/[id].tsx`](../app/study/[id].tsx)).
 
+## Entrenamiento (drill de falladas)
+
+Modo intensivo estilo Duolingo para las palabras más falladas: cada palabra en
+3 formatos que escalan (opción múltiple → completa la frase → escribir), fallos
+re-encolados al final, y el resultado alimenta FSRS de verdad. Entrada: botón
+**🏋️ Entrenar** en "Palabras más falladas". Detalle completo (mecánica, calidad
+de distractores, FSRS) en [`docs/drill-mode.md`](drill-mode.md).
+
 ## Estudiar por partícula (phrasal verbs)
 
 Agrupa los phrasal verbs por su partícula (UP, OUT, OFF…) para reforzar el

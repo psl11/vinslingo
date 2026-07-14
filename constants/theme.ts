@@ -68,6 +68,7 @@ export const colors = {
   // Éxito
   success: '#16A34A',
   successSurface: '#F0FDF4',
+  successText: '#15803D', // texto sobre successSurface (opción correcta del drill)
 
   // Aviso / ancla de canción (ámbar)
   warning: '#F59E0B',
