@@ -225,7 +225,7 @@ const AMERICAN: Slang[] = [
   { word: 'dough', es: 'pasta (dinero)', reg: 'casual', ex: "I'm low on dough.", exEs: 'Ando corto de pasta.' },
   { word: 'loaded', es: 'forrado (de dinero)', reg: 'casual', ex: 'His parents are loaded.', exEs: 'Sus padres están forrados.' },
   { word: 'broke', es: 'sin blanca, pelado', reg: 'casual', ex: "I'm totally broke.", exEs: 'Estoy sin un duro.' },
-  { word: 'tight', es: '(1) tacaño (2) muy amigos (3) genial', reg: 'casual', ex: "We've been tight since school.", exEs: 'Somos muy amigos desde el cole.' },
+  { word: 'tight', es: 'tacaño; o muy amigos; o genial (según contexto)', reg: 'casual', ex: "We've been tight since school.", exEs: 'Somos muy amigos desde el cole.' },
   { word: 'buzzed', es: 'achispado', reg: 'casual', ex: "I'm a little buzzed.", exEs: 'Estoy un poco achispado.' },
   { word: 'tipsy', es: 'piripi, achispado', reg: 'casual', ex: 'She got tipsy after one glass.', exEs: 'Se puso piripi con una copa.' },
   { word: 'dip', es: 'largarse, irse', reg: 'casual', ex: "It's late, let's dip.", exEs: 'Es tarde, larguémonos.' },

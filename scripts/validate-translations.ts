@@ -21,6 +21,126 @@ interface Row {
   word: string;
   translation: string;
   category: string;
+  example_sentence?: string | null;
+  example_translation?: string | null;
+  example_sentence_2?: string | null;
+  example_translation_2?: string | null;
+}
+
+// --- Lematización mínima para comprobar que un ejemplo usa SU propia palabra ---
+// (mismo espíritu que el matcher de música: formas irregulares + flexiones +
+// phrasals separables). Ver docs/content-qa.md.
+const IRREG: Record<string, string[]> = {
+  be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
+  run: ['ran', 'running'], get: ['got', 'gotten', 'getting'], give: ['gave', 'given', 'giving'],
+  take: ['took', 'taken', 'taking'], make: ['made', 'making'], go: ['went', 'gone', 'going', 'goes'],
+  come: ['came', 'coming'], see: ['saw', 'seen', 'seeing'], find: ['found', 'finding'],
+  hold: ['held', 'holding'], keep: ['kept', 'keeping'], bring: ['brought', 'bringing'],
+  break: ['broke', 'broken', 'breaking'], blow: ['blew', 'blown', 'blowing'],
+  throw: ['threw', 'thrown', 'throwing'], fall: ['fell', 'fallen', 'falling'],
+  catch: ['caught', 'catching'], put: ['putting'], cut: ['cutting'], let: ['letting'],
+  set: ['setting'], hit: ['hitting'], shut: ['shutting'], lose: ['lost', 'losing'],
+  leave: ['left', 'leaving'], feel: ['felt', 'feeling'], tell: ['told', 'telling'],
+  think: ['thought', 'thinking'], stand: ['stood', 'standing'], wake: ['woke', 'woken', 'waking'],
+  pay: ['paid', 'paying'], lay: ['laid', 'laying'], buy: ['bought', 'buying'],
+  sell: ['sold', 'selling'], draw: ['drew', 'drawn', 'drawing'], drive: ['drove', 'driven', 'driving'],
+  write: ['wrote', 'written', 'writing'], ride: ['rode', 'ridden', 'riding'],
+  eat: ['ate', 'eaten', 'eating'], speak: ['spoke', 'spoken', 'speaking'], sit: ['sat', 'sitting'],
+  do: ['does', 'did', 'done', 'doing'], have: ['has', 'had', 'having'],
+  say: ['said', 'saying'], know: ['knew', 'known', 'knowing'],
+  hang: ['hung', 'hanged', 'hanging'], grow: ['grew', 'grown', 'growing'],
+  send: ['sent', 'sending'], build: ['built', 'building'], steal: ['stole', 'stolen', 'stealing'],
+  bite: ['bit', 'bitten', 'biting'], spend: ['spent', 'spending'], sing: ['sang', 'sung', 'singing'],
+  drink: ['drank', 'drunk', 'drinking'], swim: ['swam', 'swum', 'swimming'],
+  begin: ['began', 'begun', 'beginning'], ring: ['rang', 'rung', 'ringing'],
+  meet: ['met', 'meeting'], read: ['reading'], feed: ['fed', 'feeding'], lead: ['led', 'leading'],
+  sleep: ['slept', 'sleeping'], teach: ['taught', 'teaching'], seek: ['sought', 'seeking'],
+  fight: ['fought', 'fighting'], win: ['won', 'winning'], wear: ['wore', 'worn', 'wearing'],
+  tear: ['tore', 'torn', 'tearing'], choose: ['chose', 'chosen', 'choosing'],
+  freeze: ['froze', 'frozen', 'freezing'], forget: ['forgot', 'forgotten', 'forgetting'],
+  hide: ['hid', 'hidden', 'hiding'], shake: ['shook', 'shaken', 'shaking'],
+  stick: ['stuck', 'sticking'], strike: ['struck', 'striking'], bend: ['bent', 'bending'],
+  lend: ['lent', 'lending'], understand: ['understood', 'understanding'],
+  fly: ['flew', 'flown', 'flying'], drop: ['dropped', 'dropping'],
+};
+
+// Partículas de phrasal verb (para decidir si una entrada de 2 palabras es un
+// phrasal comprobable frente a una expresión con plantilla).
+const PARTICLES = new Set([
+  'up', 'out', 'off', 'on', 'in', 'down', 'away', 'back', 'over', 'through',
+  'about', 'around', 'along', 'across', 'after', 'for', 'into', 'onto', 'with',
+  'from', 'by', 'apart', 'together', 'forward', 'ahead', 'aside', 'behind',
+]);
+
+/**
+ * Solo comprobamos el ejemplo en entradas donde la palabra aparece LITERAL:
+ * una sola palabra o un phrasal verbo+partícula. Las expresiones/idioms son
+ * plantillas ("I'm fed up with", "take it with a grain of salt") que el ejemplo
+ * adapta legítimamente (pronombres, tiempos, objetos), así que comprobarlas solo
+ * daría falsos positivos.
+ */
+function isCheckableWord(word: string, category: string): boolean {
+  if (category === 'confusing_pair') return false;
+  const w = word.toLowerCase().trim();
+  if (/[/?!",]/.test(w)) return false; // variantes ("kind of / sort of"), plantillas
+  if (/\b(i|i'm|you|he|she|it|it's|we|they|someone|somebody|something|one's|your|my|his|her|their|that)\b/.test(w)) return false;
+  if (/^to\s/.test(w)) return false; // "to get rid of"
+  const toks = w.split(/\s+/);
+  if (toks.length === 1) return true;
+  if (toks.length === 2 && PARTICLES.has(toks[1])) return true;
+  return false;
+}
+
+function verbForms(w: string): string[] {
+  const base = w.toLowerCase();
+  const forms = new Set([base]);
+  (IRREG[base] || []).forEach((f) => forms.add(f));
+  forms.add(base + 's');
+  if (/(s|x|z|ch|sh|o)$/.test(base)) forms.add(base + 'es');
+  if (/[^aeiou]y$/.test(base)) {
+    forms.add(base.slice(0, -1) + 'ies');
+    forms.add(base.slice(0, -1) + 'ied');
+  } else {
+    forms.add(base + 'ed');
+  }
+  forms.add(base + 'ing');
+  // grados del adjetivo (smart → smarter/smartest, easy → easier/easiest)
+  if (/[^aeiou]y$/.test(base)) {
+    forms.add(base.slice(0, -1) + 'ier');
+    forms.add(base.slice(0, -1) + 'iest');
+  } else {
+    forms.add(base + 'er');
+    forms.add(base + 'est');
+  }
+  if (base.endsWith('e')) {
+    forms.add(base.slice(0, -1) + 'ing');
+    forms.add(base + 'd');
+    forms.add(base + 'r');
+    forms.add(base + 'st');
+  }
+  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(base)) {
+    const d = base + base.slice(-1);
+    forms.add(d + 'ing');
+    forms.add(d + 'ed');
+  }
+  return [...forms];
+}
+
+const escRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** ¿La frase usa la palabra de la ficha (con flexiones / phrasal separable)? */
+function exampleUsesWord(word: string, sentence: string): boolean {
+  const w = word.toLowerCase().replace(/\s*\(uk vs us\)\s*$/, '').replace(/[’]/g, "'").trim();
+  const s = sentence.toLowerCase().replace(/[’]/g, "'");
+  if (!w) return true;
+  const toks = w.split(/\s+/);
+  const first = `(?:${verbForms(toks[0]).map(escRe).join('|')})`;
+  if (toks.length === 1) return new RegExp(`\\b${first}\\b`).test(s);
+  const rest = toks.slice(1).map(escRe).join('\\s+');
+  // contiguo, o separable (objeto en medio, hasta 3 palabras): "take it off"
+  const contiguous = new RegExp(`\\b${first}\\s+${rest}\\b`);
+  const separable = new RegExp(`\\b${first}(?:\\s+\\w+){1,3}\\s+${escRe(toks[toks.length - 1])}\\b`);
+  return contiguous.test(s) || separable.test(s);
 }
 
 const BACKUP = path.join(__dirname, '..', 'supabase', 'backup', 'vocabulary.json');
@@ -71,6 +191,46 @@ function validate(row: Row): Issue[] {
   // Contiene " | " (marca de par confuso) pero no se detectó como tal.
   if (t.includes(' | ') && a.kind !== 'comparison') {
     add('ERROR', `contiene " | " pero no se parsea como par confuso`);
+  }
+
+  // Comillas descuadradas: rompen la extracción de ejemplos (un ejemplo se
+  // "comería" el resto del texto o quedaría colgado).
+  const quotes = (t.match(/"/g) || []).length;
+  if (quotes % 2 !== 0) add('ERROR', `comillas descuadradas (${quotes})`);
+
+  // Explicación (monosémicos): tras quitar los ejemplos incrustados no debe
+  // quedar basura — el caso "…haciendo algo. Ej" que se veía en la ficha.
+  if (a.kind === 'term') {
+    const e = a.explanation;
+    if (e) {
+      if (e.includes('"')) add('ERROR', `explicación con comilla suelta tras limpiar ejemplos: "${e}"`);
+      if (/\b(como|tipo|ej|ejemplo|ejemplos|p\.?\s*ej|es decir|o sea|osea|por ejemplo)\b\.?:?$/i.test(e)) {
+        add('ERROR', `explicación termina en marcador huérfano: "${e}"`);
+      }
+      if (/[,;:]$/.test(e)) add('WARN', `explicación termina en signo colgante: "${e}"`);
+      if (e.length < 10) add('WARN', `explicación muy corta, ¿fragmento?: "${e}"`);
+      const opens = (e.match(/\(/g) || []).length;
+      const closes = (e.match(/\)/g) || []).length;
+      if (opens !== closes) add('ERROR', `paréntesis descuadrados en la explicación: "${e}"`);
+    }
+  }
+
+  // Los ejemplos deben ilustrar SU palabra (el fallo intolerable: la ficha de
+  // "take off" con un ejemplo de "turn off").
+  const skipExampleCheck = !isCheckableWord(row.word, row.category);
+  const examples: [string | null | undefined, string | null | undefined, string][] = [
+    [row.example_sentence, row.example_translation, 'ejemplo 1'],
+    [row.example_sentence_2, row.example_translation_2, 'ejemplo 2'],
+  ];
+  for (const [en, es, label] of examples) {
+    if (!en) continue;
+    if (!skipExampleCheck && !exampleUsesWord(row.word, en)) {
+      add('ERROR', `${label} no usa la palabra: "${en}"`);
+    }
+    if (!es) add('WARN', `${label} sin traducción al español`);
+  }
+  if (!row.example_sentence && row.example_sentence_2) {
+    add('WARN', `tiene ejemplo 2 pero no ejemplo 1`);
   }
 
   return issues;

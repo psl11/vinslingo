@@ -13893,7 +13893,7 @@
   {
     "id": "279c5eee-adfd-41e1-9f71-783f7d44b52a",
     "word": "turn on",
-    "translation": "ENCENDER — 1) Poner en marcha un aparato o abrir un grifo: \"Turn on the TV\" = enciende la tele. \"turn on the tap\" = abre el grifo. (Otros usos: \"turn on someone\" = volverse en contra de alguien; \"turn someone on\" = atraer o excitar.) Opuesto: \"turn off\".",
+    "translation": "ENCENDER / VOLVERSE EN CONTRA / ATRAER — 1) Poner en marcha un aparato o abrir un grifo: \"Turn on the TV\" = enciende la tele. \"Turn on the tap\" = abre el grifo. 2) Volverse en contra de alguien (turn on someone): \"The dog turned on its owner\" = el perro se volvió contra su dueño. 3) Atraer o excitar (turn someone on): \"That song turns me on\" = esa canción me pone. (Opuesto: turn off.)",
     "pronunciation": "/ˈtɝn ˈɑn/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -13914,9 +13914,9 @@
     "quote_author": "Timothy Leary",
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "activate",
-    "separability": "separable",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-15T11:18:44.669223+00:00",
     "pronunciation_es": "térn án"
   },
   {
@@ -15285,7 +15285,7 @@
   {
     "id": "2c03e2a2-bc11-49e2-852e-f8948b277917",
     "word": "wipe out",
-    "translation": "ANIQUILAR / ARRASAR / BORRAR — 1) Destruir por completo: \"The tsunami wiped out entire villages\" = el tsunami arrasó pueblos enteros. \"wipe out a species\" = exterminar una especie. (Coloquial: \"I'm wiped out\" = estoy hecho polvo; y \"wipe out\" al surfear o esquiar = darse un batacazo.)",
+    "translation": "ANIQUILAR / ARRASAR / AGOTAR — 1) Destruir por completo: \"The tsunami wiped out entire villages\" = el tsunami arrasó pueblos enteros. 2) Dejar agotado, casi siempre en pasiva (be wiped out): \"I'm wiped out after the marathon\" = estoy hecho polvo tras el maratón. 3) Darse un batacazo al surfear o esquiar: \"He wiped out on the first wave\" = se dio un batacazo en la primera ola.",
     "pronunciation": "/ˈwaɪp ˈaʊt/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -15306,9 +15306,9 @@
     "quote_author": null,
     "anchor_type": null,
     "anchor_year": null,
-    "formal_synonym": "eradicate",
-    "separability": "separable",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-15T11:18:45.284957+00:00",
     "pronunciation_es": "úaip áut"
   },
   {
@@ -19925,7 +19925,7 @@
   {
     "id": "389d590c-b03e-4976-ae38-84251478878e",
     "word": "kick off",
-    "translation": "EMPEZAR / DAR EL PISTOLETAZO DE SALIDA — Arrancar un evento o actividad. \"The meeting kicks off at 9\" = la reunión empieza a las 9. \"The festival kicks off with a concert\" = el festival arranca con un concierto. Viene del fútbol (\"kick off\" = saque inicial). (Coloquial brit.: \"kick off\" = montar un pollo.)",
+    "translation": "EMPEZAR / DAR EL PISTOLETAZO DE SALIDA — Arrancar un evento o una actividad. Viene del fútbol, del saque inicial. En inglés británico coloquial, kick off también significa montar un pollo.",
     "pronunciation": "/ˈkɪk ˈɔf/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -19948,7 +19948,7 @@
     "anchor_year": null,
     "formal_synonym": "commence",
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "updated_at": "2026-07-15T11:18:45.696227+00:00",
     "pronunciation_es": "kík óf"
   },
   {
@@ -29560,7 +29560,7 @@
     "cefr_level": "A2",
     "category": "ngsl",
     "frequency_rank": 1445,
-    "example_sentence": "They fought bravely for the honour of their country.",
+    "example_sentence": "They fought bravely for the honor of their country.",
     "example_translation": "Lucharon con valentía por el honor de su país.",
     "created_at": "2026-01-13T15:36:45.884765+00:00",
     "example_sentence_2": null,
@@ -29576,7 +29576,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-12T17:39:55.861868+00:00",
+    "updated_at": "2026-07-15T11:18:46.535847+00:00",
     "pronunciation_es": "áner"
   },
   {
@@ -71168,7 +71168,7 @@
   {
     "id": "d2a0c090-a32d-5b58-85d4-32386cd4cd08",
     "word": "tight",
-    "translation": "(1) tacaño (2) muy amigos (3) genial",
+    "translation": "tacaño; o muy amigos; o genial (según contexto)",
     "pronunciation": "/ˈtaɪt/",
     "audio_url": null,
     "part_of_speech": null,
@@ -71191,7 +71191,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-12T17:39:59.244029+00:00",
+    "updated_at": "2026-07-15T11:18:46.222793+00:00",
     "pronunciation_es": "táit"
   },
   {
@@ -81724,7 +81724,7 @@
   {
     "id": "f49934c9-846c-4ea9-a64d-82f4eed9abe3",
     "word": "hang out",
-    "translation": "PASAR EL RATO / QUEDAR (con amigos) — Estar por ahí sin un plan concreto, sobre todo con amigos. \"We hung out at the mall\" = estuvimos por el centro comercial. \"Do you want to hang out?\" = ¿quieres que quedemos? (Coloquial: \"hang out with\" = juntarse con.)",
+    "translation": "PASAR EL RATO / QUEDAR (con amigos) — Estar por ahí sin un plan concreto, sobre todo con amigos. En la forma hang out with significa juntarse con alguien.",
     "pronunciation": "/ˈhæŋ ˈaʊt/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -81747,7 +81747,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "updated_at": "2026-07-15T11:18:46.01255+00:00",
     "pronunciation_es": "jáng áut"
   },
   {

@@ -5,7 +5,8 @@ tener el contexto sin leer todo el código. Ver también
 [`docs/design-system.md`](design-system.md) (UI),
 [`docs/fsrs-migration.md`](fsrs-migration.md) (scheduler),
 [`docs/music-feature.md`](music-feature.md) ("Aprende con tu música") y
-[`docs/pronunciation.md`](pronunciation.md) (IPA + respelling al español).
+[`docs/pronunciation.md`](pronunciation.md) (IPA + respelling al español) y
+[`docs/content-qa.md`](content-qa.md) (validador del contenido).
 
 ## Palabras más falladas
 
