@@ -2525,7 +2525,7 @@
   {
     "id": "07015a2b-6350-473d-a099-2ddc633e89d7",
     "word": "look at",
-    "translation": "MIRAR — Básico pero muy usado. \"Look at me!\" = ¡Mírame!",
+    "translation": "MIRAR — Dirigir la vista a algo a propósito, a diferencia de see, que es percibir sin buscarlo. Ojo: en inglés se mira AT algo, look at the photo, nunca look the photo.",
     "pronunciation": "/ˈɫʊk ˈæt/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -2548,7 +2548,7 @@
     "anchor_year": null,
     "formal_synonym": "observe",
     "separability": "inseparable",
-    "updated_at": "2026-07-12T17:39:55.861868+00:00",
+    "updated_at": "2026-07-15T11:33:24.372752+00:00",
     "pronunciation_es": "lúk át"
   },
   {
@@ -5541,7 +5541,7 @@
   {
     "id": "0fbe622b-91d8-5bbf-84a7-64e24ecef1a6",
     "word": "gobby",
-    "translation": "bocazas (malsonante)",
+    "translation": "bocazas",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": null,
@@ -5564,7 +5564,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-16T10:33:57.653396+00:00",
     "pronunciation_es": null
   },
   {
@@ -6128,11 +6128,11 @@
     "cefr_level": "B2",
     "category": "confusing_pair",
     "frequency_rank": null,
-    "example_sentence": null,
-    "example_translation": null,
+    "example_sentence": "He got completely pissed at the pub last night.",
+    "example_translation": "Anoche se emborrachó del todo en el pub.",
     "created_at": "2026-07-10T17:55:15.861435+00:00",
-    "example_sentence_2": null,
-    "example_translation_2": null,
+    "example_sentence_2": "She was so pissed when they cancelled the show.",
+    "example_translation_2": "Se cabreó muchísimo cuando cancelaron el concierto.",
     "song_lyric": null,
     "song_lyric_translation": null,
     "song_title": null,
@@ -6144,7 +6144,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-15T16:26:07.606636+00:00",
     "pronunciation_es": null
   },
   {
@@ -11573,7 +11573,7 @@
   {
     "id": "1ff89d80-9cd6-41d8-9356-f9351ab4dc2f",
     "word": "bring about",
-    "translation": "CAUSAR / PROVOCAR — Formal. \"Technology brought about many changes\" = La tecnología provocó muchos cambios",
+    "translation": "CAUSAR / PROVOCAR — Hacer que algo ocurra, casi siempre un cambio o una consecuencia de calado. Es de registro formal: en el día a día se dice cause o make something happen.",
     "pronunciation": "/ˈbɹɪŋ əˈbaʊt/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -11596,7 +11596,7 @@
     "anchor_year": null,
     "formal_synonym": "cause",
     "separability": "separable",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "updated_at": "2026-07-15T11:33:23.960668+00:00",
     "pronunciation_es": "bríng ebáut"
   },
   {
@@ -28284,11 +28284,11 @@
     "cefr_level": "B2",
     "category": "confusing_pair",
     "frequency_rank": null,
-    "example_sentence": null,
-    "example_translation": null,
+    "example_sentence": "Piss off and leave me alone!",
+    "example_translation": "¡Lárgate y déjame en paz!",
     "created_at": "2026-07-10T17:55:15.861435+00:00",
-    "example_sentence_2": null,
-    "example_translation_2": null,
+    "example_sentence_2": "It really pisses me off when people are late.",
+    "example_translation_2": "Me cabrea mucho que la gente llegue tarde.",
     "song_lyric": null,
     "song_lyric_translation": null,
     "song_title": null,
@@ -28300,7 +28300,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-15T16:26:08.161319+00:00",
     "pronunciation_es": null
   },
   {
@@ -38688,7 +38688,7 @@
   {
     "id": "726b0da2-c4ac-4bd4-ba7a-44c3b67c057e",
     "word": "carry on",
-    "translation": "SEGUIR / CONTINUAR — Similar a \"go on\". \"Carry on, don't stop\" = Sigue, no pares",
+    "translation": "SEGUIR / CONTINUAR — Continuar con algo que ya habías empezado, sin pararte. Equivale a go on, y es especialmente frecuente en inglés británico.",
     "pronunciation": "/ˈkæɹi ˈɑn/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -38711,7 +38711,7 @@
     "anchor_year": null,
     "formal_synonym": "continue",
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "updated_at": "2026-07-15T11:33:23.396981+00:00",
     "pronunciation_es": "kári án"
   },
   {
@@ -41559,7 +41559,7 @@
   {
     "id": "7bcc32bb-c946-4062-a2d5-879a85d35eb7",
     "word": "go up",
-    "translation": "SUBIR (precios/temperatura) — Se usa para aumentos. \"Prices went up\" = los precios subieron",
+    "translation": "SUBIR (precios/temperatura) — Aumentar una cantidad o un nivel: precios, temperatura, sueldos, el volumen. Lo contrario es go down.",
     "pronunciation": "/ˈɡoʊ ˈəp/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -41582,7 +41582,7 @@
     "anchor_year": 2009,
     "formal_synonym": "increase",
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:55.861868+00:00",
+    "updated_at": "2026-07-15T11:33:24.585908+00:00",
     "pronunciation_es": "góu ép"
   },
   {
@@ -42487,7 +42487,7 @@
   {
     "id": "7e219041-75ef-50e0-8c56-9b381a8f9665",
     "word": "snog",
-    "translation": "morrearse (malsonante)",
+    "translation": "morrearse",
     "pronunciation": "/ˈsnɔɡ/",
     "audio_url": null,
     "part_of_speech": null,
@@ -42510,7 +42510,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-12T17:39:57.238569+00:00",
+    "updated_at": "2026-07-16T10:33:56.626095+00:00",
     "pronunciation_es": "snóg"
   },
   {
@@ -45619,7 +45619,7 @@
   {
     "id": "87ee9a27-cdc9-4fd7-8ddd-ae2e792b1659",
     "word": "come in",
-    "translation": "ENTRAR — Invitación a pasar. \"Come in!\" = ¡Pasa! ¡Entra!",
+    "translation": "ENTRAR — Pasar adentro desde fuera, contado desde dentro: por eso come y no go. Muy habitual en imperativo para invitar a alguien a pasar.",
     "pronunciation": "/ˈkəm ˈɪn/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -45642,7 +45642,7 @@
     "anchor_year": null,
     "formal_synonym": "enter",
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "updated_at": "2026-07-15T11:33:26.024115+00:00",
     "pronunciation_es": "kém ín"
   },
   {
@@ -51158,7 +51158,7 @@
   {
     "id": "989bacef-0de8-461d-83e2-eadf67cce237",
     "word": "move out",
-    "translation": "IRSE (de una vivienda) / MUDARSE FUERA — Dejar la casa donde vivías. \"She moved out of her parents' house\" = se independizó de casa de sus padres. \"We're moving out next month\" = nos vamos el mes que viene. Opuesto: \"move in\" = mudarse a una casa nueva.",
+    "translation": "IRSE (de una vivienda) / MUDARSE FUERA — Dejar la casa en la que vivías, para independizarte o para cambiar de sitio. Lo contrario es move in, instalarse en una vivienda nueva.",
     "pronunciation": "/ˈmuv ˈaʊt/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -51181,7 +51181,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "updated_at": "2026-07-15T11:33:23.732269+00:00",
     "pronunciation_es": "múv áut"
   },
   {
@@ -54087,7 +54087,7 @@
   {
     "id": "a243c4f6-49e0-56d0-8dff-ab60c02b8cf4",
     "word": "rank",
-    "translation": "asqueroso (malsonante)",
+    "translation": "asqueroso",
     "pronunciation": "/ˈɹæŋk/",
     "audio_url": null,
     "part_of_speech": null,
@@ -54110,7 +54110,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-12T17:39:57.238569+00:00",
+    "updated_at": "2026-07-16T10:33:57.952208+00:00",
     "pronunciation_es": "rángk"
   },
   {
@@ -55312,11 +55312,11 @@
     "cefr_level": "B2",
     "category": "confusing_pair",
     "frequency_rank": null,
-    "example_sentence": null,
-    "example_translation": null,
+    "example_sentence": "Never ask for a fanny pack in Britain: there it is called a bum bag.",
+    "example_translation": "No pidas nunca un fanny pack en Gran Bretaña: allí se llama bum bag.",
     "created_at": "2026-07-10T17:55:15.861435+00:00",
-    "example_sentence_2": null,
-    "example_translation_2": null,
+    "example_sentence_2": "He slipped and landed on his fanny.",
+    "example_translation_2": "Resbaló y se cayó de culo.",
     "song_lyric": null,
     "song_lyric_translation": null,
     "song_title": null,
@@ -55328,7 +55328,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-15T16:26:08.425994+00:00",
     "pronunciation_es": null
   },
   {
@@ -56907,8 +56907,8 @@
     "cefr_level": "B2",
     "category": "confusing_pair",
     "frequency_rank": null,
-    "example_sentence": null,
-    "example_translation": null,
+    "example_sentence": "He stepped outside for a fag.",
+    "example_translation": "Salió fuera a fumarse un cigarrillo.",
     "created_at": "2026-07-10T17:55:15.861435+00:00",
     "example_sentence_2": null,
     "example_translation_2": null,
@@ -56923,7 +56923,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-15T16:26:08.784569+00:00",
     "pronunciation_es": null
   },
   {
@@ -58321,7 +58321,7 @@
   {
     "id": "af7fb739-5315-4abf-80cb-7c89ddee5d1d",
     "word": "sit down",
-    "translation": "SENTARSE — Orden o invitación directa. \"Please sit down\" = Por favor, siéntate",
+    "translation": "SENTARSE — Pasar de estar de pie a estar sentado. Se usa sobre todo en imperativo: como invitación cortés acompañado de please, o como orden seca sin él.",
     "pronunciation": "/ˈsɪt ˈdaʊn/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -58344,7 +58344,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:55.861868+00:00",
+    "updated_at": "2026-07-15T11:33:25.652768+00:00",
     "pronunciation_es": "sít dáun"
   },
   {
@@ -59597,7 +59597,7 @@
   {
     "id": "b3f81786-c9d9-5a9d-8d1a-3de064ea165a",
     "word": "lairy",
-    "translation": "chulesco, alborotador (malsonante)",
+    "translation": "chulesco, alborotador",
     "pronunciation": null,
     "audio_url": null,
     "part_of_speech": null,
@@ -59620,7 +59620,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-16T10:33:58.14142+00:00",
     "pronunciation_es": null
   },
   {
@@ -60641,7 +60641,7 @@
   {
     "id": "b6162441-8c41-5ae8-846a-6ef2f9e661e6",
     "word": "wasted",
-    "translation": "muy borracho (malsonante)",
+    "translation": "muy borracho",
     "pronunciation": "/ˈweɪstɪd/",
     "audio_url": null,
     "part_of_speech": null,
@@ -60664,7 +60664,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-12T17:39:58.981009+00:00",
+    "updated_at": "2026-07-16T10:33:58.356038+00:00",
     "pronunciation_es": "úeistid"
   },
   {
@@ -60996,11 +60996,11 @@
     "cefr_level": "B2",
     "category": "confusing_pair",
     "frequency_rank": null,
-    "example_sentence": null,
-    "example_translation": null,
+    "example_sentence": "I fell over and hurt my bum.",
+    "example_translation": "Me caí y me hice daño en el culo.",
     "created_at": "2026-07-10T17:55:15.861435+00:00",
-    "example_sentence_2": null,
-    "example_translation_2": null,
+    "example_sentence_2": "A bum was asking for change outside the station.",
+    "example_translation_2": "Un vagabundo pedía monedas a la salida de la estación.",
     "song_lyric": null,
     "song_lyric_translation": null,
     "song_title": null,
@@ -61012,7 +61012,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-15T16:26:09.100582+00:00",
     "pronunciation_es": null
   },
   {
@@ -73080,35 +73080,6 @@
     "pronunciation_es": "míd"
   },
   {
-    "id": "d8da0659-9362-53b4-83af-1a5c51956f8a",
-    "word": "hang out",
-    "translation": "pasar el rato",
-    "pronunciation": "/ˈhæŋ ˈaʊt/",
-    "audio_url": null,
-    "part_of_speech": null,
-    "cefr_level": "B2",
-    "category": "american_slang",
-    "frequency_rank": 20,
-    "example_sentence": "Let's hang out this weekend.",
-    "example_translation": "Quedemos este finde.",
-    "created_at": "2026-07-10T17:55:15.861435+00:00",
-    "example_sentence_2": null,
-    "example_translation_2": null,
-    "song_lyric": null,
-    "song_lyric_translation": null,
-    "song_title": null,
-    "song_artist": null,
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null,
-    "anchor_type": null,
-    "anchor_year": null,
-    "formal_synonym": null,
-    "separability": null,
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
-    "pronunciation_es": "jáng áut"
-  },
-  {
     "id": "d8e359fb-e28e-491f-9e79-c5d20a0e3510",
     "word": "quiet",
     "translation": "tranquilo",
@@ -73716,35 +73687,6 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.981009+00:00",
     "pronunciation_es": "orgánik"
-  },
-  {
-    "id": "db2b574b-c214-4992-8061-5500cf822ca0",
-    "word": "keep in mind",
-    "translation": "tener en cuenta",
-    "pronunciation": "/ˈkip ˈɪn ˈmaɪnd/",
-    "audio_url": null,
-    "part_of_speech": "phrase",
-    "cefr_level": "A2",
-    "category": "expression",
-    "frequency_rank": 45,
-    "example_sentence": "Keep in mind that the deadline is next Friday.",
-    "example_translation": "Ten en cuenta que la fecha límite es el próximo viernes.",
-    "created_at": "2026-02-16T11:22:17.305689+00:00",
-    "example_sentence_2": "Keep in mind that it might rain later.",
-    "example_translation_2": "Ten en cuenta que puede llover después.",
-    "song_lyric": null,
-    "song_lyric_translation": null,
-    "song_title": null,
-    "song_artist": null,
-    "quote_text": null,
-    "quote_translation": null,
-    "quote_author": null,
-    "anchor_type": null,
-    "anchor_year": null,
-    "formal_synonym": null,
-    "separability": null,
-    "updated_at": "2026-07-12T17:39:56.257498+00:00",
-    "pronunciation_es": "kíp ín máind"
   },
   {
     "id": "db628d39-af37-4c1f-851c-480d7e1b730c",
@@ -76243,7 +76185,7 @@
   {
     "id": "e38f05ea-d119-5964-8ba7-dbc283789e0b",
     "word": "take the mick",
-    "translation": "vacilar, cachondearse; o pasarse (malsonante)",
+    "translation": "vacilar, cachondearse; o pasarse",
     "pronunciation": "/ˈteɪk ˈðə ˈmɪk/",
     "audio_url": null,
     "part_of_speech": null,
@@ -76266,7 +76208,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-12T17:39:55.861868+00:00",
+    "updated_at": "2026-07-16T10:33:57.195002+00:00",
     "pronunciation_es": "téik dé mík"
   },
   {
@@ -78911,7 +78853,7 @@
   {
     "id": "ebed2f74-cb60-4e57-b171-d6a35c18afe6",
     "word": "go down",
-    "translation": "BAJAR (precios/nivel) / REDUCIRSE — Se usa para descensos. \"Prices went down\" = los precios bajaron",
+    "translation": "BAJAR (precios/nivel) / REDUCIRSE — Disminuir una cantidad o un nivel: precios, fiebre, volumen. Lo contrario es go up.",
     "pronunciation": "/ˈɡoʊ ˈdaʊn/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -78934,7 +78876,7 @@
     "anchor_year": null,
     "formal_synonym": "decrease",
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:55.861868+00:00",
+    "updated_at": "2026-07-15T11:33:24.95203+00:00",
     "pronunciation_es": "góu dáun"
   },
   {
@@ -79092,11 +79034,11 @@
     "cefr_level": "B2",
     "category": "confusing_pair",
     "frequency_rank": null,
-    "example_sentence": null,
-    "example_translation": null,
+    "example_sentence": "The film was absolute pants.",
+    "example_translation": "La película fue una auténtica basura.",
     "created_at": "2026-07-10T17:55:15.861435+00:00",
-    "example_sentence_2": null,
-    "example_translation_2": null,
+    "example_sentence_2": "He bought a new pair of pants for the interview.",
+    "example_translation_2": "Se compró unos pantalones nuevos para la entrevista.",
     "song_lyric": null,
     "song_lyric_translation": null,
     "song_title": null,
@@ -79108,7 +79050,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-15T16:26:09.434066+00:00",
     "pronunciation_es": null
   },
   {
@@ -80245,7 +80187,7 @@
   {
     "id": "ef92136c-ce06-4d41-a5dc-de4b03c78648",
     "word": "go out",
-    "translation": "SALIR (de fiesta/cita) — Se usa para salir socialmente: \"We went out for dinner\", \"Are you going out tonight?\"",
+    "translation": "SALIR (de fiesta/cita) — Salir de casa para socializar: cenar fuera, tomar algo, ir de fiesta. En la forma go out with alguien, además, es salir juntos en plan pareja.",
     "pronunciation": "/ˈɡoʊ ˈaʊt/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -80268,7 +80210,7 @@
     "anchor_year": null,
     "formal_synonym": "exit",
     "separability": "intransitive",
-    "updated_at": "2026-07-12T17:39:56.465287+00:00",
+    "updated_at": "2026-07-15T11:33:27.212563+00:00",
     "pronunciation_es": "góu áut"
   },
   {
@@ -82797,7 +82739,7 @@
   {
     "id": "f8962acf-4412-47f0-8e86-647f30166ecb",
     "word": "call for",
-    "translation": "REQUERIR / PEDIR — Formal. \"This situation calls for patience\" = esta situación requiere paciencia",
+    "translation": "REQUERIR / PEDIR — Que una situación exija algo, o que alguien reclame algo en público. De registro formal, muy típico de la prensa. Nunca se separa: siempre call for something.",
     "pronunciation": "/ˈkɔɫ ˈfɔɹ/",
     "audio_url": null,
     "part_of_speech": "phrasal",
@@ -82820,7 +82762,7 @@
     "anchor_year": null,
     "formal_synonym": "require",
     "separability": "inseparable",
-    "updated_at": "2026-07-12T17:39:55.861868+00:00",
+    "updated_at": "2026-07-15T11:33:24.166646+00:00",
     "pronunciation_es": "kól fór"
   },
   {
@@ -83413,11 +83355,11 @@
     "cefr_level": "B2",
     "category": "confusing_pair",
     "frequency_rank": null,
-    "example_sentence": null,
-    "example_translation": null,
+    "example_sentence": "Can I borrow your rubber? I need to erase this.",
+    "example_translation": "¿Me dejas la goma? Necesito borrar esto.",
     "created_at": "2026-07-10T17:55:15.861435+00:00",
-    "example_sentence_2": null,
-    "example_translation_2": null,
+    "example_sentence_2": "In the US, ask for an eraser instead: a rubber is a condom.",
+    "example_translation_2": "En EE.UU., pide un eraser: un rubber es un condón.",
     "song_lyric": null,
     "song_lyric_translation": null,
     "song_title": null,
@@ -83429,7 +83371,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "updated_at": "2026-07-15T16:26:09.62427+00:00",
     "pronunciation_es": null
   },
   {

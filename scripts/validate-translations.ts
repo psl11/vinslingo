@@ -208,6 +208,15 @@ function validate(row: Row): Issue[] {
         add('ERROR', `explicación termina en marcador huérfano: "${e}"`);
       }
       if (/[,;:]$/.test(e)) add('WARN', `explicación termina en signo colgante: "${e}"`);
+      // Conector colgante: el texto remitía a algo entrecomillado que la
+      // limpieza se llevó ("Similar a ." ← Similar a "go on"; "… Opuesto" ←
+      // Opuesto: "move in"). Misma familia que el "Ej", pero sin marcador.
+      if (
+        /(?:^|[\s.])(?:similar a|parecido a|opuesto|contrario|sinónimos?|antónimos?|equivale a|igual que|véase|a diferencia de)\s*\.?$/i.test(e) ||
+        /\s(?:a|de|en|con|que|como|por|para|entre|sobre)\s*\.?$/i.test(e)
+      ) {
+        add('ERROR', `explicación termina en conector colgante, ¿se llevó un ejemplo?: "${e}"`);
+      }
       if (e.length < 10) add('WARN', `explicación muy corta, ¿fragmento?: "${e}"`);
       const opens = (e.match(/\(/g) || []).length;
       const closes = (e.match(/\)/g) || []).length;
