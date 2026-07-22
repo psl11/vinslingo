@@ -45,6 +45,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "101a90ab-7cef-5eb2-8b14-a7866812cae2",
+    "song_id": "7fe3d843-0870-50dc-8977-812df761b474",
+    "kind": "reference",
+    "term": "Harder, Better, Faster, Stronger (Daft Punk)",
+    "explanation": "El estribillo samplea la canción Harder, Better, Faster, Stronger del dúo francés Daft Punk. Kanye construye todo el tema sobre esa voz robótica; por eso repite \"work it, make it, do it\".",
+    "line_text": "Work it, make it, do it, makes us\nHarder, better, faster, stronger",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
     "id": "146db5ad-6af6-51d9-83eb-2e6109b22ab0",
     "song_id": "06bc5f2b-fb1c-513f-89c0-c5c95eae4cd2",
     "kind": "reference",
@@ -117,6 +126,33 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "4d489b0a-96f5-5f81-8e76-07169df1520e",
+    "song_id": "9903931f-f902-5191-81bc-89043ec5d0d9",
+    "kind": "reference",
+    "term": "213",
+    "explanation": "213 es el prefijo telefónico del centro de Los Ángeles. \"Reppin' 213\" = representar a su ciudad. En el rap es muy común identificarse por el código de área.",
+    "line_text": "Still got love for the streets, reppin' 213",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "5769f42a-31a2-58c0-89ac-36df6b89c554",
+    "song_id": "49c43c61-c779-5b87-80e8-d56722006d03",
+    "kind": "reference",
+    "term": "the pursuit of happiness",
+    "explanation": "\"The pursuit of Happiness\" (la búsqueda de la felicidad) es una frase célebre de la Declaración de Independencia de EE. UU., que lista los derechos: \"life, liberty and the pursuit of happiness\". Cudi la convierte en una búsqueda personal y melancólica.",
+    "line_text": "I'm on the pursuit of happiness, and I know\nEverything that shine ain't always gonna be gold",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "5b09a573-90a4-5269-83e5-6d98f3d856ca",
+    "song_id": "95dd4ff7-472b-58c8-8f81-f25c1db878f0",
+    "kind": "reference",
+    "term": "99 problems / Jigga",
+    "explanation": "\"99 problems\" alude al clásico de JAY-Z (\"I got 99 problems but a bitch ain't one\"); \"Jigga\" es uno de los apodos de JAY-Z. Cudi lo tuerce: él sí que tiene 99 problemas, y envidia la vida despreocupada de Jay.",
+    "line_text": "I got ninety-nine problems and they all bitches\nWish I was Jigga man, carefree livin'",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
     "id": "5b3409f5-3d30-53c7-86dd-e6b9e4ea662d",
     "song_id": "02931ae7-39fa-5b37-8896-10bde44a3139",
     "kind": "reference",
@@ -126,6 +162,33 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "5f9dce59-be6d-5032-83f3-e08289b48ce8",
+    "song_id": "95dd4ff7-472b-58c8-8f81-f25c1db878f0",
+    "kind": "reference",
+    "term": "the dark side of the moon",
+    "explanation": "\"The dark side of the moon\" (la cara oculta de la Luna, que nunca ve el sol) es una metáfora de su depresión; guiña además al mítico disco de Pink Floyd. Lo opone a Cancún (sol, fiesta).",
+    "line_text": "I live in a cocoon opposite of Cancún\nWhere it is never sunny, the dark side of the moon",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "63aa956b-1272-5816-857b-4015a0ec57ad",
+    "song_id": "7fe3d843-0870-50dc-8977-812df761b474",
+    "kind": "reference",
+    "term": "Louis Vuitton Don",
+    "explanation": "\"Louis Vuitton Don\" es un apodo que Kanye se puso: mezcla la marca de lujo Louis Vuitton con \"Don\" (un jefe, un capo). Presume de tener un gusto y un estatus de lujo.",
+    "line_text": "'Cause it's Louis Vuitton Don night\nSo we gon' do everything that Kan' like",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "66e02086-a9d5-5dc2-8b0d-fd741333e0de",
+    "song_id": "9903931f-f902-5191-81bc-89043ec5d0d9",
+    "kind": "reference",
+    "term": "The Chronic",
+    "explanation": "The Chronic (1992) es el álbum debut de Dr. Dre, un pilar del rap de la Costa Oeste. \"Chronic\" es además argot para marihuana potente. Dre lo cita como prueba de su leyenda.",
+    "line_text": "How? Nigga, my last album was The Chronic",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
     "id": "70301c6e-558b-5077-82bb-0daebc864715",
     "song_id": "607e7cd8-bab5-5431-8b4b-f922d477b54e",
     "kind": "reference",
@@ -133,6 +196,15 @@
     "explanation": "Guiño al famoso \"bed-in\" de John Lennon y Yoko Ono (1969): se metieron en la cama una semana como protesta pacífica por la paz. Noel Gallagher, gran fan de los Beatles, evoca esa imagen de \"hacer la revolución sin levantarte\".",
     "line_text": "So I start a revolution from my bed\n'Cause you said the brains I had went to my head",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "78718677-a8b1-504f-8fa2-01df3bbc0bcc",
+    "song_id": "8177eb5c-590e-5454-8bb1-cba1be4ed37a",
+    "kind": "reference",
+    "term": "N.W.A.",
+    "explanation": "\"The group that said Fuck the Police\" es N.W.A. (Niggaz Wit Attitudes), el grupo pionero del gangsta rap donde empezaron Dr. Dre e Ice Cube. Su tema Fuck tha Police fue un icono de protesta.",
+    "line_text": "And the group that said, \"Motherfuck the police\"",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
     "id": "7a5a2c65-96af-5afb-8720-6d5979d14992",
@@ -252,6 +324,24 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "c2964fa0-92db-5ad4-8d7e-e2c4ea636ab5",
+    "song_id": "8177eb5c-590e-5454-8bb1-cba1be4ed37a",
+    "kind": "reference",
+    "term": "Slim Shady",
+    "explanation": "Slim Shady es el alter ego más gamberro y violento de Eminem, que rapea el estribillo y el segundo verso. Es su lado sin filtros, el que dice las barbaridades.",
+    "line_text": "Chicka-chicka-chicka Slim Shady\nHotter than a set of twin babies",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "c2ac65ce-d62d-50a8-8f8b-d53eca97ba95",
+    "song_id": "7718b025-68ea-5b82-8c72-674ffe458791",
+    "kind": "reference",
+    "term": "Bam Bam (Sister Nancy)",
+    "explanation": "El puente samplea Bam Bam, un clásico del dancehall jamaicano de Sister Nancy (1982). Es uno de los temas más sampleados de la historia; Kanye lo usa para el subidón final.",
+    "line_text": "Bam, 'ey, 'ey, 'ey\nBam-bam, bam, bam-bam dilla",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
     "id": "c643f1a9-348d-5011-818e-e346fa08e18d",
     "song_id": "8d009660-92b0-521a-8740-54ed374fe94a",
     "kind": "wordplay",
@@ -306,6 +396,24 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "dea790a1-14c2-5023-84b8-b99dd694afa7",
+    "song_id": "588eac64-e39b-5246-8b31-a1452b1b3af9",
+    "kind": "reference",
+    "term": "Chi-Town",
+    "explanation": "\"Chi-Town\" es el apodo de Chicago, la ciudad de Lupe Fiasco. \"That's how Chi-Town made me\" = así me forjó mi ciudad.",
+    "line_text": "See that's how that Chi-Town made me\nThat's how my daddy raised me",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "df70254a-59f2-5716-8abc-d87604357512",
+    "song_id": "8b3f7387-d1fd-5823-83b6-35f85eaf92aa",
+    "kind": "reference",
+    "term": "Goodwill",
+    "explanation": "Goodwill es una cadena de tiendas benéficas de segunda mano muy común en EE. UU. Toda la canción reivindica comprar barato allí frente a gastar en marcas caras.",
+    "line_text": "I'm at the Goodwill, you can find me in the bins",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
     "id": "dff9fd9b-4d66-5dfb-861f-c81fecaa62f1",
     "song_id": "c5bff7ee-e3eb-56cf-8ded-c90f5ccf0976",
     "kind": "reference",
@@ -313,6 +421,24 @@
     "explanation": "\"OT\" = out of town: fuera de tu ciudad/barrio, en territorio ajeno (a menudo con connotación de peligro o de ir a hacer negocio). \"Go OT\" = salir del terreno conocido.",
     "line_text": "There's never much love when we go OT",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "f4d08d9d-2e60-5d78-8696-d1b0559341ea",
+    "song_id": "28d67bf5-aab5-59ea-8ac4-64fea78795a2",
+    "kind": "reference",
+    "term": "black and yellow",
+    "explanation": "El negro y el amarillo son los colores de Pittsburgh, la ciudad de Wiz Khalifa (los equipos Steelers y Pirates visten esos colores). Toda la canción es un himno a su ciudad y a su coche con esos colores.",
+    "line_text": "Reppin' my town, when you see me you know everything\nBlack and yellow, black and yellow",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "f9e614dd-ccc6-51cf-8720-46209f7d292f",
+    "song_id": "588eac64-e39b-5246-8b31-a1452b1b3af9",
+    "kind": "reference",
+    "term": "the world is yours",
+    "explanation": "\"The world is yours\" es una frase icónica de la película Scarface (y el título de un tema de Nas). Significa que no hay techo para ti. Lupe la usa para animar a los chavales del gueto.",
+    "line_text": "Yeah, yeah, the world is yours, I was once that little boy",
+    "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
     "id": "fbfb106d-a6b2-52ab-8e63-b8d76b5828dc",

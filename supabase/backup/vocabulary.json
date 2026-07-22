@@ -54,7 +54,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -83,7 +83,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -228,7 +228,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -1972,6 +1972,35 @@
     "pronunciation_es": "éinyel"
   },
   {
+    "id": "05cb3e93-ccb3-57bf-8ed8-0d5d22ea4883",
+    "word": "lie through your teeth",
+    "translation": "MENTIR DESCARADAMENTE — Mentir a la cara, sin ningún reparo.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He lied through his teeth about it.",
+    "example_translation": "Mintió descaradamente sobre eso.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "05cb5afe-2cc9-471f-aafd-7da23f8ac702",
     "word": "purpose",
     "translation": "propósito",
@@ -2751,7 +2780,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -2896,7 +2925,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -2954,7 +2983,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -3012,7 +3041,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -4375,7 +4404,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -4491,7 +4520,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -4843,6 +4872,35 @@
     "pronunciation_es": "kápi"
   },
   {
+    "id": "0da6b07f-133c-5c48-8c83-64c553e33480",
+    "word": "fall off",
+    "translation": "VENIR A MENOS — Perder relevancia, calidad o éxito.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "That band really fell off after 2010.",
+    "example_translation": "Ese grupo vino muy a menos después de 2010.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "0da79e77-4c8c-59de-823c-d9402d79fbc4",
     "word": "shed my skin",
     "translation": "MUDAR LA PIEL / RENOVARSE — Dejar atrás una etapa, reinventarse (como una serpiente).",
@@ -4868,7 +4926,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -5129,7 +5187,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -5245,7 +5303,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -6550,7 +6608,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -6666,7 +6724,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -7712,6 +7770,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.688088+00:00",
     "pronunciation_es": "ráis"
+  },
+  {
+    "id": "13a62c8a-5ae7-588a-8997-3878741b38c2",
+    "word": "cop (copped)",
+    "translation": "PILLAR / COMPRAR — Conseguir o comprar algo (ropa, un coche).",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I just copped the new sneakers.",
+    "example_translation": "Me acabo de pillar las zapatillas nuevas.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "13b39cfa-b425-53de-8fe8-3b9571bf8540",
@@ -8841,7 +8928,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -10005,6 +10092,35 @@
     "pronunciation_es": "téik bák"
   },
   {
+    "id": "19aa209b-4a01-5ae0-8dfb-c57b43675884",
+    "word": "slip up",
+    "translation": "METER LA PATA / RESBALAR — Cometer un desliz o un error.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Don't slip up now, we're almost there.",
+    "example_translation": "No metas la pata ahora, casi lo tenemos.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "19b276ed-8220-4264-9d09-5c0d0fb0f1e3",
     "word": "sit on the fence",
     "translation": "no mojarse, no decidirse",
@@ -10581,7 +10697,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -11451,7 +11567,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -11712,7 +11828,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -11859,6 +11975,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.800013+00:00",
     "pronunciation_es": "nutríshen"
+  },
+  {
+    "id": "1fb4db38-fb77-54e1-81de-41d2fe166814",
+    "word": "ignorance is bliss",
+    "translation": "LA IGNORANCIA ES UNA BENDICIÓN — A veces se vive más feliz sin saber ciertas cosas.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I didn't check the news—ignorance is bliss.",
+    "example_translation": "No miré las noticias: ojos que no ven, corazón que no siente.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "1fb5528e-dda1-4e1f-92ad-dfa4bf599d5c",
@@ -12296,6 +12441,35 @@
     "pronunciation_es": "sét ép"
   },
   {
+    "id": "2081c0f8-787b-5d74-895f-b784277487d2",
+    "word": "put it down",
+    "translation": "DEJARSE LA PIEL / HACERLO DE MARAVILLA — Rendir a tope, hacer algo muy bien.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "On stage, she really puts it down.",
+    "example_translation": "En el escenario se deja la piel.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "2090c36a-020c-4d40-acd6-89b5a4600639",
     "word": "media",
     "translation": "medios",
@@ -12437,7 +12611,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -13079,6 +13253,35 @@
     "pronunciation_es": "táun"
   },
   {
+    "id": "228d96bf-05d5-5290-8104-188bc3b30c4f",
+    "word": "pop tags",
+    "translation": "IR DE COMPRAS — Comprar ropa nueva, literalmente arrancarle las etiquetas (tags). Aquí, en tiendas de segunda mano.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Got paid, time to pop some tags.",
+    "example_translation": "Ya cobré, toca ir de compras.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "229b22b4-e999-4a84-b4dc-60142e6085c2",
     "word": "strike",
     "translation": "golpear",
@@ -13396,6 +13599,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.800013+00:00",
     "pronunciation_es": "vaksín"
+  },
+  {
+    "id": "23ffefd7-a532-5f11-8224-0723c6e19287",
+    "word": "act up",
+    "translation": "MONTARLA / PORTARSE MAL — Desmadrarse, dar guerra, comportarse mal (o, con cariño, ponerse a bailar sin freno).",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "The kids started acting up in class.",
+    "example_translation": "Los críos empezaron a dar guerra en clase.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "243e8d4e-f540-4c3d-add5-1d6fed551351",
@@ -14148,7 +14380,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -14235,7 +14467,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -15975,7 +16207,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -17077,7 +17309,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -17222,7 +17454,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -17311,6 +17543,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.238569+00:00",
     "pronunciation_es": "róul"
+  },
+  {
+    "id": "2f0fc009-ad4f-5d9c-8432-01f23f1649f2",
+    "word": "fluke",
+    "translation": "CHIRIPA / CASUALIDAD — Un golpe de suerte irrepetible.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "That win was no fluke.",
+    "example_translation": "Esa victoria no fue de chiripa.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "2f11d691-9b7d-4466-8ba1-0150a2a213e8",
@@ -18034,7 +18295,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -18125,6 +18386,35 @@
     "pronunciation_es": "stéitment"
   },
   {
+    "id": "314fcd7a-59cd-5637-8526-70fcc7d14039",
+    "word": "keep your ear to the streets",
+    "translation": "ESTAR AL TANTO DE LO QUE SE CUECE — Mantenerse informado de lo que pasa en tu entorno o mercado.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I keep my ear to the streets, I hear everything.",
+    "example_translation": "Estoy al tanto de todo lo que se cuece.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "315e0281-3bfd-5610-81bb-5c3858da48d0",
     "word": "make it back in one piece",
     "translation": "VOLVER SANO Y SALVO — Regresar de una pieza, sin daño. \"Make it back in one piece\".",
@@ -18150,7 +18440,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -18469,7 +18759,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -19861,7 +20151,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -20329,6 +20619,35 @@
     "pronunciation_es": "góu óf"
   },
   {
+    "id": "37945211-512a-53c0-8b0a-d20a44f02b35",
+    "word": "walls closing in",
+    "translation": "SENTIRSE ATRAPADO / AGOBIADO — Sensación de que todo se te echa encima.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Deadlines everywhere, the walls are closing in.",
+    "example_translation": "Entregas por todos lados, siento que me ahogo.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "379de033-8872-41de-819f-14718fdfa651",
     "word": "january",
     "translation": "enero",
@@ -20356,6 +20675,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.834219+00:00",
     "pronunciation_es": "yányueri"
+  },
+  {
+    "id": "37b9dbe9-9fec-53da-8c29-fceaaf15b61f",
+    "word": "what doesn't kill you makes you stronger",
+    "translation": "LO QUE NO TE MATA TE HACE MÁS FUERTE — Proverbio (de Nietzsche): lo que sufres y superas te fortalece. En la letra: that don't kill me can only make me stronger.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Rough year, but what doesn't kill you makes you stronger.",
+    "example_translation": "Año duro, pero lo que no te mata te hace más fuerte.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "37d3f96a-36cc-43a3-8f3b-3fe453e181f3",
@@ -20849,6 +21197,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.798618+00:00",
     "pronunciation_es": "pléit"
+  },
+  {
+    "id": "38f667a8-d406-54f1-805a-c184d26dab88",
+    "word": "gibberish",
+    "translation": "GALIMATÍAS / PALABRERÍA — Palabras sin sentido, cháchara vacía.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "The contract was full of legal gibberish.",
+    "example_translation": "El contrato era puro galimatías legal.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "39003e37-8f21-4dad-8f03-df7a204adef6",
@@ -22446,6 +22823,35 @@
     "pronunciation_es": "sétel dáun"
   },
   {
+    "id": "3e2f73ac-edd2-5988-88f2-677cbe5707c7",
+    "word": "still waters run deep",
+    "translation": "LAS APARIENCIAS ENGAÑAN — El callado o tranquilo suele esconder más de lo que parece. Juega con still, la palabra que repite todo el tema: significa a la vez aún y quieto/tranquilo.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He's quiet, but still waters run deep.",
+    "example_translation": "Es callado, pero las apariencias engañan.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "3e76aa3f-701c-4d2c-a7d4-8d9d2bf65f0f",
     "word": "drug",
     "translation": "droga",
@@ -22529,7 +22935,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -23225,7 +23631,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -23544,7 +23950,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -24153,7 +24559,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -24650,6 +25056,35 @@
     "pronunciation_es": "instrékshen"
   },
   {
+    "id": "43ef80df-0740-552b-80fd-66eb41c2a8f0",
+    "word": "flossin'",
+    "translation": "FARDAR / PRESUMIR — Lucir lo que tienes (ropa, joyas) para que se note.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Look at him flossin' in his new car.",
+    "example_translation": "Míralo fardando con su coche nuevo.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "43f26458-9c73-450f-b504-340cbc3e1b2e",
     "word": "fold",
     "translation": "doblar",
@@ -25110,7 +25545,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -26647,7 +27082,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -26850,7 +27285,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -27113,6 +27548,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.257498+00:00",
     "pronunciation_es": "aksépt víés iksépt"
+  },
+  {
+    "id": "4b04f72f-572d-5494-85a5-6d6bc1341efa",
+    "word": "a come up",
+    "translation": "UN CHOLLO / UN GOLPE DE SUERTE — Una oportunidad o ganga que te hace prosperar.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "That cheap flat was a real come up.",
+    "example_translation": "Ese piso barato fue un auténtico chollo.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "4b2a3a7c-e0b4-4e2a-ae39-cecba08fda6b",
@@ -27459,7 +27923,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -28242,7 +28706,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -28677,7 +29141,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -29203,6 +29667,35 @@
     "pronunciation_es": "iksáited"
   },
   {
+    "id": "50d12019-57cf-55c1-82c4-8863b033ca57",
+    "word": "do it big",
+    "translation": "HACERLO A LO GRANDE — Hacer las cosas a lo grande, sin escatimar.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "When we celebrate, we do it big.",
+    "example_translation": "Cuando celebramos, lo hacemos a lo grande.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "50d790a6-09b3-4158-8b52-eaab089588bb",
     "word": "low",
     "translation": "bajo",
@@ -29286,7 +29779,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -30330,7 +30823,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -30359,7 +30852,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -30939,7 +31432,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -32360,7 +32853,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "59da7b72-1b31-5e8d-8999-9f8a9a23181a",
+    "word": "caught up in the moment",
+    "translation": "LLEVADO POR EL MOMENTO — Dejarse arrastrar por la emoción del instante y no pensar con claridad.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I got caught up in the moment and said yes.",
+    "example_translation": "Me dejé llevar por el momento y dije que sí.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -32940,7 +33462,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -33317,7 +33839,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -33608,6 +34130,35 @@
     "formal_synonym": null,
     "separability": null,
     "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "5e68faf2-6e68-5ace-8868-bbb5da7070e4",
+    "word": "pedal to the metal",
+    "translation": "A TODA PASTILLA / A FONDO — Acelerar al máximo (pisar el pedal hasta el suelo); por extensión, darlo todo.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Deadline tomorrow—pedal to the metal.",
+    "example_translation": "Entrega mañana: a toda pastilla.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -34477,7 +35028,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -35090,6 +35641,35 @@
     "pronunciation_es": "dáutfel"
   },
   {
+    "id": "62ce76b6-8bc9-569c-848b-899bef514642",
+    "word": "against my will",
+    "translation": "EN CONTRA DE MI VOLUNTAD — Obligado, sin quererlo.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "They kept me there against my will.",
+    "example_translation": "Me retuvieron allí en contra de mi voluntad.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "62d6e0de-e28e-524e-85ce-a7b66e6c2379",
     "word": "faded / over-faded",
     "translation": "COLOCADO (malsonante) — Puesto de drogas o alcohol; \"over-faded\" = pasadísimo.",
@@ -35115,7 +35695,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -35898,7 +36478,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -37000,7 +37580,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -37203,7 +37783,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -37319,7 +37899,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "6a5a8221-00ea-5905-83f1-2461b5462adc",
+    "word": "whip",
+    "translation": "COCHE / BUGA — Argot para coche, sobre todo uno vistoso.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Nice whip, is it new?",
+    "example_translation": "Buen buga, ¿es nuevo?",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -37551,7 +38160,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -38015,7 +38624,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -38566,7 +39175,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -38653,7 +39262,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -40190,7 +40799,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -40480,7 +41089,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -40598,6 +41207,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.630226+00:00",
     "pronunciation_es": "férmli"
+  },
+  {
+    "id": "733b92d4-edd2-5961-8d5b-7d62b9cf4801",
+    "word": "shed light on",
+    "translation": "ARROJAR LUZ SOBRE — Aclarar o explicar algo que no se entendía.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "The report sheds light on the problem.",
+    "example_translation": "El informe arroja luz sobre el problema.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "733b9b45-2c7a-4871-948e-11445b917c14",
@@ -40888,6 +41526,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.106842+00:00",
     "pronunciation_es": "édet"
+  },
+  {
+    "id": "74683cf5-8492-57a4-864e-948cf07561e3",
+    "word": "walk it off",
+    "translation": "SACUDÍRSELO / QUITARLE HIERRO — Superar un golpe o un mal momento sin pararte, seguir adelante. Del deporte (caminar hasta que pase el dolor).",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "It's just a bruise, walk it off.",
+    "example_translation": "Es solo un moratón, sacúdetelo.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "746cf89f-4a1b-4ea9-80cf-3449d5c8b446",
@@ -41466,7 +42133,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -41611,7 +42278,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -42019,6 +42686,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.800013+00:00",
     "pronunciation_es": "stróngli"
+  },
+  {
+    "id": "779f52b6-22d5-5177-835d-8be3d72e88e7",
+    "word": "be had",
+    "translation": "QUE TE HAN TIMADO / ENGAÑADO — Darse cuenta de que se han aprovechado de ti.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Fifty euros for that? You've been had.",
+    "example_translation": "¿Cincuenta euros por eso? Te han timado.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "77c4998e-be6d-4922-b4a2-7efaf2e3a9d3",
@@ -42684,7 +43380,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -43616,6 +44312,35 @@
     "pronunciation_es": "bránch"
   },
   {
+    "id": "7c2db771-f986-55cc-850e-154cc68ff652",
+    "word": "settle down",
+    "translation": "SENTAR LA CABEZA — Dejar la vida loca, calmarse, echar raíces (a veces formar pareja/familia).",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He finally settled down and got married.",
+    "example_translation": "Por fin sentó la cabeza y se casó.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "7c3300c0-3ef2-4b23-a809-706f4a7c4f96",
     "word": "ill",
     "translation": "enfermo",
@@ -44395,7 +45120,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -44511,7 +45236,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -45120,7 +45845,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -45526,7 +46251,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -45907,6 +46632,35 @@
     "pronunciation_es": "júait"
   },
   {
+    "id": "82ac5317-9ef4-5c46-804f-88b9001e26e5",
+    "word": "one man's trash is another man's treasure",
+    "translation": "LO QUE PARA UNO ES BASURA, PARA OTRO ES UN TESORO — Lo que alguien desecha, otro lo aprovecha. En la letra: another man's come up.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He threw out that chair? One man's trash is another man's treasure.",
+    "example_translation": "¿Tiró esa silla? Lo que para uno es basura, para otro es un tesoro.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "82ea0dd1-2ab6-43e7-a94f-d90d32612c6d",
     "word": "major",
     "translation": "principal, mayor",
@@ -46222,7 +46976,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -46802,7 +47556,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -47121,7 +47875,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -47208,7 +47962,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -47357,6 +48111,35 @@
     "pronunciation_es": "drái"
   },
   {
+    "id": "872fd35b-578f-562e-8524-8a3bf1f4e91c",
+    "word": "the show must go on",
+    "translation": "EL ESPECTÁCULO DEBE CONTINUAR — Hay que seguir adelante pase lo que pase. En la letra: the show goes on, even if they turn the lights out.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "We lost our lead singer, but the show must go on.",
+    "example_translation": "Perdimos al cantante, pero el espectáculo debe continuar.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "876c4217-20b4-4533-9320-acd9219b5b81",
     "word": "unsure",
     "translation": "inseguro",
@@ -47469,7 +48252,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -48629,7 +49412,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -48803,7 +49586,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -49035,7 +49818,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -50514,7 +51297,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -51732,7 +52515,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -51790,7 +52573,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -51848,7 +52631,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -52370,7 +53153,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -52573,7 +53356,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -53617,7 +54400,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -53675,7 +54458,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -53851,6 +54634,64 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.688088+00:00",
     "pronunciation_es": "eúei"
+  },
+  {
+    "id": "99cdc27b-feed-54eb-8797-6e89b9bcacff",
+    "word": "OG",
+    "translation": "VETERANO / DE LOS DE ANTES — Sigla de Original Gangster: alguien con respeto ganado por antigüedad y trayectoria. También, algo auténtico y original.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He's an OG in this game.",
+    "example_translation": "Es un veterano con galones en esto.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "99d5702f-0576-5ded-8738-77a190809d55",
+    "word": "on deck",
+    "translation": "A MANO / PREPARADO — Listo para usar, a punto.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Always keep a charger on deck.",
+    "example_translation": "Ten siempre un cargador a mano.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "9a16329b-7007-49dd-ad8e-e8f3faaffc6c",
@@ -54491,6 +55332,35 @@
     "pronunciation_es": "inkrísinggli"
   },
   {
+    "id": "9ca5bbeb-191a-50c0-8817-5eb994b02a66",
+    "word": "trippin'",
+    "translation": "FLIPAR / EXAGERAR — Estar rayado, decir locuras o reaccionar de forma desproporcionada.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "You're trippin', that's not what happened.",
+    "example_translation": "Estás flipando, no fue así.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "9cb369fd-3778-428d-a27e-d5ca45707159",
     "word": "chance",
     "translation": "oportunidad",
@@ -54922,7 +55792,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -55444,7 +56314,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -55709,6 +56579,35 @@
     "pronunciation_es": "máyik"
   },
   {
+    "id": "9fe8cf83-1556-59b0-8bd9-3ab670d48686",
+    "word": "sixth sense",
+    "translation": "SEXTO SENTIDO — Una intuición o percepción más allá de los cinco sentidos.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "She has a sixth sense for trouble.",
+    "example_translation": "Tiene un sexto sentido para los problemas.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "9ff9733a-e651-4f5a-9ec3-44898564accc",
     "word": "exchange",
     "translation": "cambio",
@@ -55912,6 +56811,35 @@
     "pronunciation_es": "yéneres"
   },
   {
+    "id": "a0e41437-42d9-52cb-88cd-8c2a20ee2360",
+    "word": "all that glitters is not gold",
+    "translation": "NO ES ORO TODO LO QUE RELUCE — Lo que brilla o parece bueno no siempre lo es. En la letra: everything that shine ain't always gonna be gold.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Fame looks great, but all that glitters is not gold.",
+    "example_translation": "La fama pinta bien, pero no es oro todo lo que reluce.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "a0fbc1de-a52b-4c6f-94e5-ffa161609b30",
     "word": "mouse",
     "translation": "ratón",
@@ -56111,7 +57039,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -56521,6 +57449,35 @@
     "pronunciation_es": "rángk"
   },
   {
+    "id": "a25b26c0-6703-5b35-8957-8ce81994e842",
+    "word": "pay homage",
+    "translation": "RENDIR HOMENAJE — Mostrar respeto o reconocimiento a alguien. De registro algo elevado.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Young rappers pay homage to Dre.",
+    "example_translation": "Los raperos jóvenes le rinden homenaje a Dre.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "a25fb49e-bd9c-4680-9c7a-9d78809dd770",
     "word": "frozen",
     "translation": "congelado",
@@ -56577,6 +57534,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.257498+00:00",
     "pronunciation_es": "ás éi risélt"
+  },
+  {
+    "id": "a2677bb0-4061-547d-80c2-ffb40a4163c5",
+    "word": "live life to the fullest",
+    "translation": "VIVIR LA VIDA AL MÁXIMO — Aprovechar cada momento sin reservas.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Travel, take risks, live life to the fullest.",
+    "example_translation": "Viaja, arriésgate, vive la vida al máximo.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "a277f92b-0fdd-464a-94eb-efc65ed726c6",
@@ -56869,6 +57855,35 @@
     "pronunciation_es": "apertúneti"
   },
   {
+    "id": "a3982f5b-a6f9-5387-8e29-cfb95822e731",
+    "word": "peep (game)",
+    "translation": "FÍJATE / MIRA",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Peep this, it's crazy.",
+    "example_translation": "Fíjate en esto, es una locura.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "a39ee69c-ee8b-5bab-852d-536b9dc25f77",
     "word": "pardon my French",
     "translation": "PERDÓN POR LA PALABROTA — Se dice justo antes o después de soltar un taco, con retranca.",
@@ -56894,7 +57909,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -57068,7 +58083,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -57764,7 +58779,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -57938,7 +58953,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -58663,7 +59678,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -59214,7 +60229,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -59330,7 +60345,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -59359,7 +60374,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -59475,7 +60490,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -60784,6 +61799,35 @@
     "pronunciation_es": "stáp"
   },
   {
+    "id": "aef0c76c-2570-58f7-852f-542e7a3c074d",
+    "word": "second hand",
+    "translation": "DE SEGUNDA MANO — Usado, que ya tuvo otro dueño.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I bought this jacket second hand.",
+    "example_translation": "Compré esta chaqueta de segunda mano.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "aef2acd7-4308-4d10-8755-2172386c0fb9",
     "word": "staff",
     "translation": "personal",
@@ -60954,7 +61998,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -61099,7 +62143,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -61215,7 +62259,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -61563,7 +62607,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -62259,7 +63303,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -63071,7 +64115,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -63506,7 +64550,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -63709,7 +64753,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -64434,7 +65478,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -64637,7 +65681,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -65072,7 +66116,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -65246,7 +66290,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -66062,6 +67106,35 @@
     "pronunciation_es": "áveriy"
   },
   {
+    "id": "bc3c25d7-37f1-5fd0-8349-ac6c5a0c83e4",
+    "word": "my skin is crawling",
+    "translation": "SE ME PONE LA PIEL DE GALLINA / ME DA GRIMA — Sensación física de desazón, asco o angustia. En la letra aparece como crawling in my skin.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "That noise makes my skin crawl.",
+    "example_translation": "Ese ruido me pone la piel de gallina.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "bc3ec1a9-57a8-401b-b8da-dd335355e40f",
     "word": "document",
     "translation": "documento",
@@ -66870,7 +67943,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -68349,7 +69422,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -70847,6 +71920,35 @@
     "pronunciation_es": "noutefekéishen"
   },
   {
+    "id": "c8ff37a5-992f-5364-8e51-449e988e6f4a",
+    "word": "hate on (someone)",
+    "translation": "CRITICAR POR ENVIDIA — Meterse con alguien porque te da rabia su éxito.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "People hate on him because he's winning.",
+    "example_translation": "La gente le tiene envidia porque le va bien.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "c90a3248-08c5-4cf2-ad65-ee50a1a04ac2",
     "word": "develop",
     "translation": "desarrollar",
@@ -71220,7 +72322,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -72471,6 +73573,35 @@
     "pronunciation_es": "sáled"
   },
   {
+    "id": "cce9761e-07bf-56a8-839a-748f9b4f3509",
+    "word": "stacks",
+    "translation": "FAJOS (de billetes) — Montones de dinero.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He's got stacks of cash.",
+    "example_translation": "Tiene fajos de billetes.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "cceda803-5520-4774-a4a3-8148b5bc5101",
     "word": "rule",
     "translation": "regla",
@@ -72757,7 +73888,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -72931,7 +74062,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -73134,7 +74265,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -74120,7 +75251,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -74294,7 +75425,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -75396,7 +76527,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -76382,7 +77513,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -76850,6 +77981,35 @@
     "pronunciation_es": "shí"
   },
   {
+    "id": "dabd1a95-1de9-56e5-893f-7f91bc49689a",
+    "word": "slow your roll",
+    "translation": "FRENA / CÁLMATE — Tómatelo con calma, no vayas tan rápido.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Slow your roll, we have time.",
+    "example_translation": "Frena un poco, hay tiempo.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "dad86011-5726-44ce-91cb-a241e01acb4a",
     "word": "least",
     "translation": "menos",
@@ -77310,7 +78470,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -77633,6 +78793,35 @@
     "pronunciation_es": "bák ép"
   },
   {
+    "id": "dd614caa-fce3-5654-81fc-9f884c56ecc0",
+    "word": "noggin",
+    "translation": "LA MOLLERA / LA CABEZA — Forma coloquial y humorística de decir cabeza.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Use your noggin!",
+    "example_translation": "¡Usa la cabeza!",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "dd61745c-d4ba-53f5-86bd-86f45827fd78",
     "word": "tenner",
     "translation": "billete de diez libras",
@@ -77805,6 +78994,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.834219+00:00",
     "pronunciation_es": "spórt"
+  },
+  {
+    "id": "ddb424d1-d4dd-51c0-82c8-243e47b242dc",
+    "word": "the limelight",
+    "translation": "EL CANDELERO / EL FOCO — Ser el centro de atención, la fama.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He's always chasing the limelight.",
+    "example_translation": "Siempre busca ser el centro de atención.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "de24d91e-4948-5a45-8790-450affa24a51",
@@ -79634,6 +80852,35 @@
     "pronunciation_es": "láif"
   },
   {
+    "id": "e3bee8b4-b27b-528c-8668-921861191a0d",
+    "word": "living large",
+    "translation": "VIVIR A LO GRANDE — Llevar un tren de vida lujoso y sin preocupaciones.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Since the promotion he's living large.",
+    "example_translation": "Desde el ascenso vive a lo grande.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "e3de1b2e-6591-4ac5-9833-eb053b7716dc",
     "word": "contribution",
     "translation": "contribución",
@@ -80268,7 +81515,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -81026,6 +82273,35 @@
     "pronunciation_es": "múvi"
   },
   {
+    "id": "e8c57d69-00e3-5c58-8c6d-29cec2d0c256",
+    "word": "hand-me-downs",
+    "translation": "ROPA HEREDADA — Ropa (o cosas) de segunda mano que te pasa un hermano mayor o un familiar.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I grew up wearing my brother's hand-me-downs.",
+    "example_translation": "Crecí con la ropa heredada de mi hermano.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "e8d6565b-6d67-48f9-803e-3449226fa287",
     "word": "conflict",
     "translation": "conflicto",
@@ -81196,7 +82472,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -81225,7 +82501,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -81370,7 +82646,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -81515,7 +82791,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -83288,6 +84564,35 @@
     "pronunciation_es": "láry"
   },
   {
+    "id": "ee85c306-9c04-5e93-8986-b6ef1b0d8032",
+    "word": "hood famous",
+    "translation": "FAMOSO EN EL BARRIO — Conocido en tu zona pero no a nivel general.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He's hood famous, everyone here knows him.",
+    "example_translation": "Es famoso en el barrio, aquí lo conoce todo el mundo.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "ee9f6f01-e293-41e4-b42e-744f3b85b3ef",
     "word": "finally",
     "translation": "finalmente",
@@ -84096,7 +85401,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -84127,6 +85432,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.981009+00:00",
     "pronunciation_es": "enskíld"
+  },
+  {
+    "id": "f15eec12-6ed0-55da-8226-54ac1d9dff0c",
+    "word": "go nuts / go apeshit",
+    "translation": "VOLVERSE LOCO / DESMADRARSE (malsonante) — Perder la cabeza de emoción o de furia; go apeshit es la versión más bruta y malsonante.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "The crowd went nuts when he scored.",
+    "example_translation": "El público se volvió loco cuando marcó.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "f1647569-d182-49a1-b6de-5681151869d6",
@@ -84502,7 +85836,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -84589,7 +85923,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {
@@ -86304,6 +87638,35 @@
     "pronunciation_es": "yúyeli"
   },
   {
+    "id": "f88ce779-b8a9-539b-874e-4d7824fe5947",
+    "word": "well off",
+    "translation": "ACOMODADO / CON DINERO — Que vive con holgura económica.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Her family is quite well off.",
+    "example_translation": "Su familia está bastante acomodada.",
+    "created_at": "2026-07-22T16:38:04.108048+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "f8962acf-4412-47f0-8e86-647f30166ecb",
     "word": "call for",
     "translation": "REQUERIR / PEDIR — Que una situación exija algo, o que alguien reclame algo en público. De registro formal, muy típico de la prensa. Nunca se separa: siempre call for something.",
@@ -87634,7 +88997,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-22T11:34:14.948721+00:00",
+    "updated_at": "2026-07-22T16:38:04.108048+00:00",
     "pronunciation_es": null
   },
   {

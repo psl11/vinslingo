@@ -100,10 +100,11 @@ async function main() {
   if (se) { console.error(se); process.exit(1); }
   const songIdByTitle = new Map(dbSongs.map((s) => [norm(s.title), s.id]));
 
-  const decks = [];
-  for (const f of ['batch1-decks.json', 'batch2-decks.json', 'batch3-decks.json']) {
-    decks.push(JSON.parse(fs.readFileSync(path.join(DECKS_DIR, f), 'utf8')));
-  }
+  // Todos los mazos batchN-decks.json del directorio (auto-incluye lotes nuevos).
+  const deckFiles = fs.readdirSync(DECKS_DIR).filter((f) => /^batch\d+-decks\.json$/.test(f))
+    .sort((a, b) => parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0]));
+  console.log(`Mazos: ${deckFiles.join(', ')}`);
+  const decks = deckFiles.map((f) => JSON.parse(fs.readFileSync(path.join(DECKS_DIR, f), 'utf8')));
 
   const vocabRows = new Map();  // word(lower) -> row (dedup global)
   const svRows = [];            // anclas song_vocabulary
