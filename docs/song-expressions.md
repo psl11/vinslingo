@@ -8,14 +8,25 @@ con el vocabulario + las notas (verso resaltado + tooltips de siglas). Falta:
 mejorar el anclado de los ~30 idioms conjugados (lematizador) y escalar al resto
 del catálogo. Complementa [`music-feature.md`](music-feature.md).
 
-## UI del modo por canción
+## UI del modo por canción (navegación artista-primero)
 
-- **Hub** ([`app/music.tsx`](../app/music.tsx)): sección "Por canción" via
-  `getMusicSongs()` — solo canciones enriquecidas (con coloquial o notas), no las
-  que solo tienen algún match curado. Cada fila → `app/song.tsx`.
+Con ~300 canciones, un listado plano no escala. Se navega **por artista** (scroll
+corto) → dentro, sus canciones:
+
+- **Hub** ([`app/music.tsx`](../app/music.tsx)): la sección "Por artista" entra a
+  la pantalla del artista (ya no estudia directo). No hay listado plano de
+  canciones.
+- **Pantalla de artista** ([`app/artist.tsx`](../app/artist.tsx)): un CTA
+  "Repasar todo" (estudia todo el vocabulario del artista, `/study/music?artistId`)
+  + la lista de sus canciones **enriquecidas** (`getMusicSongs({artistId})` — solo
+  las que tienen coloquial o notas). Cada fila → `app/song.tsx`.
 - **Pantalla de canción** ([`app/song.tsx`](../app/song.tsx)): lista el
   vocabulario de la canción (`getMusicVocabulary({songId})`), un CTA que lanza el
   estudio (reusa `/study/music?songId`), y las notas.
+- **Spotify**: el botón "Escuchar en Spotify" usa
+  [`openSpotifySearch`](../lib/utils/spotify.ts) (util compartido con la
+  `FlashCard`): deep-link `spotify:` con fallback a la web en la MISMA pestaña,
+  para no dejar una ventana del navegador en blanco en la PWA.
 - **Notas** ([`components/music/SongNotes.tsx`](../components/music/SongNotes.tsx)):
   cada nota con su verso (término en negrita) + explicación.
 - **Siglas** ([`components/music/AcronymText.tsx`](../components/music/AcronymText.tsx)

@@ -157,16 +157,22 @@ export async function getMusicArtists(
   );
 }
 
-/** Canciones con contenido estudiable (palabras ancladas o notas), para el
- *  listado "Por canción". Ordenadas por riqueza de contenido, luego por rank. */
+/** Canciones enriquecidas (con coloquial o notas), normalmente acotadas a un
+ *  artista (se entra primero al artista para no tener un scroll gigante de
+ *  canciones). Ordenadas por riqueza de contenido, luego por rank. */
 export async function getMusicSongs(
-  cefrLevels?: string[]
+  opts: { artistId?: string; cefrLevels?: string[] } = {}
 ): Promise<{ id: string; title: string; artist: string | null; wordCount: number; noteCount: number }[]> {
+  const { artistId, cefrLevels } = opts;
+  // Orden de params = orden de placeholders en el SQL: primero el cefr (va en el
+  // LEFT JOIN), luego el artistId (va en el WHERE, después de los joins).
   const params: (string | number)[] = [];
   const cefr = cefrLevels && cefrLevels.length
     ? ` AND v.cefr_level IN (${cefrLevels.map(() => '?').join(', ')})`
     : '';
   if (cefr) params.push(...cefrLevels!);
+  const whereSql = artistId ? 'WHERE s.artist_id = ?' : '';
+  if (artistId) params.push(artistId);
   // Lista enfocada: solo canciones enriquecidas por el extractor (con vocabulario
   // coloquial o notas). Las que solo tienen algún match curado del feature
   // original no dan una experiencia "por canción" rica, así que se dejan fuera.
@@ -180,6 +186,7 @@ export async function getMusicSongs(
      LEFT JOIN artists a ON a.id = s.artist_id
      LEFT JOIN song_vocabulary sv ON sv.song_id = s.id
      LEFT JOIN vocabulary v ON v.id = sv.vocabulary_id${cefr}
+     ${whereSql}
      GROUP BY s.id
      HAVING colloquialCount > 0 OR noteCount > 0
      ORDER BY (colloquialCount + noteCount) DESC, s.rank ASC`,

@@ -1,10 +1,11 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, StyleSheet, Pressable, SafeAreaView, ScrollView, ActivityIndicator, Linking, Platform } from 'react-native';
+import { View, Text, StyleSheet, Pressable, SafeAreaView, ScrollView, ActivityIndicator } from 'react-native';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
 import { SongNotes, type Note } from '../components/music/SongNotes';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { analyzeTranslation } from '../lib/vocabulary/translationParser';
+import { openSpotifySearch } from '../lib/utils/spotify';
 import { colors, radius, spacing, fontSize, fontWeight } from '../constants/theme';
 
 // Modo por canción: reúne el vocabulario y las notas de UNA canción (ver
@@ -43,11 +44,7 @@ export default function SongScreen() {
       params: { songId, limit: String(Math.max(words.length, 1)), ...(typing ? { mode: 'typing' } : {}) },
     });
 
-  const openSpotify = () => {
-    const q = encodeURIComponent(`${title ?? ''} ${artist ?? ''}`.trim());
-    const url = Platform.OS === 'web' ? `https://open.spotify.com/search/${q}` : `spotify:search:${q}`;
-    Linking.openURL(url).catch(() => Linking.openURL(`https://open.spotify.com/search/${q}`));
-  };
+  const openSpotify = () => openSpotifySearch(title, artist);
 
   return (
     <SafeAreaView style={styles.container}>

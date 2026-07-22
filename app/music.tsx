@@ -25,7 +25,6 @@ const catMeta = (c: string) => CATEGORY_META[c] ?? { label: c, emoji: '📖' };
 
 type Cat = { category: string; wordCount: number };
 type Artist = { id: string; name: string; wordCount: number; songCount: number };
-type Song = { id: string; title: string; artist: string | null; wordCount: number; noteCount: number };
 
 export default function MusicScreen() {
   const router = useRouter();
@@ -35,7 +34,6 @@ export default function MusicScreen() {
   const [totals, setTotals] = useState({ words: 0, songs: 0 });
   const [categories, setCategories] = useState<Cat[]>([]);
   const [artists, setArtists] = useState<Artist[]>([]);
-  const [songs, setSongs] = useState<Song[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useFocusEffect(
@@ -44,14 +42,13 @@ export default function MusicScreen() {
       (async () => {
         try {
           setIsLoading(true);
-          const { getMusicWordCount, getMusicCategories, getMusicArtists, getMusicSongs } = await import('../lib/services/musicService');
-          const [t, c, a, s] = await Promise.all([
+          const { getMusicWordCount, getMusicCategories, getMusicArtists } = await import('../lib/services/musicService');
+          const [t, c, a] = await Promise.all([
             getMusicWordCount(),
             getMusicCategories(selectedCEFRLevels),
             getMusicArtists(selectedCEFRLevels),
-            getMusicSongs(selectedCEFRLevels),
           ]);
-          if (active) { setTotals(t); setCategories(c); setArtists(a); setSongs(s); }
+          if (active) { setTotals(t); setCategories(c); setArtists(a); }
         } catch (e) {
           console.error('Error loading music hub:', e);
         } finally {
@@ -137,29 +134,6 @@ export default function MusicScreen() {
             <Text style={styles.rowChevron}>›</Text>
           </PressableScale>
 
-          {/* Por canción */}
-          {songs.length > 0 && (
-            <>
-              <Text style={styles.sectionTitle}>Por canción</Text>
-              {songs.map((s) => (
-                <PressableScale
-                  key={s.id}
-                  style={styles.row}
-                  onPress={() => router.push({ pathname: '/song', params: { songId: s.id, title: s.title, artist: s.artist ?? '' } })}
-                >
-                  <Text style={styles.rowEmoji}>🎵</Text>
-                  <View style={{ flex: 1 }}>
-                    <Text style={styles.rowLabel} numberOfLines={1}>{s.title}</Text>
-                    {s.artist ? <Text style={styles.rowSub} numberOfLines={1}>{s.artist}</Text> : null}
-                  </View>
-                  {s.noteCount > 0 ? <Text style={styles.noteDot}>📓 {s.noteCount}</Text> : null}
-                  <View style={styles.countBadge}><Text style={styles.countText}>{s.wordCount}</Text></View>
-                  <Text style={styles.rowChevron}>›</Text>
-                </PressableScale>
-              ))}
-            </>
-          )}
-
           {/* Por tipo */}
           <Text style={styles.sectionTitle}>Por tipo</Text>
           {categories.map((c) => {
@@ -167,10 +141,17 @@ export default function MusicScreen() {
             return <Row key={c.category} emoji={m.emoji} label={m.label} count={c.wordCount} onPress={() => go({ musicCategory: c.category })} />;
           })}
 
-          {/* Por artista */}
+          {/* Por artista → pantalla del artista (sus canciones + repasar todo).
+              Se entra por artista, no por un listado plano de ~300 canciones. */}
           <Text style={styles.sectionTitle}>Por artista</Text>
           {artists.map((a) => (
-            <Row key={a.id} emoji="🎤" label={a.name} count={a.wordCount} onPress={() => go({ artistId: a.id })} />
+            <Row
+              key={a.id}
+              emoji="🎤"
+              label={a.name}
+              count={a.wordCount}
+              onPress={() => router.push({ pathname: '/artist', params: { artistId: a.id, name: a.name, wordCount: String(a.wordCount) } })}
+            />
           ))}
         </ScrollView>
       )}
@@ -212,8 +193,6 @@ const styles = StyleSheet.create({
   },
   rowEmoji: { fontSize: 22 },
   rowLabel: { flex: 1, fontSize: fontSize.md, fontWeight: fontWeight.semibold, color: colors.textPrimary },
-  rowSub: { fontSize: fontSize.sm, color: colors.textSecondary, marginTop: 1 },
-  noteDot: { fontSize: fontSize.xs, color: colors.warningText },
   countBadge: { backgroundColor: colors.primarySurface, paddingHorizontal: spacing.sm, paddingVertical: spacing.xxs, borderRadius: radius.sm, minWidth: 34, alignItems: 'center' },
   countText: { fontSize: fontSize.sm, fontWeight: fontWeight.bold, color: colors.primary },
   rowChevron: { fontSize: 24, color: colors.textTertiary, fontWeight: fontWeight.regular },

@@ -10,6 +10,7 @@ import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
 import { anchorIcon, anchorIsSong, anchorCredit } from '../../lib/vocabulary/anchor';
 import { formalSynonymLabel, separabilityNote } from '../../lib/vocabulary/phaveGrammar';
 import { highlightRange } from '../../lib/utils/highlight';
+import { openSpotifySearch } from '../../lib/utils/spotify';
 import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 interface FlashCardProps {
@@ -156,39 +157,7 @@ export function FlashCard({
 
   const openSpotify = (e: any, title?: string | null, artist?: string | null) => {
     e?.stopPropagation?.(); // evita que el toque también voltee la tarjeta
-    const cleanArtist = (artist || '').replace(/\s*\([^)]*\)/g, '').trim();
-    const query = [title, cleanArtist].filter(Boolean).join(' ');
-    if (!query) return;
-    const webUrl = `https://open.spotify.com/search/${encodeURIComponent(query)}`;
-
-    if (Platform.OS !== 'web') {
-      Linking.openURL(webUrl);
-      return;
-    }
-
-    // En la PWA, window.open(_blank) deja una pestaña del navegador en blanco:
-    // el universal link abre la app de Spotify pero la pestaña que lo lanzó se
-    // queda ahí. En su lugar, deep-linkeamos con el esquema `spotify:` (abre la
-    // app sin pestaña). Si Spotify no está instalado, la página sigue visible y
-    // caemos a la web en la misma pestaña (sin dejar ventana en blanco).
-    const appUrl = `spotify:search:${encodeURIComponent(query)}`;
-    let done = false;
-    const fallback = setTimeout(() => {
-      if (!done && typeof document !== 'undefined' && document.visibilityState === 'visible') {
-        done = true;
-        window.location.href = webUrl;
-      }
-    }, 1500);
-    const onVisibility = () => {
-      if (typeof document !== 'undefined' && document.visibilityState === 'hidden') {
-        done = true;
-        clearTimeout(fallback);
-      }
-    };
-    if (typeof document !== 'undefined') {
-      document.addEventListener('visibilitychange', onVisibility, { once: true });
-    }
-    window.location.href = appUrl;
+    openSpotifySearch(title, artist);
   };
 
   // Fundido sutil al voltear: la cara actual se desvanece (con micro-zoom), se
