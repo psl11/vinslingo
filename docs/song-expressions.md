@@ -1,11 +1,30 @@
 # Expresiones de canciones (extractor LLM) — diseño
 
-**Estado: primer lote de 30 canciones cargado** (fases 1–2). 124 fichas
-`colloquial` en `vocabulary` (con 93 anclas a `song_vocabulary`) + 36 `song_notes`.
-Cargado con [`scripts/load-song-expressions.mjs`](../scripts/load-song-expressions.mjs)
-desde mazos generados en sesión. Falta: render de `song_notes` en la ficha
-(con verso + tooltips de siglas), modo por canción, y escalar al resto del
-catálogo. Complementa [`music-feature.md`](music-feature.md).
+**Estado: 30 canciones cargadas + modo por canción funcionando** (fases 1–4).
+124 fichas `colloquial` en `vocabulary` (93 anclas) + 36 `song_notes`, cargadas
+con [`scripts/load-song-expressions.mjs`](../scripts/load-song-expressions.mjs).
+El hub tiene sección **"Por canción"** → pantalla [`app/song.tsx`](../app/song.tsx)
+con el vocabulario + las notas (verso resaltado + tooltips de siglas). Falta:
+mejorar el anclado de los ~30 idioms conjugados (lematizador) y escalar al resto
+del catálogo. Complementa [`music-feature.md`](music-feature.md).
+
+## UI del modo por canción
+
+- **Hub** ([`app/music.tsx`](../app/music.tsx)): sección "Por canción" via
+  `getMusicSongs()` — solo canciones enriquecidas (con coloquial o notas), no las
+  que solo tienen algún match curado. Cada fila → `app/song.tsx`.
+- **Pantalla de canción** ([`app/song.tsx`](../app/song.tsx)): lista el
+  vocabulario de la canción (`getMusicVocabulary({songId})`), un CTA que lanza el
+  estudio (reusa `/study/music?songId`), y las notas.
+- **Notas** ([`components/music/SongNotes.tsx`](../components/music/SongNotes.tsx)):
+  cada nota con su verso (término en negrita) + explicación.
+- **Siglas** ([`components/music/AcronymText.tsx`](../components/music/AcronymText.tsx)
+  + [`lib/vocabulary/acronyms.ts`](../lib/vocabulary/acronyms.ts)): subraya las
+  siglas conocidas (AAVE, B.Y.O.B., CREAM…) y muestra un globito al pulsar. Se usa
+  en las notas Y en el reverso de la ficha (`TranslationBody`). Solo marca tokens
+  en mayúsculas puras, así la prosa normal nunca se subraya.
+- **Sync**: `song_notes` se replica al SQLite local (esquema + `syncMusicFromSupabase`,
+  degrada con gracia si la tabla no existe).
 
 ## Por qué: el matcher actual va en la dirección equivocada
 

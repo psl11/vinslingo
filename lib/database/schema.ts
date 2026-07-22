@@ -224,6 +224,18 @@ export const LOCAL_SCHEMA = `
   );
   CREATE INDEX IF NOT EXISTS idx_sv_vocab ON song_vocabulary(vocabulary_id);
   CREATE INDEX IF NOT EXISTS idx_sv_song ON song_vocabulary(song_id);
+  -- Notas por canción (referencias culturales + juegos de palabras), capa 2 del
+  -- extractor de expresiones (ver docs/song-expressions.md). No son fichas de
+  -- repaso: contexto que se muestra al estudiar la canción.
+  CREATE TABLE IF NOT EXISTS song_notes (
+    id TEXT PRIMARY KEY,
+    song_id TEXT NOT NULL,
+    kind TEXT,
+    term TEXT NOT NULL,
+    explanation TEXT NOT NULL,
+    line_text TEXT
+  );
+  CREATE INDEX IF NOT EXISTS idx_song_notes_song ON song_notes(song_id);
 `;
 
 // Queries para inicialización

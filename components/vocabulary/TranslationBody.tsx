@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
+import { AcronymText } from '../music/AcronymText';
 import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 interface TranslationBodyProps {
@@ -63,7 +64,7 @@ export function TranslationBody({ translation, align = 'left' }: TranslationBody
       <View style={[styles.termBlock, align === 'center' && styles.termBlockCenter]}>
         <Text style={[styles.term, { textAlign }]}>{a.term}</Text>
         {a.explanation ? (
-          <Text style={[styles.explanation, { textAlign }]}>{a.explanation}</Text>
+          <AcronymText text={a.explanation} style={[styles.explanation, { textAlign }]} />
         ) : null}
       </View>
     );

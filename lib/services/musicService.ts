@@ -50,8 +50,24 @@ export async function syncMusicFromSupabase(options: { force?: boolean } = {}): 
       if (data) artists.push(...data);
     }
 
+    // Notas por canción (capa 2). Degrada con gracia si la tabla no existe todavía.
+    const notes: any[] = [];
+    try {
+      for (let i = 0; i < songIds.length; i += 200) {
+        const { data, error } = await supabase
+          .from('song_notes')
+          .select('id, song_id, kind, term, explanation, line_text')
+          .in('song_id', songIds.slice(i, i + 200));
+        if (error) throw error;
+        if (data) notes.push(...data);
+      }
+    } catch (e) {
+      console.log('song_notes sync skipped:', (e as any)?.message ?? e);
+    }
+
     await withTransaction(async (db) => {
       await db.runAsync('DELETE FROM song_vocabulary');
+      await db.runAsync('DELETE FROM song_notes');
       await db.runAsync('DELETE FROM songs');
       await db.runAsync('DELETE FROM artists');
       for (const a of artists) {
@@ -66,6 +82,12 @@ export async function syncMusicFromSupabase(options: { force?: boolean } = {}): 
         await db.runAsync(
           'INSERT OR REPLACE INTO song_vocabulary (id, song_id, vocabulary_id, line_text, line_translation, highlighted_word, line_index) VALUES (?, ?, ?, ?, ?, ?, ?)',
           [r.id, r.song_id, r.vocabulary_id, r.line_text, r.line_translation ?? null, r.highlighted_word, r.line_index]
+        );
+      }
+      for (const n of notes) {
+        await db.runAsync(
+          'INSERT OR REPLACE INTO song_notes (id, song_id, kind, term, explanation, line_text) VALUES (?, ?, ?, ?, ?, ?)',
+          [n.id, n.song_id, n.kind ?? null, n.term, n.explanation, n.line_text ?? null]
         );
       }
     });
@@ -132,6 +154,47 @@ export async function getMusicArtists(
      HAVING wordCount >= ?
      ORDER BY wordCount DESC`,
     params
+  );
+}
+
+/** Canciones con contenido estudiable (palabras ancladas o notas), para el
+ *  listado "Por canción". Ordenadas por riqueza de contenido, luego por rank. */
+export async function getMusicSongs(
+  cefrLevels?: string[]
+): Promise<{ id: string; title: string; artist: string | null; wordCount: number; noteCount: number }[]> {
+  const params: (string | number)[] = [];
+  const cefr = cefrLevels && cefrLevels.length
+    ? ` AND v.cefr_level IN (${cefrLevels.map(() => '?').join(', ')})`
+    : '';
+  if (cefr) params.push(...cefrLevels!);
+  // Lista enfocada: solo canciones enriquecidas por el extractor (con vocabulario
+  // coloquial o notas). Las que solo tienen algún match curado del feature
+  // original no dan una experiencia "por canción" rica, así que se dejan fuera.
+  // `wordCount` sí cuenta TODO el vocabulario anclado (para estudiarlo y el badge).
+  return runQuery(
+    `SELECT s.id as id, s.title as title, a.name as artist,
+       COUNT(DISTINCT v.id) as wordCount,
+       COUNT(DISTINCT CASE WHEN v.category = 'colloquial' THEN v.id END) as colloquialCount,
+       (SELECT COUNT(*) FROM song_notes n WHERE n.song_id = s.id) as noteCount
+     FROM songs s
+     LEFT JOIN artists a ON a.id = s.artist_id
+     LEFT JOIN song_vocabulary sv ON sv.song_id = s.id
+     LEFT JOIN vocabulary v ON v.id = sv.vocabulary_id${cefr}
+     GROUP BY s.id
+     HAVING colloquialCount > 0 OR noteCount > 0
+     ORDER BY (colloquialCount + noteCount) DESC, s.rank ASC`,
+    params
+  );
+}
+
+/** Notas (referencias + wordplay) de una canción, con su verso de contexto. */
+export async function getSongNotes(
+  songId: string
+): Promise<{ id: string; kind: string; term: string; explanation: string; line_text: string | null }[]> {
+  return runQuery(
+    `SELECT id, kind, term, explanation, line_text FROM song_notes
+     WHERE song_id = ? ORDER BY CASE kind WHEN 'wordplay' THEN 0 ELSE 1 END, term`,
+    [songId]
   );
 }
 
