@@ -36,6 +36,33 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "05ce7e78-6388-5280-89a2-e404c076e0cd",
+    "song_id": "f2e77cf4-d89e-5e7e-8bd4-e49475a32eed",
+    "kind": "reference",
+    "term": "love is patient, love is kind",
+    "explanation": "Es una cita bíblica muy famosa (1 Corintios 13), típica en bodas: \"el amor es paciente, es bondadoso\". Mary Lambert la canta para reivindicar que ese amor vale para todos, también las parejas del mismo sexo.",
+    "line_text": "Love is patient\nLove is kind",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "076fc084-bf53-559a-8ead-cb1f087f2713",
+    "song_id": "f2e77cf4-d89e-5e7e-8bd4-e49475a32eed",
+    "kind": "reference",
+    "term": "walk-outs and sit-ins",
+    "explanation": "\"Sit-ins\" (sentadas) y \"walk-outs\" (plantes, abandonos de clase o trabajo en protesta) fueron formas de protesta pacífica clave en la lucha por los derechos civiles en EE. UU. Macklemore equipara esa lucha con la de la igualdad LGTBI.",
+    "line_text": "The same fight that led people to walk-outs and sit-ins\nIt's human rights for everybody",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "08bdcd3e-51d9-5d53-86d1-24578ef597c0",
+    "song_id": "d79cb3b7-ae0a-5cea-88f7-f4919dd08f13",
+    "kind": "reference",
+    "term": "the king is dead, long live the king",
+    "explanation": "\"El rey ha muerto, ¡viva el rey!\" es la frase de las sucesiones al trono: en cuanto muere un rey, el siguiente ya reina. Coldplay narra desde un rey derrocado que ha perdido todo su poder.",
+    "line_text": "Now the old king is dead, long live the king",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
     "id": "0cadd356-5339-5075-8322-181047f6e7bb",
     "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
     "kind": "wordplay",
@@ -43,6 +70,24 @@
     "explanation": "Doble juego: Steph Curry es la estrella de la NBA con una puntería increíble (\"with the shot\"); y \"Chef Curry with the pot\" convierte al jugador en cocinero (curry = plato, pot = olla). Drake acierta y \"cocina\" éxitos con la misma facilidad.",
     "line_text": "I been Steph Curry with the shot\nBeen cookin' with the sauce, Chef Curry with the pot, boy",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "0e0a7820-21ee-5bc1-800f-099fee954756",
+    "song_id": "60d51c83-5e33-5cfd-8441-3b8396a5c364",
+    "kind": "reference",
+    "term": "Scaramouche, Galileo, Bismillah, Beelzebub",
+    "explanation": "La sección de ópera es un batiburrillo deliberado: Scaramouche es un payaso cobarde de la comedia italiana; el Fandango, un baile español; Galileo y Figaro, guiños a la ciencia y la ópera; Bismillah es árabe (\"en el nombre de Dios\"); Beelzebub, un demonio. Freddie Mercury mezcla todo para un juicio operístico del alma del protagonista, sin un sentido literal único.",
+    "line_text": "I see a little silhouetto of a man\nScaramouche, Scaramouche, will you do the Fandango?",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "0f7f7472-264d-555a-886f-905e685926ee",
+    "song_id": "ba82c932-6998-54b6-8e9a-f30e0944904f",
+    "kind": "reference",
+    "term": "smoke weed every day",
+    "explanation": "La coletilla final de Nate Dogg (\"smoke weed every day\") se convirtió en uno de los memes y frases más citados del rap. Resume el estilo de vida relajado y fumeta de la Costa Oeste.",
+    "line_text": "Hey, hey, hey, hey\nSmoke weed every day",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
     "id": "101a90ab-7cef-5eb2-8b14-a7866812cae2",
@@ -72,6 +117,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "1b6544bc-e5d8-5200-8546-7cee0ce033dc",
+    "song_id": "50000001-0000-0000-0000-000000000018",
+    "kind": "reference",
+    "term": "how your garden grows",
+    "explanation": "Es un guiño a la canción infantil inglesa Mary, Mary, quite contrary (\"how does your garden grow?\"). Liam la usa con retintín: no quiere saber de la vida perfecta y ordenada del otro.",
+    "line_text": "I don't really wanna know\nHow your garden grows",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
     "id": "283389ce-b317-5eec-8dd3-0b188fa977c5",
     "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
     "kind": "reference",
@@ -79,6 +133,15 @@
     "explanation": "OVO (October's Very Own) es el sello y la marca de Drake. Nombrarlo es reivindicar a su equipo.",
     "line_text": "OVO, man, we really with the shits, boy",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "2b58b886-3e4c-52a8-8abd-234a2751379f",
+    "song_id": "a506bfa5-d236-570a-8901-9a7e2fb6ee9c",
+    "kind": "wordplay",
+    "term": "Mr. Rager",
+    "explanation": "\"Rager\" viene de \"rage\", que en slang no es solo furia sino irse de fiesta a tope (to rage = desmadrarse). \"Mr. Rager\" es el alter ego fiestero y noctámbulo de Kid Cudi, siempre de aventura para escapar de sus demonios.",
+    "line_text": "Hey, Mr. Rager, Mr. Rager\nTell me where you're goin', tell us where you're headed",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
     "id": "35362c37-2316-56e8-8125-f05330a2f760",
@@ -216,6 +279,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "842e9caf-236f-5250-8c00-d5a63e78a017",
+    "song_id": "d79cb3b7-ae0a-5cea-88f7-f4919dd08f13",
+    "kind": "reference",
+    "term": "Viva la Vida",
+    "explanation": "El título, en español, significa \"viva la vida\". Chris Martin lo tomó de un cuadro de la pintora mexicana Frida Kahlo: ella escribió \"Viva la Vida\" en una de sus últimas obras, poco antes de morir, como afirmación de la vida pese al sufrimiento.",
+    "line_text": "I used to rule the world\nSeas would rise when I gave the word",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
     "id": "844c2bbd-dbf7-506c-8923-f7eb64b364bb",
     "song_id": "9ef1727c-2f92-59f2-8c38-10daf793dbdf",
     "kind": "wordplay",
@@ -288,6 +360,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "a2755b3b-b23d-5d6c-842b-c0f5b5bef5d9",
+    "song_id": "da869f3d-fd7a-5b3b-8d3f-fdde1b6d9fa7",
+    "kind": "reference",
+    "term": "Strange Fruit (Nina Simone)",
+    "explanation": "El tema samplea Strange Fruit, un desgarrador clásico contra los linchamientos de personas negras en el sur de EE. UU. (el \"strange fruit\", la \"fruta extraña\" que cuelga de los árboles, son los cuerpos). Aquí en la voz de Nina Simone. Da todo el peso trágico a la canción.",
+    "line_text": "Strange fruit hangin' from the poplar trees\nBlood on the leaves",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
     "id": "aa4de776-6d5d-50c2-8a71-fd77951f75ee",
     "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
     "kind": "reference",
@@ -322,6 +403,15 @@
     "explanation": "Ed, Edd n Eddy es una serie de dibujos de Cartoon Network de los 2000. \"Colegas desde Ed, Edd n Eddy\" = amigos desde niños, desde que veíamos esos dibujos.",
     "line_text": "I done lost homies who been with me since Ed, Edd n Eddy",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "bec52e75-73ca-56b2-8a3f-e6d65bc148a6",
+    "song_id": "50000001-0000-0000-0000-000000000008",
+    "kind": "reference",
+    "term": "never-never land / Now I lay me down to sleep",
+    "explanation": "\"Never-never land\" es el País de Nunca Jamás de Peter Pan, aquí el mundo de los sueños. Y \"Now I lay me down to sleep, pray the Lord my soul to keep\" es una oración infantil clásica en inglés para antes de dormir, que la canción recita de forma inquietante.",
+    "line_text": "Take my hand\nWe're off to never-never land",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
     "id": "c2964fa0-92db-5ad4-8d7e-e2c4ea636ab5",
@@ -360,6 +450,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "c8c7baa3-155f-5af9-8367-7de4e37361bc",
+    "song_id": "7e257ad3-80f7-5a84-8c29-975126895592",
+    "kind": "reference",
+    "term": "only God can judge me",
+    "explanation": "\"Only God can judge me\" (solo Dios puede juzgarme) es una frase icónica que popularizó Tupac Shakur: ignorar las críticas de la gente porque solo rindes cuentas a Dios. Muy citada en el rap.",
+    "line_text": "And only God can judge me (Yeah). And he don't like no ugly",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
     "id": "d0fc6355-52cb-5e2e-81d9-51df2ef4e4b3",
     "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
     "kind": "reference",
@@ -385,6 +484,15 @@
     "explanation": "Juego entre soul (alma, sentimiento) y soldier (soldado), que suenan parecido. Significa: tengo corazón y sensibilidad, pero no soy un guerrero frío. Una de las frases más famosas del grupo.",
     "line_text": "I got soul but I'm not a soldier",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "d98e5b7f-7ef2-5a9b-8fe0-9a92e7ff4fce",
+    "song_id": "59aebead-a35e-52a5-86e8-bf4c00c43c09",
+    "kind": "reference",
+    "term": "wave them like you just don't care",
+    "explanation": "\"Put your hands in the air and wave 'em like you just don't care\" es un cántico clásico de conciertos de hip-hop para animar al público. SOAD lo mete con ironía en una canción que critica lo vacío de Hollywood.",
+    "line_text": "Put your hands in the air\nAnd wave them like you just don't care",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
     "id": "ddafad3b-9c23-5164-8d38-2942588c6e2e",
@@ -423,6 +531,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "ea26df48-97b4-5f89-864b-a557d73b196f",
+    "song_id": "50000001-0000-0000-0000-000000000008",
+    "kind": "reference",
+    "term": "the Sandman",
+    "explanation": "El Sandman (el \"hombre de arena\") es un personaje del folclore europeo que trae el sueño espolvoreando arena mágica en los ojos de los niños (por eso las legañas al despertar). La canción lo convierte en algo siniestro, ligado a las pesadillas.",
+    "line_text": "Say your prayers, little one, don't forget, my son\nTo include everyone\n'Til the Sandman, he comes",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
     "id": "f4d08d9d-2e60-5d78-8696-d1b0559341ea",
     "song_id": "28d67bf5-aab5-59ea-8ac4-64fea78795a2",
     "kind": "reference",
@@ -448,5 +565,23 @@
     "explanation": "\"The Ville\" es Fayetteville, la ciudad natal de J. Cole. \"Dreamville\" es su sello discográfico. Juega con ambos: sus \"profecías\" desde el barrio se cumplieron al montar su propio sello.",
     "line_text": "Prophecies that I made way back in the Ville",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "fc84e0de-b05d-522a-8367-4573a17295a0",
+    "song_id": "50000001-0000-0000-0000-000000000002",
+    "kind": "wordplay",
+    "term": "Come Together (sinsentidos)",
+    "explanation": "Casi toda la letra es un collage de imágenes surrealistas y sin sentido literal (\"ju-ju eyeball\", \"toe-jam football\", \"walrus gumboot\"): Lennon jugaba con el sonido más que con el significado. Nació de un eslogan político de Timothy Leary. No busques traducción lógica; funciona por la sonoridad.",
+    "line_text": "He got ju-ju eyeball, he one holy roller\nHe got hair down to his knee",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "fd1e27e0-52ce-5f39-8129-9f8e549f6d4f",
+    "song_id": "9c5a6bed-7dae-5694-8256-d6720450ed7d",
+    "kind": "reference",
+    "term": "keep it 300 / like the Romans",
+    "explanation": "\"300\" alude a la película 300, sobre los 300 espartanos que resistieron hasta la muerte. \"Keep it 300\" = ser leal y aguantar a muerte. Luego juega con \"Trojans\" (troyanos / la marca de condones).",
+    "line_text": "I keep it 300, like the Romans\nThree hundred bitches, where the Trojans?",
+    "created_at": "2026-07-22T16:51:44.765863+00:00"
   }
 ]
