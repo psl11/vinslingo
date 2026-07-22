@@ -116,8 +116,16 @@ conservador (ver [`match-music.mjs`](../scripts/match-music.mjs)):
 - **Homógrafos fuera**: slang de una palabra que coincide con una palabra común
   (long, fire, sick, beat, ride, fit, broke…) se excluye del auto-match —
   matcharía su sentido cotidiano, no el del slang. Se detectan por coincidencia
-  con el ngsl básico **y** una blocklist curada a mano (`SLANG_HOMOGRAPHS` en
-  `match-music.mjs`, ~50 términos) para los comunes que no están en la BD.
+  con el ngsl básico (`BASIC`: ngsl A1/A2/B1) **y** una blocklist curada a mano
+  (`SLANG_HOMOGRAPHS` en `match-music.mjs`, ~50 términos) para los comunes que no
+  están en la BD. **Ojo al aplicar este chequeo al propio `ngsl`**: como no hay
+  ngsl B2+ en el dataset, todo el ngsl B1+ elegible ES nivel B1 — y por tanto
+  está también dentro de `BASIC` (que llega hasta B1). Sin excepción, cada
+  palabra ngsl se marcaba "ambigua" contra sí misma y el ngsl quedaba
+  **completamente fuera del match** (0 palabras) aunque la lógica de alcance
+  dijera B1+. `ambiguous()` ahora se salta ese chequeo cuando `v.category ===
+  'ngsl'` (el chequeo solo tiene sentido para detectar que OTRA categoría
+  choque con una palabra común, no para el propio ngsl).
 - **Lematización**: inflexiones (running→run, tomó→take) con mapa de irregulares;
   phrasals **separables** con hueco (*take it off*, *pick you up*).
 - **Cross-line fuera**: un match que solo casa cruzando líneas (hueco de phrasal
@@ -126,9 +134,9 @@ conservador (ver [`match-music.mjs`](../scripts/match-music.mjs)):
 
 ## Estado
 
-- ✅ **Datos**: catálogo de **518 canciones** cargadas (`source='user'`), **993
-  matches** (A2+ jugoso), con verso de contexto (3 líneas), `highlighted_word`
-  exacto y `rank`.
+- ✅ **Datos**: catálogo de **518 canciones** cargadas (`source='user'`), **1190
+  matches** (A2+ jugoso + ngsl B1+, tras el fix del homógrafo de arriba), con
+  verso de contexto (3 líneas), `highlighted_word` exacto y `rank`.
 - ✅ **Sync cliente**: tablas locales `songs`/`artists`/`song_vocabulary` +
   `syncMusicFromSupabase` (full replace gateado, degrada con gracia).
 - ✅ **UI**: sección "Aprende con tu música" (hub con **Top recurrentes / Por tipo

@@ -34,6 +34,11 @@ const SLANG_HOMOGRAPHS = new Set([
 // Ambiguo = trampa UK↔US (meta), o slang de UNA palabra homógrafo de una común.
 function ambiguous(v) {
   if (/\(uk vs us\)/i.test(v.word || '')) return true;
+  // El propio ngsl es la referencia de "palabra común": comprobarlo contra BASIC
+  // (que se construye con ngsl A1/A2/B1) lo excluiría siempre a sí mismo. El
+  // chequeo de homógrafo solo tiene sentido para OTRAS categorías (slang, etc.)
+  // que puedan chocar con un sentido cotidiano.
+  if (v.category === 'ngsl') return false;
   const w = (v.word || '').toLowerCase().trim();
   if (!/\s/.test(w) && (BASIC.has(w) || SLANG_HOMOGRAPHS.has(w))) return true;
   return false;
