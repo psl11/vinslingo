@@ -19,6 +19,7 @@ const CATEGORY_META: Record<string, { label: string; emoji: string }> = {
   confusing_pair: { label: 'Pares confusos', emoji: '🔀' },
   connector: { label: 'Conectores', emoji: '🧩' },
   ngsl: { label: 'Vocabulario', emoji: '📖' },
+  colloquial: { label: 'Coloquial', emoji: '🗣️' },
 };
 const catMeta = (c: string) => CATEGORY_META[c] ?? { label: c, emoji: '📖' };
 

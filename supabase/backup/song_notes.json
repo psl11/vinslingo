@@ -1,0 +1,326 @@
+[
+  {
+    "id": "00ebf154-db32-5b62-851e-e7f73510d88d",
+    "song_id": "50000001-0000-0000-0000-000000000025",
+    "kind": "wordplay",
+    "term": "Mr. Brightside",
+    "explanation": "\"The bright side\" es el lado positivo (look on the bright side = mira el lado bueno). Aquí es ironía amarga: el narrador está devorado por los celos imaginando a su chica con otro, y aun así se llama a sí mismo \"el señor Optimista\". El título dice lo contrario de lo que siente.",
+    "line_text": "Open up my eager eyes\n'Cause I'm Mr. Brightside",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "02926a95-d42d-5521-8b1a-7a6ced6a8d69",
+    "song_id": "baeca4a3-5f3f-45c8-ae4c-4051b68f52cb",
+    "kind": "wordplay",
+    "term": "take me out",
+    "explanation": "\"Take me out\" tiene doble sentido: sácame a bailar/a una cita, y elimíname/dispárame (\"cross-hair\" = mira telescópica, \"shot\" = disparo). El narrador mezcla el deseo romántico con la imagen de un francotirador: acercarse a alguien da tanto vértigo como jugarse la vida.",
+    "line_text": "I'm just a cross-hair, I'm just a shot away from you\n...\nI say, \"Take me out\"",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "04fa19d3-c6da-5708-8412-e9344d576c8e",
+    "song_id": "7f1fe1aa-d1d7-56da-86e3-d7c577bae547",
+    "kind": "wordplay",
+    "term": "Michael Phelps / Michael Jordan",
+    "explanation": "Dos deportistas legendarios: Michael Phelps, el nadador con más medallas olímpicas; Michael Jordan, la leyenda del baloncesto (dueño de las zapatillas Air Jordan). Quavo se compara con ambos para decir que es el mejor en lo suyo.",
+    "line_text": "Michael Phelps with the swim moves\nMichael Jordan with the tennis shoes",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "05118498-90c2-5067-83b0-740bcd4cf44c",
+    "song_id": "e1124e22-c325-5931-85c1-818fffa4f1fb",
+    "kind": "reference",
+    "term": "H-Town",
+    "explanation": "\"H-Town\" es Houston (Texas). La canción, inspirada en raperos de allí, cuenta a un chaval que sueña con ser lo mejor que ha salido de Houston.",
+    "line_text": "As the best thing out the H-Town in a while",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "0cadd356-5339-5075-8322-181047f6e7bb",
+    "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
+    "kind": "wordplay",
+    "term": "Steph Curry / Chef Curry",
+    "explanation": "Doble juego: Steph Curry es la estrella de la NBA con una puntería increíble (\"with the shot\"); y \"Chef Curry with the pot\" convierte al jugador en cocinero (curry = plato, pot = olla). Drake acierta y \"cocina\" éxitos con la misma facilidad.",
+    "line_text": "I been Steph Curry with the shot\nBeen cookin' with the sauce, Chef Curry with the pot, boy",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "146db5ad-6af6-51d9-83eb-2e6109b22ab0",
+    "song_id": "06bc5f2b-fb1c-513f-89c0-c5c95eae4cd2",
+    "kind": "reference",
+    "term": "cash ruined everything around me (CREAM)",
+    "explanation": "Juega con C.R.E.A.M. de Wu-Tang Clan, que significa \"Cash Rules Everything Around Me\" (el dinero manda en todo). Joey lo cambia a \"cash RUINED everything\" (el dinero lo ARRUINÓ todo): mismo acrónimo, mensaje opuesto.",
+    "line_text": "'Cause cash ruined everythin' around me, me\nCash ruined everythin' around me",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "1647d07c-f19a-5181-83bb-d491e6ae70ab",
+    "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
+    "kind": "wordplay",
+    "term": "role model",
+    "explanation": "Un role model es un referente, alguien a quien admiras y quieres parecerte (un modelo a seguir). El título No Role Modelz afirma lo contrario: que no tiene ninguno. Pero la gracia está aquí: enumera a mujeres que sí admira —Lisa Bonet, Nia Long, Sade, Aaliyah, Aunt Viv—. Ahí está la ironía: niega tener modelos mientras te nombra justo a los que sí lo serían para él.",
+    "line_text": "My only regret was too young for Lisa Bonet\nMy only regret was too young for Nia Long",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "283389ce-b317-5eec-8dd3-0b188fa977c5",
+    "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
+    "kind": "reference",
+    "term": "OVO",
+    "explanation": "OVO (October's Very Own) es el sello y la marca de Drake. Nombrarlo es reivindicar a su equipo.",
+    "line_text": "OVO, man, we really with the shits, boy",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "35362c37-2316-56e8-8125-f05330a2f760",
+    "song_id": "50000001-0000-0000-0000-000000000016",
+    "kind": "reference",
+    "term": "wonderwall",
+    "explanation": "\"Wonderwall\" es una palabra inventada: Noel Gallagher la tomó del título de un disco de George Harrison (Wonderwall Music, 1968). Él la definió como \"un amigo imaginario que viene a salvarte de ti mismo\". No busques traducción literal: es un nombre cariñoso para quien te salva.",
+    "line_text": "And after all\nYou're my wonderwall",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "37739546-1fc1-568e-8b1e-fe7985d0a33b",
+    "song_id": "7de935b5-bb3a-4e71-9c7a-cfb824dd6ffa",
+    "kind": "wordplay",
+    "term": "yellow",
+    "explanation": "El \"amarillo\" del título no tiene un significado fijo: Chris Martin lo eligió por cómo sonaba, y ha llegado a asociarse con las estrellas, la calidez y la devoción incondicional que canta. Otra letra que funciona por evocación, no por sentido literal.",
+    "line_text": "And it was all yellow",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "3e4a3c64-17c7-536b-8feb-1c623901a8a6",
+    "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
+    "kind": "reference",
+    "term": "the 6 (Six)",
+    "explanation": "\"The 6\" (the Six / 6ix) es como Drake bautizó a Toronto, su ciudad. Cuando repite \"six\" se refiere a volver a casa como un héroe local.",
+    "line_text": "Six, six, six, six, six, soon as I'm back in the city they throw a parade",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "43d82356-74d1-5393-842e-9e1f62941f90",
+    "song_id": "50d33df2-f2ab-5512-858f-8e5e58a164c9",
+    "kind": "wordplay",
+    "term": "Cole world",
+    "explanation": "\"Cole world\" juega con \"cold world\" (un mundo frío, duro) y su apellido, Cole. Es su marca personal: suena igual pero convierte la dureza del mundo en su propio universo.",
+    "line_text": "Cole\nCole world",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "4708c111-11ad-5517-8fda-eb82f84ca9de",
+    "song_id": "b7e59710-09e7-5f64-80b8-145f41429a3f",
+    "kind": "reference",
+    "term": "Taylor Gang",
+    "explanation": "Taylor Gang es el sello y la pandilla de Wiz Khalifa (por sus zapatillas Chuck Taylor y su instituto). Gritarlo es reivindicar a su crew.",
+    "line_text": "From the ground up, pound up, this Taylor Gang",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "5b3409f5-3d30-53c7-86dd-e6b9e4ea662d",
+    "song_id": "02931ae7-39fa-5b37-8896-10bde44a3139",
+    "kind": "reference",
+    "term": "Top Dawg",
+    "explanation": "Top Dawg Entertainment (TDE) es el sello de ScHoolboy Q (y de Kendrick Lamar). Presume de pertenecer a una de las escuderías más potentes del rap.",
+    "line_text": "See this Top Dawg in heat, but I'ma fuck the world",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "70301c6e-558b-5077-82bb-0daebc864715",
+    "song_id": "607e7cd8-bab5-5431-8b4b-f922d477b54e",
+    "kind": "reference",
+    "term": "start a revolution from my bed",
+    "explanation": "Guiño al famoso \"bed-in\" de John Lennon y Yoko Ono (1969): se metieron en la cama una semana como protesta pacífica por la paz. Noel Gallagher, gran fan de los Beatles, evoca esa imagen de \"hacer la revolución sin levantarte\".",
+    "line_text": "So I start a revolution from my bed\n'Cause you said the brains I had went to my head",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "7a5a2c65-96af-5afb-8720-6d5979d14992",
+    "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
+    "kind": "reference",
+    "term": "Return of the Mack",
+    "explanation": "\"Return of the Mack\" es un hit de Mark Morrison (1996). Macklemore lo cita jugando con su propio nombre (Mack-lemore): es a la vez un guiño a la canción famosa y \"el regreso de Mack\".",
+    "line_text": "Return of the Mack\nGet 'em; what it is? What it does?",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "844c2bbd-dbf7-506c-8923-f7eb64b364bb",
+    "song_id": "9ef1727c-2f92-59f2-8c38-10daf793dbdf",
+    "kind": "wordplay",
+    "term": "champagne supernova",
+    "explanation": "La propia imagen no significa nada concreto: Noel Gallagher admitió que \"champagne supernova\" no tiene un sentido literal, es una imagen evocadora y sensorial (lujo + explosión cósmica). No busques traducción lógica; funciona por la sensación, no por el significado.",
+    "line_text": "Someday, you will find me caught beneath the landslide\nIn a champagne supernova in the sky",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "847edf68-ac97-5f60-8e09-15e9778e0eec",
+    "song_id": "11ba0961-f457-5a77-814e-f843dd433791",
+    "kind": "reference",
+    "term": "Go-Go Gadget",
+    "explanation": "\"Go-Go Gadget...\" es la frase con la que el Inspector Gadget (dibujos animados) activaba sus artilugios. Usarla = sacar un recurso o \"gadget\" al instante, como por arte de magia.",
+    "line_text": "Too much flexin' here, Go-Go Gadget this",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "8cf9d78f-2ece-5c60-823e-015c4c7a0e65",
+    "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
+    "kind": "reference",
+    "term": "Bob Barker / Plinko",
+    "explanation": "Bob Barker fue el presentador del concurso The Price Is Right, siempre con trajes elegantes; Plinko es un juego de ese programa. Macklemore compara su estilo al vestir con esa elegancia clásica de la tele americana.",
+    "line_text": "Got that Bob Barker suit game and Plinko in my style",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "8d7bbeb0-8802-57de-8348-09d154d6ab0a",
+    "song_id": "67798003-88de-5131-8465-124511d412c7",
+    "kind": "reference",
+    "term": "syrup sandwiches",
+    "explanation": "Un \"syrup sandwich\" (pan con sirope) es lo que comes cuando no hay nada más en casa: símbolo de pobreza infantil. Kendrick contrasta ese pasado con su riqueza actual.",
+    "line_text": "I remember syrup sandwiches and crime allowances",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "8f2dfb33-2b76-5a47-83c7-d17f329b2cd9",
+    "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
+    "kind": "wordplay",
+    "term": "bigger pool than Ye",
+    "explanation": "\"Ye\" es Kanye West. \"Tener una piscina más grande que Kanye\" es a la vez literal (presume de mansión) y una pulla: se mide con uno de los más grandes del rap para decir que lo ha superado. El outro remata: \"they don't want us to have a bigger pool than Kanye\".",
+    "line_text": "Now I got a house in LA, now I got a bigger pool than Ye\nAnd look man, Ye's pool is nice, mine's just bigger's what I'm saying",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "984f3ee3-8eb9-573e-87f2-89cd0a77aa1d",
+    "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
+    "kind": "reference",
+    "term": "can I kick it? / Wu-Tang",
+    "explanation": "\"Can I kick it?\" es el estribillo mítico de A Tribe Called Quest (aquí un homenaje). Wu-Tang Clan es el grupo legendario que \"lo crió\" musicalmente: nombra a sus referentes del hip-hop clásico.",
+    "line_text": "Now, can I kick it? Thank you\n... But that's what you get when Wu-Tang raised you",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "98f45d04-4edc-5d29-8403-a77cbaae9381",
+    "song_id": "67798003-88de-5131-8465-124511d412c7",
+    "kind": "reference",
+    "term": "Grey Poupon / Evian / TED Talk",
+    "explanation": "Tres símbolos de sofisticación: Grey Poupon es una mostaza cara (icono de pijería en anuncios de EE. UU.), Evian un agua premium, y una TED Talk una charla de intelectuales. Kendrick los usa para decir que su música es de clase alta, refinada.",
+    "line_text": "This that Grey Poupon, that Evian, that TED Talk, ayy",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "9f7d2efe-30c6-5538-8e04-41f182f25bc3",
+    "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
+    "kind": "reference",
+    "term": "Uncle Phil",
+    "explanation": "Uncle Phil es el tío Phil de la serie El Príncipe de Bel-Air: un padre de familia estricto pero entrañable. J. Cole creció sin padre y en el verso lo señala como la única figura paterna que tuvo — la conoció a través de la tele. Por eso abre la canción con él, a modo de homenaje.",
+    "line_text": "First things first: rest in peace, Uncle Phil\nFor real\nYou the only father that I ever knew",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "aa4de776-6d5d-50c2-8a71-fd77951f75ee",
+    "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
+    "kind": "reference",
+    "term": "Run Forrest",
+    "explanation": "\"Run, Forrest, run!\" es la frase mítica de la película Forrest Gump. Drake la usa para decir que va imparable, corriendo por delante de todos.",
+    "line_text": "I run this shit, they like, \"Go Forrest\nRun Forrest, run Forrest, go Forrest\"",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "b00af9c7-9beb-560c-8aac-1aa1ee318e5d",
+    "song_id": "afc31011-d151-5cf7-8b48-26b7528b074f",
+    "kind": "reference",
+    "term": "pull strings like Gepetto",
+    "explanation": "Gepetto (Geppetto) es el carpintero que crea a Pinocho, la marioneta de hilos. \"Mover hilos como Gepetto\" = controlarlo todo entre bastidores, como un titiritero.",
+    "line_text": "Behind the scenes, pull strings like Gepetto",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "b1c4ddf4-19c5-569a-8fab-232fe7712a7f",
+    "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
+    "kind": "reference",
+    "term": "Golden State / Draymond / Chubbs",
+    "explanation": "Golden State Warriors, el equipo de baloncesto (NBA) dominante en 2016; Draymond Green es su jugador. Drake, muy ligado a la NBA, presume de que las estrellas paran por su casa: mezcla su vida con la del equipo del momento.",
+    "line_text": "You know Chubbs like Draymond\nGolden State running practice at my house",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "b7f40772-2b8c-5421-8f5f-abc41d2a5729",
+    "song_id": "9145c58c-11b7-5a98-8c88-241154301a1c",
+    "kind": "reference",
+    "term": "Ed, Edd n Eddy",
+    "explanation": "Ed, Edd n Eddy es una serie de dibujos de Cartoon Network de los 2000. \"Colegas desde Ed, Edd n Eddy\" = amigos desde niños, desde que veíamos esos dibujos.",
+    "line_text": "I done lost homies who been with me since Ed, Edd n Eddy",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "c643f1a9-348d-5011-818e-e346fa08e18d",
+    "song_id": "8d009660-92b0-521a-8740-54ed374fe94a",
+    "kind": "wordplay",
+    "term": "Barry Bonds / berry",
+    "explanation": "Kendrick encadena homófonos: bury (enterrar) / berry (baya) / Barry (Bonds). Barry Bonds es el bateador legendario de béisbol; \"swingin' for the fences\" (batear para las gradas) = ir a por todas. Todo el verso juega con palabras que suenan igual.",
+    "line_text": "Bury me with berries, that forbidden fruit and cherry wine\nThank you berry much, but tonight's my night and I'm Barry Bonds",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "c6bdaad0-a4bf-5201-8bb3-c4ff48a6ee27",
+    "song_id": "f7c9b9f3-14b8-58c7-8af3-abaf5fcfd371",
+    "kind": "wordplay",
+    "term": "hotline bling",
+    "explanation": "\"Bling\" imita el sonido del teléfono al sonar (\"bling\", como \"ring\"). Un \"hotline\" es una línea directa. \"When that hotline bling\" = cuando suena ese teléfono directo (el de ella, de madrugada), solo significa una cosa. Título intraducible que juega con el sonido.",
+    "line_text": "And I know when that hotline bling\nThat can only mean one thing",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "d0fc6355-52cb-5e2e-81d9-51df2ef4e4b3",
+    "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
+    "kind": "reference",
+    "term": "turned into Jay / Roc-A-Fella",
+    "explanation": "Roc-A-Fella es el sello que fundó JAY-Z. \"Quería fichar por Roc-A-Fella y me convertí en Jay\" = pasó de querer ser fichado por su ídolo a ser tan grande como él (dueño de su propio imperio).",
+    "line_text": "I used to wanna be on Roc-A-Fella then I turned into Jay",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "d47008e5-fbdc-5a62-8ceb-09fb34805bf0",
+    "song_id": "67798003-88de-5131-8465-124511d412c7",
+    "kind": "reference",
+    "term": "the Sandman",
+    "explanation": "En el Apollo Theater de Harlem, cuando un artista lo hacía mal, \"the Sandman\" salía a echarlo del escenario. Kendrick se declara \"the Sandman\": el que decide quién no está a la altura y lo saca del escenario.",
+    "line_text": "Get the fuck off my stage, I'm the Sandman",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "d92c4ef0-90aa-57f0-8c67-733d97e1b702",
+    "song_id": "7c49b4ef-9a58-5524-8dcd-92f5dda752a3",
+    "kind": "wordplay",
+    "term": "I got soul but I'm not a soldier",
+    "explanation": "Juego entre soul (alma, sentimiento) y soldier (soldado), que suenan parecido. Significa: tengo corazón y sensibilidad, pero no soy un guerrero frío. Una de las frases más famosas del grupo.",
+    "line_text": "I got soul but I'm not a soldier",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "ddafad3b-9c23-5164-8d38-2942588c6e2e",
+    "song_id": "d5bf3fe1-7960-5735-8ae2-828bfddf414e",
+    "kind": "wordplay",
+    "term": "B.Y.O.B. (Bring Your Own Bombs)",
+    "explanation": "El título parece la sigla festiva \"Bring Your Own Bottle\" (trae tu bebida), pero la banda la retuerce a \"Bring Your Own Bombs\": es una canción antibelicista. Por eso mezcla imágenes de fiesta con la crítica \"¿por qué siempre mandan a los pobres [a la guerra]?\". La ironía es todo el sentido.",
+    "line_text": "Everybody's going to the party, have a real good time\n...\nWhy do they always send the poor?",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "dff9fd9b-4d66-5dfb-861f-c81fecaa62f1",
+    "song_id": "c5bff7ee-e3eb-56cf-8ded-c90f5ccf0976",
+    "kind": "reference",
+    "term": "OT (out of town)",
+    "explanation": "\"OT\" = out of town: fuera de tu ciudad/barrio, en territorio ajeno (a menudo con connotación de peligro o de ir a hacer negocio). \"Go OT\" = salir del terreno conocido.",
+    "line_text": "There's never much love when we go OT",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "fbfb106d-a6b2-52ab-8e63-b8d76b5828dc",
+    "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
+    "kind": "reference",
+    "term": "the Ville / Dreamville",
+    "explanation": "\"The Ville\" es Fayetteville, la ciudad natal de J. Cole. \"Dreamville\" es su sello discográfico. Juega con ambos: sus \"profecías\" desde el barrio se cumplieron al montar su propio sello.",
+    "line_text": "Prophecies that I made way back in the Ville",
+    "created_at": "2026-07-22T11:29:46.754415+00:00"
+  }
+]

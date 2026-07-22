@@ -25,7 +25,7 @@ const supabase = createClient(url, key);
 // Tablas de contenido público (curado editorialmente). NO incluir aquí
 // ninguna tabla con datos de usuario (profiles, study_sessions, user_*).
 const CONTENT_TABLES = [
-  'vocabulary', 'songs', 'song_vocabulary', 'artists',
+  'vocabulary', 'songs', 'song_vocabulary', 'song_notes', 'artists',
   'authors', 'quotes', 'quote_vocabulary',
 ] as const;
 

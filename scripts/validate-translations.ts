@@ -81,6 +81,10 @@ const PARTICLES = new Set([
  */
 function isCheckableWord(word: string, category: string): boolean {
   if (category === 'confusing_pair') return false;
+  // 'colloquial' (extractor de canciones): contracciones, gramática AAVE, siglas
+  // con puntos, g-dropping y patrones — formas irregulares que el ejemplo adapta,
+  // como idioms/expresiones. Comprobar la palabra literal daría falsos positivos.
+  if (category === 'colloquial') return false;
   const w = word.toLowerCase().trim();
   if (/[/?!",]/.test(w)) return false; // variantes ("kind of / sort of"), plantillas
   if (/\b(i|i'm|you|he|she|it|it's|we|they|someone|somebody|something|one's|your|my|his|her|their|that)\b/.test(w)) return false;
