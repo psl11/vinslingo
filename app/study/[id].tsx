@@ -240,11 +240,16 @@ export default function StudyScreen() {
       });
       console.log('✅ Saved to local DB');
 
-      // Sincronizar user_vocabulary y review_log a Supabase (el segundo
-      // arrastra también el backlog offline pendiente, si lo hay)
-      await syncVocabularyProgress(currentCard.id, { state, isCorrect });
-      await syncPendingReviewLogs();
-      console.log('✅ Synced to Supabase');
+      // Sincronizar user_vocabulary y review_log a Supabase EN SEGUNDO PLANO:
+      // no bloqueamos el avance de la ficha con la red (en móvil eran varios
+      // segundos de lag por tarjeta). El local es la fuente de verdad y
+      // syncPendingReviewLogs arrastra el backlog pendiente después, así que si
+      // alguna no llega ahora se recupera sola. (fire-and-forget con .catch).
+      const cardId = currentCard.id;
+      void syncVocabularyProgress(cardId, { state, isCorrect })
+        .then(() => syncPendingReviewLogs())
+        .then(() => console.log('✅ Synced to Supabase'))
+        .catch((e) => console.log('sync en segundo plano falló (se reintenta):', (e as any)?.message ?? e));
     } catch (error) {
       console.error('❌ Error saving progress:', error);
     }

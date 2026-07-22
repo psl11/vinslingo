@@ -9,6 +9,7 @@ import { ParticleHint } from '../vocabulary/ParticleHint';
 import { analyzeTranslation } from '../../lib/vocabulary/translationParser';
 import { anchorIcon, anchorIsSong, anchorCredit } from '../../lib/vocabulary/anchor';
 import { formalSynonymLabel, separabilityNote } from '../../lib/vocabulary/phaveGrammar';
+import { highlightRange } from '../../lib/utils/highlight';
 import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 interface FlashCardProps {
@@ -44,14 +45,14 @@ interface FlashCardProps {
 // Renderiza un verso resaltando en negrita la forma exacta que aparece (case-
 // insensitive). Si no la encuentra, muestra el verso tal cual.
 function HighlightedLine({ line, highlight }: { line: string; highlight?: string | null }) {
-  if (!highlight) return <Text style={styles.musicLineText}>“{line}”</Text>;
-  const idx = line.toLowerCase().indexOf(highlight.toLowerCase());
-  if (idx < 0) return <Text style={styles.musicLineText}>“{line}”</Text>;
+  const range = highlightRange(line, highlight);
+  if (!range) return <Text style={styles.musicLineText}>“{line}”</Text>;
+  const [start, end] = range;
   return (
     <Text style={styles.musicLineText}>
-      “{line.slice(0, idx)}
-      <Text style={styles.musicLineBold}>{line.slice(idx, idx + highlight.length)}</Text>
-      {line.slice(idx + highlight.length)}”
+      “{line.slice(0, start)}
+      <Text style={styles.musicLineBold}>{line.slice(start, end)}</Text>
+      {line.slice(end)}”
     </Text>
   );
 }

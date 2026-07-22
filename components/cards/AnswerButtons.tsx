@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { Text, StyleSheet, Animated, Easing } from 'react-native';
+import React, { useRef, useEffect, useState } from 'react';
+import { Text, StyleSheet, Animated, Easing, ActivityIndicator, View } from 'react-native';
 import * as Haptics from 'expo-haptics';
 import { PressableScale } from '../ui/PressableScale';
 import { SimpleQuality, formatInterval } from '../../lib/srs/fsrs';
@@ -40,9 +40,16 @@ export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: Answer
     }).start();
   }, [enter, reduceMotion]);
 
+  // Botón pulsado: muestra un spinner mientras se procesa (guardado local + carga
+  // de la siguiente ficha). Da feedback inmediato aunque tarde un instante. El
+  // estado se limpia solo: este componente se remonta por ficha (solo se muestra
+  // con la tarjeta volteada).
+  const [pending, setPending] = useState<SimpleQuality | null>(null);
+  const isPending = pending !== null;
+
   const handlePress = (quality: SimpleQuality) => {
-    if (disabled) return;
-    
+    if (disabled || isPending) return;
+
     if (hapticsEnabled) {
       if (quality === 'again') {
         Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error);
@@ -50,7 +57,8 @@ export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: Answer
         Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
       }
     }
-    
+
+    setPending(quality);
     onAnswer(quality);
   };
 
@@ -66,12 +74,25 @@ export function AnswerButtons({ intervals, onAnswer, disabled, isRetry }: Answer
         .map(({ quality, label, color }) => (
         <PressableScale
           key={quality}
-          style={[styles.button, { backgroundColor: color, opacity: disabled ? 0.7 : 1 }]}
+          style={[
+            styles.button,
+            { backgroundColor: color },
+            disabled && !isPending ? styles.dim : null,
+            isPending && pending !== quality ? styles.dim : null,
+          ]}
           onPress={() => handlePress(quality)}
-          disabled={disabled}
+          disabled={disabled || isPending}
         >
-          <Text style={styles.buttonLabel}>{label}</Text>
-          <Text style={styles.intervalText}>{formatInterval(intervals[quality])}</Text>
+          {pending === quality ? (
+            <View style={styles.spinnerWrap}>
+              <ActivityIndicator color={colors.onPrimary} />
+            </View>
+          ) : (
+            <>
+              <Text style={styles.buttonLabel}>{label}</Text>
+              <Text style={styles.intervalText}>{formatInterval(intervals[quality])}</Text>
+            </>
+          )}
         </PressableScale>
       ))}
     </Animated.View>
@@ -94,6 +115,10 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     alignItems: 'center',
   },
+  dim: { opacity: 0.4 },
+  // Misma altura que label + intervalo para que el botón no cambie de tamaño al
+  // mostrar el spinner.
+  spinnerWrap: { height: 32, justifyContent: 'center' },
   buttonLabel: {
     color: colors.onPrimary,
     fontSize: fontSize.base,

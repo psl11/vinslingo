@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { AcronymText } from './AcronymText';
+import { highlightRange } from '../../lib/utils/highlight';
 import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 // Notas de una canción (capa 2): referencias culturales y juegos de palabras.
@@ -12,16 +13,16 @@ const KIND_LABEL: Record<string, string> = { reference: 'Referencia', wordplay: 
 
 // Resalta `term` dentro del verso (primera aparición, case-insensitive).
 function Verse({ line, term }: { line: string; term: string }) {
-  const idx = line.toLowerCase().indexOf(term.toLowerCase());
+  const range = highlightRange(line, term);
   return (
     <Text style={styles.verse}>
-      {idx < 0 ? (
+      {!range ? (
         `“${line}”`
       ) : (
         <>
-          “{line.slice(0, idx)}
-          <Text style={styles.verseBold}>{line.slice(idx, idx + term.length)}</Text>
-          {line.slice(idx + term.length)}”
+          “{line.slice(0, range[0])}
+          <Text style={styles.verseBold}>{line.slice(range[0], range[1])}</Text>
+          {line.slice(range[1])}”
         </>
       )}
     </Text>
