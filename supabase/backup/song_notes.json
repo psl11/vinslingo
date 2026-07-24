@@ -90,6 +90,15 @@
     "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
+    "id": "0ffa3197-91ec-5c0f-8a16-9e695337a76c",
+    "song_id": "33a27298-73e2-506e-8e57-bfc9942f1a9e",
+    "kind": "reference",
+    "term": "Father, into your hands / why have you forsaken me",
+    "explanation": "El puente cita dos de las últimas frases de Jesús en la cruz según los Evangelios: \"Padre, en tus manos encomiendo mi espíritu\" y \"¿por qué me has abandonado?\". La canción habla de cómo juzgamos una muerte según quién sea el que muere.",
+    "line_text": "Father, into your hands I commend my spirit\n... Why have you forsaken me?",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
+  },
+  {
     "id": "101a90ab-7cef-5eb2-8b14-a7866812cae2",
     "song_id": "7fe3d843-0870-50dc-8977-812df761b474",
     "kind": "reference",
@@ -124,6 +133,15 @@
     "explanation": "Es un guiño a la canción infantil inglesa Mary, Mary, quite contrary (\"how does your garden grow?\"). Liam la usa con retintín: no quiere saber de la vida perfecta y ordenada del otro.",
     "line_text": "I don't really wanna know\nHow your garden grows",
     "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "1eee20bf-d7f0-514e-85d2-08ec6c797c48",
+    "song_id": "33a27298-73e2-506e-8e57-bfc9942f1a9e",
+    "kind": "wordplay",
+    "term": "Chop Suey!",
+    "explanation": "La canción se iba a titular \"Suicide\" (por eso la intro lo dice), pero la discográfica no lo aceptó. La banda lo cambió a \"Chop Suey\", un plato chino-americano: es literalmente \"suicide\" recortado y camuflado dentro de otra palabra (chop = cortar).",
+    "line_text": "We're rolling \"Suicide\"",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
   },
   {
     "id": "283389ce-b317-5eec-8dd3-0b188fa977c5",
@@ -171,6 +189,24 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "41aee83b-8b64-563e-8b78-23841454f997",
+    "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
+    "kind": "reference",
+    "term": "the new Sinatra",
+    "explanation": "Frank Sinatra popularizó New York, New York, el himno oficioso de la ciudad, del que sale la frase \"if I can make it there, I'll make it anywhere\". JAY-Z se proclama su heredero: el nuevo icono de Nueva York.",
+    "line_text": "I'm the new Sinatra, and since I made it here\nI can make it anywhere",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
+  },
+  {
+    "id": "42600337-db00-5e7c-8a2b-437964ea8ba4",
+    "song_id": "50000001-0000-0000-0000-000000000019",
+    "kind": "reference",
+    "term": "under the bridge downtown",
+    "explanation": "El puente del centro de Los Ángeles donde Anthony Kiedis se inyectaba heroína en sus años de adicción (\"drew some blood\" alude a pincharse). La canción nace de esa soledad extrema; por eso dice que no quiere volver a sentirse así nunca.",
+    "line_text": "(Under the bridge downtown)\nIs where I drew some blood",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
+  },
+  {
     "id": "43d82356-74d1-5393-842e-9e1f62941f90",
     "song_id": "50d33df2-f2ab-5512-858f-8e5e58a164c9",
     "kind": "wordplay",
@@ -187,6 +223,15 @@
     "explanation": "Taylor Gang es el sello y la pandilla de Wiz Khalifa (por sus zapatillas Chuck Taylor y su instituto). Gritarlo es reivindicar a su crew.",
     "line_text": "From the ground up, pound up, this Taylor Gang",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "4a105f91-ebb1-569f-8bfa-06a3f8088ad0",
+    "song_id": "eebd0cb7-7f8e-5886-8547-bb2bc2ae9d45",
+    "kind": "reference",
+    "term": "the swoosh / be like Mike",
+    "explanation": "El \"swoosh\" es el logo curvo de Nike. \"Be like Mike\" viene de una campaña publicitaria de los 90 sobre Michael Jordan. La canción critica cómo el marketing convence a los niños de que unas zapatillas les darán identidad y les harán volar.",
+    "line_text": "I listened to what that swoosh said\n... 'cause I wanted to be like Mike",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
   },
   {
     "id": "4d489b0a-96f5-5f81-8e76-07169df1520e",
@@ -333,6 +378,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "8f480c54-0b70-5471-8d99-b41db851933d",
+    "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
+    "kind": "wordplay",
+    "term": "don't bite the apple, Eve",
+    "explanation": "Doble juego: Nueva York es \"the Big Apple\" (la Gran Manzana) y, a la vez, alude a Eva mordiendo la manzana del pecado en el Génesis. Aviso: no te dejes tentar por la ciudad, que te puede corromper.",
+    "line_text": "Lined with casualties who sip the life casually\nThen gradually become worse, don't bite the apple, Eve",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
+  },
+  {
     "id": "984f3ee3-8eb9-573e-87f2-89cd0a77aa1d",
     "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
     "kind": "reference",
@@ -349,6 +403,15 @@
     "explanation": "Tres símbolos de sofisticación: Grey Poupon es una mostaza cara (icono de pijería en anuncios de EE. UU.), Evian un agua premium, y una TED Talk una charla de intelectuales. Kendrick los usa para decir que su música es de clase alta, refinada.",
     "line_text": "This that Grey Poupon, that Evian, that TED Talk, ayy",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "9de6696b-82d9-5472-8fae-3545b44bbe35",
+    "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
+    "kind": "reference",
+    "term": "Bed-Stuy / home of that boy Biggie",
+    "explanation": "Bed-Stuy (Bedford-Stuyvesant) es un barrio de Brooklyn, cuna de The Notorious B.I.G. (Biggie), leyenda del rap asesinado en 1997. JAY-Z reivindica su barrio y su vínculo con él.",
+    "line_text": "Me? I'm out that Bed-Stuy, home of that boy Biggie",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
   },
   {
     "id": "9f7d2efe-30c6-5538-8e04-41f182f25bc3",
@@ -385,6 +448,15 @@
     "explanation": "Gepetto (Geppetto) es el carpintero que crea a Pinocho, la marioneta de hilos. \"Mover hilos como Gepetto\" = controlarlo todo entre bastidores, como un titiritero.",
     "line_text": "Behind the scenes, pull strings like Gepetto",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "b1083fbe-3715-54be-8127-33bea9abb9d8",
+    "song_id": "b09dfebe-3e74-5ceb-8eeb-28e48ce24608",
+    "kind": "wordplay",
+    "term": "the hills have eyes",
+    "explanation": "\"The Hills Have Eyes\" es una película de terror, pero aquí \"the Hills\" son las Hollywood Hills, la zona rica de Los Ángeles. Doble sentido: las colinas (y la gente que vive en ellas) te vigilan y te juzgan, aunque tengan sus propios secretos.",
+    "line_text": "Hills have eyes, the hills have eyes\nWho are you to judge? Who are you to judge?",
+    "created_at": "2026-07-24T22:31:54.870685+00:00"
   },
   {
     "id": "b1c4ddf4-19c5-569a-8fab-232fe7712a7f",
