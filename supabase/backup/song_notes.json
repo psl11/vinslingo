@@ -126,6 +126,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "19dbe1c4-c714-5917-8d5e-55d39dd3bdb0",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "kind": "reference",
+    "term": "that shit cray",
+    "explanation": "Cray es el recorte coloquial de crazy (una locura). El estribillo lo convirtió en una de las expresiones más imitadas de 2011.",
+    "line_text": "Ball so hard, motherfuckers wanna fine me\nThat shit cray, that shit cray",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
+  },
+  {
     "id": "1b6544bc-e5d8-5200-8546-7cee0ce033dc",
     "song_id": "50000001-0000-0000-0000-000000000018",
     "kind": "reference",
@@ -133,6 +142,15 @@
     "explanation": "Es un guiño a la canción infantil inglesa Mary, Mary, quite contrary (\"how does your garden grow?\"). Liam la usa con retintín: no quiere saber de la vida perfecta y ordenada del otro.",
     "line_text": "I don't really wanna know\nHow your garden grows",
     "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "1bf2a0ee-e0f3-5822-8a1b-2175ba9dfd18",
+    "song_id": "50000001-0000-0000-0000-000000000014",
+    "kind": "wordplay",
+    "term": "caught in the undertow",
+    "explanation": "El undertow es la resaca del mar: esa corriente de fondo que te arrastra hacia dentro aunque nades hacia la orilla. Es la metáfora de sentirse arrastrado por las expectativas ajenas sin poder salir por mucho que lo intentes.",
+    "line_text": "Caught in the undertow, just caught in the undertow\nEvery step that I take is another mistake to you",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
   },
   {
     "id": "1eee20bf-d7f0-514e-85d2-08ec6c797c48",
@@ -178,6 +196,15 @@
     "explanation": "El \"amarillo\" del título no tiene un significado fijo: Chris Martin lo eligió por cómo sonaba, y ha llegado a asociarse con las estrellas, la calidez y la devoción incondicional que canta. Otra letra que funciona por evocación, no por sentido literal.",
     "line_text": "And it was all yellow",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "3b37066e-4193-5c46-880b-7ad4810bc8e8",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "kind": "wordplay",
+    "term": "heads or tails",
+    "explanation": "Heads or tails es cara o cruz al lanzar una moneda. Coming up tails = sale cruz, es decir, perder la apuesta. Chris Martin lo enlaza con chasing our tails (perseguirse la cola): la relación es a la vez una moneda al aire y un dar vueltas sin avanzar.",
+    "line_text": "Runnin' in circles, comin' up tails\nHeads on a science apart",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
   },
   {
     "id": "3e4a3c64-17c7-536b-8feb-1c623901a8a6",
@@ -324,6 +351,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "822f3f82-6c65-52e7-8ae9-d710aba0e780",
+    "song_id": "bfb6916b-d32d-52d4-84c5-e77a8dfeffa8",
+    "kind": "wordplay",
+    "term": "no church in the wild",
+    "explanation": "En la selva (the wild) no hay iglesia: sin sociedad ni religión que impongan normas, no queda moral que valga. Es la idea central del tema: cuando cae la jerarquía (turba, rey, dios), cada cual se hace sus propias reglas.",
+    "line_text": "What's a god to a non-believer\nWho don't believe in anything?\nNo church in the wild",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
+  },
+  {
     "id": "842e9caf-236f-5250-8c00-d5a63e78a017",
     "song_id": "d79cb3b7-ae0a-5cea-88f7-f4919dd08f13",
     "kind": "reference",
@@ -405,6 +441,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "9c27a50c-f376-557b-864c-1fab3aa6e225",
+    "song_id": "50000001-0000-0000-0000-000000000001",
+    "kind": "reference",
+    "term": "Mother Mary",
+    "explanation": "Suena a la Virgen María, pero Paul McCartney contó que se refería a su propia madre, Mary, que murió cuando él tenía catorce años: soñó con ella en una época difícil y le dijo que dejara estar las cosas. La ambigüedad religiosa es un feliz accidente.",
+    "line_text": "When I find myself in times of trouble\nMother Mary comes to me\nSpeaking words of wisdom",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
+  },
+  {
     "id": "9de6696b-82d9-5472-8fae-3545b44bbe35",
     "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
     "kind": "reference",
@@ -468,6 +513,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "b6a3592e-ff39-5a50-8244-c6fdde5b67da",
+    "song_id": "bfb6916b-d32d-52d4-84c5-e77a8dfeffa8",
+    "kind": "reference",
+    "term": "Socrates, Plato, Pius",
+    "explanation": "JAY-Z alude al dilema de Eutifrón, que Platón recoge en un diálogo de Sócrates: ¿lo bueno es bueno porque los dioses lo aman, o lo aman porque es bueno? Juega además con Pío (nombre de papas) y pious (piadoso). Toda la canción cuestiona de dónde viene la autoridad moral.",
+    "line_text": "Is Pius pious 'cause God loves pious?\nSocrates asked whose bias do y'all seek?",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
+  },
+  {
     "id": "b7f40772-2b8c-5421-8f5f-abc41d2a5729",
     "song_id": "9145c58c-11b7-5a98-8c88-241154301a1c",
     "kind": "reference",
@@ -486,6 +540,15 @@
     "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
+    "id": "beeae7fc-23c5-59cc-8a8d-f8c01e37c502",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "kind": "reference",
+    "term": "Michael: Jackson, Tyson, Jordan",
+    "explanation": "Juego con tres Michaels famosos: Jackson (el rey del pop), Tyson (el boxeador temible) y Jordan (el mito del baloncesto, legendario por su actuación en un Game 6). Da igual cuál elijas: en todos los casos significa ser el mejor o el más temido.",
+    "line_text": "Psycho, I'm liable to go Michael, take your pick\nJackson, Tyson, Jordan, Game 6",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
+  },
+  {
     "id": "c2964fa0-92db-5ad4-8d7e-e2c4ea636ab5",
     "song_id": "8177eb5c-590e-5454-8bb1-cba1be4ed37a",
     "kind": "reference",
@@ -502,6 +565,15 @@
     "explanation": "El puente samplea Bam Bam, un clásico del dancehall jamaicano de Sister Nancy (1982). Es uno de los temas más sampleados de la historia; Kanye lo usa para el subidón final.",
     "line_text": "Bam, 'ey, 'ey, 'ey\nBam-bam, bam, bam-bam dilla",
     "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "c4b19814-0d6b-559e-8b49-578137028952",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "kind": "reference",
+    "term": "Watch the Throne",
+    "explanation": "Watch the Throne es el nombre del disco conjunto de JAY-Z y Kanye West (2011). El trono simboliza que ellos dos son la realeza del rap: te avisan de que estás presenciando el reinado.",
+    "line_text": "You are now watching the throne\nDon't let me get in my zone",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
   },
   {
     "id": "c643f1a9-348d-5011-818e-e346fa08e18d",
@@ -619,6 +691,15 @@
     "explanation": "El negro y el amarillo son los colores de Pittsburgh, la ciudad de Wiz Khalifa (los equipos Steelers y Pirates visten esos colores). Toda la canción es un himno a su ciudad y a su coche con esos colores.",
     "line_text": "Reppin' my town, when you see me you know everything\nBlack and yellow, black and yellow",
     "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "f72e53aa-b255-5c60-862b-83c773e9856f",
+    "song_id": "06682c04-d144-5f34-830c-9d321e301684",
+    "kind": "reference",
+    "term": "Nightcall / Drive",
+    "explanation": "El tema se hizo mundialmente conocido por abrir la película Drive (2011), con su conductor silencioso recorriendo Los Ángeles de noche. El sonido synthwave y la voz robótica evocan esos años ochenta imaginarios que define la película.",
+    "line_text": "I'm giving you a night call to tell you how I feel\nI want to drive you through the night, down the hills",
+    "created_at": "2026-07-24T22:42:41.060636+00:00"
   },
   {
     "id": "f9e614dd-ccc6-51cf-8720-46209f7d292f",

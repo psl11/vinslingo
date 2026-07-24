@@ -90,6 +90,16 @@
     "line_translation": null
   },
   {
+    "id": "017f8dd6-f84f-5c81-85cf-826302152a55",
+    "song_id": "06682c04-d144-5f34-830c-9d321e301684",
+    "vocabulary_id": "1e2b7fc3-4420-5871-8ebc-fb5964435460",
+    "line_text": "I'm giving you a night call to tell you how I feel\n(We'll go all, all, all night long)\nI want to drive you through the night, down the hills",
+    "highlighted_word": "all, all, all night long",
+    "line_index": 4,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "01ad058d-69f3-5992-863d-e2fb5bb8063a",
     "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
     "vocabulary_id": "0d22e142-ad3f-4e01-ae1f-df184f79ad36",
@@ -317,6 +327,16 @@
     "highlighted_word": "diving",
     "line_index": 4,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "05592d5d-35c8-5d06-8e26-0e02324f30a9",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "07e5008f-63c5-52e5-8fdb-2dd6321222af",
+    "line_text": "We're gonna skate to one song, one song only\nBall so hard, motherfuckers wanna fine me\nSo I ball so hard, motherfuckers wanna fine me",
+    "highlighted_word": "Ball",
+    "line_index": 1,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -1190,6 +1210,16 @@
     "line_translation": null
   },
   {
+    "id": "122bef4a-4e99-54c5-8b26-3ce12af8ca9c",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "9da2f1a9-18fb-5ea7-89bf-a935717c4a34",
+    "line_text": "It's only right that we'd be fair\nPsycho, I'm liable to go Michael, take your pick\nJackson, Tyson, Jordan, Game 6",
+    "highlighted_word": "take your pick",
+    "line_index": 13,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "1233a0f8-a7c2-5605-810d-e77111f8c166",
     "song_id": "e8c8c519-f2c4-5546-834a-82b9cb662859",
     "vocabulary_id": "b051d7d6-9479-5e62-8518-7c57be06b11d",
@@ -1607,6 +1637,16 @@
     "highlighted_word": "shit",
     "line_index": 23,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "1720fab4-8fe6-5c01-8411-9dde9eb7923c",
+    "song_id": "50000001-0000-0000-0000-000000000027",
+    "vocabulary_id": "6e296c7e-82e1-5dec-89b5-66a2a20ef19b",
+    "line_text": "A-rushin', a-rushin' around\nPace yourself for me (For me)\nI said maybe, baby, please (Please)",
+    "highlighted_word": "Pace",
+    "line_index": 22,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -2310,6 +2350,16 @@
     "line_translation": null
   },
   {
+    "id": "209039c7-1d50-52d7-8990-1adc7819a44f",
+    "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
+    "vocabulary_id": "0c8dcc55-4d10-5158-8e24-88dd33ff0338",
+    "line_text": "Dreams I used to chase, stopped runnin’ so now y'all are gettin' lapped\nI always step up I’m clutch, this is planned, this isn’t luck\nMy adviser is my gut, please don't ever interrupt",
+    "highlighted_word": "clutch",
+    "line_index": 46,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "209dff5b-ffc0-5040-8e58-9e5cda91192e",
     "song_id": "b0c9aef3-7d74-5664-8554-6a6682255391",
     "vocabulary_id": "115afb01-506a-5996-8c8c-548c8259fe4b",
@@ -2357,6 +2407,16 @@
     "highlighted_word": "coming up",
     "line_index": 39,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "222ad258-046b-5482-8774-271ebaaa3b5b",
+    "song_id": "50000001-0000-0000-0000-000000000027",
+    "vocabulary_id": "fa2655a8-6d61-583b-8398-0fbadd7f5b90",
+    "line_text": "But heaven ain't close in a place like this\nAnything goes, but don't blink, you might miss\n'Cause heaven ain't close in a place like this",
+    "highlighted_word": "Anything goes",
+    "line_index": 4,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -2647,6 +2707,16 @@
     "highlighted_word": "stick by",
     "line_index": 22,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "271cf839-514e-5c07-86b1-5569ff8f1257",
+    "song_id": "50000001-0000-0000-0000-000000000007",
+    "vocabulary_id": "09097800-5b9a-5eae-8d4f-d59e61757340",
+    "line_text": "So close, no matter how far\nCouldn't be much more from the heart\nForever trusting who we are",
+    "highlighted_word": "from the heart",
+    "line_index": 1,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -3330,6 +3400,16 @@
     "line_translation": null
   },
   {
+    "id": "314bab59-4fd0-5316-8baa-799c56cdea5a",
+    "song_id": "50000001-0000-0000-0000-000000000001",
+    "vocabulary_id": "c3eec008-d096-57af-8bd4-3c571de0c2f7",
+    "line_text": "Let it be\nAnd when the broken-hearted people\nLiving in the world agree",
+    "highlighted_word": "broken-hearted",
+    "line_index": 12,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "318dd773-4502-5bf3-8ec2-25cedf2ffbda",
     "song_id": "c2319275-5480-59fc-8f60-03449f65d260",
     "vocabulary_id": "7fb6e844-890e-5e10-880e-6da763ff5c3f",
@@ -3520,6 +3600,16 @@
     "line_translation": null
   },
   {
+    "id": "34dbb7cb-b225-5af1-802c-9d53df7a3960",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "1c388399-4e57-512a-87d3-8367b5c351e6",
+    "line_text": "But first niggas gotta find me\nWhat's fifty grand to a motherfucker like me? Can you please remind me?\n(Ball so hard) This shit crazy",
+    "highlighted_word": "grand",
+    "line_index": 4,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "350e6991-b252-53d9-8ca3-8765d8640905",
     "song_id": "8177eb5c-590e-5454-8bb1-cba1be4ed37a",
     "vocabulary_id": "d8c8ffaf-547d-5363-8c26-abec5bef8dac",
@@ -3537,6 +3627,16 @@
     "highlighted_word": "hold",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "355c8249-dcf8-596a-828f-32bcf277f27e",
+    "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
+    "vocabulary_id": "37c4635a-349e-53b3-8c16-decf83984fc2",
+    "line_text": "My adviser is my gut, please don't ever interrupt\nI got businesses galore, I just opened up my store\n'Bout to see the world on tour, y'all do too much, I just record",
+    "highlighted_word": "galore",
+    "line_index": 48,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -3677,6 +3777,16 @@
     "highlighted_word": "wipe out",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.409466+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "377057e2-2c3f-57e0-8601-3a3800da7d80",
+    "song_id": "bfb6916b-d32d-52d4-84c5-e77a8dfeffa8",
+    "vocabulary_id": "59b175c8-724e-5066-86e5-f7459c3753ce",
+    "line_text": "Sunglasses and Advil\nLast night was mad real\nSun coming up, 5 a.m.",
+    "highlighted_word": "mad",
+    "line_index": 47,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -3917,6 +4027,16 @@
     "highlighted_word": "turn off",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "3bf63d95-2448-5c2a-8e60-587a20e2e631",
+    "song_id": "50000001-0000-0000-0000-000000000027",
+    "vocabulary_id": "a1d87777-94b7-53e6-84e6-5e7e8597e154",
+    "line_text": "Breakin' my back just to know your name\nSeventeen tracks and I've had it with this game",
+    "highlighted_word": "Breakin' my back",
+    "line_index": 0,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -4207,6 +4327,16 @@
     "highlighted_word": "Sends shivers down my spine",
     "line_index": 15,
     "created_at": "2026-07-22T16:51:44.539954+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "3f1c77de-1d08-5d2b-8ae6-438190cf4e76",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "vocabulary_id": "cce5a917-c6f2-5efe-8e91-f60e15e87f50",
+    "line_text": "Heads on a science apart\nNobody said it was easy\nIt's such a shame for us to part",
+    "highlighted_word": "Nobody said it was easy",
+    "line_index": 8,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -5130,6 +5260,16 @@
     "line_translation": null
   },
   {
+    "id": "4d6e8d1b-9545-504c-83b4-d5d962773514",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "vocabulary_id": "c13ae12c-cbf5-5540-8d28-5e401f2b0398",
+    "line_text": "Oh, let's go back to the start\nRunnin' in circles, comin' up tails\nHeads on a science apart",
+    "highlighted_word": "Runnin' in circles",
+    "line_index": 6,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "4da6e4d8-7605-56f2-8cd6-d332bb945ba2",
     "song_id": "afa4348e-7797-5dd0-85fe-ea99cb32a695",
     "vocabulary_id": "90990c2e-c0d5-56a8-8381-da49228dab3f",
@@ -5377,6 +5517,16 @@
     "highlighted_word": "get used to",
     "line_index": 15,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "51ad3626-43ad-5351-80fb-36a4da0fb12a",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "vocabulary_id": "6bbc7cba-f0af-5472-8afd-59601a533704",
+    "line_text": "Tell me your secrets and ask me your questions\nOh, let's go back to the start\nRunnin' in circles, comin' up tails",
+    "highlighted_word": "go back to the start",
+    "line_index": 5,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -5657,6 +5807,16 @@
     "highlighted_word": "assume",
     "line_index": 2,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "5639f684-5c8a-5861-8b32-c01486172808",
+    "song_id": "50000001-0000-0000-0000-000000000014",
+    "vocabulary_id": "96d9b2a2-987e-5120-8c8e-1032070327ee",
+    "line_text": "Caught in the undertow, just caught in the undertow\nI've become so numb, I can't feel you there\nBecome so tired, so much more aware",
+    "highlighted_word": "numb",
+    "line_index": 7,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -6300,6 +6460,16 @@
     "line_translation": null
   },
   {
+    "id": "60335fab-c4f0-5154-8c57-9c051d124e71",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "c3ff2c95-f77b-5d83-8019-43d72ecc1414",
+    "line_text": "You are now watching the throne\nDon't let me get in my zone\nDon't let me get in my zone",
+    "highlighted_word": "in my zone",
+    "line_index": 59,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "604eae3b-81bc-59cb-8c73-3d3125038b11",
     "song_id": "8b3f7387-d1fd-5823-83b6-35f85eaf92aa",
     "vocabulary_id": "76ce7ed0-1642-50d2-8f5a-e48226d88a2f",
@@ -6317,6 +6487,16 @@
     "highlighted_word": "second hand",
     "line_index": 58,
     "created_at": "2026-07-22T16:38:04.618848+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "606991a9-e6b6-514b-8ae0-01337a5c61b7",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "vocabulary_id": "76e65ad5-8554-5559-82a2-361cc091904a",
+    "line_text": "Nobody said it was easy\nIt's such a shame for us to part\nNobody said it was easy",
+    "highlighted_word": "such a shame",
+    "line_index": 9,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -6730,6 +6910,16 @@
     "line_translation": null
   },
   {
+    "id": "669922e7-e061-57f1-84f8-0a998a5ce8bd",
+    "song_id": "089ecfb5-6d8f-5618-857e-620cb33f0716",
+    "vocabulary_id": "11eca65a-3074-5a39-80d9-816b43af5305",
+    "line_text": "And no one's really sure who's lettin' go today, walkin' away\nIf we could take the time to lay it on the line\nI could rest my head, just knowin' that you were mine, all mine",
+    "highlighted_word": "lay it on the line",
+    "line_index": 12,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "66b8406b-bc12-57c6-8ef5-de500f1eab32",
     "song_id": "e940374f-0ae4-51de-879a-98a6036bd52f",
     "vocabulary_id": "606783e5-c4c1-4d9f-b022-762c9d6a969c",
@@ -6867,6 +7057,16 @@
     "highlighted_word": "damn",
     "line_index": 71,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "688fcc64-5aab-5056-8f68-136fb5019e4e",
+    "song_id": "50000001-0000-0000-0000-000000000007",
+    "vocabulary_id": "55ae98b5-86f7-55aa-8634-819efa51c9b8",
+    "line_text": "So close, no matter how far\nCouldn't be much more from the heart",
+    "highlighted_word": "no matter how",
+    "line_index": 0,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -7677,6 +7877,16 @@
     "highlighted_word": "cut off",
     "line_index": 42,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "73b95ee4-5e4d-590d-855b-7277569e0687",
+    "song_id": "bfb6916b-d32d-52d4-84c5-e77a8dfeffa8",
+    "vocabulary_id": "6636a902-b1c4-5f5e-8a01-5e72460ac6f7",
+    "line_text": "Who don't believe in anything?\nWill he make it out alive?\nAlright, alright",
+    "highlighted_word": "make it out alive",
+    "line_index": 5,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -8530,6 +8740,16 @@
     "line_translation": null
   },
   {
+    "id": "8042092a-b3e5-508f-8d95-3a1e2292795a",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "8063eefc-e146-5251-8cca-54ec7175a2d0",
+    "line_text": "(Ball so hard) This shit crazy\nY'all don't know that don't shit faze me\nThe Nets could go 0 for 82",
+    "highlighted_word": "faze",
+    "line_index": 6,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "8097c7eb-6815-588c-880c-68e5120069fa",
     "song_id": "0fe5b90f-99f1-51df-8fd3-8ba33428ce2d",
     "vocabulary_id": "f8962acf-4412-47f0-8e86-647f30166ecb",
@@ -8677,6 +8897,16 @@
     "highlighted_word": "write down",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "82daf8b1-4808-58f8-84c8-52d919209d39",
+    "song_id": "50000001-0000-0000-0000-000000000007",
+    "vocabulary_id": "cd22dfff-8f5d-54c1-87aa-8078cdb4506e",
+    "line_text": "And nothing else matters\nNever cared for what they do\nNever cared for what they know",
+    "highlighted_word": "Never cared for",
+    "line_index": 12,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -9050,6 +9280,16 @@
     "line_translation": null
   },
   {
+    "id": "87ef8a57-c5a8-5843-8005-eda68c778220",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "ba615f1d-a6e9-528b-8066-a24cc7a42b40",
+    "line_text": "The Nets could go 0 for 82\nAnd I'd look at you like this shit gravy\n(Ball so hard) This shit weird",
+    "highlighted_word": "gravy",
+    "line_index": 8,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "880b5646-c37a-55b7-8772-4cc635d57bf4",
     "song_id": "5384c6ef-e754-5d69-8378-ec56dc9a6a85",
     "vocabulary_id": "f402cae4-4d72-4428-b079-51bb7aa5140b",
@@ -9067,6 +9307,16 @@
     "highlighted_word": "go off",
     "line_index": 51,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "88284fd8-20a5-5847-8a62-b51b6801b17b",
+    "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
+    "vocabulary_id": "75a21295-7f48-5163-88e0-8859426b2c88",
+    "line_text": "Fuck it, I'll do it myself\nNo one puttin' me on, damn\nFuck it, I'll do it myself",
+    "highlighted_word": "puttin' me on",
+    "line_index": 12,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -9187,6 +9437,16 @@
     "highlighted_word": "pumped",
     "line_index": 18,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "8a83c599-17d9-54cf-8495-207eb5ad4a77",
+    "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
+    "vocabulary_id": "96cd95f0-2df5-5baa-83b5-3f7f8b7df0b7",
+    "line_text": "I just stumbled on my ex’s page, that ass is gettin' fat\nDreams I used to chase, stopped runnin’ so now y'all are gettin' lapped\nI always step up I’m clutch, this is planned, this isn’t luck",
+    "highlighted_word": "gettin' lapped",
+    "line_index": 45,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -9740,6 +10000,16 @@
     "line_translation": null
   },
   {
+    "id": "91f3acd6-84df-5ac4-8613-0b5a5370c560",
+    "song_id": "50000001-0000-0000-0000-000000000001",
+    "vocabulary_id": "9c64ba97-cea9-528f-81dc-15b56de0fabf",
+    "line_text": "When I find myself in times of trouble\nMother Mary comes to me",
+    "highlighted_word": "in times of trouble",
+    "line_index": 0,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "9205ebdb-8d29-593b-89c9-1080d7249fac",
     "song_id": "d67348f5-6036-5fd8-8a34-660fba6d7dbf",
     "vocabulary_id": "a5625a27-7267-4c76-9596-33e90fb0d40e",
@@ -10230,6 +10500,16 @@
     "line_translation": null
   },
   {
+    "id": "9ac6c06f-e98d-59c5-8ac5-6f8dcc6a6d1a",
+    "song_id": "06682c04-d144-5f34-830c-9d321e301684",
+    "vocabulary_id": "4c8aef80-222b-5981-8d91-6a52840529b9",
+    "line_text": "(We'll go all, all, all night long)\nI'm gonna show you where it's dark, but have no fear\n(We'll go all, all, all night long)",
+    "highlighted_word": "have no fear",
+    "line_index": 9,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "9adcbdf4-06d4-5618-8b8f-4ecfba327cf5",
     "song_id": "a0421782-62a6-5be1-820c-94bc0961b503",
     "vocabulary_id": "bf7d9e90-792c-4f58-9fbc-d60336282107",
@@ -10257,6 +10537,16 @@
     "highlighted_word": "strikes",
     "line_index": 21,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "9b991d5b-5e0e-5144-87e7-b6fc9426e4eb",
+    "song_id": "50000001-0000-0000-0000-000000000001",
+    "vocabulary_id": "cecc2602-b02b-5f11-8b56-db392003493e",
+    "line_text": "Speaking words of wisdom\nLet it be\nAnd in my hour of darkness",
+    "highlighted_word": "Let it be",
+    "line_index": 3,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -11730,6 +12020,16 @@
     "line_translation": null
   },
   {
+    "id": "b10edbb0-1b72-5cd2-8e2e-04447d87945f",
+    "song_id": "089ecfb5-6d8f-5618-857e-620cb33f0716",
+    "vocabulary_id": "f99f3d4a-c3b0-5dd5-8ecc-1633c536147f",
+    "line_text": "When there's no one left to blame\nSo, never mind the darkness\nWe still can find a way",
+    "highlighted_word": "never mind",
+    "line_index": 34,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "b12bf5e4-2410-4a77-9116-d32f4b9aeba8",
     "song_id": "23de8aa3-f8ee-4231-af24-0a74612ea5df",
     "vocabulary_id": "206b7143-fd8f-42c6-a5df-453b8fde843d",
@@ -12500,6 +12800,16 @@
     "line_translation": null
   },
   {
+    "id": "bbbd0d49-e256-52ee-833d-8d33c9bc9534",
+    "song_id": "50000001-0000-0000-0000-000000000001",
+    "vocabulary_id": "375f25cb-189e-5d2b-818a-058458ca0139",
+    "line_text": "Mother Mary comes to me\nSpeaking words of wisdom\nLet it be",
+    "highlighted_word": "words of wisdom",
+    "line_index": 2,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "bbe32c2d-6038-5e3a-8629-3a09dc8cf3b9",
     "song_id": "afe81054-f1d3-597a-85a1-476119b505f9",
     "vocabulary_id": "bcb678fe-4b5e-4671-b952-207116b5c5cc",
@@ -12797,6 +13107,16 @@
     "highlighted_word": "break up",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "bf9000ba-9541-534e-87c2-8ee3ab4cdc8f",
+    "song_id": "bfb6916b-d32d-52d4-84c5-e77a8dfeffa8",
+    "vocabulary_id": "253f4fed-4a36-5a3b-8d9f-2c024060bae6",
+    "line_text": "All white like I got the whole thing bleached\nDrug dealer chic\nI'm wondering if a thug's prayers reach",
+    "highlighted_word": "chic",
+    "line_index": 16,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -13487,6 +13807,16 @@
     "highlighted_word": "Traded",
     "line_index": 55,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "cb1a594e-6e45-5f81-81aa-cc8acc2c225e",
+    "song_id": "089ecfb5-6d8f-5618-857e-620cb33f0716",
+    "vocabulary_id": "fcad7154-20ac-5edc-8b51-2965ade523f2",
+    "line_text": "But lovers always come and lovers always go\nAnd no one's really sure who's lettin' go today, walkin' away\nIf we could take the time to lay it on the line",
+    "highlighted_word": "lettin' go",
+    "line_index": 11,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -14490,6 +14820,16 @@
     "line_translation": null
   },
   {
+    "id": "d8801fc5-c334-56ff-896f-46c2edfeba30",
+    "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
+    "vocabulary_id": "c2631746-f2a7-540b-8af4-eb611e0ceab4",
+    "line_text": "Fuck it, I'll do it myself\nWoah, 'bout to cash out every month off of coats\nI been on this way before I had hoes",
+    "highlighted_word": "cash out",
+    "line_index": 18,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "d88e8ea9-829c-50a8-8454-478632ebc64c",
     "song_id": "0393d08f-4483-54cf-8741-1b05ea475b7a",
     "vocabulary_id": "6eb01d8c-828f-4015-9920-d7aaa6c700da",
@@ -14920,6 +15260,16 @@
     "line_translation": null
   },
   {
+    "id": "df12477d-1d28-58f7-84b3-bdbfa6064733",
+    "song_id": "089ecfb5-6d8f-5618-857e-620cb33f0716",
+    "vocabulary_id": "1d478c2f-73c9-5b71-8ce5-d607320884d8",
+    "line_text": "In the cold November rain\nDo you need some time on your own?\nDo you need some time all alone?",
+    "highlighted_word": "time on your own",
+    "line_index": 18,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "dfa90391-9b8e-5c50-86ac-afad4b558cc9",
     "song_id": "030726e7-e799-56b8-8d64-96a94f15dd9a",
     "vocabulary_id": "ea35aa90-d5d9-49c4-90eb-7da38eb0922c",
@@ -15120,6 +15470,16 @@
     "line_translation": null
   },
   {
+    "id": "e3f1d6c2-c761-5a2d-88fc-1e0d9417d732",
+    "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
+    "vocabulary_id": "91f799e4-a93d-5574-8620-35b93b2e722b",
+    "line_text": "Dreams I used to chase, stopped runnin’ so now y'all are gettin' lapped\nI always step up I’m clutch, this is planned, this isn’t luck\nMy adviser is my gut, please don't ever interrupt",
+    "highlighted_word": "step up",
+    "line_index": 46,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "e402b970-d760-58ed-8aa5-0a4c5d5cc31c",
     "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
     "vocabulary_id": "66120e93-f802-514c-863d-5abc5b3035b9",
@@ -15230,6 +15590,16 @@
     "line_translation": null
   },
   {
+    "id": "e559bb71-29a2-5956-8c9b-b88d19d24a93",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "00bd9d39-81a0-591f-866f-710979ac454b",
+    "line_text": "You'd be in Paris getting fucked up too\n(B-ball so hard) Let's get faded\nLe Meurice for like six days",
+    "highlighted_word": "get faded",
+    "line_index": 23,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
     "id": "e58d3708-9818-5a5f-8a3f-ab95acee228b",
     "song_id": "79e72852-74b7-5fd3-8788-381999eb4b71",
     "vocabulary_id": "279c5eee-adfd-41e1-9f71-783f7d44b52a",
@@ -15337,6 +15707,16 @@
     "highlighted_word": "goes out",
     "line_index": 20,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "e7d97bc6-c568-5ca4-8f98-c9034e48be9a",
+    "song_id": "089ecfb5-6d8f-5618-857e-620cb33f0716",
+    "vocabulary_id": "324a4433-bba6-521b-8486-bd78ed9d14ce",
+    "line_text": "And we both know hearts can change\nAnd it's hard to hold a candle\nIn the cold November rain",
+    "highlighted_word": "hold a candle",
+    "line_index": 6,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -15837,6 +16217,16 @@
     "highlighted_word": "end up",
     "line_index": 19,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "ee9a7719-4233-59e3-8876-48e091e7d41f",
+    "song_id": "bfb6916b-d32d-52d4-84c5-e77a8dfeffa8",
+    "vocabulary_id": "23c32609-a66e-5354-808d-e025575e5150",
+    "line_text": "Human beings in a mob\nWhat's a mob to a king?",
+    "highlighted_word": "a mob",
+    "line_index": 0,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
@@ -16637,6 +17027,16 @@
     "highlighted_word": "came out",
     "line_index": 18,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "fbf4f2a6-9a8d-5611-880a-362fac6a7318",
+    "song_id": "06682c04-d144-5f34-830c-9d321e301684",
+    "vocabulary_id": "c86aa376-9b74-5fb5-8462-6183f1931357",
+    "line_text": "It's hard to explain\nThey're talking about you, boy\nBut you're still the same",
+    "highlighted_word": "talking about",
+    "line_index": 13,
+    "created_at": "2026-07-24T22:42:40.824507+00:00",
     "line_translation": null
   },
   {
