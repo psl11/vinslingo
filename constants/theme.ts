@@ -73,6 +73,7 @@ export const colors = {
   // Aviso / ancla de canción (ámbar)
   warning: '#F59E0B',
   warningSurface: '#FEF3C7',
+  warningBorder: '#FDE68A', // borde ámbar suave (tarjeta "palabras guardadas")
   warningText: '#92400E',
   warningTextSoft: '#B45309',
 

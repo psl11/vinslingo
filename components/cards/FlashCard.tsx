@@ -40,6 +40,9 @@ interface FlashCardProps {
   musicHighlight?: string | null;
   musicSong?: string | null;
   musicArtist?: string | null;
+  // id de la palabra en `vocabulary`: habilita la chincheta (📌) del reverso para
+  // guardarla en el listado personal. Sin él (p.ej. previews) no se muestra.
+  vocabularyId?: string;
   onFlip?: (isFlipped: boolean) => void;
 }
 
@@ -83,6 +86,7 @@ export function FlashCard({
   musicHighlight,
   musicSong,
   musicArtist,
+  vocabularyId,
   onFlip,
 }: FlashCardProps) {
   const anchorIconChar = anchorIcon(anchorType);
@@ -90,6 +94,7 @@ export function FlashCard({
   const sepNote = separabilityNote(separability, word);
   const isSongAnchor = anchorIsSong(anchorType);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
   const { hapticsEnabled } = useSettingsStore();
   const isOnline = useSyncStore((s) => s.isOnline);
   const { playWord, playUrl } = useAudio();
@@ -131,6 +136,44 @@ export function FlashCard({
   const onContentLayout = (e: LayoutChangeEvent) => {
     contentHeight.current = e.nativeEvent.layout.height;
     recomputeScale();
+  };
+
+  // Estado de "guardada" (chincheta). Se consulta al montar/cambiar de palabra.
+  useEffect(() => {
+    if (!vocabularyId) return;
+    let active = true;
+    (async () => {
+      try {
+        const { isWordSaved } = await import('../../lib/services/savedWordsService');
+        const saved = await isWordSaved(vocabularyId);
+        if (active) setIsSaved(saved);
+      } catch (err) {
+        console.log('isWordSaved error:', err);
+      }
+    })();
+    return () => {
+      active = false;
+    };
+  }, [vocabularyId]);
+
+  // Guardar/quitar de la lista personal. Optimista (marca la chincheta al
+  // instante) y confirma con el estado real que devuelve el toggle; si la
+  // escritura falla, revierte. stopPropagation para no voltear la tarjeta.
+  const handleToggleSave = async (e?: any) => {
+    e?.stopPropagation?.();
+    if (!vocabularyId) return;
+    if (hapticsEnabled) {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
+    setIsSaved((prev) => !prev);
+    try {
+      const { toggleSavedWord } = await import('../../lib/services/savedWordsService');
+      const nowSaved = await toggleSavedWord(vocabularyId);
+      setIsSaved(nowSaved);
+    } catch (err) {
+      console.error('toggleSavedWord error:', err);
+      setIsSaved((prev) => !prev); // revertir el optimista
+    }
   };
 
   const handlePlayAudio = async () => {
@@ -202,6 +245,13 @@ export function FlashCard({
   useEffect(() => {
     if (Platform.OS !== 'web') return;
     const onKeyDown = (e: KeyboardEvent) => {
+      // 'S' guarda/quita de la lista personal (solo con la respuesta visible,
+      // que es donde está la chincheta).
+      if ((e.key === 's' || e.key === 'S') && isFlipped && vocabularyId) {
+        e.preventDefault();
+        handleToggleSave();
+        return;
+      }
       if (isFlipped) return;
       if (e.code === 'Space' || e.key === 'Enter') {
         e.preventDefault();
@@ -211,7 +261,7 @@ export function FlashCard({
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isFlipped]);
+  }, [isFlipped, vocabularyId]);
 
   return (
     <Pressable onPress={handleFlip} style={styles.container}>
@@ -247,11 +297,25 @@ export function FlashCard({
         <View style={[styles.card, styles.cardBack]}>
           <View style={styles.cardHeader}>
             <Text style={styles.languageLabel}>🇪🇸 ESPAÑOL</Text>
-            {cefrLevel && (
-              <View style={styles.cefrBadge}>
-                <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
-              </View>
-            )}
+            <View style={styles.headerRight}>
+              {cefrLevel && (
+                <View style={styles.cefrBadge}>
+                  <Text style={styles.cefrBadgeText}>{cefrLevel.toUpperCase()}</Text>
+                </View>
+              )}
+              {/* Chincheta: guarda la palabra en tu listado personal. Grisada =
+                  sin guardar; sólida sobre fondo ámbar = guardada. */}
+              {vocabularyId && (
+                <Pressable
+                  onPress={handleToggleSave}
+                  hitSlop={10}
+                  style={[styles.pinButton, isSaved && styles.pinButtonActive]}
+                  accessibilityLabel={isSaved ? 'Quitar de guardadas' : 'Guardar palabra'}
+                >
+                  <Text style={[styles.pinIcon, !isSaved && styles.pinIconInactive]}>📌</Text>
+                </Pressable>
+              )}
+            </View>
           </View>
           {/* La palabra estudiada, en grande arriba del reverso, para no perder
               de vista a qué se refiere el significado y los ejemplos. */}
@@ -459,6 +523,23 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primarySurface,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  pinButton: {
+    width: 36,
+    height: 36,
+    borderRadius: radius.full,
+    backgroundColor: colors.surfaceSubtle,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  pinButtonActive: {
+    backgroundColor: colors.warningSurface,
+  },
+  pinIcon: {
+    fontSize: fontSize.md,
+  },
+  pinIconInactive: {
+    opacity: 0.35,
   },
   audioIcon: {
     fontSize: fontSize.xxl,

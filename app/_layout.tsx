@@ -203,6 +203,13 @@ function RootLayoutNav() {
           }}
         />
         <Stack.Screen
+          name="saved-words"
+          options={{
+            headerShown: false,
+            presentation: 'modal',
+          }}
+        />
+        <Stack.Screen
           name="music"
           options={{
             headerShown: false,

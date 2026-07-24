@@ -28,6 +28,13 @@ el tab Aprender.
 - El cuestionario entra por `/study/failed`; el motor lee `id === 'failed'` y el
   `scope` del toggle (ver [`app/study/[id].tsx`](../app/study/[id].tsx)).
 
+## Palabras guardadas (chincheta 📌)
+
+Listado personal: en el reverso de cada ficha una chincheta 📌 guarda la palabra
+al instante, y desde el tab Aprender ("📌 Palabras guardadas") se consulta y
+filtra por categoría (nivel, slang, phrasal verb…). Tabla local `saved_words`;
+reutiliza `VocabResultCard`. Detalle en [`docs/saved-words.md`](saved-words.md).
+
 ## Entrenamiento (drill de falladas)
 
 Modo intensivo estilo Duolingo para las palabras más falladas: cada palabra en

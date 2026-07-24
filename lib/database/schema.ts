@@ -172,6 +172,19 @@ export const LOCAL_SCHEMA = `
     FOREIGN KEY (exercise_id) REFERENCES gap_fill_exercises(id)
   );
 
+  -- Palabras guardadas (chincheta 📌): listado personal del usuario para
+  -- consultar y filtrar por categoría/nivel. Dato de usuario, local (ver
+  -- docs/saved-words.md). vocabulary_id UNIQUE: una palabra se guarda una vez;
+  -- el toggle es INSERT OR IGNORE / DELETE. Se crea con CREATE TABLE IF NOT
+  -- EXISTS (corre en cada init), así que cubre instalaciones nuevas y existentes.
+  CREATE TABLE IF NOT EXISTS saved_words (
+    id TEXT PRIMARY KEY,
+    vocabulary_id TEXT NOT NULL UNIQUE,
+    created_at INTEGER DEFAULT (strftime('%s', 'now') * 1000),
+    FOREIGN KEY (vocabulary_id) REFERENCES vocabulary(id)
+  );
+  CREATE INDEX IF NOT EXISTS idx_saved_words_vocab ON saved_words(vocabulary_id);
+
   -- Cola de sincronización
   CREATE TABLE IF NOT EXISTS sync_queue (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

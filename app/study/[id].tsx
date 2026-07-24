@@ -455,6 +455,7 @@ export default function StudyScreen() {
             musicHighlight={(currentCard as any).music_highlight}
             musicSong={(currentCard as any).music_song}
             musicArtist={(currentCard as any).music_artist}
+            vocabularyId={currentCard.id}
             onFlip={handleFlip}
           />
         )}

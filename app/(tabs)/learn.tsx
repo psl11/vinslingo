@@ -233,6 +233,21 @@ export default function LearnScreen() {
         <Text style={styles.musicChevron}>›</Text>
       </PressableScale>
 
+      {/* Palabras guardadas: tu listado personal (chincheta del reverso). */}
+      <PressableScale
+        style={styles.savedCard}
+        onPress={() => router.push('/saved-words')}
+      >
+        <Text style={styles.failedEmoji}>📌</Text>
+        <View style={styles.failedInfo}>
+          <Text style={styles.failedTitle}>Palabras guardadas</Text>
+          <Text style={styles.failedDescription}>
+            Tu listado personal, filtrable por categoría
+          </Text>
+        </View>
+        <Text style={styles.savedChevron}>›</Text>
+      </PressableScale>
+
       <View style={styles.categories}>
         {categories.map((category) => {
           const progress = category.totalWords > 0 
@@ -745,6 +760,22 @@ const styles = StyleSheet.create({
   musicChevron: {
     fontSize: 26,
     color: colors.accentPurple,
+    fontWeight: fontWeight.regular,
+    marginLeft: spacing.sm,
+  },
+  savedCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: colors.warningSurface,
+    borderWidth: 1.5,
+    borderColor: colors.warningBorder,
+    borderRadius: radius.lg,
+    padding: spacing.lg,
+    marginBottom: spacing.xl,
+  },
+  savedChevron: {
+    fontSize: 26,
+    color: colors.warning,
     fontWeight: fontWeight.regular,
     marginLeft: spacing.sm,
   },
