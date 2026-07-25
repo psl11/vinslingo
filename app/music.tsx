@@ -35,6 +35,17 @@ export default function MusicScreen() {
   const [categories, setCategories] = useState<Cat[]>([]);
   const [artists, setArtists] = useState<Artist[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const loadHub = useCallback(async () => {
+    const { getMusicWordCount, getMusicCategories, getMusicArtists } = await import('../lib/services/musicService');
+    const [t, c, a] = await Promise.all([
+      getMusicWordCount(),
+      getMusicCategories(selectedCEFRLevels),
+      getMusicArtists(selectedCEFRLevels),
+    ]);
+    return { t, c, a };
+  }, [selectedCEFRLevels]);
 
   useFocusEffect(
     useCallback(() => {
@@ -42,12 +53,7 @@ export default function MusicScreen() {
       (async () => {
         try {
           setIsLoading(true);
-          const { getMusicWordCount, getMusicCategories, getMusicArtists } = await import('../lib/services/musicService');
-          const [t, c, a] = await Promise.all([
-            getMusicWordCount(),
-            getMusicCategories(selectedCEFRLevels),
-            getMusicArtists(selectedCEFRLevels),
-          ]);
+          const { t, c, a } = await loadHub();
           if (active) { setTotals(t); setCategories(c); setArtists(a); }
         } catch (e) {
           console.error('Error loading music hub:', e);
@@ -56,8 +62,28 @@ export default function MusicScreen() {
         }
       })();
       return () => { active = false; };
-    }, [selectedCEFRLevels])
+    }, [loadHub])
   );
+
+  // Fuerza el sync saltándose la ventana de espera (6 h la música, 5 min el
+  // vocabulario) y recarga el hub. Sin esto, el contenido recién publicado en
+  // Supabase tarda horas en verse en el dispositivo.
+  const refreshContent = async () => {
+    if (refreshing) return;
+    setRefreshing(true);
+    try {
+      const { syncMusicFromSupabase } = await import('../lib/services/musicService');
+      const { syncVocabularyFromSupabase } = await import('../lib/services/vocabularyService');
+      await syncVocabularyFromSupabase({ force: true, fullResync: true });
+      await syncMusicFromSupabase({ force: true });
+      const { t, c, a } = await loadHub();
+      setTotals(t); setCategories(c); setArtists(a);
+    } catch (e) {
+      console.error('Error refrescando contenido:', e);
+    } finally {
+      setRefreshing(false);
+    }
+  };
 
   const go = (params: Record<string, string>) => {
     router.push({
@@ -81,7 +107,17 @@ export default function MusicScreen() {
         <Pressable onPress={() => router.back()} style={styles.backBtn} hitSlop={12}>
           <Text style={styles.backBtnText}>← Volver</Text>
         </Pressable>
-        <Text style={styles.title}>🎵 Aprende con tu música</Text>
+        <View style={styles.titleRow}>
+          <Text style={[styles.title, { flex: 1 }]}>🎵 Aprende con tu música</Text>
+          {/* El sync está gateado (6 h la música, 5 min el vocabulario) para no
+              machacar la red en cada arranque. Este botón lo fuerza: es la única
+              forma de ver contenido recién publicado sin esperar. */}
+          <PressableScale style={styles.refreshBtn} onPress={refreshContent} disabled={refreshing}>
+            {refreshing
+              ? <ActivityIndicator size="small" color={colors.primary} />
+              : <Text style={styles.refreshBtnText}>⟳</Text>}
+          </PressableScale>
+        </View>
         <Text style={styles.subtitle}>
           {totals.words} palabras de tu vocabulario aparecen en {totals.songs} de tus canciones.
         </Text>
@@ -165,6 +201,12 @@ const styles = StyleSheet.create({
   backBtn: { marginBottom: spacing.md },
   backBtnText: { fontSize: fontSize.md, color: colors.primary, fontWeight: fontWeight.medium },
   title: { fontSize: fontSize.xxl, fontWeight: fontWeight.bold, color: colors.textPrimary },
+  titleRow: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
+  refreshBtn: {
+    width: 40, height: 40, borderRadius: 20,
+    backgroundColor: colors.primarySurface, alignItems: 'center', justifyContent: 'center',
+  },
+  refreshBtnText: { fontSize: fontSize.lg, color: colors.primary, fontWeight: fontWeight.bold },
   subtitle: { fontSize: fontSize.base, color: colors.textSecondary, marginTop: spacing.sm, lineHeight: 20 },
   scroll: { paddingHorizontal: spacing.xl, paddingBottom: spacing.huge },
   cardCountLabel: { fontSize: fontSize.sm, fontWeight: fontWeight.semibold, color: colors.textSecondary, marginBottom: spacing.md },
