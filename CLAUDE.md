@@ -86,9 +86,17 @@ se versionan ni se guardan completas en la BD**; solo enlaces palabra↔canción
 la línea de contexto. Diseño, política de matching y estado por fases en
 [`docs/music-feature.md`](docs/music-feature.md).
 
-La pantalla de canción muestra tres capas, de lo ancho a lo fino: **guion**
-(la historia de la canción) → **notas** (referencias y juegos de palabras) →
-**vocabulario** (fichas que se repasan). Los guiones se escriben offline en
+La pantalla de canción muestra cuatro capas, de lo ancho a lo fino: **guion**
+(la historia de la canción) → **letra** → **notas** (referencias y juegos de
+palabras) → **vocabulario** (fichas que se repasan).
+
+La sección de **letra** tiene dos modos. Por defecto enseña los versos de
+contexto que ya están en `song_vocabulary`, en orden — no la letra. La letra
+completa vive en una tabla aparte de Supabase (`song_lyrics`) protegida con RLS
+y visible desde una sola cuenta: **nunca en el repo ni en el bundle**, porque el
+bundle lo sirve Vercel antes del login y sería publicarla. `song_lyrics` no debe
+añadirse a `CONTENT_TABLES` del script de backup ni al sync local. Detalle en
+[`docs/song-lyrics-privadas.md`](docs/song-lyrics-privadas.md). Los guiones se escriben offline en
 `guiones-podcast/*.md` (**gitignored**, es el espacio de autoría) y se compilan
 con `scripts/build-podcast-scripts.mjs` a `lib/data/podcastScripts.json`, que sí
 se versiona y es lo que carga la app. **Hay que recompilar y commitear el JSON

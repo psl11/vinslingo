@@ -300,6 +300,67 @@ export async function attachMusicContext<T extends { id: string }>(cards: T[]): 
   return cards.map((c) => mergeMusicContext(c, byWord.get(c.id)));
 }
 
+export type SongVerse = { line_index: number; line_text: string; highlighted: string[] };
+
+/**
+ * Los versos de una canción que tenemos guardados, en el orden en que aparecen.
+ *
+ * NO es la letra: son los fragmentos de contexto (3 líneas) que se guardaron al
+ * anclar cada palabra, que es lo único que la política del proyecto permite
+ * almacenar (ver CLAUDE.md → "Aprende con tu música"). Un mismo verso puede
+ * tener varias palabras ancladas, así que se agrupan por `line_index` y se
+ * devuelven todas las palabras a resaltar juntas.
+ */
+export async function getSongVerses(songId: string): Promise<SongVerse[]> {
+  const rows = await runQuery<{ line_index: number; line_text: string; highlighted_word: string | null }>(
+    `SELECT sv.line_index, sv.line_text, sv.highlighted_word
+     FROM song_vocabulary sv
+     WHERE sv.song_id = ? AND sv.line_text IS NOT NULL
+     ORDER BY sv.line_index ASC`,
+    [songId]
+  );
+  const byLine = new Map<number, SongVerse>();
+  for (const r of rows) {
+    const prev = byLine.get(r.line_index);
+    if (prev) {
+      if (r.highlighted_word && !prev.highlighted.includes(r.highlighted_word)) prev.highlighted.push(r.highlighted_word);
+      continue;
+    }
+    byLine.set(r.line_index, {
+      line_index: r.line_index,
+      line_text: r.line_text,
+      highlighted: r.highlighted_word ? [r.highlighted_word] : [],
+    });
+  }
+  return [...byLine.values()];
+}
+
+/**
+ * Letra completa de una canción, si la cuenta que la pide tiene permiso.
+ *
+ * Vive SOLO en Supabase (tabla `song_lyrics`, protegida con RLS) y a propósito
+ * **no** se sincroniza al espejo local ni se versiona en el repo: no está en
+ * `CONTENT_TABLES` del script de backup, ni en el bundle. Ver
+ * docs/song-lyrics-privadas.md.
+ *
+ * Para cualquier otra cuenta la RLS devuelve cero filas, así que esta función
+ * devuelve null y la sección de letra simplemente no se pinta. Un fallo de red
+ * o una tabla inexistente se tratan igual: null, sin romper la pantalla.
+ */
+export async function getFullLyrics(songId: string): Promise<string | null> {
+  try {
+    const { data, error } = await supabase
+      .from('song_lyrics')
+      .select('lyrics')
+      .eq('song_id', songId)
+      .maybeSingle();
+    if (error) return null;
+    return data?.lyrics ?? null;
+  } catch {
+    return null;
+  }
+}
+
 /** Canciones en las que aparece una palabra (para el ancla en la ficha). */
 export async function getSongsForWord(
   vocabularyId: string,

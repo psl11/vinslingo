@@ -5,6 +5,7 @@ import { PressableScale } from '../components/ui/PressableScale';
 import { ActionButton } from '../components/ui/ActionButton';
 import { SongNotes, type Note } from '../components/music/SongNotes';
 import { SongScript, useSongScript } from '../components/music/SongScript';
+import { SongLyrics, type Verse } from '../components/music/SongLyrics';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { analyzeTranslation } from '../lib/vocabulary/translationParser';
 import { highlightRange } from '../lib/utils/highlight';
@@ -56,6 +57,8 @@ export default function SongScreen() {
   const script = useSongScript(title, artist);
   const [words, setWords] = useState<Word[]>([]);
   const [notes, setNotes] = useState<Note[]>([]);
+  const [verses, setVerses] = useState<Verse[]>([]);
+  const [fullLyrics, setFullLyrics] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
 
@@ -65,12 +68,17 @@ export default function SongScreen() {
       (async () => {
         try {
           setLoading(true);
-          const { getMusicVocabulary, getSongNotes } = await import('../lib/services/musicService');
-          const [w, n] = await Promise.all([
+          const { getMusicVocabulary, getSongNotes, getSongVerses, getFullLyrics } =
+            await import('../lib/services/musicService');
+          const [w, n, v] = await Promise.all([
             getMusicVocabulary({ songId, cefrLevels: selectedCEFRLevels, limit: 100 }),
             getSongNotes(songId),
+            getSongVerses(songId),
           ]);
-          if (active) { setWords(w as Word[]); setNotes(n as Note[]); }
+          if (active) { setWords(w as Word[]); setNotes(n as Note[]); setVerses(v as Verse[]); }
+          // La letra completa va por red y solo la ve la cuenta autorizada, así
+          // que no bloquea el render: llega cuando llegue.
+          getFullLyrics(songId).then((l) => { if (active) setFullLyrics(l); });
         } finally {
           if (active) setLoading(false);
         }
@@ -149,6 +157,7 @@ export default function SongScreen() {
           {/* Guion primero: es la capa de contexto más ancha (la historia de la
               canción). Después las notas, que son el detalle fino. */}
           <SongScript script={script} />
+          <SongLyrics verses={verses} fullLyrics={fullLyrics} title={title} artist={artist} />
           <SongNotes notes={notes} />
 
           {/* Vocabulario: filas desplegables que enseñan el verso */}
@@ -198,7 +207,7 @@ export default function SongScreen() {
             </View>
           )}
 
-          {words.length === 0 && notes.length === 0 && !script && (
+          {words.length === 0 && notes.length === 0 && !script && verses.length === 0 && (
             <Text style={styles.emptyHint}>
               Esta canción aún no tiene contenido detallado.
             </Text>

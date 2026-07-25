@@ -24,6 +24,10 @@ const supabase = createClient(url, key);
 
 // Tablas de contenido público (curado editorialmente). NO incluir aquí
 // ninguna tabla con datos de usuario (profiles, study_sessions, user_*).
+// ⚠️ NO añadir `song_lyrics` aquí. Contiene letras completas con copyright y
+// existe precisamente para NO estar en el repo: vive solo en Supabase, con RLS,
+// visible desde una única cuenta. Meterla en el backup la publicaría en git, que
+// es justo lo que se quiso evitar. Ver docs/song-lyrics-privadas.md.
 const CONTENT_TABLES = [
   'vocabulary', 'songs', 'song_vocabulary', 'song_notes', 'artists',
   'authors', 'quotes', 'quote_vocabulary',
