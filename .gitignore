@@ -53,6 +53,9 @@ guiones-podcast/
 # autores, uso personal; ver scripts/download-genius-annotations.mjs)
 genius-anotaciones/
 
+# letra + anotaciones cruzadas (documento de trabajo local)
+letras-anotadas/
+
 # generated native folders
 /ios
 /android
