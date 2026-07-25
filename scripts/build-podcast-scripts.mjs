@@ -158,6 +158,24 @@ for (const e of errors) console.error(`   ⚠ ${e}`);
 mkdirSync(path.dirname(OUT), { recursive: true });
 writeFileSync(OUT, JSON.stringify(index));
 
+// Un guion cuyo título no case con el del catálogo simplemente no aparece en la
+// app, sin error ni aviso. Es el fallo silencioso más probable de esta feature,
+// así que se comprueba aquí contra el backup de Supabase.
+try {
+  const songs = JSON.parse(readFileSync('supabase/backup/songs.json', 'utf8'));
+  const artists = JSON.parse(readFileSync('supabase/backup/artists.json', 'utf8'));
+  const byId = Object.fromEntries(artists.map((a) => [a.id, a.name]));
+  const catalog = new Set(songs.map((s) => key(s.title, (byId[s.artist_id] ?? '').split(',')[0])));
+  const huerfanos = Object.entries(index).filter(([k]) => !catalog.has(k));
+  if (huerfanos.length) {
+    console.error(`\n⚠ ${huerfanos.length} guion(es) sin canción en el catálogo — NO se verán en la app:`);
+    for (const [, s] of huerfanos) console.error(`   ${s.artist} — ${s.title}   (${s.source})`);
+    console.error('   Revisa que el título del .md sea idéntico al del catálogo.');
+  }
+} catch {
+  // Sin backup a mano no se puede comprobar; no es motivo para romper el build.
+}
+
 const words = Object.values(index).reduce(
   (n, s) => n + JSON.stringify(s.sections).split(/\s+/).length, 0
 );
