@@ -654,7 +654,7 @@
     "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
     "vocabulary_id": "86d6e8a2-aca9-5fea-8481-fea5ce43eba4",
     "line_text": "Now all I'm left with is hoes up in Greystone\nWith the stale face 'cause they know it's they song\nShe shallow but the pussy deep (She shallow, she shallow)",
-    "highlighted_word": "they know it's they song",
+    "highlighted_word": "they song",
     "line_index": 77,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
     "line_translation": null
@@ -714,7 +714,7 @@
     "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
     "vocabulary_id": "ce3df53f-a41c-555d-88f7-7bab1daf8aa7",
     "line_text": "And I don't feel that shit, not even a little bit\nOh, Lord, know yourself, know your worth, nigga\nMy actions been louder than my words, nigga",
-    "highlighted_word": "know yourself, know your worth",
+    "highlighted_word": "know your worth",
     "line_index": 4,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
     "line_translation": null
@@ -3200,16 +3200,6 @@
     "line_translation": null
   },
   {
-    "id": "283be9ff-93ce-51be-8c08-ad3984aadd6c",
-    "song_id": "50000001-0000-0000-0000-000000000014",
-    "vocabulary_id": "c7002cec-b304-5bc0-841a-c7f22dc659a0",
-    "line_text": "Become so tired, so much more aware\nI'm becoming this, all I want to do\nIs be more like me and be less like you",
-    "highlighted_word": "do",
-    "line_index": 9,
-    "created_at": "2026-07-25T11:55:07.932924+00:00",
-    "line_translation": null
-  },
-  {
     "id": "2840dcf9-1dd9-4e51-904e-e437e1b5467b",
     "song_id": "e76befa1-1552-420e-a065-d035d159a381",
     "vocabulary_id": "ebed2f74-cb60-4e57-b171-d6a35c18afe6",
@@ -3613,9 +3603,9 @@
     "id": "2e4cd6e2-98ff-5c9e-8bc6-2175cfe584b1",
     "song_id": "7949773c-3f85-5a7f-86a3-10d060f5019c",
     "vocabulary_id": "533f8f8d-cbc4-5902-874a-57cff24f00a8",
-    "line_text": "Two, three, four!\nTake the time to make some sense\nOf what you wanna say",
-    "highlighted_word": "make",
-    "line_index": 6,
+    "line_text": "It's up to us to make\nThe best of all the things that come our way\n'Cause everything that's been has passed",
+    "highlighted_word": "best of all the things",
+    "line_index": 27,
     "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
@@ -3934,7 +3924,7 @@
     "song_id": "b461c904-742a-58f9-860d-be3cf37af74c",
     "vocabulary_id": "a2515ce3-a19c-5682-8883-a91c1876a891",
     "line_text": "Running through my veins, an American masquerade\nI still remember grandma Dixie's wake\nI've never really known anybody to die before",
-    "highlighted_word": "wake",
+    "highlighted_word": "Dixie's wake",
     "line_index": 21,
     "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
@@ -5034,7 +5024,7 @@
     "song_id": "0e117aec-ed12-5b1d-8f9e-bbb712dd1335",
     "vocabulary_id": "0355dea3-7954-54a6-881a-887dd6184dd6",
     "line_text": "(I was confused) And I let it all out to find\nThat I'm not the only person with these things in mind\n(Inside of me) But all the vacancy the words revealed",
-    "highlighted_word": "mind",
+    "highlighted_word": "things in mind",
     "line_index": 3,
     "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
@@ -5913,9 +5903,9 @@
     "id": "4acedc3b-c47e-5825-88dd-5868f3a9e280",
     "song_id": "d0e68830-252e-5eac-8d32-146d3b598f8e",
     "vocabulary_id": "89db145d-514e-5bcf-85da-ba4535308a00",
-    "line_text": "I need some time in the sunshine\nI've gotta slow it right down\nThe day's moving just too fast for me",
-    "highlighted_word": "down",
-    "line_index": 4,
+    "line_text": "Tonight I'm a rock 'n' roll star\nYou're not down with who I am\nLook at you now, you're all in my hands tonight",
+    "highlighted_word": "down with who",
+    "line_index": 33,
     "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
@@ -7844,7 +7834,7 @@
     "song_id": "bd770a8c-e28a-5815-85d0-47df35c07b7b",
     "vocabulary_id": "cf958458-623f-5dfe-8a2b-b162895c4fd3",
     "line_text": "Don't need no advice, I got a plan (Ooh)\nI know the direction, the lay of the land (Ooh)\nI know the score like the back of my hand",
-    "highlighted_word": "the direction, the lay of the land",
+    "highlighted_word": "the lay of the land",
     "line_index": 5,
     "created_at": "2026-07-25T10:37:52.397825+00:00",
     "line_translation": null
@@ -9464,7 +9454,7 @@
     "song_id": "15369d8f-4975-5100-8390-b2ec70c3580c",
     "vocabulary_id": "e1e235f5-9bbe-5dc1-8a54-c3f0cf8f93ed",
     "line_text": "God\nPut me out of my misery\nPut me out of my misery",
-    "highlighted_word": "Put me out of my misery",
+    "highlighted_word": "misery",
     "line_index": 27,
     "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
@@ -9833,9 +9823,9 @@
     "id": "7c3042b4-30c9-5c77-8af8-40a20520f0ae",
     "song_id": "e1124e22-c325-5931-85c1-818fffa4f1fb",
     "vocabulary_id": "85b38976-6e5e-5319-8c3b-1c0b909c2413",
-    "line_text": "Glow like Leroy, you should see boy go\nGot a daddy serving life and a brother on the row\nBest homie in the grave, tatted up while in the cage",
-    "highlighted_word": "Got a daddy serving life and a brother on",
-    "line_index": 40,
+    "line_text": "Let him keep a debit card so he could put gas in it\nTold her when he get on, he gon' take her to the Galleria\nBuy her everything but the mannequins, ya dig?",
+    "highlighted_word": "get on",
+    "line_index": 47,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
     "line_translation": null
   },
@@ -10024,7 +10014,7 @@
     "song_id": "2a016569-004c-592f-813f-6b3c4d5ad5c1",
     "vocabulary_id": "a184897a-367c-47c5-9df4-35707b02f6ba",
     "line_text": "Uh, yeah, yeah (Ooh-ooh, ooh-ooh, ooh-ooh)\nIt's gettin' late, but I don't mind\nIt's gettin' late, but I don't mind",
-    "highlighted_word": "It's gettin' late, but I don't mind",
+    "highlighted_word": "I don't mind",
     "line_index": 34,
     "created_at": "2026-07-25T10:09:28.458132+00:00",
     "line_translation": null
@@ -11204,7 +11194,7 @@
     "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
     "vocabulary_id": "87ab255f-0cd2-59ca-8f66-7aa700b25fde",
     "line_text": "Out in Hollywood bringin' back five or six hoes\nFuck 'em then we kick 'em to the do', nigga, you know how it go\nShe deserved that, she a bird, it's a bird trap",
-    "highlighted_word": "kick",
+    "highlighted_word": "kick 'em",
     "line_index": 47,
     "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
@@ -11544,7 +11534,7 @@
     "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
     "vocabulary_id": "f935e402-7b27-510b-80b9-c771f430301c",
     "line_text": "(Love) Nothing you can see that isn't shown\n(Love) There's nowhere you can be that isn't where you're meant to be\nIt's easy",
-    "highlighted_word": "be that isn't where you're meant to be",
+    "highlighted_word": "meant",
     "line_index": 24,
     "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
@@ -12464,7 +12454,7 @@
     "song_id": "7c850b1e-ddf4-5397-81e0-a2c8b460ca81",
     "vocabulary_id": "3a0468ee-6ae3-505b-8512-9ec781bfb313",
     "line_text": "Everything you say to me\nTakes me one step closer to the edge\nAnd I'm about to break",
-    "highlighted_word": "edge",
+    "highlighted_word": "to the edge",
     "line_index": 8,
     "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
@@ -12484,7 +12474,7 @@
     "song_id": "78ee2459-f0c1-5bba-8a01-73a57dd7b098",
     "vocabulary_id": "21b501bd-70b4-51e6-83c5-3d1b040c46c2",
     "line_text": "We just praying the new fame don't get the best of us\nBut all good things gotta come to a en-a\nShe let it go to her head, \"No, not my Aria\"",
-    "highlighted_word": "things",
+    "highlighted_word": "all good things",
     "line_index": 40,
     "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
@@ -12904,7 +12894,7 @@
     "song_id": "0d803fcc-c283-552a-83b7-c60e0eafc8de",
     "vocabulary_id": "058e6efc-68b5-5a1f-84aa-3e3c3b164915",
     "line_text": "I promised, I cried, I couldn't hold\nI suck at love, I think I need a do-over\nI will be emotionally available if I invited you over",
-    "highlighted_word": "at love, I think I need a do-over",
+    "highlighted_word": "a do-over",
     "line_index": 46,
     "created_at": "2026-07-25T10:40:34.355647+00:00",
     "line_translation": null
@@ -13384,7 +13374,7 @@
     "song_id": "50000001-0000-0000-0000-000000000007",
     "vocabulary_id": "7b297c4c-65a6-4052-a050-83e5adfdca95",
     "line_text": "And nothing else matters\nNever opened myself this way\nLife is ours, we live it our way",
-    "highlighted_word": "opened",
+    "highlighted_word": "opened myself",
     "line_index": 4,
     "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
@@ -13414,7 +13404,7 @@
     "song_id": "2e2fab92-e488-5f67-8685-3cc15b803a57",
     "vocabulary_id": "0eeb748a-7962-52dc-821c-f26e3344fbf5",
     "line_text": "(I) All I ever think about is this, all the tiring time between\nAnd how trying to put my trust in you just takes so much out of me\nTake everything from the inside",
-    "highlighted_word": "takes",
+    "highlighted_word": "takes so much out",
     "line_index": 6,
     "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
@@ -13933,9 +13923,9 @@
     "id": "b05db3d0-3b3b-51b5-87da-f1f6e5bbe3ee",
     "song_id": "4d0897ea-5e8b-563c-8de3-c3ddda92c24f",
     "vocabulary_id": "741cd09f-1678-5fdb-8751-337f54f6e102",
-    "line_text": "Nigga, and we roll deep, so deep\nIt's going down in this bitch, concrete\nWe gon' party all night, no sleep",
-    "highlighted_word": "It's",
-    "line_index": 8,
+    "line_text": "Tell the owner them is all my guys\nSo tonight everything is on me\nThe drinks is on me",
+    "highlighted_word": "everything is on me",
+    "line_index": 11,
     "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
@@ -14154,7 +14144,7 @@
     "song_id": "50000001-0000-0000-0000-000000000019",
     "vocabulary_id": "4cbbe66a-bd23-592e-8e25-6057b4f6730f",
     "line_text": "Sometimes I feel like my only friend\nIs the city I live in, The City of Angels\nLonely as I am, together we cry",
-    "highlighted_word": "the city I live in, The City of Angels",
+    "highlighted_word": "The City of Angels",
     "line_index": 2,
     "created_at": "2026-07-24T22:31:54.74339+00:00",
     "line_translation": null
@@ -15394,7 +15384,7 @@
     "song_id": "4a618b69-20e4-59b9-8fcf-ff142b58d0c4",
     "vocabulary_id": "c66126fa-4e4c-5ec3-8072-fc107a545d29",
     "line_text": "You can't be no one else\nI know a girl called Elsa, she's into Alka-Seltzer\nShe sniffs it through a cane on a supersonic train",
-    "highlighted_word": "into",
+    "highlighted_word": "she's into",
     "line_index": 21,
     "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
@@ -15443,9 +15433,9 @@
     "id": "c1dea341-0867-5006-884e-68ba0a0e993a",
     "song_id": "2833429e-0486-5b9e-82c5-2d47b6a71da9",
     "vocabulary_id": "20e4d406-4f9b-5a87-8cc1-e5ecb4b1905f",
-    "line_text": "I say, \"Ain't no music on\", she said, \"Nah, that weed is loud\"\nNigga, we ballin', straight swaggin', lost Hawk, but I'm maintainin'\nI've been told that I'm amazing, make sure keep that fire blazin', we livin'",
-    "highlighted_word": "ballin'",
-    "line_index": 11,
+    "line_text": "Let me tell you 'bout my month y'all\nEndless shopping, I had a ball\nI had to ball for therapy, my shrink don't think that helps at all",
+    "highlighted_word": "had a ball",
+    "line_index": 29,
     "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
@@ -16504,7 +16494,7 @@
     "song_id": "7949773c-3f85-5a7f-86a3-10d060f5019c",
     "vocabulary_id": "89b6d8f9-9264-5a47-8b4b-2cc7ea424a57",
     "line_text": "'Cause everything that's been has passed\nThe answer's in the looking glass\nThere's four and twenty million doors",
-    "highlighted_word": "The answer's in the looking glass",
+    "highlighted_word": "the looking glass",
     "line_index": 29,
     "created_at": "2026-07-25T10:16:42.018471+00:00",
     "line_translation": null
@@ -17304,7 +17294,7 @@
     "song_id": "9145c58c-11b7-5a98-8c88-241154301a1c",
     "vocabulary_id": "e9bf51ac-9c27-506d-8990-d9ef5b3f4296",
     "line_text": "So every morning I'm up 'cause I can't let them down, down\nAlways down for the cause, never down for the count\nI guess when your stars align, you do like the solar system and plan it out",
-    "highlighted_word": "down for the cause, never down for the count",
+    "highlighted_word": "down for the count",
     "line_index": 65,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
     "line_translation": null
@@ -18634,7 +18624,7 @@
     "song_id": "95dd4ff7-472b-58c8-8f81-f25c1db878f0",
     "vocabulary_id": "1fb4db38-fb77-54e1-81de-41d2fe166814",
     "line_text": "And a happy ending would be slittin' my throat\nIgnorance to cope, man, ignorance is bliss\nIgnorance is love and I need that shit",
-    "highlighted_word": "Ignorance to cope, man, ignorance is bliss",
+    "highlighted_word": "ignorance is bliss",
     "line_index": 43,
     "created_at": "2026-07-22T16:38:04.618848+00:00",
     "line_translation": null

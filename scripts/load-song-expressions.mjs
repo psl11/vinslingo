@@ -105,6 +105,10 @@ function surfaceCandidates(front, anchor) {
 // Palabras vacías: no sirven para localizar un verso (aparecen en todas partes).
 const STOP = new Set(['a','an','the','to','of','in','on','at','for','with','and','or','but','it','its','my','your','his','her','their','our','me','you','he','she','they','we','i','is','are','am','be','been','was','were','do','does','did','have','has','had','that','this','so','as','up','out','no','not','if','by','from','all','one','some','any','what','who','how','when']);
 
+// Palabras corrientes: aunque sean "con contenido", aparecen en tantas letras
+// que anclar por ellas solas daría un verso al azar. Solo afectan al nivel 3.
+const COMMON = new Set(['make','take','come','give','know','feel','want','need','think','look','good','time','life','love','back','down','away','right','left','thing','things','world','night','day','way','man','girl','baby','money','heart','mind','head','hand','home','name','face','eyes','said','say','tell','went','going','never','always','again','still','every','more','much','like','just','well','here','there','something','someone','nothing','everything']);
+
 // Irregulares frecuentes, para casar la ficha con la forma que use la letra.
 const IRREG = {
   be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'], go: ['goes', 'went', 'gone', 'going'],
@@ -192,23 +196,34 @@ function findVerse(title, surfaces) {
     const toks = surface.split(/\s+/).filter(Boolean);
     if (!toks.length) continue;
 
-    // Nivel 1: expresión completa, todo flexionado, con huecos.
-    const full = scan(new RegExp("(?:^|[^\\w'])" + toks.map(tokenRe).join("[\\w' ,]*?\\s*") + '(?!\\w)', 'i'));
+    // Nivel 1: expresión completa, todo flexionado, con huecos ACOTADOS. El
+    // hueco permite que la letra intercale algo (take it REAL easy, kick 'EM to)
+    // pero no puede abarcar media línea: sin este tope, "get on" casaba
+    // "Got a daddy serving life and a brother ON the row".
+    const full = scan(new RegExp("(?:^|[^\\w'])" + toks.map(tokenRe).join("[\\w' ,]{0,14}?\\s*") + '(?!\\w)', 'i'));
     if (full) return full;
 
     // Nivel 2: primera y última palabra con contenido, en la misma línea.
+    // GUARDARRAÍL: el hueco entre ambas se limita. Sin esto, "get on" casaba
+    // "Got a daddy serving life and a brother ON the row" y resaltaba media
+    // línea: un verso que no enseña nada.
     const content = toks.filter((t) => !STOP.has(t.toLowerCase()));
     if (content.length >= 2) {
       const a = content[0], b = content[content.length - 1];
-      const two = scan(new RegExp("(?:^|[^\\w'])" + tokenRe(a) + "[\\w' ,.\\-]*?\\s*" + tokenRe(b) + '(?!\\w)', 'i'));
-      if (two) return two;
+      const two = scan(new RegExp("(?:^|[^\\w'])" + tokenRe(a) + "[\\w' ,.\\-]{0,20}?\\s*" + tokenRe(b) + '(?!\\w)', 'i'));
+      if (two && two.surface.split(/\s+/).length <= 5) return two;
     }
 
-    // Nivel 3: la palabra más distintiva (la más larga con contenido).
+    // Nivel 3: la palabra más distintiva ella sola. GUARDARRAÍL: solo si es de
+    // verdad distintiva (≥5 letras y no una palabra corriente). Una sola palabra
+    // común ancla en cualquier verso y el resultado no enseña la expresión.
     const key = content.sort((x, y) => y.length - x.length)[0];
-    if (key && key.length >= 4) {
+    if (key && key.length >= 5 && !COMMON.has(key.toLowerCase())) {
       const one = scan(new RegExp("(?:^|[^\\w'])" + tokenRe(key) + '(?!\\w)', 'i'));
-      if (one) return one;
+      // La flexión puede haber casado una forma mucho más corta y corriente
+      // (doing → "do"): eso no enseña la expresión, así que se descarta.
+      const hit = (one?.surface || '').toLowerCase();
+      if (one && hit.length >= 4 && !STOP.has(hit) && !COMMON.has(hit)) return one;
     }
   }
   return null;
@@ -340,6 +355,34 @@ async function main() {
     const { error } = await supabase.from('song_notes').upsert(noteRows.slice(i, i + 200), { onConflict: 'id' });
     if (error) { console.error('notes upsert', error); process.exit(1); }
   }
+  // Purga de ANCLAS obsoletas: el upsert no borra, así que un ancla que el
+  // matcher dejó de producir (porque se afinó o se corrigió el mazo) se quedaba
+  // para siempre, con su verso equivocado. Solo se tocan las anclas de fichas
+  // `colloquial`, que las crea únicamente este script; las del matcher curado
+  // (match-music.mjs) no se rozan.
+  {
+    const expectedSv = new Set(svUniq.map((r) => r.id));
+    const { data: colRows, error: cErr } = await supabase
+      .from('vocabulary').select('id').eq('category', 'colloquial');
+    if (cErr) { console.error('colloquial ids', cErr); process.exit(1); }
+    const colSet = new Set((colRows || []).map((r) => r.id));
+    const staleIds = [];
+    for (let i = 0; i < [...colSet].length; i += 200) {
+      const chunk = [...colSet].slice(i, i + 200);
+      const { data: anchors, error } = await supabase
+        .from('song_vocabulary').select('id, vocabulary_id').in('vocabulary_id', chunk);
+      if (error) { console.error('anchors select', error); process.exit(1); }
+      for (const a of anchors || []) if (!expectedSv.has(a.id)) staleIds.push(a.id);
+    }
+    if (staleIds.length) {
+      for (let i = 0; i < staleIds.length; i += 200) {
+        const { error } = await supabase.from('song_vocabulary').delete().in('id', staleIds.slice(i, i + 200));
+        if (error) { console.error('stale anchors delete', error); process.exit(1); }
+      }
+      console.log(`\n🧹 ${staleIds.length} anclas obsoletas borradas (versos que el matcher ya no produce).`);
+    }
+  }
+
   // Limpieza de huérfanas: fichas `colloquial` que ya no salen de los mazos
   // (fusionadas con una curada, renombradas o eliminadas). Sin esto quedarían
   // duplicados fantasma, porque el upsert no borra. Nunca se borra algo con
