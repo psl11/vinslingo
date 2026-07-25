@@ -85,3 +85,14 @@ la música importada del seed genérico). Pipeline: `scripts/music-catalog.json`
 se versionan ni se guardan completas en la BD**; solo enlaces palabra↔canción +
 la línea de contexto. Diseño, política de matching y estado por fases en
 [`docs/music-feature.md`](docs/music-feature.md).
+
+La pantalla de canción muestra tres capas, de lo ancho a lo fino: **guion**
+(la historia de la canción) → **notas** (referencias y juegos de palabras) →
+**vocabulario** (fichas que se repasan). Los guiones se escriben offline en
+`guiones-podcast/*.md` (**gitignored**, es el espacio de autoría) y se compilan
+con `scripts/build-podcast-scripts.mjs` a `lib/data/podcastScripts.json`, que sí
+se versiona y es lo que carga la app. **Hay que recompilar y commitear el JSON
+tras tocar un `.md`**, o el cambio no llega a producción. Van empaquetados y no
+en Supabase a propósito (sobreviven a una caída del proyecto y no necesitan
+sync). Formato del `.md`, enlace por `título|artista` y política de fiabilidad de
+las fuentes en [`docs/podcast-scripts.md`](docs/podcast-scripts.md).
