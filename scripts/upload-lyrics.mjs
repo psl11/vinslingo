@@ -79,6 +79,11 @@ for (const s of songs) {
   // Se limpian las líneas vacías del principio/final y los encabezados sueltos.
   const lyrics = hit.lines.join('\n').replace(/\n{3,}/g, '\n\n').trim();
   if (!lyrics) { sinLetra++; continue; }
+  // El descargador deja un marcador cuando no encuentra letra. Pasa sobre todo
+  // con instrumentales (Orion de Metallica, Sunrise de Coldplay), que
+  // sencillamente no tienen. Subirlo enseñaría el marcador como si fuera la
+  // letra, así que se descarta.
+  if (/NO DESCARGADA/i.test(lyrics) || lyrics.split('\n').length < 4) { sinLetra++; continue; }
   rows.push({ song_id: s.id, lyrics });
 }
 
