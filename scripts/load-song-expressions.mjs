@@ -78,21 +78,32 @@ const isSection = (l) => /^\[.*\]$/.test(l.trim());
 // Candidatos de literal buscable a partir del `front` (que a veces lleva una
 // etiqueta gramatical entre paréntesis, a veces en la cabecera, a veces dentro).
 // Se prueban en orden: la cabecera, y el contenido del paréntesis.
-function surfaceCandidates(front) {
+function surfaceCandidates(front, anchor) {
   const out = [];
   const head = front.split(' (')[0].trim();
   const paren = (front.match(/\(([^)]+)\)/) || [])[1];
-  for (let cand of [head, paren]) {
+  // `anchor` (opcional en el mazo): la forma LITERAL con la que la letra dice la
+  // expresión, cuando difiere de la forma de diccionario de la ficha
+  // (happily ever after → "happy ever after"). Va primero: es la más fiable.
+  for (let cand of [anchor, head, paren]) {
     if (!cand) continue;
     cand = cand.split('/')[0].split('=')[0].trim();       // 1ª variante
     if (/^-?in'\b|droppin|gerundio/i.test(cand) || cand.length < 2) continue;
     // fuera etiquetas en español y placeholders
     if (/negación|cópula|posesivo|persona|dancehall|acr[óo]nimo/i.test(cand)) continue;
-    const cleaned = cand.replace(/\b(someone|something|one's|your|somebody|yourself)\b/gi, ' ').replace(/\s+/g, ' ').trim();
+    const cleaned = cand
+      .replace(/\b(someone|something|one's|your|somebody|yourself|sb|sth)\b/gi, ' ')
+      .replace(/[?!¿¡.,;:]/g, ' ')            // signos: what's the move? → what's the move
+      .replace(/\.\.\./g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
     if (cleaned && !out.includes(cleaned)) out.push(cleaned);
   }
   return out;
 }
+
+// Palabras vacías: no sirven para localizar un verso (aparecen en todas partes).
+const STOP = new Set(['a','an','the','to','of','in','on','at','for','with','and','or','but','it','its','my','your','his','her','their','our','me','you','he','she','they','we','i','is','are','am','be','been','was','were','do','does','did','have','has','had','that','this','so','as','up','out','no','not','if','by','from','all','one','some','any','what','who','how','when']);
 
 // Irregulares frecuentes, para casar la ficha con la forma que use la letra.
 const IRREG = {
@@ -135,29 +146,69 @@ function wordVariants(token) {
     (IRREG[s] || []).forEach((f) => out.add(f));
     for (const [base, forms] of Object.entries(IRREG)) if (forms.includes(s)) { out.add(base); forms.forEach((f) => out.add(f)); }
   }
+  // g-dropping: en estas letras casi todo gerundio va como -in' (sweatin',
+  // livin'), así que por cada -ing añadimos su variante comida.
+  for (const f of [...out]) if (f.endsWith('ing')) out.add(f.slice(0, -1) + "'");
   return [...out].filter(Boolean);
 }
 
-// Busca el verso (3 líneas) donde aparece alguno de los `surfaces` en la canción.
+/** Regex de una palabra con todas sus variantes (flexión + g-dropping). */
+const tokenRe = (t) => `(?:${wordVariants(t).map(esc).join('|')})`;
+
+/**
+ * Localiza el verso de una ficha DENTRO DE SU PROPIA CANCIÓN.
+ *
+ * Aquí no hay que decidir SI la expresión está (ya lo sabemos: la ficha se
+ * extrajo leyendo esta letra); solo hay que LOCALIZARLA. Por eso se permite ser
+ * mucho más laxo que `match-music.mjs`, que busca a ciegas en 518 canciones y
+ * necesita precisión. Se prueban tres niveles, del más estricto al más laxo:
+ *
+ *   1. La expresión entera, con todos los tokens flexionados y huecos entre
+ *      medias (take a drag → "taking a long drag").
+ *   2. Primera y última palabra CON CONTENIDO en la misma línea (kick someone to
+ *      the curb → "kick 'em to the do'"): la letra reordena o sustituye lo de en
+ *      medio constantemente.
+ *   3. La palabra más distintiva ella sola (la más larga que no sea vacía). Como
+ *      la ficha ya pertenece a esta canción, un solo ancla fiable basta.
+ */
 function findVerse(title, surfaces) {
   const lines = lyricBlocks.get(norm(title));
   if (!lines || !surfaces.length) return null;
   const real = lines.filter((l) => l.trim() && !isSection(l));
-  for (const surface of surfaces) {
-    // El PRIMER token se flexiona (suele ser el verbo); el resto, literal.
-    const raw = surface.split(/\s+/);
-    const toks = raw.map((t, i) => {
-      if (i === 0) return `(?:${wordVariants(t).map(esc).join('|')})`;
-      return esc(t).replace(/^'/, "'?");
-    });
-    // límite inicial tolerante con apóstrofo inicial ('bout, 'sposed)
-    const re = new RegExp("(?:^|[^\\w'])" + toks.join("[\\w' ,]*?\\s*") + '\\b', 'i');
+  const at = (i, m) => ({
+    verse: [real[i - 1], real[i], real[i + 1]].filter(Boolean).map((l) => l.trim()).join('\n'),
+    surface: m[0].replace(/^[^\w']+/, '').replace(/[^\w']+$/, '').trim(),
+    idx: i,
+  });
+  const scan = (re) => {
     for (let i = 0; i < real.length; i++) {
       const mm = real[i].replace(/[’]/g, "'").match(re);
-      if (mm) {
-        const verse = [real[i - 1], real[i], real[i + 1]].filter(Boolean).map((l) => l.trim()).join('\n');
-        return { verse, surface: mm[0].replace(/^[^\w']+/, '').trim(), idx: i };
-      }
+      if (mm) return at(i, mm);
+    }
+    return null;
+  };
+
+  for (const surface of surfaces) {
+    const toks = surface.split(/\s+/).filter(Boolean);
+    if (!toks.length) continue;
+
+    // Nivel 1: expresión completa, todo flexionado, con huecos.
+    const full = scan(new RegExp("(?:^|[^\\w'])" + toks.map(tokenRe).join("[\\w' ,]*?\\s*") + '(?!\\w)', 'i'));
+    if (full) return full;
+
+    // Nivel 2: primera y última palabra con contenido, en la misma línea.
+    const content = toks.filter((t) => !STOP.has(t.toLowerCase()));
+    if (content.length >= 2) {
+      const a = content[0], b = content[content.length - 1];
+      const two = scan(new RegExp("(?:^|[^\\w'])" + tokenRe(a) + "[\\w' ,.\\-]*?\\s*" + tokenRe(b) + '(?!\\w)', 'i'));
+      if (two) return two;
+    }
+
+    // Nivel 3: la palabra más distintiva (la más larga con contenido).
+    const key = content.sort((x, y) => y.length - x.length)[0];
+    if (key && key.length >= 4) {
+      const one = scan(new RegExp("(?:^|[^\\w'])" + tokenRe(key) + '(?!\\w)', 'i'));
+      if (one) return one;
     }
   }
   return null;
@@ -219,7 +270,7 @@ async function main() {
         // ficha por expresión; el verso es lo que cambia de canción a canción).
         if (curatedId.has(key)) {
           const vid = curatedId.get(key);
-          const v = findVerse(song.title, surfaceCandidates(word));
+          const v = findVerse(song.title, surfaceCandidates(word, c.anchor));
           if (v) {
             anchorStats.hit++;
             svRows.push({ id: detId(`sv:${sid}|${vid}`), song_id: sid, vocabulary_id: vid, line_text: v.verse, highlighted_word: v.surface, line_index: v.idx });
@@ -244,7 +295,7 @@ async function main() {
         }
         const vid = vocabRows.get(key).id;
         // ancla: buscar verso
-        const v = findVerse(song.title, surfaceCandidates(word));
+        const v = findVerse(song.title, surfaceCandidates(word, c.anchor));
         if (v) {
           anchorStats.hit++;
           svRows.push({ id: detId(`sv:${sid}|${vid}`), song_id: sid, vocabulary_id: vid, line_text: v.verse, highlighted_word: v.surface, line_index: v.idx });

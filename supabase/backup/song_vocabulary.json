@@ -110,6 +110,16 @@
     "line_translation": null
   },
   {
+    "id": "01827f9c-7688-52ed-814f-a5645adf734b",
+    "song_id": "b09dfebe-3e74-5ceb-8eeb-28e48ce24608",
+    "vocabulary_id": "9f83cf31-2770-564d-8278-0460bedd1bbc",
+    "line_text": "Hills have eyes, the hills have eyes\nWho are you to judge? Who are you to judge?\nHide your lies (Hide your lies), girl, hide your lies (Hide your lies, oh, baby)",
+    "highlighted_word": "Who are you to judge",
+    "line_index": 40,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "01ad058d-69f3-5992-863d-e2fb5bb8063a",
     "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
     "vocabulary_id": "0d22e142-ad3f-4e01-ae1f-df184f79ad36",
@@ -320,6 +330,16 @@
     "line_translation": null
   },
   {
+    "id": "04c5782d-1b50-5a88-811e-703260d40c9a",
+    "song_id": "6753e1f3-9c78-5a10-8583-c845a64b921d",
+    "vocabulary_id": "e9356b38-451e-5869-8a99-b15838c4259c",
+    "line_text": "This a \"fuck-a-stripper-on-the-mink-rug\" song\nThis a \"fuck-them-boys-forever, hold-a-grudge\" song\n\"Pop-some-fucking-champagne-in-the-tub\" song",
+    "highlighted_word": "hold-a-grudge",
+    "line_index": 13,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "04d2c50c-23a0-53f0-8409-9c02cd531385",
     "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
     "vocabulary_id": "bdeed293-cd27-4d8f-bc18-f6086a2ccf7a",
@@ -327,6 +347,16 @@
     "highlighted_word": "independence",
     "line_index": 13,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "05150983-d896-53d9-8f09-d1bf25225653",
+    "song_id": "7949773c-3f85-5a7f-86a3-10d060f5019c",
+    "vocabulary_id": "23aca25d-f3b8-5980-898a-d0eb5f23bf3e",
+    "line_text": "Two, three, four!\nTake the time to make some sense\nOf what you wanna say",
+    "highlighted_word": "make some sense",
+    "line_index": 6,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -550,6 +580,16 @@
     "line_translation": null
   },
   {
+    "id": "074a820a-d870-5b57-80a6-4feeefcf2dba",
+    "song_id": "588eac64-e39b-5246-8b31-a1452b1b3af9",
+    "vocabulary_id": "05cb3e93-ccb3-57bf-8ed8-0d5d22ea4883",
+    "line_text": "Put chains all on your soul and put whips up on your back\nThey be lyin' through they teeth, hope you slip up off your path\nI don't switch up, I just laugh (Ha ha) put my kicks up on they desk",
+    "highlighted_word": "through",
+    "line_index": 15,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "0758041e-c066-47ee-9199-f8e97d95ac76",
     "song_id": "2ab7d6cb-0135-497a-b6dc-18dfbfc421dd",
     "vocabulary_id": "6ab1c1ea-da38-42fa-b6ff-963a1225761d",
@@ -577,6 +617,16 @@
     "highlighted_word": "'sposed to",
     "line_index": 25,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "07cce07e-994a-5fcc-83db-ffb6fd2abe6f",
+    "song_id": "8b3f7387-d1fd-5823-83b6-35f85eaf92aa",
+    "vocabulary_id": "43ef80df-0740-552b-80fd-66eb41c2a8f0",
+    "line_text": "Passin' up on those moccasins someone else has been walkin' in\nBummy and grungy, fuck it, man, I am stunting and flossin'\nAnd saving my money and I'm hella happy, that's a bargain, bitch",
+    "highlighted_word": "flossin'",
+    "line_index": 29,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -707,6 +757,16 @@
     "highlighted_word": "hit the sack",
     "line_index": 0,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "09239479-f888-5e66-8349-665f067366ca",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "vocabulary_id": "b90b84fb-aafc-5e75-8e2c-9d0a803b3c67",
+    "line_text": "(Now my life has changed) And now my life has changed in, oh, so many ways\n(My independ') My independence seems to vanish in the haze\n(But now and then) But every now and then I feel so insecure",
+    "highlighted_word": "vanish",
+    "line_index": 13,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -957,6 +1017,16 @@
     "highlighted_word": "I'd rather",
     "line_index": 18,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "0c576297-9b7e-5c1e-83ba-ff0e8333849d",
+    "song_id": "e087a39d-b24d-55ca-8f3a-1193349903ae",
+    "vocabulary_id": "3048da5b-547d-5d02-8710-231e3c3ec816",
+    "line_text": "The sink is full of fishes\nShe's got dirty dishes on the brain\nIt was overflowing gently",
+    "highlighted_word": "brain",
+    "line_index": 11,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -1257,6 +1327,16 @@
     "highlighted_word": "checking out",
     "line_index": 8,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "11a685a2-cc46-5da8-8862-1eb6a46d2e3d",
+    "song_id": "49c43c61-c779-5b87-80e8-d56722006d03",
+    "vocabulary_id": "a2677bb0-4061-547d-80c2-ffb40a4163c5",
+    "line_text": "I'ma do just what I want, lookin' ahead, no turnin' back\nIf I fall, if I die, know I lived it to the fullest\nIf I fall, if I die, know I lived and missed some bullets",
+    "highlighted_word": "lived it to the fullest",
+    "line_index": 10,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -1720,6 +1800,16 @@
     "line_translation": null
   },
   {
+    "id": "16c22147-01d8-5bd0-8c7b-a1768176bace",
+    "song_id": "2833429e-0486-5b9e-82c5-2d47b6a71da9",
+    "vocabulary_id": "1f673c5f-c0e5-5042-8348-f21b5f55b5bb",
+    "line_text": "I say, \"Ain't no music on\", she said, \"Nah, that weed is loud\"\nNigga, we ballin', straight swaggin', lost Hawk, but I'm maintainin'\nI've been told that I'm amazing, make sure keep that fire blazin', we livin'",
+    "highlighted_word": "ballin'",
+    "line_index": 11,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "16f3adfa-e280-550e-8558-fba958ea5373",
     "song_id": "6b9ac89e-c0ce-5fcd-8b6b-88b5d30fe189",
     "vocabulary_id": "4e04df0a-ab3d-4eaa-8541-e389768e57ce",
@@ -1937,6 +2027,16 @@
     "highlighted_word": "a sucker for",
     "line_index": 3,
     "created_at": "2026-07-22T16:51:44.539954+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "195ed42e-74cf-56fa-8360-11498974a0c9",
+    "song_id": "50d33df2-f2ab-5512-858f-8e5e58a164c9",
+    "vocabulary_id": "f13c18e4-f952-503b-8a31-d9d34a33fa64",
+    "line_text": "\"Of course I had sex before,\" knowin' I was frontin'\nI said, \"I'm like a pro, baby,\" knowin' I was stuntin'\nBut if I told the truth, I knew that I'd get played out, son",
+    "highlighted_word": "stuntin'",
+    "line_index": 33,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -2177,6 +2277,16 @@
     "highlighted_word": "stand up",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.409466+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "1cf8e57c-1911-5d4f-83df-f25382541fc6",
+    "song_id": "afe81054-f1d3-597a-85a1-476119b505f9",
+    "vocabulary_id": "e02bd2e6-3ebd-5997-81a3-eafbd9f33c17",
+    "line_text": "Only thing that's on my mind (What's up?)\nIs who gon' run this town tonight (Ah, what's up?)\nIs who gon' run this town tonight (Yeah, what's up? Yeah)",
+    "highlighted_word": "run this town",
+    "line_index": 7,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -2510,6 +2620,16 @@
     "line_translation": null
   },
   {
+    "id": "208db5bd-f08a-59aa-8fdd-532611c2b9f0",
+    "song_id": "9c5a6bed-7dae-5694-8256-d6720450ed7d",
+    "vocabulary_id": "e4373836-bb56-555c-8c73-5e21ba961c75",
+    "line_text": "So follow me up 'cause this shit 'bout to go (Down)\nI'm doing 500, I'm outta control (Now)\nBut there's nowhere to go (Now)",
+    "highlighted_word": "control",
+    "line_index": 25,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "209039c7-1d50-52d7-8990-1adc7819a44f",
     "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
     "vocabulary_id": "0c8dcc55-4d10-5158-8e24-88dd33ff0338",
@@ -2617,6 +2737,16 @@
     "highlighted_word": "dope",
     "line_index": 52,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "2267732d-e3aa-54c6-8fed-153573d99d87",
+    "song_id": "bd770a8c-e28a-5815-85d0-47df35c07b7b",
+    "vocabulary_id": "51adb440-6b9a-5130-8fba-ee63c6492b34",
+    "line_text": "I know the score like the back of my hand\nThem other boys, I don't give a damn\nThey kiss on the ring, I carry the crown",
+    "highlighted_word": "give a damn",
+    "line_index": 1,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -2810,6 +2940,16 @@
     "line_translation": null
   },
   {
+    "id": "24c3b6e6-8426-5d89-861f-109dcd447587",
+    "song_id": "d79cb3b7-ae0a-5cea-88f7-f4919dd08f13",
+    "vocabulary_id": "b1e98acb-5600-5684-882b-21906a2a9ad2",
+    "line_text": "And revolutionaries wait\nFor my head on a silver plate\nJust a puppet on a lonely string (Mmm, mmm)",
+    "highlighted_word": "head on a silver plate",
+    "line_index": 25,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "24d14bb4-a7b8-5798-82fa-706a9553bb8e",
     "song_id": "4d0897ea-5e8b-563c-8de3-c3ddda92c24f",
     "vocabulary_id": "2ae398dc-1e16-51d1-8deb-46ea1ba43879",
@@ -2820,6 +2960,16 @@
     "line_translation": null
   },
   {
+    "id": "24e795ca-d8e5-5c25-8a76-4bc65a67a99c",
+    "song_id": "71833a8b-58cb-54ac-8b07-ce508c14f0f4",
+    "vocabulary_id": "ac87cab5-052a-54a7-814d-1b6e61dc84bb",
+    "line_text": "What you thought of me\nWhile I clean this slate\nWith the hands of uncertainty",
+    "highlighted_word": "clean this slate",
+    "line_index": 11,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "251f2701-ad43-552b-8920-7f9c2c68744b",
     "song_id": "366e747e-271d-5c47-81ab-9bee95c8b184",
     "vocabulary_id": "115afb01-506a-5996-8c8c-548c8259fe4b",
@@ -2827,6 +2977,16 @@
     "highlighted_word": "Shit",
     "line_index": 51,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "253bc2a5-81aa-5137-8892-b4569611d421",
+    "song_id": "15369d8f-4975-5100-8390-b2ec70c3580c",
+    "vocabulary_id": "4121678a-796f-54e9-86db-4f1ebef8adbf",
+    "line_text": "Wake in a sweat again\nAnother day's been laid to waste\nIn my disgrace",
+    "highlighted_word": "waste",
+    "line_index": 1,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -2867,6 +3027,16 @@
     "highlighted_word": "y'all",
     "line_index": 16,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "25cc0d1e-ea2f-5148-867d-44add079f85c",
+    "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
+    "vocabulary_id": "407d926d-50eb-54a4-842f-d0bec42a8f58",
+    "line_text": "Nigga, what am I about?\nYou gon’ really feel it now\nI’m out here…",
+    "highlighted_word": "gon'",
+    "line_index": 44,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -2937,6 +3107,16 @@
     "highlighted_word": "Looking back",
     "line_index": 39,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "272f0ca4-8e9e-5f8b-8235-6b424e915f7f",
+    "song_id": "50000001-0000-0000-0000-000000000026",
+    "vocabulary_id": "1c19f359-de56-5395-8a7c-7d5710849147",
+    "line_text": "My hands are cold\nAnd I'm on my knees\nLookin' for the answer",
+    "highlighted_word": "knees",
+    "line_index": 14,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -3020,6 +3200,16 @@
     "line_translation": null
   },
   {
+    "id": "283be9ff-93ce-51be-8c08-ad3984aadd6c",
+    "song_id": "50000001-0000-0000-0000-000000000014",
+    "vocabulary_id": "c7002cec-b304-5bc0-841a-c7f22dc659a0",
+    "line_text": "Become so tired, so much more aware\nI'm becoming this, all I want to do\nIs be more like me and be less like you",
+    "highlighted_word": "do",
+    "line_index": 9,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "2840dcf9-1dd9-4e51-904e-e437e1b5467b",
     "song_id": "e76befa1-1552-420e-a065-d035d159a381",
     "vocabulary_id": "ebed2f74-cb60-4e57-b171-d6a35c18afe6",
@@ -3057,6 +3247,16 @@
     "highlighted_word": "try",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "289580a1-1437-5161-8b5c-f27a303acc63",
+    "song_id": "0df2d162-41fc-5291-850e-6d1c1503b387",
+    "vocabulary_id": "bca8ef07-28ea-5d44-8838-2602efbf5bbc",
+    "line_text": "I turned my life into a nice first week release date\nY'all out here still takin' advances, huh?\nMe and my niggas takin' real chances, uh",
+    "highlighted_word": "advances",
+    "line_index": 43,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -3117,6 +3317,16 @@
     "highlighted_word": "hide away",
     "line_index": 14,
     "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "295c8f79-77e7-52f3-8f1d-8ca215a15fdc",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "vocabulary_id": "76d90c09-09d0-55b0-8e93-a1709f9d4870",
+    "line_text": "You were made to go out and get her\nThe minute you let her under your skin\nThen you begin to make it better",
+    "highlighted_word": "under",
+    "line_index": 6,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -3400,6 +3610,16 @@
     "line_translation": null
   },
   {
+    "id": "2e4cd6e2-98ff-5c9e-8bc6-2175cfe584b1",
+    "song_id": "7949773c-3f85-5a7f-86a3-10d060f5019c",
+    "vocabulary_id": "533f8f8d-cbc4-5902-874a-57cff24f00a8",
+    "line_text": "Two, three, four!\nTake the time to make some sense\nOf what you wanna say",
+    "highlighted_word": "make",
+    "line_index": 6,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "2e604bf4-4f15-4855-a5d2-4eead26be7f9",
     "song_id": "f3d2ca88-ef51-4421-97b2-0cbc8b12e985",
     "vocabulary_id": "0d22e142-ad3f-4e01-ae1f-df184f79ad36",
@@ -3500,6 +3720,16 @@
     "line_translation": null
   },
   {
+    "id": "2fc6b26d-afc2-57e8-87ff-fd943362f623",
+    "song_id": "7c850b1e-ddf4-5397-81e0-a2c8b460ca81",
+    "vocabulary_id": "51bc5d30-0075-560d-8a8e-e76a9919c117",
+    "line_text": "Takes me one step closer to the edge\nAnd I'm about to break\nI need a little room to breathe",
+    "highlighted_word": "about",
+    "line_index": 9,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "30163d4c-c95a-584a-86e0-c1fb7e0aa3a5",
     "song_id": "eebd0cb7-7f8e-5886-8547-bb2bc2ae9d45",
     "vocabulary_id": "8f23606f-cba6-5149-871a-29f2dfd3ad5c",
@@ -3517,6 +3747,16 @@
     "highlighted_word": "see the light of day",
     "line_index": 9,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "303edf13-e1a4-5f7d-852c-542e0d20ed6b",
+    "song_id": "50000001-0000-0000-0000-000000000025",
+    "vocabulary_id": "a6ae5628-7be6-55d2-8620-efb56e1b4279",
+    "line_text": "Open up my eager eyes\n'Cause I'm Mr. Brightside\nI'm comin' out of my cage and I've been doin' just fine",
+    "highlighted_word": "Mr. Brightside",
+    "line_index": 20,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -3690,6 +3930,16 @@
     "line_translation": null
   },
   {
+    "id": "31b5f48f-2f05-5002-85dc-2212c00d97ef",
+    "song_id": "b461c904-742a-58f9-860d-be3cf37af74c",
+    "vocabulary_id": "a2515ce3-a19c-5682-8883-a91c1876a891",
+    "line_text": "Running through my veins, an American masquerade\nI still remember grandma Dixie's wake\nI've never really known anybody to die before",
+    "highlighted_word": "wake",
+    "line_index": 21,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "31ec4b79-9348-5b15-82db-0d6e812e1c88",
     "song_id": "50000001-0000-0000-0000-000000000015",
     "vocabulary_id": "37945211-512a-53c0-8b0a-d20a44f02b35",
@@ -3710,6 +3960,16 @@
     "line_translation": null
   },
   {
+    "id": "323f3e93-cc38-50ae-8a80-72e6c21b5334",
+    "song_id": "a09b22e9-4ef7-571f-802d-edc03952af65",
+    "vocabulary_id": "941c8de5-b6e4-5394-8213-36a579246034",
+    "line_text": "All your dreams are made\nWhen you're chained to the mirror and the razor blade\nToday's the day that all the world will see",
+    "highlighted_word": "chained",
+    "line_index": 1,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "3242137f-0d3c-5b14-834c-72eacf8adcb3",
     "song_id": "3b15bbd5-f1a2-5a75-859c-66a7c749de4a",
     "vocabulary_id": "115afb01-506a-5996-8c8c-548c8259fe4b",
@@ -3717,6 +3977,16 @@
     "highlighted_word": "Shit",
     "line_index": 33,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "326c3e18-7652-53a0-8e84-90b9c9c9dffb",
+    "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
+    "vocabulary_id": "fa38c8f8-e772-54e7-8045-6d833cbfb4e8",
+    "line_text": "In New York (Ayy, uh, yeah; aha)\nConcrete jungle (Yeah) where dreams are made of\nThere's nothin' you can't do (Yeah, okay)",
+    "highlighted_word": "Concrete jungle",
+    "line_index": 18,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -4040,6 +4310,16 @@
     "line_translation": null
   },
   {
+    "id": "37950d34-d9dc-57e9-8c8d-30f45950b685",
+    "song_id": "67798003-88de-5131-8465-124511d412c7",
+    "vocabulary_id": "d1c86b57-fe58-532a-8c46-50799904fb8b",
+    "line_text": "Sit down (Hold up, hold up, hold up, hold up)\nWho that nigga thinkin' that he frontin' on Man-Man? (Man-Man)\nGet the fuck off my stage, I'm the Sandman (Sandman)",
+    "highlighted_word": "frontin'",
+    "line_index": 35,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "37c4af09-6044-43eb-b4c8-3ac3db2a7726",
     "song_id": "273378d6-a6a6-416d-ad18-0cc9bffc5897",
     "vocabulary_id": "45c5cdb0-3cd8-4748-9fdd-511ce05f1d85",
@@ -4097,6 +4377,16 @@
     "highlighted_word": "hands in",
     "line_index": 14,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "38aab18a-ea60-57ef-899b-27cd81f28ceb",
+    "song_id": "c2319275-5480-59fc-8f60-03449f65d260",
+    "vocabulary_id": "208e774a-2855-5e98-888f-a71eaf6ad459",
+    "line_text": "Playa need a minute\nLike a time out in tennis 'fore I finish\nHow'd I get in this, maybe 'was your hair, maybe 'was your flair",
+    "highlighted_word": "a time out",
+    "line_index": 23,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -4560,6 +4850,16 @@
     "line_translation": null
   },
   {
+    "id": "3ebb51be-201a-5f16-80ae-ec0353fbc71f",
+    "song_id": "7c49b4ef-9a58-5524-8dcd-92f5dda752a3",
+    "vocabulary_id": "002f02b8-19f7-5edb-8e99-1d09c735e931",
+    "line_text": "I'm so much older than I can take\nAnd my affection, well, it comes and goes\nI need direction to perfection, no, no, no, no",
+    "highlighted_word": "comes and goes",
+    "line_index": 11,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "3ee625d9-e313-47ca-ad4f-0559ec5c884c",
     "song_id": "43ebb85c-5585-470e-b18b-1092ffd1a5da",
     "vocabulary_id": "befbc6af-5575-47c1-9f78-21300f0bb084",
@@ -4717,6 +5017,26 @@
     "highlighted_word": "In spite of",
     "line_index": 25,
     "created_at": "2026-07-25T10:09:28.158041+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "40798386-bded-592d-8d17-ff00608d90c2",
+    "song_id": "0d803fcc-c283-552a-83b7-c60e0eafc8de",
+    "vocabulary_id": "2bb62767-27ca-5195-89f8-6121cea5b289",
+    "line_text": "\"You did what with who?\"\nWhat good is a ménage à trois when you have a soulmate?\n\"You risked that for Blue?\"",
+    "highlighted_word": "What good is",
+    "line_index": 58,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "40974309-52d7-543d-8a3a-065286b67b97",
+    "song_id": "0e117aec-ed12-5b1d-8f9e-bbb712dd1335",
+    "vocabulary_id": "0355dea3-7954-54a6-881a-887dd6184dd6",
+    "line_text": "(I was confused) And I let it all out to find\nThat I'm not the only person with these things in mind\n(Inside of me) But all the vacancy the words revealed",
+    "highlighted_word": "mind",
+    "line_index": 3,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -5100,6 +5420,16 @@
     "line_translation": null
   },
   {
+    "id": "44b783fb-6cff-55a5-8de6-fb29a1d5b872",
+    "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
+    "vocabulary_id": "0220ce53-102e-5c7d-8104-38d26887c4ec",
+    "line_text": "But I got a gang of niggas walkin' with my clique though\nWelcome to the meltin' pot, corners where we sellin' rock\nAfrika Bambaataa shit, home of the hip-hop",
+    "highlighted_word": "the meltin' pot",
+    "line_index": 29,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "44e14705-c4a8-5162-8491-1ac78a9e668a",
     "song_id": "ba82c932-6998-54b6-8e9a-f30e0944904f",
     "vocabulary_id": "603df48a-d40a-4ae2-a31e-c81b1eb8b4a8",
@@ -5160,6 +5490,16 @@
     "line_translation": null
   },
   {
+    "id": "4507d64a-21f2-5e47-8635-c08fb64baa5d",
+    "song_id": "b2dc892a-41e0-54e6-80ff-0b75c7084922",
+    "vocabulary_id": "0ad34228-7edf-5a2b-8b18-1c16b345532b",
+    "line_text": "I hurt much more than anytime before\nI had no options left again\nI don't want to be the one the battles always choose",
+    "highlighted_word": "options left",
+    "line_index": 14,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "4520ef7a-15d8-555f-8213-cde43b3eb674",
     "song_id": "dac8c944-6e82-5108-80a4-5ca80b9b831a",
     "vocabulary_id": "29c52269-43f1-41ec-8f27-d6bfaa0e6762",
@@ -5167,6 +5507,16 @@
     "highlighted_word": "Transforming",
     "line_index": 6,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "45252260-30fa-5a06-81a9-c7dcb2b1861e",
+    "song_id": "d9dac452-e1e9-54d5-8971-02a34a8544f3",
+    "vocabulary_id": "df6cba77-247b-5afa-81be-8e87fb4430c5",
+    "line_text": "The teenage queen, the loaded gun\nThe drop dead dream, the Chosen One\nA southern drawl, a world unseen",
+    "highlighted_word": "drop dead",
+    "line_index": 27,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -5560,6 +5910,16 @@
     "line_translation": null
   },
   {
+    "id": "4acedc3b-c47e-5825-88dd-5868f3a9e280",
+    "song_id": "d0e68830-252e-5eac-8d32-146d3b598f8e",
+    "vocabulary_id": "89db145d-514e-5bcf-85da-ba4535308a00",
+    "line_text": "I need some time in the sunshine\nI've gotta slow it right down\nThe day's moving just too fast for me",
+    "highlighted_word": "down",
+    "line_index": 4,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "4ad98cc8-4629-5fb7-8253-30a1e9685a06",
     "song_id": "50000001-0000-0000-0000-000000000009",
     "vocabulary_id": "bf99e12a-8a61-4d91-89d6-a67142193212",
@@ -5627,6 +5987,16 @@
     "highlighted_word": "vibe",
     "line_index": 39,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "4c152fda-3bb2-5e7d-8022-c43623630d76",
+    "song_id": "7f1fe1aa-d1d7-56da-86e3-d7c577bae547",
+    "vocabulary_id": "45921710-7ede-5b57-8e04-92637ffde92e",
+    "line_text": "Throwin' Dead Prez in my livin' room, yeah (In my room)\nTakin' shots, feelin' bulletproof\nFlood my Rollie, told my bitch: \"Let's go snorkelin'!\" (Yeah)",
+    "highlighted_word": "Takin' shots",
+    "line_index": 64,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -6030,6 +6400,16 @@
     "line_translation": null
   },
   {
+    "id": "529c73d9-7c6e-5ed5-897a-1f92118561d0",
+    "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
+    "vocabulary_id": "2ec955eb-e4bd-5d57-8869-49027d182d69",
+    "line_text": "Don't save her, she don't wanna be saved\nThere's an old saying in Tennessee—I know it's in Texas, probably in Tennessee—that says, fool me once... shame on... shame on you\nFool me—can't get fooled again",
+    "highlighted_word": "fool me once... shame",
+    "line_index": 60,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "52ac2a88-ca4e-56c8-8ddc-8702778ac1cf",
     "song_id": "ac088b78-65f7-5470-8106-7cb7c368cca0",
     "vocabulary_id": "0d0ece07-54d6-55ee-8517-776801e7b82c",
@@ -6200,6 +6580,16 @@
     "line_translation": null
   },
   {
+    "id": "54abd819-e740-5487-8fa3-98552ee6f503",
+    "song_id": "e1124e22-c325-5931-85c1-818fffa4f1fb",
+    "vocabulary_id": "be2ba9e7-a783-5190-8f02-b4d84b55cf9e",
+    "line_text": "Push it harder, further, the\nGrind might feel like murder, but\nHip-Hop, you saved me",
+    "highlighted_word": "Grind",
+    "line_index": 27,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "54aef166-37ef-570b-84b8-a8e0f35f76c3",
     "song_id": "15d9d623-a875-546c-89fa-7d4274879ee3",
     "vocabulary_id": "d161df9f-b27d-5373-895b-f152bc9089e4",
@@ -6280,6 +6670,16 @@
     "line_translation": null
   },
   {
+    "id": "56220115-73c3-5712-899f-21ae37c46a3d",
+    "song_id": "264b0535-f093-5430-8229-af3df389439c",
+    "vocabulary_id": "fabe9257-471d-5800-84f1-19d36605a527",
+    "line_text": "You gotta say what you say\nDon't let anybody get in your way\n'Cause it's all too much for me to take",
+    "highlighted_word": "get in your way",
+    "line_index": 3,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "5639f684-5c8a-5861-8b32-c01486172808",
     "song_id": "50000001-0000-0000-0000-000000000014",
     "vocabulary_id": "96d9b2a2-987e-5120-8c8e-1032070327ee",
@@ -6317,6 +6717,16 @@
     "highlighted_word": "Consciousness",
     "line_index": 13,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "56b9c482-f446-5476-8f45-9b8cac4a9e9d",
+    "song_id": "78ee2459-f0c1-5bba-8a01-73a57dd7b098",
+    "vocabulary_id": "15bb07d8-d8eb-5e39-83fd-1736d09c6dd6",
+    "line_text": "She let it go to her head, \"No, not my Aria\"\nThe height of her shopping was writer's blocking me\nI couldn't get my shit out anyway, I hope you die, Aria",
+    "highlighted_word": "writer's blocking",
+    "line_index": 42,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -6590,6 +7000,16 @@
     "line_translation": null
   },
   {
+    "id": "5a18ff08-c014-5e15-85c9-831ad8c4770f",
+    "song_id": "e087a39d-b24d-55ca-8f3a-1193349903ae",
+    "vocabulary_id": "8e42cb74-44b6-5335-89c9-88771498f1cd",
+    "line_text": "Go and tell it to the man who lives in Hell\nSome might say you get what you've been given\nIf you don't get yours I won't get mine as well",
+    "highlighted_word": "get what you've been given",
+    "line_index": 16,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "5a58dd48-3c91-52b3-8691-46ef8243f223",
     "song_id": "d86f35c0-1a27-5f91-84e7-59fe00b5cec6",
     "vocabulary_id": "69719f4e-64e0-4b4a-996d-31e58959381f",
@@ -6637,6 +7057,16 @@
     "highlighted_word": "Reckless",
     "line_index": 5,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "5ae8f79d-2dfc-5966-8fa8-0ad5ca02e478",
+    "song_id": "8d009660-92b0-521a-8740-54ed374fe94a",
+    "vocabulary_id": "cec0712f-337c-5419-840b-872422f7d2a3",
+    "line_text": "Sky's the limit, I gotta finish as the first rapper on Mars\nMark my word, I'ma make my mark, even when they start their Martial Law\nEven when these Martians alienate, my mental state is still at heart",
+    "highlighted_word": "Mark my word",
+    "line_index": 44,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -6840,6 +7270,16 @@
     "line_translation": null
   },
   {
+    "id": "5d71c3ed-38a0-575f-80d2-8c5648679b04",
+    "song_id": "8f15f194-46a6-5863-8d84-67c39b468172",
+    "vocabulary_id": "92920a8b-a9ce-5a17-8e6e-6a1efe2eab48",
+    "line_text": "And there are many places that I wish to go\nBut everything's depending on the way the wind may blow\nI don't know what it is that makes me feel alive",
+    "highlighted_word": "the way the wind may blow",
+    "line_index": 23,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "5d7a5826-8128-5b5c-8778-160e795b16e0",
     "song_id": "59aebead-a35e-52a5-86e8-bf4c00c43c09",
     "vocabulary_id": "933c43c2-5258-5707-8700-518c87a225dd",
@@ -6927,6 +7367,16 @@
     "highlighted_word": "ends",
     "line_index": 6,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "5ea821cb-b33f-564a-8884-19aed1402f62",
+    "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
+    "vocabulary_id": "b1f7bd77-780e-5533-830a-3922ee2f4acf",
+    "line_text": "MDMA (Come on) got you feelin' like a champion (Come on)\nThe city never sleeps (Come on), better slip you a Ambien\nIn New York (Ayy, ow, uh, yeah)",
+    "highlighted_word": "city never sleeps",
+    "line_index": 64,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -7070,6 +7520,16 @@
     "line_translation": null
   },
   {
+    "id": "6075220c-33f1-5e79-8264-ee95ab6ae69a",
+    "song_id": "0df2d162-41fc-5291-850e-6d1c1503b387",
+    "vocabulary_id": "a52e4932-b32b-59fc-8c11-2ee96ce5c440",
+    "line_text": "Financial freedom my only hope\nFuck livin' rich and dyin' broke\nI bought some artwork for one million",
+    "highlighted_word": "broke",
+    "line_index": 34,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "608c1607-a6eb-5ba8-8042-afbff701b8a1",
     "song_id": "82e6875c-7ce4-57fa-80a1-db8a4143b2e5",
     "vocabulary_id": "ee712b2e-41c5-5ffb-8fe5-b08caf1c1bc4",
@@ -7107,6 +7567,16 @@
     "highlighted_word": "damn",
     "line_index": 36,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "60d523da-b1ec-5c73-8427-21384f418917",
+    "song_id": "7e257ad3-80f7-5a84-8c29-975126895592",
+    "vocabulary_id": "afa7d160-aff4-5ff0-8d8e-522ff41c4d16",
+    "line_text": "(Uh!) Off again, there he go. To another dimension, my mind (Mind)\nBody, soul imprisoned, my eye. Probably goin' ballistic, but, listen, I'm missin' a couple of screws\nThey ain't never do drillin' true, you been sippin' away at the truth",
+    "highlighted_word": "screws",
+    "line_index": 9,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -8180,6 +8650,16 @@
     "line_translation": null
   },
   {
+    "id": "6d8e2de3-86ab-5c77-8606-b58504066794",
+    "song_id": "6753e1f3-9c78-5a10-8583-c845a64b921d",
+    "vocabulary_id": "76334ced-8657-5e1e-8000-f87e76831251",
+    "line_text": "Damn\nWhat's the move? Can I tell the truth?\nIf I was doing this for you then I'd have nothing left to prove",
+    "highlighted_word": "What's the move",
+    "line_index": 17,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "6da2a300-b312-58e5-8241-303b6442bee6",
     "song_id": "d67348f5-6036-5fd8-8a34-660fba6d7dbf",
     "vocabulary_id": "5015923f-35e6-4c0d-bc0c-ef6d45f4427c",
@@ -8397,6 +8877,16 @@
     "highlighted_word": "find out",
     "line_index": 8,
     "created_at": "2026-07-16T18:32:18.728484+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "7148287a-43d6-5b30-8846-ca506e3c3cbb",
+    "song_id": "15d9d623-a875-546c-89fa-7d4274879ee3",
+    "vocabulary_id": "a42cce6c-88a3-53c7-81f7-4558671154b1",
+    "line_text": "When I think of love as something new (Ooh, ooh, ooh)\nThough I know I'll never lose affection\nFor people and things that went before",
+    "highlighted_word": "lose affection",
+    "line_index": 12,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -8740,6 +9230,16 @@
     "line_translation": null
   },
   {
+    "id": "75f3d880-7553-519b-85a0-47edf8c38ecd",
+    "song_id": "8d009660-92b0-521a-8740-54ed374fe94a",
+    "vocabulary_id": "b371092c-456f-51b8-8b17-13db53616717",
+    "line_text": "Tater tots on my shotgun, now I gotta pop one at the stars\nSky's the limit, I gotta finish as the first rapper on Mars\nMark my word, I'ma make my mark, even when they start their Martial Law",
+    "highlighted_word": "Sky's the limit",
+    "line_index": 43,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "7620a5d6-ec24-5fc7-867d-491daafd90b1",
     "song_id": "4113dec8-6df9-50fe-8d0b-9474b4c741b9",
     "vocabulary_id": "f825a8ed-0989-47d0-a136-46b077f0a15b",
@@ -8777,6 +9277,16 @@
     "highlighted_word": "get in",
     "line_index": 0,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "7627fa60-9e1b-5389-82e3-1abd5072a44c",
+    "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
+    "vocabulary_id": "75f2b3ad-221d-5e39-8682-085401f4f1f8",
+    "line_text": "She said, \"Ye, can we get married at the mall?\"\nI said, \"Look, you need to crawl 'fore you ball\"\nCome and meet me in the bathroom stall",
+    "highlighted_word": "crawl",
+    "line_index": 36,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -8900,6 +9410,16 @@
     "line_translation": null
   },
   {
+    "id": "77c62f44-7529-5075-890b-172fb12e3611",
+    "song_id": "33a27298-73e2-506e-8e57-bfc9942f1a9e",
+    "vocabulary_id": "a398c72b-7976-5e9d-885e-d7e079fa7a49",
+    "line_text": "Wake up (Wake up)\nGrab a brush and put a little makeup\nHide your scars to fade away the shakeup (Hide the scars to fade away the shakeup)",
+    "highlighted_word": "put a little makeup",
+    "line_index": 2,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "77d74cbf-2f52-5886-88fe-a2a72b2ec557",
     "song_id": "3e3bcc19-9ed3-5bae-893a-0242192569bf",
     "vocabulary_id": "eecbdb41-6736-46ad-bea3-828b6e5ad129",
@@ -8937,6 +9457,16 @@
     "highlighted_word": "got back",
     "line_index": 64,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "789f7d40-c682-54a1-8eef-7fc59228a457",
+    "song_id": "15369d8f-4975-5100-8390-b2ec70c3580c",
+    "vocabulary_id": "e1e235f5-9bbe-5dc1-8a54-c3f0cf8f93ed",
+    "line_text": "God\nPut me out of my misery\nPut me out of my misery",
+    "highlighted_word": "Put me out of my misery",
+    "line_index": 27,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -9230,6 +9760,16 @@
     "line_translation": null
   },
   {
+    "id": "7b840727-8151-59fe-82ee-f5b99d859b2f",
+    "song_id": "7fe3d843-0870-50dc-8977-812df761b474",
+    "vocabulary_id": "9ca5bbeb-191a-50c0-8817-5eb994b02a66",
+    "line_text": "If God put me in your plans or not\nI'm trippin', this drink got me sayin' a lot\nBut I know that God put you in front of me",
+    "highlighted_word": "trippin'",
+    "line_index": 51,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "7b8cd309-6f8f-43aa-a781-b48f2caf194b",
     "song_id": "27ca9eee-e245-4355-b7b1-823fed82fd03",
     "vocabulary_id": "f25e7739-a3fa-4b96-98c7-d3593304562e",
@@ -9257,6 +9797,16 @@
     "highlighted_word": "Come back",
     "line_index": 21,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "7bd0b7bd-b08b-523e-8533-7834ffc117b5",
+    "song_id": "50000001-0000-0000-0000-000000000025",
+    "vocabulary_id": "956b094c-7586-5d84-8c76-598af5f5a51e",
+    "line_text": "Comin' out of my cage and I've been doin' just fine\nGotta, gotta be down because I want it all",
+    "highlighted_word": "Comin' out of my cage",
+    "line_index": 0,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -9550,6 +10100,16 @@
     "line_translation": null
   },
   {
+    "id": "807cf93f-dcd3-54c9-81c5-0adb7f7cb27b",
+    "song_id": "50000001-0000-0000-0000-000000000015",
+    "vocabulary_id": "bc3c25d7-37f1-5fd0-8349-ac6c5a0c83e4",
+    "line_text": "Crawling in my skin\nThese wounds, they will not heal",
+    "highlighted_word": "Crawling",
+    "line_index": 0,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "808bbd7a-30b1-5e3c-89dd-265927266a4b",
     "song_id": "4d0897ea-5e8b-563c-8de3-c3ddda92c24f",
     "vocabulary_id": "ac4592d5-9093-5b77-882e-7b0a79b5e120",
@@ -9587,6 +10147,16 @@
     "highlighted_word": "getting in",
     "line_index": 10,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "80fbb875-77c3-52e8-87fe-a680ff2ec0c4",
+    "song_id": "ba82c932-6998-54b6-8e9a-f30e0944904f",
+    "vocabulary_id": "3f7ef83c-f138-54ec-8055-5fd1ca913aa7",
+    "line_text": "For my niggas who be thinkin' we soft, we don't play\nWe gon' rock it 'til the wheels fall off\nHold up, hey",
+    "highlighted_word": "wheels",
+    "line_index": 47,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -9647,6 +10217,16 @@
     "highlighted_word": "pedal to the metal",
     "line_index": 22,
     "created_at": "2026-07-22T16:38:04.618848+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "81c14fc2-51b2-5e27-8433-795d890cba72",
+    "song_id": "7fe3d843-0870-50dc-8977-812df761b474",
+    "vocabulary_id": "37b9dbe9-9fec-53da-8c29-fceaaf15b61f",
+    "line_text": "Work it, make it, do it, makes us\nHarder, better, faster, stronger\nNah-nah-nah, that, that don't kill me",
+    "highlighted_word": "stronger",
+    "line_index": 1,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -10060,6 +10640,16 @@
     "line_translation": null
   },
   {
+    "id": "866c899d-0a96-5a2e-88d6-5c5e03e5934e",
+    "song_id": "8b3f7387-d1fd-5823-83b6-35f85eaf92aa",
+    "vocabulary_id": "82ac5317-9ef4-5c46-804f-88b9001e26e5",
+    "line_text": "I'm diggin', I'm diggin', I'm searchin' right through that luggage\nOne man's trash, that's another man's come up\nThank your granddad for donatin' that plaid button-",
+    "highlighted_word": "One man's trash",
+    "line_index": 52,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "8670bbab-23d1-5929-81d7-caba2ec459a5",
     "song_id": "6d03ee86-4fc0-5bba-8b7a-48a992527c16",
     "vocabulary_id": "115afb01-506a-5996-8c8c-548c8259fe4b",
@@ -10157,6 +10747,16 @@
     "highlighted_word": "hold up",
     "line_index": 42,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "8813d640-a600-5bf8-8279-63d339d2f8c0",
+    "song_id": "0393d08f-4483-54cf-8741-1b05ea475b7a",
+    "vocabulary_id": "9e77daf9-e5ff-55f3-8a87-7c176289e5a1",
+    "line_text": "I'm amazing, born on a full moon\nI was bred to get it in, no spoon\nThat's why I'm so goon, summertime, no June",
+    "highlighted_word": "no spoon",
+    "line_index": 41,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -10597,6 +11197,16 @@
     "highlighted_word": "sing",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "8def1c5d-2665-5716-8531-0080c264c8be",
+    "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
+    "vocabulary_id": "87ab255f-0cd2-59ca-8f66-7aa700b25fde",
+    "line_text": "Out in Hollywood bringin' back five or six hoes\nFuck 'em then we kick 'em to the do', nigga, you know how it go\nShe deserved that, she a bird, it's a bird trap",
+    "highlighted_word": "kick",
+    "line_index": 47,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -11310,6 +11920,16 @@
     "line_translation": null
   },
   {
+    "id": "969e7542-019c-5222-859b-d8d4570181e3",
+    "song_id": "ea89bfc1-e695-5826-82aa-dd8a8f71d262",
+    "vocabulary_id": "59d0f42c-d71c-5ea1-805c-c30846fd67c6",
+    "line_text": "I'm a weirdo\nWhat the hell am I doin' here?\nI don't belong here",
+    "highlighted_word": "What the hell",
+    "line_index": 10,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "96a1ecc3-e9ed-5b52-883a-10019c07ad9a",
     "song_id": "594c91df-5863-57ef-8d23-a1162bda9777",
     "vocabulary_id": "dafeb145-4903-41f4-9c7c-ce585c601942",
@@ -11590,6 +12210,16 @@
     "line_translation": null
   },
   {
+    "id": "9ba2c969-ffae-57f9-83c1-bc64bf8f9386",
+    "song_id": "0a0b14d9-bfeb-5b5e-871a-7bb25f462b92",
+    "vocabulary_id": "588de3a6-3538-51db-89b8-cfaf3bd087fe",
+    "line_text": "Heaven can wait, we're only watching the skies\nHoping for the best but expecting the worst\nAre you gonna drop the bomb or not?",
+    "highlighted_word": "Hoping for the best but expecting the worst",
+    "line_index": 2,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "9bb99bea-26c1-591e-8d89-b510f8432fc5",
     "song_id": "9f327e99-67fe-5386-88a4-653997613bf8",
     "vocabulary_id": "a5625a27-7267-4c76-9596-33e90fb0d40e",
@@ -11760,6 +12390,16 @@
     "line_translation": null
   },
   {
+    "id": "9d15ef70-e5d0-5c18-8e8f-686bdbb3738e",
+    "song_id": "2833429e-0486-5b9e-82c5-2d47b6a71da9",
+    "vocabulary_id": "691fed44-26e3-5b14-8601-c47a412b1090",
+    "line_text": "I'm out here, on my son, won't stop 'til I get me some\nClub-hoppin', tryna get me some, bad bitches wanna get me sprung\nEarly in the morning, I'm wakin', bakin', drinkin', contemplatin'",
+    "highlighted_word": "Club-hoppin'",
+    "line_index": 3,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "9d706c56-3b10-5516-8ad9-c76a1a7892f2",
     "song_id": "530f4c24-c23a-5e2c-86e9-835c50f5f87a",
     "vocabulary_id": "e046c031-d2fd-4e71-ae19-d1ce34aa7cbd",
@@ -11800,6 +12440,16 @@
     "line_translation": null
   },
   {
+    "id": "9dcd5bb3-8887-5503-87dd-2bc7a0d554e9",
+    "song_id": "49c43c61-c779-5b87-80e8-d56722006d03",
+    "vocabulary_id": "a0e41437-42d9-52cb-88cd-8c2a20ee2360",
+    "line_text": "I'm on the pursuit of happiness, and I know\nEverything that shine ain't always gonna be gold, hey\nI'll be fine once I get it",
+    "highlighted_word": "gonna be gold",
+    "line_index": 13,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "9e0538e9-d60f-5f2d-8991-a30d596284db",
     "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
     "vocabulary_id": "55c59ddf-6052-4db6-90ff-400c7435ce85",
@@ -11810,6 +12460,16 @@
     "line_translation": null
   },
   {
+    "id": "9e1fcfcd-3ac7-5b00-891a-b04bb08f43d4",
+    "song_id": "7c850b1e-ddf4-5397-81e0-a2c8b460ca81",
+    "vocabulary_id": "3a0468ee-6ae3-505b-8512-9ec781bfb313",
+    "line_text": "Everything you say to me\nTakes me one step closer to the edge\nAnd I'm about to break",
+    "highlighted_word": "edge",
+    "line_index": 8,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "9e415428-46d5-55ef-80c2-8094c05e170a",
     "song_id": "345652c0-2c0e-5e51-87a5-90daaa1c5eeb",
     "vocabulary_id": "41d9c755-3e4f-4303-b0de-3b70defb9302",
@@ -11817,6 +12477,16 @@
     "highlighted_word": "get back",
     "line_index": 29,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "9e7358fc-7772-568f-8dad-d60d37aafbea",
+    "song_id": "78ee2459-f0c1-5bba-8a01-73a57dd7b098",
+    "vocabulary_id": "21b501bd-70b4-51e6-83c5-3d1b040c46c2",
+    "line_text": "We just praying the new fame don't get the best of us\nBut all good things gotta come to a en-a\nShe let it go to her head, \"No, not my Aria\"",
+    "highlighted_word": "things",
+    "line_index": 40,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -11920,6 +12590,16 @@
     "line_translation": null
   },
   {
+    "id": "9f92582e-0adb-540b-8177-3c07ab06519e",
+    "song_id": "50000001-0000-0000-0000-000000000010",
+    "vocabulary_id": "98f1b5d7-daa2-5c60-8da1-c7f2ec79bfdb",
+    "line_text": "Oh, and I rush to the start (Ooh)\nRunnin' in circles, chasin' our tails (Ooh)\nComin' back as we are",
+    "highlighted_word": "chasin' our tails",
+    "line_index": 19,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "9fd4a1dd-22c4-4b0a-90d1-39b10c11fc3c",
     "song_id": "b1df1c66-8e84-46fb-ba42-832fbe5efe5d",
     "vocabulary_id": "8536badd-a7a5-4c16-b12b-9e8dadbe5e8f",
@@ -11927,6 +12607,16 @@
     "highlighted_word": "log out",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "9fe4cb41-c4eb-595e-8821-5a54c3eb6caa",
+    "song_id": "50000001-0000-0000-0000-000000000027",
+    "vocabulary_id": "9c629778-4e2c-5b3a-85ed-21e3257a7412",
+    "line_text": "Breakin' my back just to know your name\nSeventeen tracks and I've had it with this game\nI'm breakin' my back just to know your name",
+    "highlighted_word": "had it with this game",
+    "line_index": 1,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -12360,6 +13050,16 @@
     "line_translation": null
   },
   {
+    "id": "a4e61f21-eda2-5859-80ec-2850228d3193",
+    "song_id": "a09b22e9-4ef7-571f-802d-edc03952af65",
+    "vocabulary_id": "fbbaa0b0-82b5-5009-8555-73b9ff6671ef",
+    "line_text": "You know you should, so I guess you might as well\nWhat's the story, morning glory?\nWell?",
+    "highlighted_word": "What's the story",
+    "line_index": 11,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "a53f5ab5-1d37-59ca-8867-b66c2c9194ea",
     "song_id": "e7ac05e3-db53-5718-8bb0-cfe3d2a8bd05",
     "vocabulary_id": "7e7777c1-bce7-4f1f-b46d-b072475a46cb",
@@ -12387,6 +13087,16 @@
     "highlighted_word": "story",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "a5cf5a58-59ec-59be-8cac-f3505a80ec87",
+    "song_id": "db6c7436-52dd-5aa2-8ca6-24a39fb63aac",
+    "vocabulary_id": "93c469d4-813c-5ca3-8d6a-0005c8af3122",
+    "line_text": "I always step up I’m clutch, this is planned, this isn’t luck\nMy adviser is my gut, please don't ever interrupt\nI got businesses galore, I just opened up my store",
+    "highlighted_word": "My adviser is my gut",
+    "line_index": 47,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -12670,6 +13380,16 @@
     "line_translation": null
   },
   {
+    "id": "a86c2289-78db-53a1-84f2-8fd1ee51d15d",
+    "song_id": "50000001-0000-0000-0000-000000000007",
+    "vocabulary_id": "7b297c4c-65a6-4052-a050-83e5adfdca95",
+    "line_text": "And nothing else matters\nNever opened myself this way\nLife is ours, we live it our way",
+    "highlighted_word": "opened",
+    "line_index": 4,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "a8ba9b5f-36d2-4b0c-96b1-64216d6b02c8",
     "song_id": "a9f30241-c4f4-4785-b9d7-47b1e16fee72",
     "vocabulary_id": "726b0da2-c4ac-4bd4-ba7a-44c3b67c057e",
@@ -12687,6 +13407,16 @@
     "highlighted_word": "grow up",
     "line_index": 48,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "a91bdade-d0c0-52c2-8825-2d9c303fe4a2",
+    "song_id": "2e2fab92-e488-5f67-8685-3cc15b803a57",
+    "vocabulary_id": "0eeb748a-7962-52dc-821c-f26e3344fbf5",
+    "line_text": "(I) All I ever think about is this, all the tiring time between\nAnd how trying to put my trust in you just takes so much out of me\nTake everything from the inside",
+    "highlighted_word": "takes",
+    "line_index": 6,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -12760,6 +13490,16 @@
     "line_translation": null
   },
   {
+    "id": "aa09084a-bbcd-5525-8466-2d87c0cecd55",
+    "song_id": "bd770a8c-e28a-5815-85d0-47df35c07b7b",
+    "vocabulary_id": "3ee6774b-4d7f-5af0-8ba2-282b77f44117",
+    "line_text": "You're looking at the man (You're looking at the man)\nI got skin in the game\nI got a household name",
+    "highlighted_word": "skin in the game",
+    "line_index": 17,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "aa311b81-8998-53fc-87aa-cbc9e0dddd2d",
     "song_id": "afc31011-d151-5cf7-8b48-26b7528b074f",
     "vocabulary_id": "e915e5b1-d870-5f39-816d-32bcf35323af",
@@ -12807,6 +13547,16 @@
     "highlighted_word": "pull the trigger",
     "line_index": 18,
     "created_at": "2026-07-25T10:37:52.397825+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "aad37e19-d696-54bc-8734-7a43a9cd1b6c",
+    "song_id": "2833429e-0486-5b9e-82c5-2d47b6a71da9",
+    "vocabulary_id": "60faf515-cd06-5fc6-8da5-5d3f6de95b90",
+    "line_text": "Thinking 'bout all my old friends who weren't my friends all along\nHm, when it rains it pours, whiskey bottles on the sinks and floors\nEvery day to find sane's a chore, amidst a dream with no exit doors",
+    "highlighted_word": "when it rains it pours",
+    "line_index": 40,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -13180,6 +13930,16 @@
     "line_translation": null
   },
   {
+    "id": "b05db3d0-3b3b-51b5-87da-f1f6e5bbe3ee",
+    "song_id": "4d0897ea-5e8b-563c-8de3-c3ddda92c24f",
+    "vocabulary_id": "741cd09f-1678-5fdb-8751-337f54f6e102",
+    "line_text": "Nigga, and we roll deep, so deep\nIt's going down in this bitch, concrete\nWe gon' party all night, no sleep",
+    "highlighted_word": "It's",
+    "line_index": 8,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "b08fd70b-8b52-4984-9e24-7f984f599f79",
     "song_id": "b4918c8a-7136-4842-a25d-e87c49f9e566",
     "vocabulary_id": "a3db1a69-bd2d-4b01-a54b-5727a0cfa7f9",
@@ -13287,6 +14047,16 @@
     "highlighted_word": "calm down",
     "line_index": 109,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "b1c17179-a020-5e8e-842a-5acf2119ef0d",
+    "song_id": "da9a9463-1ac0-58b2-88eb-2e23c1dd4130",
+    "vocabulary_id": "8b5babd0-3b19-5b68-8aec-ec69f203c8ab",
+    "line_text": "'Fore I started callin' bitches \"bitches\" so heavily\nBack when you could get a platinum plaque without no melody, you wadn't sweatin' me\nOne time for my L.A. sisters",
+    "highlighted_word": "sweatin'",
+    "line_index": 31,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -13427,6 +14197,16 @@
     "highlighted_word": "dude",
     "line_index": 71,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "b385c41b-b82d-5090-8b0a-74e896d09ce0",
+    "song_id": "2833429e-0486-5b9e-82c5-2d47b6a71da9",
+    "vocabulary_id": "69b412b9-dae4-528d-8aa7-16544f9124eb",
+    "line_text": "Club-hoppin', tryna get me some, bad bitches wanna get me sprung\nEarly in the morning, I'm wakin', bakin', drinkin', contemplatin'\nAin't no such thing as Satan, evil is what you make it",
+    "highlighted_word": "wakin', bakin'",
+    "line_index": 4,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -13590,6 +14370,16 @@
     "line_translation": null
   },
   {
+    "id": "b53a4e9d-da01-52d1-870d-3338a7f55481",
+    "song_id": "50000001-0000-0000-0000-000000000014",
+    "vocabulary_id": "a24e81d4-a954-5934-8f0e-2c7d28a30e71",
+    "line_text": "I don't know what you're expecting of me\nPut under the pressure of walking in your shoes\nCaught in the undertow, just caught in the undertow",
+    "highlighted_word": "walking in your shoes",
+    "line_index": 3,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "b563473a-6354-57ac-8559-0a05682da20a",
     "song_id": "50d33df2-f2ab-5512-858f-8e5e58a164c9",
     "vocabulary_id": "527b2b5f-8471-526f-8030-13c0caffaeca",
@@ -13647,6 +14437,16 @@
     "highlighted_word": "shrink",
     "line_index": 30,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "b68fa3b1-ce3a-5bec-8cdb-33e5d826a0b5",
+    "song_id": "d9dac452-e1e9-54d5-8971-02a34a8544f3",
+    "vocabulary_id": "fb291cb5-a8c6-50dd-87bc-53e48a9acd53",
+    "line_text": "I never really gave up on\nBreakin' out of this two-star town\nI got the green light, I got a little fight",
+    "highlighted_word": "two-star town",
+    "line_index": 8,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -13717,6 +14517,16 @@
     "highlighted_word": "run away",
     "line_index": 8,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "b7ac0e07-58e9-5ad4-8b5f-057f2f41cbbb",
+    "song_id": "d9dac452-e1e9-54d5-8971-02a34a8544f3",
+    "vocabulary_id": "525e62ab-80f8-59d1-8c71-818863aaf7f0",
+    "line_text": "You say I'm fallin' behind\nCan you read my mind?\nCan you read my mind?",
+    "highlighted_word": "read my mind",
+    "line_index": 5,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -13807,6 +14617,16 @@
     "highlighted_word": "class clown",
     "line_index": 20,
     "created_at": "2026-07-22T11:29:46.56665+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "b8ddb812-b4f3-5325-83db-512ddca3f003",
+    "song_id": "50000001-0000-0000-0000-000000000027",
+    "vocabulary_id": "8f87431d-f6e6-54d6-8fab-de0082b21321",
+    "line_text": "Ready, let's roll onto somethin' new\nTakin' its toll then I'm leaving without you\n'Cause heaven ain't close in a place like this",
+    "highlighted_word": "Takin' its toll",
+    "line_index": 13,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -14270,6 +15090,16 @@
     "line_translation": null
   },
   {
+    "id": "be50a07c-6c70-527a-81f0-1a2dd1ea3254",
+    "song_id": "b7e59710-09e7-5f64-80b8-145f41429a3f",
+    "vocabulary_id": "3e790915-abaf-5869-8dfa-fd477161b889",
+    "line_text": "Is this thing on? Word\nSo what we get drunk?\nSo what we smoke weed?",
+    "highlighted_word": "So what",
+    "line_index": 4,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "be6169b3-3631-5bcb-89d8-5ef202294603",
     "song_id": "4b64067c-bccc-5dee-8f80-5729105f09fd",
     "vocabulary_id": "06cc2816-d59d-476f-9d5f-8ac191f49365",
@@ -14387,6 +15217,16 @@
     "highlighted_word": "chic",
     "line_index": 16,
     "created_at": "2026-07-24T22:42:40.824507+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "bfa8637e-2e1d-5a1a-8331-54a68798f37a",
+    "song_id": "7ca03d1f-e8f6-5acc-8f39-e56b386bb0a3",
+    "vocabulary_id": "3ca9088b-d568-5947-8a10-cff9d94394b4",
+    "line_text": "Of Desmond and Molly Jones (Ha, ha, ha, ha, ha, ha)\nHappy ever after in the marketplace\nDesmond lets the children lend a hand (Arm, leg)",
+    "highlighted_word": "Happy ever after",
+    "line_index": 24,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -14550,6 +15390,16 @@
     "line_translation": null
   },
   {
+    "id": "c159212e-c5b8-5b28-897f-84474c371f55",
+    "song_id": "4a618b69-20e4-59b9-8fcf-ff142b58d0c4",
+    "vocabulary_id": "c66126fa-4e4c-5ec3-8072-fc107a545d29",
+    "line_text": "You can't be no one else\nI know a girl called Elsa, she's into Alka-Seltzer\nShe sniffs it through a cane on a supersonic train",
+    "highlighted_word": "into",
+    "line_index": 21,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "c16bdc32-f42e-59cc-8d30-eeaac5648625",
     "song_id": "959a2f78-2676-579f-893c-c2f814b549cf",
     "vocabulary_id": "b39ac4f4-e064-4645-9a7e-b73dbf5aea42",
@@ -14587,6 +15437,16 @@
     "highlighted_word": "get up",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.409466+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "c1dea341-0867-5006-884e-68ba0a0e993a",
+    "song_id": "2833429e-0486-5b9e-82c5-2d47b6a71da9",
+    "vocabulary_id": "20e4d406-4f9b-5a87-8cc1-e5ecb4b1905f",
+    "line_text": "I say, \"Ain't no music on\", she said, \"Nah, that weed is loud\"\nNigga, we ballin', straight swaggin', lost Hawk, but I'm maintainin'\nI've been told that I'm amazing, make sure keep that fire blazin', we livin'",
+    "highlighted_word": "ballin'",
+    "line_index": 11,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -14950,6 +15810,16 @@
     "line_translation": null
   },
   {
+    "id": "c74f110a-e5fa-5223-8cb4-4586797c98bb",
+    "song_id": "e1124e22-c325-5931-85c1-818fffa4f1fb",
+    "vocabulary_id": "814eff83-ef26-547b-82c8-899b89af9185",
+    "line_text": "Told her when he get on, he gon' take her to the Galleria\nBuy her everything but the mannequins, ya dig?\nOne you never heard of, I",
+    "highlighted_word": "ya dig",
+    "line_index": 48,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "c78efebb-963b-4ed3-b347-11c8204e8638",
     "song_id": "72b94f12-1408-4ff9-afda-03cee9821695",
     "vocabulary_id": "f49934c9-846c-4ea9-a64d-82f4eed9abe3",
@@ -15010,6 +15880,16 @@
     "line_translation": null
   },
   {
+    "id": "c8d3bb4e-0690-58ed-8e64-bdaa2bf6ac09",
+    "song_id": "a506bfa5-d236-570a-8901-9a7e2fb6ee9c",
+    "vocabulary_id": "ba442c80-097f-5c79-859b-eec464e5e6dd",
+    "line_text": "10... 9... 8... 7... 6... 5... 4... 3... 2... 1...\nI'm off on the adventure (Yup, we're good)\nThis here is dedicated to all the kids like me",
+    "highlighted_word": "off on the adventure",
+    "line_index": 3,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "c8fd688e-1a66-4cd9-b583-d06e6c764567",
     "song_id": "e69cae83-a54b-42bf-bd05-58da107856d4",
     "vocabulary_id": "037e3739-6e29-4403-9e4a-038b3ceb902d",
@@ -15067,6 +15947,16 @@
     "highlighted_word": "every now and then",
     "line_index": 14,
     "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "c9c7c2c9-ecbd-576d-8db3-f37c47fdd312",
+    "song_id": "15369d8f-4975-5100-8390-b2ec70c3580c",
+    "vocabulary_id": "12ea1722-c825-58d6-88b8-1905a47c9c5e",
+    "line_text": "There's no escape\nI'm my own worst enemy\nI've given up",
+    "highlighted_word": "own worst enemy",
+    "line_index": 6,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -15400,6 +16290,16 @@
     "line_translation": null
   },
   {
+    "id": "ce8bfced-3eba-5fd1-8f2b-faa2e243a686",
+    "song_id": "b2dc892a-41e0-54e6-80ff-0b75c7084922",
+    "vocabulary_id": "c5ca22ff-db30-57c2-8315-beb16d9363b9",
+    "line_text": "I'll paint it on the walls\n'Cause I'm the one at fault\nI'll never fight again",
+    "highlighted_word": "fault",
+    "line_index": 23,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "ce974681-40ba-502d-8d6e-3ea5a5b65055",
     "song_id": "afc31011-d151-5cf7-8b48-26b7528b074f",
     "vocabulary_id": "a39ee69c-ee8b-5bab-852d-536b9dc25f77",
@@ -15730,6 +16630,16 @@
     "line_translation": null
   },
   {
+    "id": "d26bdf1f-3965-59ad-828f-88a8308d04c3",
+    "song_id": "06bc5f2b-fb1c-513f-89c0-c5c95eae4cd2",
+    "vocabulary_id": "aa987313-01ee-5d1c-86c2-a5f03c20df5b",
+    "line_text": "I see money as the route of all people\n'Cause we all follow paper trails, paper trails\nAnd everybody gotta pay their bills, pay their bills (It ain't easy)",
+    "highlighted_word": "paper trails",
+    "line_index": 58,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "d27c429d-abe1-5698-84fc-de8f8a2bac75",
     "song_id": "375cab64-89e4-5fd2-8b2b-7543cf42a406",
     "vocabulary_id": "b07e1a96-31be-5a37-883b-fc6c449dcaef",
@@ -15760,6 +16670,16 @@
     "line_translation": null
   },
   {
+    "id": "d2d44aa5-be57-54d6-8335-c5b577e7fcad",
+    "song_id": "ba82c932-6998-54b6-8e9a-f30e0944904f",
+    "vocabulary_id": "73563cb2-d890-50cb-8d76-f9b76112361f",
+    "line_text": "La-da-da-da-dah\nYou know I'm mobbin' with the D-R-E (Yeah, yeah, yeah)\nYou know who's back up in this motherfucker",
+    "highlighted_word": "mobbin'",
+    "line_index": 3,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "d2d64ec2-ac31-5710-8f44-07e17d968d6c",
     "song_id": "12b58aff-1846-594e-8eff-85501043168f",
     "vocabulary_id": "b5ca6698-7af8-4c30-9edf-3d1a71172ea5",
@@ -15787,6 +16707,16 @@
     "highlighted_word": "need",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:10.524919+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "d31c1ad5-1da7-5ccf-88ee-bbbc7ab43e92",
+    "song_id": "b2dc892a-41e0-54e6-80ff-0b75c7084922",
+    "vocabulary_id": "d5bd9e8e-61fe-5a8b-8779-db9138b6058c",
+    "line_text": "I don't know how I got this way, I know it's not alright\nSo I'm breaking the habit\nI'm breaking the habit tonight",
+    "highlighted_word": "breaking the habit",
+    "line_index": 9,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -16280,6 +17210,16 @@
     "line_translation": null
   },
   {
+    "id": "d7edda25-97d9-542d-8e3c-e436348a8374",
+    "song_id": "50000001-0000-0000-0000-000000000002",
+    "vocabulary_id": "1b433af9-c067-579c-829a-ca6892d0b820",
+    "line_text": "He got hair down to his knee\nGot to be a joker, he just do what he please\nShoot me",
+    "highlighted_word": "please",
+    "line_index": 7,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "d80f1528-4c63-4662-8bdc-262f3d8f84b6",
     "song_id": "bb0b6dd4-0386-4ef6-834f-f47a8c5c4162",
     "vocabulary_id": "369ab104-905d-40c1-8326-e55f904c5d16",
@@ -16560,6 +17500,16 @@
     "line_translation": null
   },
   {
+    "id": "db0bb63c-d7db-580a-85b8-2d7f567f5508",
+    "song_id": "66ed6432-4397-5e8a-8c70-45f4c11157b4",
+    "vocabulary_id": "9b384b89-28e4-5515-8eed-0ea603e52ed3",
+    "line_text": "(Ow!) Don't let me down\nCan you dig it? Yeah\n(Don't let me down)",
+    "highlighted_word": "Can you dig it",
+    "line_index": 27,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "db69441f-b2d3-58de-8dc5-e0b0709a6e84",
     "song_id": "d8d387d2-0130-54b0-89f3-0661e3a250a0",
     "vocabulary_id": "5439d1e5-17f6-4e22-b04e-0d1f2b98aa08",
@@ -16597,6 +17547,16 @@
     "highlighted_word": "Come along",
     "line_index": 13,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "dbdbf59b-f141-5325-8e1e-27c9e9ad6a9d",
+    "song_id": "4a618b69-20e4-59b9-8fcf-ff142b58d0c4",
+    "vocabulary_id": "877858c5-49e4-567b-8a11-de3d0c3588a8",
+    "line_text": "You need to find out\n'Cause no one's gonna tell you what I'm on about\nYou need to find a way for what you want to say",
+    "highlighted_word": "about",
+    "line_index": 9,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -16707,6 +17667,16 @@
     "highlighted_word": "texture",
     "line_index": 0,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "de792540-1d68-589d-842b-d9ecea32b371",
+    "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
+    "vocabulary_id": "51290170-91da-531f-81b3-e15cadcc06fe",
+    "line_text": "I'm the new Sinatra, and since I made it here\nI can make it anywhere, yeah, they love me everywhere\nI used to cop in Harlem, hola, my Dominicanos (Dímelo)",
+    "highlighted_word": "can make it anywhere",
+    "line_index": 4,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -16887,6 +17857,16 @@
     "highlighted_word": "break down",
     "line_index": 10,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "e2c037a6-3f41-57f5-801b-1c6b827ad9c9",
+    "song_id": "50000001-0000-0000-0000-000000000007",
+    "vocabulary_id": "8d72293a-38ef-5a4f-88c0-dcb4f5ef4747",
+    "line_text": "Every day for us something new\nOpen mind for a different view\nAnd nothing else matters",
+    "highlighted_word": "Open mind",
+    "line_index": 10,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
     "line_translation": null
   },
   {
@@ -17220,6 +18200,16 @@
     "line_translation": null
   },
   {
+    "id": "e739ae77-2309-57c6-8f7e-6aac4a946915",
+    "song_id": "588eac64-e39b-5246-8b31-a1452b1b3af9",
+    "vocabulary_id": "872fd35b-578f-562e-8524-8a3bf1f4e91c",
+    "line_text": "Yeah\nAlright, already, the show goes on\nAll night, 'til the morning we dream so long",
+    "highlighted_word": "show goes",
+    "line_index": 4,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "e767a892-6364-5b8a-86aa-ce102b5ff4fd",
     "song_id": "c5bff7ee-e3eb-56cf-8ded-c90f5ccf0976",
     "vocabulary_id": "dd448d8c-ef6c-4356-99d5-cc20092513bf",
@@ -17300,6 +18290,16 @@
     "line_translation": null
   },
   {
+    "id": "e8596278-d90a-5175-8aae-b26a202d82ba",
+    "song_id": "50000001-0000-0000-0000-000000000019",
+    "vocabulary_id": "c60fe504-2e5c-59a4-87d6-faa024fff085",
+    "line_text": "(Under the bridge downtown)\nI could not get enough\n(Under the bridge downtown)",
+    "highlighted_word": "enough",
+    "line_index": 28,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "e85a0a4c-a9f9-58b2-811a-66be2d449422",
     "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
     "vocabulary_id": "0d22e142-ad3f-4e01-ae1f-df184f79ad36",
@@ -17307,6 +18307,16 @@
     "highlighted_word": "Come on",
     "line_index": 2,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "e86cb1a0-822e-5ce7-809b-ed7acea60658",
+    "song_id": "b7e59710-09e7-5f64-80b8-145f41429a3f",
+    "vocabulary_id": "415c325f-662e-5a85-8eb8-2dc79d0585e9",
+    "line_text": "Find how to turn things around\nNow things are lookin' up\nFrom the ground up, pound up, this Taylor Gang",
+    "highlighted_word": "things are lookin' up",
+    "line_index": 46,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -17427,6 +18437,16 @@
     "highlighted_word": "Claiming",
     "line_index": 14,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "ea0b2441-3311-538f-84cd-fbaf05c979a0",
+    "song_id": "db963aff-9d82-544b-8f0a-36c81b3c1147",
+    "vocabulary_id": "71cb09a1-70f3-5cfe-8aaa-1250a2b7aba9",
+    "line_text": "A little bit of disregard\nHandful of complaints, but I can't help the fact\nThat everyone can see these scars",
+    "highlighted_word": "can't help the fact",
+    "line_index": 2,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -17627,6 +18647,16 @@
     "highlighted_word": "going through",
     "line_index": 29,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "ec211c99-6746-5388-8a4a-db91c4a32889",
+    "song_id": "7f1fe1aa-d1d7-56da-86e3-d7c577bae547",
+    "vocabulary_id": "9010991c-0479-5fcc-8f7f-012919ecc967",
+    "line_text": "Hell nah\nNever let these niggas ride your wave\nNope, no way, nah",
+    "highlighted_word": "ride your wave",
+    "line_index": 23,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
     "line_translation": null
   },
   {
@@ -17970,6 +19000,16 @@
     "line_translation": null
   },
   {
+    "id": "f172562a-47e8-5fdc-8c0f-b9292a6c3e66",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "deb2b364-6a4d-53af-8659-2afb35b6c555",
+    "line_text": "All my troubles seemed so far away\nNow it looks as though they're here to stay\nOh, I believe in yesterday",
+    "highlighted_word": "here to stay",
+    "line_index": 2,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
     "id": "f1746455-a50c-5c6d-8639-3d8d50d1404c",
     "song_id": "77e09dce-f81d-547b-8c75-4ecc9a3af353",
     "vocabulary_id": "bcb678fe-4b5e-4671-b952-207116b5c5cc",
@@ -18137,6 +19177,26 @@
     "highlighted_word": "prick",
     "line_index": 38,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "f3e85e87-0b6e-587f-8cbb-3d3d887962b4",
+    "song_id": "39ac7134-eff0-594b-82b8-68dd64104d9e",
+    "vocabulary_id": "0200df25-4162-5f78-86c1-d3b167dc286d",
+    "line_text": "That's why my heart cold, full of sorrow, the lost soul\nAnd only Lord knows when I'm coming to the crossroads\nSo I don't fear shit but tomorrow",
+    "highlighted_word": "crossroads",
+    "line_index": 52,
+    "created_at": "2026-07-25T11:55:07.932924+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "f41d6f2c-7826-5c26-8ad4-2688628e47f1",
+    "song_id": "a2f43cc5-1daf-5a79-85be-95f48b26a543",
+    "vocabulary_id": "bc5482f4-d6e6-5572-8194-6168dc4a4c61",
+    "line_text": "Here comes the sun, doo-d-doo-doo\nHere comes the sun",
+    "highlighted_word": "Here comes",
+    "line_index": 0,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -18460,6 +19520,16 @@
     "line_translation": null
   },
   {
+    "id": "f8c190b2-b56d-5118-800f-584c5336a96c",
+    "song_id": "9c5a6bed-7dae-5694-8256-d6720450ed7d",
+    "vocabulary_id": "4796cb73-d07b-5836-813c-69ff6316864a",
+    "line_text": "My leather black jeans on (Black)\nMy by-any-means on\nPardon, I'm getting my scream on (Black)",
+    "highlighted_word": "means",
+    "line_index": 2,
+    "created_at": "2026-07-25T11:55:07.6964+00:00",
+    "line_translation": null
+  },
+  {
     "id": "f8c7332b-b7be-5f65-8a52-0edceae19073",
     "song_id": "b815ba3c-b0f3-5833-8516-9de4d4c4b3bf",
     "vocabulary_id": "abcd7dc9-68ac-4804-9414-c6c35400b701",
@@ -18507,6 +19577,16 @@
     "highlighted_word": "Come on",
     "line_index": 49,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "f969f12a-a696-5e91-84dc-9770006e6d46",
+    "song_id": "b2dc892a-41e0-54e6-80ff-0b75c7084922",
+    "vocabulary_id": "b315e79a-20af-5a66-820f-7a6655e7a0a5",
+    "line_text": "I don't know what's worth fighting for or why I have to scream\nI don't know why I instigate and say what I don't mean\nI don't know how I got this way, I know it's not alright",
+    "highlighted_word": "say what I don't mean",
+    "line_index": 7,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
@@ -18800,6 +19880,16 @@
     "line_translation": null
   },
   {
+    "id": "fc8dcb37-2e7d-5ef2-8977-cf553b7b5952",
+    "song_id": "d83d7b7f-6f0e-582e-855e-59c6feb09ed5",
+    "vocabulary_id": "3b3ddb7e-6eea-5409-87d9-44f7313830a3",
+    "line_text": "69 ContributorsWhen You Were Young Lyrics\nThe lead single off of Sam’s Town. The song contemplates the difference between expectations and reality through a love affair between a girl and a gentleman who ‘doesn’t look a thing like Jesus’.\nYou sit there in your heartache",
+    "highlighted_word": "look a thing like",
+    "line_index": 1,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
+    "line_translation": null
+  },
+  {
     "id": "fcd124aa-ec22-51ab-83d0-a6e699c7a6a4",
     "song_id": "c4d2b045-9bdb-5c45-8de3-89ba757cdb54",
     "vocabulary_id": "ebcc6891-51b5-4cd7-ae8f-149034273e91",
@@ -18947,6 +20037,16 @@
     "highlighted_word": "wisdom",
     "line_index": 11,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "feb6f8a0-552b-5497-8a46-894c41512785",
+    "song_id": "340e90b2-1338-50d6-8da2-e340166b2c73",
+    "vocabulary_id": "55b3b8d1-6865-5715-899f-d942b6e826a9",
+    "line_text": "You know you look so good (Look so good)\nYou know you got me goin' now (Got me goin')\nJust like you knew you would (Like I knew you would, ooh)",
+    "highlighted_word": "got me goin'",
+    "line_index": 6,
+    "created_at": "2026-07-25T11:55:08.122493+00:00",
     "line_translation": null
   },
   {
