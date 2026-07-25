@@ -72,6 +72,15 @@
     "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
+    "id": "091f3e6a-cc42-52c9-8ae3-6b3addf383e6",
+    "song_id": "50000001-0000-0000-0000-000000000026",
+    "kind": "wordplay",
+    "term": "are we human or are we dancer?",
+    "explanation": "El estribillo desató años de debate: mucha gente juraba que decía denser (más densos) y a otros les chirriaba el singular dancer sin artículo, que es agramatical. Brandon Flowers explicó que la frase salía de una cita atribuida al escritor Hunter S. Thompson sobre que Estados Unidos estaba criando una generación de bailarines, es decir, gente que sigue el ritmo que le marcan. Buen recordatorio de que en inglés un sustantivo contable en singular normalmente necesita artículo: a dancer.",
+    "line_text": "Are we human\nOr are we dancer?",
+    "created_at": "2026-07-25T10:37:52.523661+00:00"
+  },
+  {
     "id": "0c159d10-bd4d-577d-81ee-2a809c3dd9ec",
     "song_id": "50000001-0000-0000-0000-000000000018",
     "kind": "reference",
@@ -153,6 +162,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "180e8e3a-e57c-5bbc-8360-903dc39fa5bf",
+    "song_id": "db963aff-9d82-544b-8f0a-36c81b3c1147",
+    "kind": "wordplay",
+    "term": "faint",
+    "explanation": "Faint es una palabra con tres caras: como verbo, desmayarse; como adjetivo, tenue o débil (a faint sound, un sonido apenas audible); y en la expresión I haven't the faintest idea, no tengo ni la más remota idea. El título juega con la idea de una voz débil que se niega a ser ignorada.",
+    "line_text": "Don't turn your back on me, I won't be ignored",
+    "created_at": "2026-07-25T10:34:40.789494+00:00"
+  },
+  {
     "id": "19dbe1c4-c714-5917-8d5e-55d39dd3bdb0",
     "song_id": "7f3aae62-06a4-53d6-8057-0568541f9d50",
     "kind": "reference",
@@ -225,6 +243,15 @@
     "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
+    "id": "2469e474-a0ad-5674-8678-a7f579f1764c",
+    "song_id": "bd770a8c-e28a-5815-85d0-47df35c07b7b",
+    "kind": "wordplay",
+    "term": "I'm the man",
+    "explanation": "Ojo al artículo: he's a man es simplemente un hombre, pero he's THE man significa que es el más grande, el que manda (y se usa como piropo entre amigos: you're the man!). Toda la canción es una parodia del machote arrogante; Brandon Flowers ha dicho que se ríe de una versión antigua de sí mismo. Ese I got en lugar de I've got es coloquial americano.",
+    "line_text": "I got news for you, baby\nYou're looking at the man",
+    "created_at": "2026-07-25T10:37:52.523661+00:00"
+  },
+  {
     "id": "283389ce-b317-5eec-8dd3-0b188fa977c5",
     "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
     "kind": "reference",
@@ -259,6 +286,15 @@
     "explanation": "Es la primera canción del primer disco de Oasis (Definitely Maybe, 1994) y funciona como declaración de intenciones: cuando la grabaron no eran estrellas de nada. Fíjate en el tiempo verbal: no dice I will be, dice I am, en presente. Esa es la clave del tema: creértelo antes de serlo.",
     "line_text": "In my mind my dreams are real\nTonight I'm a rock 'n' roll star",
     "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "33698d45-1c5e-58a4-8977-cb3148ac10cd",
+    "song_id": "afe81054-f1d3-597a-85a1-476119b505f9",
+    "kind": "reference",
+    "term": "all black everything",
+    "explanation": "Fatigues son el uniforme de faena militar, y la black card es la tarjeta de crédito de élite (la American Express Centurion). Toda la estrofa mezcla lo militar con el lujo para pintar un ejército de gente poderosa vestida de negro. Roc Nation, que menciona antes, es la empresa que él mismo fundó.",
+    "line_text": "Get your fatigues on, all black everything\nBlack cards, black cars, all black everything",
+    "created_at": "2026-07-25T10:40:34.506548+00:00"
   },
   {
     "id": "35362c37-2316-56e8-8125-f05330a2f760",
@@ -333,6 +369,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "462ad787-77ff-5488-87bf-a3e91e0a9814",
+    "song_id": "b461c904-742a-58f9-860d-be3cf37af74c",
+    "kind": "reference",
+    "term": "born on the Fourth of July",
+    "explanation": "El 4 de julio es el Día de la Independencia de Estados Unidos. Nacer ese día carga al personaje de simbolismo patriótico, y además es el título de una película muy conocida sobre un veterano de Vietnam. Sam's Town, por cierto, es un casino real de Las Vegas, la ciudad de la banda: todo el disco va sobre volver a casa y ver de dónde vienes.",
+    "line_text": "My brother, he was born on the fourth of July and that's all",
+    "created_at": "2026-07-25T10:37:52.523661+00:00"
+  },
+  {
     "id": "46735ec3-ee7e-5012-8b45-a2f82b3f6d2d",
     "song_id": "9ef1727c-2f92-59f2-8c38-10daf793dbdf",
     "kind": "reference",
@@ -376,6 +421,15 @@
     "explanation": "Paul McCartney la escribió para Julian, el hijo de John Lennon, que tenía cinco años cuando sus padres se separaron: iba en coche a visitarlo e improvisó Hey Jules, que luego cambió a Jude porque sonaba mejor. John creyó siempre que la canción hablaba de él. Saberlo cambia por completo cómo suenan versos como don't be afraid.",
     "line_text": "Hey, Jude, don't make it bad\nTake a sad song and make it better",
     "created_at": "2026-07-25T10:30:00.342581+00:00"
+  },
+  {
+    "id": "54354d61-5825-52fc-81d5-8681f509c8b8",
+    "song_id": "0df2d162-41fc-5291-850e-6d1c1503b387",
+    "kind": "reference",
+    "term": "I'm not black, I'm O.J.",
+    "explanation": "O.J. Simpson fue una estrella del fútbol americano que, según se cuenta, dijo esa frase para desmarcarse de su comunidad cuando triunfó. JAY-Z la cita para desmontarla: el dinero no te cambia cómo te ve la sociedad. Es la tesis de toda la canción, que además funciona como una clase de educación financiera: comprar en vez de alquilar, invertir en arte, pensar en la herencia.",
+    "line_text": "O.J. like, \"I'm not black, I'm O.J.,\" okay",
+    "created_at": "2026-07-25T10:40:34.506548+00:00"
   },
   {
     "id": "5769f42a-31a2-58c0-89ac-36df6b89c554",
@@ -441,6 +495,15 @@
     "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
+    "id": "66174169-a093-5e7f-8950-2e3ebef44de2",
+    "song_id": "71833a8b-58cb-54ac-8b07-ce508c14f0f4",
+    "kind": "reference",
+    "term": "el vídeo que da sentido a la letra",
+    "explanation": "La letra suena a culpa personal, pero el vídeo la lleva a lo colectivo: imágenes de guerra, contaminación y racismo. Ese doble plano explica el título, What I've Done, en presente perfecto: es un tiempo verbal que conecta el pasado con el ahora, justo lo que hace la canción. Fíjate en la estructura I'll face myself TO cross out: el to indica finalidad (para tachar).",
+    "line_text": "What I've done, I'll face myself\nTo cross out what I've become",
+    "created_at": "2026-07-25T10:34:40.789494+00:00"
+  },
+  {
     "id": "66abfd60-8611-5ca7-8398-45d84d7ad7c6",
     "song_id": "e087a39d-b24d-55ca-8f3a-1193349903ae",
     "kind": "reference",
@@ -457,6 +520,15 @@
     "explanation": "The Chronic (1992) es el álbum debut de Dr. Dre, un pilar del rap de la Costa Oeste. \"Chronic\" es además argot para marihuana potente. Dre lo cita como prueba de su leyenda.",
     "line_text": "How? Nigga, my last album was The Chronic",
     "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "6e5dece4-438f-59ae-8c25-802ec688348b",
+    "song_id": "0a0b14d9-bfeb-5b5e-871a-7bb25f462b92",
+    "kind": "reference",
+    "term": "Forever Young, de Alphaville a JAY-Z",
+    "explanation": "El estribillo es la canción Forever Young del grupo alemán Alphaville (1984), un himno ochentero escrito bajo el miedo a la guerra nuclear: de ahí ese verso sobre si van a lanzar la bomba. JAY-Z lo reutiliza para hablar de dejar un legado. Ojo al detalle gramatical del título: Young Forever invierte el orden habitual, y esa inversión es justo lo que lo convierte en lema.",
+    "line_text": "Forever young, I wanna be forever young\nDo you really want to live forever?",
+    "created_at": "2026-07-25T10:40:34.506548+00:00"
   },
   {
     "id": "70301c6e-558b-5077-82bb-0daebc864715",
@@ -630,6 +702,15 @@
     "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
+    "id": "93d87664-837a-5d9c-868b-b0a77e11320f",
+    "song_id": "d67348f5-6036-5fd8-8a34-660fba6d7dbf",
+    "kind": "wordplay",
+    "term": "the hardest part of ending is starting again",
+    "explanation": "El verso resume toda la canción con una simetría perfecta: ending / starting. Es también una frase que funciona sola como cita para cualquier final, no solo el de una relación. Buen ejemplo de cómo el inglés forma sustantivos a partir de verbos con -ing: the ending, the beginning, the starting.",
+    "line_text": "So I'm pickin' up the pieces now, where to begin\nThe hardest part of endin' is startin' again",
+    "created_at": "2026-07-25T10:34:40.789494+00:00"
+  },
+  {
     "id": "984f3ee3-8eb9-573e-87f2-89cd0a77aa1d",
     "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
     "kind": "reference",
@@ -666,6 +747,15 @@
     "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
+    "id": "9c8e9356-abaf-58c3-8121-455e5092a302",
+    "song_id": "d83d7b7f-6f0e-582e-855e-59c6feb09ed5",
+    "kind": "wordplay",
+    "term": "he doesn't look a thing like Jesus",
+    "explanation": "El verso más famoso del grupo resume el tema de la canción: la distancia entre lo que esperabas y lo que hay. La chica esperaba un salvador y le llega alguien normal que, eso sí, habla bien. Fíjate en el contraste look like (parecerse físicamente) frente a talk like (hablar como): dos usos distintos de like que conviene no mezclar.",
+    "line_text": "He doesn't look a thing like Jesus\nBut he talks like a gentleman",
+    "created_at": "2026-07-25T10:37:52.523661+00:00"
+  },
+  {
     "id": "9de6696b-82d9-5472-8fae-3545b44bbe35",
     "song_id": "c237dc63-5eff-5c5e-8fcc-5e0574e58de9",
     "kind": "reference",
@@ -700,6 +790,15 @@
     "explanation": "El verso se contradice a propósito: caminar despacio y a la vez más rápido que una bala de cañón. A Noel Gallagher le preguntaron qué significaba y respondió que si te importa cuando estás borracho a las tres de la mañana, entonces significa algo. Buen ejemplo de que en la letra pop el sonido manda sobre la lógica.",
     "line_text": "Slowly walking down the hall\nFaster than a cannonball",
     "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "a50fd5cd-5dcb-5f1d-8e6e-1f46057cb591",
+    "song_id": "1094266d-9638-58f1-864e-262e6d0c277d",
+    "kind": "reference",
+    "term": "Cinderella y la historia real",
+    "explanation": "Cinderella es Cenicienta. El verso la contrapone al cuento: no busca el vestido de fiesta ni el baile, sino el camisón, es decir, la vida real y corriente. Brandon Flowers escribió la canción sobre cómo se conocieron sus padres en 1961, así que el cuento de hadas del título es literalmente el de su familia. La otra referencia, Moon River, es la canción de Desayuno con diamantes.",
+    "line_text": "Saw Cinderella in a party dress\nBut she was lookin' for a nightgown",
+    "created_at": "2026-07-25T10:37:52.523661+00:00"
   },
   {
     "id": "a7b8cfd3-dbb4-541e-8219-27bf798b4658",
@@ -781,6 +880,15 @@
     "explanation": "Golden State Warriors, el equipo de baloncesto (NBA) dominante en 2016; Draymond Green es su jugador. Drake, muy ligado a la NBA, presume de que las estrellas paran por su casa: mezcla su vida con la del equipo del momento.",
     "line_text": "You know Chubbs like Draymond\nGolden State running practice at my house",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "b2a287e4-28b8-5c0f-8a7b-40f3dddf9566",
+    "song_id": "0d803fcc-c283-552a-83b7-c60e0eafc8de",
+    "kind": "reference",
+    "term": "por qué se llama 4:44",
+    "explanation": "JAY-Z contó que se despertó a las 4:44 de la madrugada y escribió esta canción de una sentada: es una disculpa pública a Beyoncé por su infidelidad, y la respuesta directa al disco Lemonade de ella. Fíjate en el recurso lingüístico que la sostiene: repite I apologize una y otra vez, como una letanía. Es también un buen ejemplo de inglés coloquial no estándar: I seen en lugar de I saw.",
+    "line_text": "So I apologize\nI seen the innocence leave your eyes",
+    "created_at": "2026-07-25T10:40:34.506548+00:00"
   },
   {
     "id": "b36feca8-2a60-5b12-80f6-233249b9d115",
@@ -891,6 +999,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "d3693d34-5eb0-5de2-8dd3-9bacbe7cd736",
+    "song_id": "8f3ebed1-a9c8-5a9c-8b91-7dabe1f2fa64",
+    "kind": "reference",
+    "term": "la fiesta y el desahogo",
+    "explanation": "Bleed it out significa literalmente desangrarlo, pero aquí es sacar fuera todo lo que te corroe, escribiéndolo. La ironía es que la banda lo montó como un tema de fiesta, con palmas y coros de estadio: la letra habla de vaciarse por dentro mientras la música invita a saltar. Mike Shinoda contó que fue la canción más difícil de escribir del disco, con decenas de versiones tiradas a la basura.",
+    "line_text": "I bleed it out, diggin' deeper just to throw it away",
+    "created_at": "2026-07-25T10:34:40.789494+00:00"
+  },
+  {
     "id": "d47008e5-fbdc-5a62-8ceb-09fb34805bf0",
     "song_id": "67798003-88de-5131-8465-124511d412c7",
     "kind": "reference",
@@ -898,6 +1015,15 @@
     "explanation": "En el Apollo Theater de Harlem, cuando un artista lo hacía mal, \"the Sandman\" salía a echarlo del escenario. Kendrick se declara \"the Sandman\": el que decide quién no está a la altura y lo saca del escenario.",
     "line_text": "Get the fuck off my stage, I'm the Sandman",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "d7e4ddc9-248c-5703-8951-8d0930aead13",
+    "song_id": "0df2d162-41fc-5291-850e-6d1c1503b387",
+    "kind": "wordplay",
+    "term": "DUMBO / dumbo",
+    "explanation": "DUMBO es un barrio de Brooklyn (siglas de Down Under the Manhattan Bridge Overpass) que se puso carísimo. Y dumbo, en minúscula, es tonto o memo. Así que el remate significa a la vez me siento en DUMBO y me siento un idiota por no haber comprado. Un juego de palabras perfecto para recordar las dos palabras a la vez.",
+    "line_text": "I coulda bought a place in DUMBO before it was DUMBO\nFor like 2 million",
+    "created_at": "2026-07-25T10:40:34.506548+00:00"
   },
   {
     "id": "d92c4ef0-90aa-57f0-8c67-733d97e1b702",
@@ -916,6 +1042,15 @@
     "explanation": "\"Put your hands in the air and wave 'em like you just don't care\" es un cántico clásico de conciertos de hip-hop para animar al público. SOAD lo mete con ironía en una canción que critica lo vacío de Hollywood.",
     "line_text": "Put your hands in the air\nAnd wave them like you just don't care",
     "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "da6a7bd5-0e07-5f60-8143-b445246af73f",
+    "song_id": "50000001-0000-0000-0000-000000000014",
+    "kind": "reference",
+    "term": "la canción de rock más escuchada del siglo",
+    "explanation": "Numb es el mayor éxito de Linkin Park y su vídeo superó los dos mil millones de reproducciones. Su tema, la presión de unos padres que quieren que seas otra cosa, explica por qué conecta tanto con adolescentes de cualquier idioma. Para practicar: casi toda la letra usa estructuras simples de presente perfecto (I've become) y comparativos (more like me, less like you), un modelo perfecto para construir tus propias frases.",
+    "line_text": "I've become so numb, I can't feel you there\nBecome so tired, so much more aware",
+    "created_at": "2026-07-25T10:34:40.789494+00:00"
   },
   {
     "id": "ddafad3b-9c23-5164-8d38-2942588c6e2e",
