@@ -44,12 +44,16 @@ if (!existsSync(LYRICS)) {
 // --- letras locales, indexadas por título normalizado ---
 const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 const clean = (s) => (s || '').replace(/[’]/g, "'").replace(/\s+/g, ' ').trim().toLowerCase();
+// Clave = título + artista. Con el título solo, dos canciones homónimas se
+// pisan (hay dos "Stand By Me": la de Oasis y la de Ben E. King) y las
+// anotaciones se comparan contra la letra equivocada.
 const songs = new Map();
+const key = (title, artist) => `${norm(title)}|${norm(artist.split(',')[0])}`;
 {
   let cur = null;
   for (const line of readFileSync(LYRICS, 'utf8').split('\n')) {
     const m = line.match(/^###\s*(\d+)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*$/);
-    if (m) { cur = { title: m[2], artist: m[3], lines: [] }; songs.set(norm(m[2]), cur); }
+    if (m) { cur = { title: m[2], artist: m[3], lines: [] }; songs.set(key(m[2], m[3]), cur); }
     else if (cur) cur.lines.push(line);
   }
 }
@@ -80,8 +84,8 @@ for (const f of files) {
   const data = JSON.parse(readFileSync(path.join(ANN_DIR, f), 'utf8'));
   if (ARTIST_FILTER && !data.artista.toLowerCase().includes(ARTIST_FILTER)) continue;
 
-  const song = songs.get(norm(data.titulo));
-  if (!song) { console.log(`   ⚠ sin letra local: ${data.titulo}`); sinLetra++; continue; }
+  const song = songs.get(key(data.titulo, data.artista));
+  if (!song) { console.log(`   ⚠ sin letra local: ${data.titulo} — ${data.artista}`); sinLetra++; continue; }
 
   // Anotación → índice de línea. Varias pueden caer en la misma línea.
   const porLinea = new Map();

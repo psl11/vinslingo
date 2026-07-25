@@ -4,6 +4,7 @@ import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
 import { ActionButton } from '../components/ui/ActionButton';
 import { SongNotes, type Note } from '../components/music/SongNotes';
+import { SongScript, useSongScript } from '../components/music/SongScript';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { analyzeTranslation } from '../lib/vocabulary/translationParser';
 import { highlightRange } from '../lib/utils/highlight';
@@ -52,6 +53,7 @@ export default function SongScreen() {
   const router = useRouter();
   const { songId, title, artist } = useLocalSearchParams<{ songId: string; title?: string; artist?: string }>();
   const { selectedCEFRLevels } = useSettingsStore();
+  const script = useSongScript(title, artist);
   const [words, setWords] = useState<Word[]>([]);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(true);
@@ -123,6 +125,8 @@ export default function SongScreen() {
               {words.length > 0 ? `🗣️ ${words.length} ${words.length === 1 ? 'palabra' : 'palabras'}` : ''}
               {words.length > 0 && notes.length > 0 ? '   ·   ' : ''}
               {notes.length > 0 ? `📓 ${notes.length} ${notes.length === 1 ? 'nota' : 'notas'}` : ''}
+              {script && (words.length > 0 || notes.length > 0) ? '   ·   ' : ''}
+              {script ? '🎙️ historia' : ''}
             </Text>
           </View>
 
@@ -142,7 +146,9 @@ export default function SongScreen() {
             </View>
           )}
 
-          {/* NOTAS PRIMERO: son el gancho, lo que da ganas de estudiar la canción */}
+          {/* Guion primero: es la capa de contexto más ancha (la historia de la
+              canción). Después las notas, que son el detalle fino. */}
+          <SongScript script={script} />
           <SongNotes notes={notes} />
 
           {/* Vocabulario: filas desplegables que enseñan el verso */}
@@ -192,7 +198,7 @@ export default function SongScreen() {
             </View>
           )}
 
-          {words.length === 0 && notes.length === 0 && (
+          {words.length === 0 && notes.length === 0 && !script && (
             <Text style={styles.emptyHint}>
               Esta canción aún no tiene contenido detallado.
             </Text>
