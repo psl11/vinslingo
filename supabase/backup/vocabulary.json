@@ -54,7 +54,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -83,7 +83,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -199,7 +199,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -257,7 +257,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -489,7 +489,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -692,7 +692,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -779,7 +779,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -1388,7 +1388,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -1562,7 +1562,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -1968,7 +1968,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -2113,7 +2113,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -2229,7 +2229,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -2289,6 +2289,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.834219+00:00",
     "pronunciation_es": "tredíshenel"
+  },
+  {
+    "id": "06019757-7efb-5c7e-8797-7969c59b474a",
+    "word": "hide away",
+    "translation": "ESCONDERSE / REFUGIARSE — Apartarse del mundo. A place to hide away = un sitio donde esconderse.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He hid away in the countryside for a year.",
+    "example_translation": "Se refugió en el campo durante un año.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "0608b958-8094-4975-a965-4f95e9df558f",
@@ -3012,7 +3041,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -3128,7 +3157,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -3186,7 +3215,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -3244,7 +3273,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -3273,7 +3302,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -3331,7 +3360,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -3592,7 +3621,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -4143,7 +4172,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -4375,7 +4404,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -4781,7 +4810,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -4897,7 +4926,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -4955,7 +4984,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -5129,7 +5158,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -5332,7 +5361,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -5361,7 +5390,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -5622,7 +5651,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -5738,7 +5767,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -5941,7 +5970,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -7072,7 +7101,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -7188,7 +7217,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -7424,6 +7453,35 @@
     "pronunciation_es": "áfter"
   },
   {
+    "id": "11976beb-97c6-5d7d-80b1-8a842f056dd7",
+    "word": "home sweet home",
+    "translation": "HOGAR, DULCE HOGAR — Lo que se dice al llegar a casa, sobre todo tras un viaje. Frase hecha clásica.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Two weeks away—home sweet home!",
+    "example_translation": "Dos semanas fuera: ¡hogar, dulce hogar!",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "11a16a93-6f1e-4987-bb5f-78a59210833b",
     "word": "quietly",
     "translation": "silenciosamente",
@@ -7594,7 +7652,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -8290,7 +8348,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -9073,7 +9131,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -9450,7 +9508,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -10291,7 +10349,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -10351,6 +10409,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.465287+00:00",
     "pronunciation_es": "véri"
+  },
+  {
+    "id": "1923ba3d-6e42-5316-8514-a2e71538e00f",
+    "word": "lend a hand",
+    "translation": "ECHAR UNA MANO — Ayudar. Lend = prestar, así que literalmente prestas tu mano. También: give someone a hand.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Could you lend a hand with these boxes?",
+    "example_translation": "¿Me echas una mano con estas cajas?",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "192b90f1-46b0-4b85-a22d-a64835814b0c",
@@ -10552,7 +10639,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -10697,7 +10784,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -11248,7 +11335,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -11277,7 +11364,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -11335,7 +11422,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -11364,7 +11451,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "1b7d8b23-7a16-5ff4-8320-22d48e8cc69a",
+    "word": "work it out",
+    "translation": "RESOLVERLO / DARLO TODO — Dos sentidos: solucionar un problema, y (aquí, bailando) emplearse a fondo físicamente. De ahí work out = entrenar.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Don't worry, we'll work it out.",
+    "example_translation": "Tranquilo, lo resolveremos.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
     "pronunciation_es": null
   },
   {
@@ -11422,7 +11538,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -11973,7 +12089,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "1d80dbf0-751f-5383-8af6-694a102955ee",
+    "word": "take someone by the hand",
+    "translation": "COGER A ALGUIEN DE LA MANO — Literal, y también guiar a alguien que no sabe.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "She took him by the hand and led him inside.",
+    "example_translation": "Lo cogió de la mano y lo llevó dentro.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
     "pronunciation_es": null
   },
   {
@@ -12292,7 +12437,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -12321,7 +12466,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -12350,7 +12495,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -12582,7 +12727,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -12640,7 +12785,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -12814,7 +12959,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -12843,7 +12988,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -13307,7 +13452,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -13336,7 +13481,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -13481,7 +13626,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -13713,7 +13858,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -13829,7 +13974,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -13918,6 +14063,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.834219+00:00",
     "pronunciation_es": "epróuch"
+  },
+  {
+    "id": "22058a1d-9d74-5dad-8b75-abd2280cee25",
+    "word": "all your life",
+    "translation": "TODA TU VIDA — Durante la vida entera. You were only waiting all your life.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I've lived here all my life.",
+    "example_translation": "He vivido aquí toda mi vida.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "22091371-d35c-4190-87f1-ed3f25b945ce",
@@ -14206,7 +14380,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -14322,7 +14496,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -14496,7 +14670,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -14554,7 +14728,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -14641,7 +14815,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -15047,7 +15221,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -15424,7 +15598,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -15511,7 +15685,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -15714,7 +15888,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -15830,7 +16004,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -15859,7 +16033,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -15917,7 +16091,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -16874,7 +17048,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -17396,7 +17570,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -18498,7 +18672,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -18643,7 +18817,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -18759,7 +18933,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -19111,6 +19285,35 @@
     "pronunciation_es": "páregraf"
   },
   {
+    "id": "30472911-cafe-5f11-8629-71ec9f6f3161",
+    "word": "in the dead of night",
+    "translation": "EN PLENA NOCHE / EN LO MÁS CERRADO DE LA NOCHE — En las horas más oscuras y silenciosas. También: in the dead of winter.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "They left in the dead of night.",
+    "example_translation": "Se marcharon en plena noche.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "3048da5b-547d-5d02-8710-231e3c3ec816",
     "word": "have something on the brain",
     "translation": "TENER ALGO METIDO EN LA CABEZA — Estar obsesionado con algo, no poder pensar en otra cosa.",
@@ -19136,7 +19339,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -19310,7 +19513,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -19397,7 +19600,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -19571,7 +19774,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -19687,7 +19890,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -19716,7 +19919,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -20035,7 +20238,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -20093,7 +20296,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -20967,6 +21170,35 @@
     "pronunciation_es": "méik prágres"
   },
   {
+    "id": "349ceffb-4527-55cc-83e4-e17576ac8e5f",
+    "word": "not just anybody",
+    "translation": "NO CUALQUIERA — Alguien concreto, no una persona al azar. I need somebody, not just anybody.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I need a doctor, not just anybody.",
+    "example_translation": "Necesito un médico, no cualquiera.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "34ae6786-c0b1-4e54-8e12-9ccc2981c5cd",
     "word": "stream",
     "translation": "transmitir",
@@ -21456,7 +21688,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -21920,7 +22152,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -21949,7 +22181,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -22007,7 +22239,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -22065,7 +22297,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -22094,7 +22326,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -22616,7 +22848,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -22879,6 +23111,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.981009+00:00",
     "pronunciation_es": "dúrebel"
+  },
+  {
+    "id": "3a189c06-b6a4-5990-86a9-24475025846a",
+    "word": "life goes on",
+    "translation": "LA VIDA SIGUE — Pase lo que pase, todo continúa. Una de las frases hechas más usadas del inglés.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "It's sad, but life goes on.",
+    "example_translation": "Es triste, pero la vida sigue.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "3a240ca3-098b-4c19-9029-a0d9b0f7f17e",
@@ -23635,6 +23896,35 @@
     "pronunciation_es": "kláimet"
   },
   {
+    "id": "3ca9088b-d568-5947-8a10-cff9d94394b4",
+    "word": "happily ever after",
+    "translation": "Y FUERON FELICES PARA SIEMPRE — El final de los cuentos. En la letra aparece como happy ever after.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "And they lived happily ever after.",
+    "example_translation": "Y vivieron felices para siempre.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "3cad4971-5750-5d96-8b8e-7b0ef81e5560",
     "word": "damn",
     "translation": "¡joder!, maldito (leve) (malsonante)",
@@ -24240,7 +24530,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -24327,7 +24617,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -24414,7 +24704,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -24704,7 +24994,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -24791,7 +25081,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -25110,7 +25400,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -25139,7 +25429,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -25458,7 +25748,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -26067,7 +26357,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -26301,6 +26591,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.465287+00:00",
     "pronunciation_es": "jít ép"
+  },
+  {
+    "id": "43240339-860e-5cc3-8048-ae2ff787c539",
+    "word": "it feels like years",
+    "translation": "PARECE QUE HAN PASADO AÑOS — Exagerar el paso del tiempo. It feels like / it seems like + periodo.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "It feels like years since we last talked.",
+    "example_translation": "Parece que han pasado años desde la última vez que hablamos.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "4336aa51-2d1c-4d7f-b763-8dc36b493740",
@@ -26589,7 +26908,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -26734,7 +27053,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -26908,7 +27227,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -27111,7 +27430,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -27865,7 +28184,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -27981,7 +28300,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -28039,7 +28358,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -28735,7 +29054,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -28938,7 +29257,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -29228,7 +29547,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "4b17e54e-b330-5e65-8832-e1f16938ca5d",
+    "word": "change your mind",
+    "translation": "CAMBIAR DE OPINIÓN — Pensar distinto a como pensabas. Ojo: change my mind, no change my opinion.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I changed my mind about the job.",
+    "example_translation": "Cambié de opinión sobre el trabajo.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -29576,7 +29924,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -29750,7 +30098,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -29953,7 +30301,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -30417,7 +30765,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -30649,7 +30997,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -30881,7 +31229,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -31229,7 +31577,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -31374,7 +31722,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -31490,7 +31838,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -31519,7 +31867,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -31577,7 +31925,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "5135b732-f7c5-5da9-8b38-ab6458e238e2",
+    "word": "arise",
+    "translation": "ALZARSE / SURGIR — Levantarse, o presentarse una oportunidad o un problema. Registro literario; el uso cotidiano es un problem arises.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "A new opportunity has arisen.",
+    "example_translation": "Ha surgido una nueva oportunidad.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
     "pronunciation_es": null
   },
   {
@@ -31664,7 +32041,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -31929,6 +32306,35 @@
     "pronunciation_es": "nóuuer"
   },
   {
+    "id": "52440532-5e9f-513c-8d87-818f91adcc9c",
+    "word": "all you need is",
+    "translation": "LO ÚNICO QUE HACE FALTA ES — Estructura para decir que basta con una cosa. All you need is love / a good night's sleep.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "All you need is a bit of patience.",
+    "example_translation": "Lo único que hace falta es un poco de paciencia.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "524aab7a-916f-4923-a872-9cf4a898968e",
     "word": "unkind",
     "translation": "cruel",
@@ -32012,7 +32418,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -32534,7 +32940,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -32737,7 +33143,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -32766,7 +33172,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -32795,7 +33201,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -32884,6 +33290,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.106842+00:00",
     "pronunciation_es": "rekemendéishen"
+  },
+  {
+    "id": "5438b5e5-70d1-524f-81e4-2edf745401a3",
+    "word": "it's gonna last",
+    "translation": "VA A DURAR — Last como verbo es durar, no último. A love that lasts forever = un amor que dura para siempre.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Do you think it'll last?",
+    "example_translation": "¿Crees que durará?",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "5439d1e5-17f6-4e22-b04e-0d1f2b98aa08",
@@ -33375,7 +33810,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -33404,7 +33839,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "55b3b8d1-6865-5715-899f-d942b6e826a9",
+    "word": "get someone going",
+    "translation": "PONER A ALGUIEN A CIEN — Animar o excitar a alguien. You got me goin' now.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "That music really gets me going.",
+    "example_translation": "Esa música me pone a cien.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
     "pronunciation_es": null
   },
   {
@@ -33462,7 +33926,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -33667,6 +34131,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.630226+00:00",
     "pronunciation_es": "práperti"
+  },
+  {
+    "id": "563958c9-e739-5d4c-8e10-6bdaece02723",
+    "word": "hang over someone",
+    "translation": "PESAR SOBRE ALGUIEN — Una amenaza o tristeza que te acompaña. There's a shadow hanging over me.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "The deadline is hanging over me.",
+    "example_translation": "La entrega me pesa encima.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "5640ed0d-872c-4c0f-ae13-a0b751cc3456",
@@ -34013,7 +34506,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -34274,7 +34767,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -34477,7 +34970,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -34796,7 +35289,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -34970,7 +35463,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -34999,7 +35492,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -35289,7 +35782,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -35579,7 +36072,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -35637,7 +36130,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -35753,7 +36246,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -36043,7 +36536,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -36362,7 +36855,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -37033,6 +37526,35 @@
     "pronunciation_es": "gét ín"
   },
   {
+    "id": "604bd695-db31-503d-84d0-f8e6fcbcd1a6",
+    "word": "recall",
+    "translation": "RECORDAR — Sinónimo algo más formal de remember. También significa retirar del mercado un producto defectuoso.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I can't recall his name.",
+    "example_translation": "No consigo recordar su nombre.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "606783e5-c4c1-4d9f-b022-762c9d6a969c",
     "word": "claim",
     "translation": "afirmar, reclamar",
@@ -37232,7 +37754,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -37870,7 +38392,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -37899,7 +38421,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -38015,7 +38537,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -38133,6 +38655,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:55.861868+00:00",
     "pronunciation_es": "shóu ép"
+  },
+  {
+    "id": "6414ce1c-9f2b-5c9e-8fc3-b9132e5e231d",
+    "word": "a couple of",
+    "translation": "UN PAR DE / UNOS CUANTOS — Ojo: en inglés hablado a couple of no siempre son exactamente dos; suele significar unos pocos. Y lleva OF.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I'll be there in a couple of minutes.",
+    "example_translation": "Estoy ahí en un par de minutos.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "6419035c-8d62-4fa9-a367-c3891fe20816",
@@ -38711,7 +39262,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -38856,7 +39407,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -39059,7 +39610,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -39146,7 +39697,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -39900,7 +40451,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -40103,7 +40654,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -40219,7 +40770,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -40248,7 +40799,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -40480,7 +41031,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -40712,7 +41263,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -40741,7 +41292,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -40973,7 +41524,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -41031,7 +41582,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -41524,7 +42075,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -41582,7 +42133,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -41640,7 +42191,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -41727,7 +42278,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -41814,7 +42365,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -42336,7 +42887,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -42367,6 +42918,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.257498+00:00",
     "pronunciation_es": "frángkli"
+  },
+  {
+    "id": "6f44288b-05db-5739-875b-e5865249205b",
+    "word": "as though",
+    "translation": "COMO SI — Equivale a as if. It looks as though they're here to stay = parece como si se fueran a quedar.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He acts as though nothing happened.",
+    "example_translation": "Actúa como si no hubiera pasado nada.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "6f6f0a38-99a9-4a67-9ec0-0995fb556a97",
@@ -42626,7 +43206,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -43351,7 +43931,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -43641,7 +44221,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -43786,7 +44366,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -43844,7 +44424,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -43931,7 +44511,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -44080,6 +44660,35 @@
     "pronunciation_es": "lús"
   },
   {
+    "id": "73caa226-fc45-5182-8bf3-f9fb4a5183d1",
+    "word": "it's alright",
+    "translation": "TODO VA BIEN / NO PASA NADA — Para tranquilizar. También se escribe all right (esa es la forma correcta en registro formal).",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "It's alright, don't worry.",
+    "example_translation": "No pasa nada, tranquilo.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "7411a82b-5eea-5360-8b33-4f74b3bf61c7",
     "word": "gnarly",
     "translation": "brutal; o chungo, feo",
@@ -44163,7 +44772,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -44192,7 +44801,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -44540,7 +45149,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -44569,7 +45178,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -44743,7 +45352,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -44859,7 +45468,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -44888,7 +45497,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -45033,7 +45642,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -45124,6 +45733,35 @@
     "pronunciation_es": null
   },
   {
+    "id": "76d90c09-09d0-55b0-8e93-a1709f9d4870",
+    "word": "get under someone's skin",
+    "translation": "METERSE BAJO LA PIEL — Dos sentidos casi opuestos: irritar a alguien profundamente, o (como aquí) llegarle muy adentro emocionalmente. El contexto decide.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "That song really gets under my skin.",
+    "example_translation": "Esa canción se me mete muy adentro.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "76d97141-d3f3-4830-af43-c1d1950170e3",
     "word": "temperature",
     "translation": "temperatura",
@@ -45178,7 +45816,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -45497,7 +46135,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -46164,7 +46802,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -46193,7 +46831,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -46222,7 +46860,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -46570,7 +47208,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -46860,7 +47498,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -47208,7 +47846,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -47933,7 +48571,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -48049,7 +48687,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -48745,7 +49383,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -49006,7 +49644,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -49180,7 +49818,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -49412,7 +50050,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -49615,7 +50253,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -49673,7 +50311,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -49963,7 +50601,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -50079,7 +50717,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -50340,7 +50978,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -50601,7 +51239,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -50862,7 +51500,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -50949,7 +51587,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -51036,7 +51674,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -51210,7 +51848,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -51268,7 +51906,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -51355,7 +51993,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -51790,7 +52428,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -52022,7 +52660,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -52109,7 +52747,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -52602,7 +53240,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -52776,7 +53414,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -53008,7 +53646,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -53443,7 +54081,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -53849,7 +54487,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -54342,7 +54980,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -54516,7 +55154,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -54545,7 +55183,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -54632,7 +55270,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -55299,7 +55937,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -55357,7 +55995,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -55589,7 +56227,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -55649,6 +56287,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.630226+00:00",
     "pronunciation_es": "esésment"
+  },
+  {
+    "id": "92dfc032-1f2b-50cb-86ac-e7f7c9520d9f",
+    "word": "make it better",
+    "translation": "MEJORARLO / ARREGLARLO — Hacer que algo doloroso duela menos. Take a sad song and make it better = coge una canción triste y mejórala.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Talking about it makes it better.",
+    "example_translation": "Hablarlo lo mejora.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "92ebeeb9-b407-4919-b541-c99d626ce1e8",
@@ -55792,7 +56459,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -55966,7 +56633,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -56024,7 +56691,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -56082,7 +56749,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -56111,7 +56778,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -56285,7 +56952,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -56604,7 +57271,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -56691,7 +57358,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -56894,7 +57561,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -56952,7 +57619,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -56981,7 +57648,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -57070,6 +57737,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.834219+00:00",
     "pronunciation_es": "kéler"
+  },
+  {
+    "id": "972e83cc-0ec0-526c-80f5-a9a4fc018792",
+    "word": "learn how to play the game",
+    "translation": "APRENDER A JUGAR EL JUEGO — Entender las reglas no escritas de un ambiente (el trabajo, la vida social) y moverte en él.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "In this office you have to learn how to play the game.",
+    "example_translation": "En esta oficina hay que aprender a jugar el juego.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "973479cd-9d87-4aa4-8720-7b0677c4e37d",
@@ -57909,7 +58605,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "98f24610-1f07-5f8d-8e2e-f488a74a65ab",
+    "word": "far away",
+    "translation": "LEJOS / LEJANO — En distancia o en el tiempo. All my troubles seemed so far away = mis problemas parecían tan lejanos.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Those days feel far away now.",
+    "example_translation": "Aquellos días parecen ya lejanos.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -58025,7 +58750,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -58083,7 +58808,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -58286,7 +59011,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -58315,7 +59040,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -58636,6 +59361,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:57.953911+00:00",
     "pronunciation_es": "fergét"
+  },
+  {
+    "id": "9b384b89-28e4-5515-8eed-0ea603e52ed3",
+    "word": "can you dig it?",
+    "translation": "¿LO PILLAS? / ¿TE MOLA? — Argot de los sesenta: dig significaba entender o gustar mucho. Hoy suena deliberadamente retro.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "slang",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Jazz all night—can you dig it?",
+    "example_translation": "Jazz toda la noche, ¿te mola?",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "9b3f4fca-99ef-455c-9089-c2fae1316c5d",
@@ -58982,7 +59736,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -59011,7 +59765,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -59040,7 +59794,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -59127,7 +59881,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -59301,7 +60055,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -59533,7 +60287,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -59823,7 +60577,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -60084,7 +60838,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -60258,7 +61012,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -60403,7 +61157,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -60461,7 +61215,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -60664,7 +61418,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -60867,7 +61621,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -60954,7 +61708,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -61157,7 +61911,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -61360,7 +62114,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -61389,7 +62143,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -61476,7 +62230,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -61505,7 +62259,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -61621,7 +62375,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -61853,7 +62607,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -61882,7 +62636,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -61911,7 +62665,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -62056,7 +62810,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -62114,7 +62868,36 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "a42cce6c-88a3-53c7-81f7-4558671154b1",
+    "word": "lose affection for",
+    "translation": "PERDER EL CARIÑO POR — Dejar de querer algo o a alguien. Affection = cariño, afecto.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I never lost affection for my old school.",
+    "example_translation": "Nunca perdí el cariño por mi antiguo colegio.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -62143,7 +62926,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -62607,7 +63390,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -62756,6 +63539,35 @@
     "pronunciation_es": "gáder"
   },
   {
+    "id": "a62e528f-b2fd-5005-8af7-05764776bb45",
+    "word": "for the first time",
+    "translation": "POR PRIMERA VEZ — I'm in love for the first time.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I saw the sea for the first time at ten.",
+    "example_translation": "Vi el mar por primera vez a los diez.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "a64486d3-ec0b-55ac-8a4f-3c7751352aae",
     "word": "the in-crowd",
     "translation": "LA GENTE GUAY / EL GRUPO DE MODA — El círculo popular al que todos quieren pertenecer. Caught up in the in-crowd.",
@@ -62781,7 +63593,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -62897,7 +63709,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -63013,7 +63825,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -63100,7 +63912,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -63390,7 +64202,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -64376,7 +65188,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -64492,7 +65304,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -64521,7 +65333,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -64637,7 +65449,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -64724,7 +65536,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -65072,7 +65884,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -65130,7 +65942,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -66058,7 +66870,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -66178,6 +66990,35 @@
     "pronunciation_es": "kást án árm ánd éi lég"
   },
   {
+    "id": "af3e6e14-da1b-53d6-8eb5-bf41b5cc9c0b",
+    "word": "all together now",
+    "translation": "¡TODOS JUNTOS! — Llamada para que todo el mundo cante o haga algo a la vez. Muy de coro y de aula.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "All together now: one, two, three!",
+    "example_translation": "¡Todos juntos: uno, dos, tres!",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "af56b708-87de-49e3-9bc1-3f1929ac57e5",
     "word": "happen",
     "translation": "suceder",
@@ -66232,7 +67073,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -66348,7 +67189,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -66406,7 +67247,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -66522,7 +67363,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -66638,7 +67479,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -66899,7 +67740,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -67077,6 +67918,35 @@
     "pronunciation_es": "dóter"
   },
   {
+    "id": "b1c89ece-f3d7-5ade-8282-68da62545b86",
+    "word": "you'll do",
+    "translation": "TÚ SIRVES / CON ESO VALE — Aceptar a alguien o algo como suficiente. It's just you, you'll do = eres tú, tú sirves.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "No pen? This pencil will do.",
+    "example_translation": "¿Sin boli? Con este lápiz vale.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "b1cd3738-330b-49e1-87ea-7ca6e0223006",
     "word": "manually",
     "translation": "manualmente",
@@ -67131,7 +68001,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -67189,7 +68059,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -67247,7 +68117,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -67682,7 +68552,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -67711,7 +68581,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -68523,7 +69393,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -68958,7 +69828,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -69161,7 +70031,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -69886,7 +70756,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -70089,7 +70959,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -70236,6 +71106,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.981009+00:00",
     "pronunciation_es": "bít"
+  },
+  {
+    "id": "b90b84fb-aafc-5e75-8e2c-9d0a803b3c67",
+    "word": "vanish into thin air",
+    "translation": "ESFUMARSE — Desaparecer sin dejar rastro. En la letra: vanish in the haze (esfumarse en la neblina).",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "My keys vanished into thin air.",
+    "example_translation": "Mis llaves se esfumaron.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "b9235cee-1d08-4165-873d-8cb75db8d809",
@@ -70524,7 +71423,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -70669,7 +71568,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -70727,7 +71626,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -70756,7 +71655,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -71539,7 +72438,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -71626,7 +72525,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -71772,6 +72671,35 @@
     "formal_synonym": null,
     "separability": null,
     "updated_at": "2026-07-10T17:55:15.861435+00:00",
+    "pronunciation_es": null
+  },
+  {
+    "id": "bc5482f4-d6e6-5572-8194-6168dc4a4c61",
+    "word": "here comes...",
+    "translation": "AQUÍ LLEGA... — Inversión típica del inglés para anunciar algo que aparece: here comes the bus, here comes trouble. El verbo va DELANTE del sujeto.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Here comes the bride!",
+    "example_translation": "¡Aquí llega la novia!",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -72438,7 +73366,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -73312,6 +74240,35 @@
     "pronunciation_es": "disepírens"
   },
   {
+    "id": "c02e9e81-5946-5b3f-87cd-fcebab55741e",
+    "word": "every now and then",
+    "translation": "DE VEZ EN CUANDO — Ocasionalmente. Sinónimos: now and again, from time to time.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Every now and then I miss that city.",
+    "example_translation": "De vez en cuando echo de menos esa ciudad.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "c03b1a9c-d565-49b4-b2c3-62fdd936e934",
     "word": "thirsty",
     "translation": "sediento",
@@ -73366,7 +74323,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -73540,7 +74497,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -73627,7 +74584,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -73747,6 +74704,35 @@
     "pronunciation_es": "súing"
   },
   {
+    "id": "c18d71bd-e43c-5959-8059-5ad0d7d217a7",
+    "word": "let someone down",
+    "translation": "DEFRAUDAR / FALLARLE A ALGUIEN — No estar a la altura de lo que esperaban de ti. Don't let me down = no me falles.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "I won't let you down, I promise.",
+    "example_translation": "No te fallaré, te lo prometo.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "c1961301-4ec9-490b-9c29-2ecfea64644a",
     "word": "group",
     "translation": "grupo",
@@ -73801,7 +74787,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -74033,7 +75019,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -74120,7 +75106,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -74149,7 +75135,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -74352,7 +75338,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -74642,7 +75628,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -74729,7 +75715,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -75657,7 +76643,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -75802,7 +76788,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -76121,7 +77107,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -76181,6 +77167,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.638512+00:00",
     "pronunciation_es": "séberb"
+  },
+  {
+    "id": "c71d97e5-649e-5f97-84cf-0b8c8d182856",
+    "word": "self-assured",
+    "translation": "SEGURO DE SÍ MISMO — Con confianza en uno mismo. I'm not so self-assured = ya no estoy tan seguro de mí.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "She's calm and self-assured.",
+    "example_translation": "Es tranquila y segura de sí misma.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "c742eb62-1341-44a3-93f0-78512188fe14",
@@ -76585,7 +77600,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -76788,7 +77803,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -76846,7 +77861,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -77223,7 +78238,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -77890,7 +78905,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -78213,6 +79228,35 @@
     "pronunciation_es": "kíp ín máind"
   },
   {
+    "id": "cc17ab3b-7cdc-5542-8cdf-b489bb6ad808",
+    "word": "play it cool",
+    "translation": "HACERSE EL DURO / DISIMULAR — Fingir indiferencia para no mostrar lo que sientes. It's a fool who plays it cool = solo un tonto se hace el duro.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "He likes her but he's playing it cool.",
+    "example_translation": "Le gusta, pero se hace el duro.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "cc1f2db7-2ca6-4f0e-8692-8a6eb7d8528f",
     "word": "divide",
     "translation": "dividir",
@@ -78528,7 +79572,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -78557,7 +79601,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -78644,7 +79688,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -78876,7 +79920,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -79050,7 +80094,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -79253,7 +80297,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -79311,7 +80355,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -79398,7 +80442,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -79777,6 +80821,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:55.861868+00:00",
     "pronunciation_es": "magnífesent"
+  },
+  {
+    "id": "d03b1d63-b02b-54ed-8cfe-1c8cb3304cf3",
+    "word": "not half the man I used to be",
+    "translation": "NO SOY NI LA MITAD DEL QUE ERA — Estructura para decir que has decaído mucho. Half the... I used to be.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "After the illness he's not half the man he used to be.",
+    "example_translation": "Tras la enfermedad no es ni la mitad del que era.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "d0427045-1ea5-5f3b-8a2f-5004005d6a15",
@@ -80297,7 +81370,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -80417,6 +81490,35 @@
     "pronunciation_es": "búk"
   },
   {
+    "id": "d161df9f-b27d-5373-895b-f152bc9089e4",
+    "word": "there is no one compares with you",
+    "translation": "NADIE SE COMPARA CONTIGO — La forma estándar es compare WITH o compare TO. Lennon se salta el that (no one that compares), algo habitual al cantar.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "No one compares with her.",
+    "example_translation": "Nadie se compara con ella.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "d1775e26-cd15-5f16-87f4-c2eb6d05fbea",
     "word": "scratch around",
     "translation": "REBUSCAR / IR TIRANDO A DURAS PENAS — Buscar con esfuerzo lo poco que hay (imagen de escarbar). Scratching around in the same old hole.",
@@ -80442,7 +81544,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -80500,7 +81602,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -80562,6 +81664,35 @@
     "pronunciation_es": "zík"
   },
   {
+    "id": "d20104fd-7cef-59fd-89e8-13a1ed9e53fb",
+    "word": "learn to fly",
+    "translation": "APRENDER A VOLAR — Literal y figurado: valerse por uno mismo. Learn TO + infinitivo.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "You have to fall before you learn to fly.",
+    "example_translation": "Hay que caerse antes de aprender a volar.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "d27be068-b232-4433-a7ca-31b8be2ca491",
     "word": "hole",
     "translation": "agujero",
@@ -80616,7 +81747,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -80705,6 +81836,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:58.638512+00:00",
     "pronunciation_es": "dífekelti"
+  },
+  {
+    "id": "d3084510-c30a-5e9a-884f-733f00b15b45",
+    "word": "carry the world on your shoulders",
+    "translation": "LLEVAR EL PESO DEL MUNDO A CUESTAS — Cargar con todos los problemas tú solo. Viene del mito de Atlas.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "You don't have to carry the world on your shoulders.",
+    "example_translation": "No tienes que cargar con todo tú solo.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "d30e0639-4213-49c0-acb8-11ab8feb27fc",
@@ -81631,7 +82791,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -81718,7 +82878,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -81776,7 +82936,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -82068,6 +83228,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:59.244029+00:00",
     "pronunciation_es": "skúad"
+  },
+  {
+    "id": "d7324615-e06d-5061-8df9-ff309778d284",
+    "word": "long for something",
+    "translation": "AÑORAR / ANHELAR — Desear algo con nostalgia. Long aquí es verbo, no largo: I long for yesterday.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "She longs for the summer.",
+    "example_translation": "Añora el verano.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "d734f554-dfa9-4ff3-ac0d-b4e932a5e7c7",
@@ -82675,7 +83864,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -83168,7 +84357,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -83197,7 +84386,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -83603,7 +84792,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -83690,7 +84879,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -84038,7 +85227,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -84241,7 +85430,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -84388,6 +85577,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:55.861868+00:00",
     "pronunciation_es": "ikspíriens"
+  },
+  {
+    "id": "deb2b364-6a4d-53af-8659-2afb35b6c555",
+    "word": "be here to stay",
+    "translation": "HABER VENIDO PARA QUEDARSE — Que algo ya no se va a ir. Muy usado para modas y tecnologías.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Remote work is here to stay.",
+    "example_translation": "El teletrabajo ha venido para quedarse.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "dee2d1bd-05ab-4f17-9630-6ba3c9feaacd",
@@ -84908,7 +86126,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -85343,7 +86561,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -85374,6 +86592,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.834219+00:00",
     "pronunciation_es": "sébyikt"
+  },
+  {
+    "id": "e2052de0-7c82-5da7-8f81-9c75d82c0a4b",
+    "word": "get your feet back on the ground",
+    "translation": "VOLVER A PISAR TIERRA — Recuperar el equilibrio y el sentido común tras un mal momento o un subidón.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "After the tour I needed to get my feet back on the ground.",
+    "example_translation": "Tras la gira necesitaba volver a pisar tierra.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "e207b8e8-2c46-489d-955d-d9ec0224d2a6",
@@ -85546,7 +86793,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -85956,6 +87203,35 @@
     "pronunciation_es": "tríp"
   },
   {
+    "id": "e34fc065-1e06-5163-8384-acded39db5fe",
+    "word": "not for better",
+    "translation": "NO PARA BIEN — Juega con for better (para mejor). Some forever, not for better = algunas para siempre, y no para bien.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Things changed, but not for better.",
+    "example_translation": "Las cosas cambiaron, y no para bien.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "e35753b1-6a89-4ffa-ad6f-59e1db919463",
     "word": "realize",
     "translation": "darse cuenta (NO realizar)",
@@ -86184,7 +87460,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -86271,7 +87547,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -86503,7 +87779,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -86768,6 +88044,35 @@
     "pronunciation_es": "sún"
   },
   {
+    "id": "e659f78a-a012-5724-8a66-3ab904f3cdb3",
+    "word": "shake it up",
+    "translation": "AGITARLO / SACUDIRLO — Literal (agitar algo) y figurado (revolucionar una situación, cambiarlo todo).",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "The new boss really shook things up.",
+    "example_translation": "El nuevo jefe lo revolucionó todo.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "e65c63a6-e8dc-4d6b-8114-053a8d659dff",
     "word": "accent",
     "translation": "acento",
@@ -86880,7 +88185,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -87663,7 +88968,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -87779,7 +89084,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -87866,7 +89171,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -87895,7 +89200,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -88040,7 +89345,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -88185,7 +89490,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -88794,7 +90099,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -89842,6 +91147,35 @@
     "pronunciation_es": "digrí"
   },
   {
+    "id": "ee4418b4-c70e-5751-8601-bb7a9ed7c4a0",
+    "word": "go before",
+    "translation": "HABER SIDO ANTES / PRECEDER — People and things that went before = la gente y las cosas de antes.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "We honour those who went before us.",
+    "example_translation": "Honramos a los que estuvieron antes que nosotros.",
+    "created_at": "2026-07-25T10:29:59.826721+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.826721+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "ee4c87a8-1de8-4f49-9ab5-787f25e1e459",
     "word": "warning",
     "translation": "advertencia",
@@ -90012,7 +91346,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -90683,6 +92017,35 @@
     "pronunciation_es": "bríy"
   },
   {
+    "id": "f0b8c67a-6a38-5bb1-85a6-7d7862d43dfa",
+    "word": "little darling",
+    "translation": "CARIÑO / QUERIDA — Apelativo afectuoso algo antiguo y muy inglés. Darling se usa muchísimo en el Reino Unido, incluso entre desconocidos.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "Are you alright, darling?",
+    "example_translation": "¿Estás bien, cariño?",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
+  },
+  {
     "id": "f0e5db19-67a3-5ab6-89fd-5cc8d81feb22",
     "word": "proper",
     "translation": "de verdad, muy (intensificador)",
@@ -90824,7 +92187,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -90853,7 +92216,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -90911,7 +92274,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -91259,7 +92622,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -91317,7 +92680,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -91404,7 +92767,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -92071,7 +93434,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -92216,7 +93579,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -92622,7 +93985,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -93231,7 +94594,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -93407,6 +94770,35 @@
     "separability": null,
     "updated_at": "2026-07-12T17:39:56.257498+00:00",
     "pronunciation_es": "rimáind víés rimémber"
+  },
+  {
+    "id": "f935e402-7b27-510b-80b9-c771f430301c",
+    "word": "be meant to be",
+    "translation": "ESTAR DESTINADO A SER — Que algo tenía que pasar. Where you're meant to be = donde te toca estar.",
+    "pronunciation": null,
+    "audio_url": null,
+    "part_of_speech": "idiom",
+    "cefr_level": "B2",
+    "category": "colloquial",
+    "frequency_rank": null,
+    "example_sentence": "You're exactly where you're meant to be.",
+    "example_translation": "Estás justo donde te toca estar.",
+    "created_at": "2026-07-25T10:29:59.712674+00:00",
+    "example_sentence_2": null,
+    "example_translation_2": null,
+    "song_lyric": null,
+    "song_lyric_translation": null,
+    "song_title": null,
+    "song_artist": null,
+    "quote_text": null,
+    "quote_translation": null,
+    "quote_author": null,
+    "anchor_type": null,
+    "anchor_year": null,
+    "formal_synonym": null,
+    "separability": null,
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
+    "pronunciation_es": null
   },
   {
     "id": "f93f5900-f71f-48ca-babc-c6610886580b",
@@ -93608,7 +95000,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -93637,7 +95029,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -93782,7 +95174,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -94275,7 +95667,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -94362,7 +95754,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {
@@ -94710,7 +96102,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.224339+00:00",
+    "updated_at": "2026-07-25T10:29:59.389399+00:00",
     "pronunciation_es": null
   },
   {
@@ -94739,7 +96131,7 @@
     "anchor_year": null,
     "formal_synonym": null,
     "separability": null,
-    "updated_at": "2026-07-25T10:16:41.553108+00:00",
+    "updated_at": "2026-07-25T10:29:59.712674+00:00",
     "pronunciation_es": null
   },
   {

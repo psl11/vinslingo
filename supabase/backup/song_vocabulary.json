@@ -130,6 +130,16 @@
     "line_translation": null
   },
   {
+    "id": "0291e06d-e70c-54af-833a-2ca14384b0d5",
+    "song_id": "66ed6432-4397-5e8a-8c70-45f4c11157b4",
+    "vocabulary_id": "a62e528f-b2fd-5005-8af7-05764776bb45",
+    "line_text": "Don't let me down, don't let me down\nI'm in love for the first time\nDon't you know it's gonna last?",
+    "highlighted_word": "for the first time",
+    "line_index": 10,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "02f7429c-4df8-517d-80af-741b977776b9",
     "song_id": "50d33df2-f2ab-5512-858f-8e5e58a164c9",
     "vocabulary_id": "5ee4546b-0d73-539e-8ea1-7d0f21f06558",
@@ -910,6 +920,16 @@
     "line_translation": null
   },
   {
+    "id": "0c082309-3bd6-5b1b-82a4-8e28ff2d7222",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "vocabulary_id": "c18d71bd-e43c-5959-8059-5ad0d7d217a7",
+    "line_text": "Na-na-na-na-na, na-na-na-na\nHey, Jude, don't let me down\nYou have found her, now go and get her",
+    "highlighted_word": "let me down",
+    "line_index": 13,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "0c4a2dd6-48c5-5416-88c1-cfe1e16029ec",
     "song_id": "345652c0-2c0e-5e51-87a5-90daaa1c5eeb",
     "vocabulary_id": "d11b1672-cefb-4196-b191-3f6cd61cb659",
@@ -977,6 +997,16 @@
     "highlighted_word": "hand in",
     "line_index": 42,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "0d4e276c-ec83-500e-87ae-ac70ad4cd64a",
+    "song_id": "7ca03d1f-e8f6-5acc-8f39-e56b386bb0a3",
+    "vocabulary_id": "11976beb-97c6-5d7d-80b1-8a842f056dd7",
+    "line_text": "Yeah (No)\nIn a couple of years, they have built a home, sweet home\nWith a couple of kids running in the yard",
+    "highlighted_word": "home, sweet home",
+    "line_index": 21,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -1397,6 +1427,16 @@
     "highlighted_word": "genuine",
     "line_index": 58,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "14afa101-bfff-5c91-8c4a-34fec67a92dd",
+    "song_id": "a2f43cc5-1daf-5a79-85be-95f48b26a543",
+    "vocabulary_id": "43240339-860e-5cc3-8048-ae2ff787c539",
+    "line_text": "Little darling\nIt feels like years since it's been here\nHere comes the sun, doo-d-doo-doo",
+    "highlighted_word": "It feels like years",
+    "line_index": 6,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -2130,6 +2170,16 @@
     "line_translation": null
   },
   {
+    "id": "1d5d57c0-522b-5beb-8592-1fe33fa55f0a",
+    "song_id": "83a81efb-bc77-5c08-8f7a-71a3e34330c6",
+    "vocabulary_id": "d20104fd-7cef-59fd-89e8-13a1ed9e53fb",
+    "line_text": "Blackbird singing in the dead of night\nTake these broken wings and learn to fly\nAll your life",
+    "highlighted_word": "learn to fly",
+    "line_index": 1,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "1d869d5f-2f8d-5be9-88e1-2e36fd90fa93",
     "song_id": "264b0535-f093-5430-8229-af3df389439c",
     "vocabulary_id": "eecbdb41-6736-46ad-bea3-828b6e5ad129",
@@ -2387,6 +2437,16 @@
     "highlighted_word": "shit",
     "line_index": 40,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "20b65def-0ef6-52bc-804b-6b445e1b6f00",
+    "song_id": "83a81efb-bc77-5c08-8f7a-71a3e34330c6",
+    "vocabulary_id": "30472911-cafe-5f11-8629-71ec9f6f3161",
+    "line_text": "Blackbird singing in the dead of night\nTake these broken wings and learn to fly",
+    "highlighted_word": "in the dead of night",
+    "line_index": 0,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -2680,6 +2740,16 @@
     "line_translation": null
   },
   {
+    "id": "2577d4dc-1205-5e41-8549-8375db542094",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "vocabulary_id": "349ceffb-4527-55cc-83e4-e17576ac8e5f",
+    "line_text": "(Help!) I need somebody\n(Help!) Not just anybody\n(Help!) You know I need someone",
+    "highlighted_word": "Not just anybody",
+    "line_index": 1,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "25a3a6aa-d4f9-4ff6-a04f-2453d7a2591d",
     "song_id": "557b5fc1-1d07-4f8b-b057-6a823363b545",
     "vocabulary_id": "e6501ed3-ec45-4fde-a893-da0c7974a378",
@@ -2937,6 +3007,16 @@
     "highlighted_word": "Turn Out",
     "line_index": 43,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "294dc5c7-bac4-515e-8971-037f4b247dd6",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "06019757-7efb-5c7e-8797-7969c59b474a",
+    "line_text": "Love was such an easy game to play\nNow I need a place to hide away\nOh, I believe in yesterday",
+    "highlighted_word": "hide away",
+    "line_index": 14,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -4110,6 +4190,16 @@
     "line_translation": null
   },
   {
+    "id": "3d4c5e2b-732f-5b35-85fc-efb5f54f2c9f",
+    "song_id": "7ca03d1f-e8f6-5acc-8f39-e56b386bb0a3",
+    "vocabulary_id": "1923ba3d-6e42-5316-8514-a2e71538e00f",
+    "line_text": "Happy ever after in the marketplace\nDesmond lets the children lend a hand (Arm, leg)\nMolly stays at home and does her pretty face",
+    "highlighted_word": "lend a hand",
+    "line_index": 25,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "3d6111e1-d479-545e-8a11-3c99f9f8ea47",
     "song_id": "00beef4d-c374-5f69-87b1-f2110d2f410d",
     "vocabulary_id": "2362f4f1-ab18-4867-acbe-8faeea8f74e5",
@@ -4490,6 +4580,16 @@
     "line_translation": null
   },
   {
+    "id": "415a5105-8a92-5f52-8ec2-f36d8574af18",
+    "song_id": "15d9d623-a875-546c-89fa-7d4274879ee3",
+    "vocabulary_id": "604bd695-db31-503d-84d0-f8e6fcbcd1a6",
+    "line_text": "All these places had their moments\nWith lovers and friends, I still can recall\nSome are dead and some are living",
+    "highlighted_word": "recall",
+    "line_index": 5,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "415b8d08-fe5c-5ad8-8f5e-9a46386cbbe0",
     "song_id": "79f27498-f283-592d-8949-12d5355ee870",
     "vocabulary_id": "115afb01-506a-5996-8c8c-548c8259fe4b",
@@ -4780,6 +4880,16 @@
     "line_translation": null
   },
   {
+    "id": "44e703fe-6321-5422-8a77-51d7fc4edd45",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "563958c9-e739-5d4c-8e10-6bdaece02723",
+    "line_text": "I'm not half the man I used to be\nThere's a shadow hanging over me\nOh, yesterday came suddenly",
+    "highlighted_word": "hanging over",
+    "line_index": 6,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "44f2800f-09e2-52ef-84a9-1ad0139e2c46",
     "song_id": "527d7717-7dda-5714-8cb3-68b55ef7c41f",
     "vocabulary_id": "c9f87f2d-c802-5fbb-8d91-bbedeb2f9d8f",
@@ -4950,6 +5060,16 @@
     "line_translation": null
   },
   {
+    "id": "47f8da2d-8f36-55fa-8f0e-a28b55206db9",
+    "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "vocabulary_id": "af3e6e14-da1b-53d6-8eb5-bf41b5cc9c0b",
+    "line_text": "Love is all you need\nAll you need is love (All together now)\nAll you need is love (Everybody)",
+    "highlighted_word": "All together now",
+    "line_index": 30,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "480a5d23-acf4-52e6-816d-e4ca51cf5cbf",
     "song_id": "999e8f41-1f1f-552e-8c99-948398cb3460",
     "vocabulary_id": "f402cae4-4d72-4428-b079-51bb7aa5140b",
@@ -4957,6 +5077,16 @@
     "highlighted_word": "hold up",
     "line_index": 18,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "481a87cd-5912-5cb1-8918-35380f6ec241",
+    "song_id": "340e90b2-1338-50d6-8da2-e340166b2c73",
+    "vocabulary_id": "1b7d8b23-7a16-5ff4-8320-22d48e8cc69a",
+    "line_text": "C'mon, c'mon, c'mon, c'mon, baby, now (Come on, baby)\nCome on and work it on out (Work it on out, ooh)\nWell, work it on out, honey (Work it on out)",
+    "highlighted_word": "work it on out",
+    "line_index": 3,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -5740,6 +5870,16 @@
     "line_translation": null
   },
   {
+    "id": "54aef166-37ef-570b-84b8-a8e0f35f76c3",
+    "song_id": "15d9d623-a875-546c-89fa-7d4274879ee3",
+    "vocabulary_id": "d161df9f-b27d-5373-895b-f152bc9089e4",
+    "line_text": "But of all these friends and lovers\nThere is no one compares with you (Ooh, ooh, ooh)\nAnd these memories lose their meaning",
+    "highlighted_word": "There is no one compares with you",
+    "line_index": 9,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "54b3e1c2-7daa-4569-bd24-776e1f30237f",
     "song_id": "efa1d955-199d-489a-81e0-887c3e7bf4d5",
     "vocabulary_id": "e4e99648-dc8e-40e1-a220-266b597564fc",
@@ -6057,6 +6197,16 @@
     "highlighted_word": "humble",
     "line_index": 81,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "59edaa6d-d7e7-580d-85d8-cd6486bfe6b5",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "vocabulary_id": "d3084510-c30a-5e9a-884f-733f00b15b45",
+    "line_text": "And anytime you feel the pain, hey, Jude, refrain\nDon't carry the world upon your shoulders\nFor well you know that it's a fool who plays it cool",
+    "highlighted_word": "carry the world upon your shoulders",
+    "line_index": 9,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -6590,6 +6740,16 @@
     "line_translation": null
   },
   {
+    "id": "619b2842-6f9b-5ef5-8934-9ae2868ec192",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "vocabulary_id": "92dfc032-1f2b-50cb-86ac-e7f7c9520d9f",
+    "line_text": "Hey, Jude, don't make it bad\nTake a sad song and make it better\nRemember to let her into your heart",
+    "highlighted_word": "make it better",
+    "line_index": 1,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "61c8b16e-16f9-5ab2-8dd0-2397dd284aeb",
     "song_id": "78af884b-8ca9-5955-8a00-cb5a85bb435d",
     "vocabulary_id": "f825a8ed-0989-47d0-a136-46b077f0a15b",
@@ -6797,6 +6957,16 @@
     "highlighted_word": "hustle",
     "line_index": 17,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "64d70575-dd4f-5ea3-8306-8177436a78a2",
+    "song_id": "83a81efb-bc77-5c08-8f7a-71a3e34330c6",
+    "vocabulary_id": "5135b732-f7c5-5da9-8b38-ab6458e238e2",
+    "line_text": "All your life\nYou were only waiting for this moment to arise\nBlackbird singing in the dead of night",
+    "highlighted_word": "arise",
+    "line_index": 3,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -7550,6 +7720,16 @@
     "line_translation": null
   },
   {
+    "id": "6de1cac0-d7e8-5b88-8fb3-1226d6921a71",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "vocabulary_id": "e2052de0-7c82-5da7-8f81-9c75d82c0a4b",
+    "line_text": "And I do appreciate you being 'round\nHelp me get my feet back on the ground\nWon't you please, please, help me?",
+    "highlighted_word": "get my feet back on the ground",
+    "line_index": 10,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "6de2ac3e-a33b-594a-8f0c-ad7e0e8d35c6",
     "song_id": "f89c900e-c455-55f7-8db1-db8555a725e3",
     "vocabulary_id": "838e3e18-8038-41d9-8d24-b0cc241d0abd",
@@ -7987,6 +8167,16 @@
     "highlighted_word": "life",
     "line_index": 0,
     "created_at": "2026-07-05T16:57:11.219462+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "754cc0f9-832d-5577-82b3-251d685072ec",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "98f24610-1f07-5f8d-8e2e-f488a74a65ab",
+    "line_text": "Yesterday\nAll my troubles seemed so far away\nNow it looks as though they're here to stay",
+    "highlighted_word": "far away",
+    "line_index": 1,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -8700,6 +8890,16 @@
     "line_translation": null
   },
   {
+    "id": "7eaa80c6-6902-59d6-8082-8e8836701fcc",
+    "song_id": "83a81efb-bc77-5c08-8f7a-71a3e34330c6",
+    "vocabulary_id": "22058a1d-9d74-5dad-8b75-abd2280cee25",
+    "line_text": "Take these broken wings and learn to fly\nAll your life\nYou were only waiting for this moment to arise",
+    "highlighted_word": "All your life",
+    "line_index": 2,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "7ef5e5e0-b6b4-5cc0-81e5-c2d5d0402590",
     "song_id": "afa4348e-7797-5dd0-85fe-ea99cb32a695",
     "vocabulary_id": "ebed2f74-cb60-4e57-b171-d6a35c18afe6",
@@ -8917,6 +9117,16 @@
     "highlighted_word": "stacks",
     "line_index": 60,
     "created_at": "2026-07-22T16:38:04.618848+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "821bb9fc-4b8f-5cba-8d82-57c1e2bd4ac5",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "d7324615-e06d-5061-8df9-ff309778d284",
+    "line_text": "I said something wrong\nNow I long for yesterday\nYesterday",
+    "highlighted_word": "long for",
+    "line_index": 11,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -9207,6 +9417,16 @@
     "highlighted_word": "go on",
     "line_index": 4,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "8577518c-af51-5135-867b-08a046dd88d7",
+    "song_id": "7ca03d1f-e8f6-5acc-8f39-e56b386bb0a3",
+    "vocabulary_id": "6414ce1c-9f2b-5c9e-8fc3-b9132e5e231d",
+    "line_text": "Yeah (No)\nIn a couple of years, they have built a home, sweet home\nWith a couple of kids running in the yard",
+    "highlighted_word": "a couple of",
+    "line_index": 21,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -10080,6 +10300,16 @@
     "line_translation": null
   },
   {
+    "id": "91d493c6-ca37-5a48-8f87-bb8530dd5f4d",
+    "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "vocabulary_id": "f935e402-7b27-510b-80b9-c771f430301c",
+    "line_text": "(Love) Nothing you can see that isn't shown\n(Love) There's nowhere you can be that isn't where you're meant to be\nIt's easy",
+    "highlighted_word": "be that isn't where you're meant to be",
+    "line_index": 24,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "91f3acd6-84df-5ac4-8613-0b5a5370c560",
     "song_id": "50000001-0000-0000-0000-000000000001",
     "vocabulary_id": "9c64ba97-cea9-528f-81dc-15b56de0fabf",
@@ -10310,6 +10540,16 @@
     "line_translation": null
   },
   {
+    "id": "94a1f0cd-652d-5005-8751-66480de28890",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "vocabulary_id": "4b17e54e-b330-5e65-8832-e1f16938ca5d",
+    "line_text": "(Now these days are gone) But now these days are gone, I'm not so self-assured\n(And now I find) Now I find I've changed my mind and opened up the doors\nHelp me if you can, I'm feeling down",
+    "highlighted_word": "changed my mind",
+    "line_index": 7,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "94cf15c9-2186-5b27-81db-5819bc927e94",
     "song_id": "0393d08f-4483-54cf-8741-1b05ea475b7a",
     "vocabulary_id": "799cc062-e2e5-590c-84bf-a675c88728ed",
@@ -10327,6 +10567,16 @@
     "highlighted_word": "come out",
     "line_index": 41,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "94fa1172-c9fc-5d9e-80c4-b1b4460fed33",
+    "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "vocabulary_id": "52440532-5e9f-513c-8d87-818f91adcc9c",
+    "line_text": "It's easy\nAll you need is love\nAll you need is love",
+    "highlighted_word": "All you need is",
+    "line_index": 11,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -10607,6 +10857,16 @@
     "highlighted_word": "Persuade",
     "line_index": 42,
     "created_at": "2026-07-16T18:32:19.073038+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "9afa44db-9fd1-552f-832e-af038f2a19c7",
+    "song_id": "7ca03d1f-e8f6-5acc-8f39-e56b386bb0a3",
+    "vocabulary_id": "1d80dbf0-751f-5383-8af6-694a102955ee",
+    "line_text": "Desmond says to Molly, \"Girl, I like your face\"\nAnd Molly says this as she takes him by the hand\nOb-la-di, ob-la-da",
+    "highlighted_word": "takes him by the hand",
+    "line_index": 3,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -10977,6 +11237,16 @@
     "highlighted_word": "shit",
     "line_index": 71,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "a05e0b7e-a3ac-5d8d-874c-89004faea783",
+    "song_id": "340e90b2-1338-50d6-8da2-e340166b2c73",
+    "vocabulary_id": "e659f78a-a012-5724-8a66-3ab904f3cdb3",
+    "line_text": "Well, shake it up, baby, now (Shake it up, baby)\nTwist and shout (Twist and shout)",
+    "highlighted_word": "shake it up",
+    "line_index": 0,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -11570,6 +11840,16 @@
     "line_translation": null
   },
   {
+    "id": "a7562cdf-2017-54d4-8241-99dd38ecbf56",
+    "song_id": "7ca03d1f-e8f6-5acc-8f39-e56b386bb0a3",
+    "vocabulary_id": "3a189c06-b6a4-5990-86a9-24475025846a",
+    "line_text": "Ob-la-di, ob-la-da\nLife goes on, brah\nLa-la, how the life goes on",
+    "highlighted_word": "Life goes on",
+    "line_index": 5,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "a767313a-9907-4c27-a93f-e9e4cde5b53a",
     "song_id": "58dbc863-e4cf-4394-8f28-c118d465ac18",
     "vocabulary_id": "81658758-a2b5-47ca-812f-3966a9d7a398",
@@ -11777,6 +12057,16 @@
     "highlighted_word": "go on",
     "line_index": 13,
     "created_at": "2026-07-16T18:32:18.888189+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "ab18beb1-c050-5fd0-8f33-6bbf6679d8ce",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "6f44288b-05db-5739-875b-e5865249205b",
+    "line_text": "All my troubles seemed so far away\nNow it looks as though they're here to stay\nOh, I believe in yesterday",
+    "highlighted_word": "as though",
+    "line_index": 2,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -12207,6 +12497,16 @@
     "highlighted_word": "supplier",
     "line_index": 9,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "b1ef5c46-0121-572f-88c9-a2025d17a26a",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "vocabulary_id": "cc17ab3b-7cdc-5542-8cdf-b489bb6ad808",
+    "line_text": "Don't carry the world upon your shoulders\nFor well you know that it's a fool who plays it cool\nBy making his world a little colder",
+    "highlighted_word": "plays it cool",
+    "line_index": 10,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -12717,6 +13017,16 @@
     "highlighted_word": "shit",
     "line_index": 16,
     "created_at": "2026-07-16T18:32:18.267626+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "b9344d21-0182-5b5d-8520-8df2abab13a5",
+    "song_id": "a2f43cc5-1daf-5a79-85be-95f48b26a543",
+    "vocabulary_id": "f0b8c67a-6a38-5bb1-85a6-7d7862d43dfa",
+    "line_text": "And I say, \"It's alright\"\nLittle darling\nIt's been a long, cold, lonely winter",
+    "highlighted_word": "Little darling",
+    "line_index": 3,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -13430,6 +13740,16 @@
     "line_translation": null
   },
   {
+    "id": "c1f4345a-f78f-5af0-8ca6-f2b99413b391",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "vocabulary_id": "d03b1d63-b02b-54ed-8cfe-1c8cb3304cf3",
+    "line_text": "Suddenly\nI'm not half the man I used to be\nThere's a shadow hanging over me",
+    "highlighted_word": "not half the man I used to be",
+    "line_index": 5,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "c2543b95-7526-5acd-88d2-0519b5bf52c5",
     "song_id": "6ea0185d-a84b-5c24-8020-a472cc0a8d91",
     "vocabulary_id": "5ca0d09f-2928-55df-88b6-a0e3fdecf376",
@@ -13847,6 +14167,16 @@
     "highlighted_word": "jammies",
     "line_index": 58,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "c9850efc-328e-5e51-8dac-e05944f4fd4a",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "vocabulary_id": "c02e9e81-5946-5b3f-87cd-fcebab55741e",
+    "line_text": "(My independ') My independence seems to vanish in the haze\n(But now and then) But every now and then I feel so insecure\n(I know that I) I know that I just need you like I've never done before",
+    "highlighted_word": "every now and then",
+    "line_index": 14,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -14780,6 +15110,16 @@
     "line_translation": null
   },
   {
+    "id": "d530fb4f-aa78-52c3-8606-50260b93c76d",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "vocabulary_id": "c71d97e5-649e-5f97-84cf-0b8c8d182856",
+    "line_text": "(I never need) I never needed anybody's help in any way\n(Now these days are gone) But now these days are gone, I'm not so self-assured\n(And now I find) Now I find I've changed my mind and opened up the doors",
+    "highlighted_word": "self-assured",
+    "line_index": 6,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "d538d2f6-fe0a-5e7a-85d1-7c665cce5096",
     "song_id": "e087a39d-b24d-55ca-8f3a-1193349903ae",
     "vocabulary_id": "b1db75b0-b29f-5f77-840d-f61a8de4cb45",
@@ -14947,6 +15287,16 @@
     "highlighted_word": "pass on",
     "line_index": 5,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "d7314538-e1f3-54e5-89b2-7978e165145e",
+    "song_id": "66ed6432-4397-5e8a-8c70-45f4c11157b4",
+    "vocabulary_id": "5438b5e5-70d1-524f-81e4-2edf745401a3",
+    "line_text": "I'm in love for the first time\nDon't you know it's gonna last?\nIt's a love that lasts forever",
+    "highlighted_word": "it's gonna last",
+    "line_index": 11,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -15577,6 +15927,16 @@
     "highlighted_word": "looking back",
     "line_index": 24,
     "created_at": "2026-07-16T18:32:19.230879+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "e2ed0206-2e0a-5fc9-8d97-ac6363aa718a",
+    "song_id": "15d9d623-a875-546c-89fa-7d4274879ee3",
+    "vocabulary_id": "e34fc065-1e06-5163-8384-acded39db5fe",
+    "line_text": "All my life, though some have changed (Ooh, ooh, ooh)\nSome forever, not for better\nSome have gone and some remain (Ooh, ooh, ooh)",
+    "highlighted_word": "not for better",
+    "line_index": 2,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -16700,6 +17060,16 @@
     "line_translation": null
   },
   {
+    "id": "f2cc2a7e-c51b-5c74-8704-850fbd41e77b",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "vocabulary_id": "b1c89ece-f3d7-5ade-8282-68da62545b86",
+    "line_text": "You're waiting for someone to perform with\nAnd don't you know that it's just you, hey, Jude, you'll do\nThe movement you need is on your shoulder",
+    "highlighted_word": "you'll do",
+    "line_index": 20,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
+    "line_translation": null
+  },
+  {
     "id": "f313a9e3-f315-5b65-88c3-432e80d185bb",
     "song_id": "8f15f194-46a6-5863-8d84-67c39b468172",
     "vocabulary_id": "37783013-dbde-5c79-8b58-f26a2f2f84b9",
@@ -16757,6 +17127,16 @@
     "highlighted_word": "move on",
     "line_index": 3,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "f4560bfc-b82c-5cb9-8487-a3aba382a30b",
+    "song_id": "a2f43cc5-1daf-5a79-85be-95f48b26a543",
+    "vocabulary_id": "73caa226-fc45-5182-8bf3-f9fb4a5183d1",
+    "line_text": "Here comes the sun\nAnd I say, \"It's alright\"\nLittle darling",
+    "highlighted_word": "It's alright",
+    "line_index": 2,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {
@@ -17507,6 +17887,16 @@
     "highlighted_word": "Running out",
     "line_index": 3,
     "created_at": "2026-07-16T18:32:18.564889+00:00",
+    "line_translation": null
+  },
+  {
+    "id": "ff1e5fcf-d47d-537e-8047-49423b885b81",
+    "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "vocabulary_id": "972e83cc-0ec0-526c-80f5-a9a4fc018792",
+    "line_text": "(Love) Nothing you can sing that can't be sung\n(Love) Nothing you can say, but you can learn how to play the game\nIt's easy",
+    "highlighted_word": "learn how to play the game",
+    "line_index": 5,
+    "created_at": "2026-07-25T10:30:00.203238+00:00",
     "line_translation": null
   },
   {

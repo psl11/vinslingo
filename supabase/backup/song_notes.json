@@ -126,6 +126,15 @@
     "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
+    "id": "130e3801-cc8d-53bd-8cda-faa89125c920",
+    "song_id": "50000001-0000-0000-0000-000000000003",
+    "kind": "reference",
+    "term": "Scrambled Eggs",
+    "explanation": "Paul McCartney soñó la melodía y se despertó convencido de que la había copiado de alguien; estuvo semanas preguntando a todo el mundo. Mientras encontraba la letra definitiva la cantaba con una provisional que decía Scrambled eggs, oh my baby how I love your legs (huevos revueltos). Yesterday es hoy una de las canciones más versionadas de la historia.",
+    "line_text": "Yesterday\nAll my troubles seemed so far away",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
+  },
+  {
     "id": "146db5ad-6af6-51d9-83eb-2e6109b22ab0",
     "song_id": "06bc5f2b-fb1c-513f-89c0-c5c95eae4cd2",
     "kind": "reference",
@@ -196,6 +205,15 @@
     "explanation": "La canción se iba a titular \"Suicide\" (por eso la intro lo dice), pero la discográfica no lo aceptó. La banda lo cambió a \"Chop Suey\", un plato chino-americano: es literalmente \"suicide\" recortado y camuflado dentro de otra palabra (chop = cortar).",
     "line_text": "We're rolling \"Suicide\"",
     "created_at": "2026-07-24T22:31:54.870685+00:00"
+  },
+  {
+    "id": "1fd77fb1-46d6-5e21-8b64-0ed38ab13241",
+    "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "kind": "reference",
+    "term": "Our World, la primera emisión mundial",
+    "explanation": "Se estrenó en directo en junio de 1967 dentro de Our World, la primera emisión vía satélite a todo el planeta: la vieron unos 400 millones de personas. Por eso la letra es deliberadamente sencilla y repetitiva, con estructuras que un no nativo puede seguir a la primera. Es un caso raro de canción diseñada para ser entendida en cualquier idioma.",
+    "line_text": "All you need is love\nLove is all you need",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
     "id": "23762f35-6436-5a9b-8688-ec5fef2ab759",
@@ -270,6 +288,15 @@
     "created_at": "2026-07-24T22:42:41.060636+00:00"
   },
   {
+    "id": "3cd5c250-8f10-5165-8e06-031631644452",
+    "song_id": "83a81efb-bc77-5c08-8f7a-71a3e34330c6",
+    "kind": "reference",
+    "term": "el blackbird no es un pájaro",
+    "explanation": "Paul McCartney la escribió pensando en el movimiento por los derechos civiles en Estados Unidos, y en concreto en las mujeres negras que se enfrentaban a la segregación. Clave lingüística: en el inglés británico de la época bird era además una forma coloquial de decir chica. Así que blackbird se lee a la vez como mirlo y como mujer negra: toda la canción cambia de sentido al saberlo.",
+    "line_text": "Blackbird singing in the dead of night\nTake these broken wings and learn to fly",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
+  },
+  {
     "id": "3e4a3c64-17c7-536b-8feb-1c623901a8a6",
     "song_id": "8e0bc014-2fd5-5a3a-8054-e02930ee99cd",
     "kind": "reference",
@@ -342,6 +369,15 @@
     "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
+    "id": "539e77f5-f1b7-571a-8942-dc48f6aef34c",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "kind": "reference",
+    "term": "Hey Jude",
+    "explanation": "Paul McCartney la escribió para Julian, el hijo de John Lennon, que tenía cinco años cuando sus padres se separaron: iba en coche a visitarlo e improvisó Hey Jules, que luego cambió a Jude porque sonaba mejor. John creyó siempre que la canción hablaba de él. Saberlo cambia por completo cómo suenan versos como don't be afraid.",
+    "line_text": "Hey, Jude, don't make it bad\nTake a sad song and make it better",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
+  },
+  {
     "id": "5769f42a-31a2-58c0-89ac-36df6b89c554",
     "song_id": "49c43c61-c779-5b87-80e8-d56722006d03",
     "kind": "reference",
@@ -349,6 +385,15 @@
     "explanation": "\"The pursuit of Happiness\" (la búsqueda de la felicidad) es una frase célebre de la Declaración de Independencia de EE. UU., que lista los derechos: \"life, liberty and the pursuit of happiness\". Cudi la convierte en una búsqueda personal y melancólica.",
     "line_text": "I'm on the pursuit of happiness, and I know\nEverything that shine ain't always gonna be gold",
     "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "57fc677e-7033-5b2b-81a6-763fc302c649",
+    "song_id": "66ed6432-4397-5e8a-8c70-45f4c11157b4",
+    "kind": "reference",
+    "term": "el concierto de la azotea",
+    "explanation": "Se tocó en el famoso concierto sorpresa de enero de 1969 en la azotea de Apple, en pleno centro de Londres: la última actuación pública de los Beatles, que la policía acabó parando. Lennon la escribió para Yoko Ono, y él mismo dijo que cuando pide don't let me down lo hace con auténtico pánico: era una súplica, no una frase bonita.",
+    "line_text": "Don't let me down, don't let me down",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
     "id": "5a88e01c-2276-5ecb-8121-0b55f740fe97",
@@ -576,6 +621,15 @@
     "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
+    "id": "90a01836-938f-5deb-838c-165267ca8cdb",
+    "song_id": "5dd9fa38-4211-4447-a6cc-9291491ce7af",
+    "kind": "reference",
+    "term": "Help! era una petición real",
+    "explanation": "John Lennon contó años después que Help! no era una canción de encargo para la película: era una petición de auxilio literal. Estaba en su etapa que él llamaba fat Elvis, abrumado por la fama y comiendo y bebiendo demasiado. Fíjate en el uso enfático de do en I DO appreciate: en inglés se antepone do a un verbo para subrayarlo, un recurso muy útil y muy poco conocido.",
+    "line_text": "Help me if you can, I'm feeling down\nAnd I do appreciate you being 'round",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
+  },
+  {
     "id": "984f3ee3-8eb9-573e-87f2-89cd0a77aa1d",
     "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
     "kind": "reference",
@@ -601,6 +655,15 @@
     "explanation": "Suena a la Virgen María, pero Paul McCartney contó que se refería a su propia madre, Mary, que murió cuando él tenía catorce años: soñó con ella en una época difícil y le dijo que dejara estar las cosas. La ambigüedad religiosa es un feliz accidente.",
     "line_text": "When I find myself in times of trouble\nMother Mary comes to me\nSpeaking words of wisdom",
     "created_at": "2026-07-24T22:42:41.060636+00:00"
+  },
+  {
+    "id": "9c40b045-315b-57e7-87d0-cd96795e99a2",
+    "song_id": "a2f43cc5-1daf-5a79-85be-95f48b26a543",
+    "kind": "reference",
+    "term": "el invierno del que habla",
+    "explanation": "George Harrison la escribió faltando a una reunión de negocios de Apple, la empresa del grupo, un día de sol en el jardín de Eric Clapton. El long, cold, lonely winter no es solo meteorología: era la etapa de peleas, abogados y tensión que precedió a la ruptura de los Beatles. Curiosidad útil: es hoy la canción más escuchada del grupo en streaming.",
+    "line_text": "Little darling\nIt's been a long, cold, lonely winter",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
     "id": "9de6696b-82d9-5472-8fae-3545b44bbe35",
@@ -657,6 +720,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "aae4f872-60d4-5e98-83f8-4f191c6bfbeb",
+    "song_id": "32d14433-464b-43a5-b1cb-b9c7a7700271",
+    "kind": "wordplay",
+    "term": "let it out and let it in",
+    "explanation": "Par de phrasal verbs con la misma estructura y sentido opuesto: let it out = sácalo fuera (desahógate), let it in = déjalo entrar (permítete sentirlo). Aprenderlos juntos es la mejor forma de fijar la lógica de out/in con let.",
+    "line_text": "So let it out and let it in, hey, Jude, begin",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
+  },
+  {
     "id": "adacf89b-5de9-5584-8efb-83fee6bae27c",
     "song_id": "7949773c-3f85-5a7f-86a3-10d060f5019c",
     "kind": "reference",
@@ -664,6 +736,15 @@
     "explanation": "Four and twenty en vez de twenty-four es una forma arcaica de decir los números (como en la nana Sing a Song of Sixpence: four and twenty blackbirds). Da un aire de cuento antiguo. Curiosidad: The Masterplan era solo una cara B, y Noel Gallagher ha dicho que fue un error no ponerla en un disco de verdad.",
     "line_text": "There's four and twenty million doors\nOn life's endless corridor",
     "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "ae475d59-8495-51f4-815c-70f9dd22ee5e",
+    "song_id": "15d9d623-a875-546c-89fa-7d4274879ee3",
+    "kind": "reference",
+    "term": "de diario de viaje a canción de amor",
+    "explanation": "Lennon empezó escribiendo un recorrido literal por Liverpool en autobús, con nombres de calles y paradas, y le pareció aburridísimo. Lo tiró casi entero y dejó solo la idea abstracta de los lugares recordados. Es un buen ejemplo de por qué la letra funciona: al quitar los nombres propios, cualquiera puede poner los suyos.",
+    "line_text": "There are places I remember\nAll my life, though some have changed",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
     "id": "b00af9c7-9beb-560c-8aac-1aa1ee318e5d",
@@ -700,6 +781,15 @@
     "explanation": "Golden State Warriors, el equipo de baloncesto (NBA) dominante en 2016; Draymond Green es su jugador. Drake, muy ligado a la NBA, presume de que las estrellas paran por su casa: mezcla su vida con la del equipo del momento.",
     "line_text": "You know Chubbs like Draymond\nGolden State running practice at my house",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "b36feca8-2a60-5b12-80f6-233249b9d115",
+    "song_id": "a6b9c068-b0bd-4956-92b6-46fc0031acdc",
+    "kind": "wordplay",
+    "term": "nothing you can do that can't be done",
+    "explanation": "Toda la letra es un ejercicio de dobles negaciones con participios: nothing... that can't be done. En español suena raro, pero en inglés es una forma habitual de afirmar rotundamente (todo se puede hacer). Además regala una lista de participios irregulares en fila: done, sung, made, saved, known, shown.",
+    "line_text": "There's nothing you can do that can't be done\nNothing you can sing that can't be sung",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
     "id": "b6a3592e-ff39-5a50-8244-c6fdde5b67da",
@@ -846,6 +936,15 @@
     "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
+    "id": "df27c4c7-af3e-59b7-8618-f450ba21d4ad",
+    "song_id": "7ca03d1f-e8f6-5acc-8f39-e56b386bb0a3",
+    "kind": "reference",
+    "term": "ob-la-di, ob-la-da",
+    "explanation": "La frase no es inglés: Paul McCartney se la tomó prestada a Jimmy Scott, un percusionista nigeriano al que se la oía decir; viene del idioma yoruba y su sentido es justo el del estribillo, la vida continúa. También explica el brah (hermano, colega) y el aire caribeño de la canción.",
+    "line_text": "Ob-la-di, ob-la-da\nLife goes on, brah",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
+  },
+  {
     "id": "df70254a-59f2-5716-8abc-d87604357512",
     "song_id": "8b3f7387-d1fd-5823-83b6-35f85eaf92aa",
     "kind": "reference",
@@ -871,6 +970,15 @@
     "explanation": "Ojo a este out: con fuego o luces, be out significa apagado, no fuera. The fire is out = el fuego se ha apagado; the lights are out = las luces están apagadas. Es un uso que despista mucho al hispanohablante.",
     "line_text": "That the fire in your heart is out",
     "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "e7b3ca56-ab28-51cf-8cf1-417ef68598ba",
+    "song_id": "340e90b2-1338-50d6-8da2-e340166b2c73",
+    "kind": "reference",
+    "term": "grabada en una sola toma con la voz destrozada",
+    "explanation": "Se grabó al final de una jornada maratoniana en la que registraron el primer disco entero en un día. Lennon estaba resfriado y con la garganta hecha polvo; el productor la dejó para el final porque sabía que después no podría cantar más. Salió en una sola toma, y ese desgarro de la voz es real. Además, no es suya: es una versión de los Isley Brothers.",
+    "line_text": "Well, shake it up, baby, now\nTwist and shout",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
     "id": "e9a0b6c4-30e1-5402-890f-bd543dd5e960",
@@ -934,6 +1042,15 @@
     "explanation": "\"The Ville\" es Fayetteville, la ciudad natal de J. Cole. \"Dreamville\" es su sello discográfico. Juega con ambos: sus \"profecías\" desde el barrio se cumplieron al montar su propio sello.",
     "line_text": "Prophecies that I made way back in the Ville",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "fc7d5a37-97be-5f6d-863b-8453527b6f2a",
+    "song_id": "66ed6432-4397-5e8a-8c70-45f4c11157b4",
+    "kind": "wordplay",
+    "term": "she done me good",
+    "explanation": "Done en lugar de did, y good en lugar de well: gramática no estándar típica del inglés coloquial y del blues del que bebían los Beatles. En un examen sería incorrecto; en una canción da naturalidad y calle. Conviene reconocerlo sin imitarlo al escribir.",
+    "line_text": "And from the first time that she really done me\nOoh, she done me\nShe done me good",
+    "created_at": "2026-07-25T10:30:00.342581+00:00"
   },
   {
     "id": "fc84e0de-b05d-522a-8367-4573a17295a0",
