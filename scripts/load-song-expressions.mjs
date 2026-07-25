@@ -94,13 +94,62 @@ function surfaceCandidates(front) {
   return out;
 }
 
+// Irregulares frecuentes, para casar la ficha con la forma que use la letra.
+const IRREG = {
+  be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'], go: ['goes', 'went', 'gone', 'going'],
+  get: ['gets', 'got', 'gotten', 'getting'], take: ['takes', 'took', 'taken', 'taking'],
+  make: ['makes', 'made', 'making'], come: ['comes', 'came', 'coming'], see: ['sees', 'saw', 'seen', 'seeing'],
+  give: ['gives', 'gave', 'given', 'giving'], keep: ['keeps', 'kept', 'keeping'], leave: ['leaves', 'left', 'leaving'],
+  lose: ['loses', 'lost', 'losing'], feel: ['feels', 'felt', 'feeling'], hold: ['holds', 'held', 'holding'],
+  break: ['breaks', 'broke', 'broken', 'breaking'], fall: ['falls', 'fell', 'fallen', 'falling'],
+  run: ['runs', 'ran', 'running'], know: ['knows', 'knew', 'known', 'knowing'], think: ['thinks', 'thought', 'thinking'],
+  bring: ['brings', 'brought', 'bringing'], catch: ['catches', 'caught', 'catching'], cut: ['cuts', 'cutting'],
+  put: ['puts', 'putting'], let: ['lets', 'letting'], say: ['says', 'said', 'saying'], stand: ['stands', 'stood', 'standing'],
+  sing: ['sings', 'sang', 'sung', 'singing'], wear: ['wears', 'wore', 'worn', 'wearing'], pay: ['pays', 'paid', 'paying'],
+};
+
+/**
+ * Variantes de una palabra para el anclado. La ficha lleva la forma de
+ * diccionario (soaked to the bone) pero la letra la conjuga a su manera
+ * (soaks you to the bone), así que sin esto la ficha NO se ancla a su propia
+ * canción y desaparece de la vista por canción.
+ */
+function wordVariants(token) {
+  const w = token.toLowerCase();
+  const out = new Set([w]);
+  // Raíz aproximada: quita la terminación para reconstruir el resto de formas.
+  const stems = new Set([w]);
+  for (const [suf, cut] of [['ing', 3], ['ed', 2], ['es', 2], ['s', 1]]) {
+    if (w.length > suf.length + 1 && w.endsWith(suf)) {
+      const base = w.slice(0, -cut);
+      stems.add(base);
+      stems.add(base + 'e');                                  // taken/taking → take
+      if (/([^aeiou])\1$/.test(base)) stems.add(base.slice(0, -1)); // stopped → stop
+    }
+  }
+  for (const s of stems) {
+    if (s.length < 2) continue;
+    out.add(s); out.add(s + 's'); out.add(s + 'ed'); out.add(s + 'ing'); out.add(s + 'd');
+    if (/(s|x|z|ch|sh|o)$/.test(s)) out.add(s + 'es');
+    if (s.endsWith('e')) { out.add(s.slice(0, -1) + 'ing'); out.add(s.slice(0, -1) + 'ed'); }
+    (IRREG[s] || []).forEach((f) => out.add(f));
+    for (const [base, forms] of Object.entries(IRREG)) if (forms.includes(s)) { out.add(base); forms.forEach((f) => out.add(f)); }
+  }
+  return [...out].filter(Boolean);
+}
+
 // Busca el verso (3 líneas) donde aparece alguno de los `surfaces` en la canción.
 function findVerse(title, surfaces) {
   const lines = lyricBlocks.get(norm(title));
   if (!lines || !surfaces.length) return null;
   const real = lines.filter((l) => l.trim() && !isSection(l));
   for (const surface of surfaces) {
-    const toks = surface.split(/\s+/).map((t) => esc(t).replace(/^'/, "'?"));
+    // El PRIMER token se flexiona (suele ser el verbo); el resto, literal.
+    const raw = surface.split(/\s+/);
+    const toks = raw.map((t, i) => {
+      if (i === 0) return `(?:${wordVariants(t).map(esc).join('|')})`;
+      return esc(t).replace(/^'/, "'?");
+    });
     // límite inicial tolerante con apóstrofo inicial ('bout, 'sposed)
     const re = new RegExp("(?:^|[^\\w'])" + toks.join("[\\w' ,]*?\\s*") + '\\b', 'i');
     for (let i = 0; i < real.length; i++) {

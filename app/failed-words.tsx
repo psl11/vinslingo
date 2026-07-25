@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
+import { ActionButton } from '../components/ui/ActionButton';
 import { VocabResultCard, VocabResultItem } from '../components/vocabulary/VocabResultCard';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { colors, radius, spacing, fontSize, fontWeight } from '../constants/theme';
@@ -139,8 +140,9 @@ export default function FailedWordsScreen() {
           <>
             {/* Entrenamiento: drill estilo Duolingo (cada palabra en 3 formatos,
                 los fallos se repiten al final). Ver docs/drill-mode.md. */}
-            <PressableScale
+            <ActionButton
               style={styles.trainButton}
+              keepPendingUntilUnmount
               onPress={() =>
                 router.push({
                   pathname: '/study/drill',
@@ -149,17 +151,18 @@ export default function FailedWordsScreen() {
               }
             >
               <Text style={styles.ctaButtonText}>🏋️ Entrenar</Text>
-            </PressableScale>
+            </ActionButton>
             <View style={styles.ctaRow}>
-              <PressableScale style={styles.ctaButton} onPress={() => startQuiz(false)}>
+              <ActionButton style={styles.ctaButton} onPress={() => startQuiz(false)} keepPendingUntilUnmount>
                 <Text style={styles.ctaButtonText}>Tarjetas</Text>
-              </PressableScale>
-              <PressableScale
+              </ActionButton>
+              <ActionButton
                 style={[styles.ctaButton, styles.ctaButtonTyping]}
                 onPress={() => startQuiz(true)}
+                keepPendingUntilUnmount
               >
                 <Text style={styles.ctaButtonText}>Escribir</Text>
-              </PressableScale>
+              </ActionButton>
             </View>
           </>
         )}

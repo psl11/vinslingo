@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, StyleSheet, Pressable, SafeAreaView, ScrollView, ActivityIndicator } from 'react-native';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
+import { ActionButton } from '../components/ui/ActionButton';
 import { SongNotes, type Note } from '../components/music/SongNotes';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { analyzeTranslation } from '../lib/vocabulary/translationParser';
@@ -127,12 +128,17 @@ export default function SongScreen() {
 
           {words.length > 0 && (
             <View style={styles.ctaRow}>
-              <PressableScale style={[styles.cta, styles.ctaPrimary]} onPress={() => study(false)}>
+              <ActionButton style={[styles.cta, styles.ctaPrimary]} onPress={() => study(false)} keepPendingUntilUnmount>
                 <Text style={styles.ctaPrimaryText}>🃏 Estudiar</Text>
-              </PressableScale>
-              <PressableScale style={[styles.cta, styles.ctaSecondary]} onPress={() => study(true)}>
+              </ActionButton>
+              <ActionButton
+                style={[styles.cta, styles.ctaSecondary]}
+                onPress={() => study(true)}
+                spinnerColor={colors.textSecondary}
+                keepPendingUntilUnmount
+              >
                 <Text style={styles.ctaSecondaryText}>⌨️ Escribir</Text>
-              </PressableScale>
+              </ActionButton>
             </View>
           )}
 

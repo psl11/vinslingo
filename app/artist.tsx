@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { View, Text, StyleSheet, Pressable, SafeAreaView, ScrollView, ActivityIndicator } from 'react-native';
 import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
+import { ActionButton } from '../components/ui/ActionButton';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { colors, radius, spacing, fontSize, fontWeight } from '../constants/theme';
 
@@ -55,12 +56,17 @@ export default function ArtistScreen() {
       ) : (
         <ScrollView contentContainerStyle={styles.scroll}>
           <View style={styles.ctaRow}>
-            <PressableScale style={[styles.cta, styles.ctaPrimary]} onPress={() => reviewAll(false)}>
+            <ActionButton style={[styles.cta, styles.ctaPrimary]} onPress={() => reviewAll(false)} keepPendingUntilUnmount>
               <Text style={styles.ctaPrimaryText}>🎧 Repasar todo{total ? ` (${total})` : ''}</Text>
-            </PressableScale>
-            <PressableScale style={[styles.cta, styles.ctaSecondary]} onPress={() => reviewAll(true)}>
+            </ActionButton>
+            <ActionButton
+              style={[styles.cta, styles.ctaSecondary]}
+              onPress={() => reviewAll(true)}
+              spinnerColor={colors.textSecondary}
+              keepPendingUntilUnmount
+            >
               <Text style={styles.ctaSecondaryText}>⌨️ Escribir</Text>
-            </PressableScale>
+            </ActionButton>
           </View>
 
           {songs.length > 0 ? (

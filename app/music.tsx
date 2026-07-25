@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, SafeAreaView, ActivityIndicator } from 'react-native';
 import { useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
+import { ActionButton } from '../components/ui/ActionButton';
 import { useSettingsStore } from '../stores/useSettingsStore';
 import { colors, radius, spacing, fontSize, fontWeight } from '../constants/theme';
 
@@ -93,12 +94,18 @@ export default function MusicScreen() {
   };
 
   const Row = ({ emoji, label, count, onPress }: { emoji: string; label: string; count: number; onPress: () => void }) => (
-    <PressableScale style={styles.row} onPress={onPress}>
+    <ActionButton
+      style={styles.row}
+      contentStyle={styles.rowContent}
+      onPress={onPress}
+      spinnerColor={colors.primary}
+      keepPendingUntilUnmount
+    >
       <Text style={styles.rowEmoji}>{emoji}</Text>
       <Text style={styles.rowLabel} numberOfLines={1}>{label}</Text>
       <View style={styles.countBadge}><Text style={styles.countText}>{count}</Text></View>
       <Text style={styles.rowChevron}>›</Text>
-    </PressableScale>
+    </ActionButton>
   );
 
   return (
@@ -233,6 +240,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border,
     borderRadius: radius.md, paddingVertical: spacing.md, paddingHorizontal: spacing.lg, marginBottom: spacing.sm,
   },
+  // El contenido de la fila va dentro del wrapper de ActionButton, así que el
+  // layout horizontal vive aquí (el estilo `row` mantiene el aspecto).
+  rowContent: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: spacing.md },
   rowEmoji: { fontSize: 22 },
   rowLabel: { flex: 1, fontSize: fontSize.md, fontWeight: fontWeight.semibold, color: colors.textPrimary },
   countBadge: { backgroundColor: colors.primarySurface, paddingHorizontal: spacing.sm, paddingVertical: spacing.xxs, borderRadius: radius.sm, minWidth: 34, alignItems: 'center' },

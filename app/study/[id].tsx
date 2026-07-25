@@ -7,6 +7,7 @@ import { AnswerButtons } from '../../components/cards/AnswerButtons';
 import { TypingCard } from '../../components/cards/TypingCard';
 import type { MatchResult } from '../../lib/utils/fuzzyMatch';
 import { ProgressBar } from '../../components/ui/ProgressBar';
+import { ActionButton } from '../../components/ui/ActionButton';
 import { useStudyStore } from '../../stores/useStudyStore';
 import { useSettingsStore } from '../../stores/useSettingsStore';
 import { useUserStore } from '../../stores/useUserStore';
@@ -285,22 +286,19 @@ export default function StudyScreen() {
     addStudyTime(studyMinutes);
     addCardsStudied(stats.completed);
 
-    // Save study session to Supabase
-    try {
-      const { saveStudySession } = await import('../../lib/services/progressService');
-      
-      await saveStudySession(
-        currentSession?.type || 'lesson',
-        stats.completed,
-        stats.correct,
-        sessionDuration,
-        xpEarned
-      );
-      console.log('✅ Session saved to Supabase');
-    } catch (error) {
-      console.error('❌ Error saving session:', error);
-    }
-    
+    // Guardar la sesión en Supabase EN SEGUNDO PLANO: esperar el round-trip de
+    // red antes de salir daba varios segundos de pantalla congelada (mismo
+    // problema que tenían los botones de respuesta). El progreso por tarjeta ya
+    // está guardado en local; esto es solo el resumen de la sesión, así que si
+    // falla no se pierde nada del aprendizaje.
+    const sessionType = currentSession?.type || 'lesson';
+    void import('../../lib/services/progressService')
+      .then(({ saveStudySession }) =>
+        saveStudySession(sessionType, stats.completed, stats.correct, sessionDuration, xpEarned)
+      )
+      .then(() => console.log('✅ Session saved to Supabase'))
+      .catch((e) => console.log('guardado de sesión en 2º plano falló:', (e as any)?.message ?? e));
+
     setShowSummary(false);
     endSession();
     router.back();
@@ -377,9 +375,13 @@ export default function StudyScreen() {
               </View>
             </View>
 
-            <Pressable style={styles.finishButton} onPress={handleFinish}>
+            <ActionButton
+              style={styles.finishButton}
+              onPress={handleFinish}
+              keepPendingUntilUnmount
+            >
               <Text style={styles.finishButtonText}>Continuar</Text>
-            </Pressable>
+            </ActionButton>
           </View>
         </View>
       </SafeAreaView>
