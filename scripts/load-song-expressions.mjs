@@ -28,6 +28,36 @@ const LYRICS = `${REPO}/letras-playlist.txt`;
 const CEFR = 'B2'; // registro coloquial/slang, como el resto del slang
 
 const supabase = createClient(process.env.EXPO_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+
+/**
+ * Expresiones del extractor que YA existen en el vocabulario curado con el MISMO
+ * significado. En vez de crear una ficha `colloquial` duplicada, se ancla la ficha
+ * curada a la canción: una sola ficha por expresión, y el verso cambia según la
+ * canción (que es justo el modelo de la feature).
+ *
+ * OJO, solo se listan aquí los duplicados de VERDAD. Los HOMÓGRAFOS (misma
+ * grafía, significado distinto) se quedan como ficha propia: `ill` = enfermo
+ * (ngsl) vs genial (slang), `cheese` = queso vs pasta, `ball` = pelota vs vivir
+ * a lo grande, `heat` = calor vs temazo, `put on` = ponerse ropa vs dar un
+ * empujón, `come up` = surgir vs un chollo, `get on` = subirse vs triunfar.
+ * Fusionarlos sería un error de contenido.
+ *
+ * clave = `front` del mazo (en minúsculas) → ficha curada destino.
+ */
+const MERGE_INTO_CURATED = {
+  'in spite of': { word: 'in spite of', category: 'connector' },
+  'open up (to someone)': { word: 'open up', category: 'phave' },
+  'run away': { word: 'run away', category: 'phave' },
+  'settle down': { word: 'settle down', category: 'phave' },
+  'get away': { word: 'get away', category: 'phave' },
+  'figure something out': { word: 'figure out', category: 'phave' },
+  'give in': { word: 'give in', category: 'phave' },
+  "i don't mind": { word: "I don't mind", category: 'expression' },
+  'never mind': { word: 'never mind', category: 'expression' },
+  'brand-new': { word: 'brand-new', category: 'ngsl' },
+  'take someone out': { word: 'take out', category: 'phave' },
+  'grand': { word: 'grand', category: 'british_slang' },
+};
 const detId = (k) => { const h = createHash('sha1').update(k).digest('hex'); return `${h.slice(0,8)}-${h.slice(8,12)}-5${h.slice(13,16)}-8${h.slice(17,20)}-${h.slice(20,32)}`; };
 const norm = (s) => (s || '').toLowerCase().replace(/[.,!?$&"()\/]/g, '').replace(/\s+/g, ' ').trim();
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -100,6 +130,20 @@ async function main() {
   if (se) { console.error(se); process.exit(1); }
   const songIdByTitle = new Map(dbSongs.map((s) => [norm(s.title), s.id]));
 
+  // Fichas curadas destino de MERGE_INTO_CURATED (se anclan en vez de duplicar).
+  const curatedId = new Map(); // front(lower) -> vocabulary.id
+  for (const [front, target] of Object.entries(MERGE_INTO_CURATED)) {
+    const { data, error } = await supabase
+      .from('vocabulary').select('id, word')
+      .eq('word', target.word).eq('category', target.category);
+    if (error) { console.error('curated lookup', front, error); process.exit(1); }
+    if (!data || data.length !== 1) {
+      console.error(`✗ ${front}: esperaba 1 ficha curada ${target.category}/${target.word}, encontré ${data?.length ?? 0}`);
+      process.exit(1);
+    }
+    curatedId.set(front, data[0].id);
+  }
+
   // Todos los mazos batchN-decks.json del directorio (auto-incluye lotes nuevos).
   const deckFiles = fs.readdirSync(DECKS_DIR).filter((f) => /^batch\d+-decks\.json$/.test(f))
     .sort((a, b) => parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0]));
@@ -111,6 +155,7 @@ async function main() {
   const noteRows = [];          // song_notes
   const anchorStats = { hit: 0, miss: [] };
   const songMiss = new Set();
+  const merged = new Set();     // fronts servidos por una ficha curada
 
   for (const deck of decks) {
     for (const song of deck.songs) {
@@ -120,6 +165,22 @@ async function main() {
       for (const c of song.layer1) {
         const word = c.front.trim();
         const key = word.toLowerCase();
+
+        // Duplicado de una ficha ya curada: se ancla ESA a la canción (una sola
+        // ficha por expresión; el verso es lo que cambia de canción a canción).
+        if (curatedId.has(key)) {
+          const vid = curatedId.get(key);
+          const v = findVerse(song.title, surfaceCandidates(word));
+          if (v) {
+            anchorStats.hit++;
+            svRows.push({ id: detId(`sv:${sid}|${vid}`), song_id: sid, vocabulary_id: vid, line_text: v.verse, highlighted_word: v.surface, line_index: v.idx });
+          } else {
+            anchorStats.miss.push(`${word} [${song.title}] (curada)`);
+          }
+          merged.add(key);
+          continue;
+        }
+
         if (!vocabRows.has(key)) {
           vocabRows.set(key, {
             id: detId('colloquial:' + key),
@@ -157,6 +218,7 @@ async function main() {
   const svUniq = [...new Map(svRows.map((r) => [r.id, r])).values()];
 
   console.log(`Capa 1 (colloquial): ${vocabRows.size} fichas únicas`);
+  if (merged.size) console.log(`  + ${merged.size} expresiones servidas por su ficha CURADA (sin duplicar): ${[...merged].join(', ')}`);
   console.log(`  anclas song_vocabulary: ${svUniq.length} (verso encontrado en ${anchorStats.hit} apariciones)`);
   console.log(`  sin verso (no se anclan, siguen como ficha): ${anchorStats.miss.length}`);
   if (anchorStats.miss.length) console.log('    ' + anchorStats.miss.slice(0, 20).join(', ') + (anchorStats.miss.length > 20 ? '…' : ''));
@@ -178,6 +240,35 @@ async function main() {
     const { error } = await supabase.from('song_notes').upsert(noteRows.slice(i, i + 200), { onConflict: 'id' });
     if (error) { console.error('notes upsert', error); process.exit(1); }
   }
+  // Limpieza de huérfanas: fichas `colloquial` que ya no salen de los mazos
+  // (fusionadas con una curada, renombradas o eliminadas). Sin esto quedarían
+  // duplicados fantasma, porque el upsert no borra. Nunca se borra algo con
+  // progreso del usuario: si lo tiene, se avisa y se deja.
+  const expected = new Set(vocabArr.map((r) => r.id));
+  const { data: existing, error: exErr } = await supabase
+    .from('vocabulary').select('id, word').eq('category', 'colloquial');
+  if (exErr) { console.error('colloquial select', exErr); process.exit(1); }
+  const orphans = (existing || []).filter((r) => !expected.has(r.id));
+  if (orphans.length) {
+    const ids = orphans.map((o) => o.id);
+    const { data: prog, error: pErr } = await supabase
+      .from('user_vocabulary').select('vocabulary_id').in('vocabulary_id', ids);
+    if (pErr) { console.error('user_vocabulary check', pErr); process.exit(1); }
+    const withProgress = new Set((prog || []).map((p) => p.vocabulary_id));
+    const safe = orphans.filter((o) => !withProgress.has(o.id));
+    if (withProgress.size) {
+      console.log(`\n⚠️  ${withProgress.size} huérfanas CON progreso: no se borran (${orphans.filter((o) => withProgress.has(o.id)).map((o) => o.word).join(', ')})`);
+    }
+    if (safe.length) {
+      const safeIds = safe.map((o) => o.id);
+      const { error: dsvErr } = await supabase.from('song_vocabulary').delete().in('vocabulary_id', safeIds);
+      if (dsvErr) { console.error('orphan anchors delete', dsvErr); process.exit(1); }
+      const { error: dErr } = await supabase.from('vocabulary').delete().in('id', safeIds);
+      if (dErr) { console.error('orphan delete', dErr); process.exit(1); }
+      console.log(`\n🧹 ${safe.length} fichas huérfanas borradas: ${safe.map((o) => o.word).join(', ')}`);
+    }
+  }
+
   console.log(`\n✅ Cargado: ${vocabArr.length} coloquiales, ${svUniq.length} anclas, ${noteRows.length} notas.`);
   console.log('▶ Ejecuta: npm run backup:supabase && npm run validate:content\n');
 }

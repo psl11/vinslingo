@@ -41,6 +41,10 @@ yarn-error.*
 letras-playlist.txt
 *.lyrics.txt
 
+# volcado de revisión del contenido de canciones (documento de trabajo local,
+# lleva versos de contexto; se regenera con scripts/dump-song-content.mjs)
+REVISION-contenido-canciones.md
+
 # generated native folders
 /ios
 /android

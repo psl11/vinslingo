@@ -36,6 +36,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "05aac9b3-db9b-5102-84b7-c064f1240912",
+    "song_id": "264b0535-f093-5430-8229-af3df389439c",
+    "kind": "reference",
+    "term": "the Battle of Britpop",
+    "explanation": "Este single salió el mismo día que Country House de Blur, en agosto de 1995: la prensa lo llamó the Battle of Britpop y fue portada de los telediarios británicos. Blur vendió más esa semana, pero Oasis vendió muchísimo más a largo plazo. Es el momento cumbre de la rivalidad Oasis (Manchester, clase obrera) contra Blur (Londres, clase media).",
+    "line_text": "You've gotta roll with it\nYou gotta take your time",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "05ce7e78-6388-5280-89a2-e404c076e0cd",
     "song_id": "f2e77cf4-d89e-5e7e-8bd4-e49475a32eed",
     "kind": "reference",
@@ -61,6 +70,15 @@
     "explanation": "\"El rey ha muerto, ¡viva el rey!\" es la frase de las sucesiones al trono: en cuanto muere un rey, el siguiente ya reina. Coldplay narra desde un rey derrocado que ha perdido todo su poder.",
     "line_text": "Now the old king is dead, long live the king",
     "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "0c159d10-bd4d-577d-81ee-2a809c3dd9ec",
+    "song_id": "50000001-0000-0000-0000-000000000018",
+    "kind": "reference",
+    "term": "respuesta a Nirvana",
+    "explanation": "Noel Gallagher escribió esta canción como réplica directa al grunge: le irritaba que Kurt Cobain cantara I hate myself and I want to die teniéndolo todo, mientras en Manchester la gente sin nada quería vivir. De ahí el título y ese verso. Sirve para fijar el contraste wanna live / wanna die, y explica por qué Oasis sonaba tan optimista frente al rock americano de la época.",
+    "line_text": "Maybe I just wanna fly\nWanna live, I don't wanna die",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
     "id": "0cadd356-5339-5075-8322-181047f6e7bb",
@@ -135,6 +153,15 @@
     "created_at": "2026-07-24T22:42:41.060636+00:00"
   },
   {
+    "id": "19de8cfb-3e54-53b5-89b5-309f7bd24c88",
+    "song_id": "5c392da4-b598-5d89-8b0c-4761d7f38ab3",
+    "kind": "reference",
+    "term": "The Royle Family",
+    "explanation": "En el Reino Unido esta canción es inseparable de The Royle Family, una sitcom de culto de los noventa sobre una familia obrera de Manchester que la usaba como sintonía. Para un británico, oírla evoca al instante ese sofá y esa tele.",
+    "line_text": "You're half the world away\nHalf the world away",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "1b6544bc-e5d8-5200-8546-7cee0ce033dc",
     "song_id": "50000001-0000-0000-0000-000000000018",
     "kind": "reference",
@@ -153,6 +180,15 @@
     "created_at": "2026-07-24T22:42:41.060636+00:00"
   },
   {
+    "id": "1ccad101-fa0e-5983-8fc8-af78f4879c88",
+    "song_id": "607e7cd8-bab5-5431-8b4b-f922d477b54e",
+    "kind": "reference",
+    "term": "Sally",
+    "explanation": "Todo el mundo pregunta quién es Sally: Noel Gallagher ha dicho que no es nadie, que solo necesitaba un nombre que cupiera en la métrica. Trivia con peso: tras el atentado de Manchester de 2017, una multitud rompió a cantar este estribillo de forma espontánea y la canción se convirtió en un himno de duelo y resistencia de la ciudad.",
+    "line_text": "And so, Sally can wait\nShe knows it's too late as we're walkin' on by",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "1eee20bf-d7f0-514e-85d2-08ec6c797c48",
     "song_id": "33a27298-73e2-506e-8e57-bfc9942f1a9e",
     "kind": "wordplay",
@@ -160,6 +196,15 @@
     "explanation": "La canción se iba a titular \"Suicide\" (por eso la intro lo dice), pero la discográfica no lo aceptó. La banda lo cambió a \"Chop Suey\", un plato chino-americano: es literalmente \"suicide\" recortado y camuflado dentro de otra palabra (chop = cortar).",
     "line_text": "We're rolling \"Suicide\"",
     "created_at": "2026-07-24T22:31:54.870685+00:00"
+  },
+  {
+    "id": "23762f35-6436-5a9b-8688-ec5fef2ab759",
+    "song_id": "4a618b69-20e4-59b9-8fcf-ff142b58d0c4",
+    "kind": "reference",
+    "term": "the Big Issue",
+    "explanation": "The Big Issue es una revista británica que venden por la calle personas sin hogar: compran cada ejemplar y se quedan con lo que sacan, así que verla es parte del paisaje urbano del Reino Unido. Mencionarla sitúa al personaje en la calle sin decirlo. Fíjate además en la rima interna tissue/issue, típica de Noel.",
+    "line_text": "She's sniffing in a tissue selling the Big Issue",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
     "id": "283389ce-b317-5eec-8dd3-0b188fa977c5",
@@ -171,6 +216,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "2af5a5bb-4eb9-54f8-81ae-f5748804c2b7",
+    "song_id": "0b696467-3290-5a27-8cc4-7a4285599828",
+    "kind": "wordplay",
+    "term": "make it / fake it",
+    "explanation": "El outro alterna make it (conseguirlo) y fake it (fingirlo), que riman y se diferencian en una sola letra. Es un truco útil para memorizar el par: make it = lograrlo de verdad; fake it = aparentarlo. La canción retrata a alguien sin trabajo ni futuro en el Manchester de los noventa, y ese juego resume su dilema.",
+    "line_text": "You gotta, you gotta, you gotta make it\nYou gotta, you gotta, you gotta fake it",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "2b58b886-3e4c-52a8-8abd-234a2751379f",
     "song_id": "a506bfa5-d236-570a-8901-9a7e2fb6ee9c",
     "kind": "wordplay",
@@ -178,6 +232,15 @@
     "explanation": "\"Rager\" viene de \"rage\", que en slang no es solo furia sino irse de fiesta a tope (to rage = desmadrarse). \"Mr. Rager\" es el alter ego fiestero y noctámbulo de Kid Cudi, siempre de aventura para escapar de sus demonios.",
     "line_text": "Hey, Mr. Rager, Mr. Rager\nTell me where you're goin', tell us where you're headed",
     "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "2f95a7f3-fb30-5531-83ba-ad0e10420ccf",
+    "song_id": "d0e68830-252e-5eac-8d32-146d3b598f8e",
+    "kind": "wordplay",
+    "term": "Tonight I'm a rock 'n' roll star",
+    "explanation": "Es la primera canción del primer disco de Oasis (Definitely Maybe, 1994) y funciona como declaración de intenciones: cuando la grabaron no eran estrellas de nada. Fíjate en el tiempo verbal: no dice I will be, dice I am, en presente. Esa es la clave del tema: creértelo antes de serlo.",
+    "line_text": "In my mind my dreams are real\nTonight I'm a rock 'n' roll star",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
     "id": "35362c37-2316-56e8-8125-f05330a2f760",
@@ -243,6 +306,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "46735ec3-ee7e-5012-8b45-a2f82b3f6d2d",
+    "song_id": "9ef1727c-2f92-59f2-8c38-10daf793dbdf",
+    "kind": "reference",
+    "term": "caught beneath the landslide",
+    "explanation": "Un landslide es un corrimiento de tierra; en sentido figurado, algo que te sepulta y no puedes parar. En política, a landslide victory es una victoria aplastante. Aquí es la imagen del que se ve arrastrado por la vida.",
+    "line_text": "Someday, you will find me caught beneath the landslide",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "4708c111-11ad-5517-8fda-eb82f84ca9de",
     "song_id": "b7e59710-09e7-5f64-80b8-145f41429a3f",
     "kind": "reference",
@@ -277,6 +349,15 @@
     "explanation": "\"The pursuit of Happiness\" (la búsqueda de la felicidad) es una frase célebre de la Declaración de Independencia de EE. UU., que lista los derechos: \"life, liberty and the pursuit of happiness\". Cudi la convierte en una búsqueda personal y melancólica.",
     "line_text": "I'm on the pursuit of happiness, and I know\nEverything that shine ain't always gonna be gold",
     "created_at": "2026-07-22T16:38:04.846427+00:00"
+  },
+  {
+    "id": "5a88e01c-2276-5ecb-8121-0b55f740fe97",
+    "song_id": "5f9e2b88-055f-4f08-8a91-b9f0369ceb3f",
+    "kind": "reference",
+    "term": "Stand By Me",
+    "explanation": "El título coincide con el clásico de Ben E. King (1961), una de las canciones más versionadas de la historia y también el título de una película muy conocida. Oasis no la versiona: reutiliza la frase, que en inglés es una petición de lealtad incondicional. Trivia: Noel escribió la canción tras una intoxicación alimentaria, cuando su madre le dijo aquello de que debería aprender a cocinar.",
+    "line_text": "Stand by me, nobody knows the way it's gonna be",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
     "id": "5b09a573-90a4-5269-83e5-6d98f3d856ca",
@@ -315,6 +396,15 @@
     "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
+    "id": "66abfd60-8611-5ca7-8398-45d84d7ad7c6",
+    "song_id": "e087a39d-b24d-55ca-8f3a-1193349903ae",
+    "kind": "reference",
+    "term": "sunshine follows thunder",
+    "explanation": "Es una variante del refrán inglés after the storm comes the calm (después de la tormenta llega la calma). Noel lo usa y acto seguido lo desmonta: díselo a quien nunca ve el sol. Fue el primer número uno de Oasis en el Reino Unido, en 1995.",
+    "line_text": "Some might say that sunshine follows thunder\nGo and tell it to the man who cannot shine",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "66e02086-a9d5-5dc2-8b0d-fd741333e0de",
     "song_id": "9903931f-f902-5191-81bc-89043ec5d0d9",
     "kind": "reference",
@@ -333,6 +423,24 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "74173362-35e1-5c9b-87c4-4b8ed9e38716",
+    "song_id": "e087a39d-b24d-55ca-8f3a-1193349903ae",
+    "kind": "reference",
+    "term": "elementary, my friend",
+    "explanation": "Guiño a Elementary, my dear Watson, la frase que todo el mundo asocia a Sherlock Holmes (curiosidad: no aparece así en los libros de Conan Doyle, la popularizaron las películas). Significa que algo es obvio en cuanto lo miras bien. Aquí Liam la suelta tras una ristra de imágenes domésticas absurdas.",
+    "line_text": "It was overflowing gently\nBut it's all elementary my friend",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "7681e46b-028c-58c3-8ddc-5c24dbcd6b8a",
+    "song_id": "a09b22e9-4ef7-571f-802d-edc03952af65",
+    "kind": "reference",
+    "term": "Tomorrow never knows",
+    "explanation": "Tomorrow Never Knows es una canción de los Beatles (Revolver, 1966). Oasis mete guiños a los Beatles en casi todos sus discos: aquí encaja el título dentro de un verso propio. Detectar estos guiños es media diversión de escuchar a Oasis.",
+    "line_text": "Tomorrow never knows what it doesn't know too soon",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "78718677-a8b1-504f-8fa2-01df3bbc0bcc",
     "song_id": "8177eb5c-590e-5454-8bb1-cba1be4ed37a",
     "kind": "reference",
@@ -342,6 +450,15 @@
     "created_at": "2026-07-22T16:38:04.846427+00:00"
   },
   {
+    "id": "7a13b732-0749-5689-8c6e-bf0c9fb19fa3",
+    "song_id": "50000001-0000-0000-0000-000000000018",
+    "kind": "reference",
+    "term": "soaks you to the bone",
+    "explanation": "To the bone (hasta los huesos) intensifica: soaked to the bone = calado hasta los huesos, chilled to the bone = helado hasta los huesos. En Manchester, ciudad famosa por su lluvia, la imagen es literal además de poética.",
+    "line_text": "In the morning rain\nAs it soaks you to the bone",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "7a5a2c65-96af-5afb-8720-6d5979d14992",
     "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
     "kind": "reference",
@@ -349,6 +466,24 @@
     "explanation": "\"Return of the Mack\" es un hit de Mark Morrison (1996). Macklemore lo cita jugando con su propio nombre (Mack-lemore): es a la vez un guiño a la canción famosa y \"el regreso de Mack\".",
     "line_text": "Return of the Mack\nGet 'em; what it is? What it does?",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "7b127dba-cb10-5298-8efe-04673844ce70",
+    "song_id": "d0e68830-252e-5eac-8d32-146d3b598f8e",
+    "kind": "reference",
+    "term": "feed my head",
+    "explanation": "Feed your head es el verso final de White Rabbit de Jefferson Airplane (1967), un himno psicodélico lleno de guiños a Alicia en el país de las maravillas: significa alimenta tu mente, con doble sentido de drogas. Liam lo despacha con retranca: para él eso era simplemente un día en la cama.",
+    "line_text": "Then they said, \"I should feed my head\"\nThat to me was just a day in bed",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "81a4f638-677d-5056-888a-dfe6d64ca812",
+    "song_id": "50000001-0000-0000-0000-000000000016",
+    "kind": "reference",
+    "term": "backbeat",
+    "explanation": "El backbeat es el golpe fuerte de la batería en los tiempos 2 y 4, el que hace que el rock suene a rock. Además, Backbeat es una película de 1994 sobre los Beatles en Hamburgo, muy vista por la banda. Doble guiño en una sola palabra: término musical y referencia beatle.",
+    "line_text": "Backbeat, the word is on the street\nThat the fire in your heart is out",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
     "id": "822f3f82-6c65-52e7-8ae9-d710aba0e780",
@@ -423,6 +558,24 @@
     "created_at": "2026-07-24T22:31:54.870685+00:00"
   },
   {
+    "id": "8f5fbf9c-d006-5631-8449-0ac241bf54e6",
+    "song_id": "a09b22e9-4ef7-571f-802d-edc03952af65",
+    "kind": "wordplay",
+    "term": "morning glory",
+    "explanation": "Morning glory es literalmente la flor del dondiego de día, pero en el argot británico alude al consumo de drogas al despertar (y también, en tono jocoso, a la erección matutina). Noel Gallagher lo eligió por esa ambigüedad y porque rima con story. El título del disco entero, (What's the Story) Morning Glory?, viene de una frase que decía un amigo de la banda a modo de saludo.",
+    "line_text": "What's the story, morning glory?",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "8f893269-f4ab-50d6-8c9c-aadbe811fdfd",
+    "song_id": "8f15f194-46a6-5863-8d84-67c39b468172",
+    "kind": "wordplay",
+    "term": "acquiesce",
+    "explanation": "El título es una palabra rarísima en una canción de rock, y encima no aparece en la letra: solo asoma en otra canción del grupo, The Masterplan (sail them home with acquiesce). Curiosidad que explica el tema: es de las poquísimas en las que cantan los dos hermanos, Liam en los versos y Noel en el estribillo, y ese cara a cara alimentó la lectura de que habla de ellos dos. Noel siempre lo negó, pero admitió que hoy no sabría decir de qué va.",
+    "line_text": "Because we need each other\nWe believe in one another",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "984f3ee3-8eb9-573e-87f2-89cd0a77aa1d",
     "song_id": "d036b1c5-c846-5f75-8e2d-96a3d4520972",
     "kind": "reference",
@@ -477,6 +630,24 @@
     "created_at": "2026-07-22T16:51:44.765863+00:00"
   },
   {
+    "id": "a3f751ef-eeac-557c-82e0-b6a29c5bca16",
+    "song_id": "9ef1727c-2f92-59f2-8c38-10daf793dbdf",
+    "kind": "wordplay",
+    "term": "slowly walking down the hall, faster than a cannonball",
+    "explanation": "El verso se contradice a propósito: caminar despacio y a la vez más rápido que una bala de cañón. A Noel Gallagher le preguntaron qué significaba y respondió que si te importa cuando estás borracho a las tres de la mañana, entonces significa algo. Buen ejemplo de que en la letra pop el sonido manda sobre la lógica.",
+    "line_text": "Slowly walking down the hall\nFaster than a cannonball",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "a7b8cfd3-dbb4-541e-8219-27bf798b4658",
+    "song_id": "4a618b69-20e4-59b9-8fcf-ff142b58d0c4",
+    "kind": "reference",
+    "term": "my yellow submarine",
+    "explanation": "Otro guiño beatle: al BMW del otro le opone su yellow submarine, la canción de los Beatles de 1966. Es una pulla de clase: tú tienes coche de rico, yo tengo imaginación. Curiosidad: Supersonic fue el primer single de Oasis y Noel escribió la letra en una sola noche en el estudio.",
+    "line_text": "Can I ride with you in your BMW?\nYou can sail with me in my yellow submarine",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "aa4de776-6d5d-50c2-8a71-fd77951f75ee",
     "song_id": "918ab129-09b1-5c3a-853d-5c69e8c35f3b",
     "kind": "reference",
@@ -486,6 +657,15 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "adacf89b-5de9-5584-8efb-83fee6bae27c",
+    "song_id": "7949773c-3f85-5a7f-86a3-10d060f5019c",
+    "kind": "reference",
+    "term": "four and twenty",
+    "explanation": "Four and twenty en vez de twenty-four es una forma arcaica de decir los números (como en la nana Sing a Song of Sixpence: four and twenty blackbirds). Da un aire de cuento antiguo. Curiosidad: The Masterplan era solo una cara B, y Noel Gallagher ha dicho que fue un error no ponerla en un disco de verdad.",
+    "line_text": "There's four and twenty million doors\nOn life's endless corridor",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "b00af9c7-9beb-560c-8aac-1aa1ee318e5d",
     "song_id": "afc31011-d151-5cf7-8b48-26b7528b074f",
     "kind": "reference",
@@ -493,6 +673,15 @@
     "explanation": "Gepetto (Geppetto) es el carpintero que crea a Pinocho, la marioneta de hilos. \"Mover hilos como Gepetto\" = controlarlo todo entre bastidores, como un titiritero.",
     "line_text": "Behind the scenes, pull strings like Gepetto",
     "created_at": "2026-07-22T11:29:46.754415+00:00"
+  },
+  {
+    "id": "b0245e59-0378-5a50-86e4-639aa9619c78",
+    "song_id": "5c392da4-b598-5d89-8b0c-4761d7f38ab3",
+    "kind": "reference",
+    "term": "soul asylum",
+    "explanation": "Un asylum es un manicomio (o un asilo, y de ahí asylum seeker, solicitante de asilo). Book myself into = ingresarme. Además, Soul Asylum era una banda estadounidense de la época: Noel juega con el doble sentido de internarse en un manicomio del alma. Es un buen recordatorio de que book no es solo libro, sino también reservar.",
+    "line_text": "I'll book myself into a soul asylum",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
     "id": "b1083fbe-3715-54be-8127-33bea9abb9d8",
@@ -675,6 +864,24 @@
     "created_at": "2026-07-22T11:29:46.754415+00:00"
   },
   {
+    "id": "e6665934-22d9-518f-8b4f-52e127a0c2ca",
+    "song_id": "50000001-0000-0000-0000-000000000016",
+    "kind": "wordplay",
+    "term": "the fire in your heart is out",
+    "explanation": "Ojo a este out: con fuego o luces, be out significa apagado, no fuera. The fire is out = el fuego se ha apagado; the lights are out = las luces están apagadas. Es un uso que despista mucho al hispanohablante.",
+    "line_text": "That the fire in your heart is out",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
+    "id": "e9a0b6c4-30e1-5402-890f-bd543dd5e960",
+    "song_id": "7949773c-3f85-5a7f-86a3-10d060f5019c",
+    "kind": "reference",
+    "term": "an octopus's garden",
+    "explanation": "El tema termina citando literalmente Octopus's Garden, la canción que Ringo Starr cantó con los Beatles (Abbey Road, 1969). Es el guiño beatle más descarado de Oasis: no la versionan, la cuelgan del final como una postal.",
+    "line_text": "I'd like to be under the sea\nIn an octopus's garden in the shade",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
+  },
+  {
     "id": "ea26df48-97b4-5f89-864b-a557d73b196f",
     "song_id": "50000001-0000-0000-0000-000000000008",
     "kind": "reference",
@@ -682,6 +889,15 @@
     "explanation": "El Sandman (el \"hombre de arena\") es un personaje del folclore europeo que trae el sueño espolvoreando arena mágica en los ojos de los niños (por eso las legañas al despertar). La canción lo convierte en algo siniestro, ligado a las pesadillas.",
     "line_text": "Say your prayers, little one, don't forget, my son\nTo include everyone\n'Til the Sandman, he comes",
     "created_at": "2026-07-22T16:51:44.765863+00:00"
+  },
+  {
+    "id": "f1ec7f15-6013-55c3-832e-3d0c215eeb96",
+    "song_id": "607e7cd8-bab5-5431-8b4b-f922d477b54e",
+    "kind": "wordplay",
+    "term": "the brains I had went to my head",
+    "explanation": "Juega con dos expresiones: to go to your head (subírsele a la cabeza, volverse un creído) y el hecho de que los sesos ya están, literalmente, en la cabeza. El chiste es que la frase es absurda si la tomas al pie de la letra. Es una forma estupenda de memorizar el idiom.",
+    "line_text": "'Cause you said the brains I had went to my head",
+    "created_at": "2026-07-25T10:16:42.173329+00:00"
   },
   {
     "id": "f4d08d9d-2e60-5d78-8696-d1b0559341ea",

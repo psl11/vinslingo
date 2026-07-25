@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-24T22:42:46.297Z",
+  "generated_at": "2026-07-25T10:16:47.987Z",
   "supabase_url": "https://qsdzoelgqyymtwublxoq.supabase.co",
   "tables": {
-    "vocabulary": 3273,
+    "vocabulary": 3298,
     "songs": 797,
-    "song_vocabulary": 1734,
-    "song_notes": 82,
+    "song_vocabulary": 1759,
+    "song_notes": 106,
     "artists": 333,
     "authors": 39,
     "quotes": 43,
