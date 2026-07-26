@@ -165,6 +165,18 @@ writeFileSync(OUT, JSON.stringify(index));
 // principal; los guiones completos siguen cargándose en diferido.
 writeFileSync(OUT_INDEX, JSON.stringify(Object.keys(index).sort()));
 
+// La nota de fiabilidad es lo que separa "lo dijo el autor" de "lo interpreta un
+// colaborador anónimo de Genius", y casi ninguna anotación está verificada por
+// la banda. Sin ella el guion se lee como si todo estuviera confirmado, que es
+// justo el fallo que se quiere evitar. Ya pasó una vez: diez guiones se quedaron
+// sin nota al enriquecerlos con material de Genius después de escribirlos.
+const sinNota = Object.values(index).filter((s) => !JSON.stringify(s.sections).includes('fiabilidad'));
+if (sinNota.length) {
+  console.error(`\n⚠ ${sinNota.length} guion(es) sin nota de fiabilidad:`);
+  for (const s of sinNota) console.error(`   ${s.artist} — ${s.title}   (${s.source})`);
+  console.error('   Añade un bloque "> **Nota de fiabilidad:** ..." al final del .md.');
+}
+
 // Un guion cuyo título no case con el del catálogo simplemente no aparece en la
 // app, sin error ni aviso. Es el fallo silencioso más probable de esta feature,
 // así que se comprueba aquí contra el backup de Supabase.
