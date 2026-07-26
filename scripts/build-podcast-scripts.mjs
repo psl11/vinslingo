@@ -21,6 +21,7 @@ import path from 'node:path';
 
 const SRC = 'guiones-podcast';
 const OUT = 'lib/data/podcastScripts.json';
+const OUT_INDEX = 'lib/data/podcastScriptIndex.json';
 
 if (!existsSync(SRC)) {
   console.error(`\n❌ No existe ./${SRC}/. Nada que compilar.\n`);
@@ -157,6 +158,12 @@ for (const e of errors) console.error(`   ⚠ ${e}`);
 
 mkdirSync(path.dirname(OUT), { recursive: true });
 writeFileSync(OUT, JSON.stringify(index));
+
+// Índice ligero: solo las claves. Las listas de canciones necesitan saber QUÉ
+// canción tiene guion para pintar el distintivo, y cargar el JSON entero (~200
+// KB, y creciendo) para eso sería absurdo. Esto son ~2 KB y va en el bundle
+// principal; los guiones completos siguen cargándose en diferido.
+writeFileSync(OUT_INDEX, JSON.stringify(Object.keys(index).sort()));
 
 // Un guion cuyo título no case con el del catálogo simplemente no aparece en la
 // app, sin error ni aviso. Es el fallo silencioso más probable de esta feature,

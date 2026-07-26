@@ -4,6 +4,7 @@ import { useLocalSearchParams, useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
 import { ActionButton } from '../components/ui/ActionButton';
 import { useSettingsStore } from '../stores/useSettingsStore';
+import { hasScript } from '../lib/data/scriptIndex';
 import { colors, radius, spacing, fontSize, fontWeight } from '../constants/theme';
 
 // Pantalla de artista: se entra AQUÍ desde el hub (no a un listado plano de todas
@@ -34,6 +35,15 @@ export default function ArtistScreen() {
       return () => { active = false; };
     }, [artistId, selectedCEFRLevels])
   );
+
+  // Las canciones con guion primero: son el mejor contenido y de otro modo
+  // quedan enterradas (43 guiones sobre ~518 canciones). Dentro de cada grupo se
+  // respeta el orden que ya trae la consulta.
+  const sorted = React.useMemo(() => {
+    const marked = songs.map((s) => ({ ...s, script: hasScript(s.title, s.artist ?? name) }));
+    return marked.sort((a, b) => Number(b.script) - Number(a.script));
+  }, [songs, name]);
+  const withScript = sorted.filter((s) => s.script).length;
 
   const total = wordCount ? parseInt(wordCount, 10) : 0;
   const reviewAll = (typing: boolean) =>
@@ -71,14 +81,19 @@ export default function ArtistScreen() {
 
           {songs.length > 0 ? (
             <>
-              <Text style={styles.sectionTitle}>Canciones</Text>
-              {songs.map((s) => (
+              <View style={styles.sectionHead}>
+                <Text style={styles.sectionTitle}>Canciones</Text>
+                {withScript > 0 ? (
+                  <Text style={styles.sectionMeta}>🎙️ {withScript} con historia</Text>
+                ) : null}
+              </View>
+              {sorted.map((s) => (
                 <PressableScale
                   key={s.id}
                   style={styles.row}
                   onPress={() => router.push({ pathname: '/song', params: { songId: s.id, title: s.title, artist: s.artist ?? name ?? '' } })}
                 >
-                  <Text style={styles.rowEmoji}>🎵</Text>
+                  <Text style={styles.rowEmoji}>{s.script ? '🎙️' : '🎵'}</Text>
                   <Text style={styles.rowLabel} numberOfLines={1}>{s.title}</Text>
                   {s.noteCount > 0 ? <Text style={styles.noteDot}>📓 {s.noteCount}</Text> : null}
                   <View style={styles.countBadge}><Text style={styles.countText}>{s.wordCount}</Text></View>
@@ -111,7 +126,12 @@ const styles = StyleSheet.create({
   ctaPrimaryText: { color: colors.onPrimary, fontSize: fontSize.md, fontWeight: fontWeight.bold },
   ctaSecondary: { backgroundColor: colors.card, borderWidth: 1.5, borderColor: colors.border },
   ctaSecondaryText: { color: colors.textSecondary, fontSize: fontSize.md, fontWeight: fontWeight.semibold },
-  sectionTitle: { fontSize: fontSize.lg, fontWeight: fontWeight.bold, color: colors.textPrimary, marginBottom: spacing.md },
+  sectionHead: {
+    flexDirection: 'row', alignItems: 'baseline', justifyContent: 'space-between',
+    marginBottom: spacing.md,
+  },
+  sectionTitle: { fontSize: fontSize.lg, fontWeight: fontWeight.bold, color: colors.textPrimary },
+  sectionMeta: { fontSize: fontSize.sm, color: colors.textSecondary, fontWeight: fontWeight.medium },
   row: {
     flexDirection: 'row', alignItems: 'center', gap: spacing.md,
     backgroundColor: colors.card, borderWidth: 1, borderColor: colors.border,

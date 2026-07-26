@@ -4,6 +4,7 @@ import { useRouter, useFocusEffect } from 'expo-router';
 import { PressableScale } from '../components/ui/PressableScale';
 import { ActionButton } from '../components/ui/ActionButton';
 import { useSettingsStore } from '../stores/useSettingsStore';
+import { countScriptsByArtist } from '../lib/data/scriptIndex';
 import { colors, radius, spacing, fontSize, fontWeight } from '../constants/theme';
 
 const CARD_COUNT_OPTIONS = [5, 10, 15, 20];
@@ -93,7 +94,7 @@ export default function MusicScreen() {
     });
   };
 
-  const Row = ({ emoji, label, count, onPress }: { emoji: string; label: string; count: number; onPress: () => void }) => (
+  const Row = ({ emoji, label, count, scripts, onPress }: { emoji: string; label: string; count: number; scripts?: number; onPress: () => void }) => (
     <ActionButton
       style={styles.row}
       contentStyle={styles.rowContent}
@@ -103,6 +104,7 @@ export default function MusicScreen() {
     >
       <Text style={styles.rowEmoji}>{emoji}</Text>
       <Text style={styles.rowLabel} numberOfLines={1}>{label}</Text>
+      {scripts ? <Text style={styles.scriptDot}>🎙️ {scripts}</Text> : null}
       <View style={styles.countBadge}><Text style={styles.countText}>{count}</Text></View>
       <Text style={styles.rowChevron}>›</Text>
     </ActionButton>
@@ -193,6 +195,7 @@ export default function MusicScreen() {
               emoji="🎤"
               label={a.name}
               count={a.wordCount}
+              scripts={countScriptsByArtist(a.name)}
               onPress={() => router.push({ pathname: '/artist', params: { artistId: a.id, name: a.name, wordCount: String(a.wordCount) } })}
             />
           ))}
@@ -245,6 +248,7 @@ const styles = StyleSheet.create({
   rowContent: { flex: 1, flexDirection: 'row', alignItems: 'center', gap: spacing.md },
   rowEmoji: { fontSize: 22 },
   rowLabel: { flex: 1, fontSize: fontSize.md, fontWeight: fontWeight.semibold, color: colors.textPrimary },
+  scriptDot: { fontSize: fontSize.xs, color: colors.textSecondary, fontWeight: fontWeight.medium },
   countBadge: { backgroundColor: colors.primarySurface, paddingHorizontal: spacing.sm, paddingVertical: spacing.xxs, borderRadius: radius.sm, minWidth: 34, alignItems: 'center' },
   countText: { fontSize: fontSize.sm, fontWeight: fontWeight.bold, color: colors.primary },
   rowChevron: { fontSize: 24, color: colors.textTertiary, fontWeight: fontWeight.regular },
