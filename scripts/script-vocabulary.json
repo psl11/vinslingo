@@ -1,0 +1,264 @@
+{
+  "_doc": "Fichas extraídas de los guiones de podcast. CRITERIO: solo entra lo que es expresión hecha o phrasal verb CON SIGNIFICADO PROPIO — algo que no deduces de sus partes y que merece repasarse cada pocos días. Se descarta lo que solo ilustra una regla gramatical (backshift, comparativos, orden de adjetivos): eso pertenece al guion, donde tiene contexto, no a una ficha suelta. También se descartan los contraejemplos ('Try hardly') y las variaciones que el guion usa para ilustrar ('climb up', 'out of curiosity'). Ver scripts/load-script-vocabulary.mjs.",
+  "cards": [
+    { "word": "get under someone's skin", "type": "idiom", "cefr": "B2", "song": "Hey Jude", "artist": "The Beatles",
+      "translation": "METÉRSELE A ALGUIEN MUY DENTRO / SACAR DE QUICIO — tiene los dos sentidos: obsesionar o irritar. El contexto decide cuál.",
+      "en": "She really got under my skin that day.", "es": "Ese día se me metió dentro de verdad." },
+
+    { "word": "shine on", "type": "phave", "cefr": "B1", "song": "Let It Be", "artist": "The Beatles",
+      "translation": "SEGUIR BRILLANDO — el `on` de continuidad: seguir haciendo algo. Misma familia que carry on, move on, dream on.",
+      "en": "Whatever happens, shine on.", "es": "Pase lo que pase, sigue brillando." },
+
+    { "word": "let it be", "type": "expression", "cefr": "B1", "song": "Let It Be", "artist": "The Beatles",
+      "translation": "DÉJALO ESTAR — dejar que algo siga como está. Ojo: no es abandonarlo (leave it), es no tocarlo.",
+      "en": "Stop arguing about it and let it be.", "es": "Deja de discutirlo y déjalo estar." },
+
+    { "word": "lonely", "type": "idiom", "cefr": "B1", "song": "Eleanor Rigby", "artist": "The Beatles",
+      "translation": "SOLO (con tristeza) — distinto de alone, que es solo como hecho. Puedes estar alone y encantado, y lonely en mitad de una fiesta.",
+      "en": "He felt lonely even at the party.", "es": "Se sentía solo incluso en la fiesta." },
+
+    { "word": "the dead of night", "type": "idiom", "cefr": "B2", "song": "Blackbird", "artist": "The Beatles",
+      "translation": "EN PLENA MADRUGADA — lo más profundo de la noche. Ese dead no es muerte: es el punto más quieto de algo. También the dead of winter.",
+      "en": "The phone rang in the dead of night.", "es": "El teléfono sonó en plena madrugada." },
+
+    { "word": "be here to stay", "type": "expression", "cefr": "B2", "song": "Yesterday", "artist": "The Beatles",
+      "translation": "HABER VENIDO PARA QUEDARSE — algo que ya no se va a ir.",
+      "en": "Remote work is here to stay.", "es": "El teletrabajo ha venido para quedarse." },
+
+    { "word": "long for", "type": "phave", "cefr": "C1", "song": "Yesterday", "artist": "The Beatles",
+      "translation": "AÑORAR, ANHELAR — verbo de registro elevado, literario. Nada que ver con el adjetivo long.",
+      "en": "She longed for the summers of her childhood.", "es": "Añoraba los veranos de su infancia." },
+
+    { "word": "hang over", "type": "phave", "cefr": "B2", "song": "Yesterday", "artist": "The Beatles",
+      "translation": "PENDER SOBRE, AMENAZAR — algo que te queda colgando encima. De ahí sale hangover: la resaca es literalmente lo que te queda colgando al día siguiente.",
+      "en": "The deadline hung over him all week.", "es": "La fecha límite le estuvo pesando toda la semana." },
+
+    { "word": "bide one's time", "type": "idiom", "cefr": "C1", "song": "Norwegian Wood (This Bird Has Flown)", "artist": "The Beatles",
+      "translation": "ESPERAR EL MOMENTO OPORTUNO — con paciencia y algo de cálculo. Suena algo antiguo.",
+      "en": "He bided his time until they made a mistake.", "es": "Esperó su momento hasta que cometieron un error." },
+
+    { "word": "or should I say", "type": "expression", "cefr": "B2", "song": "Norwegian Wood (This Bird Has Flown)", "artist": "The Beatles",
+      "translation": "O MEJOR DICHO — fórmula de autocorrección a mitad de frase. Utilísima al hablar.",
+      "en": "My colleague — or should I say, my boss — disagreed.", "es": "Mi compañero, o mejor dicho, mi jefe, no estuvo de acuerdo." },
+
+    { "word": "have got to", "type": "expression", "cefr": "B1", "song": "Come Together", "artist": "The Beatles",
+      "translation": "TENER QUE — obligación o deducción. En habla informal se cae el auxiliar: I got to → I gotta.",
+      "en": "You've got to see this.", "es": "Tienes que ver esto." },
+
+    { "word": "a get-together", "type": "expression", "cefr": "B1", "song": "Come Together", "artist": "The Beatles",
+      "translation": "QUEDADA, REUNIÓN INFORMAL — sustantivo salido del phrasal verb come together (unirse).",
+      "en": "We're having a small get-together on Friday.", "es": "Hacemos una quedada pequeña el viernes." },
+
+    { "word": "here comes trouble", "type": "expression", "cefr": "B1", "song": "Here Comes The Sun", "artist": "The Beatles",
+      "translation": "YA ESTÁ AQUÍ EL LÍO — se dice medio en broma al ver llegar a alguien. Con here/there el inglés invierte sujeto y verbo si el sujeto es nombre.",
+      "en": "She walked in and someone said: here comes trouble.", "es": "Entró y alguien dijo: ya está aquí el lío." },
+
+    { "word": "it's all in your head", "type": "expression", "cefr": "B1", "song": "Mr. Brightside", "artist": "The Killers",
+      "translation": "SON IMAGINACIONES TUYAS — lo que le dices a quien se está montando una película.",
+      "en": "Nobody's judging you, it's all in your head.", "es": "Nadie te está juzgando, son imaginaciones tuyas." },
+
+    { "word": "start out", "type": "phave", "cefr": "B1", "song": "Mr. Brightside", "artist": "The Killers",
+      "translation": "EMPEZAR (siendo algo) — subraya CÓMO arrancó algo, con la idea de que después cambió. Va en pareja con end up.",
+      "en": "It started out as a joke.", "es": "Empezó siendo una broma." },
+
+    { "word": "fall asleep", "type": "phave", "cefr": "A2", "song": "Mr. Brightside", "artist": "The Killers",
+      "translation": "QUEDARSE DORMIDO — el proceso, no el estado. Distinto de be asleep (estar dormido) y de go to sleep (irse a dormir).",
+      "en": "I fell asleep on the sofa.", "es": "Me quedé dormido en el sofá." },
+
+    { "word": "pay one's respects", "type": "idiom", "cefr": "C1", "song": "Human", "artist": "The Killers",
+      "translation": "PRESENTAR RESPETOS, DAR EL PÉSAME — lo que se hace en un funeral. Nada que ver con pagar: el inglés usa pay sin dinero en pay attention, pay a visit, pay a compliment.",
+      "en": "They came to pay their respects to the family.", "es": "Vinieron a dar el pésame a la familia." },
+
+    { "word": "on one's knees", "type": "idiom", "cefr": "B2", "song": "Human", "artist": "The Killers",
+      "translation": "DE RODILLAS — literal y figurado a la vez: arrodillado, y también suplicando o rezando.",
+      "en": "He was on his knees begging for another chance.", "es": "Estaba de rodillas suplicando otra oportunidad." },
+
+    { "word": "not a thing", "type": "expression", "cefr": "B1", "song": "When You Were Young", "artist": "The Killers",
+      "translation": "NADA DE NADA — refuerzo de la negación. Misma familia que not a bit y not in the slightest.",
+      "en": "He doesn't know a thing about it.", "es": "No sabe nada de nada del asunto." },
+
+    { "word": "heartache", "type": "idiom", "cefr": "B2", "song": "When You Were Young", "artist": "The Killers",
+      "translation": "PENA DE AMOR, DOLOR EMOCIONAL — y fíjate en que se usa con in, como si la pena fuera un sitio: in your heartache, igual que in love o in shock.",
+      "en": "It took her months to get over the heartache.", "es": "Tardó meses en superar la pena." },
+
+    { "word": "help someone out", "type": "phave", "cefr": "B1", "song": "All These Things That I've Done", "artist": "The Killers",
+      "translation": "ECHAR UN CABLE — ese out no es ayudar en general: es sacar a alguien de un apuro concreto.",
+      "en": "Could you help me out with this form?", "es": "¿Me echas un cable con este formulario?" },
+
+    { "word": "last call", "type": "expression", "cefr": "B2", "song": "All These Things That I've Done", "artist": "The Killers",
+      "translation": "ÚLTIMA RONDA — lo que grita el camarero antes de cerrar la barra. Por extensión, la última oportunidad para algo.",
+      "en": "Last call, folks — anything else?", "es": "Última ronda, señores. ¿Algo más?" },
+
+    { "word": "break one's back", "type": "idiom", "cefr": "B2", "song": "Somebody Told Me", "artist": "The Killers",
+      "translation": "DEJARSE LA PIEL — esforzarse muchísimo, normalmente con la queja implícita de que no compensa.",
+      "en": "I broke my back getting this finished on time.", "es": "Me dejé la piel para terminar esto a tiempo." },
+
+    { "word": "I've had it with", "type": "expression", "cefr": "B2", "song": "Somebody Told Me", "artist": "The Killers",
+      "translation": "ESTOY HASTA LAS NARICES DE — nada que ver con el significado literal de have. Frecuentísima.",
+      "en": "I've had it with these delays.", "es": "Estoy hasta las narices de estos retrasos." },
+
+    { "word": "let's roll", "type": "expression", "cefr": "B1", "song": "Somebody Told Me", "artist": "The Killers",
+      "translation": "VAMOS ALLÁ, EN MARCHA — coloquial, para arrancar algo.",
+      "en": "Everyone ready? Let's roll.", "es": "¿Todos listos? Vamos allá." },
+
+    { "word": "feel bad for someone", "type": "expression", "cefr": "B1", "song": "99 Problems", "artist": "JAY-Z",
+      "translation": "DAR PENA ALGUIEN, COMPADECERLO — ojo al cambio de preposición: feel bad ABOUT something es sentirse mal por algo que has hecho tú. Un for o un about cambian quién es el culpable.",
+      "en": "I feel bad for him, he tried his best.", "es": "Me da pena, lo intentó de verdad." },
+
+    { "word": "do you mind if", "type": "expression", "cefr": "B1", "song": "99 Problems", "artist": "JAY-Z",
+      "translation": "¿LE IMPORTA SI...? — fórmula educada para pedir permiso. TRAMPA: contestar yes significa que sí te importa, o sea que NO. Para dar permiso se dice no, go ahead.",
+      "en": "Do you mind if I sit here?", "es": "¿Te importa si me siento aquí?" },
+
+    { "word": "the school of hard knocks", "type": "idiom", "cefr": "C1", "song": "Hard Knock Life (Ghetto Anthem)", "artist": "JAY-Z",
+      "translation": "LA UNIVERSIDAD DE LA CALLE — aprender a base de palos en vez de estudiando. De knocks, los golpes que da la vida.",
+      "en": "He never went to college; he learned in the school of hard knocks.", "es": "No fue a la universidad: aprendió en la calle, a base de palos." },
+
+    { "word": "out of", "type": "expression", "cefr": "B2", "song": "Hard Knock Life (Ghetto Anthem)", "artist": "JAY-Z",
+      "translation": "POR, MOVIDO POR — delante de un sentimiento indica el motivo: out of fear, out of curiosity, out of respect.",
+      "en": "She only asked out of curiosity.", "es": "Lo preguntó solo por curiosidad." },
+
+    { "word": "sort of", "type": "expression", "cefr": "B1", "song": "Hard Knock Life (Ghetto Anthem)", "artist": "JAY-Z",
+      "translation": "UNA ESPECIE DE, MÁS O MENOS — igual que kind of. En habla rápida suenan sorta y kinda. Son los dos rellenos más frecuentes del inglés hablado.",
+      "en": "It was sort of a joke, but not really.", "es": "Era más o menos una broma, pero no del todo." },
+
+    { "word": "worth it", "type": "expression", "cefr": "B1", "song": "The Story of O.J.", "artist": "JAY-Z",
+      "translation": "MERECER LA PENA — ojo: worth es ADJETIVO, no verbo. Se dice it's worth two million, nunca it worths.",
+      "en": "The trip was long but it was worth it.", "es": "El viaje fue largo pero mereció la pena." },
+
+    { "word": "bougie", "type": "slang", "cefr": "C1", "song": "The Story of O.J.", "artist": "JAY-Z",
+      "translation": "PIJO, DE NUEVO RICO — recorte de bourgeois, con retintín. Se usa para lujos con pretensiones.",
+      "en": "That restaurant is way too bougie for me.", "es": "Ese restaurante es demasiado pijo para mí." },
+
+    { "word": "y'all", "type": "contraction", "cefr": "B1", "song": "The Story of O.J.", "artist": "JAY-Z",
+      "translation": "VOSOTROS / USTEDES — plural de you en el inglés del sur de EE. UU. y en el inglés afroamericano. El inglés estándar no tiene uno, y le hace falta.",
+      "en": "Y'all coming to the game?", "es": "¿Venís al partido?" },
+
+    { "word": "in the end", "type": "expression", "cefr": "B1", "song": "In the End", "artist": "Linkin Park",
+      "translation": "AL FINAL, AL FIN Y AL CABO — el resultado de algo. NO confundir con at the end, que es un punto físico o temporal: at the end of the street.",
+      "en": "In the end, none of it mattered.", "es": "Al final, nada de aquello importó." },
+
+    { "word": "all I know", "type": "expression", "cefr": "B1", "song": "In the End", "artist": "Linkin Park",
+      "translation": "LO ÚNICO QUE SÉ — ese all no es todo, es lo único. Misma estructura en all I need, all I want.",
+      "en": "All I know is that he left early.", "es": "Lo único que sé es que se fue pronto." },
+
+    { "word": "fly by", "type": "phave", "cefr": "B1", "song": "In the End", "artist": "Linkin Park",
+      "translation": "PASAR VOLANDO — se dice sobre todo del tiempo.",
+      "en": "The summer flew by.", "es": "El verano pasó volando." },
+
+    { "word": "try hard", "type": "expression", "cefr": "A2", "song": "In the End", "artist": "Linkin Park",
+      "translation": "ESFORZARSE — ojo, hard aquí es ADVERBIO y no lleva -ly. Try hardly significaría otra cosa, porque hardly es apenas.",
+      "en": "She tried hard but it wasn't enough.", "es": "Se esforzó mucho pero no fue suficiente." },
+
+    { "word": "be tired of", "type": "expression", "cefr": "B1", "song": "Numb", "artist": "Linkin Park",
+      "translation": "ESTAR HARTO DE — ojo al cambio: tired OF es harto; tired FROM es cansado por algo concreto.",
+      "en": "I'm tired of explaining the same thing.", "es": "Estoy harto de explicar lo mismo." },
+
+    { "word": "walk in someone's shoes", "type": "idiom", "cefr": "B2", "song": "Numb", "artist": "Linkin Park",
+      "translation": "PONERSE EN EL LUGAR DE ALGUIEN — existe igual en español, así que se traduce sola.",
+      "en": "Try walking in her shoes before you judge.", "es": "Ponte en su lugar antes de juzgar." },
+
+    { "word": "numb", "type": "idiom", "cefr": "B2", "song": "Numb", "artist": "Linkin Park",
+      "translation": "ENTUMECIDO / INSENSIBLE — lo que le pasa al brazo cuando se te duerme, y también el entumecimiento emocional. PRONUNCIACIÓN: la b final es muda, como en thumb, climb, bomb, lamb.",
+      "en": "My fingers went numb in the cold.", "es": "Se me quedaron los dedos entumecidos del frío." },
+
+    { "word": "expect of someone", "type": "expression", "cefr": "B2", "song": "Numb", "artist": "Linkin Park",
+      "translation": "ESPERAR DE ALGUIEN — con carga de exigencia. Distinto de expect from (más neutro) y sobre todo de wait for (esperar en el tiempo). En español los tres son esperar.",
+      "en": "I don't know what they expect of me.", "es": "No sé qué esperan de mí." },
+
+    { "word": "put something to rest", "type": "idiom", "cefr": "C1", "song": "What I've Done", "artist": "Linkin Park",
+      "translation": "ZANJAR UN ASUNTO — dejarlo descansar. Se usa mucho con rumores y debates.",
+      "en": "That study puts the question to rest.", "es": "Ese estudio zanja la cuestión." },
+
+    { "word": "wash away", "type": "phave", "cefr": "B2", "song": "What I've Done", "artist": "Linkin Park",
+      "translation": "BORRAR, ARRASTRAR — el away de desaparición, misma familia que throw away, fade away, give away.",
+      "en": "The rain washed away the chalk drawings.", "es": "La lluvia borró los dibujos de tiza." },
+
+    { "word": "cross out", "type": "phave", "cefr": "B1", "song": "What I've Done", "artist": "Linkin Park",
+      "translation": "TACHAR — literalmente, con una raya encima. La imagen es la de corregir un cuaderno.",
+      "en": "Cross out the ones you've already done.", "es": "Tacha las que ya hayas hecho." },
+
+    { "word": "feel like", "type": "expression", "cefr": "B1", "song": "Papercut", "artist": "Linkin Park",
+      "translation": "DOS SIGNIFICADOS SEGÚN LO QUE SIGA — feel like + sustantivo = parecer (it feels like night). feel like + -ing = apetecer (I feel like dancing). Misma fórmula, sentidos distintos.",
+      "en": "I feel like going for a walk.", "es": "Me apetece dar un paseo." },
+
+    { "word": "look over one's shoulder", "type": "idiom", "cefr": "B2", "song": "Papercut", "artist": "Linkin Park",
+      "translation": "ESTAR ALERTA, MIRAR POR ENCIMA DEL HOMBRO — temer que te pillen o que te alcancen.",
+      "en": "He's been looking over his shoulder ever since.", "es": "Desde entonces va mirando por encima del hombro." },
+
+    { "word": "whirlwind", "type": "idiom", "cefr": "C1", "song": "Papercut", "artist": "Linkin Park",
+      "translation": "TORBELLINO — y como adjetivo, vertiginoso: a whirlwind romance es un romance a toda velocidad.",
+      "en": "The last two weeks have been a whirlwind.", "es": "Las últimas dos semanas han sido un torbellino." },
+
+    { "word": "settle for", "type": "phave", "cefr": "B2", "song": "Fade Away", "artist": "Oasis",
+      "translation": "CONFORMARSE CON — aceptar menos de lo que querías. No confundir con settle down (sentar la cabeza).",
+      "en": "Don't settle for the first offer.", "es": "No te conformes con la primera oferta." },
+
+    { "word": "wait for", "type": "expression", "cefr": "A2", "song": "Talk Tonight", "artist": "Oasis",
+      "translation": "ESPERAR A — SIEMPRE con for. Es de los errores más persistentes del hispanohablante, porque en español esperar no lleva preposición.",
+      "en": "I'm waiting for you outside.", "es": "Te espero fuera." },
+
+    { "word": "give it all you've got", "type": "expression", "cefr": "B2", "song": "Slide Away", "artist": "Oasis",
+      "translation": "DARLO TODO, ECHAR EL RESTO — muy usada en deporte y para dar ánimos.",
+      "en": "Last round — give it all you've got.", "es": "Última ronda: dalo todo." },
+
+    { "word": "now that", "type": "connector", "cefr": "B1", "song": "Slide Away", "artist": "Oasis",
+      "translation": "AHORA QUE — introduce una causa que acaba de cambiar.",
+      "en": "Now that you mention it, he did seem nervous.", "es": "Ahora que lo dices, sí parecía nervioso." },
+
+    { "word": "cast a shadow", "type": "idiom", "cefr": "B2", "song": "Cast No Shadow", "artist": "Oasis",
+      "translation": "PROYECTAR UNA SOMBRA — y en figurado, ensombrecer algo. Cast es irregular invariable: cast, cast, cast. También cast a vote, cast doubt.",
+      "en": "The scandal cast a shadow over the whole campaign.", "es": "El escándalo ensombreció toda la campaña." },
+
+    { "word": "bound to", "type": "expression", "cefr": "B2", "song": "Cast No Shadow", "artist": "Oasis",
+      "translation": "SEGURO QUE, DESTINADO A — bound to win = seguro que gana. Ojo con los parientes: bound FOR es con destino a (a train bound for Manchester), y bound WITH es atado con.",
+      "en": "They were bound to find out eventually.", "es": "Era seguro que acabarían enterándose." },
+
+    { "word": "meet one's maker", "type": "idiom", "cefr": "C1", "song": "D'You Know What I Mean?", "artist": "Oasis",
+      "translation": "MORIRSE — literalmente ir a encontrarte con quien te hizo. Es un eufemismo, a menudo con humor negro.",
+      "en": "That old car has finally met its maker.", "es": "Aquel coche viejo por fin ha pasado a mejor vida." },
+
+    { "word": "right here, right now", "type": "expression", "cefr": "A2", "song": "D'You Know What I Mean?", "artist": "Oasis",
+      "translation": "AQUÍ Y AHORA MISMO — ese right no es correcto ni derecha: intensifica lugar y tiempo. También right there, right now.",
+      "en": "I need it right here, right now.", "es": "Lo necesito aquí y ahora mismo." },
+
+    { "word": "know what I mean", "type": "expression", "cefr": "B1", "song": "D'You Know What I Mean?", "artist": "Oasis",
+      "translation": "¿SABES? ¿ME ENTIENDES? — muletilla británica por excelencia, al final de la frase. En habla rápida d'you know suena casi dyou.",
+      "en": "It was a bit much, know what I mean?", "es": "Fue un poco demasiado, ¿sabes?" },
+
+    { "word": "shoot the breeze", "type": "idiom", "cefr": "C1", "song": "Whatever", "artist": "Oasis",
+      "translation": "DARLE A LA LENGUA, HABLAR POR HABLAR — charlar de nada en particular. Nada que ver con disparar.",
+      "en": "We sat on the porch shooting the breeze for hours.", "es": "Estuvimos en el porche dándole a la lengua durante horas." },
+
+    { "word": "be free to", "type": "expression", "cefr": "B1", "song": "Whatever", "artist": "Oasis",
+      "translation": "SER LIBRE DE (hacer algo) — también se usa para dar permiso: feel free to ask.",
+      "en": "You're free to leave whenever you like.", "es": "Eres libre de irte cuando quieras." },
+
+    { "word": "bring it on", "type": "expression", "cefr": "B2", "song": "Bring It On Down", "artist": "Oasis",
+      "translation": "A VER SI TE ATREVES, VENGA ESA — puro desafío. Muy usada en deporte y en discusiones.",
+      "en": "You think you can beat me? Bring it on.", "es": "¿Crees que puedes ganarme? Venga esa." },
+
+    { "word": "outcast", "type": "idiom", "cefr": "B2", "song": "Bring It On Down", "artist": "Oasis",
+      "translation": "PARIA, MARGINADO — el que ha quedado fuera del grupo. Viene de cast out, expulsar.",
+      "en": "He felt like an outcast at his new school.", "es": "Se sentía un paria en el colegio nuevo." },
+
+    { "word": "take that look off your face", "type": "expression", "cefr": "B1", "song": "Don't Look Back In Anger", "artist": "Oasis",
+      "translation": "QUÍTATE ESA CARA — lo que se le dice a un niño que pone mala cara. La versión de la canción, from off, es agramatical: sobra una de las dos preposiciones.",
+      "en": "Take that look off your face and say sorry.", "es": "Quítate esa cara y pide perdón." },
+
+    { "word": "look back", "type": "phave", "cefr": "B1", "song": "Don't Look Back In Anger", "artist": "Oasis",
+      "translation": "MIRAR ATRÁS, RECORDAR — y fíjate en la preposición del título: en inglés se hace algo IN anger, no with.",
+      "en": "Looking back, I'd do it all again.", "es": "Mirando atrás, lo volvería a hacer todo." },
+
+    { "word": "true perfection has to be imperfect", "type": "idiom", "cefr": "C1", "song": "Little By Little", "artist": "Oasis",
+      "translation": "LA PERFECCIÓN VERDADERA TIENE QUE SER IMPERFECTA — dicho de origen budista que Noel leyó en un libro. Fíjate en el prefijo: ante p, b y m, el negativo in- se vuelve im- (impossible, imbalance, immature).",
+      "en": "As they say, true perfection has to be imperfect.", "es": "Como dicen, la perfección verdadera tiene que ser imperfecta." },
+
+    { "word": "burn down", "type": "phave", "cefr": "B2", "song": "When You Were Young", "artist": "The Killers",
+      "translation": "INCENDIAR HASTA LOS CIMIENTOS — y aplicado a una carretera, ir a toda velocidad. El contexto manda.",
+      "en": "The old factory burned down last winter.", "es": "La fábrica vieja se quemó entera el invierno pasado." },
+
+    { "word": "farewell", "type": "idiom", "cefr": "C1", "song": "What I've Done", "artist": "Linkin Park",
+      "translation": "DESPEDIDA (solemne) — de fare well, que te vaya bien. Muy por encima de goodbye en registro.",
+      "en": "They threw a farewell party for her.", "es": "Le organizaron una fiesta de despedida." }
+  ]
+}
