@@ -22,6 +22,7 @@ import path from 'node:path';
 const SRC = 'guiones-podcast';
 const OUT = 'lib/data/podcastScripts.json';
 const OUT_INDEX = 'lib/data/podcastScriptIndex.json';
+const OUT_DIR = 'lib/data/podcast';
 
 if (!existsSync(SRC)) {
   console.error(`\n❌ No existe ./${SRC}/. Nada que compilar.\n`);
@@ -157,6 +158,25 @@ for (const f of files) {
 for (const e of errors) console.error(`   ⚠ ${e}`);
 
 mkdirSync(path.dirname(OUT), { recursive: true });
+
+// Un fichero POR ARTISTA en vez de uno solo. Con 150+ guiones el JSON único pasó
+// de 1 MB, y la app se lo descargaba entero para enseñar un guion de 6 KB. Al
+// partirlo, abrir una canción de Oasis baja ~180 KB en vez de ~1 MB.
+//
+// Se parte por artista y no por canción porque Metro necesita rutas de import()
+// estáticas: un fichero por canción exigiría 150 imports literales, mientras que
+// por artista son 8 y caben en un mapa legible (ver lib/data/scriptChunks.ts).
+mkdirSync(OUT_DIR, { recursive: true });
+const byArtistKey = {};
+for (const [k, s] of Object.entries(index)) {
+  const a = norm(s.artist.split(',')[0]);
+  (byArtistKey[a] ??= {})[k] = s;
+}
+for (const [a, group] of Object.entries(byArtistKey)) {
+  writeFileSync(path.join(OUT_DIR, `${a}.json`), JSON.stringify(group));
+}
+// Se mantiene el JSON único: lo usan los scripts de análisis y los tests, que
+// necesitan verlo todo de una vez. La app ya no lo importa.
 writeFileSync(OUT, JSON.stringify(index));
 
 // Índice ligero: solo las claves. Las listas de canciones necesitan saber QUÉ

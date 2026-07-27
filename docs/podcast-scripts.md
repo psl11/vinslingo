@@ -16,8 +16,12 @@ las notas**. El orden de la pantalla es deliberado y va de lo ancho a lo fino:
 ## Pipeline
 
 ```
-guiones-podcast/*.md   →  scripts/build-podcast-scripts.mjs  →  lib/data/podcastScripts.json
-   (gitignored)                                                    (versionado)
+guiones-podcast/*.md  →  scripts/build-podcast-scripts.mjs  →  lib/data/podcast/<artista>.json
+   (gitignored)                                                   (versionado, uno por artista)
+                                                              →  lib/data/podcastScriptIndex.json
+                                                                  (solo las claves, ~3 KB)
+                                                              →  lib/data/podcastScripts.json
+                                                                  (gitignored, solo análisis y tests)
 ```
 
 ```bash
@@ -41,8 +45,26 @@ Es la decisión de diseño que conviene entender antes de "arreglarla":
 - **Sobreviven a una caída de Supabase.** El proyecto ya se cayó una vez (ver
   CLAUDE.md → "Backup del contenido de Supabase"); el guion es demasiado trabajo
   como para dejarlo colgando de eso.
-- Se cargan con **`import()` diferido** desde `SongScript`, así que van en su
-  propio chunk y no penalizan el arranque de la app.
+- Se cargan con **`import()` diferido**, así que van en su propio chunk y no
+  penalizan el arranque de la app.
+
+### Un fichero por artista, no uno solo
+
+Al pasar de 150 guiones, el JSON único superó **1 MB** — y la app se lo descargaba
+entero para enseñar un guion de 6 KB. Ahora se emite **un fichero por artista** y
+abrir una canción de Oasis baja ~140 KB en vez de ~1 MB.
+
+El mapa de carga vive en [`lib/data/scriptChunks.ts`](../lib/data/scriptChunks.ts)
+y es **explícito**, con una línea por artista. No es una plantilla del tipo
+``import(`./podcast/${a}.json`)`` porque **Metro necesita rutas literales** para
+trocear el bundle: con una ruta dinámica no sabe qué ficheros existen y acaba
+empaquetándolos todos, que es justo lo que se quería evitar.
+
+**Al añadir un artista nuevo hay que añadir su línea a ese mapa.** Si falta, la
+canción simplemente no enseña guion; no falla.
+
+Se parte por artista y no por canción porque un fichero por canción exigiría 150
+imports literales. Por artista son 8 y caben en un mapa legible.
 
 ### Cómo se enlaza un guion con su canción
 

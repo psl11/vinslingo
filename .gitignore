@@ -59,3 +59,7 @@ letras-anotadas/
 # generated native folders
 /ios
 /android
+
+# JSON monolítico de guiones: solo lo usan los scripts de análisis y los tests.
+# La app carga lib/data/podcast/<artista>.json, que sí se versiona.
+lib/data/podcastScripts.json

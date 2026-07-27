@@ -3,9 +3,9 @@ import index from './podcastScriptIndex.json';
 // Saber si una canción TIENE guion, sin descargar los guiones.
 //
 // Las listas de canciones necesitan esto para pintar el distintivo 🎙️. Cargar
-// podcastScripts.json (~200 KB y creciendo) solo para comprobar la existencia
-// sería tirar el ahorro del import() diferido de SongScript. Este índice son
-// unos 2 KB y va en el bundle principal.
+// el fichero de guiones de un artista (hasta ~300 KB) solo para comprobar la
+// existencia sería tirar el ahorro del import() diferido de scriptChunks.ts.
+// Este índice son unos 3 KB y va en el bundle principal.
 //
 // La clave es `título|artista` normalizados, igual que en el JSON de guiones —
 // ver scripts/build-podcast-scripts.mjs y docs/podcast-scripts.md.

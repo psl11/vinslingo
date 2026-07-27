@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { PressableScale } from '../ui/PressableScale';
 import { parseInline, stripInline } from '../../lib/utils/inlineMarkdown';
+import { loadArtistScripts } from '../../lib/data/scriptChunks';
 import { colors, radius, spacing, fontSize, fontWeight } from '../../constants/theme';
 
 // Guion de podcast de la canción (ver docs/podcast-scripts.md). Se escribe
-// offline en ./guiones-podcast/*.md y se compila a lib/data/podcastScripts.json
-// con scripts/build-podcast-scripts.mjs.
+// offline en ./guiones-podcast/*.md y se compila con
+// scripts/build-podcast-scripts.mjs a lib/data/podcast/<artista>.json, que se
+// carga en diferido y por artista (ver lib/data/scriptChunks.ts).
 //
 // Va ANTES de las notas porque es la capa de contexto más ancha: la historia de
 // la canción. Las notas son el detalle fino, el vocabulario el ejercicio.
@@ -23,25 +25,18 @@ export type Script = { title: string; artist: string; chapter: number | null; me
 
 const norm = (s: string) => (s || '').toLowerCase().replace(/[’]/g, "'").replace(/[^a-z0-9]/g, '');
 
-// El JSON de guiones pesa bastante y solo hace falta al abrir una canción, así
-// que va en su propio chunk: `import()` diferido, cacheado tras la primera vez.
-let cache: Record<string, Script> | null = null;
-async function loadScripts(): Promise<Record<string, Script>> {
-  if (!cache) cache = (await import('../../lib/data/podcastScripts.json')).default as unknown as Record<string, Script>;
-  return cache;
-}
-
 export function useSongScript(title?: string, artist?: string) {
   const [script, setScript] = useState<Script | null>(null);
   useEffect(() => {
     let active = true;
     if (!title || !artist) { setScript(null); return; }
-    loadScripts()
+    // El artista del catálogo puede venir como "Jay-Z, Kanye West"; el guion se
+    // escribe para el principal, así que se compara contra el primero. Y solo se
+    // descarga el fichero de ESE artista, no los de todos.
+    const artistKey = norm(artist.split(',')[0]);
+    loadArtistScripts(artistKey)
       .then((all) => {
-        if (!active) return;
-        // El artista del catálogo puede venir como "Jay-Z, Kanye West"; el guion
-        // se escribe para el principal, así que se compara contra el primero.
-        setScript(all[`${norm(title)}|${norm(artist.split(',')[0])}`] ?? null);
+        if (active) setScript(all[`${norm(title)}|${artistKey}`] ?? null);
       })
       .catch(() => { if (active) setScript(null); });
     return () => { active = false; };
