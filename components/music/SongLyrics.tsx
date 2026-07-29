@@ -66,7 +66,9 @@ export function SongLyrics({
       <Text style={styles.hint}>
         {fullLyrics
           ? 'Letra completa. Solo visible desde tu cuenta.'
-          : `Los ${total} ${total === 1 ? 'verso' : 'versos'} de esta canción que tenemos guardados, en orden. Las palabras en negrita son las que puedes estudiar.`}
+          : total === 1
+            ? 'El único verso de esta canción que tenemos guardado. Las palabras en negrita son las que puedes estudiar.'
+            : `Los ${total} versos de esta canción que tenemos guardados, en orden. Las palabras en negrita son las que puedes estudiar.`}
       </Text>
 
       <PressableScale style={styles.card} onPress={() => setOpen((v) => !v)}>

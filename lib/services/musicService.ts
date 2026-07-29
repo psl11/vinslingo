@@ -1,6 +1,7 @@
 import { supabase } from '../supabase';
 import { runQuery, withTransaction, getSyncMetadata, setSyncMetadata } from '../database/client';
 import { VocabularyItem } from '../database/queries';
+import { hasScript } from '../data/scriptIndex';
 
 // "Aprende con tu música": sincroniza el espejo local de songs/artists/
 // song_vocabulary (solo source='user') y expone consultas para la sección.
@@ -177,7 +178,20 @@ export async function getMusicSongs(
   // coloquial o notas). Las que solo tienen algún match curado del feature
   // original no dan una experiencia "por canción" rica, así que se dejan fuera.
   // `wordCount` sí cuenta TODO el vocabulario anclado (para estudiarlo y el badge).
-  return runQuery(
+  //
+  // El filtro NO puede hacerse entero en SQL: tener guion también cuenta como
+  // "enriquecida", y los guiones viven en un JSON empaquetado, no en SQLite. Sin
+  // esa parte, 139 de los 196 guiones escritos eran INALCANZABLES desde la app
+  // (Coldplay 49 y Metallica 45 ocultos, porque su vocabulario no es coloquial).
+  // Por eso el HAVING se relaja a "tiene algo" y el descarte final va en JS.
+  const rows = await runQuery<{
+    id: string;
+    title: string;
+    artist: string | null;
+    wordCount: number;
+    colloquialCount: number;
+    noteCount: number;
+  }>(
     `SELECT s.id as id, s.title as title, a.name as artist,
        COUNT(DISTINCT v.id) as wordCount,
        COUNT(DISTINCT CASE WHEN v.category = 'colloquial' THEN v.id END) as colloquialCount,
@@ -188,10 +202,14 @@ export async function getMusicSongs(
      LEFT JOIN vocabulary v ON v.id = sv.vocabulary_id${cefr}
      ${whereSql}
      GROUP BY s.id
-     HAVING colloquialCount > 0 OR noteCount > 0
      ORDER BY (colloquialCount + noteCount) DESC, s.rank ASC`,
     params
   );
+
+  // Se ordena dejando delante lo más rico, pero sin esconder nada con guion.
+  return rows
+    .filter((r) => r.colloquialCount > 0 || r.noteCount > 0 || hasScript(r.title, r.artist))
+    .map(({ colloquialCount, ...rest }) => rest);
 }
 
 /** Notas (referencias + wordplay) de una canción, con su verso de contexto. */

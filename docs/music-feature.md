@@ -24,6 +24,25 @@ artista en su lugar. La query soporta `songId` por si se retoma.
 - **Buscador de huecos**: palabras frecuentes en tu música que **no** están en la
   BD — candidatas a añadir al contenido curado.
 
+### Qué canciones aparecen en la lista de un artista
+
+`getMusicSongs` ([`lib/services/musicService.ts`](../lib/services/musicService.ts))
+muestra una canción si tiene **vocabulario coloquial**, **notas** o **guion**. El
+resto se descarta: sin nada de eso, la pantalla de canción queda vacía.
+
+Los dos primeros criterios se resuelven en SQL; el tercero **no puede**, porque
+los guiones viven en un JSON empaquetado y no en SQLite. Por eso el filtro final
+va en JS sobre el resultado de la consulta.
+
+Esto no era así y costó caro: el `HAVING colloquialCount > 0 OR noteCount > 0`
+escondía toda canción sin vocabulario coloquial ni notas, **tuviera guion o no**.
+Como Coldplay, Metallica y buena parte de los Beatles tienen vocabulario que no
+es `colloquial`, **139 de los 196 guiones escritos eran inalcanzables desde la
+app** (Metallica enseñaba 2 canciones de 47; Coldplay 3 de 52). Ninguna prueba
+fallaba: los guiones se compilaban bien y el badge de artista los contaba: solo
+que no había forma de llegar a ellos. Si se vuelve a tocar este filtro, hay que
+comprobar el recuento de "🎙️ N con historia" contra el índice de guiones.
+
 Detalles de diseño acordados:
 
 - **Selector de nivel** (B1/B2/C1) en la sección (filtro barato de cambiar).
