@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState, useCallback, useMemo, useRef } from 'react';
 import { Platform } from 'react-native';
 import { supabase } from '../lib/supabase';
+import { rememberAuthenticated, forgetAuthenticated, hasAuthenticatedBefore } from '../lib/auth/offlineSession';
 import { useUserStore } from '../stores/useUserStore';
 import { Session, User } from '@supabase/supabase-js';
 
@@ -101,17 +102,26 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, [setProfile]);
 
   useEffect(() => {
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      applyUser(session?.user ?? null);
+    // Get initial session.
+    // El .catch() NO es decorativo: sin red, getSession() puede rechazar al
+    // intentar refrescar el token, y sin capturarlo `isLoading` se quedaba en
+    // true para siempre — pantalla de carga infinita.
+    supabase.auth.getSession()
+      .then(({ data: { session } }) => {
+        setSession(session);
+        applyUser(session?.user ?? null);
 
-      if (session?.user) {
-        loadUserProfile(session.user.id);
-      } else {
+        if (session?.user) {
+          rememberAuthenticated(session.user.id);
+          loadUserProfile(session.user.id);
+        } else {
+          setIsLoading(false);
+        }
+      })
+      .catch((err) => {
+        console.log('getSession failed (probablemente sin red):', err);
         setIsLoading(false);
-      }
-    });
+      });
 
     // Listen for auth changes.
     // OJO: no hacer llamadas a supabase con await directamente dentro del
@@ -126,11 +136,23 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (event === 'SIGNED_IN' && session?.user) {
           const userId = session.user.id;
           setTimeout(() => {
+            rememberAuthenticated(userId);
             loadUserProfile(userId);
           }, 0);
         } else if (event === 'SIGNED_OUT') {
           loadedProfileUserIdRef.current = null;
-          clearProfile();
+          // OJO: supabase-js emite SIGNED_OUT en DOS casos muy distintos: el
+          // cierre de sesión explícito y el descarte de la sesión al fallar un
+          // refresco de token sin red. Si borrásemos el perfil en el segundo,
+          // offline verías XP 0 y racha 0 — con los datos intactos en disco.
+          //
+          // Se distinguen por la marca: signOut() la borra ANTES de llamar a
+          // supabase.auth.signOut(), así que si sigue ahí, no fue voluntario.
+          setTimeout(async () => {
+            if (!(await hasAuthenticatedBefore())) {
+              clearProfile();
+            }
+          }, 0);
           setIsLoading(false);
         } else {
           setIsLoading(false);
@@ -192,6 +214,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = useCallback(async () => {
     setIsLoading(true);
+    // La marca de "modo offline" se borra AQUÍ y solo aquí: en el cierre de
+    // sesión explícito. No en el evento SIGNED_OUT, porque supabase-js lo emite
+    // también cuando descarta la sesión al fallar un refresco de token sin red —
+    // que es justo el caso que queremos sobrevivir.
+    await forgetAuthenticated();
     await supabase.auth.signOut();
     clearProfile();
     setIsLoading(false);

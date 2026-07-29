@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx expo export --platform web && node scripts/inject-pwa-meta.mjs",
+  "buildCommand": "npx expo export --platform web && node scripts/inject-pwa-meta.mjs && node scripts/inject-sw-precache.mjs",
   "outputDirectory": "dist",
   "headers": [
     {
@@ -8,6 +8,10 @@
         { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
         { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
       ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }]
     }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]

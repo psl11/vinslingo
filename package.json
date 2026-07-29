@@ -9,7 +9,7 @@
     "web": "expo start --web",
     "backup:supabase": "tsx scripts/backup-supabase.ts",
     "validate:content": "tsx scripts/validate-translations.ts",
-    "build:web": "expo export --platform web && node scripts/inject-pwa-meta.mjs",
+    "build:web": "expo export --platform web && node scripts/inject-pwa-meta.mjs && node scripts/inject-sw-precache.mjs",
     "serve:web": "npx serve dist -p 8090",
     "test": "jest",
     "test:watch": "jest --watch"

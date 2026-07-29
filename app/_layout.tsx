@@ -9,6 +9,7 @@ import { syncMusicFromSupabase } from '../lib/services/musicService';
 import { syncUserProgress } from '../lib/services/syncService';
 import { getPendingSyncItems } from '../lib/database/queries';
 import { AuthProvider, useAuth } from '../hooks/useAuth';
+import { hasAuthenticatedBefore } from '../lib/auth/offlineSession';
 import { useSyncStore } from '../stores/useSyncStore';
 import { colors, spacing, fontSize, fontWeight } from '../constants/theme';
 import { SyncStatusBanner } from '../components/ui/SyncStatusBanner';
@@ -29,7 +30,15 @@ function RootLayoutNav() {
   const router = useRouter();
 
   const { setOnlineStatus } = useSyncStore();
+  const isOnline = useSyncStore((s) => s.isOnline);
   const appState = useRef(AppState.currentState);
+
+  // ¿Este dispositivo estuvo autenticado alguna vez? Ver lib/auth/offlineSession.ts.
+  // null = todavía no lo sabemos; hasta saberlo no se puede decidir el guard.
+  const [authedBefore, setAuthedBefore] = useState<boolean | null>(null);
+  useEffect(() => {
+    hasAuthenticatedBefore().then(setAuthedBefore).catch(() => setAuthedBefore(false));
+  }, []);
 
   // Registrar el service worker (solo web y en producción): cachea la shell para
   // que la app instalada abra y funcione sin conexión. En dev no, para no servir
@@ -144,9 +153,24 @@ function RootLayoutNav() {
     };
   }, [setOnlineStatus]);
 
+  // MODO OFFLINE: no hay sesión, pero este dispositivo SÍ estuvo autenticado.
+  // Sin esto la app era inservible en un avión: al caducar el token, supabase-js
+  // intenta refrescarlo, falla sin red y BORRA la sesión del disco, así que el
+  // guard mandaba al login — donde tampoco se puede hacer nada sin red.
+  // Todos los datos de estudio son locales (SQLite), así que se deja entrar.
+  //
+  // Deliberadamente NO se condiciona a `!isOnline`: con el wifi de un avión (o un
+  // portal cautivo) `navigator.onLine` es true aunque no haya internet de verdad,
+  // y ese es justo el caso que queremos cubrir. La marca solo se borra al cerrar
+  // sesión explícitamente, así que un usuario nuevo nunca entra por aquí.
+  const offlineAccess = !isAuthenticated && authedBefore === true;
+
+  // Sin red no tiene sentido mandar a nadie al login: no se puede iniciar sesión.
+  const cannotSignIn = offlineAccess && !isOnline;
+
   // Handle auth navigation
   useEffect(() => {
-    if (isInitializing || authLoading) return;
+    if (isInitializing || authLoading || authedBefore === null) return;
 
     const inAuthGroup = segments[0] === '(auth)';
     // El enlace de recuperación crea una sesión al aterrizar: sin esta
@@ -154,16 +178,18 @@ function RootLayoutNav() {
     // escribir la contraseña nueva.
     const onResetPassword = (segments as string[])[1] === 'reset-password';
 
-    if (!isAuthenticated && !inAuthGroup) {
+    if (!isAuthenticated && !offlineAccess && !inAuthGroup) {
       // Redirect to sign-in if not authenticated
       router.replace('/(auth)/sign-in');
-    } else if (isAuthenticated && inAuthGroup && !onResetPassword) {
-      // Redirect to home if authenticated but on auth screen
+    } else if ((isAuthenticated || cannotSignIn) && inAuthGroup && !onResetPassword) {
+      // Redirect to home if authenticated but on auth screen.
+      // Con `cannotSignIn` en vez de `offlineAccess`: si la sesión caducó pero SÍ
+      // hay red, se le deja llegar al login desde el banner para reconectar.
       router.replace('/(tabs)');
     }
-  }, [isAuthenticated, segments, isInitializing, authLoading]);
+  }, [isAuthenticated, offlineAccess, cannotSignIn, segments, isInitializing, authLoading, authedBefore]);
 
-  if (isInitializing || authLoading) {
+  if (isInitializing || authLoading || authedBefore === null) {
     return (
       <View style={styles.loadingContainer}>
         <Text style={styles.logo}>📚</Text>
@@ -177,7 +203,7 @@ function RootLayoutNav() {
   return (
     <View style={styles.appRoot}>
       <StatusBar style="dark" />
-      <SyncStatusBanner />
+      <SyncStatusBanner sessionExpired={offlineAccess} />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />

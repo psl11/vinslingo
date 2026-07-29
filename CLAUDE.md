@@ -22,6 +22,24 @@ reflejado en un `.md` del repo (`docs/` o este CLAUDE.md), no solo en el código
 para que otra persona que trabaje con Claude Code tenga el contexto. Las
 funcionalidades de aprendizaje están resumidas en [`docs/features.md`](docs/features.md).
 
+## Sin conexión (regla de oro)
+
+**Estudiar nunca debe requerir red.** Todo el material vive en SQLite local y los
+guiones van empaquetados; Supabase solo sirve para *sincronizar* progreso. Al
+tocar auth, el service worker o cualquier llamada a Supabase, comprobar que no se
+rompe eso — la app ya quedó inservible en un avión una vez, por tres causas
+distintas a la vez (sesión caducada que expulsaba al login, precache incompleto y
+llamadas de red sin comprobar la red). Diagnóstico, arreglos y cómo verificarlo
+en [`docs/offline.md`](docs/offline.md).
+
+Dos trampas concretas que conviene recordar antes de tocar nada:
+
+- `supabase-js` **borra la sesión del disco** si falla el refresco del token, y
+  emite `SIGNED_OUT` igual que en un cierre de sesión voluntario. Los dos casos
+  se distinguen con la marca de [`lib/auth/offlineSession.ts`](lib/auth/offlineSession.ts).
+- `supabase.auth.getUser()` **hace petición de red**. No usarlo como comprobación
+  barata: sin conexión se queda colgado hasta el timeout.
+
 ## Sync de vocabulario (incremental + transacción)
 
 `syncVocabularyFromSupabase` ([`lib/services/vocabularyService.ts`](lib/services/vocabularyService.ts))

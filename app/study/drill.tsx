@@ -109,8 +109,12 @@ export default function DrillScreen() {
         isCorrect: quality !== 'again',
         log: logToRow(log, responseTimeMs),
       });
-      await syncVocabularyProgress(card.id, { state: cardToState(nextCard), isCorrect: quality !== 'again' });
-      await syncPendingReviewLogs();
+      // La subida a Supabase NO se espera: el repaso ya está guardado en local
+      // (arriba) y si falla se encola. Esperarla congelaba el drill mientras la
+      // petición agonizaba — muy visible en una wifi mala o de avión.
+      void syncVocabularyProgress(card.id, { state: cardToState(nextCard), isCorrect: quality !== 'again' })
+        .then(() => syncPendingReviewLogs())
+        .catch((e) => console.log('Sync de drill diferido:', e));
     } catch (e) {
       console.error('Error saving drill progress:', e);
     }

@@ -10,6 +10,12 @@
  *
  * Cabeceras: se sirve la Response cacheada TAL CUAL (con sus COOP/COEP), así se
  * preserva el cross-origin isolation que necesita SharedArrayBuffer/SQLite-wasm.
+ *
+ * IMPORTANTE: la lista PRECACHE y el nombre de CACHE los REESCRIBE en el build
+ * `scripts/inject-sw-precache.mjs` con todos los assets de `dist/`. Los valores
+ * de aquí son solo el mínimo para desarrollo. No basta con el cacheado en
+ * tiempo de ejecución: los chunks perezosos (guiones por artista) solo se
+ * pedirían al abrir una canción de ese grupo, así que offline faltarían.
  */
 const CACHE = 'vinslingo-shell-v1';
 const PRECACHE = [
@@ -20,9 +26,18 @@ const PRECACHE = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.addAll(PRECACHE).catch(() => {}))
-      .then(() => self.skipWaiting())
+    (async () => {
+      const cache = await caches.open(CACHE);
+      // Uno a uno con allSettled en vez de addAll: addAll es atómico y un solo
+      // 404 tiraría TODO el precache, dejando la app sin funcionar offline sin
+      // que se note en ningún sitio.
+      const results = await Promise.allSettled(
+        PRECACHE.map((url) => cache.add(new Request(url, { cache: 'reload' })))
+      );
+      const failed = results.filter((r) => r.status === 'rejected').length;
+      if (failed) console.warn(`[sw] ${failed}/${PRECACHE.length} assets no se pudieron precachear`);
+      await self.skipWaiting();
+    })()
   );
 });
 

@@ -3,6 +3,7 @@ import { runQuery, runStatement } from '../database/client';
 import { getStudyStats, StudyStats, addToSyncQueue } from '../database/queries';
 import * as Network from 'expo-network';
 import { computeStreakUpdate, calculateMasteryLevel } from './progressLogic';
+import { useUserStore } from '../../stores/useUserStore';
 import type { PersistedFsrsState } from '../srs/fsrs';
 
 export { computeStreakUpdate, calculateMasteryLevel };
@@ -60,10 +61,36 @@ export async function syncVocabularyProgress(
     mastery_level: masteryLevel,
   };
 
+  // Encolar para más tarde. Se usa tanto en el atajo de "sin red" como en el
+  // catch: el repaso ya está guardado en local, esto solo es la subida.
+  const queueForLater = async () => {
+    try {
+      await addToSyncQueue('user_vocabulary', vocabularyId, 'UPDATE', {
+        vocabulary_id: vocabularyId,
+        ...fsrsCols,
+        last_reviewed_at: new Date().toISOString(),
+        times_correct_delta: isCorrect ? 1 : 0,
+        times_incorrect_delta: isCorrect ? 0 : 1,
+      });
+      console.log('📥 Queued vocabulary progress for later sync');
+    } catch (queueError) {
+      console.error('❌ Failed to queue sync:', queueError);
+    }
+  };
+
+  // Atajo sin red: ni lo intentamos. Importa porque `supabase.auth.getUser()`
+  // hace petición de RED (valida el token contra el servidor), y en una wifi de
+  // avión o un portal cautivo no falla rápido: se queda colgada hasta el timeout.
+  if (!(await isOnline())) {
+    await queueForLater();
+    return;
+  }
+
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
       console.log('⚠️ No authenticated user, skipping Supabase sync');
+      await queueForLater();
       return;
     }
 
@@ -108,19 +135,7 @@ export async function syncVocabularyProgress(
     }
   } catch (error) {
     console.error('❌ Error syncing to Supabase, queuing for later:', error);
-    // Queue for later sync
-    try {
-      await addToSyncQueue('user_vocabulary', vocabularyId, 'UPDATE', {
-        vocabulary_id: vocabularyId,
-        ...fsrsCols,
-        last_reviewed_at: new Date().toISOString(),
-        times_correct_delta: isCorrect ? 1 : 0,
-        times_incorrect_delta: isCorrect ? 0 : 1,
-      });
-      console.log('📥 Queued vocabulary progress for later sync');
-    } catch (queueError) {
-      console.error('❌ Failed to queue sync:', queueError);
-    }
+    await queueForLater();
   }
 }
 
@@ -129,6 +144,10 @@ export async function syncVocabularyProgress(
 // tras un fallo a mitad no duplica repasos. Pensada para llamarse tras cada
 // repaso (barata: normalmente 1 fila) — si estuvo offline, arrastra el backlog.
 export async function syncPendingReviewLogs(): Promise<number> {
+  // Sin red no se intenta: las filas ya están con needs_sync=1 y se reintentan
+  // solas en el próximo repaso con conexión. Ver el comentario de `queueForLater`
+  // sobre por qué `getUser()` sin red es caro y no barato.
+  if (!(await isOnline())) return 0;
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return 0;
@@ -186,6 +205,9 @@ export async function syncPendingReviewLogs(): Promise<number> {
 
 // Update user XP in Supabase profiles
 export async function addUserXp(xpAmount: number): Promise<void> {
+  // Sin red: el XP ya está sumado en el store local (que se persiste) y
+  // `saveStudySession` lo encola para subirlo. Aquí solo evitamos la llamada.
+  if (!(await isOnline())) return;
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
@@ -319,15 +341,21 @@ async function getUserProgressFromLocal(): Promise<UserProgress> {
   const totalAttempts = accuracyResult?.total_attempts ?? 0;
   const totalCorrect = accuracyResult?.total_correct ?? 0;
 
+  // XP, racha y XP de hoy no viven en SQLite, sino en el perfil de Supabase.
+  // Sin red se usan los últimos valores conocidos, que zustand persiste en
+  // AsyncStorage. Antes se devolvían ceros: offline la pantalla de perfil
+  // enseñaba XP 0 y racha 0, que parece pérdida de datos y no lo es.
+  const store = useUserStore.getState();
+
   return {
-    totalXp: 0,
+    totalXp: store.profile?.totalXp ?? 0,
     wordsStudied: totalResult?.count ?? 0,
     wordsLearning: learningResult?.count ?? 0,
     wordsMastered: masteredResult?.count ?? 0,
-    currentStreak: 0,
-    longestStreak: 0,
+    currentStreak: store.profile?.currentStreak ?? 0,
+    longestStreak: store.profile?.longestStreak ?? 0,
     accuracy: totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0,
-    todayXp: 0,
+    todayXp: store.todayXp ?? 0,
     todayCards: todayResult?.count ?? 0,
   };
 }
@@ -337,6 +365,9 @@ async function getUserProgressFromLocal(): Promise<UserProgress> {
 // de profiles.updated_at, que cualquier otra actualización del perfil pisa.
 // Debe llamarse DESPUÉS de insertar la sesión de estudio actual.
 export async function updateStreak(): Promise<void> {
+  // La racha se calcula contra las sesiones de Supabase, así que sin red no hay
+  // nada que hacer aquí: se recalcula sola en el próximo estudio con conexión.
+  if (!(await isOnline())) return;
   try {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
@@ -401,9 +432,40 @@ export async function saveStudySession(
   durationSeconds: number,
   xpEarned: number
 ): Promise<void> {
+  // Encolar la sesión + el XP para subirlos cuando vuelva la conexión.
+  const queueForLater = async () => {
+    try {
+      const sessionId = `offline_${Date.now()}`;
+      await addToSyncQueue('study_sessions', sessionId, 'INSERT', {
+        session_type: sessionType,
+        cards_studied: cardsStudied,
+        cards_correct: cardsCorrect,
+        duration_seconds: durationSeconds,
+        xp_earned: xpEarned,
+        ended_at: new Date().toISOString(),
+      });
+      // Also queue XP update
+      await addToSyncQueue('profiles', 'xp_update', 'UPDATE', {
+        xp_delta: xpEarned,
+      });
+      console.log('📥 Queued study session for later sync');
+    } catch (queueError) {
+      console.error('❌ Failed to queue session sync:', queueError);
+    }
+  };
+
+  // Atajo sin red: directo a la cola, sin esperar a que falle una petición.
+  if (!(await isOnline())) {
+    await queueForLater();
+    return;
+  }
+
   try {
     const { data: { user } } = await supabase.auth.getUser();
-    if (!user) return;
+    if (!user) {
+      await queueForLater();
+      return;
+    }
 
     const { error } = await supabase
       .from('study_sessions')
@@ -428,25 +490,7 @@ export async function saveStudySession(
     await addUserXp(xpEarned);
   } catch (error) {
     console.error('❌ Error saving study session, queuing for later:', error);
-    // Queue for later sync
-    try {
-      const sessionId = `offline_${Date.now()}`;
-      await addToSyncQueue('study_sessions', sessionId, 'INSERT', {
-        session_type: sessionType,
-        cards_studied: cardsStudied,
-        cards_correct: cardsCorrect,
-        duration_seconds: durationSeconds,
-        xp_earned: xpEarned,
-        ended_at: new Date().toISOString(),
-      });
-      // Also queue XP update
-      await addToSyncQueue('profiles', 'xp_update', 'UPDATE', {
-        xp_delta: xpEarned,
-      });
-      console.log('📥 Queued study session for later sync');
-    } catch (queueError) {
-      console.error('❌ Failed to queue session sync:', queueError);
-    }
+    await queueForLater();
   }
 }
 
